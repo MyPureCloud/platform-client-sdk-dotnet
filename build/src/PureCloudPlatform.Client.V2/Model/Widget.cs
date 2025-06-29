@@ -1419,7 +1419,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum MaxParkTime for "MAX_PARK_TIME"
             /// </summary>
             [EnumMember(Value = "MAX_PARK_TIME")]
-            MaxParkTime
+            MaxParkTime,
+            
+            /// <summary>
+            /// Enum InboundAudioCount for "INBOUND_AUDIO_COUNT"
+            /// </summary>
+            [EnumMember(Value = "INBOUND_AUDIO_COUNT")]
+            InboundAudioCount,
+            
+            /// <summary>
+            /// Enum OutboundAudioCount for "OUTBOUND_AUDIO_COUNT"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_AUDIO_COUNT")]
+            OutboundAudioCount
         }
         /// <summary>
         /// The sort order of the table.

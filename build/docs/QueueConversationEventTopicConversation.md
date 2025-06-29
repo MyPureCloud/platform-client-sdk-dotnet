@@ -15,8 +15,9 @@
 | **ExternalTag** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
 | **SecurePause** | **bool?** |  | [optional] |
+| **InactivityTimeout** | **DateTime?** |  | [optional] |
 | **Divisions** | [**List&lt;QueueConversationEventTopicConversationDivisionMembership&gt;**](QueueConversationEventTopicConversationDivisionMembership) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 236.0.0_
+_PureCloudPlatform.Client.V2 237.0.0_

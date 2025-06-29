@@ -19,6 +19,45 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class VoicemailMailboxInfo :  IEquatable<VoicemailMailboxInfo>
     {
         /// <summary>
+        /// The owner type of the voicemail mailbox
+        /// </summary>
+        /// <value>The owner type of the voicemail mailbox</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum OwnerTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum User for "User"
+            /// </summary>
+            [EnumMember(Value = "User")]
+            User,
+            
+            /// <summary>
+            /// Enum Group for "Group"
+            /// </summary>
+            [EnumMember(Value = "Group")]
+            Group,
+            
+            /// <summary>
+            /// Enum Queue for "Queue"
+            /// </summary>
+            [EnumMember(Value = "Queue")]
+            Queue
+        }
+        /// <summary>
+        /// The owner type of the voicemail mailbox
+        /// </summary>
+        /// <value>The owner type of the voicemail mailbox</value>
+        [DataMember(Name="ownerType", EmitDefaultValue=false)]
+        public OwnerTypeEnum? OwnerType { get; private set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="VoicemailMailboxInfo" /> class.
         /// </summary>
         public VoicemailMailboxInfo()
@@ -26,6 +65,17 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
+
+
+        /// <summary>
+        /// The globally unique identifier for the object.
+        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+
+
+
 
 
         /// <summary>
@@ -117,6 +167,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? OldestReadDate { get; private set; }
 
 
+
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -126,6 +185,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class VoicemailMailboxInfo {\n");
 
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  OwnerType: ").Append(OwnerType).Append("\n");
             sb.Append("  UsageSizeBytes: ").Append(UsageSizeBytes).Append("\n");
             sb.Append("  TotalCount: ").Append(TotalCount).Append("\n");
             sb.Append("  UnreadCount: ").Append(UnreadCount).Append("\n");
@@ -136,6 +197,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OldestUnreadDate: ").Append(OldestUnreadDate).Append("\n");
             sb.Append("  NewestReadDate: ").Append(NewestReadDate).Append("\n");
             sb.Append("  OldestReadDate: ").Append(OldestReadDate).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -176,6 +238,16 @@ namespace PureCloudPlatform.Client.V2.Model
                 return false;
 
             return true &&
+                (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.OwnerType == other.OwnerType ||
+                    this.OwnerType != null &&
+                    this.OwnerType.Equals(other.OwnerType)
+                ) &&
                 (
                     this.UsageSizeBytes == other.UsageSizeBytes ||
                     this.UsageSizeBytes != null &&
@@ -225,6 +297,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OldestReadDate == other.OldestReadDate ||
                     this.OldestReadDate != null &&
                     this.OldestReadDate.Equals(other.OldestReadDate)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -239,6 +316,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.OwnerType != null)
+                    hash = hash * 59 + this.OwnerType.GetHashCode();
+
                 if (this.UsageSizeBytes != null)
                     hash = hash * 59 + this.UsageSizeBytes.GetHashCode();
 
@@ -268,6 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OldestReadDate != null)
                     hash = hash * 59 + this.OldestReadDate.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

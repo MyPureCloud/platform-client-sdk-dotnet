@@ -425,6 +425,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Fax,
             
             /// <summary>
+            /// Enum Convert for "Convert"
+            /// </summary>
+            [EnumMember(Value = "Convert")]
+            Convert,
+            
+            /// <summary>
+            /// Enum Receive for "Receive"
+            /// </summary>
+            [EnumMember(Value = "Receive")]
+            Receive,
+            
+            /// <summary>
             /// Enum Versioncreate for "VersionCreate"
             /// </summary>
             [EnumMember(Value = "VersionCreate")]
@@ -2512,7 +2524,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Rules for "Rules"
             /// </summary>
             [EnumMember(Value = "Rules")]
-            Rules
+            Rules,
+            
+            /// <summary>
+            /// Enum Contact for "Contact"
+            /// </summary>
+            [EnumMember(Value = "Contact")]
+            Contact,
+            
+            /// <summary>
+            /// Enum Note for "Note"
+            /// </summary>
+            [EnumMember(Value = "Note")]
+            Note,
+            
+            /// <summary>
+            /// Enum Relationship for "Relationship"
+            /// </summary>
+            [EnumMember(Value = "Relationship")]
+            Relationship,
+            
+            /// <summary>
+            /// Enum Externalorg for "ExternalOrg"
+            /// </summary>
+            [EnumMember(Value = "ExternalOrg")]
+            Externalorg
         }
         /// <summary>
         /// Gets or Sets ServiceName

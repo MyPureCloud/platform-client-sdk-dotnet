@@ -27,8 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
         /// <param name="Address">Address.</param>
         /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
+        /// <param name="InactivityTimeout">InactivityTimeout.</param>
         /// <param name="Divisions">Divisions.</param>
-        public ConversationChatEventTopicChatConversation(string Id = null, string Name = null, List<ConversationChatEventTopicChatMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, string UtilizationLabelId = null, List<ConversationChatEventTopicConversationDivisionMembership> Divisions = null)
+        public ConversationChatEventTopicChatConversation(string Id = null, string Name = null, List<ConversationChatEventTopicChatMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, string UtilizationLabelId = null, DateTime? InactivityTimeout = null, List<ConversationChatEventTopicConversationDivisionMembership> Divisions = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -36,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OtherMediaUris = OtherMediaUris;
             this.Address = Address;
             this.UtilizationLabelId = UtilizationLabelId;
+            this.InactivityTimeout = InactivityTimeout;
             this.Divisions = Divisions;
             
         }
@@ -91,6 +93,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets InactivityTimeout
+        /// </summary>
+        [DataMember(Name="inactivityTimeout", EmitDefaultValue=false)]
+        public DateTime? InactivityTimeout { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Divisions
         /// </summary>
         [DataMember(Name="divisions", EmitDefaultValue=false)]
@@ -112,6 +122,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
+            sb.Append("  InactivityTimeout: ").Append(InactivityTimeout).Append("\n");
             sb.Append("  Divisions: ").Append(Divisions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -184,6 +195,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UtilizationLabelId.Equals(other.UtilizationLabelId)
                 ) &&
                 (
+                    this.InactivityTimeout == other.InactivityTimeout ||
+                    this.InactivityTimeout != null &&
+                    this.InactivityTimeout.Equals(other.InactivityTimeout)
+                ) &&
+                (
                     this.Divisions == other.Divisions ||
                     this.Divisions != null &&
                     this.Divisions.SequenceEqual(other.Divisions)
@@ -218,6 +234,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UtilizationLabelId != null)
                     hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
+
+                if (this.InactivityTimeout != null)
+                    hash = hash * 59 + this.InactivityTimeout.GetHashCode();
 
                 if (this.Divisions != null)
                     hash = hash * 59 + this.Divisions.GetHashCode();

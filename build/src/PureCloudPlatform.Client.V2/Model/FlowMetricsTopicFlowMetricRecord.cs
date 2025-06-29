@@ -439,6 +439,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Forwardtransfer,
             
             /// <summary>
+            /// Enum Inactivity for "inactivity"
+            /// </summary>
+            [EnumMember(Value = "inactivity")]
+            Inactivity,
+            
+            /// <summary>
             /// Enum Noanswertransfer for "noAnswerTransfer"
             /// </summary>
             [EnumMember(Value = "noAnswerTransfer")]

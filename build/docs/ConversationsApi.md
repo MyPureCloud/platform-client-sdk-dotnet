@@ -180,9 +180,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationParticipantInternalmessagesUsersCommunications**](#PostConversationParticipantInternalmessagesUsersCommunications) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/internalmessages/users/communications | Setup internal message communication with user |
 | [**PostConversationParticipantReplace**](#PostConversationParticipantReplace) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationParticipantReplaceAgent**](#PostConversationParticipantReplaceAgent) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent | Replace this participant with the specified agent |
+| [**PostConversationParticipantReplaceContactExternal**](#PostConversationParticipantReplaceContactExternal) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/contact/external | Replace this participant with the an external contact |
 | [**PostConversationParticipantReplaceExternal**](#PostConversationParticipantReplaceExternal) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external | Replace this participant with the an external contact |
 | [**PostConversationParticipantReplaceQueue**](#PostConversationParticipantReplaceQueue) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue | Replace this participant with the specified queue |
 | [**PostConversationParticipantSecureivrsessions**](#PostConversationParticipantSecureivrsessions) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
+| [**PostConversationParticipantTransfer**](#PostConversationParticipantTransfer) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/transfer | Replace this participant by another one using the address of the destination. |
 | [**PostConversationSuggestionEngagement**](#PostConversationSuggestionEngagement) | **Post** /api/v2/conversations/{conversationId}/suggestions/{suggestionId}/engagement | Save an engagement on the suggestion. |
 | [**PostConversationSuggestionsFeedback**](#PostConversationSuggestionsFeedback) | **Post** /api/v2/conversations/{conversationId}/suggestions/feedback | Suggestion feedback. |
 | [**PostConversationSummaryFeedback**](#PostConversationSummaryFeedback) | **Post** /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback | Submit feedback for the summary. |
@@ -192,10 +194,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsCallParticipantCommunicationWrapup**](#PostConversationsCallParticipantCommunicationWrapup) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsCallParticipantConsult**](#PostConversationsCallParticipantConsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer |
 | [**PostConversationsCallParticipantConsultAgent**](#PostConversationsCallParticipantConsultAgent) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent | Initiate a consult transfer to an agent |
+| [**PostConversationsCallParticipantConsultContactExternal**](#PostConversationsCallParticipantConsultContactExternal) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/contact/external | Initiate a consult transfer to an external contact |
 | [**PostConversationsCallParticipantConsultExternal**](#PostConversationsCallParticipantConsultExternal) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external | Initiate a consult transfer to an external contact |
 | [**PostConversationsCallParticipantConsultQueue**](#PostConversationsCallParticipantConsultQueue) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue | Initiate a consult transfer to a queue |
 | [**PostConversationsCallParticipantMonitor**](#PostConversationsCallParticipantMonitor) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
 | [**PostConversationsCallParticipantReplace**](#PostConversationsCallParticipantReplace) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsCallParticipantVoiceConsult**](#PostConversationsCallParticipantVoiceConsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/voice/consult | Initiate voice consult transfer |
 | [**PostConversationsCallParticipants**](#PostConversationsCallParticipants) | **Post** /api/v2/conversations/calls/{conversationId}/participants | Add participants to a conversation |
 | [**PostConversationsCallbackParticipantCommunicationWrapup**](#PostConversationsCallbackParticipantCommunicationWrapup) | **Post** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsCallbackParticipantReplace**](#PostConversationsCallbackParticipantReplace) | **Post** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
@@ -11487,6 +11491,74 @@ namespace Example
 void (empty response body)
 
 
+## PostConversationParticipantReplaceContactExternal
+
+> void PostConversationParticipantReplaceContactExternal (string conversationId, string participantId, TransferToExternalContactRequest body)
+
+
+Replace this participant with the an external contact
+
+PostConversationParticipantReplaceContactExternal is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+* conversation:communication:blindTransferExternalContact
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationParticipantReplaceContactExternalExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var participantId = participantId_example;  // string | participant ID
+            var body = new TransferToExternalContactRequest(); // TransferToExternalContactRequest | Transfer request
+
+            try
+            { 
+                // Replace this participant with the an external contact
+                apiInstance.PostConversationParticipantReplaceContactExternal(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationParticipantReplaceContactExternal: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **participantId** | **string**| participant ID |  |
+| **body** | [**TransferToExternalContactRequest**](TransferToExternalContactRequest)| Transfer request |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PostConversationParticipantReplaceExternal
 
 > void PostConversationParticipantReplaceExternal (string conversationId, string participantId, TransferToExternalRequest body)
@@ -11682,6 +11754,73 @@ namespace Example
 ### Return type
 
 [**SecureSession**](SecureSession)
+
+
+## PostConversationParticipantTransfer
+
+> void PostConversationParticipantTransfer (string conversationId, string participantId, TransferToAddressRequest body)
+
+
+Replace this participant by another one using the address of the destination.
+
+PostConversationParticipantTransfer is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:communication:blindTransfer
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationParticipantTransferExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var participantId = participantId_example;  // string | participant ID
+            var body = new TransferToAddressRequest(); // TransferToAddressRequest | Transfer request
+
+            try
+            { 
+                // Replace this participant by another one using the address of the destination.
+                apiInstance.PostConversationParticipantTransfer(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationParticipantTransfer: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **participantId** | **string**| participant ID |  |
+| **body** | [**TransferToAddressRequest**](TransferToAddressRequest)| Transfer request |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## PostConversationSuggestionEngagement
@@ -12272,6 +12411,75 @@ namespace Example
 [**ConsultTransferResponse**](ConsultTransferResponse)
 
 
+## PostConversationsCallParticipantConsultContactExternal
+
+> [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsultContactExternal (string conversationId, string participantId, ConsultTransferToExternalContact body)
+
+
+Initiate a consult transfer to an external contact
+
+PostConversationsCallParticipantConsultContactExternal is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+* conversation:communication:consultTransferExternalContact
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCallParticipantConsultContactExternalExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ConsultTransferToExternalContact(); // ConsultTransferToExternalContact | Destination address & initial speak to
+
+            try
+            { 
+                // Initiate a consult transfer to an external contact
+                ConsultTransferResponse result = apiInstance.PostConversationsCallParticipantConsultContactExternal(conversationId, participantId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsCallParticipantConsultContactExternal: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ConsultTransferToExternalContact**](ConsultTransferToExternalContact)| Destination address &amp; initial speak to |  |
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse)
+
+
 ## PostConversationsCallParticipantConsultExternal
 
 > [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsultExternal (string conversationId, string participantId, ConsultTransferToExternal body)
@@ -12532,6 +12740,74 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+
+## PostConversationsCallParticipantVoiceConsult
+
+> [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantVoiceConsult (string conversationId, string participantId, ConsultTransferToAddress body)
+
+
+Initiate voice consult transfer
+
+PostConversationsCallParticipantVoiceConsult is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* conversation:communication:consultTransfer
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCallParticipantVoiceConsultExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ConsultTransferToAddress(); // ConsultTransferToAddress | Destination address & initial speak to
+
+            try
+            { 
+                // Initiate voice consult transfer
+                ConsultTransferResponse result = apiInstance.PostConversationsCallParticipantVoiceConsult(conversationId, participantId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsCallParticipantVoiceConsult: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ConsultTransferToAddress**](ConsultTransferToAddress)| Destination address &amp; initial speak to |  |
+
+### Return type
+
+[**ConsultTransferResponse**](ConsultTransferResponse)
 
 
 ## PostConversationsCallParticipants
@@ -17697,4 +17973,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 236.0.0_
+_PureCloudPlatform.Client.V2 237.0.0_

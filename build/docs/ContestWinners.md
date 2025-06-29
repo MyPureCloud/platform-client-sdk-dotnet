@@ -7,8 +7,9 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Tier** | **int?** | The Contest Winner tier | [optional] |
+| **WinnersCount** | **int?** | The number of Contest Winners in a tier | [optional] |
 | **Users** | [**List&lt;ContestUserRank&gt;**](ContestUserRank) | The Contest Winner users at the tier | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 236.0.0_
+_PureCloudPlatform.Client.V2 237.0.0_

@@ -1541,9 +1541,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Wrapup code&#39;s name (trailing asterisks allowed) (optional)</param>
         /// <returns>WrapupCodeEntityListing</returns>
         
-        WrapupCodeEntityListing GetRoutingQueueWrapupcodes (string queueId, int? pageSize = null, int? pageNumber = null);
+        WrapupCodeEntityListing GetRoutingQueueWrapupcodes (string queueId, int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -1555,9 +1556,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Wrapup code&#39;s name (trailing asterisks allowed) (optional)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
         
-        ApiResponse<WrapupCodeEntityListing> GetRoutingQueueWrapupcodesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<WrapupCodeEntityListing> GetRoutingQueueWrapupcodesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get list of queues.
@@ -5673,9 +5675,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Wrapup code&#39;s name (trailing asterisks allowed) (optional)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
         
-        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingQueueWrapupcodesAsync (string queueId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingQueueWrapupcodesAsync (string queueId, int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get the wrap-up codes for a queue
@@ -5687,9 +5690,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Wrapup code&#39;s name (trailing asterisks allowed) (optional)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string name = null);
 
         /// <summary>
         /// Get list of queues.
@@ -20334,11 +20338,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Wrapup code&#39;s name (trailing asterisks allowed) (optional)</param>
         /// <returns>WrapupCodeEntityListing</returns>
         
-        public WrapupCodeEntityListing GetRoutingQueueWrapupcodes (string queueId, int? pageSize = null, int? pageNumber = null)
+        public WrapupCodeEntityListing GetRoutingQueueWrapupcodes (string queueId, int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingQueueWrapupcodesWithHttpInfo(queueId, pageSize, pageNumber);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = GetRoutingQueueWrapupcodesWithHttpInfo(queueId, pageSize, pageNumber, name);
              return localVarResponse.Data;
         }
 
@@ -20350,9 +20355,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Wrapup code&#39;s name (trailing asterisks allowed) (optional)</param>
         /// <returns>ApiResponse of WrapupCodeEntityListing</returns>
         
-        public ApiResponse< WrapupCodeEntityListing > GetRoutingQueueWrapupcodesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< WrapupCodeEntityListing > GetRoutingQueueWrapupcodesWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string name = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -20394,6 +20400,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -20439,11 +20446,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Wrapup code&#39;s name (trailing asterisks allowed) (optional)</param>
         /// <returns>Task of WrapupCodeEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingQueueWrapupcodesAsync (string queueId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<WrapupCodeEntityListing> GetRoutingQueueWrapupcodesAsync (string queueId, int? pageSize = null, int? pageNumber = null, string name = null)
         {
-             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingQueueWrapupcodesAsyncWithHttpInfo(queueId, pageSize, pageNumber);
+             ApiResponse<WrapupCodeEntityListing> localVarResponse = await GetRoutingQueueWrapupcodesAsyncWithHttpInfo(queueId, pageSize, pageNumber, name);
              return localVarResponse.Data;
 
         }
@@ -20456,9 +20464,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queueId">Queue ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="name">Wrapup code&#39;s name (trailing asterisks allowed) (optional)</param>
         /// <returns>Task of ApiResponse (WrapupCodeEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WrapupCodeEntityListing>> GetRoutingQueueWrapupcodesAsyncWithHttpInfo (string queueId, int? pageSize = null, int? pageNumber = null, string name = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -20501,6 +20510,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 

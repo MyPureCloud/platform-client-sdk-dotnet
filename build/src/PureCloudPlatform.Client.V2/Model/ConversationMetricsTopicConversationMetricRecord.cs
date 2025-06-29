@@ -118,6 +118,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Ntransferred,
             
             /// <summary>
+            /// Enum Oaudiomessagecount for "oAudioMessageCount"
+            /// </summary>
+            [EnumMember(Value = "oAudioMessageCount")]
+            Oaudiomessagecount,
+            
+            /// <summary>
+            /// Enum Oexternalaudiomessagecount for "oExternalAudioMessageCount"
+            /// </summary>
+            [EnumMember(Value = "oExternalAudioMessageCount")]
+            Oexternalaudiomessagecount,
+            
+            /// <summary>
             /// Enum Oexternalmediacount for "oExternalMediaCount"
             /// </summary>
             [EnumMember(Value = "oExternalMediaCount")]
@@ -701,6 +713,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "forwardTransfer")]
             Forwardtransfer,
+            
+            /// <summary>
+            /// Enum Inactivity for "inactivity"
+            /// </summary>
+            [EnumMember(Value = "inactivity")]
+            Inactivity,
             
             /// <summary>
             /// Enum Noanswertransfer for "noAnswerTransfer"

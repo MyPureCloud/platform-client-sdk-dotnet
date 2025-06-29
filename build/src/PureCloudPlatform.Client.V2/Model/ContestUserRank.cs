@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Rank">The user&#39;s rank in contest, a lower rank is better (1 is the best).</param>
-        public ContestUserRank(string Id = null, int? Rank = null)
+        /// <param name="Score">The user&#39;s contest score.</param>
+        public ContestUserRank(string Id = null, int? Rank = null, double? Score = null)
         {
             this.Id = Id;
             this.Rank = Rank;
+            this.Score = Score;
             
         }
         
@@ -51,6 +53,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The user&#39;s contest score
+        /// </summary>
+        /// <value>The user&#39;s contest score</value>
+        [DataMember(Name="score", EmitDefaultValue=false)]
+        public double? Score { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -69,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Rank: ").Append(Rank).Append("\n");
+            sb.Append("  Score: ").Append(Score).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -121,6 +133,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Rank.Equals(other.Rank)
                 ) &&
                 (
+                    this.Score == other.Score ||
+                    this.Score != null &&
+                    this.Score.Equals(other.Score)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -143,6 +160,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Rank != null)
                     hash = hash * 59 + this.Rank.GetHashCode();
+
+                if (this.Score != null)
+                    hash = hash * 59 + this.Score.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

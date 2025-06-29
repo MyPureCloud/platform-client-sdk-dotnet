@@ -22,10 +22,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ContestWinners" /> class.
         /// </summary>
         /// <param name="Tier">The Contest Winner tier.</param>
+        /// <param name="WinnersCount">The number of Contest Winners in a tier.</param>
         /// <param name="Users">The Contest Winner users at the tier.</param>
-        public ContestWinners(int? Tier = null, List<ContestUserRank> Users = null)
+        public ContestWinners(int? Tier = null, int? WinnersCount = null, List<ContestUserRank> Users = null)
         {
             this.Tier = Tier;
+            this.WinnersCount = WinnersCount;
             this.Users = Users;
             
         }
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The Contest Winner tier</value>
         [DataMember(Name="tier", EmitDefaultValue=false)]
         public int? Tier { get; set; }
+
+
+
+        /// <summary>
+        /// The number of Contest Winners in a tier
+        /// </summary>
+        /// <value>The number of Contest Winners in a tier</value>
+        [DataMember(Name="winnersCount", EmitDefaultValue=false)]
+        public int? WinnersCount { get; set; }
 
 
 
@@ -59,6 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ContestWinners {\n");
 
             sb.Append("  Tier: ").Append(Tier).Append("\n");
+            sb.Append("  WinnersCount: ").Append(WinnersCount).Append("\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -106,6 +118,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Tier.Equals(other.Tier)
                 ) &&
                 (
+                    this.WinnersCount == other.WinnersCount ||
+                    this.WinnersCount != null &&
+                    this.WinnersCount.Equals(other.WinnersCount)
+                ) &&
+                (
                     this.Users == other.Users ||
                     this.Users != null &&
                     this.Users.SequenceEqual(other.Users)
@@ -125,6 +142,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Tier != null)
                     hash = hash * 59 + this.Tier.GetHashCode();
+
+                if (this.WinnersCount != null)
+                    hash = hash * 59 + this.WinnersCount.GetHashCode();
 
                 if (this.Users != null)
                     hash = hash * 59 + this.Users.GetHashCode();

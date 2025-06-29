@@ -348,7 +348,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Uncallable for "uncallable"
             /// </summary>
             [EnumMember(Value = "uncallable")]
-            Uncallable
+            Uncallable,
+            
+            /// <summary>
+            /// Enum Inactivity for "inactivity"
+            /// </summary>
+            [EnumMember(Value = "inactivity")]
+            Inactivity
         }
         /// <summary>
         /// Gets or Sets FlaggedReason

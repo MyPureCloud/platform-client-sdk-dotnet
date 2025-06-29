@@ -139,7 +139,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Paymentresponse for "PaymentResponse"
             /// </summary>
             [EnumMember(Value = "PaymentResponse")]
-            Paymentresponse
+            Paymentresponse,
+            
+            /// <summary>
+            /// Enum Form for "Form"
+            /// </summary>
+            [EnumMember(Value = "Form")]
+            Form
         }
         /// <summary>
         /// For social media messages, the visibility of the message in the originating social platform

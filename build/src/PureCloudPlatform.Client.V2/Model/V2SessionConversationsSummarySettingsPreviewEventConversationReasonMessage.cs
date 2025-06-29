@@ -22,10 +22,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage" /> class.
         /// </summary>
         /// <param name="Text">Text.</param>
+        /// <param name="Description">Description.</param>
         /// <param name="Score">Score.</param>
-        public V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage(string Text = null, double? Score = null)
+        public V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage(string Text = null, string Description = null, double? Score = null)
         {
             this.Text = Text;
+            this.Description = Description;
             this.Score = Score;
             
         }
@@ -37,6 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Description
+        /// </summary>
+        [DataMember(Name="description", EmitDefaultValue=false)]
+        public string Description { get; set; }
 
 
 
@@ -57,6 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage {\n");
 
             sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Score: ").Append(Score).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -104,6 +115,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Text.Equals(other.Text)
                 ) &&
                 (
+                    this.Description == other.Description ||
+                    this.Description != null &&
+                    this.Description.Equals(other.Description)
+                ) &&
+                (
                     this.Score == other.Score ||
                     this.Score != null &&
                     this.Score.Equals(other.Score)
@@ -123,6 +139,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
+
+                if (this.Description != null)
+                    hash = hash * 59 + this.Description.GetHashCode();
 
                 if (this.Score != null)
                     hash = hash * 59 + this.Score.GetHashCode();

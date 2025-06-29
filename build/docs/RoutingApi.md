@@ -3862,7 +3862,7 @@ namespace Example
 
 ## GetRoutingQueueWrapupcodes
 
-> [**WrapupCodeEntityListing**](WrapupCodeEntityListing) GetRoutingQueueWrapupcodes (string queueId, int? pageSize = null, int? pageNumber = null)
+> [**WrapupCodeEntityListing**](WrapupCodeEntityListing) GetRoutingQueueWrapupcodes (string queueId, int? pageSize = null, int? pageNumber = null, string name = null)
 
 
 Get the wrap-up codes for a queue
@@ -3896,11 +3896,12 @@ namespace Example
             var queueId = queueId_example;  // string | Queue ID
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var name = name_example;  // string | Wrapup code's name (trailing asterisks allowed) (optional) 
 
             try
             { 
                 // Get the wrap-up codes for a queue
-                WrapupCodeEntityListing result = apiInstance.GetRoutingQueueWrapupcodes(queueId, pageSize, pageNumber);
+                WrapupCodeEntityListing result = apiInstance.GetRoutingQueueWrapupcodes(queueId, pageSize, pageNumber, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3920,6 +3921,7 @@ namespace Example
 | **queueId** | **string**| Queue ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **name** | **string**| Wrapup code&#39;s name (trailing asterisks allowed) | [optional]  |
 
 ### Return type
 
@@ -10208,4 +10210,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 236.0.0_
+_PureCloudPlatform.Client.V2 237.0.0_

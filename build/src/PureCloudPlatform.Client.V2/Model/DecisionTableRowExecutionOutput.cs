@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="RowId">Unique rule identifier. (required).</param>
         /// <param name="RowIndex">Unique rule identifier. (required).</param>
-        /// <param name="Outputs">The JSON output produced by this rule. Valid according to the execution output contract. (required).</param>
+        /// <param name="Outputs">The JSON output produced by this rule. Valid according to the execution output contract. In the case of enum decision table output columns, the enum options key will be provided as the value, not the enum options label as this can be changed. For business rules queue columns both “queue” and “id” keys will always be returned  regardless of the business rules queue attribute key and these do not change. (required).</param>
         public DecisionTableRowExecutionOutput(string RowId = null, int? RowIndex = null, Dictionary<string, Object> Outputs = null)
         {
             this.RowId = RowId;
@@ -59,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The JSON output produced by this rule. Valid according to the execution output contract.
+        /// The JSON output produced by this rule. Valid according to the execution output contract. In the case of enum decision table output columns, the enum options key will be provided as the value, not the enum options label as this can be changed. For business rules queue columns both “queue” and “id” keys will always be returned  regardless of the business rules queue attribute key and these do not change.
         /// </summary>
-        /// <value>The JSON output produced by this rule. Valid according to the execution output contract.</value>
+        /// <value>The JSON output produced by this rule. Valid according to the execution output contract. In the case of enum decision table output columns, the enum options key will be provided as the value, not the enum options label as this can be changed. For business rules queue columns both “queue” and “id” keys will always be returned  regardless of the business rules queue attribute key and these do not change.</value>
         [DataMember(Name="outputs", EmitDefaultValue=false)]
         public Dictionary<string, Object> Outputs { get; set; }
 

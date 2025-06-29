@@ -115,12 +115,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">Text to show inside the Button reply. This is also used as the response text after clicking on the Button..</param>
         /// <param name="Payload">Content of the textback payload after clicking a button.</param>
         /// <param name="MessageType">Button response message type that captures QuickReply , Cards and Carousel .This is used  as label for Card selection.</param>
-        public ButtonResponse(TypeEnum? Type = null, string Text = null, string Payload = null, MessageTypeEnum? MessageType = null)
+        /// <param name="OriginatingMessageId">Reference to the ID of the original message (e.g., list picker) this button response is replying to..</param>
+        public ButtonResponse(TypeEnum? Type = null, string Text = null, string Payload = null, MessageTypeEnum? MessageType = null, string OriginatingMessageId = null)
         {
             this.Type = Type;
             this.Text = Text;
             this.Payload = Payload;
             this.MessageType = MessageType;
+            this.OriginatingMessageId = OriginatingMessageId;
             
         }
         
@@ -147,6 +149,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Reference to the ID of the original message (e.g., list picker) this button response is replying to.
+        /// </summary>
+        /// <value>Reference to the ID of the original message (e.g., list picker) this button response is replying to.</value>
+        [DataMember(Name="originatingMessageId", EmitDefaultValue=false)]
+        public string OriginatingMessageId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -160,6 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("  MessageType: ").Append(MessageType).Append("\n");
+            sb.Append("  OriginatingMessageId: ").Append(OriginatingMessageId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -219,6 +231,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessageType == other.MessageType ||
                     this.MessageType != null &&
                     this.MessageType.Equals(other.MessageType)
+                ) &&
+                (
+                    this.OriginatingMessageId == other.OriginatingMessageId ||
+                    this.OriginatingMessageId != null &&
+                    this.OriginatingMessageId.Equals(other.OriginatingMessageId)
                 );
         }
 
@@ -244,6 +261,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MessageType != null)
                     hash = hash * 59 + this.MessageType.GetHashCode();
+
+                if (this.OriginatingMessageId != null)
+                    hash = hash * 59 + this.OriginatingMessageId.GetHashCode();
 
                 return hash;
             }

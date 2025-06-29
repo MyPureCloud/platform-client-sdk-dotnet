@@ -70,7 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The segment type which describes any semantics about the &#39;text&#39; and also indicates which other field might include additional relevant info. (required).</param>
         /// <param name="Format">Additional details describing the segment’s contents, which the client should honour where possible..</param>
         /// <param name="Content">Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;..</param>
-        public TextBotPromptSegment(string Text = null, TypeEnum? Type = null, Format Format = null, List<MessageContent> Content = null)
+        public TextBotPromptSegment(string Text = null, TypeEnum? Type = null, Format Format = null, List<ConversationMessageContent> Content = null)
         {
             this.Text = Text;
             this.Type = Type;
@@ -106,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Details to display Rich Media content. This is only populated when the segment &#39;type&#39; is &#39;Rich Media&#39;.</value>
         [DataMember(Name="content", EmitDefaultValue=false)]
-        public List<MessageContent> Content { get; set; }
+        public List<ConversationMessageContent> Content { get; set; }
 
 
         /// <summary>

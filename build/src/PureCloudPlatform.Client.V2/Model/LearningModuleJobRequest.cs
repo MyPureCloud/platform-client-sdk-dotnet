@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unarchive for "Unarchive"
             /// </summary>
             [EnumMember(Value = "Unarchive")]
-            Unarchive
+            Unarchive,
+            
+            /// <summary>
+            /// Enum Assign for "Assign"
+            /// </summary>
+            [EnumMember(Value = "Assign")]
+            Assign
         }
         /// <summary>
         /// The type for the learning module job

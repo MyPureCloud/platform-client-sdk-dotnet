@@ -158,7 +158,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Instagram for "Instagram"
             /// </summary>
             [EnumMember(Value = "Instagram")]
-            Instagram
+            Instagram,
+            
+            /// <summary>
+            /// Enum Apple for "Apple"
+            /// </summary>
+            [EnumMember(Value = "Apple")]
+            Apple
         }
         /// <summary>
         /// Gets or Sets Type

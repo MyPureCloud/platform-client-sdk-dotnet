@@ -935,26 +935,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// List multiple sets of credentials
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>CredentialInfoListing</returns>
-        
+        [Obsolete]
         CredentialInfoListing GetIntegrationsCredentials (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// List multiple sets of credentials
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of CredentialInfoListing</returns>
-        
+        [Obsolete]
         ApiResponse<CredentialInfoListing> GetIntegrationsCredentialsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -3475,26 +3475,26 @@ namespace PureCloudPlatform.Client.V2.Api
         /// List multiple sets of credentials
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of CredentialInfoListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<CredentialInfoListing> GetIntegrationsCredentialsAsync (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// List multiple sets of credentials
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (CredentialInfoListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<CredentialInfoListing>> GetIntegrationsCredentialsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
@@ -12035,13 +12035,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List multiple sets of credentials 
-        /// 
+        /// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>CredentialInfoListing</returns>
-        
+        [Obsolete]
         public CredentialInfoListing GetIntegrationsCredentials (int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<CredentialInfoListing> localVarResponse = GetIntegrationsCredentialsWithHttpInfo(pageNumber, pageSize);
@@ -12050,13 +12050,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List multiple sets of credentials 
-        /// 
+        /// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of CredentialInfoListing</returns>
-        
+        [Obsolete]
         public ApiResponse< CredentialInfoListing > GetIntegrationsCredentialsWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
 
@@ -12134,13 +12134,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List multiple sets of credentials 
-        /// 
+        /// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of CredentialInfoListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<CredentialInfoListing> GetIntegrationsCredentialsAsync (int? pageNumber = null, int? pageSize = null)
         {
              ApiResponse<CredentialInfoListing> localVarResponse = await GetIntegrationsCredentialsAsyncWithHttpInfo(pageNumber, pageSize);
@@ -12150,13 +12150,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List multiple sets of credentials 
-        /// 
+        /// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (CredentialInfoListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<CredentialInfoListing>> GetIntegrationsCredentialsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null)
         { 
 

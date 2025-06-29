@@ -27,17 +27,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ListPicker" /> class.
         /// </summary>
+        /// <param name="Id">Optional unique identifier to help map component replies to form messages where multiple List Pickers can be present..</param>
         /// <param name="Title">Text to show in the title..</param>
         /// <param name="Subtitle">Text to show in the description..</param>
         /// <param name="Sections">An array of sections in the List Picker. (required).</param>
-        public ListPicker(string Title = null, string Subtitle = null, List<ListPickerSection> Sections = null)
+        public ListPicker(string Id = null, string Title = null, string Subtitle = null, List<ListPickerSection> Sections = null)
         {
+            this.Id = Id;
             this.Title = Title;
             this.Subtitle = Subtitle;
             this.Sections = Sections;
             
         }
         
+
+
+        /// <summary>
+        /// Optional unique identifier to help map component replies to form messages where multiple List Pickers can be present.
+        /// </summary>
+        /// <value>Optional unique identifier to help map component replies to form messages where multiple List Pickers can be present.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+
 
 
         /// <summary>
@@ -75,6 +86,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ListPicker {\n");
 
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Subtitle: ").Append(Subtitle).Append("\n");
             sb.Append("  Sections: ").Append(Sections).Append("\n");
@@ -119,6 +131,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
@@ -146,6 +163,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
 

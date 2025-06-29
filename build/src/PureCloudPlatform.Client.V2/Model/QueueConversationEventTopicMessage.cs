@@ -230,7 +230,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Uncallable for "uncallable"
             /// </summary>
             [EnumMember(Value = "uncallable")]
-            Uncallable
+            Uncallable,
+            
+            /// <summary>
+            /// Enum Inactivity for "inactivity"
+            /// </summary>
+            [EnumMember(Value = "inactivity")]
+            Inactivity
         }
         /// <summary>
         /// Indicates the type of message platform from which the message originated.

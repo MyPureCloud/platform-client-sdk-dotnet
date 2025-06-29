@@ -144,7 +144,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum DndTransfer for "DND_TRANSFER"
             /// </summary>
             [EnumMember(Value = "DND_TRANSFER")]
-            DndTransfer
+            DndTransfer,
+            
+            /// <summary>
+            /// Enum Inactivity for "INACTIVITY"
+            /// </summary>
+            [EnumMember(Value = "INACTIVITY")]
+            Inactivity
         }
         /// <summary>
         /// Gets or Sets MediaType

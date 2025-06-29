@@ -1041,6 +1041,7 @@ Requires ALL permissions:
 
 * businessrules:decisionTable:edit
 * businessrules:businessRulesSchema:view
+* routing:queue:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1723,6 +1724,7 @@ Requires ALL permissions:
 
 * businessrules:decisionTable:add
 * businessrules:businessRulesSchema:view
+* routing:queue:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2042,4 +2044,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 236.0.0_
+_PureCloudPlatform.Client.V2 237.0.0_

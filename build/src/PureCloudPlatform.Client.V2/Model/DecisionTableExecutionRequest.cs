@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DecisionTableExecutionRequest" /> class.
         /// </summary>
-        /// <param name="Inputs">The JSON input data for executing the decision table. Must be valid according to the execution input contract defined on the table (required).</param>
+        /// <param name="Inputs">The JSON input data for executing the decision table. Must be valid according to the execution input contract defined on the table. In the case of enum decision table columns the enum options key should be provided as the value, not the enum options label as this can be changed. For business rules queue columns both “queue” and “id” keys will be required regardless of the queue attribute key and these do not change. (required).</param>
         public DecisionTableExecutionRequest(Dictionary<string, Object> Inputs = null)
         {
             this.Inputs = Inputs;
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The JSON input data for executing the decision table. Must be valid according to the execution input contract defined on the table
+        /// The JSON input data for executing the decision table. Must be valid according to the execution input contract defined on the table. In the case of enum decision table columns the enum options key should be provided as the value, not the enum options label as this can be changed. For business rules queue columns both “queue” and “id” keys will be required regardless of the queue attribute key and these do not change.
         /// </summary>
-        /// <value>The JSON input data for executing the decision table. Must be valid according to the execution input contract defined on the table</value>
+        /// <value>The JSON input data for executing the decision table. Must be valid according to the execution input contract defined on the table. In the case of enum decision table columns the enum options key should be provided as the value, not the enum options label as this can be changed. For business rules queue columns both “queue” and “id” keys will be required regardless of the queue attribute key and these do not change.</value>
         [DataMember(Name="inputs", EmitDefaultValue=false)]
         public Dictionary<string, Object> Inputs { get; set; }
 

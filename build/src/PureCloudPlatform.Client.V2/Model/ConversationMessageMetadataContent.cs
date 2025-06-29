@@ -148,6 +148,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Form,
             
             /// <summary>
+            /// Enum Roadsideassistance for "RoadsideAssistance"
+            /// </summary>
+            [EnumMember(Value = "RoadsideAssistance")]
+            Roadsideassistance,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
