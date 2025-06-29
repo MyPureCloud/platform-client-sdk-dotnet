@@ -1,16 +1,14 @@
-# HistoricalImportDeleteJobResponse
+# UsersRulesRuleReference
 
-## ININ.PureCloudApi.Model.HistoricalImportDeleteJobResponse
+## ININ.PureCloudApi.Model.UsersRulesRuleReference
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
-| **Name** | **string** |  | [optional] |
-| **Status** | **string** | Property denoting the status of the delete. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 236.0.0_
+_PureCloudPlatform.Client.V2 237.0.0_

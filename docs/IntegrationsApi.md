@@ -2241,8 +2241,13 @@ namespace Example
 
 > [**CredentialInfoListing**](CredentialInfoListing) GetIntegrationsCredentials (int? pageNumber = null, int? pageSize = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 List multiple sets of credentials
+
+This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
 
 Requires ANY permissions: 
 
@@ -6130,4 +6135,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 236.0.0_
+_PureCloudPlatform.Client.V2 237.0.0_
