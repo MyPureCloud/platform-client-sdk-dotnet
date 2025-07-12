@@ -118,7 +118,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum PatienceAbandon for "PATIENCE_ABANDON"
             /// </summary>
             [EnumMember(Value = "PATIENCE_ABANDON")]
-            PatienceAbandon
+            PatienceAbandon,
+            
+            /// <summary>
+            /// Enum Aiadjustedaht for "AI-ADJUSTED-AHT"
+            /// </summary>
+            [EnumMember(Value = "AI-ADJUSTED-AHT")]
+            Aiadjustedaht,
+            
+            /// <summary>
+            /// Enum Positioninqueue for "POSITION-IN-QUEUE"
+            /// </summary>
+            [EnumMember(Value = "POSITION-IN-QUEUE")]
+            Positioninqueue
         }
         /// <summary>
         /// Indicates the media type scope of this estimated wait time

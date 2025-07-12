@@ -1480,7 +1480,7 @@ namespace Example
 
 ## GetExternalcontactsContactsSchemaVersions
 
-> [**DataSchema**](DataSchema) GetExternalcontactsContactsSchemaVersions (string schemaId)
+> [**DataSchemaListing**](DataSchemaListing) GetExternalcontactsContactsSchemaVersions (string schemaId)
 
 
 Get all versions of an external contact's schema
@@ -1516,7 +1516,7 @@ namespace Example
             try
             { 
                 // Get all versions of an external contact's schema
-                DataSchema result = apiInstance.GetExternalcontactsContactsSchemaVersions(schemaId);
+                DataSchemaListing result = apiInstance.GetExternalcontactsContactsSchemaVersions(schemaId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1537,7 +1537,7 @@ namespace Example
 
 ### Return type
 
-[**DataSchema**](DataSchema)
+[**DataSchemaListing**](DataSchemaListing)
 
 
 ## GetExternalcontactsContactsSchemas
@@ -3039,7 +3039,7 @@ namespace Example
 
 ## GetExternalcontactsOrganizationsSchemaVersions
 
-> [**DataSchema**](DataSchema) GetExternalcontactsOrganizationsSchemaVersions (string schemaId)
+> [**DataSchemaListing**](DataSchemaListing) GetExternalcontactsOrganizationsSchemaVersions (string schemaId)
 
 
 Get all versions of an external organization's schema
@@ -3075,7 +3075,7 @@ namespace Example
             try
             { 
                 // Get all versions of an external organization's schema
-                DataSchema result = apiInstance.GetExternalcontactsOrganizationsSchemaVersions(schemaId);
+                DataSchemaListing result = apiInstance.GetExternalcontactsOrganizationsSchemaVersions(schemaId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3096,7 +3096,7 @@ namespace Example
 
 ### Return type
 
-[**DataSchema**](DataSchema)
+[**DataSchemaListing**](DataSchemaListing)
 
 
 ## GetExternalcontactsOrganizationsSchemas
@@ -7681,4 +7681,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 237.0.0_
+_PureCloudPlatform.Client.V2 238.0.0_

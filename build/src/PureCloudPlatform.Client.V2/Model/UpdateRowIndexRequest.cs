@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="UpdateRowIndexRequest" /> class.
         /// </summary>
         /// <param name="RowId">The row UUID. (required).</param>
-        /// <param name="RowIndex">The updated row index. Must be an integer value greater than or equal to 0. Must be less than or equal to x-1, where x is the number of rows in the decision table version. (required).</param>
+        /// <param name="RowIndex">The updated row index. Must be an integer value greater than or equal to 1. Must be less than or equal to x, where x is the number of rows in the decision table version. (required).</param>
         public UpdateRowIndexRequest(string RowId = null, int? RowIndex = null)
         {
             this.RowId = RowId;
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The updated row index. Must be an integer value greater than or equal to 0. Must be less than or equal to x-1, where x is the number of rows in the decision table version.
+        /// The updated row index. Must be an integer value greater than or equal to 1. Must be less than or equal to x, where x is the number of rows in the decision table version.
         /// </summary>
-        /// <value>The updated row index. Must be an integer value greater than or equal to 0. Must be less than or equal to x-1, where x is the number of rows in the decision table version.</value>
+        /// <value>The updated row index. Must be an integer value greater than or equal to 1. Must be less than or equal to x, where x is the number of rows in the decision table version.</value>
         [DataMember(Name="rowIndex", EmitDefaultValue=false)]
         public int? RowIndex { get; set; }
 

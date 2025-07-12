@@ -569,9 +569,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>DataSchema</returns>
+        /// <returns>DataSchemaListing</returns>
         
-        DataSchema GetExternalcontactsContactsSchemaVersions (string schemaId);
+        DataSchemaListing GetExternalcontactsContactsSchemaVersions (string schemaId);
 
         /// <summary>
         /// Get all versions of an external contact&#39;s schema
@@ -581,9 +581,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
         
-        ApiResponse<DataSchema> GetExternalcontactsContactsSchemaVersionsWithHttpInfo (string schemaId);
+        ApiResponse<DataSchemaListing> GetExternalcontactsContactsSchemaVersionsWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Get a list of schemas.
@@ -1215,9 +1215,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>DataSchema</returns>
+        /// <returns>DataSchemaListing</returns>
         
-        DataSchema GetExternalcontactsOrganizationsSchemaVersions (string schemaId);
+        DataSchemaListing GetExternalcontactsOrganizationsSchemaVersions (string schemaId);
 
         /// <summary>
         /// Get all versions of an external organization&#39;s schema
@@ -1227,9 +1227,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
         
-        ApiResponse<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo (string schemaId);
+        ApiResponse<DataSchemaListing> GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Get a list of schemas.
@@ -3593,9 +3593,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <returns>Task of DataSchemaListing</returns>
         
-        System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionsAsync (string schemaId);
+        System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsContactsSchemaVersionsAsync (string schemaId);
 
         /// <summary>
         /// Get all versions of an external contact&#39;s schema
@@ -3605,9 +3605,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo (string schemaId);
+        System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Get a list of schemas.
@@ -4239,9 +4239,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <returns>Task of DataSchemaListing</returns>
         
-        System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsAsync (string schemaId);
+        System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsOrganizationsSchemaVersionsAsync (string schemaId);
 
         /// <summary>
         /// Get all versions of an external organization&#39;s schema
@@ -4251,9 +4251,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo (string schemaId);
+        System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Get a list of schemas.
@@ -10510,11 +10510,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>DataSchema</returns>
+        /// <returns>DataSchemaListing</returns>
         
-        public DataSchema GetExternalcontactsContactsSchemaVersions (string schemaId)
+        public DataSchemaListing GetExternalcontactsContactsSchemaVersions (string schemaId)
         {
-             ApiResponse<DataSchema> localVarResponse = GetExternalcontactsContactsSchemaVersionsWithHttpInfo(schemaId);
+             ApiResponse<DataSchemaListing> localVarResponse = GetExternalcontactsContactsSchemaVersionsWithHttpInfo(schemaId);
              return localVarResponse.Data;
         }
 
@@ -10524,9 +10524,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
         
-        public ApiResponse< DataSchema > GetExternalcontactsContactsSchemaVersionsWithHttpInfo (string schemaId)
+        public ApiResponse< DataSchemaListing > GetExternalcontactsContactsSchemaVersionsWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
@@ -10595,9 +10595,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10609,11 +10609,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <returns>Task of DataSchemaListing</returns>
         
-        public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsContactsSchemaVersionsAsync (string schemaId)
+        public async System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsContactsSchemaVersionsAsync (string schemaId)
         {
-             ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo(schemaId);
+             ApiResponse<DataSchemaListing> localVarResponse = await GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo(schemaId);
              return localVarResponse.Data;
 
         }
@@ -10624,9 +10624,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo (string schemaId)
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsContactsSchemaVersionsAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
@@ -10696,9 +10696,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15502,11 +15502,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>DataSchema</returns>
+        /// <returns>DataSchemaListing</returns>
         
-        public DataSchema GetExternalcontactsOrganizationsSchemaVersions (string schemaId)
+        public DataSchemaListing GetExternalcontactsOrganizationsSchemaVersions (string schemaId)
         {
-             ApiResponse<DataSchema> localVarResponse = GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo(schemaId);
+             ApiResponse<DataSchemaListing> localVarResponse = GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo(schemaId);
              return localVarResponse.Data;
         }
 
@@ -15516,9 +15516,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
         
-        public ApiResponse< DataSchema > GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo (string schemaId)
+        public ApiResponse< DataSchemaListing > GetExternalcontactsOrganizationsSchemaVersionsWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
@@ -15587,9 +15587,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15601,11 +15601,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <returns>Task of DataSchemaListing</returns>
         
-        public async System.Threading.Tasks.Task<DataSchema> GetExternalcontactsOrganizationsSchemaVersionsAsync (string schemaId)
+        public async System.Threading.Tasks.Task<DataSchemaListing> GetExternalcontactsOrganizationsSchemaVersionsAsync (string schemaId)
         {
-             ApiResponse<DataSchema> localVarResponse = await GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo(schemaId);
+             ApiResponse<DataSchemaListing> localVarResponse = await GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo(schemaId);
              return localVarResponse.Data;
 
         }
@@ -15616,9 +15616,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo (string schemaId)
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsOrganizationsSchemaVersionsAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
@@ -15688,9 +15688,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsOrganizationsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

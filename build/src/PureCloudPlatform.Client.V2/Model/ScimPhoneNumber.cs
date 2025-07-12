@@ -91,7 +91,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Eightbyeight for "eightbyeight"
             /// </summary>
             [EnumMember(Value = "eightbyeight")]
-            Eightbyeight
+            Eightbyeight,
+            
+            /// <summary>
+            /// Enum Ringcentral for "ringcentral"
+            /// </summary>
+            [EnumMember(Value = "ringcentral")]
+            Ringcentral
         }
         /// <summary>
         /// The type of phone number.

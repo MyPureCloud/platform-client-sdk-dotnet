@@ -29,7 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AssistedAnswerId">AnswerId found with evaluation assistance conditions.</param>
         /// <param name="FailedKillQuestion">Applicable only on fatal questions. Indicates that the answer selected was not the highest score available for the question.</param>
         /// <param name="Comments">Comments from the evaluator specific to this question.</param>
-        public EvaluationQuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? SystemMarkedNA = null, string AssistedAnswerId = null, bool? FailedKillQuestion = null, string Comments = null)
+        /// <param name="MultipleSelectQuestionOptionScores">Only applicable to Multiple Select questions. Scores corresponding to the options of Multiple Select questions..</param>
+        public EvaluationQuestionScore(string QuestionId = null, string AnswerId = null, int? Score = null, bool? MarkedNA = null, bool? SystemMarkedNA = null, string AssistedAnswerId = null, bool? FailedKillQuestion = null, string Comments = null, List<EvaluationQuestionScore> MultipleSelectQuestionOptionScores = null)
         {
             this.QuestionId = QuestionId;
             this.AnswerId = AnswerId;
@@ -39,6 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AssistedAnswerId = AssistedAnswerId;
             this.FailedKillQuestion = FailedKillQuestion;
             this.Comments = Comments;
+            this.MultipleSelectQuestionOptionScores = MultipleSelectQuestionOptionScores;
             
         }
         
@@ -122,6 +124,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public AiAnswer AiAnswer { get; private set; }
 
 
+
+        /// <summary>
+        /// Only applicable to Multiple Select questions. Scores corresponding to the options of Multiple Select questions.
+        /// </summary>
+        /// <value>Only applicable to Multiple Select questions. Scores corresponding to the options of Multiple Select questions.</value>
+        [DataMember(Name="multipleSelectQuestionOptionScores", EmitDefaultValue=false)]
+        public List<EvaluationQuestionScore> MultipleSelectQuestionOptionScores { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FailedKillQuestion: ").Append(FailedKillQuestion).Append("\n");
             sb.Append("  Comments: ").Append(Comments).Append("\n");
             sb.Append("  AiAnswer: ").Append(AiAnswer).Append("\n");
+            sb.Append("  MultipleSelectQuestionOptionScores: ").Append(MultipleSelectQuestionOptionScores).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -224,6 +236,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AiAnswer == other.AiAnswer ||
                     this.AiAnswer != null &&
                     this.AiAnswer.Equals(other.AiAnswer)
+                ) &&
+                (
+                    this.MultipleSelectQuestionOptionScores == other.MultipleSelectQuestionOptionScores ||
+                    this.MultipleSelectQuestionOptionScores != null &&
+                    this.MultipleSelectQuestionOptionScores.SequenceEqual(other.MultipleSelectQuestionOptionScores)
                 );
         }
 
@@ -264,6 +281,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AiAnswer != null)
                     hash = hash * 59 + this.AiAnswer.GetHashCode();
+
+                if (this.MultipleSelectQuestionOptionScores != null)
+                    hash = hash * 59 + this.MultipleSelectQuestionOptionScores.GetHashCode();
 
                 return hash;
             }

@@ -19,15 +19,50 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class AnswerOption :  IEquatable<AnswerOption>
     {
         /// <summary>
+        /// The built-in type of this answer option. Only used for built-in answer options such as selection states for Multiple Select answer options. Possible values include: Selected, Unselected
+        /// </summary>
+        /// <value>The built-in type of this answer option. Only used for built-in answer options such as selection states for Multiple Select answer options. Possible values include: Selected, Unselected</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BuiltInTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Selected for "Selected"
+            /// </summary>
+            [EnumMember(Value = "Selected")]
+            Selected,
+            
+            /// <summary>
+            /// Enum Unselected for "Unselected"
+            /// </summary>
+            [EnumMember(Value = "Unselected")]
+            Unselected
+        }
+        /// <summary>
+        /// The built-in type of this answer option. Only used for built-in answer options such as selection states for Multiple Select answer options. Possible values include: Selected, Unselected
+        /// </summary>
+        /// <value>The built-in type of this answer option. Only used for built-in answer options such as selection states for Multiple Select answer options. Possible values include: Selected, Unselected</value>
+        [DataMember(Name="builtInType", EmitDefaultValue=false)]
+        public BuiltInTypeEnum? BuiltInType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="AnswerOption" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
+        /// <param name="BuiltInType">The built-in type of this answer option. Only used for built-in answer options such as selection states for Multiple Select answer options. Possible values include: Selected, Unselected.</param>
         /// <param name="Text">Text.</param>
         /// <param name="Value">Value.</param>
         /// <param name="AssistanceConditions">List of assistance conditions which are combined together with a logical AND operator. Eg ( assistanceCondtion1 &amp;&amp; assistanceCondition2 ) wherein assistanceCondition could be ( EXISTS topic1 || topic2 || ... ) or (NOTEXISTS topic3 || topic4 || ...)..</param>
-        public AnswerOption(string Id = null, string Text = null, int? Value = null, List<AssistanceCondition> AssistanceConditions = null)
+        public AnswerOption(string Id = null, BuiltInTypeEnum? BuiltInType = null, string Text = null, int? Value = null, List<AssistanceCondition> AssistanceConditions = null)
         {
             this.Id = Id;
+            this.BuiltInType = BuiltInType;
             this.Text = Text;
             this.Value = Value;
             this.AssistanceConditions = AssistanceConditions;
@@ -41,6 +76,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
 
 
 
@@ -78,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AnswerOption {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  BuiltInType: ").Append(BuiltInType).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  AssistanceConditions: ").Append(AssistanceConditions).Append("\n");
@@ -127,6 +165,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.BuiltInType == other.BuiltInType ||
+                    this.BuiltInType != null &&
+                    this.BuiltInType.Equals(other.BuiltInType)
+                ) &&
+                (
                     this.Text == other.Text ||
                     this.Text != null &&
                     this.Text.Equals(other.Text)
@@ -156,6 +199,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.BuiltInType != null)
+                    hash = hash * 59 + this.BuiltInType.GetHashCode();
 
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();

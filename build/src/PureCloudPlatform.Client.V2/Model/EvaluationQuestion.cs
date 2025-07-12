@@ -78,9 +78,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CommentsRequired">CommentsRequired.</param>
         /// <param name="VisibilityCondition">VisibilityCondition.</param>
         /// <param name="AnswerOptions">Options from which to choose an answer for this question. Only used by Multiple Choice type questions..</param>
+        /// <param name="MultipleSelectOptionQuestions">Only used by Multiple Select type questions. A list of multiple choice questions representing selectable options..</param>
         /// <param name="IsKill">IsKill.</param>
         /// <param name="IsCritical">IsCritical.</param>
-        public EvaluationQuestion(string Id = null, string Text = null, string HelpText = null, TypeEnum? Type = null, bool? NaEnabled = null, bool? CommentsRequired = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null, bool? IsKill = null, bool? IsCritical = null)
+        public EvaluationQuestion(string Id = null, string Text = null, string HelpText = null, TypeEnum? Type = null, bool? NaEnabled = null, bool? CommentsRequired = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null, List<EvaluationQuestion> MultipleSelectOptionQuestions = null, bool? IsKill = null, bool? IsCritical = null)
         {
             this.Id = Id;
             this.Text = Text;
@@ -90,6 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CommentsRequired = CommentsRequired;
             this.VisibilityCondition = VisibilityCondition;
             this.AnswerOptions = AnswerOptions;
+            this.MultipleSelectOptionQuestions = MultipleSelectOptionQuestions;
             this.IsKill = IsKill;
             this.IsCritical = IsCritical;
             
@@ -166,6 +168,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Only used by Multiple Select type questions. A list of multiple choice questions representing selectable options.
+        /// </summary>
+        /// <value>Only used by Multiple Select type questions. A list of multiple choice questions representing selectable options.</value>
+        [DataMember(Name="multipleSelectOptionQuestions", EmitDefaultValue=false)]
+        public List<EvaluationQuestion> MultipleSelectOptionQuestions { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets IsKill
         /// </summary>
         [DataMember(Name="isKill", EmitDefaultValue=false)]
@@ -198,6 +209,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CommentsRequired: ").Append(CommentsRequired).Append("\n");
             sb.Append("  VisibilityCondition: ").Append(VisibilityCondition).Append("\n");
             sb.Append("  AnswerOptions: ").Append(AnswerOptions).Append("\n");
+            sb.Append("  MultipleSelectOptionQuestions: ").Append(MultipleSelectOptionQuestions).Append("\n");
             sb.Append("  IsKill: ").Append(IsKill).Append("\n");
             sb.Append("  IsCritical: ").Append(IsCritical).Append("\n");
             sb.Append("}\n");
@@ -286,6 +298,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AnswerOptions.SequenceEqual(other.AnswerOptions)
                 ) &&
                 (
+                    this.MultipleSelectOptionQuestions == other.MultipleSelectOptionQuestions ||
+                    this.MultipleSelectOptionQuestions != null &&
+                    this.MultipleSelectOptionQuestions.SequenceEqual(other.MultipleSelectOptionQuestions)
+                ) &&
+                (
                     this.IsKill == other.IsKill ||
                     this.IsKill != null &&
                     this.IsKill.Equals(other.IsKill)
@@ -334,6 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AnswerOptions != null)
                     hash = hash * 59 + this.AnswerOptions.GetHashCode();
+
+                if (this.MultipleSelectOptionQuestions != null)
+                    hash = hash * 59 + this.MultipleSelectOptionQuestions.GetHashCode();
 
                 if (this.IsKill != null)
                     hash = hash * 59 + this.IsKill.GetHashCode();

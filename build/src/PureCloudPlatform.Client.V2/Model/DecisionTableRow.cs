@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DecisionTableRow" /> class.
         /// </summary>
         /// <param name="Table">The decision table to which this row belongs (required).</param>
-        /// <param name="RowIndex">The absolute index of this row in the decision table, starting at 0.</param>
+        /// <param name="RowIndex">The absolute index of this row in the decision table, starting at 1.</param>
         /// <param name="DateCreated">The date when this row was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">The date when this row was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Inputs">The map input values of the row being created. At least one value must be provided. The key for this map is the column ID the row value relates.</param>
@@ -65,9 +65,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The absolute index of this row in the decision table, starting at 0
+        /// The absolute index of this row in the decision table, starting at 1
         /// </summary>
-        /// <value>The absolute index of this row in the decision table, starting at 0</value>
+        /// <value>The absolute index of this row in the decision table, starting at 1</value>
         [DataMember(Name="rowIndex", EmitDefaultValue=false)]
         public int? RowIndex { get; set; }
 

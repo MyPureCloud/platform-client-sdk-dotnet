@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CreateDecisionTableRowRequest" /> class.
         /// </summary>
-        /// <param name="RowIndex">The absolute position of this row in the decision table. Must be an integerstarting from 0, must be non-negative and less than or equal to the size of the table. If not provided row will be append to the end of the table. .</param>
+        /// <param name="RowIndex">The absolute position of this row in the decision table. Must be an integerstarting from 1, must be positive and less than or equal to the size of the table. If not provided row will be append to the end of the table. .</param>
         /// <param name="Inputs">The input values of the row. The key for this map is the column ID the row value relates. Column IDs are available from the decision table entity (required).</param>
         /// <param name="Outputs">The output values of the row. The key for this map is the column ID the row value relates. Column IDs are available from the decision table entity (required).</param>
         public CreateDecisionTableRowRequest(int? RowIndex = null, Dictionary<string, DecisionTableRowParameterValue> Inputs = null, Dictionary<string, DecisionTableRowParameterValue> Outputs = null)
@@ -41,9 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The absolute position of this row in the decision table. Must be an integerstarting from 0, must be non-negative and less than or equal to the size of the table. If not provided row will be append to the end of the table. 
+        /// The absolute position of this row in the decision table. Must be an integerstarting from 1, must be positive and less than or equal to the size of the table. If not provided row will be append to the end of the table. 
         /// </summary>
-        /// <value>The absolute position of this row in the decision table. Must be an integerstarting from 0, must be non-negative and less than or equal to the size of the table. If not provided row will be append to the end of the table. </value>
+        /// <value>The absolute position of this row in the decision table. Must be an integerstarting from 1, must be positive and less than or equal to the size of the table. If not provided row will be append to the end of the table. </value>
         [DataMember(Name="rowIndex", EmitDefaultValue=false)]
         public int? RowIndex { get; set; }
 

@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ReplacementTerm :  IEquatable<ReplacementTerm>
     {
         /// <summary>
-        /// Subject search type
+        /// Replacement term type
         /// </summary>
-        /// <value>Subject search type</value>
+        /// <value>Replacement term type</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum TypeEnum
         {
@@ -76,15 +76,15 @@ namespace PureCloudPlatform.Client.V2.Model
             Facebook
         }
         /// <summary>
-        /// Subject search type
+        /// Replacement term type
         /// </summary>
-        /// <value>Subject search type</value>
+        /// <value>Replacement term type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ReplacementTerm" /> class.
         /// </summary>
-        /// <param name="Type">Subject search type.</param>
+        /// <param name="Type">Replacement term type.</param>
         /// <param name="ExistingValue">ExistingValue.</param>
         /// <param name="UpdatedValue">UpdatedValue.</param>
         public ReplacementTerm(TypeEnum? Type = null, string ExistingValue = null, string UpdatedValue = null)

@@ -29,8 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="ResolveIdentities">Whether the channel should resolve identities (required).</param>
-        /// <param name="ExternalSource">The external source used for stitching this channel - used only for Open Messaging..</param>
-        public OpenMessagingIdentityResolutionConfig(WritableStarrableDivision Division = null, bool? ResolveIdentities = null, AddressableEntityRef ExternalSource = null)
+        /// <param name="ExternalSource">The external source used for stitching this channel..</param>
+        public OpenMessagingIdentityResolutionConfig(WritableStarrableDivision Division = null, bool? ResolveIdentities = null, IdentityResolutionExternalSource ExternalSource = null)
         {
             this.Division = Division;
             this.ResolveIdentities = ResolveIdentities;
@@ -68,11 +68,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The external source used for stitching this channel - used only for Open Messaging.
+        /// The external source used for stitching this channel.
         /// </summary>
-        /// <value>The external source used for stitching this channel - used only for Open Messaging.</value>
+        /// <value>The external source used for stitching this channel.</value>
         [DataMember(Name="externalSource", EmitDefaultValue=false)]
-        public AddressableEntityRef ExternalSource { get; set; }
+        public IdentityResolutionExternalSource ExternalSource { get; set; }
 
 
 

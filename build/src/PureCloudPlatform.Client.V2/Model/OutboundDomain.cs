@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Mockemaildomain for "MockEmailDomain"
             /// </summary>
             [EnumMember(Value = "MockEmailDomain")]
-            Mockemaildomain
+            Mockemaildomain,
+            
+            /// <summary>
+            /// Enum Emailsmtpdomain for "EmailSmtpDomain"
+            /// </summary>
+            [EnumMember(Value = "EmailSmtpDomain")]
+            Emailsmtpdomain
         }
         /// <summary>
         /// Sender Type

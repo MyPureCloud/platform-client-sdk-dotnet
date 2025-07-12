@@ -783,9 +783,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>DataSchema</returns>
+        /// <returns>DataSchemaListing</returns>
         
-        DataSchema GetTaskmanagementWorkitemsSchemaVersions (string schemaId);
+        DataSchemaListing GetTaskmanagementWorkitemsSchemaVersions (string schemaId);
 
         /// <summary>
         /// Get all versions of a schema
@@ -795,9 +795,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
         
-        ApiResponse<DataSchema> GetTaskmanagementWorkitemsSchemaVersionsWithHttpInfo (string schemaId);
+        ApiResponse<DataSchemaListing> GetTaskmanagementWorkitemsSchemaVersionsWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Get a list of schemas.
@@ -2755,9 +2755,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <returns>Task of DataSchemaListing</returns>
         
-        System.Threading.Tasks.Task<DataSchema> GetTaskmanagementWorkitemsSchemaVersionsAsync (string schemaId);
+        System.Threading.Tasks.Task<DataSchemaListing> GetTaskmanagementWorkitemsSchemaVersionsAsync (string schemaId);
 
         /// <summary>
         /// Get all versions of a schema
@@ -2767,9 +2767,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetTaskmanagementWorkitemsSchemaVersionsAsyncWithHttpInfo (string schemaId);
+        System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetTaskmanagementWorkitemsSchemaVersionsAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Get a list of schemas.
@@ -10103,11 +10103,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>DataSchema</returns>
+        /// <returns>DataSchemaListing</returns>
         
-        public DataSchema GetTaskmanagementWorkitemsSchemaVersions (string schemaId)
+        public DataSchemaListing GetTaskmanagementWorkitemsSchemaVersions (string schemaId)
         {
-             ApiResponse<DataSchema> localVarResponse = GetTaskmanagementWorkitemsSchemaVersionsWithHttpInfo(schemaId);
+             ApiResponse<DataSchemaListing> localVarResponse = GetTaskmanagementWorkitemsSchemaVersionsWithHttpInfo(schemaId);
              return localVarResponse.Data;
         }
 
@@ -10117,9 +10117,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
         
-        public ApiResponse< DataSchema > GetTaskmanagementWorkitemsSchemaVersionsWithHttpInfo (string schemaId)
+        public ApiResponse< DataSchemaListing > GetTaskmanagementWorkitemsSchemaVersionsWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
@@ -10188,9 +10188,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -10202,11 +10202,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <returns>Task of DataSchemaListing</returns>
         
-        public async System.Threading.Tasks.Task<DataSchema> GetTaskmanagementWorkitemsSchemaVersionsAsync (string schemaId)
+        public async System.Threading.Tasks.Task<DataSchemaListing> GetTaskmanagementWorkitemsSchemaVersionsAsync (string schemaId)
         {
-             ApiResponse<DataSchema> localVarResponse = await GetTaskmanagementWorkitemsSchemaVersionsAsyncWithHttpInfo(schemaId);
+             ApiResponse<DataSchemaListing> localVarResponse = await GetTaskmanagementWorkitemsSchemaVersionsAsyncWithHttpInfo(schemaId);
              return localVarResponse.Data;
 
         }
@@ -10217,9 +10217,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetTaskmanagementWorkitemsSchemaVersionsAsyncWithHttpInfo (string schemaId)
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetTaskmanagementWorkitemsSchemaVersionsAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
@@ -10289,9 +10289,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

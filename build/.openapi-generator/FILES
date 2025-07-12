@@ -1483,6 +1483,7 @@ docs/CustomEventAttribute.md
 docs/CustomEventAttributeList.md
 docs/CustomI18nLabels.md
 docs/CustomProvider.md
+docs/CustomSmtpServerRequest.md
 docs/Customer.md
 docs/CustomerEndDetailEventTopicCustomerEndEvent.md
 docs/CustomerInteractionCenter.md
@@ -1592,6 +1593,7 @@ docs/DeleteChatsRoomMessagesPin-example.txt
 docs/DeleteChatsRoomParticipant-example.txt
 docs/DeleteChatsUserMessage-example.txt
 docs/DeleteChatsUserMessagesPin-example.txt
+docs/DeleteChatsUsersMeSettings-example.txt
 docs/DeleteCoachingAppointment-example.txt
 docs/DeleteCoachingAppointmentAnnotation-example.txt
 docs/DeleteContentmanagementDocument-example.txt
@@ -4025,6 +4027,7 @@ docs/GetWorkforcemanagementNotifications-example.txt
 docs/GetWorkforcemanagementSchedulingjob-example.txt
 docs/GetWorkforcemanagementShifttrades-example.txt
 docs/GetWorkforcemanagementShrinkageJob-example.txt
+docs/GetWorkforcemanagementTeamAdherence-example.txt
 docs/GetWorkforcemanagementTimeoffbalanceJob-example.txt
 docs/GetWorkforcemanagementTimeoffrequest-example.txt
 docs/GetWorkforcemanagementTimeoffrequestWaitlistpositions-example.txt
@@ -4132,6 +4135,7 @@ docs/IdentityProviderApi.md
 docs/IdentityProviderEntityListing.md
 docs/IdentityResolutionAutomergeConfig.md
 docs/IdentityResolutionConfig.md
+docs/IdentityResolutionExternalSource.md
 docs/IdentityResolutionQueueConfig.md
 docs/IdleEventTrigger.md
 docs/IdleTokenTimeout.md
@@ -5041,6 +5045,7 @@ docs/OutboundApi.md
 docs/OutboundDetailEventTopicOutboundInitEvent.md
 docs/OutboundDomain.md
 docs/OutboundDomainEntityListing.md
+docs/OutboundDomainRequest.md
 docs/OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes.md
 docs/OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent.md
 docs/OutboundMessagingCampaignPostContactSmsEventTopicOutboundMessagingCampaignPostContactSMSEvent.md
@@ -5612,6 +5617,7 @@ docs/PostChatsRoomParticipant-example.txt
 docs/PostChatsRooms-example.txt
 docs/PostChatsUserMessages-example.txt
 docs/PostChatsUserMessagesPins-example.txt
+docs/PostChatsUsersMeSettings-example.txt
 docs/PostCoachingAppointmentAnnotations-example.txt
 docs/PostCoachingAppointmentConversations-example.txt
 docs/PostCoachingAppointments-example.txt
@@ -7860,6 +7866,7 @@ docs/UserAvailableTimes.md
 docs/UserBestPoints.md
 docs/UserBestPointsItem.md
 docs/UserChatSettings.md
+docs/UserChatSettingsPost.md
 docs/UserConversationSummary.md
 docs/UserConversationsEventMediaSummary.md
 docs/UserConversationsEventMediaSummaryDetail.md
@@ -10095,6 +10102,7 @@ src/PureCloudPlatform.Client.V2/Model/CustomEventAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/CustomEventAttributeList.cs
 src/PureCloudPlatform.Client.V2/Model/CustomI18nLabels.cs
 src/PureCloudPlatform.Client.V2/Model/CustomProvider.cs
+src/PureCloudPlatform.Client.V2/Model/CustomSmtpServerRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Customer.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerEndDetailEventTopicCustomerEndEvent.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerInteractionCenter.cs
@@ -11016,6 +11024,7 @@ src/PureCloudPlatform.Client.V2/Model/IdentityProvider.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityProviderEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityResolutionAutomergeConfig.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityResolutionConfig.cs
+src/PureCloudPlatform.Client.V2/Model/IdentityResolutionExternalSource.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityResolutionQueueConfig.cs
 src/PureCloudPlatform.Client.V2/Model/IdleEventTrigger.cs
 src/PureCloudPlatform.Client.V2/Model/IdleTokenTimeout.cs
@@ -11887,6 +11896,7 @@ src/PureCloudPlatform.Client.V2/Model/OutOfOfficeEventUser.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundDetailEventTopicOutboundInitEvent.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundDomain.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundDomainEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundDomainRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingCampaignPostContactEmailEventTopicEmailAttributes.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingCampaignPostContactEmailEventTopicOutboundMessagingCampaignPostContactEmailEvent.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundMessagingCampaignPostContactSmsEventTopicOutboundMessagingCampaignPostContactSMSEvent.cs
@@ -13410,6 +13420,7 @@ src/PureCloudPlatform.Client.V2/Model/UserAvailableTimes.cs
 src/PureCloudPlatform.Client.V2/Model/UserBestPoints.cs
 src/PureCloudPlatform.Client.V2/Model/UserBestPointsItem.cs
 src/PureCloudPlatform.Client.V2/Model/UserChatSettings.cs
+src/PureCloudPlatform.Client.V2/Model/UserChatSettingsPost.cs
 src/PureCloudPlatform.Client.V2/Model/UserConversationSummary.cs
 src/PureCloudPlatform.Client.V2/Model/UserConversationsEventMediaSummary.cs
 src/PureCloudPlatform.Client.V2/Model/UserConversationsEventMediaSummaryDetail.cs

@@ -3217,7 +3217,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
-        EmailOutboundDomainResult PostRoutingEmailOutboundDomains (OutboundDomain body);
+        EmailOutboundDomainResult PostRoutingEmailOutboundDomains (OutboundDomainRequest body);
 
         /// <summary>
         /// Create a domain
@@ -3229,7 +3229,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
-        ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsWithHttpInfo (OutboundDomain body);
+        ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsWithHttpInfo (OutboundDomainRequest body);
 
         /// <summary>
         /// Create a simulated domain
@@ -3241,7 +3241,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
-        EmailOutboundDomainResult PostRoutingEmailOutboundDomainsSimulated (OutboundDomain body);
+        EmailOutboundDomainResult PostRoutingEmailOutboundDomainsSimulated (OutboundDomainRequest body);
 
         /// <summary>
         /// Create a simulated domain
@@ -3253,7 +3253,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
-        ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomain body);
+        ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomainRequest body);
 
         /// <summary>
         /// Create Language
@@ -7351,7 +7351,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
-        System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsAsync (OutboundDomain body);
+        System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsAsync (OutboundDomainRequest body);
 
         /// <summary>
         /// Create a domain
@@ -7363,7 +7363,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsAsyncWithHttpInfo (OutboundDomain body);
+        System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsAsyncWithHttpInfo (OutboundDomainRequest body);
 
         /// <summary>
         /// Create a simulated domain
@@ -7375,7 +7375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
-        System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedAsync (OutboundDomain body);
+        System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedAsync (OutboundDomainRequest body);
 
         /// <summary>
         /// Create a simulated domain
@@ -7387,7 +7387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomain body);
+        System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomainRequest body);
 
         /// <summary>
         /// Create Language
@@ -33477,7 +33477,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
-        public EmailOutboundDomainResult PostRoutingEmailOutboundDomains (OutboundDomain body)
+        public EmailOutboundDomainResult PostRoutingEmailOutboundDomains (OutboundDomainRequest body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = PostRoutingEmailOutboundDomainsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -33491,7 +33491,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
-        public ApiResponse< EmailOutboundDomainResult > PostRoutingEmailOutboundDomainsWithHttpInfo (OutboundDomain body)
+        public ApiResponse< EmailOutboundDomainResult > PostRoutingEmailOutboundDomainsWithHttpInfo (OutboundDomainRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33581,7 +33581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
-        public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsAsync (OutboundDomain body)
+        public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsAsync (OutboundDomainRequest body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = await PostRoutingEmailOutboundDomainsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -33596,7 +33596,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsAsyncWithHttpInfo (OutboundDomain body)
+        public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsAsyncWithHttpInfo (OutboundDomainRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33688,7 +33688,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
-        public EmailOutboundDomainResult PostRoutingEmailOutboundDomainsSimulated (OutboundDomain body)
+        public EmailOutboundDomainResult PostRoutingEmailOutboundDomainsSimulated (OutboundDomainRequest body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo(body);
              return localVarResponse.Data;
@@ -33702,7 +33702,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
-        public ApiResponse< EmailOutboundDomainResult > PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomain body)
+        public ApiResponse< EmailOutboundDomainResult > PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomainRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33792,7 +33792,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
-        public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedAsync (OutboundDomain body)
+        public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedAsync (OutboundDomainRequest body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = await PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -33807,7 +33807,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomain body)
+        public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomainRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)

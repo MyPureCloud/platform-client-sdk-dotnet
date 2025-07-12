@@ -415,7 +415,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ukua for "uk-UA"
             /// </summary>
             [EnumMember(Value = "uk-UA")]
-            Ukua
+            Ukua,
+            
+            /// <summary>
+            /// Enum Cscz for "cs-CZ"
+            /// </summary>
+            [EnumMember(Value = "cs-CZ")]
+            Cscz
         }
         /// <summary>
         /// file type of the document
