@@ -1939,7 +1939,7 @@ namespace Example
 
 ## GetTaskmanagementWorkitemsSchemaVersions
 
-> [**DataSchema**](DataSchema) GetTaskmanagementWorkitemsSchemaVersions (string schemaId)
+> [**DataSchemaListing**](DataSchemaListing) GetTaskmanagementWorkitemsSchemaVersions (string schemaId)
 
 
 Get all versions of a schema
@@ -1975,7 +1975,7 @@ namespace Example
             try
             { 
                 // Get all versions of a schema
-                DataSchema result = apiInstance.GetTaskmanagementWorkitemsSchemaVersions(schemaId);
+                DataSchemaListing result = apiInstance.GetTaskmanagementWorkitemsSchemaVersions(schemaId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1996,7 +1996,7 @@ namespace Example
 
 ### Return type
 
-[**DataSchema**](DataSchema)
+[**DataSchemaListing**](DataSchemaListing)
 
 
 ## GetTaskmanagementWorkitemsSchemas
@@ -4925,4 +4925,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 237.0.0_
+_PureCloudPlatform.Client.V2 238.0.0_

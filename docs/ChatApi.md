@@ -11,6 +11,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteChatsRoomParticipant**](#DeleteChatsRoomParticipant) | **Delete** /api/v2/chats/rooms/{roomJid}/participants/{userId} | Remove a user from a room. |
 | [**DeleteChatsUserMessage**](#DeleteChatsUserMessage) | **Delete** /api/v2/chats/users/{userId}/messages/{messageId} | Delete a message to a user |
 | [**DeleteChatsUserMessagesPin**](#DeleteChatsUserMessagesPin) | **Delete** /api/v2/chats/users/{userId}/messages/pins/{pinnedMessageId} | Remove a pinned message from a 1on1 |
+| [**DeleteChatsUsersMeSettings**](#DeleteChatsUsersMeSettings) | **Delete** /api/v2/chats/users/me/settings | Delete a user&#39;s chat settings |
 | [**GetChatsMessage**](#GetChatsMessage) | **Get** /api/v2/chats/messages/{messageId} | Get a message |
 | [**GetChatsRoom**](#GetChatsRoom) | **Get** /api/v2/chats/rooms/{roomJid} | Get a room |
 | [**GetChatsRoomMessage**](#GetChatsRoomMessage) | **Get** /api/v2/chats/rooms/{roomJid}/messages/{messageIds} | Get messages by id(s) from a room |
@@ -36,6 +37,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostChatsRooms**](#PostChatsRooms) | **Post** /api/v2/chats/rooms | Create an adhoc room |
 | [**PostChatsUserMessages**](#PostChatsUserMessages) | **Post** /api/v2/chats/users/{userId}/messages | Send a message to a user |
 | [**PostChatsUserMessagesPins**](#PostChatsUserMessagesPins) | **Post** /api/v2/chats/users/{userId}/messages/pins | Add pinned messages for a 1on1, up to a maximum of 5 pinned messages |
+| [**PostChatsUsersMeSettings**](#PostChatsUsersMeSettings) | **Post** /api/v2/chats/users/me/settings | Create a user&#39;s chat settings |
 | [**PutChatsMessageReactions**](#PutChatsMessageReactions) | **Put** /api/v2/chats/messages/{messageId}/reactions | Update reactions to a message |
 | [**PutChatsSettings**](#PutChatsSettings) | **Put** /api/v2/chats/settings | Update Chat Settings. |
 
@@ -355,6 +357,61 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **userId** | **string**| userId |  |
 | **pinnedMessageId** | **string**| pinnedMessageId |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteChatsUsersMeSettings
+
+> void DeleteChatsUsersMeSettings ()
+
+
+Delete a user's chat settings
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteChatsUsersMeSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+
+            try
+            { 
+                // Delete a user's chat settings
+                apiInstance.DeleteChatsUsersMeSettings();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.DeleteChatsUsersMeSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
 
 ### Return type
 
@@ -1964,6 +2021,66 @@ namespace Example
 void (empty response body)
 
 
+## PostChatsUsersMeSettings
+
+> void PostChatsUsersMeSettings (UserChatSettingsPost body)
+
+
+Create a user's chat settings
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostChatsUsersMeSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ChatApi();
+            var body = new UserChatSettingsPost(); // UserChatSettingsPost | 
+
+            try
+            { 
+                // Create a user's chat settings
+                apiInstance.PostChatsUsersMeSettings(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ChatApi.PostChatsUsersMeSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UserChatSettingsPost**](UserChatSettingsPost)|  |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PutChatsMessageReactions
 
 > void PutChatsMessageReactions (string messageId, ChatReactionUpdate body)
@@ -2090,4 +2207,4 @@ namespace Example
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatform.Client.V2 237.0.0_
+_PureCloudPlatform.Client.V2 238.0.0_

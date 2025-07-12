@@ -7861,7 +7861,7 @@ namespace Example
 
 ## PostRoutingEmailOutboundDomains
 
-> [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PostRoutingEmailOutboundDomains (OutboundDomain body)
+> [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PostRoutingEmailOutboundDomains (OutboundDomainRequest body)
 
 
 Create a domain
@@ -7892,7 +7892,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var body = new OutboundDomain(); // OutboundDomain | Domain
+            var body = new OutboundDomainRequest(); // OutboundDomainRequest | Domain
 
             try
             { 
@@ -7914,7 +7914,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OutboundDomain**](OutboundDomain)| Domain |  |
+| **body** | [**OutboundDomainRequest**](OutboundDomainRequest)| Domain |  |
 
 ### Return type
 
@@ -7923,7 +7923,7 @@ namespace Example
 
 ## PostRoutingEmailOutboundDomainsSimulated
 
-> [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PostRoutingEmailOutboundDomainsSimulated (OutboundDomain body)
+> [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PostRoutingEmailOutboundDomainsSimulated (OutboundDomainRequest body)
 
 
 Create a simulated domain
@@ -7954,7 +7954,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var body = new OutboundDomain(); // OutboundDomain | Domain
+            var body = new OutboundDomainRequest(); // OutboundDomainRequest | Domain
 
             try
             { 
@@ -7976,7 +7976,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OutboundDomain**](OutboundDomain)| Domain |  |
+| **body** | [**OutboundDomainRequest**](OutboundDomainRequest)| Domain |  |
 
 ### Return type
 
@@ -10210,4 +10210,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 237.0.0_
+_PureCloudPlatform.Client.V2 238.0.0_

@@ -124,6 +124,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementSchedulingjob**](#GetWorkforcemanagementSchedulingjob) | **Get** /api/v2/workforcemanagement/schedulingjobs/{jobId} | Get status of the scheduling job |
 | [**GetWorkforcemanagementShifttrades**](#GetWorkforcemanagementShifttrades) | **Get** /api/v2/workforcemanagement/shifttrades | Gets all of my shift trades |
 | [**GetWorkforcemanagementShrinkageJob**](#GetWorkforcemanagementShrinkageJob) | **Get** /api/v2/workforcemanagement/shrinkage/jobs/{jobId} | Request to fetch the status of the historical shrinkage query |
+| [**GetWorkforcemanagementTeamAdherence**](#GetWorkforcemanagementTeamAdherence) | **Get** /api/v2/workforcemanagement/teams/{teamId}/adherence | Get a list of user schedule adherence records for the requested team |
 | [**GetWorkforcemanagementTimeoffbalanceJob**](#GetWorkforcemanagementTimeoffbalanceJob) | **Get** /api/v2/workforcemanagement/timeoffbalance/jobs/{jobId} | Query the results of time off types job |
 | [**GetWorkforcemanagementTimeoffrequest**](#GetWorkforcemanagementTimeoffrequest) | **Get** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user |
 | [**GetWorkforcemanagementTimeoffrequestWaitlistpositions**](#GetWorkforcemanagementTimeoffrequestWaitlistpositions) | **Get** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions | Get the daily waitlist positions of a time off request for the current user |
@@ -8144,6 +8145,68 @@ namespace Example
 ### Return type
 
 [**WfmHistoricalShrinkageResponse**](WfmHistoricalShrinkageResponse)
+
+
+## GetWorkforcemanagementTeamAdherence
+
+> [**UserScheduleAdherenceListing**](UserScheduleAdherenceListing) GetWorkforcemanagementTeamAdherence (string teamId)
+
+
+Get a list of user schedule adherence records for the requested team
+
+Requires ANY permissions: 
+
+* wfm:realtimeAdherence:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementTeamAdherenceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var teamId = teamId_example;  // string | The ID of the team
+
+            try
+            { 
+                // Get a list of user schedule adherence records for the requested team
+                UserScheduleAdherenceListing result = apiInstance.GetWorkforcemanagementTeamAdherence(teamId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementTeamAdherence: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **teamId** | **string**| The ID of the team |  |
+
+### Return type
+
+[**UserScheduleAdherenceListing**](UserScheduleAdherenceListing)
 
 
 ## GetWorkforcemanagementTimeoffbalanceJob
@@ -16294,4 +16357,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 237.0.0_
+_PureCloudPlatform.Client.V2 238.0.0_
