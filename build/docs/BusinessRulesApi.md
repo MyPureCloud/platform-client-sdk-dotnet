@@ -23,7 +23,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetBusinessrulesSchemasCoretypes**](#GetBusinessrulesSchemasCoretypes) | **Get** /api/v2/businessrules/schemas/coretypes | Get the core types from which all schemas are built. |
 | [**PatchBusinessrulesDecisiontable**](#PatchBusinessrulesDecisiontable) | **Patch** /api/v2/businessrules/decisiontables/{tableId} | Update a decision table |
 | [**PatchBusinessrulesDecisiontableVersion**](#PatchBusinessrulesDecisiontableVersion) | **Patch** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion} | Update a decision table version |
-| [**PatchBusinessrulesDecisiontableVersionRow**](#PatchBusinessrulesDecisiontableVersionRow) | **Patch** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId} | Partially update a decision table row. Will be deprecated, we should use PUT request. |
 | [**PostBusinessrulesDecisiontableExecute**](#PostBusinessrulesDecisiontableExecute) | **Post** /api/v2/businessrules/decisiontables/{tableId}/execute | Execute a published decision table |
 | [**PostBusinessrulesDecisiontableVersionCopy**](#PostBusinessrulesDecisiontableVersionCopy) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/copy | Copy a decision table version |
 | [**PostBusinessrulesDecisiontableVersionExecute**](#PostBusinessrulesDecisiontableVersionExecute) | **Post** /api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/execute | Execute a decision table version |
@@ -570,7 +569,7 @@ namespace Example
 
 ## GetBusinessrulesDecisiontableVersions
 
-> [**DecisionTableVersionListing**](DecisionTableVersionListing) GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null, List<string> divisionIds = null)
+> [**DecisionTableVersionListing**](DecisionTableVersionListing) GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null)
 
 
 Get a list of decision table versions
@@ -606,12 +605,11 @@ namespace Example
             var tableId = tableId_example;  // string | Table ID
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 100. (optional) 
-            var divisionIds = new List<string>(); // List<string> | One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional) 
 
             try
             { 
                 // Get a list of decision table versions
-                DecisionTableVersionListing result = apiInstance.GetBusinessrulesDecisiontableVersions(tableId, after, pageSize, divisionIds);
+                DecisionTableVersionListing result = apiInstance.GetBusinessrulesDecisiontableVersions(tableId, after, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -631,7 +629,6 @@ namespace Example
 | **tableId** | **string**| Table ID |  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 100. | [optional]  |
-| **divisionIds** | [**List<string>**](string)| One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. | [optional]  |
 
 ### Return type
 
@@ -640,7 +637,7 @@ namespace Example
 
 ## GetBusinessrulesDecisiontables
 
-> [**DecisionTableListing**](DecisionTableListing) GetBusinessrulesDecisiontables (string after = null, string pageSize = null, List<string> divisionIds = null)
+> [**DecisionTableListing**](DecisionTableListing) GetBusinessrulesDecisiontables (string after = null, string pageSize = null, List<string> divisionIds = null, string name = null)
 
 
 Get a list of decision tables.
@@ -676,11 +673,12 @@ namespace Example
             var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 100. (optional) 
             var divisionIds = new List<string>(); // List<string> | One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional) 
+            var name = name_example;  // string | Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. (optional) 
 
             try
             { 
                 // Get a list of decision tables.
-                DecisionTableListing result = apiInstance.GetBusinessrulesDecisiontables(after, pageSize, divisionIds);
+                DecisionTableListing result = apiInstance.GetBusinessrulesDecisiontables(after, pageSize, divisionIds, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -700,6 +698,7 @@ namespace Example
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 100. | [optional]  |
 | **divisionIds** | [**List<string>**](string)| One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. | [optional]  |
+| **name** | **string**| Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. | [optional]  |
 
 ### Return type
 
@@ -1162,80 +1161,6 @@ namespace Example
 ### Return type
 
 [**DecisionTableVersion**](DecisionTableVersion)
-
-
-## PatchBusinessrulesDecisiontableVersionRow
-
-> [**DecisionTableRow**](DecisionTableRow) PatchBusinessrulesDecisiontableVersionRow (string tableId, int? tableVersion, string rowId, UpdateDecisionTableRowRequest body)
-
-:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
-This resource has been deprecated
-:::
-
-Partially update a decision table row. Will be deprecated, we should use PUT request.
-
-PatchBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
-Requires ALL permissions: 
-
-* businessrules:decisionTableRow:edit
-* routing:queue:view
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class PatchBusinessrulesDecisiontableVersionRowExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new BusinessRulesApi();
-            var tableId = tableId_example;  // string | Table ID
-            var tableVersion = 56;  // int? | Table Version
-            var rowId = rowId_example;  // string | Row ID
-            var body = new UpdateDecisionTableRowRequest(); // UpdateDecisionTableRowRequest | Partially update decision table row request
-
-            try
-            { 
-                // Partially update a decision table row. Will be deprecated, we should use PUT request.
-                DecisionTableRow result = apiInstance.PatchBusinessrulesDecisiontableVersionRow(tableId, tableVersion, rowId, body);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling BusinessRulesApi.PatchBusinessrulesDecisiontableVersionRow: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **tableId** | **string**| Table ID |  |
-| **tableVersion** | **int?**| Table Version |  |
-| **rowId** | **string**| Row ID |  |
-| **body** | [**UpdateDecisionTableRowRequest**](UpdateDecisionTableRowRequest)| Partially update decision table row request |  |
-
-### Return type
-
-[**DecisionTableRow**](DecisionTableRow)
 
 
 ## PostBusinessrulesDecisiontableExecute
@@ -2044,4 +1969,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

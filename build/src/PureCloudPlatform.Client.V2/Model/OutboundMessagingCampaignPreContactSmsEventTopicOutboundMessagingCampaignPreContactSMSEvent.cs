@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sms for "SMS"
             /// </summary>
             [EnumMember(Value = "SMS")]
-            Sms
+            Sms,
+            
+            /// <summary>
+            /// Enum Whatsapp for "WHATSAPP"
+            /// </summary>
+            [EnumMember(Value = "WHATSAPP")]
+            Whatsapp
         }
         /// <summary>
         /// Gets or Sets WrapupCode
@@ -182,7 +188,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum OutboundMaxMessageLengthExceeded for "OUTBOUND_MAX_MESSAGE_LENGTH_EXCEEDED"
             /// </summary>
             [EnumMember(Value = "OUTBOUND_MAX_MESSAGE_LENGTH_EXCEEDED")]
-            OutboundMaxMessageLengthExceeded
+            OutboundMaxMessageLengthExceeded,
+            
+            /// <summary>
+            /// Enum OutboundStuckContact for "OUTBOUND_STUCK_CONTACT"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_STUCK_CONTACT")]
+            OutboundStuckContact
         }
         /// <summary>
         /// Gets or Sets OutboundCampaignType

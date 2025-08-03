@@ -14,7 +14,8 @@
 | **Version** | **string** |  | [optional] |
 | **Secure** | **bool?** |  | [optional] |
 | **VirtualAgentEnabled** | **bool?** |  | [optional] |
+| **AgenticVirtualAgentEnabled** | **bool?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

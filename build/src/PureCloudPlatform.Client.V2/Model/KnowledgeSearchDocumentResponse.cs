@@ -79,7 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Readonly">Whether the document is read-only..</param>
         /// <param name="Variations">Variations of the document..</param>
         /// <param name="Answer">The answer to the query..</param>
-        public KnowledgeSearchDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, string ExternalId = null, string ExternalUrl = null, AddressableEntityRef Source = null, bool? Readonly = null, List<DocumentVariationAnswer> Variations = null, string Answer = null)
+        public KnowledgeSearchDocumentResponse(string Title = null, bool? Visible = null, List<KnowledgeDocumentAlternative> Alternatives = null, StateEnum? State = null, DateTime? DateCreated = null, DateTime? DateModified = null, DateTime? DateImported = null, int? LastPublishedVersionNumber = null, DateTime? DatePublished = null, AddressableEntityRef DocumentVersion = null, CategoryResponse Category = null, List<LabelResponse> Labels = null, KnowledgeBaseReference KnowledgeBase = null, string ExternalId = null, string ExternalUrl = null, AddressableEntityRef Source = null, bool? Readonly = null, List<KnowledgeDocumentSearchVariation> Variations = null, string Answer = null)
         {
             this.Title = Title;
             this.Visible = Visible;
@@ -283,7 +283,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Variations of the document.</value>
         [DataMember(Name="variations", EmitDefaultValue=false)]
-        public List<DocumentVariationAnswer> Variations { get; set; }
+        public List<KnowledgeDocumentSearchVariation> Variations { get; set; }
 
 
 

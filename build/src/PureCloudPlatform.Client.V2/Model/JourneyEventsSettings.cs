@@ -61,16 +61,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="JourneyEventsSettings" /> class.
         /// </summary>
         /// <param name="Enabled">Whether or not journey event collection is enabled..</param>
-        /// <param name="ExcludedQueryParameters">List of parameters to be excluded from the query string..</param>
-        /// <param name="ShouldKeepUrlFragment">Whether or not to keep the URL fragment..</param>
-        /// <param name="SearchQueryParameters">List of query parameters used for search (e.g. &#39;q&#39;)..</param>
+        /// <param name="ExcludedQueryParameters">(deprecated) List of parameters to be excluded from the query string..</param>
+        /// <param name="ShouldKeepUrlFragment">(deprecated) Whether or not to keep the URL fragment..</param>
+        /// <param name="SearchQueryParameters">(deprecated) List of query parameters used for search (e.g. &#39;q&#39;)..</param>
         /// <param name="PageviewConfig">Controls how the pageview events are tracked..</param>
         /// <param name="ClickEvents">Tracks when and where a visitor clicks on a webpage..</param>
         /// <param name="FormsTrackEvents">Controls how the form submitted and form abandoned events are tracked after a visitor interacts with a form element..</param>
         /// <param name="IdleEvents">Tracks when and where a visitor becomes inactive on a webpage..</param>
         /// <param name="InViewportEvents">Tracks when elements become visible or hidden on screen..</param>
         /// <param name="ScrollDepthEvents">Tracks when a visitor scrolls to a specific percentage of a webpage..</param>
-        public JourneyEventsSettings(bool? Enabled = null, List<string> ExcludedQueryParameters = null, bool? ShouldKeepUrlFragment = null, List<string> SearchQueryParameters = null, PageviewConfigEnum? PageviewConfig = null, List<SelectorEventTrigger> ClickEvents = null, List<FormsTrackTrigger> FormsTrackEvents = null, List<IdleEventTrigger> IdleEvents = null, List<SelectorEventTrigger> InViewportEvents = null, List<ScrollPercentageEventTrigger> ScrollDepthEvents = null)
+        /// <param name="TrackingSettings">Configuration settings for tracking behavior and filtering.</param>
+        public JourneyEventsSettings(bool? Enabled = null, List<string> ExcludedQueryParameters = null, bool? ShouldKeepUrlFragment = null, List<string> SearchQueryParameters = null, PageviewConfigEnum? PageviewConfig = null, List<SelectorEventTrigger> ClickEvents = null, List<FormsTrackTrigger> FormsTrackEvents = null, List<IdleEventTrigger> IdleEvents = null, List<SelectorEventTrigger> InViewportEvents = null, List<ScrollPercentageEventTrigger> ScrollDepthEvents = null, Object TrackingSettings = null)
         {
             this.Enabled = Enabled;
             this.ExcludedQueryParameters = ExcludedQueryParameters;
@@ -82,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IdleEvents = IdleEvents;
             this.InViewportEvents = InViewportEvents;
             this.ScrollDepthEvents = ScrollDepthEvents;
+            this.TrackingSettings = TrackingSettings;
             
         }
         
@@ -97,27 +99,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of parameters to be excluded from the query string.
+        /// (deprecated) List of parameters to be excluded from the query string.
         /// </summary>
-        /// <value>List of parameters to be excluded from the query string.</value>
+        /// <value>(deprecated) List of parameters to be excluded from the query string.</value>
         [DataMember(Name="excludedQueryParameters", EmitDefaultValue=false)]
         public List<string> ExcludedQueryParameters { get; set; }
 
 
 
         /// <summary>
-        /// Whether or not to keep the URL fragment.
+        /// (deprecated) Whether or not to keep the URL fragment.
         /// </summary>
-        /// <value>Whether or not to keep the URL fragment.</value>
+        /// <value>(deprecated) Whether or not to keep the URL fragment.</value>
         [DataMember(Name="shouldKeepUrlFragment", EmitDefaultValue=false)]
         public bool? ShouldKeepUrlFragment { get; set; }
 
 
 
         /// <summary>
-        /// List of query parameters used for search (e.g. &#39;q&#39;).
+        /// (deprecated) List of query parameters used for search (e.g. &#39;q&#39;).
         /// </summary>
-        /// <value>List of query parameters used for search (e.g. &#39;q&#39;).</value>
+        /// <value>(deprecated) List of query parameters used for search (e.g. &#39;q&#39;).</value>
         [DataMember(Name="searchQueryParameters", EmitDefaultValue=false)]
         public List<string> SearchQueryParameters { get; set; }
 
@@ -169,6 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ScrollPercentageEventTrigger> ScrollDepthEvents { get; set; }
 
 
+
+        /// <summary>
+        /// Configuration settings for tracking behavior and filtering
+        /// </summary>
+        /// <value>Configuration settings for tracking behavior and filtering</value>
+        [DataMember(Name="trackingSettings", EmitDefaultValue=false)]
+        public Object TrackingSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IdleEvents: ").Append(IdleEvents).Append("\n");
             sb.Append("  InViewportEvents: ").Append(InViewportEvents).Append("\n");
             sb.Append("  ScrollDepthEvents: ").Append(ScrollDepthEvents).Append("\n");
+            sb.Append("  TrackingSettings: ").Append(TrackingSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -277,6 +289,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ScrollDepthEvents == other.ScrollDepthEvents ||
                     this.ScrollDepthEvents != null &&
                     this.ScrollDepthEvents.SequenceEqual(other.ScrollDepthEvents)
+                ) &&
+                (
+                    this.TrackingSettings == other.TrackingSettings ||
+                    this.TrackingSettings != null &&
+                    this.TrackingSettings.Equals(other.TrackingSettings)
                 );
         }
 
@@ -320,6 +337,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ScrollDepthEvents != null)
                     hash = hash * 59 + this.ScrollDepthEvents.GetHashCode();
+
+                if (this.TrackingSettings != null)
+                    hash = hash * 59 + this.TrackingSettings.GetHashCode();
 
                 return hash;
             }

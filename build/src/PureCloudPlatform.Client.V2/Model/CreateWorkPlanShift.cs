@@ -81,8 +81,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MaximumContiguousWorkTimeMinutes">Maximum contiguous time in minutes configured for the shift. Used if constrainContiguousWorkTime &#x3D;&#x3D; true.</param>
         /// <param name="ConstrainDayOff">Whether day off rule is enabled.</param>
         /// <param name="DayOffRule">The day off rule for agents to have next day off or previous day off. used if constrainDayOff &#x3D; true.</param>
+        /// <param name="PlanningPeriodConstraints">Planning period constraints.</param>
         /// <param name="Activities">Activities configured for this shift.</param>
-        public CreateWorkPlanShift(string Name = null, SetWrapperDayOfWeek Days = null, bool? FlexibleStartTime = null, int? ExactStartTimeMinutesFromMidnight = null, int? EarliestStartTimeMinutesFromMidnight = null, int? LatestStartTimeMinutesFromMidnight = null, bool? ConstrainStopTime = null, bool? ConstrainLatestStopTime = null, int? LatestStopTimeMinutesFromMidnight = null, bool? ConstrainEarliestStopTime = null, int? EarliestStopTimeMinutesFromMidnight = null, int? StartIncrementMinutes = null, bool? FlexiblePaidTime = null, int? ExactPaidTimeMinutes = null, int? MinimumPaidTimeMinutes = null, int? MaximumPaidTimeMinutes = null, bool? ConstrainContiguousWorkTime = null, int? MinimumContiguousWorkTimeMinutes = null, int? MaximumContiguousWorkTimeMinutes = null, bool? ConstrainDayOff = null, DayOffRuleEnum? DayOffRule = null, List<CreateWorkPlanActivity> Activities = null)
+        public CreateWorkPlanShift(string Name = null, SetWrapperDayOfWeek Days = null, bool? FlexibleStartTime = null, int? ExactStartTimeMinutesFromMidnight = null, int? EarliestStartTimeMinutesFromMidnight = null, int? LatestStartTimeMinutesFromMidnight = null, bool? ConstrainStopTime = null, bool? ConstrainLatestStopTime = null, int? LatestStopTimeMinutesFromMidnight = null, bool? ConstrainEarliestStopTime = null, int? EarliestStopTimeMinutesFromMidnight = null, int? StartIncrementMinutes = null, bool? FlexiblePaidTime = null, int? ExactPaidTimeMinutes = null, int? MinimumPaidTimeMinutes = null, int? MaximumPaidTimeMinutes = null, bool? ConstrainContiguousWorkTime = null, int? MinimumContiguousWorkTimeMinutes = null, int? MaximumContiguousWorkTimeMinutes = null, bool? ConstrainDayOff = null, DayOffRuleEnum? DayOffRule = null, PlanningPeriodShiftConstraints PlanningPeriodConstraints = null, List<CreateWorkPlanActivity> Activities = null)
         {
             this.Name = Name;
             this.Days = Days;
@@ -105,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MaximumContiguousWorkTimeMinutes = MaximumContiguousWorkTimeMinutes;
             this.ConstrainDayOff = ConstrainDayOff;
             this.DayOffRule = DayOffRule;
+            this.PlanningPeriodConstraints = PlanningPeriodConstraints;
             this.Activities = Activities;
             
         }
@@ -294,6 +296,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Planning period constraints
+        /// </summary>
+        /// <value>Planning period constraints</value>
+        [DataMember(Name="planningPeriodConstraints", EmitDefaultValue=false)]
+        public PlanningPeriodShiftConstraints PlanningPeriodConstraints { get; set; }
+
+
+
+        /// <summary>
         /// Activities configured for this shift
         /// </summary>
         /// <value>Activities configured for this shift</value>
@@ -331,6 +342,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MaximumContiguousWorkTimeMinutes: ").Append(MaximumContiguousWorkTimeMinutes).Append("\n");
             sb.Append("  ConstrainDayOff: ").Append(ConstrainDayOff).Append("\n");
             sb.Append("  DayOffRule: ").Append(DayOffRule).Append("\n");
+            sb.Append("  PlanningPeriodConstraints: ").Append(PlanningPeriodConstraints).Append("\n");
             sb.Append("  Activities: ").Append(Activities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -478,6 +490,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DayOffRule.Equals(other.DayOffRule)
                 ) &&
                 (
+                    this.PlanningPeriodConstraints == other.PlanningPeriodConstraints ||
+                    this.PlanningPeriodConstraints != null &&
+                    this.PlanningPeriodConstraints.Equals(other.PlanningPeriodConstraints)
+                ) &&
+                (
                     this.Activities == other.Activities ||
                     this.Activities != null &&
                     this.Activities.SequenceEqual(other.Activities)
@@ -557,6 +574,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DayOffRule != null)
                     hash = hash * 59 + this.DayOffRule.GetHashCode();
+
+                if (this.PlanningPeriodConstraints != null)
+                    hash = hash * 59 + this.PlanningPeriodConstraints.GetHashCode();
 
                 if (this.Activities != null)
                     hash = hash * 59 + this.Activities.GetHashCode();

@@ -6,6 +6,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteAnalyticsFlowsAggregatesJob**](#DeleteAnalyticsFlowsAggregatesJob) | **Delete** /api/v2/analytics/flows/aggregates/jobs/{jobId} | Delete/cancel an async request for flow aggregates |
 | [**GetAnalyticsFlowsAggregatesJob**](#GetAnalyticsFlowsAggregatesJob) | **Get** /api/v2/analytics/flows/aggregates/jobs/{jobId} | Get status for async query for Flow aggregates |
 | [**GetAnalyticsFlowsAggregatesJobResults**](#GetAnalyticsFlowsAggregatesJobResults) | **Get** /api/v2/analytics/flows/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**PostAnalyticsFlowsActivityQuery**](#PostAnalyticsFlowsActivityQuery) | **Post** /api/v2/analytics/flows/activity/query | Query for flow activity observations |
@@ -13,6 +14,69 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsFlowsAggregatesQuery**](#PostAnalyticsFlowsAggregatesQuery) | **Post** /api/v2/analytics/flows/aggregates/query | Query for flow aggregates |
 | [**PostAnalyticsFlowsObservationsQuery**](#PostAnalyticsFlowsObservationsQuery) | **Post** /api/v2/analytics/flows/observations/query | Query for flow observations |
 
+
+
+## DeleteAnalyticsFlowsAggregatesJob
+
+> void DeleteAnalyticsFlowsAggregatesJob (string jobId)
+
+
+Delete/cancel an async request for flow aggregates
+
+DeleteAnalyticsFlowsAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:flowAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAnalyticsFlowsAggregatesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new FlowsApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Delete/cancel an async request for flow aggregates
+                apiInstance.DeleteAnalyticsFlowsAggregatesJob(jobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FlowsApi.DeleteAnalyticsFlowsAggregatesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## GetAnalyticsFlowsAggregatesJob
@@ -399,4 +463,4 @@ namespace Example
 [**FlowObservationQueryResponse**](FlowObservationQueryResponse)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

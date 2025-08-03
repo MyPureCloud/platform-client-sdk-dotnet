@@ -90,6 +90,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DeleteProgramResponse> DeleteSpeechandtextanalyticsProgramWithHttpInfo (string programId, bool? forceDelete = null);
 
         /// <summary>
+        /// Delete a Speech &amp; Text Analytics Reprocessing job by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns></returns>
+        
+        void DeleteSpeechandtextanalyticsReprocessingJob (string jobId);
+
+        /// <summary>
+        /// Delete a Speech &amp; Text Analytics Reprocessing job by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteSpeechandtextanalyticsReprocessingJobWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Delete All Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
@@ -320,6 +346,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of TranscriptUrls</returns>
         
         ApiResponse<TranscriptUrls> GetSpeechandtextanalyticsConversationCommunicationTranscripturlsWithHttpInfo (string conversationId, string communicationId);
+
+        /// <summary>
+        /// Get sentiment data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The conversation ID of the sentiment data</param>
+        /// <returns>SentimentData</returns>
+        
+        SentimentData GetSpeechandtextanalyticsConversationSentiments (string conversationId);
+
+        /// <summary>
+        /// Get sentiment data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The conversation ID of the sentiment data</param>
+        /// <returns>ApiResponse of SentimentData</returns>
+        
+        ApiResponse<SentimentData> GetSpeechandtextanalyticsConversationSentimentsWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get conversation summaries by conversation id.
@@ -670,6 +720,90 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of UnpublishedProgramsEntityListing</returns>
         
         ApiResponse<UnpublishedProgramsEntityListing> GetSpeechandtextanalyticsProgramsUnpublishedWithHttpInfo (string nextPage = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics reprocess job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>ReprocessJobResponse</returns>
+        
+        ReprocessJobResponse GetSpeechandtextanalyticsReprocessingJob (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics reprocess job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>ApiResponse of ReprocessJobResponse</returns>
+        
+        ApiResponse<ReprocessJobResponse> GetSpeechandtextanalyticsReprocessingJobWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics Reprocessing interactions statuses by job id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobInteractions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>ReprocessInteractionsByJobIdResponse</returns>
+        
+        ReprocessInteractionsByJobIdResponse GetSpeechandtextanalyticsReprocessingJobInteractions (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics Reprocessing interactions statuses by job id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobInteractions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>ApiResponse of ReprocessInteractionsByJobIdResponse</returns>
+        
+        ApiResponse<ReprocessInteractionsByJobIdResponse> GetSpeechandtextanalyticsReprocessingJobInteractionsWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Get the list of Speech &amp; Text Analytics reprocess jobs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. Default is 25. (optional)</param>
+        /// <param name="pageNumber">The page number for the listing. Defaults to 1. (optional)</param>
+        /// <param name="sortOrder">Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by. (optional)</param>
+        /// <returns>ReprocessJobEntityListingResponse</returns>
+        
+        ReprocessJobEntityListingResponse GetSpeechandtextanalyticsReprocessingJobs (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+
+        /// <summary>
+        /// Get the list of Speech &amp; Text Analytics reprocess jobs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. Default is 25. (optional)</param>
+        /// <param name="pageNumber">The page number for the listing. Defaults to 1. (optional)</param>
+        /// <param name="sortOrder">Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by. (optional)</param>
+        /// <returns>ApiResponse of ReprocessJobEntityListingResponse</returns>
+        
+        ApiResponse<ReprocessJobEntityListingResponse> GetSpeechandtextanalyticsReprocessingJobsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get the list of Speech &amp; Text Analytics sentiment supported dialects
@@ -1116,6 +1250,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ProgramJob> PostSpeechandtextanalyticsProgramsPublishjobsWithHttpInfo (ProgramJobRequest body);
 
         /// <summary>
+        /// Create a Speech &amp; Text Analytics reprocess job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The ReprocessJob to create</param>
+        /// <returns>ReprocessJobResponse</returns>
+        
+        ReprocessJobResponse PostSpeechandtextanalyticsReprocessingJobs (CreateReprocessJobRequest body);
+
+        /// <summary>
+        /// Create a Speech &amp; Text Analytics reprocess job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The ReprocessJob to create</param>
+        /// <returns>ApiResponse of ReprocessJobResponse</returns>
+        
+        ApiResponse<ReprocessJobResponse> PostSpeechandtextanalyticsReprocessingJobsWithHttpInfo (CreateReprocessJobRequest body);
+
+        /// <summary>
         /// Create a Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
@@ -1520,6 +1680,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DeleteProgramResponse>> DeleteSpeechandtextanalyticsProgramAsyncWithHttpInfo (string programId, bool? forceDelete = null);
 
         /// <summary>
+        /// Delete a Speech &amp; Text Analytics Reprocessing job by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteSpeechandtextanalyticsReprocessingJobAsync (string jobId);
+
+        /// <summary>
+        /// Delete a Speech &amp; Text Analytics Reprocessing job by Id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsReprocessingJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Delete All Speech &amp; Text Analytics SentimentFeedback
         /// </summary>
         /// <remarks>
@@ -1750,6 +1936,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TranscriptUrls)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TranscriptUrls>> GetSpeechandtextanalyticsConversationCommunicationTranscripturlsAsyncWithHttpInfo (string conversationId, string communicationId);
+
+        /// <summary>
+        /// Get sentiment data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The conversation ID of the sentiment data</param>
+        /// <returns>Task of SentimentData</returns>
+        
+        System.Threading.Tasks.Task<SentimentData> GetSpeechandtextanalyticsConversationSentimentsAsync (string conversationId);
+
+        /// <summary>
+        /// Get sentiment data
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The conversation ID of the sentiment data</param>
+        /// <returns>Task of ApiResponse (SentimentData)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SentimentData>> GetSpeechandtextanalyticsConversationSentimentsAsyncWithHttpInfo (string conversationId);
 
         /// <summary>
         /// Get conversation summaries by conversation id.
@@ -2100,6 +2310,90 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UnpublishedProgramsEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UnpublishedProgramsEntityListing>> GetSpeechandtextanalyticsProgramsUnpublishedAsyncWithHttpInfo (string nextPage = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics reprocess job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of ReprocessJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ReprocessJobResponse> GetSpeechandtextanalyticsReprocessingJobAsync (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics reprocess job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of ApiResponse (ReprocessJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ReprocessJobResponse>> GetSpeechandtextanalyticsReprocessingJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics Reprocessing interactions statuses by job id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobInteractions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of ReprocessInteractionsByJobIdResponse</returns>
+        
+        System.Threading.Tasks.Task<ReprocessInteractionsByJobIdResponse> GetSpeechandtextanalyticsReprocessingJobInteractionsAsync (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics Reprocessing interactions statuses by job id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobInteractions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of ApiResponse (ReprocessInteractionsByJobIdResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ReprocessInteractionsByJobIdResponse>> GetSpeechandtextanalyticsReprocessingJobInteractionsAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
+        /// Get the list of Speech &amp; Text Analytics reprocess jobs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. Default is 25. (optional)</param>
+        /// <param name="pageNumber">The page number for the listing. Defaults to 1. (optional)</param>
+        /// <param name="sortOrder">Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by. (optional)</param>
+        /// <returns>Task of ReprocessJobEntityListingResponse</returns>
+        
+        System.Threading.Tasks.Task<ReprocessJobEntityListingResponse> GetSpeechandtextanalyticsReprocessingJobsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
+
+        /// <summary>
+        /// Get the list of Speech &amp; Text Analytics reprocess jobs
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. Default is 25. (optional)</param>
+        /// <param name="pageNumber">The page number for the listing. Defaults to 1. (optional)</param>
+        /// <param name="sortOrder">Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by. (optional)</param>
+        /// <returns>Task of ApiResponse (ReprocessJobEntityListingResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ReprocessJobEntityListingResponse>> GetSpeechandtextanalyticsReprocessingJobsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null);
 
         /// <summary>
         /// Get the list of Speech &amp; Text Analytics sentiment supported dialects
@@ -2544,6 +2838,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ProgramJob)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ProgramJob>> PostSpeechandtextanalyticsProgramsPublishjobsAsyncWithHttpInfo (ProgramJobRequest body);
+
+        /// <summary>
+        /// Create a Speech &amp; Text Analytics reprocess job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The ReprocessJob to create</param>
+        /// <returns>Task of ReprocessJobResponse</returns>
+        
+        System.Threading.Tasks.Task<ReprocessJobResponse> PostSpeechandtextanalyticsReprocessingJobsAsync (CreateReprocessJobRequest body);
+
+        /// <summary>
+        /// Create a Speech &amp; Text Analytics reprocess job.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The ReprocessJob to create</param>
+        /// <returns>Task of ApiResponse (ReprocessJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ReprocessJobResponse>> PostSpeechandtextanalyticsReprocessingJobsAsyncWithHttpInfo (CreateReprocessJobRequest body);
 
         /// <summary>
         /// Create a Speech &amp; Text Analytics SentimentFeedback
@@ -3562,6 +3882,209 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DeleteProgramResponse>(localVarStatusCode,
                 localVarHeaders,
                 (DeleteProgramResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeleteProgramResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a Speech &amp; Text Analytics Reprocessing job by Id 
+        /// 
+        /// DeleteSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns></returns>
+        
+        public void DeleteSpeechandtextanalyticsReprocessingJob (string jobId)
+        {
+             DeleteSpeechandtextanalyticsReprocessingJobWithHttpInfo(jobId);
+        }
+
+        /// <summary>
+        /// Delete a Speech &amp; Text Analytics Reprocessing job by Id 
+        /// 
+        /// DeleteSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteSpeechandtextanalyticsReprocessingJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsReprocessingJob");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSpeechandtextanalyticsReprocessingJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSpeechandtextanalyticsReprocessingJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a Speech &amp; Text Analytics Reprocessing job by Id 
+        /// 
+        /// DeleteSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteSpeechandtextanalyticsReprocessingJobAsync (string jobId)
+        {
+             await DeleteSpeechandtextanalyticsReprocessingJobAsyncWithHttpInfo(jobId);
+
+        }
+
+        /// <summary>
+        /// Delete a Speech &amp; Text Analytics Reprocessing job by Id 
+        /// 
+        /// DeleteSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsReprocessingJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsReprocessingJob");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSpeechandtextanalyticsReprocessingJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSpeechandtextanalyticsReprocessingJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5413,6 +5936,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TranscriptUrls>(localVarStatusCode,
                 localVarHeaders,
                 (TranscriptUrls) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TranscriptUrls)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get sentiment data 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The conversation ID of the sentiment data</param>
+        /// <returns>SentimentData</returns>
+        
+        public SentimentData GetSpeechandtextanalyticsConversationSentiments (string conversationId)
+        {
+             ApiResponse<SentimentData> localVarResponse = GetSpeechandtextanalyticsConversationSentimentsWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get sentiment data 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The conversation ID of the sentiment data</param>
+        /// <returns>ApiResponse of SentimentData</returns>
+        
+        public ApiResponse< SentimentData > GetSpeechandtextanalyticsConversationSentimentsWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationSentiments");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/sentiments";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsConversationSentiments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsConversationSentiments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SentimentData>(localVarStatusCode,
+                localVarHeaders,
+                (SentimentData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SentimentData)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get sentiment data 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The conversation ID of the sentiment data</param>
+        /// <returns>Task of SentimentData</returns>
+        
+        public async System.Threading.Tasks.Task<SentimentData> GetSpeechandtextanalyticsConversationSentimentsAsync (string conversationId)
+        {
+             ApiResponse<SentimentData> localVarResponse = await GetSpeechandtextanalyticsConversationSentimentsAsyncWithHttpInfo(conversationId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get sentiment data 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">The conversation ID of the sentiment data</param>
+        /// <returns>Task of ApiResponse (SentimentData)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SentimentData>> GetSpeechandtextanalyticsConversationSentimentsAsyncWithHttpInfo (string conversationId)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationSentiments");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/sentiments";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsConversationSentiments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsConversationSentiments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SentimentData>(localVarStatusCode,
+                localVarHeaders,
+                (SentimentData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SentimentData)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8227,6 +8951,632 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UnpublishedProgramsEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (UnpublishedProgramsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UnpublishedProgramsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics reprocess job by id 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>ReprocessJobResponse</returns>
+        
+        public ReprocessJobResponse GetSpeechandtextanalyticsReprocessingJob (string jobId)
+        {
+             ApiResponse<ReprocessJobResponse> localVarResponse = GetSpeechandtextanalyticsReprocessingJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics reprocess job by id 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>ApiResponse of ReprocessJobResponse</returns>
+        
+        public ApiResponse< ReprocessJobResponse > GetSpeechandtextanalyticsReprocessingJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsReprocessingJob");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReprocessJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReprocessJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReprocessJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics reprocess job by id 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of ReprocessJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ReprocessJobResponse> GetSpeechandtextanalyticsReprocessingJobAsync (string jobId)
+        {
+             ApiResponse<ReprocessJobResponse> localVarResponse = await GetSpeechandtextanalyticsReprocessingJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics reprocess job by id 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of ApiResponse (ReprocessJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ReprocessJobResponse>> GetSpeechandtextanalyticsReprocessingJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsReprocessingJob");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReprocessJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReprocessJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReprocessJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics Reprocessing interactions statuses by job id 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobInteractions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>ReprocessInteractionsByJobIdResponse</returns>
+        
+        public ReprocessInteractionsByJobIdResponse GetSpeechandtextanalyticsReprocessingJobInteractions (string jobId)
+        {
+             ApiResponse<ReprocessInteractionsByJobIdResponse> localVarResponse = GetSpeechandtextanalyticsReprocessingJobInteractionsWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics Reprocessing interactions statuses by job id 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobInteractions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>ApiResponse of ReprocessInteractionsByJobIdResponse</returns>
+        
+        public ApiResponse< ReprocessInteractionsByJobIdResponse > GetSpeechandtextanalyticsReprocessingJobInteractionsWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsReprocessingJobInteractions");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}/interactions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJobInteractions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJobInteractions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReprocessInteractionsByJobIdResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReprocessInteractionsByJobIdResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReprocessInteractionsByJobIdResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics Reprocessing interactions statuses by job id 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobInteractions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of ReprocessInteractionsByJobIdResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ReprocessInteractionsByJobIdResponse> GetSpeechandtextanalyticsReprocessingJobInteractionsAsync (string jobId)
+        {
+             ApiResponse<ReprocessInteractionsByJobIdResponse> localVarResponse = await GetSpeechandtextanalyticsReprocessingJobInteractionsAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics Reprocessing interactions statuses by job id 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobInteractions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The Id of the Reprocessing job</param>
+        /// <returns>Task of ApiResponse (ReprocessInteractionsByJobIdResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ReprocessInteractionsByJobIdResponse>> GetSpeechandtextanalyticsReprocessingJobInteractionsAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsReprocessingJobInteractions");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}/interactions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJobInteractions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJobInteractions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReprocessInteractionsByJobIdResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReprocessInteractionsByJobIdResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReprocessInteractionsByJobIdResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the list of Speech &amp; Text Analytics reprocess jobs 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. Default is 25. (optional)</param>
+        /// <param name="pageNumber">The page number for the listing. Defaults to 1. (optional)</param>
+        /// <param name="sortOrder">Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by. (optional)</param>
+        /// <returns>ReprocessJobEntityListingResponse</returns>
+        
+        public ReprocessJobEntityListingResponse GetSpeechandtextanalyticsReprocessingJobs (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        {
+             ApiResponse<ReprocessJobEntityListingResponse> localVarResponse = GetSpeechandtextanalyticsReprocessingJobsWithHttpInfo(pageSize, pageNumber, sortOrder, name);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of Speech &amp; Text Analytics reprocess jobs 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. Default is 25. (optional)</param>
+        /// <param name="pageNumber">The page number for the listing. Defaults to 1. (optional)</param>
+        /// <param name="sortOrder">Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by. (optional)</param>
+        /// <returns>ApiResponse of ReprocessJobEntityListingResponse</returns>
+        
+        public ApiResponse< ReprocessJobEntityListingResponse > GetSpeechandtextanalyticsReprocessingJobsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReprocessJobEntityListingResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReprocessJobEntityListingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReprocessJobEntityListingResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the list of Speech &amp; Text Analytics reprocess jobs 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. Default is 25. (optional)</param>
+        /// <param name="pageNumber">The page number for the listing. Defaults to 1. (optional)</param>
+        /// <param name="sortOrder">Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by. (optional)</param>
+        /// <returns>Task of ReprocessJobEntityListingResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ReprocessJobEntityListingResponse> GetSpeechandtextanalyticsReprocessingJobsAsync (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        {
+             ApiResponse<ReprocessJobEntityListingResponse> localVarResponse = await GetSpeechandtextanalyticsReprocessingJobsAsyncWithHttpInfo(pageSize, pageNumber, sortOrder, name);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of Speech &amp; Text Analytics reprocess jobs 
+        /// 
+        /// GetSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. Default is 25. (optional)</param>
+        /// <param name="pageNumber">The page number for the listing. Defaults to 1. (optional)</param>
+        /// <param name="sortOrder">Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by. (optional)</param>
+        /// <returns>Task of ApiResponse (ReprocessJobEntityListingResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ReprocessJobEntityListingResponse>> GetSpeechandtextanalyticsReprocessingJobsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+        { 
+
+            var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsReprocessingJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReprocessJobEntityListingResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReprocessJobEntityListingResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReprocessJobEntityListingResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -11892,6 +13242,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ProgramJob>(localVarStatusCode,
                 localVarHeaders,
                 (ProgramJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a Speech &amp; Text Analytics reprocess job. 
+        /// 
+        /// PostSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The ReprocessJob to create</param>
+        /// <returns>ReprocessJobResponse</returns>
+        
+        public ReprocessJobResponse PostSpeechandtextanalyticsReprocessingJobs (CreateReprocessJobRequest body)
+        {
+             ApiResponse<ReprocessJobResponse> localVarResponse = PostSpeechandtextanalyticsReprocessingJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a Speech &amp; Text Analytics reprocess job. 
+        /// 
+        /// PostSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The ReprocessJob to create</param>
+        /// <returns>ApiResponse of ReprocessJobResponse</returns>
+        
+        public ApiResponse< ReprocessJobResponse > PostSpeechandtextanalyticsReprocessingJobsWithHttpInfo (CreateReprocessJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsReprocessingJobs");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsReprocessingJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsReprocessingJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReprocessJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReprocessJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReprocessJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a Speech &amp; Text Analytics reprocess job. 
+        /// 
+        /// PostSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The ReprocessJob to create</param>
+        /// <returns>Task of ReprocessJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ReprocessJobResponse> PostSpeechandtextanalyticsReprocessingJobsAsync (CreateReprocessJobRequest body)
+        {
+             ApiResponse<ReprocessJobResponse> localVarResponse = await PostSpeechandtextanalyticsReprocessingJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a Speech &amp; Text Analytics reprocess job. 
+        /// 
+        /// PostSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The ReprocessJob to create</param>
+        /// <returns>Task of ApiResponse (ReprocessJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ReprocessJobResponse>> PostSpeechandtextanalyticsReprocessingJobsAsyncWithHttpInfo (CreateReprocessJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsReprocessingJobs");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsReprocessingJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSpeechandtextanalyticsReprocessingJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ReprocessJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ReprocessJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ReprocessJobResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

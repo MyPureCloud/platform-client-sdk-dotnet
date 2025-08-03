@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class LocalizedLabels :  IEquatable<LocalizedLabels>
     {
         /// <summary>
-        /// Contains localized label key used in messenger homescreen
+        /// Contains localized label key used in messenger homescreen and push notification. PushNotificationTitle and PushNotificationBody keys are required when notifications are enabled.
         /// </summary>
-        /// <value>Contains localized label key used in messenger homescreen</value>
+        /// <value>Contains localized label key used in messenger homescreen and push notification. PushNotificationTitle and PushNotificationBody keys are required when notifications are enabled.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum KeyEnum
         {
@@ -58,16 +58,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Pushnotificationbody
         }
         /// <summary>
-        /// Contains localized label key used in messenger homescreen
+        /// Contains localized label key used in messenger homescreen and push notification. PushNotificationTitle and PushNotificationBody keys are required when notifications are enabled.
         /// </summary>
-        /// <value>Contains localized label key used in messenger homescreen</value>
+        /// <value>Contains localized label key used in messenger homescreen and push notification. PushNotificationTitle and PushNotificationBody keys are required when notifications are enabled.</value>
         [DataMember(Name="key", EmitDefaultValue=false)]
         public KeyEnum? Key { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="LocalizedLabels" /> class.
         /// </summary>
-        /// <param name="Key">Contains localized label key used in messenger homescreen.</param>
-        /// <param name="Value">Contains localized label value used in messenger homescreen.</param>
+        /// <param name="Key">Contains localized label key used in messenger homescreen and push notification. PushNotificationTitle and PushNotificationBody keys are required when notifications are enabled..</param>
+        /// <param name="Value">Contains localized label value used in messenger homescreen and push notification.</param>
         public LocalizedLabels(KeyEnum? Key = null, string Value = null)
         {
             this.Key = Key;
@@ -80,9 +80,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Contains localized label value used in messenger homescreen
+        /// Contains localized label value used in messenger homescreen and push notification
         /// </summary>
-        /// <value>Contains localized label value used in messenger homescreen</value>
+        /// <value>Contains localized label value used in messenger homescreen and push notification</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

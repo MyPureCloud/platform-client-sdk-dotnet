@@ -24,11 +24,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">The ID of the shift.</param>
         /// <param name="Activities">The activities associated with this shift.</param>
         /// <param name="ManuallyEdited">Whether this shift was manually edited. This is only set by clients and is used for rescheduling.</param>
-        public BuAgentScheduleShiftRequest(string Id = null, List<BuAgentScheduleActivity> Activities = null, bool? ManuallyEdited = null)
+        /// <param name="WorkPlanId">The ID of the work plan for which the work plan shift emanates from.</param>
+        /// <param name="WorkPlanShiftId">The ID of the work plan shift that was used in schedule generation.</param>
+        public BuAgentScheduleShiftRequest(string Id = null, List<BuAgentScheduleActivity> Activities = null, bool? ManuallyEdited = null, ValueWrapperString WorkPlanId = null, ValueWrapperString WorkPlanShiftId = null)
         {
             this.Id = Id;
             this.Activities = Activities;
             this.ManuallyEdited = ManuallyEdited;
+            this.WorkPlanId = WorkPlanId;
+            this.WorkPlanShiftId = WorkPlanShiftId;
             
         }
         
@@ -87,6 +91,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public BuScheduleReference Schedule { get; private set; }
 
 
+
+        /// <summary>
+        /// The ID of the work plan for which the work plan shift emanates from
+        /// </summary>
+        /// <value>The ID of the work plan for which the work plan shift emanates from</value>
+        [DataMember(Name="workPlanId", EmitDefaultValue=false)]
+        public ValueWrapperString WorkPlanId { get; set; }
+
+
+
+        /// <summary>
+        /// The ID of the work plan shift that was used in schedule generation
+        /// </summary>
+        /// <value>The ID of the work plan shift that was used in schedule generation</value>
+        [DataMember(Name="workPlanShiftId", EmitDefaultValue=false)]
+        public ValueWrapperString WorkPlanShiftId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +124,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Activities: ").Append(Activities).Append("\n");
             sb.Append("  ManuallyEdited: ").Append(ManuallyEdited).Append("\n");
             sb.Append("  Schedule: ").Append(Schedule).Append("\n");
+            sb.Append("  WorkPlanId: ").Append(WorkPlanId).Append("\n");
+            sb.Append("  WorkPlanShiftId: ").Append(WorkPlanShiftId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -171,6 +195,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Schedule == other.Schedule ||
                     this.Schedule != null &&
                     this.Schedule.Equals(other.Schedule)
+                ) &&
+                (
+                    this.WorkPlanId == other.WorkPlanId ||
+                    this.WorkPlanId != null &&
+                    this.WorkPlanId.Equals(other.WorkPlanId)
+                ) &&
+                (
+                    this.WorkPlanShiftId == other.WorkPlanShiftId ||
+                    this.WorkPlanShiftId != null &&
+                    this.WorkPlanShiftId.Equals(other.WorkPlanShiftId)
                 );
         }
 
@@ -202,6 +236,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Schedule != null)
                     hash = hash * 59 + this.Schedule.GetHashCode();
+
+                if (this.WorkPlanId != null)
+                    hash = hash * 59 + this.WorkPlanId.GetHashCode();
+
+                if (this.WorkPlanShiftId != null)
+                    hash = hash * 59 + this.WorkPlanShiftId.GetHashCode();
 
                 return hash;
             }

@@ -143,6 +143,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaSettings">The media settings for the queue..</param>
         /// <param name="RoutingRules">The routing rules for the queue, used for Preferred Agent Routing..</param>
         /// <param name="ConditionalGroupRouting">The Conditional Group Routing settings for the queue..</param>
+        /// <param name="ConditionalGroupActivation">The Conditional Group Activation settings for the queue..</param>
         /// <param name="Bullseye">The bullseye settings for the queue..</param>
         /// <param name="ScoringMethod">The Scoring Method for the queue..</param>
         /// <param name="LastAgentRoutingMode">The Last Agent Routing Mode for the queue..</param>
@@ -168,7 +169,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PeerId">The ID of an associated external queue..</param>
         /// <param name="SuppressInQueueCallRecording">Indicates whether recording in-queue calls is suppressed for this queue..</param>
         /// <param name="Joined">Joined.</param>
-        public UserQueue(string Id = null, string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, LastAgentRoutingModeEnum? LastAgentRoutingMode = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, CannedResponseLibraries CannedResponseLibraries = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null, bool? Joined = null)
+        public UserQueue(string Id = null, string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ModifiedBy = null, string CreatedBy = null, QueueMediaSettings MediaSettings = null, List<RoutingRule> RoutingRules = null, ConditionalGroupRouting ConditionalGroupRouting = null, ConditionalGroupActivation ConditionalGroupActivation = null, Bullseye Bullseye = null, ScoringMethodEnum? ScoringMethod = null, LastAgentRoutingModeEnum? LastAgentRoutingMode = null, AcwSettings AcwSettings = null, SkillEvaluationMethodEnum? SkillEvaluationMethod = null, List<MemberGroup> MemberGroups = null, DomainEntityRef QueueFlow = null, DomainEntityRef EmailInQueueFlow = null, DomainEntityRef MessageInQueueFlow = null, DomainEntityRef WhisperPrompt = null, DomainEntityRef OnHoldPrompt = null, CannedResponseLibraries CannedResponseLibraries = null, bool? EnableTranscription = null, bool? EnableAudioMonitoring = null, bool? EnableManualAssignment = null, AgentOwnedRouting AgentOwnedRouting = null, DirectRouting DirectRouting = null, string CallingPartyName = null, string CallingPartyNumber = null, Dictionary<string, Script> DefaultScripts = null, QueueMessagingAddresses OutboundMessagingAddresses = null, QueueEmailAddress OutboundEmailAddress = null, string PeerId = null, bool? SuppressInQueueCallRecording = null, bool? Joined = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -181,6 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MediaSettings = MediaSettings;
             this.RoutingRules = RoutingRules;
             this.ConditionalGroupRouting = ConditionalGroupRouting;
+            this.ConditionalGroupActivation = ConditionalGroupActivation;
             this.Bullseye = Bullseye;
             this.ScoringMethod = ScoringMethod;
             this.LastAgentRoutingMode = LastAgentRoutingMode;
@@ -333,6 +335,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The Conditional Group Routing settings for the queue.</value>
         [DataMember(Name="conditionalGroupRouting", EmitDefaultValue=false)]
         public ConditionalGroupRouting ConditionalGroupRouting { get; set; }
+
+
+
+        /// <summary>
+        /// The Conditional Group Activation settings for the queue.
+        /// </summary>
+        /// <value>The Conditional Group Activation settings for the queue.</value>
+        [DataMember(Name="conditionalGroupActivation", EmitDefaultValue=false)]
+        public ConditionalGroupActivation ConditionalGroupActivation { get; set; }
 
 
 
@@ -570,6 +581,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaSettings: ").Append(MediaSettings).Append("\n");
             sb.Append("  RoutingRules: ").Append(RoutingRules).Append("\n");
             sb.Append("  ConditionalGroupRouting: ").Append(ConditionalGroupRouting).Append("\n");
+            sb.Append("  ConditionalGroupActivation: ").Append(ConditionalGroupActivation).Append("\n");
             sb.Append("  Bullseye: ").Append(Bullseye).Append("\n");
             sb.Append("  ScoringMethod: ").Append(ScoringMethod).Append("\n");
             sb.Append("  LastAgentRoutingMode: ").Append(LastAgentRoutingMode).Append("\n");
@@ -705,6 +717,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConditionalGroupRouting == other.ConditionalGroupRouting ||
                     this.ConditionalGroupRouting != null &&
                     this.ConditionalGroupRouting.Equals(other.ConditionalGroupRouting)
+                ) &&
+                (
+                    this.ConditionalGroupActivation == other.ConditionalGroupActivation ||
+                    this.ConditionalGroupActivation != null &&
+                    this.ConditionalGroupActivation.Equals(other.ConditionalGroupActivation)
                 ) &&
                 (
                     this.Bullseye == other.Bullseye ||
@@ -890,6 +907,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConditionalGroupRouting != null)
                     hash = hash * 59 + this.ConditionalGroupRouting.GetHashCode();
+
+                if (this.ConditionalGroupActivation != null)
+                    hash = hash * 59 + this.ConditionalGroupActivation.GetHashCode();
 
                 if (this.Bullseye != null)
                     hash = hash * 59 + this.Bullseye.GetHashCode();

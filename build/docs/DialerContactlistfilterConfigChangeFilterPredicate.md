@@ -13,7 +13,8 @@
 | **Range** | [**DialerContactlistfilterConfigChangeFilterRange**](DialerContactlistfilterConfigChangeFilterRange) |  | [optional] |
 | **Inverted** | **bool?** | Whether or not to invert to result of evaluating the predicate | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
+| **GetAdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

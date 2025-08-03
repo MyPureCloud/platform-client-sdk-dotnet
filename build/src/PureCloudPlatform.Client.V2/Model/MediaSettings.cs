@@ -26,15 +26,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ServiceLevel">The targeted service level for the media type.</param>
         /// <param name="AutoAnswerAlertToneSeconds">How long to play the alerting tone for an auto-answer interaction.</param>
         /// <param name="ManualAnswerAlertToneSeconds">How long to play the alerting tone for a manual-answer interaction.</param>
-        /// <param name="SubTypeSettings">Map of media subtype to media subtype specific settings..</param>
-        public MediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, Dictionary<string, BaseMediaSettings> SubTypeSettings = null)
+        public MediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null)
         {
             this.EnableAutoAnswer = EnableAutoAnswer;
             this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
             this.ServiceLevel = ServiceLevel;
             this.AutoAnswerAlertToneSeconds = AutoAnswerAlertToneSeconds;
             this.ManualAnswerAlertToneSeconds = ManualAnswerAlertToneSeconds;
-            this.SubTypeSettings = SubTypeSettings;
             
         }
         
@@ -84,15 +82,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public double? ManualAnswerAlertToneSeconds { get; set; }
 
 
-
-        /// <summary>
-        /// Map of media subtype to media subtype specific settings.
-        /// </summary>
-        /// <value>Map of media subtype to media subtype specific settings.</value>
-        [DataMember(Name="subTypeSettings", EmitDefaultValue=false)]
-        public Dictionary<string, BaseMediaSettings> SubTypeSettings { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -107,7 +96,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ServiceLevel: ").Append(ServiceLevel).Append("\n");
             sb.Append("  AutoAnswerAlertToneSeconds: ").Append(AutoAnswerAlertToneSeconds).Append("\n");
             sb.Append("  ManualAnswerAlertToneSeconds: ").Append(ManualAnswerAlertToneSeconds).Append("\n");
-            sb.Append("  SubTypeSettings: ").Append(SubTypeSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,11 +160,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ManualAnswerAlertToneSeconds == other.ManualAnswerAlertToneSeconds ||
                     this.ManualAnswerAlertToneSeconds != null &&
                     this.ManualAnswerAlertToneSeconds.Equals(other.ManualAnswerAlertToneSeconds)
-                ) &&
-                (
-                    this.SubTypeSettings == other.SubTypeSettings ||
-                    this.SubTypeSettings != null &&
-                    this.SubTypeSettings.SequenceEqual(other.SubTypeSettings)
                 );
         }
 
@@ -205,9 +188,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ManualAnswerAlertToneSeconds != null)
                     hash = hash * 59 + this.ManualAnswerAlertToneSeconds.GetHashCode();
-
-                if (this.SubTypeSettings != null)
-                    hash = hash * 59 + this.SubTypeSettings.GetHashCode();
 
                 return hash;
             }

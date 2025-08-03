@@ -68,6 +68,64 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<UsageExecutionResult> GetOauthClientUsageSummaryWithHttpInfo (string clientId, string days = null);
 
         /// <summary>
+        /// Get the status and results of the usage query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>OrganizationPublicApiUsageResultsResponse</returns>
+        
+        OrganizationPublicApiUsageResultsResponse GetUsageAggregatesQueryJob (string jobId, int? pageSize = null, string after = null);
+
+        /// <summary>
+        /// Get the status and results of the usage query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>ApiResponse of OrganizationPublicApiUsageResultsResponse</returns>
+        
+        ApiResponse<OrganizationPublicApiUsageResultsResponse> GetUsageAggregatesQueryJobWithHttpInfo (string jobId, int? pageSize = null, string after = null);
+
+        /// <summary>
+        /// Get the status and results of the usage query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>ClientPublicApiUsageResultsResponse</returns>
+        
+        ClientPublicApiUsageResultsResponse GetUsageClientClientIdAggregatesQueryJob (string clientId, string jobId, int? pageSize = null, string after = null);
+
+        /// <summary>
+        /// Get the status and results of the usage query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>ApiResponse of ClientPublicApiUsageResultsResponse</returns>
+        
+        ApiResponse<ClientPublicApiUsageResultsResponse> GetUsageClientClientIdAggregatesQueryJobWithHttpInfo (string clientId, string jobId, int? pageSize = null, string after = null);
+
+        /// <summary>
         /// Get the results of a usage query
         /// </summary>
         /// <remarks>
@@ -144,6 +202,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of UsageExecutionResult</returns>
         
         ApiResponse<UsageExecutionResult> PostOauthClientUsageQueryWithHttpInfo (string clientId, ApiUsageClientQuery body);
+
+        /// <summary>
+        /// Query your organization&#39;s public api usage.
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Query</param>
+        /// <returns>OrganizationUsageQueryResponse</returns>
+        
+        OrganizationUsageQueryResponse PostUsageAggregatesQueryJobs (OrganizationPublicApiUsageQueryRequest body);
+
+        /// <summary>
+        /// Query your organization&#39;s public api usage.
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Query</param>
+        /// <returns>ApiResponse of OrganizationUsageQueryResponse</returns>
+        
+        ApiResponse<OrganizationUsageQueryResponse> PostUsageAggregatesQueryJobsWithHttpInfo (OrganizationPublicApiUsageQueryRequest body);
+
+        /// <summary>
+        /// Query your client&#39;s public api usage.
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="body">Query</param>
+        /// <returns>ClientUsageQueryResponse</returns>
+        
+        ClientUsageQueryResponse PostUsageClientClientIdAggregatesQueryJobs (string clientId, ClientPublicApiUsageQueryRequest body);
+
+        /// <summary>
+        /// Query your client&#39;s public api usage.
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="body">Query</param>
+        /// <returns>ApiResponse of ClientUsageQueryResponse</returns>
+        
+        ApiResponse<ClientUsageQueryResponse> PostUsageClientClientIdAggregatesQueryJobsWithHttpInfo (string clientId, ClientPublicApiUsageQueryRequest body);
 
         /// <summary>
         /// Query organization API Usage - 
@@ -250,6 +358,64 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> GetOauthClientUsageSummaryAsyncWithHttpInfo (string clientId, string days = null);
 
         /// <summary>
+        /// Get the status and results of the usage query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>Task of OrganizationPublicApiUsageResultsResponse</returns>
+        
+        System.Threading.Tasks.Task<OrganizationPublicApiUsageResultsResponse> GetUsageAggregatesQueryJobAsync (string jobId, int? pageSize = null, string after = null);
+
+        /// <summary>
+        /// Get the status and results of the usage query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>Task of ApiResponse (OrganizationPublicApiUsageResultsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OrganizationPublicApiUsageResultsResponse>> GetUsageAggregatesQueryJobAsyncWithHttpInfo (string jobId, int? pageSize = null, string after = null);
+
+        /// <summary>
+        /// Get the status and results of the usage query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>Task of ClientPublicApiUsageResultsResponse</returns>
+        
+        System.Threading.Tasks.Task<ClientPublicApiUsageResultsResponse> GetUsageClientClientIdAggregatesQueryJobAsync (string clientId, string jobId, int? pageSize = null, string after = null);
+
+        /// <summary>
+        /// Get the status and results of the usage query
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>Task of ApiResponse (ClientPublicApiUsageResultsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ClientPublicApiUsageResultsResponse>> GetUsageClientClientIdAggregatesQueryJobAsyncWithHttpInfo (string clientId, string jobId, int? pageSize = null, string after = null);
+
+        /// <summary>
         /// Get the results of a usage query
         /// </summary>
         /// <remarks>
@@ -326,6 +492,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UsageExecutionResult)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UsageExecutionResult>> PostOauthClientUsageQueryAsyncWithHttpInfo (string clientId, ApiUsageClientQuery body);
+
+        /// <summary>
+        /// Query your organization&#39;s public api usage.
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Query</param>
+        /// <returns>Task of OrganizationUsageQueryResponse</returns>
+        
+        System.Threading.Tasks.Task<OrganizationUsageQueryResponse> PostUsageAggregatesQueryJobsAsync (OrganizationPublicApiUsageQueryRequest body);
+
+        /// <summary>
+        /// Query your organization&#39;s public api usage.
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Query</param>
+        /// <returns>Task of ApiResponse (OrganizationUsageQueryResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OrganizationUsageQueryResponse>> PostUsageAggregatesQueryJobsAsyncWithHttpInfo (OrganizationPublicApiUsageQueryRequest body);
+
+        /// <summary>
+        /// Query your client&#39;s public api usage.
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="body">Query</param>
+        /// <returns>Task of ClientUsageQueryResponse</returns>
+        
+        System.Threading.Tasks.Task<ClientUsageQueryResponse> PostUsageClientClientIdAggregatesQueryJobsAsync (string clientId, ClientPublicApiUsageQueryRequest body);
+
+        /// <summary>
+        /// Query your client&#39;s public api usage.
+        /// </summary>
+        /// <remarks>
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="body">Query</param>
+        /// <returns>Task of ApiResponse (ClientUsageQueryResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ClientUsageQueryResponse>> PostUsageClientClientIdAggregatesQueryJobsAsyncWithHttpInfo (string clientId, ClientPublicApiUsageQueryRequest body);
 
         /// <summary>
         /// Query organization API Usage - 
@@ -882,6 +1098,445 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UsageExecutionResult>(localVarStatusCode,
                 localVarHeaders,
                 (UsageExecutionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsageExecutionResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the status and results of the usage query 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>OrganizationPublicApiUsageResultsResponse</returns>
+        
+        public OrganizationPublicApiUsageResultsResponse GetUsageAggregatesQueryJob (string jobId, int? pageSize = null, string after = null)
+        {
+             ApiResponse<OrganizationPublicApiUsageResultsResponse> localVarResponse = GetUsageAggregatesQueryJobWithHttpInfo(jobId, pageSize, after);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the status and results of the usage query 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>ApiResponse of OrganizationPublicApiUsageResultsResponse</returns>
+        
+        public ApiResponse< OrganizationPublicApiUsageResultsResponse > GetUsageAggregatesQueryJobWithHttpInfo (string jobId, int? pageSize = null, string after = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling UsageApi->GetUsageAggregatesQueryJob");
+
+            var localVarPath = "/api/v2/usage/aggregates/query/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageAggregatesQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageAggregatesQueryJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrganizationPublicApiUsageResultsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (OrganizationPublicApiUsageResultsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPublicApiUsageResultsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the status and results of the usage query 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>Task of OrganizationPublicApiUsageResultsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<OrganizationPublicApiUsageResultsResponse> GetUsageAggregatesQueryJobAsync (string jobId, int? pageSize = null, string after = null)
+        {
+             ApiResponse<OrganizationPublicApiUsageResultsResponse> localVarResponse = await GetUsageAggregatesQueryJobAsyncWithHttpInfo(jobId, pageSize, after);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the status and results of the usage query 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>Task of ApiResponse (OrganizationPublicApiUsageResultsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationPublicApiUsageResultsResponse>> GetUsageAggregatesQueryJobAsyncWithHttpInfo (string jobId, int? pageSize = null, string after = null)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling UsageApi->GetUsageAggregatesQueryJob");
+            
+
+            var localVarPath = "/api/v2/usage/aggregates/query/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageAggregatesQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageAggregatesQueryJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrganizationPublicApiUsageResultsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (OrganizationPublicApiUsageResultsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationPublicApiUsageResultsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the status and results of the usage query 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>ClientPublicApiUsageResultsResponse</returns>
+        
+        public ClientPublicApiUsageResultsResponse GetUsageClientClientIdAggregatesQueryJob (string clientId, string jobId, int? pageSize = null, string after = null)
+        {
+             ApiResponse<ClientPublicApiUsageResultsResponse> localVarResponse = GetUsageClientClientIdAggregatesQueryJobWithHttpInfo(clientId, jobId, pageSize, after);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the status and results of the usage query 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>ApiResponse of ClientPublicApiUsageResultsResponse</returns>
+        
+        public ApiResponse< ClientPublicApiUsageResultsResponse > GetUsageClientClientIdAggregatesQueryJobWithHttpInfo (string clientId, string jobId, int? pageSize = null, string after = null)
+        { 
+            // verify the required parameter 'clientId' is set
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling UsageApi->GetUsageClientClientIdAggregatesQueryJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling UsageApi->GetUsageClientClientIdAggregatesQueryJob");
+
+            var localVarPath = "/api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageClientClientIdAggregatesQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageClientClientIdAggregatesQueryJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClientPublicApiUsageResultsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ClientPublicApiUsageResultsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClientPublicApiUsageResultsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the status and results of the usage query 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>Task of ClientPublicApiUsageResultsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ClientPublicApiUsageResultsResponse> GetUsageClientClientIdAggregatesQueryJobAsync (string clientId, string jobId, int? pageSize = null, string after = null)
+        {
+             ApiResponse<ClientPublicApiUsageResultsResponse> localVarResponse = await GetUsageClientClientIdAggregatesQueryJobAsyncWithHttpInfo(clientId, jobId, pageSize, after);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the status and results of the usage query 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="jobId">jobId</param>
+        /// <param name="pageSize">Page size of the results. Max is 1000. (optional, default to 100)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <returns>Task of ApiResponse (ClientPublicApiUsageResultsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ClientPublicApiUsageResultsResponse>> GetUsageClientClientIdAggregatesQueryJobAsyncWithHttpInfo (string clientId, string jobId, int? pageSize = null, string after = null)
+        { 
+            // verify the required parameter 'clientId' is set
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling UsageApi->GetUsageClientClientIdAggregatesQueryJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling UsageApi->GetUsageClientClientIdAggregatesQueryJob");
+            
+
+            var localVarPath = "/api/v2/usage/client/{clientId}/aggregates/query/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageClientClientIdAggregatesQueryJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsageClientClientIdAggregatesQueryJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClientPublicApiUsageResultsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ClientPublicApiUsageResultsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClientPublicApiUsageResultsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -1520,6 +2175,441 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UsageExecutionResult>(localVarStatusCode,
                 localVarHeaders,
                 (UsageExecutionResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsageExecutionResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query your organization&#39;s public api usage. 
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Query</param>
+        /// <returns>OrganizationUsageQueryResponse</returns>
+        
+        public OrganizationUsageQueryResponse PostUsageAggregatesQueryJobs (OrganizationPublicApiUsageQueryRequest body)
+        {
+             ApiResponse<OrganizationUsageQueryResponse> localVarResponse = PostUsageAggregatesQueryJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query your organization&#39;s public api usage. 
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Query</param>
+        /// <returns>ApiResponse of OrganizationUsageQueryResponse</returns>
+        
+        public ApiResponse< OrganizationUsageQueryResponse > PostUsageAggregatesQueryJobsWithHttpInfo (OrganizationPublicApiUsageQueryRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsageApi->PostUsageAggregatesQueryJobs");
+
+            var localVarPath = "/api/v2/usage/aggregates/query/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageAggregatesQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageAggregatesQueryJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrganizationUsageQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (OrganizationUsageQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationUsageQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query your organization&#39;s public api usage. 
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Query</param>
+        /// <returns>Task of OrganizationUsageQueryResponse</returns>
+        
+        public async System.Threading.Tasks.Task<OrganizationUsageQueryResponse> PostUsageAggregatesQueryJobsAsync (OrganizationPublicApiUsageQueryRequest body)
+        {
+             ApiResponse<OrganizationUsageQueryResponse> localVarResponse = await PostUsageAggregatesQueryJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query your organization&#39;s public api usage. 
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Query</param>
+        /// <returns>Task of ApiResponse (OrganizationUsageQueryResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OrganizationUsageQueryResponse>> PostUsageAggregatesQueryJobsAsyncWithHttpInfo (OrganizationPublicApiUsageQueryRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsageApi->PostUsageAggregatesQueryJobs");
+            
+
+            var localVarPath = "/api/v2/usage/aggregates/query/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageAggregatesQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageAggregatesQueryJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OrganizationUsageQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (OrganizationUsageQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OrganizationUsageQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query your client&#39;s public api usage. 
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="body">Query</param>
+        /// <returns>ClientUsageQueryResponse</returns>
+        
+        public ClientUsageQueryResponse PostUsageClientClientIdAggregatesQueryJobs (string clientId, ClientPublicApiUsageQueryRequest body)
+        {
+             ApiResponse<ClientUsageQueryResponse> localVarResponse = PostUsageClientClientIdAggregatesQueryJobsWithHttpInfo(clientId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query your client&#39;s public api usage. 
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="body">Query</param>
+        /// <returns>ApiResponse of ClientUsageQueryResponse</returns>
+        
+        public ApiResponse< ClientUsageQueryResponse > PostUsageClientClientIdAggregatesQueryJobsWithHttpInfo (string clientId, ClientPublicApiUsageQueryRequest body)
+        { 
+            // verify the required parameter 'clientId' is set
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling UsageApi->PostUsageClientClientIdAggregatesQueryJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsageApi->PostUsageClientClientIdAggregatesQueryJobs");
+
+            var localVarPath = "/api/v2/usage/client/{clientId}/aggregates/query/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageClientClientIdAggregatesQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageClientClientIdAggregatesQueryJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClientUsageQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ClientUsageQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClientUsageQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query your client&#39;s public api usage. 
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="body">Query</param>
+        /// <returns>Task of ClientUsageQueryResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ClientUsageQueryResponse> PostUsageClientClientIdAggregatesQueryJobsAsync (string clientId, ClientPublicApiUsageQueryRequest body)
+        {
+             ApiResponse<ClientUsageQueryResponse> localVarResponse = await PostUsageClientClientIdAggregatesQueryJobsAsyncWithHttpInfo(clientId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query your client&#39;s public api usage. 
+        /// After calling this method, you will need to save the queryExecutionId from the response and use it in a call to the results endpoint to get the results
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="clientId">clientId</param>
+        /// <param name="body">Query</param>
+        /// <returns>Task of ApiResponse (ClientUsageQueryResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ClientUsageQueryResponse>> PostUsageClientClientIdAggregatesQueryJobsAsyncWithHttpInfo (string clientId, ClientPublicApiUsageQueryRequest body)
+        { 
+            // verify the required parameter 'clientId' is set
+            if (clientId == null)
+                throw new ApiException(400, "Missing required parameter 'clientId' when calling UsageApi->PostUsageClientClientIdAggregatesQueryJobs");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsageApi->PostUsageClientClientIdAggregatesQueryJobs");
+            
+
+            var localVarPath = "/api/v2/usage/client/{clientId}/aggregates/query/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (clientId != null) localVarPathParams.Add("clientId", this.Configuration.ApiClient.ParameterToString(clientId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageClientClientIdAggregatesQueryJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsageClientClientIdAggregatesQueryJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ClientUsageQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ClientUsageQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ClientUsageQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

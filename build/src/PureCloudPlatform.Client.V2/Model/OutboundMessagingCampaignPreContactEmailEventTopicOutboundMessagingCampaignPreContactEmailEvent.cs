@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sms for "SMS"
             /// </summary>
             [EnumMember(Value = "SMS")]
-            Sms
+            Sms,
+            
+            /// <summary>
+            /// Enum Whatsapp for "WHATSAPP"
+            /// </summary>
+            [EnumMember(Value = "WHATSAPP")]
+            Whatsapp
         }
         /// <summary>
         /// Gets or Sets WrapupCode
@@ -152,7 +158,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum IninOutboundNotCallableTime for "ININ_OUTBOUND_NOT_CALLABLE_TIME"
             /// </summary>
             [EnumMember(Value = "ININ_OUTBOUND_NOT_CALLABLE_TIME")]
-            IninOutboundNotCallableTime
+            IninOutboundNotCallableTime,
+            
+            /// <summary>
+            /// Enum OutboundStuckContact for "OUTBOUND_STUCK_CONTACT"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_STUCK_CONTACT")]
+            OutboundStuckContact
         }
         /// <summary>
         /// Gets or Sets OutboundCampaignType

@@ -545,6 +545,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Revoke,
             
             /// <summary>
+            /// Enum Licenseupdate for "LicenseUpdate"
+            /// </summary>
+            [EnumMember(Value = "LicenseUpdate")]
+            Licenseupdate,
+            
+            /// <summary>
             /// Enum Checkin for "Checkin"
             /// </summary>
             [EnumMember(Value = "Checkin")]
@@ -857,6 +863,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Rollbackimplemented,
             
             /// <summary>
+            /// Enum Inreview for "InReview"
+            /// </summary>
+            [EnumMember(Value = "InReview")]
+            Inreview,
+            
+            /// <summary>
+            /// Enum Active for "Active"
+            /// </summary>
+            [EnumMember(Value = "Active")]
+            Active,
+            
+            /// <summary>
             /// Enum Write for "Write"
             /// </summary>
             [EnumMember(Value = "Write")]
@@ -1118,7 +1136,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Updateaborted for "UpdateAborted"
             /// </summary>
             [EnumMember(Value = "UpdateAborted")]
-            Updateaborted
+            Updateaborted,
+            
+            /// <summary>
+            /// Enum Edit for "Edit"
+            /// </summary>
+            [EnumMember(Value = "Edit")]
+            Edit
         }
         /// <summary>
         /// Gets or Sets EntityType
@@ -2143,6 +2167,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Migration,
             
             /// <summary>
+            /// Enum Suspension for "Suspension"
+            /// </summary>
+            [EnumMember(Value = "Suspension")]
+            Suspension,
+            
+            /// <summary>
             /// Enum Externalmetricsdefinition for "ExternalMetricsDefinition"
             /// </summary>
             [EnumMember(Value = "ExternalMetricsDefinition")]
@@ -2548,7 +2578,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Externalorg for "ExternalOrg"
             /// </summary>
             [EnumMember(Value = "ExternalOrg")]
-            Externalorg
+            Externalorg,
+            
+            /// <summary>
+            /// Enum Socialmediamessage for "SocialMediaMessage"
+            /// </summary>
+            [EnumMember(Value = "SocialMediaMessage")]
+            Socialmediamessage
         }
         /// <summary>
         /// Gets or Sets ServiceName

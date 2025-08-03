@@ -1214,4 +1214,4 @@ namespace Example
 [**DefaultGreetingList**](DefaultGreetingList)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

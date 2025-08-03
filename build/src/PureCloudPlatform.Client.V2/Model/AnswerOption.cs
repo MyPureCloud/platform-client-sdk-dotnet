@@ -79,6 +79,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// An identifier for this answer that stays the same across versions of the form.
+        /// </summary>
+        /// <value>An identifier for this answer that stays the same across versions of the form.</value>
+        [DataMember(Name="contextId", EmitDefaultValue=false)]
+        public string ContextId { get; private set; }
+
+
+
 
 
         /// <summary>
@@ -115,6 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class AnswerOption {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  BuiltInType: ").Append(BuiltInType).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
@@ -165,6 +175,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.ContextId == other.ContextId ||
+                    this.ContextId != null &&
+                    this.ContextId.Equals(other.ContextId)
+                ) &&
+                (
                     this.BuiltInType == other.BuiltInType ||
                     this.BuiltInType != null &&
                     this.BuiltInType.Equals(other.BuiltInType)
@@ -199,6 +214,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.ContextId != null)
+                    hash = hash * 59 + this.ContextId.GetHashCode();
 
                 if (this.BuiltInType != null)
                     hash = hash * 59 + this.BuiltInType.GetHashCode();

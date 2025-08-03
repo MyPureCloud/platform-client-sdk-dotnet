@@ -748,6 +748,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteOutboundSchedulesSequenceWithHttpInfo (string sequenceId);
 
         /// <summary>
+        /// Delete a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns></returns>
+        
+        void DeleteOutboundSchedulesWhatsappcampaign (string whatsAppCampaignId);
+
+        /// <summary>
+        /// Delete a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteOutboundSchedulesWhatsappcampaignWithHttpInfo (string whatsAppCampaignId);
+
+        /// <summary>
         /// Delete a dialer campaign sequence.
         /// </summary>
         /// <remarks>
@@ -2700,6 +2724,52 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<SequenceSchedule>> GetOutboundSchedulesSequencesWithHttpInfo ();
 
         /// <summary>
+        /// Get a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>WhatsAppCampaignSchedule</returns>
+        
+        WhatsAppCampaignSchedule GetOutboundSchedulesWhatsappcampaign (string whatsAppCampaignId);
+
+        /// <summary>
+        /// Get a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>ApiResponse of WhatsAppCampaignSchedule</returns>
+        
+        ApiResponse<WhatsAppCampaignSchedule> GetOutboundSchedulesWhatsappcampaignWithHttpInfo (string whatsAppCampaignId);
+
+        /// <summary>
+        /// Query for a list of WhatsApp campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>WhatsAppCampaignScheduleEntityListing</returns>
+        
+        WhatsAppCampaignScheduleEntityListing GetOutboundSchedulesWhatsappcampaigns ();
+
+        /// <summary>
+        /// Query for a list of WhatsApp campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of WhatsAppCampaignScheduleEntityListing</returns>
+        
+        ApiResponse<WhatsAppCampaignScheduleEntityListing> GetOutboundSchedulesWhatsappcampaignsWithHttpInfo ();
+
+        /// <summary>
         /// Get a dialer campaign sequence.
         /// </summary>
         /// <remarks>
@@ -4450,6 +4520,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SequenceSchedule> PutOutboundSchedulesSequenceWithHttpInfo (string sequenceId, SequenceSchedule body);
 
         /// <summary>
+        /// Update a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <param name="body">WhatsAppCampaignSchedule</param>
+        /// <returns>WhatsAppCampaignSchedule</returns>
+        
+        WhatsAppCampaignSchedule PutOutboundSchedulesWhatsappcampaign (string whatsAppCampaignId, WhatsAppCampaignSchedule body);
+
+        /// <summary>
+        /// Update a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <param name="body">WhatsAppCampaignSchedule</param>
+        /// <returns>ApiResponse of WhatsAppCampaignSchedule</returns>
+        
+        ApiResponse<WhatsAppCampaignSchedule> PutOutboundSchedulesWhatsappcampaignWithHttpInfo (string whatsAppCampaignId, WhatsAppCampaignSchedule body);
+
+        /// <summary>
         /// Update a new campaign sequence.
         /// </summary>
         /// <remarks>
@@ -5234,6 +5330,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId);
+
+        /// <summary>
+        /// Delete a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteOutboundSchedulesWhatsappcampaignAsync (string whatsAppCampaignId);
+
+        /// <summary>
+        /// Delete a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesWhatsappcampaignAsyncWithHttpInfo (string whatsAppCampaignId);
 
         /// <summary>
         /// Delete a dialer campaign sequence.
@@ -7188,6 +7308,52 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<SequenceSchedule>>> GetOutboundSchedulesSequencesAsyncWithHttpInfo ();
 
         /// <summary>
+        /// Get a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>Task of WhatsAppCampaignSchedule</returns>
+        
+        System.Threading.Tasks.Task<WhatsAppCampaignSchedule> GetOutboundSchedulesWhatsappcampaignAsync (string whatsAppCampaignId);
+
+        /// <summary>
+        /// Get a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>Task of ApiResponse (WhatsAppCampaignSchedule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WhatsAppCampaignSchedule>> GetOutboundSchedulesWhatsappcampaignAsyncWithHttpInfo (string whatsAppCampaignId);
+
+        /// <summary>
+        /// Query for a list of WhatsApp campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of WhatsAppCampaignScheduleEntityListing</returns>
+        
+        System.Threading.Tasks.Task<WhatsAppCampaignScheduleEntityListing> GetOutboundSchedulesWhatsappcampaignsAsync ();
+
+        /// <summary>
+        /// Query for a list of WhatsApp campaign schedules.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (WhatsAppCampaignScheduleEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WhatsAppCampaignScheduleEntityListing>> GetOutboundSchedulesWhatsappcampaignsAsyncWithHttpInfo ();
+
+        /// <summary>
         /// Get a dialer campaign sequence.
         /// </summary>
         /// <remarks>
@@ -8936,6 +9102,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (SequenceSchedule)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<SequenceSchedule>> PutOutboundSchedulesSequenceAsyncWithHttpInfo (string sequenceId, SequenceSchedule body);
+
+        /// <summary>
+        /// Update a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <param name="body">WhatsAppCampaignSchedule</param>
+        /// <returns>Task of WhatsAppCampaignSchedule</returns>
+        
+        System.Threading.Tasks.Task<WhatsAppCampaignSchedule> PutOutboundSchedulesWhatsappcampaignAsync (string whatsAppCampaignId, WhatsAppCampaignSchedule body);
+
+        /// <summary>
+        /// Update a WhatsApp campaign schedule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <param name="body">WhatsAppCampaignSchedule</param>
+        /// <returns>Task of ApiResponse (WhatsAppCampaignSchedule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WhatsAppCampaignSchedule>> PutOutboundSchedulesWhatsappcampaignAsyncWithHttpInfo (string whatsAppCampaignId, WhatsAppCampaignSchedule body);
 
         /// <summary>
         /// Update a new campaign sequence.
@@ -15093,6 +15285,205 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesSequence: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesSequence: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns></returns>
+        
+        public void DeleteOutboundSchedulesWhatsappcampaign (string whatsAppCampaignId)
+        {
+             DeleteOutboundSchedulesWhatsappcampaignWithHttpInfo(whatsAppCampaignId);
+        }
+
+        /// <summary>
+        /// Delete a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteOutboundSchedulesWhatsappcampaignWithHttpInfo (string whatsAppCampaignId)
+        { 
+            // verify the required parameter 'whatsAppCampaignId' is set
+            if (whatsAppCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'whatsAppCampaignId' when calling OutboundApi->DeleteOutboundSchedulesWhatsappcampaign");
+
+            var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (whatsAppCampaignId != null) localVarPathParams.Add("whatsAppCampaignId", this.Configuration.ApiClient.ParameterToString(whatsAppCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesWhatsappcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesWhatsappcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteOutboundSchedulesWhatsappcampaignAsync (string whatsAppCampaignId)
+        {
+             await DeleteOutboundSchedulesWhatsappcampaignAsyncWithHttpInfo(whatsAppCampaignId);
+
+        }
+
+        /// <summary>
+        /// Delete a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundSchedulesWhatsappcampaignAsyncWithHttpInfo (string whatsAppCampaignId)
+        { 
+            // verify the required parameter 'whatsAppCampaignId' is set
+            if (whatsAppCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'whatsAppCampaignId' when calling OutboundApi->DeleteOutboundSchedulesWhatsappcampaign");
+            
+
+            var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (whatsAppCampaignId != null) localVarPathParams.Add("whatsAppCampaignId", this.Configuration.ApiClient.ParameterToString(whatsAppCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesWhatsappcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteOutboundSchedulesWhatsappcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -29433,6 +29824,395 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<SequenceSchedule>>(localVarStatusCode,
                 localVarHeaders,
                 (List<SequenceSchedule>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SequenceSchedule>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>WhatsAppCampaignSchedule</returns>
+        
+        public WhatsAppCampaignSchedule GetOutboundSchedulesWhatsappcampaign (string whatsAppCampaignId)
+        {
+             ApiResponse<WhatsAppCampaignSchedule> localVarResponse = GetOutboundSchedulesWhatsappcampaignWithHttpInfo(whatsAppCampaignId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>ApiResponse of WhatsAppCampaignSchedule</returns>
+        
+        public ApiResponse< WhatsAppCampaignSchedule > GetOutboundSchedulesWhatsappcampaignWithHttpInfo (string whatsAppCampaignId)
+        { 
+            // verify the required parameter 'whatsAppCampaignId' is set
+            if (whatsAppCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'whatsAppCampaignId' when calling OutboundApi->GetOutboundSchedulesWhatsappcampaign");
+
+            var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (whatsAppCampaignId != null) localVarPathParams.Add("whatsAppCampaignId", this.Configuration.ApiClient.ParameterToString(whatsAppCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesWhatsappcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesWhatsappcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WhatsAppCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (WhatsAppCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppCampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>Task of WhatsAppCampaignSchedule</returns>
+        
+        public async System.Threading.Tasks.Task<WhatsAppCampaignSchedule> GetOutboundSchedulesWhatsappcampaignAsync (string whatsAppCampaignId)
+        {
+             ApiResponse<WhatsAppCampaignSchedule> localVarResponse = await GetOutboundSchedulesWhatsappcampaignAsyncWithHttpInfo(whatsAppCampaignId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <returns>Task of ApiResponse (WhatsAppCampaignSchedule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppCampaignSchedule>> GetOutboundSchedulesWhatsappcampaignAsyncWithHttpInfo (string whatsAppCampaignId)
+        { 
+            // verify the required parameter 'whatsAppCampaignId' is set
+            if (whatsAppCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'whatsAppCampaignId' when calling OutboundApi->GetOutboundSchedulesWhatsappcampaign");
+            
+
+            var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (whatsAppCampaignId != null) localVarPathParams.Add("whatsAppCampaignId", this.Configuration.ApiClient.ParameterToString(whatsAppCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesWhatsappcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesWhatsappcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WhatsAppCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (WhatsAppCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppCampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query for a list of WhatsApp campaign schedules. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>WhatsAppCampaignScheduleEntityListing</returns>
+        
+        public WhatsAppCampaignScheduleEntityListing GetOutboundSchedulesWhatsappcampaigns ()
+        {
+             ApiResponse<WhatsAppCampaignScheduleEntityListing> localVarResponse = GetOutboundSchedulesWhatsappcampaignsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for a list of WhatsApp campaign schedules. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of WhatsAppCampaignScheduleEntityListing</returns>
+        
+        public ApiResponse< WhatsAppCampaignScheduleEntityListing > GetOutboundSchedulesWhatsappcampaignsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesWhatsappcampaigns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesWhatsappcampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WhatsAppCampaignScheduleEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (WhatsAppCampaignScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppCampaignScheduleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query for a list of WhatsApp campaign schedules. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of WhatsAppCampaignScheduleEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<WhatsAppCampaignScheduleEntityListing> GetOutboundSchedulesWhatsappcampaignsAsync ()
+        {
+             ApiResponse<WhatsAppCampaignScheduleEntityListing> localVarResponse = await GetOutboundSchedulesWhatsappcampaignsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for a list of WhatsApp campaign schedules. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (WhatsAppCampaignScheduleEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppCampaignScheduleEntityListing>> GetOutboundSchedulesWhatsappcampaignsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesWhatsappcampaigns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundSchedulesWhatsappcampaigns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WhatsAppCampaignScheduleEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (WhatsAppCampaignScheduleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppCampaignScheduleEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -44350,6 +45130,230 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<SequenceSchedule>(localVarStatusCode,
                 localVarHeaders,
                 (SequenceSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SequenceSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <param name="body">WhatsAppCampaignSchedule</param>
+        /// <returns>WhatsAppCampaignSchedule</returns>
+        
+        public WhatsAppCampaignSchedule PutOutboundSchedulesWhatsappcampaign (string whatsAppCampaignId, WhatsAppCampaignSchedule body)
+        {
+             ApiResponse<WhatsAppCampaignSchedule> localVarResponse = PutOutboundSchedulesWhatsappcampaignWithHttpInfo(whatsAppCampaignId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <param name="body">WhatsAppCampaignSchedule</param>
+        /// <returns>ApiResponse of WhatsAppCampaignSchedule</returns>
+        
+        public ApiResponse< WhatsAppCampaignSchedule > PutOutboundSchedulesWhatsappcampaignWithHttpInfo (string whatsAppCampaignId, WhatsAppCampaignSchedule body)
+        { 
+            // verify the required parameter 'whatsAppCampaignId' is set
+            if (whatsAppCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'whatsAppCampaignId' when calling OutboundApi->PutOutboundSchedulesWhatsappcampaign");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesWhatsappcampaign");
+
+            var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (whatsAppCampaignId != null) localVarPathParams.Add("whatsAppCampaignId", this.Configuration.ApiClient.ParameterToString(whatsAppCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesWhatsappcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesWhatsappcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WhatsAppCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (WhatsAppCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppCampaignSchedule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <param name="body">WhatsAppCampaignSchedule</param>
+        /// <returns>Task of WhatsAppCampaignSchedule</returns>
+        
+        public async System.Threading.Tasks.Task<WhatsAppCampaignSchedule> PutOutboundSchedulesWhatsappcampaignAsync (string whatsAppCampaignId, WhatsAppCampaignSchedule body)
+        {
+             ApiResponse<WhatsAppCampaignSchedule> localVarResponse = await PutOutboundSchedulesWhatsappcampaignAsyncWithHttpInfo(whatsAppCampaignId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a WhatsApp campaign schedule. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="whatsAppCampaignId">WhatsApp Campaign ID</param>
+        /// <param name="body">WhatsAppCampaignSchedule</param>
+        /// <returns>Task of ApiResponse (WhatsAppCampaignSchedule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppCampaignSchedule>> PutOutboundSchedulesWhatsappcampaignAsyncWithHttpInfo (string whatsAppCampaignId, WhatsAppCampaignSchedule body)
+        { 
+            // verify the required parameter 'whatsAppCampaignId' is set
+            if (whatsAppCampaignId == null)
+                throw new ApiException(400, "Missing required parameter 'whatsAppCampaignId' when calling OutboundApi->PutOutboundSchedulesWhatsappcampaign");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesWhatsappcampaign");
+            
+
+            var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (whatsAppCampaignId != null) localVarPathParams.Add("whatsAppCampaignId", this.Configuration.ApiClient.ParameterToString(whatsAppCampaignId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesWhatsappcampaign: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutOutboundSchedulesWhatsappcampaign: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WhatsAppCampaignSchedule>(localVarStatusCode,
+                localVarHeaders,
+                (WhatsAppCampaignSchedule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppCampaignSchedule)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteSpeechandtextanalyticsCategory**](#DeleteSpeechandtextanalyticsCategory) | **Delete** /api/v2/speechandtextanalytics/categories/{categoryId} | Delete a Speech &amp; Text Analytics category by ID |
 | [**DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](#DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | **Delete** /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId} | Delete a Speech &amp; Text Analytics DictionaryFeedback by Id |
 | [**DeleteSpeechandtextanalyticsProgram**](#DeleteSpeechandtextanalyticsProgram) | **Delete** /api/v2/speechandtextanalytics/programs/{programId} | Delete a Speech &amp; Text Analytics program by id |
+| [**DeleteSpeechandtextanalyticsReprocessingJob**](#DeleteSpeechandtextanalyticsReprocessingJob) | **Delete** /api/v2/speechandtextanalytics/reprocessing/jobs/{jobId} | Delete a Speech &amp; Text Analytics Reprocessing job by Id |
 | [**DeleteSpeechandtextanalyticsSentimentfeedback**](#DeleteSpeechandtextanalyticsSentimentfeedback) | **Delete** /api/v2/speechandtextanalytics/sentimentfeedback | Delete All Speech &amp; Text Analytics SentimentFeedback |
 | [**DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId**](#DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId) | **Delete** /api/v2/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId} | Delete a Speech &amp; Text Analytics SentimentFeedback by Id |
 | [**DeleteSpeechandtextanalyticsTopic**](#DeleteSpeechandtextanalyticsTopic) | **Delete** /api/v2/speechandtextanalytics/topics/{topicId} | Delete a Speech &amp; Text Analytics topic by id |
@@ -18,6 +19,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsConversationCategories**](#GetSpeechandtextanalyticsConversationCategories) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/categories | Get the list of detected Speech and Text Analytics categories of conversation |
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturl**](#GetSpeechandtextanalyticsConversationCommunicationTranscripturl) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl | Get the pre-signed S3 URL for the transcript of a specific communication of a conversation |
 | [**GetSpeechandtextanalyticsConversationCommunicationTranscripturls**](#GetSpeechandtextanalyticsConversationCommunicationTranscripturls) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls | Get the list of pre-signed S3 URL for the transcripts of a specific communication of a conversation |
+| [**GetSpeechandtextanalyticsConversationSentiments**](#GetSpeechandtextanalyticsConversationSentiments) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/sentiments | Get sentiment data |
 | [**GetSpeechandtextanalyticsConversationSummaries**](#GetSpeechandtextanalyticsConversationSummaries) | **Get** /api/v2/speechandtextanalytics/conversations/{conversationId}/summaries | Get conversation summaries by conversation id. |
 | [**GetSpeechandtextanalyticsDictionaryfeedback**](#GetSpeechandtextanalyticsDictionaryfeedback) | **Get** /api/v2/speechandtextanalytics/dictionaryfeedback | Get the list of Speech &amp; Text Analytics dictionary feedbacks |
 | [**GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId**](#GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId) | **Get** /api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId} | Get a Speech &amp; Text Analytics dictionary feedback by id |
@@ -32,6 +34,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsProgramsSettingsInsights**](#GetSpeechandtextanalyticsProgramsSettingsInsights) | **Get** /api/v2/speechandtextanalytics/programs/settings/insights | Get the list of program AI Insights settings for the organization |
 | [**GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects**](#GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects) | **Get** /api/v2/speechandtextanalytics/programs/transcriptionengines/dialects | Get supported dialects for each transcription engine |
 | [**GetSpeechandtextanalyticsProgramsUnpublished**](#GetSpeechandtextanalyticsProgramsUnpublished) | **Get** /api/v2/speechandtextanalytics/programs/unpublished | Get the list of Speech &amp; Text Analytics unpublished programs |
+| [**GetSpeechandtextanalyticsReprocessingJob**](#GetSpeechandtextanalyticsReprocessingJob) | **Get** /api/v2/speechandtextanalytics/reprocessing/jobs/{jobId} | Get a Speech &amp; Text Analytics reprocess job by id |
+| [**GetSpeechandtextanalyticsReprocessingJobInteractions**](#GetSpeechandtextanalyticsReprocessingJobInteractions) | **Get** /api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}/interactions | Get a Speech &amp; Text Analytics Reprocessing interactions statuses by job id |
+| [**GetSpeechandtextanalyticsReprocessingJobs**](#GetSpeechandtextanalyticsReprocessingJobs) | **Get** /api/v2/speechandtextanalytics/reprocessing/jobs | Get the list of Speech &amp; Text Analytics reprocess jobs |
 | [**GetSpeechandtextanalyticsSentimentDialects**](#GetSpeechandtextanalyticsSentimentDialects) | **Get** /api/v2/speechandtextanalytics/sentiment/dialects | Get the list of Speech &amp; Text Analytics sentiment supported dialects |
 | [**GetSpeechandtextanalyticsSentimentfeedback**](#GetSpeechandtextanalyticsSentimentfeedback) | **Get** /api/v2/speechandtextanalytics/sentimentfeedback | Get the list of Speech &amp; Text Analytics SentimentFeedback |
 | [**GetSpeechandtextanalyticsSettings**](#GetSpeechandtextanalyticsSettings) | **Get** /api/v2/speechandtextanalytics/settings | Get Speech And Text Analytics Settings |
@@ -50,6 +55,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostSpeechandtextanalyticsPrograms**](#PostSpeechandtextanalyticsPrograms) | **Post** /api/v2/speechandtextanalytics/programs | Create new Speech &amp; Text Analytics program |
 | [**PostSpeechandtextanalyticsProgramsGeneralJobs**](#PostSpeechandtextanalyticsProgramsGeneralJobs) | **Post** /api/v2/speechandtextanalytics/programs/general/jobs | Create new Speech &amp; Text Analytics general program job |
 | [**PostSpeechandtextanalyticsProgramsPublishjobs**](#PostSpeechandtextanalyticsProgramsPublishjobs) | **Post** /api/v2/speechandtextanalytics/programs/publishjobs | Create new Speech &amp; Text Analytics publish programs job |
+| [**PostSpeechandtextanalyticsReprocessingJobs**](#PostSpeechandtextanalyticsReprocessingJobs) | **Post** /api/v2/speechandtextanalytics/reprocessing/jobs | Create a Speech &amp; Text Analytics reprocess job. |
 | [**PostSpeechandtextanalyticsSentimentfeedback**](#PostSpeechandtextanalyticsSentimentfeedback) | **Post** /api/v2/speechandtextanalytics/sentimentfeedback | Create a Speech &amp; Text Analytics SentimentFeedback |
 | [**PostSpeechandtextanalyticsTopics**](#PostSpeechandtextanalyticsTopics) | **Post** /api/v2/speechandtextanalytics/topics | Create new Speech &amp; Text Analytics topic |
 | [**PostSpeechandtextanalyticsTopicsPublishjobs**](#PostSpeechandtextanalyticsTopicsPublishjobs) | **Post** /api/v2/speechandtextanalytics/topics/publishjobs | Create new Speech &amp; Text Analytics publish topics job |
@@ -250,6 +256,69 @@ namespace Example
 ### Return type
 
 [**DeleteProgramResponse**](DeleteProgramResponse)
+
+
+## DeleteSpeechandtextanalyticsReprocessingJob
+
+> void DeleteSpeechandtextanalyticsReprocessingJob (string jobId)
+
+
+Delete a Speech & Text Analytics Reprocessing job by Id
+
+DeleteSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:reprocessInteractions:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteSpeechandtextanalyticsReprocessingJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var jobId = jobId_example;  // string | The Id of the Reprocessing job
+
+            try
+            { 
+                // Delete a Speech & Text Analytics Reprocessing job by Id
+                apiInstance.DeleteSpeechandtextanalyticsReprocessingJob(jobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.DeleteSpeechandtextanalyticsReprocessingJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The Id of the Reprocessing job |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## DeleteSpeechandtextanalyticsSentimentfeedback
@@ -821,6 +890,71 @@ namespace Example
 ### Return type
 
 [**TranscriptUrls**](TranscriptUrls)
+
+
+## GetSpeechandtextanalyticsConversationSentiments
+
+> [**SentimentData**](SentimentData) GetSpeechandtextanalyticsConversationSentiments (string conversationId)
+
+
+Get sentiment data
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:sentimentData:view
+* speechAndTextAnalytics:data:view
+* recording:recording:view
+* recording:recording:viewSensitiveData
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsConversationSentimentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var conversationId = conversationId_example;  // string | The conversation ID of the sentiment data
+
+            try
+            { 
+                // Get sentiment data
+                SentimentData result = apiInstance.GetSpeechandtextanalyticsConversationSentiments(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsConversationSentiments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| The conversation ID of the sentiment data |  |
+
+### Return type
+
+[**SentimentData**](SentimentData)
 
 
 ## GetSpeechandtextanalyticsConversationSummaries
@@ -1706,6 +1840,204 @@ namespace Example
 ### Return type
 
 [**UnpublishedProgramsEntityListing**](UnpublishedProgramsEntityListing)
+
+
+## GetSpeechandtextanalyticsReprocessingJob
+
+> [**ReprocessJobResponse**](ReprocessJobResponse) GetSpeechandtextanalyticsReprocessingJob (string jobId)
+
+
+Get a Speech & Text Analytics reprocess job by id
+
+GetSpeechandtextanalyticsReprocessingJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:reprocessInteractions:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsReprocessingJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var jobId = jobId_example;  // string | The Id of the Reprocessing job
+
+            try
+            { 
+                // Get a Speech & Text Analytics reprocess job by id
+                ReprocessJobResponse result = apiInstance.GetSpeechandtextanalyticsReprocessingJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsReprocessingJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The Id of the Reprocessing job |  |
+
+### Return type
+
+[**ReprocessJobResponse**](ReprocessJobResponse)
+
+
+## GetSpeechandtextanalyticsReprocessingJobInteractions
+
+> [**ReprocessInteractionsByJobIdResponse**](ReprocessInteractionsByJobIdResponse) GetSpeechandtextanalyticsReprocessingJobInteractions (string jobId)
+
+
+Get a Speech & Text Analytics Reprocessing interactions statuses by job id
+
+GetSpeechandtextanalyticsReprocessingJobInteractions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:reprocessInteractions:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsReprocessingJobInteractionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var jobId = jobId_example;  // string | The Id of the Reprocessing job
+
+            try
+            { 
+                // Get a Speech & Text Analytics Reprocessing interactions statuses by job id
+                ReprocessInteractionsByJobIdResponse result = apiInstance.GetSpeechandtextanalyticsReprocessingJobInteractions(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsReprocessingJobInteractions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The Id of the Reprocessing job |  |
+
+### Return type
+
+[**ReprocessInteractionsByJobIdResponse**](ReprocessInteractionsByJobIdResponse)
+
+
+## GetSpeechandtextanalyticsReprocessingJobs
+
+> [**ReprocessJobEntityListingResponse**](ReprocessJobEntityListingResponse) GetSpeechandtextanalyticsReprocessingJobs (int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
+
+
+Get the list of Speech & Text Analytics reprocess jobs
+
+GetSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:reprocessInteractions:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsReprocessingJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 100. Default is 25. (optional) 
+            var pageNumber = 56;  // int? | The page number for the listing. Defaults to 1. (optional) 
+            var sortOrder = sortOrder_example;  // string | Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). (optional) 
+            var name = name_example;  // string | Case insensitive partial name to filter by. (optional) 
+
+            try
+            { 
+                // Get the list of Speech & Text Analytics reprocess jobs
+                ReprocessJobEntityListingResponse result = apiInstance.GetSpeechandtextanalyticsReprocessingJobs(pageSize, pageNumber, sortOrder, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsReprocessingJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| The page size for the listing. The max that will be returned is 100. Default is 25. | [optional]  |
+| **pageNumber** | **int?**| The page number for the listing. Defaults to 1. | [optional]  |
+| **sortOrder** | **string**| Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). | [optional] <br />**Values**: asc, desc |
+| **name** | **string**| Case insensitive partial name to filter by. | [optional]  |
+
+### Return type
+
+[**ReprocessJobEntityListingResponse**](ReprocessJobEntityListingResponse)
 
 
 ## GetSpeechandtextanalyticsSentimentDialects
@@ -2825,6 +3157,70 @@ namespace Example
 [**ProgramJob**](ProgramJob)
 
 
+## PostSpeechandtextanalyticsReprocessingJobs
+
+> [**ReprocessJobResponse**](ReprocessJobResponse) PostSpeechandtextanalyticsReprocessingJobs (CreateReprocessJobRequest body)
+
+
+Create a Speech & Text Analytics reprocess job.
+
+PostSpeechandtextanalyticsReprocessingJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:reprocessInteractions:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostSpeechandtextanalyticsReprocessingJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var body = new CreateReprocessJobRequest(); // CreateReprocessJobRequest | The ReprocessJob to create
+
+            try
+            { 
+                // Create a Speech & Text Analytics reprocess job.
+                ReprocessJobResponse result = apiInstance.PostSpeechandtextanalyticsReprocessingJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.PostSpeechandtextanalyticsReprocessingJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateReprocessJobRequest**](CreateReprocessJobRequest)| The ReprocessJob to create |  |
+
+### Return type
+
+[**ReprocessJobResponse**](ReprocessJobResponse)
+
+
 ## PostSpeechandtextanalyticsSentimentfeedback
 
 > [**SentimentFeedback**](SentimentFeedback) PostSpeechandtextanalyticsSentimentfeedback (SentimentFeedback body)
@@ -3648,4 +4044,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

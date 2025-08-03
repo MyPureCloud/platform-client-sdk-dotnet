@@ -49,6 +49,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// An identifier for this question group that stays the same across versions of the form.
+        /// </summary>
+        /// <value>An identifier for this question group that stays the same across versions of the form.</value>
+        [DataMember(Name="contextId", EmitDefaultValue=false)]
+        public string ContextId { get; private set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Name
         /// </summary>
         [DataMember(Name="name", EmitDefaultValue=false)]
@@ -97,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class SurveyQuestionGroup {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  NaEnabled: ").Append(NaEnabled).Append("\n");
@@ -148,6 +158,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.ContextId == other.ContextId ||
+                    this.ContextId != null &&
+                    this.ContextId.Equals(other.ContextId)
+                ) &&
+                (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
@@ -187,6 +202,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.ContextId != null)
+                    hash = hash * 59 + this.ContextId.GetHashCode();
 
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();

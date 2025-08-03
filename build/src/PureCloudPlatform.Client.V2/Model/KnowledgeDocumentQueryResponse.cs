@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="PageSize">Page size of the returned results..</param>
         /// <param name="PageNumber">Page number of the returned results..</param>
-        public KnowledgeDocumentQueryResponse(int? PageSize = null, int? PageNumber = null)
+        /// <param name="Results">Documents matching the query..</param>
+        public KnowledgeDocumentQueryResponse(int? PageSize = null, int? PageNumber = null, List<KnowledgeDocumentQueryResult> Results = null)
         {
             this.PageSize = PageSize;
             this.PageNumber = PageNumber;
+            this.Results = Results;
             
         }
         
@@ -73,7 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Documents matching the query.</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
-        public List<KnowledgeDocumentResponse> Results { get; private set; }
+        public List<KnowledgeDocumentQueryResult> Results { get; set; }
 
 
         /// <summary>

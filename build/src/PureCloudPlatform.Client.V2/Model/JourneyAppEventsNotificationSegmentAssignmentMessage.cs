@@ -19,12 +19,55 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class JourneyAppEventsNotificationSegmentAssignmentMessage :  IEquatable<JourneyAppEventsNotificationSegmentAssignmentMessage>
     {
         /// <summary>
+        /// Gets or Sets AssignmentState
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AssignmentStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Assigned for "Assigned"
+            /// </summary>
+            [EnumMember(Value = "Assigned")]
+            Assigned,
+            
+            /// <summary>
+            /// Enum Unassigned for "Unassigned"
+            /// </summary>
+            [EnumMember(Value = "Unassigned")]
+            Unassigned
+        }
+        /// <summary>
+        /// Gets or Sets AssignmentState
+        /// </summary>
+        [DataMember(Name="assignmentState", EmitDefaultValue=false)]
+        public AssignmentStateEnum? AssignmentState { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="JourneyAppEventsNotificationSegmentAssignmentMessage" /> class.
         /// </summary>
         /// <param name="Segment">Segment.</param>
-        public JourneyAppEventsNotificationSegmentAssignmentMessage(JourneyAppEventsNotificationSegment Segment = null)
+        /// <param name="AssignmentState">AssignmentState.</param>
+        /// <param name="DateAssigned">DateAssigned.</param>
+        /// <param name="DateForUnassignment">DateForUnassignment.</param>
+        public JourneyAppEventsNotificationSegmentAssignmentMessage(JourneyAppEventsNotificationSegment Segment = null, AssignmentStateEnum? AssignmentState = null, DateTime? DateAssigned = null, DateTime? DateForUnassignment = null)
         {
             this.Segment = Segment;
+            this.AssignmentState = AssignmentState;
+            this.DateAssigned = DateAssigned;
+            this.DateForUnassignment = DateForUnassignment;
             
         }
         
@@ -37,6 +80,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public JourneyAppEventsNotificationSegment Segment { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Gets or Sets DateAssigned
+        /// </summary>
+        [DataMember(Name="dateAssigned", EmitDefaultValue=false)]
+        public DateTime? DateAssigned { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets DateForUnassignment
+        /// </summary>
+        [DataMember(Name="dateForUnassignment", EmitDefaultValue=false)]
+        public DateTime? DateForUnassignment { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,6 +108,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class JourneyAppEventsNotificationSegmentAssignmentMessage {\n");
 
             sb.Append("  Segment: ").Append(Segment).Append("\n");
+            sb.Append("  AssignmentState: ").Append(AssignmentState).Append("\n");
+            sb.Append("  DateAssigned: ").Append(DateAssigned).Append("\n");
+            sb.Append("  DateForUnassignment: ").Append(DateForUnassignment).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +155,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Segment == other.Segment ||
                     this.Segment != null &&
                     this.Segment.Equals(other.Segment)
+                ) &&
+                (
+                    this.AssignmentState == other.AssignmentState ||
+                    this.AssignmentState != null &&
+                    this.AssignmentState.Equals(other.AssignmentState)
+                ) &&
+                (
+                    this.DateAssigned == other.DateAssigned ||
+                    this.DateAssigned != null &&
+                    this.DateAssigned.Equals(other.DateAssigned)
+                ) &&
+                (
+                    this.DateForUnassignment == other.DateForUnassignment ||
+                    this.DateForUnassignment != null &&
+                    this.DateForUnassignment.Equals(other.DateForUnassignment)
                 );
         }
 
@@ -107,6 +186,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Segment != null)
                     hash = hash * 59 + this.Segment.GetHashCode();
+
+                if (this.AssignmentState != null)
+                    hash = hash * 59 + this.AssignmentState.GetHashCode();
+
+                if (this.DateAssigned != null)
+                    hash = hash * 59 + this.DateAssigned.GetHashCode();
+
+                if (this.DateForUnassignment != null)
+                    hash = hash * 59 + this.DateForUnassignment.GetHashCode();
 
                 return hash;
             }

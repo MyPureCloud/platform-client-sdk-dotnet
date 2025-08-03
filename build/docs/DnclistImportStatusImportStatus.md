@@ -14,7 +14,8 @@
 | **TargetContactListIds** | **List&lt;string&gt;** | The ids for target contact lists | [optional] |
 | **ListNamePrefix** | **string** | The prefix used for target contact list names | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
+| **GetAdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

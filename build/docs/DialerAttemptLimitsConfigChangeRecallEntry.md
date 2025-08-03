@@ -9,7 +9,8 @@
 | **NbrAttempts** | **long?** | The number of recall attempts to make | [optional] |
 | **MinutesBetweenAttempts** | **long?** | How long to wait between recall attempts | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
+| **GetAdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

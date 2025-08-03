@@ -196,6 +196,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tagentresponsetime,
             
             /// <summary>
+            /// Enum Tagentvideoconnected for "tAgentVideoConnected"
+            /// </summary>
+            [EnumMember(Value = "tAgentVideoConnected")]
+            Tagentvideoconnected,
+            
+            /// <summary>
             /// Enum Talert for "tAlert"
             /// </summary>
             [EnumMember(Value = "tAlert")]

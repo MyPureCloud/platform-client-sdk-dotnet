@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Footer for "Footer"
             /// </summary>
             [EnumMember(Value = "Footer")]
-            Footer
+            Footer,
+            
+            /// <summary>
+            /// Enum Form for "Form"
+            /// </summary>
+            [EnumMember(Value = "Form")]
+            Form
         }
         /// <summary>
         /// This value is deprecated. Responses representing message templates may be added to any library.

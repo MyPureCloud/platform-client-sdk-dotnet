@@ -209,7 +209,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentWrapupField">The input field from the data action that the agentWrapup will be passed to for this condition. Valid for a wrapup dataActionCondition..</param>
         /// <param name="ContactColumnToDataActionFieldMappings">A list of mappings defining which contact data fields will be passed to which data action input fields for this condition. Valid for a dataActionCondition..</param>
         /// <param name="Predicates">A list of predicates defining the comparisons to use for this condition. Required for a dataActionCondition..</param>
-        public DialerRulesetConfigChangeCondition(DialerRulesetConfigChangeUriReference DataAction = null, Dictionary<string, Object> AdditionalProperties = null, string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null, bool? DataNotFoundResolution = null, string ContactIdField = null, string CallAnalysisResultField = null, string AgentWrapupField = null, List<DialerRulesetConfigChangeContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings = null, List<DialerRulesetConfigChangeDataActionConditionPredicate> Predicates = null)
+        /// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
+        public DialerRulesetConfigChangeCondition(DialerRulesetConfigChangeUriReference DataAction = null, Dictionary<string, Object> AdditionalProperties = null, string Type = null, bool? Inverted = null, string AttributeName = null, string Value = null, ValueTypeEnum? ValueType = null, OperatorEnum? Operator = null, List<string> Codes = null, PropertyTypeEnum? PropertyType = null, string Property = null, bool? DataNotFoundResolution = null, string ContactIdField = null, string CallAnalysisResultField = null, string AgentWrapupField = null, List<DialerRulesetConfigChangeContactColumnToDataActionFieldMapping> ContactColumnToDataActionFieldMappings = null, List<DialerRulesetConfigChangeDataActionConditionPredicate> Predicates = null, Dictionary<string, Object> GetAdditionalProperties = null)
         {
             this.DataAction = DataAction;
             this.AdditionalProperties = AdditionalProperties;
@@ -228,6 +229,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AgentWrapupField = AgentWrapupField;
             this.ContactColumnToDataActionFieldMappings = ContactColumnToDataActionFieldMappings;
             this.Predicates = Predicates;
+            this.GetAdditionalProperties = GetAdditionalProperties;
             
         }
         
@@ -363,6 +365,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<DialerRulesetConfigChangeDataActionConditionPredicate> Predicates { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets GetAdditionalProperties
+        /// </summary>
+        [DataMember(Name="getAdditionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> GetAdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -389,6 +399,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AgentWrapupField: ").Append(AgentWrapupField).Append("\n");
             sb.Append("  ContactColumnToDataActionFieldMappings: ").Append(ContactColumnToDataActionFieldMappings).Append("\n");
             sb.Append("  Predicates: ").Append(Predicates).Append("\n");
+            sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -513,6 +524,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Predicates == other.Predicates ||
                     this.Predicates != null &&
                     this.Predicates.SequenceEqual(other.Predicates)
+                ) &&
+                (
+                    this.GetAdditionalProperties == other.GetAdditionalProperties ||
+                    this.GetAdditionalProperties != null &&
+                    this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
                 );
         }
 
@@ -577,6 +593,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Predicates != null)
                     hash = hash * 59 + this.Predicates.GetHashCode();
+
+                if (this.GetAdditionalProperties != null)
+                    hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
 
                 return hash;
             }

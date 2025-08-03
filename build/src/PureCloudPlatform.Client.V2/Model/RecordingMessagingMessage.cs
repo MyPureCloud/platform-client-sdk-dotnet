@@ -145,7 +145,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Form for "Form"
             /// </summary>
             [EnumMember(Value = "Form")]
-            Form
+            Form,
+            
+            /// <summary>
+            /// Enum Roadsideassistance for "RoadsideAssistance"
+            /// </summary>
+            [EnumMember(Value = "RoadsideAssistance")]
+            Roadsideassistance
         }
         /// <summary>
         /// For social media messages, the visibility of the message in the originating social platform
@@ -207,10 +213,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Story">Ephemeral story content..</param>
         /// <param name="Cards">List of cards offered for this message.</param>
         /// <param name="NotificationTemplate">Template notification content..</param>
+        /// <param name="DatePicker">DatePicker content object..</param>
         /// <param name="ContentType">Indicates the content type for this message.</param>
         /// <param name="SocialVisibility">For social media messages, the visibility of the message in the originating social platform.</param>
         /// <param name="Events">List of event elements.</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null)
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, DatePicker DatePicker = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -230,6 +237,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Story = Story;
             this.Cards = Cards;
             this.NotificationTemplate = NotificationTemplate;
+            this.DatePicker = DatePicker;
             this.ContentType = ContentType;
             this.SocialVisibility = SocialVisibility;
             this.Events = Events;
@@ -400,6 +408,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// DatePicker content object.
+        /// </summary>
+        /// <value>DatePicker content object.</value>
+        [DataMember(Name="datePicker", EmitDefaultValue=false)]
+        public DatePicker DatePicker { get; set; }
+
+
+
 
 
 
@@ -439,6 +456,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Story: ").Append(Story).Append("\n");
             sb.Append("  Cards: ").Append(Cards).Append("\n");
             sb.Append("  NotificationTemplate: ").Append(NotificationTemplate).Append("\n");
+            sb.Append("  DatePicker: ").Append(DatePicker).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  SocialVisibility: ").Append(SocialVisibility).Append("\n");
             sb.Append("  Events: ").Append(Events).Append("\n");
@@ -573,6 +591,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NotificationTemplate.Equals(other.NotificationTemplate)
                 ) &&
                 (
+                    this.DatePicker == other.DatePicker ||
+                    this.DatePicker != null &&
+                    this.DatePicker.Equals(other.DatePicker)
+                ) &&
+                (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
@@ -653,6 +676,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.NotificationTemplate != null)
                     hash = hash * 59 + this.NotificationTemplate.GetHashCode();
+
+                if (this.DatePicker != null)
+                    hash = hash * 59 + this.DatePicker.GetHashCode();
 
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();

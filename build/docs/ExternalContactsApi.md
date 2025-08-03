@@ -18,6 +18,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteExternalcontactsRelationship**](#DeleteExternalcontactsRelationship) | **Delete** /api/v2/externalcontacts/relationships/{relationshipId} | Delete a relationship |
 | [**GetExternalcontactsContact**](#GetExternalcontactsContact) | **Get** /api/v2/externalcontacts/contacts/{contactId} | Fetch an external contact |
 | [**GetExternalcontactsContactIdentifiers**](#GetExternalcontactsContactIdentifiers) | **Get** /api/v2/externalcontacts/contacts/{contactId}/identifiers | List the identifiers for a contact |
+| [**GetExternalcontactsContactJourneySegments**](#GetExternalcontactsContactJourneySegments) | **Get** /api/v2/externalcontacts/contacts/{contactId}/journey/segments | Retrieve segment assignments by external contact ID. |
 | [**GetExternalcontactsContactJourneySessions**](#GetExternalcontactsContactJourneySessions) | **Get** /api/v2/externalcontacts/contacts/{contactId}/journey/sessions | Retrieve all sessions for a given external contact. |
 | [**GetExternalcontactsContactNote**](#GetExternalcontactsContactNote) | **Get** /api/v2/externalcontacts/contacts/{contactId}/notes/{noteId} | Fetch a note for an external contact |
 | [**GetExternalcontactsContactNotes**](#GetExternalcontactsContactNotes) | **Get** /api/v2/externalcontacts/contacts/{contactId}/notes | List notes for an external contact |
@@ -89,6 +90,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostExternalcontactsBulkRelationshipsAdd**](#PostExternalcontactsBulkRelationshipsAdd) | **Post** /api/v2/externalcontacts/bulk/relationships/add | Bulk add relationships |
 | [**PostExternalcontactsBulkRelationshipsRemove**](#PostExternalcontactsBulkRelationshipsRemove) | **Post** /api/v2/externalcontacts/bulk/relationships/remove | Bulk remove relationships |
 | [**PostExternalcontactsBulkRelationshipsUpdate**](#PostExternalcontactsBulkRelationshipsUpdate) | **Post** /api/v2/externalcontacts/bulk/relationships/update | Bulk update relationships |
+| [**PostExternalcontactsContactJourneySegments**](#PostExternalcontactsContactJourneySegments) | **Post** /api/v2/externalcontacts/contacts/{contactId}/journey/segments | Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. |
 | [**PostExternalcontactsContactNotes**](#PostExternalcontactsContactNotes) | **Post** /api/v2/externalcontacts/contacts/{contactId}/notes | Create a note for an external contact |
 | [**PostExternalcontactsContactPromotion**](#PostExternalcontactsContactPromotion) | **Post** /api/v2/externalcontacts/contacts/{contactId}/promotion | Promote an observed contact (ephemeral or identified) to a curated contact |
 | [**PostExternalcontactsContacts**](#PostExternalcontactsContacts) | **Post** /api/v2/externalcontacts/contacts | Create an external contact |
@@ -877,6 +879,72 @@ namespace Example
 ### Return type
 
 [**ContactIdentifierListing**](ContactIdentifierListing)
+
+
+## GetExternalcontactsContactJourneySegments
+
+> [**SegmentAssignmentListing**](SegmentAssignmentListing) GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null)
+
+
+Retrieve segment assignments by external contact ID.
+
+Requires ANY permissions: 
+
+* externalContacts:segmentAssignment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetExternalcontactsContactJourneySegmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var contactId = contactId_example;  // string | ExternalContact ID
+            var includeMerged = true;  // bool? | Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional) 
+            var limit = 56;  // int? | Number of entities to return. Default of 25, maximum of 500. (optional) 
+
+            try
+            { 
+                // Retrieve segment assignments by external contact ID.
+                SegmentAssignmentListing result = apiInstance.GetExternalcontactsContactJourneySegments(contactId, includeMerged, limit);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.GetExternalcontactsContactJourneySegments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **string**| ExternalContact ID |  |
+| **includeMerged** | **bool?**| Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. | [optional]  |
+| **limit** | **int?**| Number of entities to return. Default of 25, maximum of 500. | [optional]  |
+
+### Return type
+
+[**SegmentAssignmentListing**](SegmentAssignmentListing)
 
 
 ## GetExternalcontactsContactJourneySessions
@@ -5433,6 +5501,71 @@ namespace Example
 [**BulkRelationshipsResponse**](BulkRelationshipsResponse)
 
 
+## PostExternalcontactsContactJourneySegments
+
+> [**UpdateSegmentAssignmentResponse**](UpdateSegmentAssignmentResponse) PostExternalcontactsContactJourneySegments (string contactId, UpdateSegmentAssignmentRequest body = null)
+
+
+Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+
+Requires ANY permissions: 
+
+* externalContacts:segmentAssignment:add
+* externalContacts:segmentAssignment:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostExternalcontactsContactJourneySegmentsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var contactId = contactId_example;  // string | ExternalContact ID
+            var body = new UpdateSegmentAssignmentRequest(); // UpdateSegmentAssignmentRequest |  (optional) 
+
+            try
+            { 
+                // Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+                UpdateSegmentAssignmentResponse result = apiInstance.PostExternalcontactsContactJourneySegments(contactId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PostExternalcontactsContactJourneySegments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **string**| ExternalContact ID |  |
+| **body** | [**UpdateSegmentAssignmentRequest**](UpdateSegmentAssignmentRequest)|  | [optional]  |
+
+### Return type
+
+[**UpdateSegmentAssignmentResponse**](UpdateSegmentAssignmentResponse)
+
+
 ## PostExternalcontactsContactNotes
 
 > [**Note**](Note) PostExternalcontactsContactNotes (string contactId, Note body)
@@ -7681,4 +7814,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

@@ -254,10 +254,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
-        /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>DecisionTableVersionListing</returns>
         
-        DecisionTableVersionListing GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null, List<string> divisionIds = null);
+        DecisionTableVersionListing GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null);
 
         /// <summary>
         /// Get a list of decision table versions
@@ -270,10 +269,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
-        /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>ApiResponse of DecisionTableVersionListing</returns>
         
-        ApiResponse<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId, string after = null, string pageSize = null, List<string> divisionIds = null);
+        ApiResponse<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId, string after = null, string pageSize = null);
 
         /// <summary>
         /// Get a list of decision tables.
@@ -286,9 +284,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. (optional)</param>
         /// <returns>DecisionTableListing</returns>
         
-        DecisionTableListing GetBusinessrulesDecisiontables (string after = null, string pageSize = null, List<string> divisionIds = null);
+        DecisionTableListing GetBusinessrulesDecisiontables (string after = null, string pageSize = null, List<string> divisionIds = null, string name = null);
 
         /// <summary>
         /// Get a list of decision tables.
@@ -301,9 +300,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. (optional)</param>
         /// <returns>ApiResponse of DecisionTableListing</returns>
         
-        ApiResponse<DecisionTableListing> GetBusinessrulesDecisiontablesWithHttpInfo (string after = null, string pageSize = null, List<string> divisionIds = null);
+        ApiResponse<DecisionTableListing> GetBusinessrulesDecisiontablesWithHttpInfo (string after = null, string pageSize = null, List<string> divisionIds = null, string name = null);
 
         /// <summary>
         /// Search for decision tables.
@@ -500,38 +500,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DecisionTableVersion</returns>
         
         ApiResponse<DecisionTableVersion> PatchBusinessrulesDecisiontableVersionWithHttpInfo (string tableId, int? tableVersion, UpdateDecisionTableVersionRequest body);
-
-        /// <summary>
-        /// Partially update a decision table row. Will be deprecated, we should use PUT request.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// PatchBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tableId">Table ID</param>
-        /// <param name="tableVersion">Table Version</param>
-        /// <param name="rowId">Row ID</param>
-        /// <param name="body">Partially update decision table row request</param>
-        /// <returns>DecisionTableRow</returns>
-        [Obsolete]
-        DecisionTableRow PatchBusinessrulesDecisiontableVersionRow (string tableId, int? tableVersion, string rowId, UpdateDecisionTableRowRequest body);
-
-        /// <summary>
-        /// Partially update a decision table row. Will be deprecated, we should use PUT request.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// PatchBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tableId">Table ID</param>
-        /// <param name="tableVersion">Table Version</param>
-        /// <param name="rowId">Row ID</param>
-        /// <param name="body">Partially update decision table row request</param>
-        /// <returns>ApiResponse of DecisionTableRow</returns>
-        [Obsolete]
-        ApiResponse<DecisionTableRow> PatchBusinessrulesDecisiontableVersionRowWithHttpInfo (string tableId, int? tableVersion, string rowId, UpdateDecisionTableRowRequest body);
 
         /// <summary>
         /// Execute a published decision table
@@ -1122,10 +1090,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
-        /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of DecisionTableVersionListing</returns>
         
-        System.Threading.Tasks.Task<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsAsync (string tableId, string after = null, string pageSize = null, List<string> divisionIds = null);
+        System.Threading.Tasks.Task<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsAsync (string tableId, string after = null, string pageSize = null);
 
         /// <summary>
         /// Get a list of decision table versions
@@ -1138,10 +1105,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
-        /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableVersionListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DecisionTableVersionListing>> GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null, List<string> divisionIds = null);
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableVersionListing>> GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null);
 
         /// <summary>
         /// Get a list of decision tables.
@@ -1154,9 +1120,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. (optional)</param>
         /// <returns>Task of DecisionTableListing</returns>
         
-        System.Threading.Tasks.Task<DecisionTableListing> GetBusinessrulesDecisiontablesAsync (string after = null, string pageSize = null, List<string> divisionIds = null);
+        System.Threading.Tasks.Task<DecisionTableListing> GetBusinessrulesDecisiontablesAsync (string after = null, string pageSize = null, List<string> divisionIds = null, string name = null);
 
         /// <summary>
         /// Get a list of decision tables.
@@ -1169,9 +1136,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DecisionTableListing>> GetBusinessrulesDecisiontablesAsyncWithHttpInfo (string after = null, string pageSize = null, List<string> divisionIds = null);
+        System.Threading.Tasks.Task<ApiResponse<DecisionTableListing>> GetBusinessrulesDecisiontablesAsyncWithHttpInfo (string after = null, string pageSize = null, List<string> divisionIds = null, string name = null);
 
         /// <summary>
         /// Search for decision tables.
@@ -1368,38 +1336,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DecisionTableVersion)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DecisionTableVersion>> PatchBusinessrulesDecisiontableVersionAsyncWithHttpInfo (string tableId, int? tableVersion, UpdateDecisionTableVersionRequest body);
-
-        /// <summary>
-        /// Partially update a decision table row. Will be deprecated, we should use PUT request.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// PatchBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tableId">Table ID</param>
-        /// <param name="tableVersion">Table Version</param>
-        /// <param name="rowId">Row ID</param>
-        /// <param name="body">Partially update decision table row request</param>
-        /// <returns>Task of DecisionTableRow</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<DecisionTableRow> PatchBusinessrulesDecisiontableVersionRowAsync (string tableId, int? tableVersion, string rowId, UpdateDecisionTableRowRequest body);
-
-        /// <summary>
-        /// Partially update a decision table row. Will be deprecated, we should use PUT request.
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// PatchBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tableId">Table ID</param>
-        /// <param name="tableVersion">Table Version</param>
-        /// <param name="rowId">Row ID</param>
-        /// <param name="body">Partially update decision table row request</param>
-        /// <returns>Task of ApiResponse (DecisionTableRow)</returns>
-        [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<DecisionTableRow>> PatchBusinessrulesDecisiontableVersionRowAsyncWithHttpInfo (string tableId, int? tableVersion, string rowId, UpdateDecisionTableRowRequest body);
 
         /// <summary>
         /// Execute a published decision table
@@ -3589,12 +3525,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
-        /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>DecisionTableVersionListing</returns>
         
-        public DecisionTableVersionListing GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null, List<string> divisionIds = null)
+        public DecisionTableVersionListing GetBusinessrulesDecisiontableVersions (string tableId, string after = null, string pageSize = null)
         {
-             ApiResponse<DecisionTableVersionListing> localVarResponse = GetBusinessrulesDecisiontableVersionsWithHttpInfo(tableId, after, pageSize, divisionIds);
+             ApiResponse<DecisionTableVersionListing> localVarResponse = GetBusinessrulesDecisiontableVersionsWithHttpInfo(tableId, after, pageSize);
              return localVarResponse.Data;
         }
 
@@ -3607,10 +3542,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
-        /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>ApiResponse of DecisionTableVersionListing</returns>
         
-        public ApiResponse< DecisionTableVersionListing > GetBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId, string after = null, string pageSize = null, List<string> divisionIds = null)
+        public ApiResponse< DecisionTableVersionListing > GetBusinessrulesDecisiontableVersionsWithHttpInfo (string tableId, string after = null, string pageSize = null)
         { 
             // verify the required parameter 'tableId' is set
             if (tableId == null)
@@ -3652,7 +3586,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -3699,12 +3632,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
-        /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of DecisionTableVersionListing</returns>
         
-        public async System.Threading.Tasks.Task<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsAsync (string tableId, string after = null, string pageSize = null, List<string> divisionIds = null)
+        public async System.Threading.Tasks.Task<DecisionTableVersionListing> GetBusinessrulesDecisiontableVersionsAsync (string tableId, string after = null, string pageSize = null)
         {
-             ApiResponse<DecisionTableVersionListing> localVarResponse = await GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo(tableId, after, pageSize, divisionIds);
+             ApiResponse<DecisionTableVersionListing> localVarResponse = await GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo(tableId, after, pageSize);
              return localVarResponse.Data;
 
         }
@@ -3718,10 +3650,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="tableId">Table ID</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
-        /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableVersionListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableVersionListing>> GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null, List<string> divisionIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableVersionListing>> GetBusinessrulesDecisiontableVersionsAsyncWithHttpInfo (string tableId, string after = null, string pageSize = null)
         { 
             // verify the required parameter 'tableId' is set
             if (tableId == null)
@@ -3764,7 +3695,6 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
-            if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -3812,11 +3742,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. (optional)</param>
         /// <returns>DecisionTableListing</returns>
         
-        public DecisionTableListing GetBusinessrulesDecisiontables (string after = null, string pageSize = null, List<string> divisionIds = null)
+        public DecisionTableListing GetBusinessrulesDecisiontables (string after = null, string pageSize = null, List<string> divisionIds = null, string name = null)
         {
-             ApiResponse<DecisionTableListing> localVarResponse = GetBusinessrulesDecisiontablesWithHttpInfo(after, pageSize, divisionIds);
+             ApiResponse<DecisionTableListing> localVarResponse = GetBusinessrulesDecisiontablesWithHttpInfo(after, pageSize, divisionIds, name);
              return localVarResponse.Data;
         }
 
@@ -3829,9 +3760,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. (optional)</param>
         /// <returns>ApiResponse of DecisionTableListing</returns>
         
-        public ApiResponse< DecisionTableListing > GetBusinessrulesDecisiontablesWithHttpInfo (string after = null, string pageSize = null, List<string> divisionIds = null)
+        public ApiResponse< DecisionTableListing > GetBusinessrulesDecisiontablesWithHttpInfo (string after = null, string pageSize = null, List<string> divisionIds = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/businessrules/decisiontables";
@@ -3870,6 +3802,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -3916,11 +3849,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. (optional)</param>
         /// <returns>Task of DecisionTableListing</returns>
         
-        public async System.Threading.Tasks.Task<DecisionTableListing> GetBusinessrulesDecisiontablesAsync (string after = null, string pageSize = null, List<string> divisionIds = null)
+        public async System.Threading.Tasks.Task<DecisionTableListing> GetBusinessrulesDecisiontablesAsync (string after = null, string pageSize = null, List<string> divisionIds = null, string name = null)
         {
-             ApiResponse<DecisionTableListing> localVarResponse = await GetBusinessrulesDecisiontablesAsyncWithHttpInfo(after, pageSize, divisionIds);
+             ApiResponse<DecisionTableListing> localVarResponse = await GetBusinessrulesDecisiontablesAsyncWithHttpInfo(after, pageSize, divisionIds, name);
              return localVarResponse.Data;
 
         }
@@ -3934,9 +3868,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 100. (optional)</param>
         /// <param name="divisionIds">One or more comma separated divisions to filters decision tables by. If nothing is provided, the decision tables associated with the list of divisions that the user has access to will be returned. (optional)</param>
+        /// <param name="name">Search for decision tables with a name that contains the given search string. Search is case insensitive and will match any table that contains this string in any part of the name. (optional)</param>
         /// <returns>Task of ApiResponse (DecisionTableListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableListing>> GetBusinessrulesDecisiontablesAsyncWithHttpInfo (string after = null, string pageSize = null, List<string> divisionIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableListing>> GetBusinessrulesDecisiontablesAsyncWithHttpInfo (string after = null, string pageSize = null, List<string> divisionIds = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/businessrules/decisiontables";
@@ -3975,6 +3910,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -5504,260 +5440,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DecisionTableVersion>(localVarStatusCode,
                 localVarHeaders,
                 (DecisionTableVersion) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableVersion)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Partially update a decision table row. Will be deprecated, we should use PUT request. 
-        /// 
-        /// PatchBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tableId">Table ID</param>
-        /// <param name="tableVersion">Table Version</param>
-        /// <param name="rowId">Row ID</param>
-        /// <param name="body">Partially update decision table row request</param>
-        /// <returns>DecisionTableRow</returns>
-        [Obsolete]
-        public DecisionTableRow PatchBusinessrulesDecisiontableVersionRow (string tableId, int? tableVersion, string rowId, UpdateDecisionTableRowRequest body)
-        {
-             ApiResponse<DecisionTableRow> localVarResponse = PatchBusinessrulesDecisiontableVersionRowWithHttpInfo(tableId, tableVersion, rowId, body);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Partially update a decision table row. Will be deprecated, we should use PUT request. 
-        /// 
-        /// PatchBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tableId">Table ID</param>
-        /// <param name="tableVersion">Table Version</param>
-        /// <param name="rowId">Row ID</param>
-        /// <param name="body">Partially update decision table row request</param>
-        /// <returns>ApiResponse of DecisionTableRow</returns>
-        [Obsolete]
-        public ApiResponse< DecisionTableRow > PatchBusinessrulesDecisiontableVersionRowWithHttpInfo (string tableId, int? tableVersion, string rowId, UpdateDecisionTableRowRequest body)
-        { 
-            // verify the required parameter 'tableId' is set
-            if (tableId == null)
-                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableVersionRow");
-            // verify the required parameter 'tableVersion' is set
-            if (tableVersion == null)
-                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableVersionRow");
-            // verify the required parameter 'rowId' is set
-            if (rowId == null)
-                throw new ApiException(400, "Missing required parameter 'rowId' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableVersionRow");
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableVersionRow");
-
-            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
-            var localVarHttpMethod = "Patch";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
-            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
-            if (rowId != null) localVarPathParams.Add("rowId", this.Configuration.ApiClient.ParameterToString(rowId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchBusinessrulesDecisiontableVersionRow: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchBusinessrulesDecisiontableVersionRow: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<DecisionTableRow>(localVarStatusCode,
-                localVarHeaders,
-                (DecisionTableRow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableRow)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Partially update a decision table row. Will be deprecated, we should use PUT request. 
-        /// 
-        /// PatchBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tableId">Table ID</param>
-        /// <param name="tableVersion">Table Version</param>
-        /// <param name="rowId">Row ID</param>
-        /// <param name="body">Partially update decision table row request</param>
-        /// <returns>Task of DecisionTableRow</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<DecisionTableRow> PatchBusinessrulesDecisiontableVersionRowAsync (string tableId, int? tableVersion, string rowId, UpdateDecisionTableRowRequest body)
-        {
-             ApiResponse<DecisionTableRow> localVarResponse = await PatchBusinessrulesDecisiontableVersionRowAsyncWithHttpInfo(tableId, tableVersion, rowId, body);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Partially update a decision table row. Will be deprecated, we should use PUT request. 
-        /// 
-        /// PatchBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tableId">Table ID</param>
-        /// <param name="tableVersion">Table Version</param>
-        /// <param name="rowId">Row ID</param>
-        /// <param name="body">Partially update decision table row request</param>
-        /// <returns>Task of ApiResponse (DecisionTableRow)</returns>
-        [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<DecisionTableRow>> PatchBusinessrulesDecisiontableVersionRowAsyncWithHttpInfo (string tableId, int? tableVersion, string rowId, UpdateDecisionTableRowRequest body)
-        { 
-            // verify the required parameter 'tableId' is set
-            if (tableId == null)
-                throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableVersionRow");
-            
-            // verify the required parameter 'tableVersion' is set
-            if (tableVersion == null)
-                throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableVersionRow");
-            
-            // verify the required parameter 'rowId' is set
-            if (rowId == null)
-                throw new ApiException(400, "Missing required parameter 'rowId' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableVersionRow");
-            
-            // verify the required parameter 'body' is set
-            if (body == null)
-                throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableVersionRow");
-            
-
-            var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
-            var localVarHttpMethod = "Patch";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (tableId != null) localVarPathParams.Add("tableId", this.Configuration.ApiClient.ParameterToString(tableId));
-            if (tableVersion != null) localVarPathParams.Add("tableVersion", this.Configuration.ApiClient.ParameterToString(tableVersion));
-            if (rowId != null) localVarPathParams.Add("rowId", this.Configuration.ApiClient.ParameterToString(rowId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
-
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PatchBusinessrulesDecisiontableVersionRow: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PatchBusinessrulesDecisiontableVersionRow: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<DecisionTableRow>(localVarStatusCode,
-                localVarHeaders,
-                (DecisionTableRow) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DecisionTableRow)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -23,14 +23,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Version">Version of the snapshot.</param>
         /// <param name="SnapshotId">Snapshot Id of the continuous forecast session.</param>
-        /// <param name="SessionId">Session Id of the continuous forecast session.</param>
+        /// <param name="DateSnapshot">Date of snapshot generation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="BusinessUnitId">Business unit ID of the continuous forecast session.</param>
         /// <param name="PlanningGroupsVersion">Version of the planning groups.</param>
-        public SnapshotInfo(int? Version = null, string SnapshotId = null, string SessionId = null, string BusinessUnitId = null, int? PlanningGroupsVersion = null)
+        public SnapshotInfo(int? Version = null, string SnapshotId = null, DateTime? DateSnapshot = null, string BusinessUnitId = null, int? PlanningGroupsVersion = null)
         {
             this.Version = Version;
             this.SnapshotId = SnapshotId;
-            this.SessionId = SessionId;
+            this.DateSnapshot = DateSnapshot;
             this.BusinessUnitId = BusinessUnitId;
             this.PlanningGroupsVersion = PlanningGroupsVersion;
             
@@ -57,11 +57,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Session Id of the continuous forecast session
+        /// Date of snapshot generation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>Session Id of the continuous forecast session</value>
-        [DataMember(Name="sessionId", EmitDefaultValue=false)]
-        public string SessionId { get; set; }
+        /// <value>Date of snapshot generation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateSnapshot", EmitDefaultValue=false)]
+        public DateTime? DateSnapshot { get; set; }
 
 
 
@@ -93,7 +93,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  SnapshotId: ").Append(SnapshotId).Append("\n");
-            sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            sb.Append("  DateSnapshot: ").Append(DateSnapshot).Append("\n");
             sb.Append("  BusinessUnitId: ").Append(BusinessUnitId).Append("\n");
             sb.Append("  PlanningGroupsVersion: ").Append(PlanningGroupsVersion).Append("\n");
             sb.Append("}\n");
@@ -147,9 +147,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SnapshotId.Equals(other.SnapshotId)
                 ) &&
                 (
-                    this.SessionId == other.SessionId ||
-                    this.SessionId != null &&
-                    this.SessionId.Equals(other.SessionId)
+                    this.DateSnapshot == other.DateSnapshot ||
+                    this.DateSnapshot != null &&
+                    this.DateSnapshot.Equals(other.DateSnapshot)
                 ) &&
                 (
                     this.BusinessUnitId == other.BusinessUnitId ||
@@ -180,8 +180,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SnapshotId != null)
                     hash = hash * 59 + this.SnapshotId.GetHashCode();
 
-                if (this.SessionId != null)
-                    hash = hash * 59 + this.SessionId.GetHashCode();
+                if (this.DateSnapshot != null)
+                    hash = hash * 59 + this.DateSnapshot.GetHashCode();
 
                 if (this.BusinessUnitId != null)
                     hash = hash * 59 + this.BusinessUnitId.GetHashCode();

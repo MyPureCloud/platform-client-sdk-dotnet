@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoAnswerAlertToneSeconds">How long to play the alerting tone for an auto-answer interaction.</param>
         /// <param name="ManualAnswerAlertToneSeconds">How long to play the alerting tone for a manual-answer interaction.</param>
         /// <param name="SubTypeSettings">Map of media subtype to media subtype specific settings..</param>
-        public MessageMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, Dictionary<string, BaseMediaSettings> SubTypeSettings = null)
+        public MessageMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, Dictionary<string, MessageSubtypeSettings> SubTypeSettings = null)
         {
             this.EnableAutoAnswer = EnableAutoAnswer;
             this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
@@ -90,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Map of media subtype to media subtype specific settings.</value>
         [DataMember(Name="subTypeSettings", EmitDefaultValue=false)]
-        public Dictionary<string, BaseMediaSettings> SubTypeSettings { get; set; }
+        public Dictionary<string, MessageSubtypeSettings> SubTypeSettings { get; set; }
 
 
         /// <summary>

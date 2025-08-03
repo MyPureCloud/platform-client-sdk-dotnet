@@ -10,8 +10,8 @@
 | **PageNumber** | **int?** | Page number of the returned results. | [optional] |
 | **Total** | **long?** | The total number of documents matching the query. | [optional] |
 | **PageCount** | **int?** | The total number of pages of results, calculated according to the pageSize and the total matching documents. | [optional] |
-| **Results** | [**List&lt;KnowledgeDocumentResponse&gt;**](KnowledgeDocumentResponse) | Documents matching the query. | [optional] |
+| **Results** | [**List&lt;KnowledgeDocumentQueryResult&gt;**](KnowledgeDocumentQueryResult) | Documents matching the query. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

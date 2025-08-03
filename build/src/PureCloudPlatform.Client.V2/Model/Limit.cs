@@ -489,6 +489,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Webhooks,
             
             /// <summary>
+            /// Enum Workforcemanagementagentavailability for "workforce.management.agent.availability"
+            /// </summary>
+            [EnumMember(Value = "workforce.management.agent.availability")]
+            Workforcemanagementagentavailability,
+            
+            /// <summary>
             /// Enum Workforcemanagementforecast for "workforce.management.forecast"
             /// </summary>
             [EnumMember(Value = "workforce.management.forecast")]

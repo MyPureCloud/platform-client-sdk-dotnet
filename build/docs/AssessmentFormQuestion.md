@@ -7,6 +7,7 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
+| **ContextId** | **string** | An identifier for this question that stays the same across versions of the form. | [optional] |
 | **Type** | **string** |  | [optional] |
 | **Text** | **string** | The question text | |
 | **HelpText** | **string** |  | [optional] |
@@ -20,4 +21,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

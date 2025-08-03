@@ -62,12 +62,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="End">the range end date.</param>
         /// <param name="NumberOfOccurrences">the number of occurrences to happen before ending.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerSequenceScheduleConfigChangeRecurrenceRange(TypeEnum? Type = null, string End = null, long? NumberOfOccurrences = null, Dictionary<string, Object> AdditionalProperties = null)
+        /// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
+        public DialerSequenceScheduleConfigChangeRecurrenceRange(TypeEnum? Type = null, string End = null, long? NumberOfOccurrences = null, Dictionary<string, Object> AdditionalProperties = null, Dictionary<string, Object> GetAdditionalProperties = null)
         {
             this.Type = Type;
             this.End = End;
             this.NumberOfOccurrences = NumberOfOccurrences;
             this.AdditionalProperties = AdditionalProperties;
+            this.GetAdditionalProperties = GetAdditionalProperties;
             
         }
         
@@ -100,6 +102,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets GetAdditionalProperties
+        /// </summary>
+        [DataMember(Name="getAdditionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> GetAdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -113,6 +123,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  End: ").Append(End).Append("\n");
             sb.Append("  NumberOfOccurrences: ").Append(NumberOfOccurrences).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -172,6 +183,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+                ) &&
+                (
+                    this.GetAdditionalProperties == other.GetAdditionalProperties ||
+                    this.GetAdditionalProperties != null &&
+                    this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
                 );
         }
 
@@ -197,6 +213,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+
+                if (this.GetAdditionalProperties != null)
+                    hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
 
                 return hash;
             }

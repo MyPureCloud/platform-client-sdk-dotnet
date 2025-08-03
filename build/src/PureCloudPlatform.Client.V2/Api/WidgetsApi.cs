@@ -19,7 +19,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -43,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -55,7 +55,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -67,7 +67,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// List Widget deployments
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WidgetDeploymentEntityListing</returns>
@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// List Widget deployments
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WidgetDeploymentEntityListing</returns>
@@ -89,7 +89,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
@@ -101,7 +101,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
@@ -113,7 +113,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -126,7 +126,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -143,7 +143,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -155,7 +155,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -167,7 +167,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -179,7 +179,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -191,7 +191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// List Widget deployments
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WidgetDeploymentEntityListing</returns>
@@ -202,7 +202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// List Widget deployments
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WidgetDeploymentEntityListing)</returns>
@@ -213,7 +213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
@@ -225,7 +225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
@@ -237,7 +237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -250,7 +250,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a Widget deployment
         /// </summary>
         /// <remarks>
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -353,7 +353,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -366,7 +366,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -451,7 +451,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -465,7 +465,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -552,7 +552,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -566,7 +566,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -651,7 +651,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -666,7 +666,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -753,7 +753,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List Widget deployments 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WidgetDeploymentEntityListing</returns>
@@ -766,7 +766,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List Widget deployments 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WidgetDeploymentEntityListing</returns>
@@ -846,7 +846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List Widget deployments 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WidgetDeploymentEntityListing</returns>
@@ -860,7 +860,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// List Widget deployments 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WidgetDeploymentEntityListing)</returns>
@@ -941,7 +941,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
@@ -955,7 +955,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
@@ -1045,7 +1045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
@@ -1060,7 +1060,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Deployment</param>
@@ -1152,7 +1152,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -1167,7 +1167,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -1262,7 +1262,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>
@@ -1278,7 +1278,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a Widget deployment 
-        /// This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+        /// This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="deploymentId">Widget Config Id</param>

@@ -139,6 +139,24 @@ namespace PureCloudPlatform.Client.V2.Model
             Sessionexpired,
             
             /// <summary>
+            /// Enum Authenticate for "Authenticate"
+            /// </summary>
+            [EnumMember(Value = "Authenticate")]
+            Authenticate,
+            
+            /// <summary>
+            /// Enum Authenticatefailure for "AuthenticateFailure"
+            /// </summary>
+            [EnumMember(Value = "AuthenticateFailure")]
+            Authenticatefailure,
+            
+            /// <summary>
+            /// Enum Authenticatecancel for "AuthenticateCancel"
+            /// </summary>
+            [EnumMember(Value = "AuthenticateCancel")]
+            Authenticatecancel,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

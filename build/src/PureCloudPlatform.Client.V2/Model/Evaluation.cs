@@ -190,6 +190,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RevisionCreatedDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Queue">Queue.</param>
         /// <param name="MediaType">List of different communication types used in conversation..</param>
+        /// <param name="DivisionIds">Evaluation is assigned in the following division(s)..</param>
         /// <param name="Rescore">Is only true when evaluation is re-scored..</param>
         /// <param name="ConversationDate">Creation date of the conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ConversationEndDate">End date of conversation if it had completed before evaluation creation. Null if created before the conversation ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -203,7 +204,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsScoringIndex">IsScoringIndex.</param>
         /// <param name="AuthorizedActions">List of user authorized actions on evaluation. Possible values: assign, edit, editScore, editAgentSignoff, delete, release, viewAudit.</param>
         /// <param name="HasAssistanceFailed">Is true when evaluation assistance didn&#39;t execute successfully.</param>
-        public Evaluation(string Name = null, ConversationReference Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? CreatedDate = null, DateTime? ChangedDate = null, DateTime? SubmittedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, Team AgentTeam = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
+        public Evaluation(string Name = null, ConversationReference Conversation = null, EvaluationForm EvaluationForm = null, User Evaluator = null, User Agent = null, Calibration Calibration = null, StatusEnum? Status = null, EvaluationScoringSet Answers = null, bool? AgentHasRead = null, User Assignee = null, bool? AssigneeApplicable = null, DateTime? ReleaseDate = null, DateTime? AssignedDate = null, DateTime? CreatedDate = null, DateTime? ChangedDate = null, DateTime? SubmittedDate = null, DateTime? RevisionCreatedDate = null, Queue Queue = null, List<MediaTypeEnum> MediaType = null, List<string> DivisionIds = null, bool? Rescore = null, DateTime? ConversationDate = null, DateTime? ConversationEndDate = null, bool? NeverRelease = null, bool? Assigned = null, DateTime? DateAssigneeChanged = null, string ResourceId = null, ResourceTypeEnum? ResourceType = null, bool? Redacted = null, Team AgentTeam = null, bool? IsScoringIndex = null, List<string> AuthorizedActions = null, bool? HasAssistanceFailed = null)
         {
             this.Name = Name;
             this.Conversation = Conversation;
@@ -224,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RevisionCreatedDate = RevisionCreatedDate;
             this.Queue = Queue;
             this.MediaType = MediaType;
+            this.DivisionIds = DivisionIds;
             this.Rescore = Rescore;
             this.ConversationDate = ConversationDate;
             this.ConversationEndDate = ConversationEndDate;
@@ -407,6 +409,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Evaluation is assigned in the following division(s).
+        /// </summary>
+        /// <value>Evaluation is assigned in the following division(s).</value>
+        [DataMember(Name="divisionIds", EmitDefaultValue=false)]
+        public List<string> DivisionIds { get; set; }
+
+
+
+        /// <summary>
         /// Is only true when evaluation is re-scored.
         /// </summary>
         /// <value>Is only true when evaluation is re-scored.</value>
@@ -570,6 +581,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RevisionCreatedDate: ").Append(RevisionCreatedDate).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("  Rescore: ").Append(Rescore).Append("\n");
             sb.Append("  ConversationDate: ").Append(ConversationDate).Append("\n");
             sb.Append("  ConversationEndDate: ").Append(ConversationEndDate).Append("\n");
@@ -727,6 +739,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType.SequenceEqual(other.MediaType)
                 ) &&
                 (
+                    this.DivisionIds == other.DivisionIds ||
+                    this.DivisionIds != null &&
+                    this.DivisionIds.SequenceEqual(other.DivisionIds)
+                ) &&
+                (
                     this.Rescore == other.Rescore ||
                     this.Rescore != null &&
                     this.Rescore.Equals(other.Rescore)
@@ -878,6 +895,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+
+                if (this.DivisionIds != null)
+                    hash = hash * 59 + this.DivisionIds.GetHashCode();
 
                 if (this.Rescore != null)
                     hash = hash * 59 + this.Rescore.GetHashCode();

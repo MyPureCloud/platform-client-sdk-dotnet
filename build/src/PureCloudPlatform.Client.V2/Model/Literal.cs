@@ -67,13 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="Literal" /> class.
         /// </summary>
         /// <param name="String">A string value.</param>
-        /// <param name="Integer">An integer value.</param>
-        /// <param name="Number">A decimal value.</param>
+        /// <param name="Integer">A positive or negative whole number, including zero.</param>
+        /// <param name="Number">A positive or negative decimal number, including zero.</param>
         /// <param name="Date">A date value, must be in the format of yyyy-MM-dd, e.g. 2024-09-23. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="Datetime">A date time value, must be in the format of yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ, e.g. 2024-10-02T01:01:01.111Z. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Special">A special value enum, such as Wildcard, Null, etc.</param>
         /// <param name="Boolean">A boolean value.</param>
-        public Literal(string String = null, int? Integer = null, double? Number = null, String Date = null, DateTime? Datetime = null, SpecialEnum? Special = null, bool? Boolean = null)
+        public Literal(string String = null, long? Integer = null, double? Number = null, String Date = null, DateTime? Datetime = null, SpecialEnum? Special = null, bool? Boolean = null)
         {
             this.String = String;
             this.Integer = Integer;
@@ -97,18 +97,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// An integer value
+        /// A positive or negative whole number, including zero
         /// </summary>
-        /// <value>An integer value</value>
+        /// <value>A positive or negative whole number, including zero</value>
         [DataMember(Name="integer", EmitDefaultValue=false)]
-        public int? Integer { get; set; }
+        public long? Integer { get; set; }
 
 
 
         /// <summary>
-        /// A decimal value
+        /// A positive or negative decimal number, including zero
         /// </summary>
-        /// <value>A decimal value</value>
+        /// <value>A positive or negative decimal number, including zero</value>
         [DataMember(Name="number", EmitDefaultValue=false)]
         public double? Number { get; set; }
 

@@ -252,9 +252,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ChatMessageEntityListing</returns>
         
-        ChatMessageEntityListing GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null);
+        ChatMessageEntityListing GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get a room&#39;s message history
@@ -267,9 +268,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ApiResponse of ChatMessageEntityListing</returns>
         
-        ApiResponse<ChatMessageEntityListing> GetChatsRoomMessagesWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null);
+        ApiResponse<ChatMessageEntityListing> GetChatsRoomMessagesWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get a room participant
@@ -356,9 +358,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ChatMessageEntityListing</returns>
         
-        ChatMessageEntityListing GetChatsThreadMessages (string threadId, string limit = null, string before = null, string after = null);
+        ChatMessageEntityListing GetChatsThreadMessages (string threadId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get history by thread
@@ -371,9 +374,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ApiResponse of ChatMessageEntityListing</returns>
         
-        ApiResponse<ChatMessageEntityListing> GetChatsThreadMessagesWithHttpInfo (string threadId, string limit = null, string before = null, string after = null);
+        ApiResponse<ChatMessageEntityListing> GetChatsThreadMessagesWithHttpInfo (string threadId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get information for a 1on1
@@ -436,9 +440,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ChatMessageResponse</returns>
         
-        ChatMessageResponse GetChatsUserMessages (string userId, string limit = null, string before = null, string after = null);
+        ChatMessageResponse GetChatsUserMessages (string userId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get 1on1 History between a user
@@ -451,9 +456,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ApiResponse of ChatMessageResponse</returns>
         
-        ApiResponse<ChatMessageResponse> GetChatsUserMessagesWithHttpInfo (string userId, string limit = null, string before = null, string after = null);
+        ApiResponse<ChatMessageResponse> GetChatsUserMessagesWithHttpInfo (string userId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get a user&#39;s chat settings
@@ -1126,9 +1132,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ChatMessageEntityListing</returns>
         
-        System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsRoomMessagesAsync (string roomJid, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsRoomMessagesAsync (string roomJid, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get a room&#39;s message history
@@ -1141,9 +1148,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsRoomMessagesAsyncWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsRoomMessagesAsyncWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get a room participant
@@ -1230,9 +1238,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ChatMessageEntityListing</returns>
         
-        System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsThreadMessagesAsync (string threadId, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsThreadMessagesAsync (string threadId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get history by thread
@@ -1245,9 +1254,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsThreadMessagesAsyncWithHttpInfo (string threadId, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsThreadMessagesAsyncWithHttpInfo (string threadId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get information for a 1on1
@@ -1310,9 +1320,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ChatMessageResponse</returns>
         
-        System.Threading.Tasks.Task<ChatMessageResponse> GetChatsUserMessagesAsync (string userId, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ChatMessageResponse> GetChatsUserMessagesAsync (string userId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get 1on1 History between a user
@@ -1325,9 +1336,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ChatMessageResponse>> GetChatsUserMessagesAsyncWithHttpInfo (string userId, string limit = null, string before = null, string after = null);
+        System.Threading.Tasks.Task<ApiResponse<ChatMessageResponse>> GetChatsUserMessagesAsyncWithHttpInfo (string userId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null);
 
         /// <summary>
         /// Get a user&#39;s chat settings
@@ -3722,11 +3734,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ChatMessageEntityListing</returns>
         
-        public ChatMessageEntityListing GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null)
+        public ChatMessageEntityListing GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         {
-             ApiResponse<ChatMessageEntityListing> localVarResponse = GetChatsRoomMessagesWithHttpInfo(roomJid, limit, before, after);
+             ApiResponse<ChatMessageEntityListing> localVarResponse = GetChatsRoomMessagesWithHttpInfo(roomJid, limit, before, after, excludeMetadata);
              return localVarResponse.Data;
         }
 
@@ -3739,9 +3752,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ApiResponse of ChatMessageEntityListing</returns>
         
-        public ApiResponse< ChatMessageEntityListing > GetChatsRoomMessagesWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null)
+        public ApiResponse< ChatMessageEntityListing > GetChatsRoomMessagesWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         { 
             // verify the required parameter 'roomJid' is set
             if (roomJid == null)
@@ -3784,6 +3798,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (excludeMetadata != null) localVarQueryParams.Add(new Tuple<string, string>("excludeMetadata", this.Configuration.ApiClient.ParameterToString(excludeMetadata)));
 
             // Header params
 
@@ -3830,11 +3845,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ChatMessageEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsRoomMessagesAsync (string roomJid, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsRoomMessagesAsync (string roomJid, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         {
-             ApiResponse<ChatMessageEntityListing> localVarResponse = await GetChatsRoomMessagesAsyncWithHttpInfo(roomJid, limit, before, after);
+             ApiResponse<ChatMessageEntityListing> localVarResponse = await GetChatsRoomMessagesAsyncWithHttpInfo(roomJid, limit, before, after, excludeMetadata);
              return localVarResponse.Data;
 
         }
@@ -3848,9 +3864,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsRoomMessagesAsyncWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsRoomMessagesAsyncWithHttpInfo (string roomJid, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         { 
             // verify the required parameter 'roomJid' is set
             if (roomJid == null)
@@ -3894,6 +3911,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (excludeMetadata != null) localVarQueryParams.Add(new Tuple<string, string>("excludeMetadata", this.Configuration.ApiClient.ParameterToString(excludeMetadata)));
 
             // Header params
 
@@ -4550,11 +4568,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ChatMessageEntityListing</returns>
         
-        public ChatMessageEntityListing GetChatsThreadMessages (string threadId, string limit = null, string before = null, string after = null)
+        public ChatMessageEntityListing GetChatsThreadMessages (string threadId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         {
-             ApiResponse<ChatMessageEntityListing> localVarResponse = GetChatsThreadMessagesWithHttpInfo(threadId, limit, before, after);
+             ApiResponse<ChatMessageEntityListing> localVarResponse = GetChatsThreadMessagesWithHttpInfo(threadId, limit, before, after, excludeMetadata);
              return localVarResponse.Data;
         }
 
@@ -4567,9 +4586,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ApiResponse of ChatMessageEntityListing</returns>
         
-        public ApiResponse< ChatMessageEntityListing > GetChatsThreadMessagesWithHttpInfo (string threadId, string limit = null, string before = null, string after = null)
+        public ApiResponse< ChatMessageEntityListing > GetChatsThreadMessagesWithHttpInfo (string threadId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         { 
             // verify the required parameter 'threadId' is set
             if (threadId == null)
@@ -4612,6 +4632,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (excludeMetadata != null) localVarQueryParams.Add(new Tuple<string, string>("excludeMetadata", this.Configuration.ApiClient.ParameterToString(excludeMetadata)));
 
             // Header params
 
@@ -4658,11 +4679,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ChatMessageEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsThreadMessagesAsync (string threadId, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ChatMessageEntityListing> GetChatsThreadMessagesAsync (string threadId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         {
-             ApiResponse<ChatMessageEntityListing> localVarResponse = await GetChatsThreadMessagesAsyncWithHttpInfo(threadId, limit, before, after);
+             ApiResponse<ChatMessageEntityListing> localVarResponse = await GetChatsThreadMessagesAsyncWithHttpInfo(threadId, limit, before, after, excludeMetadata);
              return localVarResponse.Data;
 
         }
@@ -4676,9 +4698,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsThreadMessagesAsyncWithHttpInfo (string threadId, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageEntityListing>> GetChatsThreadMessagesAsyncWithHttpInfo (string threadId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         { 
             // verify the required parameter 'threadId' is set
             if (threadId == null)
@@ -4722,6 +4745,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (excludeMetadata != null) localVarQueryParams.Add(new Tuple<string, string>("excludeMetadata", this.Configuration.ApiClient.ParameterToString(excludeMetadata)));
 
             // Header params
 
@@ -5184,11 +5208,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ChatMessageResponse</returns>
         
-        public ChatMessageResponse GetChatsUserMessages (string userId, string limit = null, string before = null, string after = null)
+        public ChatMessageResponse GetChatsUserMessages (string userId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         {
-             ApiResponse<ChatMessageResponse> localVarResponse = GetChatsUserMessagesWithHttpInfo(userId, limit, before, after);
+             ApiResponse<ChatMessageResponse> localVarResponse = GetChatsUserMessagesWithHttpInfo(userId, limit, before, after, excludeMetadata);
              return localVarResponse.Data;
         }
 
@@ -5201,9 +5226,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>ApiResponse of ChatMessageResponse</returns>
         
-        public ApiResponse< ChatMessageResponse > GetChatsUserMessagesWithHttpInfo (string userId, string limit = null, string before = null, string after = null)
+        public ApiResponse< ChatMessageResponse > GetChatsUserMessagesWithHttpInfo (string userId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -5246,6 +5272,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (excludeMetadata != null) localVarQueryParams.Add(new Tuple<string, string>("excludeMetadata", this.Configuration.ApiClient.ParameterToString(excludeMetadata)));
 
             // Header params
 
@@ -5292,11 +5319,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ChatMessageResponse</returns>
         
-        public async System.Threading.Tasks.Task<ChatMessageResponse> GetChatsUserMessagesAsync (string userId, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ChatMessageResponse> GetChatsUserMessagesAsync (string userId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         {
-             ApiResponse<ChatMessageResponse> localVarResponse = await GetChatsUserMessagesAsyncWithHttpInfo(userId, limit, before, after);
+             ApiResponse<ChatMessageResponse> localVarResponse = await GetChatsUserMessagesAsyncWithHttpInfo(userId, limit, before, after, excludeMetadata);
              return localVarResponse.Data;
 
         }
@@ -5310,9 +5338,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">The maximum number of messages to retrieve (optional)</param>
         /// <param name="before">The cutoff date for messages to retrieve (optional)</param>
         /// <param name="after">The beginning date for messages to retrieve (optional)</param>
+        /// <param name="excludeMetadata">Whether to exclude metadata for messages (optional)</param>
         /// <returns>Task of ApiResponse (ChatMessageResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageResponse>> GetChatsUserMessagesAsyncWithHttpInfo (string userId, string limit = null, string before = null, string after = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChatMessageResponse>> GetChatsUserMessagesAsyncWithHttpInfo (string userId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -5356,6 +5385,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (excludeMetadata != null) localVarQueryParams.Add(new Tuple<string, string>("excludeMetadata", this.Configuration.ApiClient.ParameterToString(excludeMetadata)));
 
             // Header params
 

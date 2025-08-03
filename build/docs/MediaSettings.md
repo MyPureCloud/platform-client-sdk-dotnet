@@ -11,8 +11,7 @@
 | **ServiceLevel** | [**ServiceLevel**](ServiceLevel) | The targeted service level for the media type | [optional] |
 | **AutoAnswerAlertToneSeconds** | **double?** | How long to play the alerting tone for an auto-answer interaction | [optional] |
 | **ManualAnswerAlertToneSeconds** | **double?** | How long to play the alerting tone for a manual-answer interaction | [optional] |
-| **SubTypeSettings** | [**Dictionary&lt;string, BaseMediaSettings&gt;**](BaseMediaSettings) | Map of media subtype to media subtype specific settings. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

@@ -30,11 +30,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the staffing group (required).</param>
         /// <param name="UserIds">The set of user IDs to associate with the staffing group.</param>
         /// <param name="ManagementUnitId">The ID of the management unit to which the staffing group users belong. If undefined the staffing group can include users from the entire business unit.</param>
-        public CreateStaffingGroupRequest(string Name = null, List<string> UserIds = null, string ManagementUnitId = null)
+        /// <param name="PlanningGroupIds">The set of planning group IDs to associate with the staffing group.</param>
+        public CreateStaffingGroupRequest(string Name = null, List<string> UserIds = null, string ManagementUnitId = null, List<string> PlanningGroupIds = null)
         {
             this.Name = Name;
             this.UserIds = UserIds;
             this.ManagementUnitId = ManagementUnitId;
+            this.PlanningGroupIds = PlanningGroupIds;
             
         }
         
@@ -66,6 +68,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ManagementUnitId { get; set; }
 
 
+
+        /// <summary>
+        /// The set of planning group IDs to associate with the staffing group
+        /// </summary>
+        /// <value>The set of planning group IDs to associate with the staffing group</value>
+        [DataMember(Name="planningGroupIds", EmitDefaultValue=false)]
+        public List<string> PlanningGroupIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -78,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
+            sb.Append("  PlanningGroupIds: ").Append(PlanningGroupIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -132,6 +144,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ManagementUnitId == other.ManagementUnitId ||
                     this.ManagementUnitId != null &&
                     this.ManagementUnitId.Equals(other.ManagementUnitId)
+                ) &&
+                (
+                    this.PlanningGroupIds == other.PlanningGroupIds ||
+                    this.PlanningGroupIds != null &&
+                    this.PlanningGroupIds.SequenceEqual(other.PlanningGroupIds)
                 );
         }
 
@@ -154,6 +171,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ManagementUnitId != null)
                     hash = hash * 59 + this.ManagementUnitId.GetHashCode();
+
+                if (this.PlanningGroupIds != null)
+                    hash = hash * 59 + this.PlanningGroupIds.GetHashCode();
 
                 return hash;
             }

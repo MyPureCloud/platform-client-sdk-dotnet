@@ -99,6 +99,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Contactlist,
             
             /// <summary>
+            /// Enum Conversationcustomattributeschema for "CONVERSATIONCUSTOMATTRIBUTESCHEMA"
+            /// </summary>
+            [EnumMember(Value = "CONVERSATIONCUSTOMATTRIBUTESCHEMA")]
+            Conversationcustomattributeschema,
+            
+            /// <summary>
             /// Enum Dataaction for "DATAACTION"
             /// </summary>
             [EnumMember(Value = "DATAACTION")]

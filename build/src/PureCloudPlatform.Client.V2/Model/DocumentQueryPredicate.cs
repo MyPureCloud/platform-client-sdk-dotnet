@@ -114,7 +114,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum State for "state"
             /// </summary>
             [EnumMember(Value = "state")]
-            State
+            State,
+            
+            /// <summary>
+            /// Enum Chunkid for "chunkId"
+            /// </summary>
+            [EnumMember(Value = "chunkId")]
+            Chunkid
         }
         /// <summary>
         /// Specifies the matching criteria between the fields and values.

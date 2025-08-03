@@ -67,6 +67,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Date/Time when token is due to expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Date/Time when token is due to expire. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateTokenIdles", EmitDefaultValue=false)]
+        public DateTime? DateTokenIdles { get; private set; }
+
+
+
+        /// <summary>
         /// Gets or Sets OAuthClient
         /// </summary>
         [DataMember(Name="OAuthClient", EmitDefaultValue=false)]
@@ -86,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HomeOrganization: ").Append(HomeOrganization).Append("\n");
             sb.Append("  AuthorizedScope: ").Append(AuthorizedScope).Append("\n");
             sb.Append("  ClonedUser: ").Append(ClonedUser).Append("\n");
+            sb.Append("  DateTokenIdles: ").Append(DateTokenIdles).Append("\n");
             sb.Append("  OAuthClient: ").Append(OAuthClient).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -148,6 +158,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ClonedUser.Equals(other.ClonedUser)
                 ) &&
                 (
+                    this.DateTokenIdles == other.DateTokenIdles ||
+                    this.DateTokenIdles != null &&
+                    this.DateTokenIdles.Equals(other.DateTokenIdles)
+                ) &&
+                (
                     this.OAuthClient == other.OAuthClient ||
                     this.OAuthClient != null &&
                     this.OAuthClient.Equals(other.OAuthClient)
@@ -176,6 +191,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ClonedUser != null)
                     hash = hash * 59 + this.ClonedUser.GetHashCode();
+
+                if (this.DateTokenIdles != null)
+                    hash = hash * 59 + this.DateTokenIdles.GetHashCode();
 
                 if (this.OAuthClient != null)
                     hash = hash * 59 + this.OAuthClient.GetHashCode();

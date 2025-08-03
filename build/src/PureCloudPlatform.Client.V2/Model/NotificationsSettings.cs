@@ -54,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="NotificationsSettings" /> class.
         /// </summary>
-        /// <param name="Enabled">The toggle to enable or disable notifications.</param>
+        /// <param name="Enabled">The toggle to enable or disable notifications. When enabled, PushNotificationTitle and PushNotificationBody localization keys are required..</param>
         /// <param name="NotificationContentType">The notification content type settings for messenger.</param>
         public NotificationsSettings(bool? Enabled = null, NotificationContentTypeEnum? NotificationContentType = null)
         {
@@ -66,9 +66,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The toggle to enable or disable notifications
+        /// The toggle to enable or disable notifications. When enabled, PushNotificationTitle and PushNotificationBody localization keys are required.
         /// </summary>
-        /// <value>The toggle to enable or disable notifications</value>
+        /// <value>The toggle to enable or disable notifications. When enabled, PushNotificationTitle and PushNotificationBody localization keys are required.</value>
         [DataMember(Name="enabled", EmitDefaultValue=false)]
         public bool? Enabled { get; set; }
 

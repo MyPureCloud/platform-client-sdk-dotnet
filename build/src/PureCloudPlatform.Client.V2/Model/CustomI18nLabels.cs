@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// The localization settings for homescreen
+    /// The localization settings for homescreen and push notification
     /// </summary>
     [DataContract]
     public partial class CustomI18nLabels :  IEquatable<CustomI18nLabels>
@@ -21,8 +21,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CustomI18nLabels" /> class.
         /// </summary>
-        /// <param name="Language">Language of localized labels in homescreen app (eg. en-us, de-de).</param>
-        /// <param name="LocalizedLabels">Contains localized labels used in homescreen app.</param>
+        /// <param name="Language">Language of localized labels in homescreen app (eg. en-us, de-de) and push notification.</param>
+        /// <param name="LocalizedLabels">Contains localized labels used in messenger apps and push notification. PushNotificationTitle and PushNotificationBody are required when notifications are enabled..</param>
         public CustomI18nLabels(string Language = null, List<LocalizedLabels> LocalizedLabels = null)
         {
             this.Language = Language;
@@ -33,18 +33,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Language of localized labels in homescreen app (eg. en-us, de-de)
+        /// Language of localized labels in homescreen app (eg. en-us, de-de) and push notification
         /// </summary>
-        /// <value>Language of localized labels in homescreen app (eg. en-us, de-de)</value>
+        /// <value>Language of localized labels in homescreen app (eg. en-us, de-de) and push notification</value>
         [DataMember(Name="language", EmitDefaultValue=false)]
         public string Language { get; set; }
 
 
 
         /// <summary>
-        /// Contains localized labels used in homescreen app
+        /// Contains localized labels used in messenger apps and push notification. PushNotificationTitle and PushNotificationBody are required when notifications are enabled.
         /// </summary>
-        /// <value>Contains localized labels used in homescreen app</value>
+        /// <value>Contains localized labels used in messenger apps and push notification. PushNotificationTitle and PushNotificationBody are required when notifications are enabled.</value>
         [DataMember(Name="localizedLabels", EmitDefaultValue=false)]
         public List<LocalizedLabels> LocalizedLabels { get; set; }
 

@@ -9,7 +9,8 @@
 | **FilterType** | **string** | Contact list filter type | [optional] |
 | **Predicates** | [**List&lt;DialerContactlistfilterConfigChangeFilterPredicate&gt;**](DialerContactlistfilterConfigChangeFilterPredicate) | The list of predicates in that clause | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
+| **GetAdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

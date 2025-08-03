@@ -16,6 +16,32 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
+        /// Delete/cancel an async request for journey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns></returns>
+        
+        void DeleteAnalyticsJourneysAggregatesJob (string jobId);
+
+        /// <summary>
+        /// Delete/cancel an async request for journey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteAnalyticsJourneysAggregatesJobWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Delete single action map.
         /// </summary>
         /// <remarks>
@@ -238,6 +264,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of JourneyAsyncAggregateQueryResponse</returns>
         
         ApiResponse<JourneyAsyncAggregateQueryResponse> GetAnalyticsJourneysAggregatesJobResultsWithHttpInfo (string jobId, string cursor = null);
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>SegmentAssignmentListing</returns>
+        
+        SegmentAssignmentListing GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null);
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>ApiResponse of SegmentAssignmentListing</returns>
+        
+        ApiResponse<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null);
 
         /// <summary>
         /// Retrieve all sessions for a given external contact.
@@ -1430,6 +1484,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<JourneyAggregateQueryResponse> PostAnalyticsJourneysAggregatesQueryWithHttpInfo (JourneyAggregationQuery body);
 
         /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>UpdateSegmentAssignmentResponse</returns>
+        
+        UpdateSegmentAssignmentResponse PostExternalcontactsContactJourneySegments (string contactId, UpdateSegmentAssignmentRequest body = null);
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of UpdateSegmentAssignmentResponse</returns>
+        
+        ApiResponse<UpdateSegmentAssignmentResponse> PostExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, UpdateSegmentAssignmentRequest body = null);
+
+        /// <summary>
         /// Create an action map.
         /// </summary>
         /// <remarks>
@@ -1886,6 +1966,32 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
 
         /// <summary>
+        /// Delete/cancel an async request for journey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteAnalyticsJourneysAggregatesJobAsync (string jobId);
+
+        /// <summary>
+        /// Delete/cancel an async request for journey aggregates
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsJourneysAggregatesJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Delete single action map.
         /// </summary>
         /// <remarks>
@@ -2108,6 +2214,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (JourneyAsyncAggregateQueryResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<JourneyAsyncAggregateQueryResponse>> GetAnalyticsJourneysAggregatesJobResultsAsyncWithHttpInfo (string jobId, string cursor = null);
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>Task of SegmentAssignmentListing</returns>
+        
+        System.Threading.Tasks.Task<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsAsync (string contactId, bool? includeMerged = null, int? limit = null);
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>Task of ApiResponse (SegmentAssignmentListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SegmentAssignmentListing>> GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null);
 
         /// <summary>
         /// Retrieve all sessions for a given external contact.
@@ -3300,6 +3434,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<JourneyAggregateQueryResponse>> PostAnalyticsJourneysAggregatesQueryAsyncWithHttpInfo (JourneyAggregationQuery body);
 
         /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of UpdateSegmentAssignmentResponse</returns>
+        
+        System.Threading.Tasks.Task<UpdateSegmentAssignmentResponse> PostExternalcontactsContactJourneySegmentsAsync (string contactId, UpdateSegmentAssignmentRequest body = null);
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (UpdateSegmentAssignmentResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UpdateSegmentAssignmentResponse>> PostExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, UpdateSegmentAssignmentRequest body = null);
+
+        /// <summary>
         /// Create an action map.
         /// </summary>
         /// <remarks>
@@ -3841,6 +4001,209 @@ namespace PureCloudPlatform.Client.V2.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+
+
+        /// <summary>
+        /// Delete/cancel an async request for journey aggregates 
+        /// 
+        /// DeleteAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns></returns>
+        
+        public void DeleteAnalyticsJourneysAggregatesJob (string jobId)
+        {
+             DeleteAnalyticsJourneysAggregatesJobWithHttpInfo(jobId);
+        }
+
+        /// <summary>
+        /// Delete/cancel an async request for journey aggregates 
+        /// 
+        /// DeleteAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteAnalyticsJourneysAggregatesJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->DeleteAnalyticsJourneysAggregatesJob");
+
+            var localVarPath = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsJourneysAggregatesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsJourneysAggregatesJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete/cancel an async request for journey aggregates 
+        /// 
+        /// DeleteAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteAnalyticsJourneysAggregatesJobAsync (string jobId)
+        {
+             await DeleteAnalyticsJourneysAggregatesJobAsyncWithHttpInfo(jobId);
+
+        }
+
+        /// <summary>
+        /// Delete/cancel an async request for journey aggregates 
+        /// 
+        /// DeleteAnalyticsJourneysAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">jobId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAnalyticsJourneysAggregatesJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->DeleteAnalyticsJourneysAggregatesJob");
+            
+
+            var localVarPath = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsJourneysAggregatesJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAnalyticsJourneysAggregatesJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
 
 
         /// <summary>
@@ -5654,6 +6017,219 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<JourneyAsyncAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
                 (JourneyAsyncAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyAsyncAggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>SegmentAssignmentListing</returns>
+        
+        public SegmentAssignmentListing GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null)
+        {
+             ApiResponse<SegmentAssignmentListing> localVarResponse = GetExternalcontactsContactJourneySegmentsWithHttpInfo(contactId, includeMerged, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>ApiResponse of SegmentAssignmentListing</returns>
+        
+        public ApiResponse< SegmentAssignmentListing > GetExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null)
+        { 
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling JourneyApi->GetExternalcontactsContactJourneySegments");
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactId != null) localVarPathParams.Add("contactId", this.Configuration.ApiClient.ParameterToString(contactId));
+
+            // Query params
+            if (includeMerged != null) localVarQueryParams.Add(new Tuple<string, string>("includeMerged", this.Configuration.ApiClient.ParameterToString(includeMerged)));
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactJourneySegments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactJourneySegments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SegmentAssignmentListing>(localVarStatusCode,
+                localVarHeaders,
+                (SegmentAssignmentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SegmentAssignmentListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>Task of SegmentAssignmentListing</returns>
+        
+        public async System.Threading.Tasks.Task<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsAsync (string contactId, bool? includeMerged = null, int? limit = null)
+        {
+             ApiResponse<SegmentAssignmentListing> localVarResponse = await GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo(contactId, includeMerged, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>Task of ApiResponse (SegmentAssignmentListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SegmentAssignmentListing>> GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null)
+        { 
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling JourneyApi->GetExternalcontactsContactJourneySegments");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactId != null) localVarPathParams.Add("contactId", this.Configuration.ApiClient.ParameterToString(contactId));
+
+            // Query params
+            if (includeMerged != null) localVarQueryParams.Add(new Tuple<string, string>("includeMerged", this.Configuration.ApiClient.ParameterToString(includeMerged)));
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactJourneySegments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactJourneySegments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SegmentAssignmentListing>(localVarStatusCode,
+                localVarHeaders,
+                (SegmentAssignmentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SegmentAssignmentListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15009,6 +15585,223 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<JourneyAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
                 (JourneyAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyAggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>UpdateSegmentAssignmentResponse</returns>
+        
+        public UpdateSegmentAssignmentResponse PostExternalcontactsContactJourneySegments (string contactId, UpdateSegmentAssignmentRequest body = null)
+        {
+             ApiResponse<UpdateSegmentAssignmentResponse> localVarResponse = PostExternalcontactsContactJourneySegmentsWithHttpInfo(contactId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of UpdateSegmentAssignmentResponse</returns>
+        
+        public ApiResponse< UpdateSegmentAssignmentResponse > PostExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, UpdateSegmentAssignmentRequest body = null)
+        { 
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling JourneyApi->PostExternalcontactsContactJourneySegments");
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactId != null) localVarPathParams.Add("contactId", this.Configuration.ApiClient.ParameterToString(contactId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactJourneySegments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactJourneySegments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UpdateSegmentAssignmentResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UpdateSegmentAssignmentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateSegmentAssignmentResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of UpdateSegmentAssignmentResponse</returns>
+        
+        public async System.Threading.Tasks.Task<UpdateSegmentAssignmentResponse> PostExternalcontactsContactJourneySegmentsAsync (string contactId, UpdateSegmentAssignmentRequest body = null)
+        {
+             ApiResponse<UpdateSegmentAssignmentResponse> localVarResponse = await PostExternalcontactsContactJourneySegmentsAsyncWithHttpInfo(contactId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (UpdateSegmentAssignmentResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UpdateSegmentAssignmentResponse>> PostExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, UpdateSegmentAssignmentRequest body = null)
+        { 
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling JourneyApi->PostExternalcontactsContactJourneySegments");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactId != null) localVarPathParams.Add("contactId", this.Configuration.ApiClient.ParameterToString(contactId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactJourneySegments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactJourneySegments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UpdateSegmentAssignmentResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UpdateSegmentAssignmentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateSegmentAssignmentResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The draft version of that NLU domain.</value>
         [DataMember(Name="draftVersion", EmitDefaultValue=false)]
-        public NluDomainVersion DraftVersion { get; private set; }
+        public NluDomainVersionReference DraftVersion { get; private set; }
 
 
 
@@ -81,7 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The last published version of that NLU domain.</value>
         [DataMember(Name="lastPublishedVersion", EmitDefaultValue=false)]
-        public NluDomainVersion LastPublishedVersion { get; private set; }
+        public NluDomainVersionReference LastPublishedVersion { get; private set; }
 
 
 

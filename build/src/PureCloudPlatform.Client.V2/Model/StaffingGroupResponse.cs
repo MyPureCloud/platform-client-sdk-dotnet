@@ -30,12 +30,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the staffing group (required).</param>
         /// <param name="Users">The list of users that belong to the staffing group.</param>
         /// <param name="ManagementUnit">The ID of the management unit to which the staffing group users belong. If undefined the staffing group can include users from the entire business unit.</param>
+        /// <param name="PlanningGroups">The list of planning groups that are associated with the staffing group.</param>
         /// <param name="Metadata">Version metadata for the staffing group (required).</param>
-        public StaffingGroupResponse(string Name = null, List<UserReference> Users = null, ManagementUnitReference ManagementUnit = null, WfmVersionedEntityMetadata Metadata = null)
+        public StaffingGroupResponse(string Name = null, List<UserReference> Users = null, ManagementUnitReference ManagementUnit = null, List<PlanningGroupReference> PlanningGroups = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
             this.Users = Users;
             this.ManagementUnit = ManagementUnit;
+            this.PlanningGroups = PlanningGroups;
             this.Metadata = Metadata;
             
         }
@@ -79,6 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The list of planning groups that are associated with the staffing group
+        /// </summary>
+        /// <value>The list of planning groups that are associated with the staffing group</value>
+        [DataMember(Name="planningGroups", EmitDefaultValue=false)]
+        public List<PlanningGroupReference> PlanningGroups { get; set; }
+
+
+
+        /// <summary>
         /// Version metadata for the staffing group
         /// </summary>
         /// <value>Version metadata for the staffing group</value>
@@ -108,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Users: ").Append(Users).Append("\n");
             sb.Append("  ManagementUnit: ").Append(ManagementUnit).Append("\n");
+            sb.Append("  PlanningGroups: ").Append(PlanningGroups).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -171,6 +183,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ManagementUnit.Equals(other.ManagementUnit)
                 ) &&
                 (
+                    this.PlanningGroups == other.PlanningGroups ||
+                    this.PlanningGroups != null &&
+                    this.PlanningGroups.SequenceEqual(other.PlanningGroups)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -204,6 +221,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ManagementUnit != null)
                     hash = hash * 59 + this.ManagementUnit.GetHashCode();
+
+                if (this.PlanningGroups != null)
+                    hash = hash * 59 + this.PlanningGroups.GetHashCode();
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

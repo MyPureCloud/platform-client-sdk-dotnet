@@ -79,13 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unavailable for "Unavailable"
             /// </summary>
             [EnumMember(Value = "Unavailable")]
-            Unavailable,
-            
-            /// <summary>
-            /// Enum Unscheduled for "Unscheduled"
-            /// </summary>
-            [EnumMember(Value = "Unscheduled")]
-            Unscheduled
+            Unavailable
         }
         /// <summary>
         /// The category of the activity code

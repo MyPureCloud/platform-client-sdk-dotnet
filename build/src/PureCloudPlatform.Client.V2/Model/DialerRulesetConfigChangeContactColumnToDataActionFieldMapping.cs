@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContactColumnName">The name of a contact column whose data will be passed to the data action.</param>
         /// <param name="DataActionField">The name of an output field from the data action that the contact column data will be passed to.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public DialerRulesetConfigChangeContactColumnToDataActionFieldMapping(string ContactColumnName = null, string DataActionField = null, Dictionary<string, Object> AdditionalProperties = null)
+        /// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
+        public DialerRulesetConfigChangeContactColumnToDataActionFieldMapping(string ContactColumnName = null, string DataActionField = null, Dictionary<string, Object> AdditionalProperties = null, Dictionary<string, Object> GetAdditionalProperties = null)
         {
             this.ContactColumnName = ContactColumnName;
             this.DataActionField = DataActionField;
             this.AdditionalProperties = AdditionalProperties;
+            this.GetAdditionalProperties = GetAdditionalProperties;
             
         }
         
@@ -59,6 +61,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets GetAdditionalProperties
+        /// </summary>
+        [DataMember(Name="getAdditionalProperties", EmitDefaultValue=false)]
+        public Dictionary<string, Object> GetAdditionalProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -71,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContactColumnName: ").Append(ContactColumnName).Append("\n");
             sb.Append("  DataActionField: ").Append(DataActionField).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+            sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -125,6 +136,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+                ) &&
+                (
+                    this.GetAdditionalProperties == other.GetAdditionalProperties ||
+                    this.GetAdditionalProperties != null &&
+                    this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
                 );
         }
 
@@ -147,6 +163,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+
+                if (this.GetAdditionalProperties != null)
+                    hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
 
                 return hash;
             }

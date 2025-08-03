@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExactMatch">List of transcript contents which needs to satisfy exact match criteria.</param>
         /// <param name="Contains">List of transcript contents which needs to satisfy contains criteria.</param>
         /// <param name="DoesNotContain">List of transcript contents which needs to satisfy does not contain criteria.</param>
-        public Transcripts(List<string> ExactMatch = null, List<string> Contains = null, List<string> DoesNotContain = null)
+        /// <param name="NotSimilarTo">List of words or phrases used to filter out transcripts that contain content similar to any item in this list.</param>
+        public Transcripts(List<string> ExactMatch = null, List<string> Contains = null, List<string> DoesNotContain = null, List<string> NotSimilarTo = null)
         {
             this.ExactMatch = ExactMatch;
             this.Contains = Contains;
             this.DoesNotContain = DoesNotContain;
+            this.NotSimilarTo = NotSimilarTo;
             
         }
         
@@ -60,6 +62,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> DoesNotContain { get; set; }
 
 
+
+        /// <summary>
+        /// List of words or phrases used to filter out transcripts that contain content similar to any item in this list
+        /// </summary>
+        /// <value>List of words or phrases used to filter out transcripts that contain content similar to any item in this list</value>
+        [DataMember(Name="notSimilarTo", EmitDefaultValue=false)]
+        public List<string> NotSimilarTo { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExactMatch: ").Append(ExactMatch).Append("\n");
             sb.Append("  Contains: ").Append(Contains).Append("\n");
             sb.Append("  DoesNotContain: ").Append(DoesNotContain).Append("\n");
+            sb.Append("  NotSimilarTo: ").Append(NotSimilarTo).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +138,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DoesNotContain == other.DoesNotContain ||
                     this.DoesNotContain != null &&
                     this.DoesNotContain.SequenceEqual(other.DoesNotContain)
+                ) &&
+                (
+                    this.NotSimilarTo == other.NotSimilarTo ||
+                    this.NotSimilarTo != null &&
+                    this.NotSimilarTo.SequenceEqual(other.NotSimilarTo)
                 );
         }
 
@@ -148,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DoesNotContain != null)
                     hash = hash * 59 + this.DoesNotContain.GetHashCode();
+
+                if (this.NotSimilarTo != null)
+                    hash = hash * 59 + this.NotSimilarTo.GetHashCode();
 
                 return hash;
             }

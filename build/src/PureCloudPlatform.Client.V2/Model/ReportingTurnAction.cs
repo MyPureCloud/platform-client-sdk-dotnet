@@ -33,6 +33,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Askforauthenticationaction for "AskForAuthenticationAction"
+            /// </summary>
+            [EnumMember(Value = "AskForAuthenticationAction")]
+            Askforauthenticationaction,
+            
+            /// <summary>
             /// Enum Addflowmilestoneaction for "AddFlowMilestoneAction"
             /// </summary>
             [EnumMember(Value = "AddFlowMilestoneAction")]
@@ -49,6 +55,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "AskForBooleanAction")]
             Askforbooleanaction,
+            
+            /// <summary>
+            /// Enum Askforpaymentaction for "AskForPaymentAction"
+            /// </summary>
+            [EnumMember(Value = "AskForPaymentAction")]
+            Askforpaymentaction,
             
             /// <summary>
             /// Enum Askforslotaction for "AskForSlotAction"

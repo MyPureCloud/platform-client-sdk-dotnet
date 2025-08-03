@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteWorkforcemanagementBusinessunit**](#DeleteWorkforcemanagementBusinessunit) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId} | Delete business unit |
 | [**DeleteWorkforcemanagementBusinessunitActivitycode**](#DeleteWorkforcemanagementBusinessunitActivitycode) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Deletes an activity code |
+| [**DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory**](#DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory | Delete staffing group allocations history created for a capacity plan before the given date |
 | [**DeleteWorkforcemanagementBusinessunitPlanninggroup**](#DeleteWorkforcemanagementBusinessunitPlanninggroup) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Deletes the planning group |
 | [**DeleteWorkforcemanagementBusinessunitSchedulingRun**](#DeleteWorkforcemanagementBusinessunitSchedulingRun) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Cancel a scheduling run |
 | [**DeleteWorkforcemanagementBusinessunitServicegoaltemplate**](#DeleteWorkforcemanagementBusinessunitServicegoaltemplate) | **Delete** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Delete a service goal template |
@@ -49,6 +50,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementBusinessunitAlternativeshiftsSettings**](#GetWorkforcemanagementBusinessunitAlternativeshiftsSettings) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings | Get alternative shifts settings for a business unit |
 | [**GetWorkforcemanagementBusinessunitAlternativeshiftsTrade**](#GetWorkforcemanagementBusinessunitAlternativeshiftsTrade) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId} | Get an alternative shifts trade in a business unit for a given trade ID |
 | [**GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob**](#GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId} | Query the status of an alternative shift search trade operation. Only the user who started the operation can query the status |
+| [**GetWorkforcemanagementBusinessunitCapacityplan**](#GetWorkforcemanagementBusinessunitCapacityplan) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId} | Get a capacity plan |
+| [**GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations**](#GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations | Get a capacity plan&#39;s staffing group allocations |
+| [**GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements**](#GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffingrequirements | Get a capacity plan&#39;s staffing requirements |
+| [**GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast**](#GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId} | Get the latest long term staffing requirements for a business unit |
+| [**GetWorkforcemanagementBusinessunitCapacityplans**](#GetWorkforcemanagementBusinessunitCapacityplans) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans | Get list of capacity plans for a business unit |
 | [**GetWorkforcemanagementBusinessunitIntradayPlanninggroups**](#GetWorkforcemanagementBusinessunitIntradayPlanninggroups) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups | Get intraday planning groups for the given date |
 | [**GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession**](#GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session | Get the latest session for the business unit ID |
 | [**GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId**](#GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId) | **Get** /api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId} | Get the session details for the session ID |
@@ -140,6 +146,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementBusinessunitActivitycode**](#PatchWorkforcemanagementBusinessunitActivitycode) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId} | Update an activity code |
 | [**PatchWorkforcemanagementBusinessunitActivityplan**](#PatchWorkforcemanagementBusinessunitActivityplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId} | Update an activity plan |
 | [**PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings**](#PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings | Update alternative shifts settings for a business unit |
+| [**PatchWorkforcemanagementBusinessunitCapacityplan**](#PatchWorkforcemanagementBusinessunitCapacityplan) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId} | Update a capacity plan configuration |
 | [**PatchWorkforcemanagementBusinessunitPlanninggroup**](#PatchWorkforcemanagementBusinessunitPlanninggroup) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId} | Updates the planning group |
 | [**PatchWorkforcemanagementBusinessunitSchedulingRun**](#PatchWorkforcemanagementBusinessunitSchedulingRun) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId} | Mark a schedule run as applied |
 | [**PatchWorkforcemanagementBusinessunitServicegoaltemplate**](#PatchWorkforcemanagementBusinessunitServicegoaltemplate) | **Patch** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId} | Updates a service goal template |
@@ -181,10 +188,18 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery**](#PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query | Query adherence explanations across an entire business unit for the requested period |
 | [**PostWorkforcemanagementBusinessunitAgentschedulesSearch**](#PostWorkforcemanagementBusinessunitAgentschedulesSearch) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search | Search published schedules |
 | [**PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch**](#PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search | List alternative shifts trades for a given management unit or agent |
+| [**PostWorkforcemanagementBusinessunitCapacityplanCopy**](#PostWorkforcemanagementBusinessunitCapacityplanCopy) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/copy | Copy a capacity plan |
+| [**PostWorkforcemanagementBusinessunitCapacityplanRequirementGenerate**](#PostWorkforcemanagementBusinessunitCapacityplanRequirementGenerate) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/requirement/generate | Regenerate requirements for capacity plan |
+| [**PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations**](#PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations | Create staffing group allocations for a capacity plan |
+| [**PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery**](#PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory/query | Query staffing groups allocations history for a capacity plan |
+| [**PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate**](#PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}/forceregenerate | Force regenerate the latest long term staffing requirements for a business unit |
+| [**PostWorkforcemanagementBusinessunitCapacityplans**](#PostWorkforcemanagementBusinessunitCapacityplans) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans | Create a new capacity plan |
+| [**PostWorkforcemanagementBusinessunitCapacityplansBulkRemove**](#PostWorkforcemanagementBusinessunitCapacityplansBulkRemove) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove | Delete capacity plans in a business unit |
 | [**PostWorkforcemanagementBusinessunitIntraday**](#PostWorkforcemanagementBusinessunitIntraday) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday | Get intraday data for the given date for the requested planningGroupIds |
 | [**PostWorkforcemanagementBusinessunitPlanninggroups**](#PostWorkforcemanagementBusinessunitPlanninggroups) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups | Adds a new planning group |
 | [**PostWorkforcemanagementBusinessunitServicegoaltemplates**](#PostWorkforcemanagementBusinessunitServicegoaltemplates) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates | Adds a new service goal template |
 | [**PostWorkforcemanagementBusinessunitStaffinggroups**](#PostWorkforcemanagementBusinessunitStaffinggroups) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups | Creates a new staffing group |
+| [**PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery**](#PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/planninggroups/query | Gets a list of planning group to staffing groups list association |
 | [**PostWorkforcemanagementBusinessunitStaffinggroupsQuery**](#PostWorkforcemanagementBusinessunitStaffinggroupsQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query | Gets staffing group associations for a list of user IDs |
 | [**PostWorkforcemanagementBusinessunitTimeofflimits**](#PostWorkforcemanagementBusinessunitTimeofflimits) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits | Creates a new time-off limit object |
 | [**PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**](#PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query | Retrieves time-off limit related values based on a given set of filters. |
@@ -373,6 +388,71 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
 | **activityCodeId** | **string**| The ID of the activity code to delete |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory
+
+> void DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory (string businessUnitId, string capacityPlanId, String beforeDateId = null)
+
+
+Delete staffing group allocations history created for a capacity plan before the given date
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+            var beforeDateId = 2013-10-20;  // String | The date to delete records that are created on or before this date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+
+            try
+            { 
+                // Delete staffing group allocations history created for a capacity plan before the given date
+                apiInstance.DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory(businessUnitId, capacityPlanId, beforeDateId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **capacityPlanId** | **string**| The ID of the capacity plan |  |
+| **beforeDateId** | **String**| The date to delete records that are created on or before this date in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd | [optional]  |
 
 ### Return type
 
@@ -2386,7 +2466,7 @@ namespace Example
 
 ## GetWorkforcemanagementBusinessunit
 
-> [**BusinessUnitResponse**](BusinessUnitResponse) GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null)
+> [**BusinessUnitResponse**](BusinessUnitResponse) GetWorkforcemanagementBusinessunit (string businessUnitId, List<string> expand = null, bool? includeSchedulingDefaultMessageSeverities = null)
 
 
 Get business unit
@@ -2491,11 +2571,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit, or 'mine' for the business unit of the logged-in user.
             var expand = new List<string>(); // List<string> | Include to access additional data on the business unit (optional) 
+            var includeSchedulingDefaultMessageSeverities = true;  // bool? | Whether to include scheduling default message severities (optional) 
 
             try
             { 
                 // Get business unit
-                BusinessUnitResponse result = apiInstance.GetWorkforcemanagementBusinessunit(businessUnitId, expand);
+                BusinessUnitResponse result = apiInstance.GetWorkforcemanagementBusinessunit(businessUnitId, expand, includeSchedulingDefaultMessageSeverities);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2514,6 +2595,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
 | **expand** | [**List<string>**](string)| Include to access additional data on the business unit | [optional] <br />**Values**: settings, settings.timeZone, settings.startDayOfWeek, settings.shortTermForecasting, settings.scheduling, settings.notifications.scheduling, settings.learning, settings.coaching |
+| **includeSchedulingDefaultMessageSeverities** | **bool?**| Whether to include scheduling default message severities | [optional]  |
 
 ### Return type
 
@@ -3152,6 +3234,326 @@ namespace Example
 ### Return type
 
 [**BuAlternativeShiftJobResponse**](BuAlternativeShiftJobResponse)
+
+
+## GetWorkforcemanagementBusinessunitCapacityplan
+
+> [**CapacityPlanResponse**](CapacityPlanResponse) GetWorkforcemanagementBusinessunitCapacityplan (string businessUnitId, string capacityPlanId)
+
+
+Get a capacity plan
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitCapacityplanExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+
+            try
+            { 
+                // Get a capacity plan
+                CapacityPlanResponse result = apiInstance.GetWorkforcemanagementBusinessunitCapacityplan(businessUnitId, capacityPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitCapacityplan: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **capacityPlanId** | **string**| The ID of the capacity plan |  |
+
+### Return type
+
+[**CapacityPlanResponse**](CapacityPlanResponse)
+
+
+## GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations
+
+> [**CapacityPlanStaffingGroupAllocationsResponse**](CapacityPlanStaffingGroupAllocationsResponse) GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations (string businessUnitId, string capacityPlanId)
+
+
+Get a capacity plan's staffing group allocations
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+
+            try
+            { 
+                // Get a capacity plan's staffing group allocations
+                CapacityPlanStaffingGroupAllocationsResponse result = apiInstance.GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId, capacityPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **capacityPlanId** | **string**| The ID of the capacity plan |  |
+
+### Return type
+
+[**CapacityPlanStaffingGroupAllocationsResponse**](CapacityPlanStaffingGroupAllocationsResponse)
+
+
+## GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements
+
+> [**CapacityPlanStaffingRequirementResult**](CapacityPlanStaffingRequirementResult) GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements (string businessUnitId, string capacityPlanId)
+
+
+Get a capacity plan's staffing requirements
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirementsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+
+            try
+            { 
+                // Get a capacity plan's staffing requirements
+                CapacityPlanStaffingRequirementResult result = apiInstance.GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements(businessUnitId, capacityPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **capacityPlanId** | **string**| The ID of the capacity plan |  |
+
+### Return type
+
+[**CapacityPlanStaffingRequirementResult**](CapacityPlanStaffingRequirementResult)
+
+
+## GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast
+
+> [**LongTermRequirementsResponse**](LongTermRequirementsResponse) GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast (string businessUnitId, String weekDateId, string forecastId)
+
+
+Get the latest long term staffing requirements for a business unit
+
+Requires ANY permissions: 
+
+* wfm:longTermStaffing:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | 
+            var weekDateId = 2013-10-20;  // String | weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var forecastId = forecastId_example;  // string | forecastId of forecast
+
+            try
+            { 
+                // Get the latest long term staffing requirements for a business unit
+                LongTermRequirementsResponse result = apiInstance.GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId, weekDateId, forecastId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**|  |  |
+| **weekDateId** | **String**| weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **forecastId** | **string**| forecastId of forecast |  |
+
+### Return type
+
+[**LongTermRequirementsResponse**](LongTermRequirementsResponse)
+
+
+## GetWorkforcemanagementBusinessunitCapacityplans
+
+> [**CapacityPlansListResponse**](CapacityPlansListResponse) GetWorkforcemanagementBusinessunitCapacityplans (string businessUnitId)
+
+
+Get list of capacity plans for a business unit
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementBusinessunitCapacityplansExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+
+            try
+            { 
+                // Get list of capacity plans for a business unit
+                CapacityPlansListResponse result = apiInstance.GetWorkforcemanagementBusinessunitCapacityplans(businessUnitId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementBusinessunitCapacityplans: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+
+### Return type
+
+[**CapacityPlansListResponse**](CapacityPlansListResponse)
 
 
 ## GetWorkforcemanagementBusinessunitIntradayPlanninggroups
@@ -8890,7 +9292,7 @@ namespace Example
 
 ## PatchWorkforcemanagementBusinessunit
 
-> [**BusinessUnitResponse**](BusinessUnitResponse) PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body)
+> [**BusinessUnitResponse**](BusinessUnitResponse) PatchWorkforcemanagementBusinessunit (string businessUnitId, UpdateBusinessUnitRequest body, bool? includeSchedulingDefaultMessageSeverities = null)
 
 
 Update business unit
@@ -8923,11 +9325,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit, or 'mine' for the business unit of the logged-in user.
             var body = new UpdateBusinessUnitRequest(); // UpdateBusinessUnitRequest | body
+            var includeSchedulingDefaultMessageSeverities = true;  // bool? | Whether to include scheduling default message severities (optional) 
 
             try
             { 
                 // Update business unit
-                BusinessUnitResponse result = apiInstance.PatchWorkforcemanagementBusinessunit(businessUnitId, body);
+                BusinessUnitResponse result = apiInstance.PatchWorkforcemanagementBusinessunit(businessUnitId, body, includeSchedulingDefaultMessageSeverities);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -8946,6 +9349,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit, or &#39;mine&#39; for the business unit of the logged-in user. |  |
 | **body** | [**UpdateBusinessUnitRequest**](UpdateBusinessUnitRequest)| body |  |
+| **includeSchedulingDefaultMessageSeverities** | **bool?**| Whether to include scheduling default message severities | [optional]  |
 
 ### Return type
 
@@ -9148,6 +9552,72 @@ namespace Example
 ### Return type
 
 [**AlternativeShiftBuSettingsResponse**](AlternativeShiftBuSettingsResponse)
+
+
+## PatchWorkforcemanagementBusinessunitCapacityplan
+
+> [**CapacityPlanResponse**](CapacityPlanResponse) PatchWorkforcemanagementBusinessunitCapacityplan (string businessUnitId, string capacityPlanId, UpdateCapacityPlanRequest body)
+
+
+Update a capacity plan configuration
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementBusinessunitCapacityplanExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+            var body = new UpdateCapacityPlanRequest(); // UpdateCapacityPlanRequest | body
+
+            try
+            { 
+                // Update a capacity plan configuration
+                CapacityPlanResponse result = apiInstance.PatchWorkforcemanagementBusinessunitCapacityplan(businessUnitId, capacityPlanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementBusinessunitCapacityplan: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **capacityPlanId** | **string**| The ID of the capacity plan |  |
+| **body** | [**UpdateCapacityPlanRequest**](UpdateCapacityPlanRequest)| body |  |
+
+### Return type
+
+[**CapacityPlanResponse**](CapacityPlanResponse)
 
 
 ## PatchWorkforcemanagementBusinessunitPlanninggroup
@@ -11816,6 +12286,461 @@ namespace Example
 [**BuListAlternativeShiftTradesResponse**](BuListAlternativeShiftTradesResponse)
 
 
+## PostWorkforcemanagementBusinessunitCapacityplanCopy
+
+> [**CapacityPlanResponse**](CapacityPlanResponse) PostWorkforcemanagementBusinessunitCapacityplanCopy (string businessUnitId, string capacityPlanId, CopyCapacityPlanRequest body)
+
+
+Copy a capacity plan
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitCapacityplanCopyExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+            var body = new CopyCapacityPlanRequest(); // CopyCapacityPlanRequest | body
+
+            try
+            { 
+                // Copy a capacity plan
+                CapacityPlanResponse result = apiInstance.PostWorkforcemanagementBusinessunitCapacityplanCopy(businessUnitId, capacityPlanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitCapacityplanCopy: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **capacityPlanId** | **string**| The ID of the capacity plan |  |
+| **body** | [**CopyCapacityPlanRequest**](CopyCapacityPlanRequest)| body |  |
+
+### Return type
+
+[**CapacityPlanResponse**](CapacityPlanResponse)
+
+
+## PostWorkforcemanagementBusinessunitCapacityplanRequirementGenerate
+
+> [**CapacityPlanStaffingRequirementResult**](CapacityPlanStaffingRequirementResult) PostWorkforcemanagementBusinessunitCapacityplanRequirementGenerate (string businessUnitId, string capacityPlanId)
+
+
+Regenerate requirements for capacity plan
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitCapacityplanRequirementGenerateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+
+            try
+            { 
+                // Regenerate requirements for capacity plan
+                CapacityPlanStaffingRequirementResult result = apiInstance.PostWorkforcemanagementBusinessunitCapacityplanRequirementGenerate(businessUnitId, capacityPlanId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitCapacityplanRequirementGenerate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **capacityPlanId** | **string**| The ID of the capacity plan |  |
+
+### Return type
+
+[**CapacityPlanStaffingRequirementResult**](CapacityPlanStaffingRequirementResult)
+
+
+## PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations
+
+> [**CapacityPlanStaffingGroupMetricChangeResponse**](CapacityPlanStaffingGroupMetricChangeResponse) PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations (string businessUnitId, string capacityPlanId, CreateCapacityPlanStaffingGroupMetricChangeRequest body)
+
+
+Create staffing group allocations for a capacity plan
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+            var body = new CreateCapacityPlanStaffingGroupMetricChangeRequest(); // CreateCapacityPlanStaffingGroupMetricChangeRequest | 
+
+            try
+            { 
+                // Create staffing group allocations for a capacity plan
+                CapacityPlanStaffingGroupMetricChangeResponse result = apiInstance.PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId, capacityPlanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **capacityPlanId** | **string**| The ID of the capacity plan |  |
+| **body** | [**CreateCapacityPlanStaffingGroupMetricChangeRequest**](CreateCapacityPlanStaffingGroupMetricChangeRequest)|  |  |
+
+### Return type
+
+[**CapacityPlanStaffingGroupMetricChangeResponse**](CapacityPlanStaffingGroupMetricChangeResponse)
+
+
+## PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery
+
+> [**CapacityPlanStaffingGroupMetricChangeHistoryListResponse**](CapacityPlanStaffingGroupMetricChangeHistoryListResponse) PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery (string businessUnitId, string capacityPlanId, QueryCapacityPlanStaffingGroupMetricChangeHistory body)
+
+
+Query staffing groups allocations history for a capacity plan
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+            var body = new QueryCapacityPlanStaffingGroupMetricChangeHistory(); // QueryCapacityPlanStaffingGroupMetricChangeHistory | 
+
+            try
+            { 
+                // Query staffing groups allocations history for a capacity plan
+                CapacityPlanStaffingGroupMetricChangeHistoryListResponse result = apiInstance.PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery(businessUnitId, capacityPlanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **capacityPlanId** | **string**| The ID of the capacity plan |  |
+| **body** | [**QueryCapacityPlanStaffingGroupMetricChangeHistory**](QueryCapacityPlanStaffingGroupMetricChangeHistory)|  |  |
+
+### Return type
+
+[**CapacityPlanStaffingGroupMetricChangeHistoryListResponse**](CapacityPlanStaffingGroupMetricChangeHistoryListResponse)
+
+
+## PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate
+
+> [**LongTermRequirementsResponse**](LongTermRequirementsResponse) PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate (string businessUnitId, String weekDateId, string forecastId)
+
+
+Force regenerate the latest long term staffing requirements for a business unit
+
+Requires ANY permissions: 
+
+* wfm:longTermStaffing:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | 
+            var weekDateId = 2013-10-20;  // String | weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var forecastId = forecastId_example;  // string | forecastId of forecast
+
+            try
+            { 
+                // Force regenerate the latest long term staffing requirements for a business unit
+                LongTermRequirementsResponse result = apiInstance.PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate(businessUnitId, weekDateId, forecastId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**|  |  |
+| **weekDateId** | **String**| weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **forecastId** | **string**| forecastId of forecast |  |
+
+### Return type
+
+[**LongTermRequirementsResponse**](LongTermRequirementsResponse)
+
+
+## PostWorkforcemanagementBusinessunitCapacityplans
+
+> [**CapacityPlanResponse**](CapacityPlanResponse) PostWorkforcemanagementBusinessunitCapacityplans (string businessUnitId, CapacityPlanRequest body)
+
+
+Create a new capacity plan
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitCapacityplansExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new CapacityPlanRequest(); // CapacityPlanRequest | body
+
+            try
+            { 
+                // Create a new capacity plan
+                CapacityPlanResponse result = apiInstance.PostWorkforcemanagementBusinessunitCapacityplans(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitCapacityplans: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**CapacityPlanRequest**](CapacityPlanRequest)| body |  |
+
+### Return type
+
+[**CapacityPlanResponse**](CapacityPlanResponse)
+
+
+## PostWorkforcemanagementBusinessunitCapacityplansBulkRemove
+
+> void PostWorkforcemanagementBusinessunitCapacityplansBulkRemove (string businessUnitId, CapacityPlanDeleteRequest body)
+
+
+Delete capacity plans in a business unit
+
+Requires ANY permissions: 
+
+* wfm:capacityPlan:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitCapacityplansBulkRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new CapacityPlanDeleteRequest(); // CapacityPlanDeleteRequest | body
+
+            try
+            { 
+                // Delete capacity plans in a business unit
+                apiInstance.PostWorkforcemanagementBusinessunitCapacityplansBulkRemove(businessUnitId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitCapacityplansBulkRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**CapacityPlanDeleteRequest**](CapacityPlanDeleteRequest)| body |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PostWorkforcemanagementBusinessunitIntraday
 
 > [**AsyncIntradayResponse**](AsyncIntradayResponse) PostWorkforcemanagementBusinessunitIntraday (string businessUnitId, IntradayPlanningGroupRequest body, bool? forceAsync = null)
@@ -12072,6 +12997,70 @@ namespace Example
 ### Return type
 
 [**StaffingGroupResponse**](StaffingGroupResponse)
+
+
+## PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery
+
+> [**PlanningGroupToStaffingGroupsListing**](PlanningGroupToStaffingGroupsListing) PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery (string businessUnitId, QueryPlanningGroupToStaffingGroupsRequest body)
+
+
+Gets a list of planning group to staffing groups list association
+
+Requires ANY permissions: 
+
+* wfm:staffingGroup:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new QueryPlanningGroupToStaffingGroupsRequest(); // QueryPlanningGroupToStaffingGroupsRequest | body
+
+            try
+            { 
+                // Gets a list of planning group to staffing groups list association
+                PlanningGroupToStaffingGroupsListing result = apiInstance.PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**QueryPlanningGroupToStaffingGroupsRequest**](QueryPlanningGroupToStaffingGroupsRequest)| body |  |
+
+### Return type
+
+[**PlanningGroupToStaffingGroupsListing**](PlanningGroupToStaffingGroupsListing)
 
 
 ## PostWorkforcemanagementBusinessunitStaffinggroupsQuery
@@ -13557,7 +14546,7 @@ namespace Example
 
 ## PostWorkforcemanagementBusinessunits
 
-> [**BusinessUnitResponse**](BusinessUnitResponse) PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body)
+> [**BusinessUnitResponse**](BusinessUnitResponse) PostWorkforcemanagementBusinessunits (CreateBusinessUnitRequest body, bool? includeSchedulingDefaultMessageSeverities = null)
 
 
 Add a new business unit
@@ -13591,11 +14580,12 @@ namespace Example
 
             var apiInstance = new WorkforceManagementApi();
             var body = new CreateBusinessUnitRequest(); // CreateBusinessUnitRequest | body
+            var includeSchedulingDefaultMessageSeverities = true;  // bool? | Whether to include scheduling default message severities (optional) 
 
             try
             { 
                 // Add a new business unit
-                BusinessUnitResponse result = apiInstance.PostWorkforcemanagementBusinessunits(body);
+                BusinessUnitResponse result = apiInstance.PostWorkforcemanagementBusinessunits(body, includeSchedulingDefaultMessageSeverities);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -13613,6 +14603,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**CreateBusinessUnitRequest**](CreateBusinessUnitRequest)| body |  |
+| **includeSchedulingDefaultMessageSeverities** | **bool?**| Whether to include scheduling default message severities | [optional]  |
 
 ### Return type
 
@@ -16357,4 +17348,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

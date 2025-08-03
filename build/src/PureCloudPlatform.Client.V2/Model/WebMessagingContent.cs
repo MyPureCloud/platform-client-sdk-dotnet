@@ -73,7 +73,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Datepicker for "DatePicker"
             /// </summary>
             [EnumMember(Value = "DatePicker")]
-            Datepicker
+            Datepicker,
+            
+            /// <summary>
+            /// Enum Listpicker for "ListPicker"
+            /// </summary>
+            [EnumMember(Value = "ListPicker")]
+            Listpicker
         }
         /// <summary>
         /// Type of this content element. If contentType = \"Attachment\" only one item is allowed.
@@ -90,7 +96,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Card">Card content.</param>
         /// <param name="Carousel">Carousel content.</param>
         /// <param name="DatePicker">DatePicker content.</param>
-        public WebMessagingContent(WebMessagingQuickReply QuickReply = null, WebMessagingButtonResponse ButtonResponse = null, WebMessagingGeneric Generic = null, ContentCard Card = null, ContentCarousel Carousel = null, ContentDatePicker DatePicker = null)
+        /// <param name="ListPicker">ListPicker content.</param>
+        public WebMessagingContent(WebMessagingQuickReply QuickReply = null, WebMessagingButtonResponse ButtonResponse = null, WebMessagingGeneric Generic = null, ContentCard Card = null, ContentCarousel Carousel = null, ContentDatePicker DatePicker = null, ConversationContentListPicker ListPicker = null)
         {
             this.QuickReply = QuickReply;
             this.ButtonResponse = ButtonResponse;
@@ -98,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Card = Card;
             this.Carousel = Carousel;
             this.DatePicker = DatePicker;
+            this.ListPicker = ListPicker;
             
         }
         
@@ -167,6 +175,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ContentDatePicker DatePicker { get; set; }
 
 
+
+        /// <summary>
+        /// ListPicker content
+        /// </summary>
+        /// <value>ListPicker content</value>
+        [DataMember(Name="listPicker", EmitDefaultValue=false)]
+        public ConversationContentListPicker ListPicker { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -184,6 +201,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Card: ").Append(Card).Append("\n");
             sb.Append("  Carousel: ").Append(Carousel).Append("\n");
             sb.Append("  DatePicker: ").Append(DatePicker).Append("\n");
+            sb.Append("  ListPicker: ").Append(ListPicker).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -263,6 +281,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DatePicker == other.DatePicker ||
                     this.DatePicker != null &&
                     this.DatePicker.Equals(other.DatePicker)
+                ) &&
+                (
+                    this.ListPicker == other.ListPicker ||
+                    this.ListPicker != null &&
+                    this.ListPicker.Equals(other.ListPicker)
                 );
         }
 
@@ -300,6 +323,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DatePicker != null)
                     hash = hash * 59 + this.DatePicker.GetHashCode();
+
+                if (this.ListPicker != null)
+                    hash = hash * 59 + this.ListPicker.GetHashCode();
 
                 return hash;
             }

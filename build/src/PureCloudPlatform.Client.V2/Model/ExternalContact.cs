@@ -417,9 +417,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Information about the merge history of this contact. If null, this contact is not a part of any merge.
+        /// (Deprecated: use mergedTo and mergedFrom instead) Information about the merge history of this contact. If null, this contact is not a part of any merge.
         /// </summary>
-        /// <value>Information about the merge history of this contact. If null, this contact is not a part of any merge.</value>
+        /// <value>(Deprecated: use mergedTo and mergedFrom instead) Information about the merge history of this contact. If null, this contact is not a part of any merge.</value>
         [DataMember(Name="mergeOperation", EmitDefaultValue=false)]
         public MergeOperation MergeOperation { get; private set; }
 

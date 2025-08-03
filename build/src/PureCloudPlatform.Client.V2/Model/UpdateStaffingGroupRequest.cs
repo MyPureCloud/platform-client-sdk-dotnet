@@ -29,11 +29,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">The name of the staffing group.</param>
         /// <param name="UserIds">The set of user Ids to associate with the staffing group.</param>
+        /// <param name="PlanningGroupIds">The set of planning group Ids to associate with the staffing group.</param>
         /// <param name="Metadata">Version metadata for the staffing group (required).</param>
-        public UpdateStaffingGroupRequest(string Name = null, SetWrapperString UserIds = null, WfmVersionedEntityMetadata Metadata = null)
+        public UpdateStaffingGroupRequest(string Name = null, SetWrapperString UserIds = null, SetWrapperString PlanningGroupIds = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
             this.UserIds = UserIds;
+            this.PlanningGroupIds = PlanningGroupIds;
             this.Metadata = Metadata;
             
         }
@@ -59,6 +61,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The set of planning group Ids to associate with the staffing group
+        /// </summary>
+        /// <value>The set of planning group Ids to associate with the staffing group</value>
+        [DataMember(Name="planningGroupIds", EmitDefaultValue=false)]
+        public SetWrapperString PlanningGroupIds { get; set; }
+
+
+
+        /// <summary>
         /// Version metadata for the staffing group
         /// </summary>
         /// <value>Version metadata for the staffing group</value>
@@ -77,6 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  UserIds: ").Append(UserIds).Append("\n");
+            sb.Append("  PlanningGroupIds: ").Append(PlanningGroupIds).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -129,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UserIds.Equals(other.UserIds)
                 ) &&
                 (
+                    this.PlanningGroupIds == other.PlanningGroupIds ||
+                    this.PlanningGroupIds != null &&
+                    this.PlanningGroupIds.Equals(other.PlanningGroupIds)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -151,6 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UserIds != null)
                     hash = hash * 59 + this.UserIds.GetHashCode();
+
+                if (this.PlanningGroupIds != null)
+                    hash = hash * 59 + this.PlanningGroupIds.GetHashCode();
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

@@ -23,7 +23,8 @@
 | **DateCreated** | **DateTime?** | Creation time of the entity | [optional] |
 | **DateModified** | **DateTime?** | Last modified time of the entity | [optional] |
 | **Version** | **long?** | Required for updates, must match the version number of the most recent update | [optional] |
+| **GetAdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

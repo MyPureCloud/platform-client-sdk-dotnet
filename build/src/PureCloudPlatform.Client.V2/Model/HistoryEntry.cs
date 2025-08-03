@@ -122,7 +122,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">Version.</param>
         /// <param name="Secure">Secure.</param>
         /// <param name="VirtualAgentEnabled">VirtualAgentEnabled.</param>
-        public HistoryEntry(ActionEnum? Action = null, string Resource = null, DateTime? Timestamp = null, User User = null, DomainEntityRef Client = null, string Version = null, bool? Secure = null, bool? VirtualAgentEnabled = null)
+        /// <param name="AgenticVirtualAgentEnabled">AgenticVirtualAgentEnabled.</param>
+        public HistoryEntry(ActionEnum? Action = null, string Resource = null, DateTime? Timestamp = null, User User = null, DomainEntityRef Client = null, string Version = null, bool? Secure = null, bool? VirtualAgentEnabled = null, bool? AgenticVirtualAgentEnabled = null)
         {
             this.Action = Action;
             this.Resource = Resource;
@@ -132,6 +133,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Version = Version;
             this.Secure = Secure;
             this.VirtualAgentEnabled = VirtualAgentEnabled;
+            this.AgenticVirtualAgentEnabled = AgenticVirtualAgentEnabled;
             
         }
         
@@ -198,6 +200,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? VirtualAgentEnabled { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets AgenticVirtualAgentEnabled
+        /// </summary>
+        [DataMember(Name="agenticVirtualAgentEnabled", EmitDefaultValue=false)]
+        public bool? AgenticVirtualAgentEnabled { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -215,6 +225,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Secure: ").Append(Secure).Append("\n");
             sb.Append("  VirtualAgentEnabled: ").Append(VirtualAgentEnabled).Append("\n");
+            sb.Append("  AgenticVirtualAgentEnabled: ").Append(AgenticVirtualAgentEnabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -294,6 +305,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.VirtualAgentEnabled == other.VirtualAgentEnabled ||
                     this.VirtualAgentEnabled != null &&
                     this.VirtualAgentEnabled.Equals(other.VirtualAgentEnabled)
+                ) &&
+                (
+                    this.AgenticVirtualAgentEnabled == other.AgenticVirtualAgentEnabled ||
+                    this.AgenticVirtualAgentEnabled != null &&
+                    this.AgenticVirtualAgentEnabled.Equals(other.AgenticVirtualAgentEnabled)
                 );
         }
 
@@ -331,6 +347,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.VirtualAgentEnabled != null)
                     hash = hash * 59 + this.VirtualAgentEnabled.GetHashCode();
+
+                if (this.AgenticVirtualAgentEnabled != null)
+                    hash = hash * 59 + this.AgenticVirtualAgentEnabled.GetHashCode();
 
                 return hash;
             }

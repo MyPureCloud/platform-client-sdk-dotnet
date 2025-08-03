@@ -82,6 +82,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// An identifier for this question group that stays the same across versions of the form.
+        /// </summary>
+        /// <value>An identifier for this question group that stays the same across versions of the form.</value>
+        [DataMember(Name="contextId", EmitDefaultValue=false)]
+        public string ContextId { get; private set; }
+
+
+
+        /// <summary>
         /// Gets or Sets DefaultAnswersToHighest
         /// </summary>
         [DataMember(Name="defaultAnswersToHighest", EmitDefaultValue=false)]
@@ -158,6 +167,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  DefaultAnswersToHighest: ").Append(DefaultAnswersToHighest).Append("\n");
             sb.Append("  DefaultAnswersToNA: ").Append(DefaultAnswersToNA).Append("\n");
             sb.Append("  NaEnabled: ").Append(NaEnabled).Append("\n");
@@ -222,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
+                    this.ContextId == other.ContextId ||
+                    this.ContextId != null &&
+                    this.ContextId.Equals(other.ContextId)
+                ) &&
+                (
                     this.DefaultAnswersToHighest == other.DefaultAnswersToHighest ||
                     this.DefaultAnswersToHighest != null &&
                     this.DefaultAnswersToHighest.Equals(other.DefaultAnswersToHighest)
@@ -282,6 +297,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.ContextId != null)
+                    hash = hash * 59 + this.ContextId.GetHashCode();
 
                 if (this.DefaultAnswersToHighest != null)
                     hash = hash * 59 + this.DefaultAnswersToHighest.GetHashCode();

@@ -310,6 +310,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ContactIdentifierListing> GetExternalcontactsContactIdentifiersWithHttpInfo (string contactId);
 
         /// <summary>
+        /// Retrieve segment assignments by external contact ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>SegmentAssignmentListing</returns>
+        
+        SegmentAssignmentListing GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null);
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>ApiResponse of SegmentAssignmentListing</returns>
+        
+        ApiResponse<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null);
+
+        /// <summary>
         /// Retrieve all sessions for a given external contact.
         /// </summary>
         /// <remarks>
@@ -2152,6 +2180,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BulkRelationshipsResponse> PostExternalcontactsBulkRelationshipsUpdateWithHttpInfo (BulkRelationshipsRequest body);
 
         /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>UpdateSegmentAssignmentResponse</returns>
+        
+        UpdateSegmentAssignmentResponse PostExternalcontactsContactJourneySegments (string contactId, UpdateSegmentAssignmentRequest body = null);
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of UpdateSegmentAssignmentResponse</returns>
+        
+        ApiResponse<UpdateSegmentAssignmentResponse> PostExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, UpdateSegmentAssignmentRequest body = null);
+
+        /// <summary>
         /// Create a note for an external contact
         /// </summary>
         /// <remarks>
@@ -3332,6 +3386,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ContactIdentifierListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ContactIdentifierListing>> GetExternalcontactsContactIdentifiersAsyncWithHttpInfo (string contactId);
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>Task of SegmentAssignmentListing</returns>
+        
+        System.Threading.Tasks.Task<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsAsync (string contactId, bool? includeMerged = null, int? limit = null);
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>Task of ApiResponse (SegmentAssignmentListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SegmentAssignmentListing>> GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null);
 
         /// <summary>
         /// Retrieve all sessions for a given external contact.
@@ -5174,6 +5256,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (BulkRelationshipsResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<BulkRelationshipsResponse>> PostExternalcontactsBulkRelationshipsUpdateAsyncWithHttpInfo (BulkRelationshipsRequest body);
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of UpdateSegmentAssignmentResponse</returns>
+        
+        System.Threading.Tasks.Task<UpdateSegmentAssignmentResponse> PostExternalcontactsContactJourneySegmentsAsync (string contactId, UpdateSegmentAssignmentRequest body = null);
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (UpdateSegmentAssignmentResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UpdateSegmentAssignmentResponse>> PostExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, UpdateSegmentAssignmentRequest body = null);
 
         /// <summary>
         /// Create a note for an external contact
@@ -8581,6 +8689,219 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ContactIdentifierListing>(localVarStatusCode,
                 localVarHeaders,
                 (ContactIdentifierListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactIdentifierListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>SegmentAssignmentListing</returns>
+        
+        public SegmentAssignmentListing GetExternalcontactsContactJourneySegments (string contactId, bool? includeMerged = null, int? limit = null)
+        {
+             ApiResponse<SegmentAssignmentListing> localVarResponse = GetExternalcontactsContactJourneySegmentsWithHttpInfo(contactId, includeMerged, limit);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>ApiResponse of SegmentAssignmentListing</returns>
+        
+        public ApiResponse< SegmentAssignmentListing > GetExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null)
+        { 
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactJourneySegments");
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactId != null) localVarPathParams.Add("contactId", this.Configuration.ApiClient.ParameterToString(contactId));
+
+            // Query params
+            if (includeMerged != null) localVarQueryParams.Add(new Tuple<string, string>("includeMerged", this.Configuration.ApiClient.ParameterToString(includeMerged)));
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactJourneySegments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactJourneySegments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SegmentAssignmentListing>(localVarStatusCode,
+                localVarHeaders,
+                (SegmentAssignmentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SegmentAssignmentListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>Task of SegmentAssignmentListing</returns>
+        
+        public async System.Threading.Tasks.Task<SegmentAssignmentListing> GetExternalcontactsContactJourneySegmentsAsync (string contactId, bool? includeMerged = null, int? limit = null)
+        {
+             ApiResponse<SegmentAssignmentListing> localVarResponse = await GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo(contactId, includeMerged, limit);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve segment assignments by external contact ID. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="includeMerged">Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional)</param>
+        /// <param name="limit">Number of entities to return. Default of 25, maximum of 500. (optional)</param>
+        /// <returns>Task of ApiResponse (SegmentAssignmentListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SegmentAssignmentListing>> GetExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, bool? includeMerged = null, int? limit = null)
+        { 
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactJourneySegments");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactId != null) localVarPathParams.Add("contactId", this.Configuration.ApiClient.ParameterToString(contactId));
+
+            // Query params
+            if (includeMerged != null) localVarQueryParams.Add(new Tuple<string, string>("includeMerged", this.Configuration.ApiClient.ParameterToString(includeMerged)));
+            if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactJourneySegments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetExternalcontactsContactJourneySegments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SegmentAssignmentListing>(localVarStatusCode,
+                localVarHeaders,
+                (SegmentAssignmentListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SegmentAssignmentListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -23391,6 +23712,223 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BulkRelationshipsResponse>(localVarStatusCode,
                 localVarHeaders,
                 (BulkRelationshipsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkRelationshipsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>UpdateSegmentAssignmentResponse</returns>
+        
+        public UpdateSegmentAssignmentResponse PostExternalcontactsContactJourneySegments (string contactId, UpdateSegmentAssignmentRequest body = null)
+        {
+             ApiResponse<UpdateSegmentAssignmentResponse> localVarResponse = PostExternalcontactsContactJourneySegmentsWithHttpInfo(contactId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of UpdateSegmentAssignmentResponse</returns>
+        
+        public ApiResponse< UpdateSegmentAssignmentResponse > PostExternalcontactsContactJourneySegmentsWithHttpInfo (string contactId, UpdateSegmentAssignmentRequest body = null)
+        { 
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostExternalcontactsContactJourneySegments");
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactId != null) localVarPathParams.Add("contactId", this.Configuration.ApiClient.ParameterToString(contactId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactJourneySegments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactJourneySegments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UpdateSegmentAssignmentResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UpdateSegmentAssignmentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateSegmentAssignmentResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of UpdateSegmentAssignmentResponse</returns>
+        
+        public async System.Threading.Tasks.Task<UpdateSegmentAssignmentResponse> PostExternalcontactsContactJourneySegmentsAsync (string contactId, UpdateSegmentAssignmentRequest body = null)
+        {
+             ApiResponse<UpdateSegmentAssignmentResponse> localVarResponse = await PostExternalcontactsContactJourneySegmentsAsyncWithHttpInfo(contactId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="contactId">ExternalContact ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (UpdateSegmentAssignmentResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UpdateSegmentAssignmentResponse>> PostExternalcontactsContactJourneySegmentsAsyncWithHttpInfo (string contactId, UpdateSegmentAssignmentRequest body = null)
+        { 
+            // verify the required parameter 'contactId' is set
+            if (contactId == null)
+                throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostExternalcontactsContactJourneySegments");
+            
+
+            var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (contactId != null) localVarPathParams.Add("contactId", this.Configuration.ApiClient.ParameterToString(contactId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactJourneySegments: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostExternalcontactsContactJourneySegments: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UpdateSegmentAssignmentResponse>(localVarStatusCode,
+                localVarHeaders,
+                (UpdateSegmentAssignmentResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UpdateSegmentAssignmentResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

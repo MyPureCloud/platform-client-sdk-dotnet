@@ -442,9 +442,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
-        /// <returns>WorkitemWrapup</returns>
+        /// <returns>WorkitemWrapupEntityListing</returns>
         
-        WorkitemWrapup GetTaskmanagementWorkitemUserWrapups (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
+        WorkitemWrapupEntityListing GetTaskmanagementWorkitemUserWrapups (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
         /// Get all wrapup codes added for the given user for a workitem.
@@ -459,9 +459,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
-        /// <returns>ApiResponse of WorkitemWrapup</returns>
+        /// <returns>ApiResponse of WorkitemWrapupEntityListing</returns>
         
-        ApiResponse<WorkitemWrapup> GetTaskmanagementWorkitemUserWrapupsWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
+        ApiResponse<WorkitemWrapupEntityListing> GetTaskmanagementWorkitemUserWrapupsWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
         /// Get a version of a workitem
@@ -2414,9 +2414,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
-        /// <returns>Task of WorkitemWrapup</returns>
+        /// <returns>Task of WorkitemWrapupEntityListing</returns>
         
-        System.Threading.Tasks.Task<WorkitemWrapup> GetTaskmanagementWorkitemUserWrapupsAsync (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
+        System.Threading.Tasks.Task<WorkitemWrapupEntityListing> GetTaskmanagementWorkitemUserWrapupsAsync (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
         /// Get all wrapup codes added for the given user for a workitem.
@@ -2431,9 +2431,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
-        /// <returns>Task of ApiResponse (WorkitemWrapup)</returns>
+        /// <returns>Task of ApiResponse (WorkitemWrapupEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WorkitemWrapup>> GetTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<WorkitemWrapupEntityListing>> GetTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null);
 
         /// <summary>
         /// Get a version of a workitem
@@ -7379,11 +7379,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
-        /// <returns>WorkitemWrapup</returns>
+        /// <returns>WorkitemWrapupEntityListing</returns>
         
-        public WorkitemWrapup GetTaskmanagementWorkitemUserWrapups (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
+        public WorkitemWrapupEntityListing GetTaskmanagementWorkitemUserWrapups (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         {
-             ApiResponse<WorkitemWrapup> localVarResponse = GetTaskmanagementWorkitemUserWrapupsWithHttpInfo(workitemId, userId, expands, after, pageSize, sortOrder);
+             ApiResponse<WorkitemWrapupEntityListing> localVarResponse = GetTaskmanagementWorkitemUserWrapupsWithHttpInfo(workitemId, userId, expands, after, pageSize, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -7398,9 +7398,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
-        /// <returns>ApiResponse of WorkitemWrapup</returns>
+        /// <returns>ApiResponse of WorkitemWrapupEntityListing</returns>
         
-        public ApiResponse< WorkitemWrapup > GetTaskmanagementWorkitemUserWrapupsWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
+        public ApiResponse< WorkitemWrapupEntityListing > GetTaskmanagementWorkitemUserWrapupsWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workitemId' is set
             if (workitemId == null)
@@ -7477,9 +7477,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemUserWrapups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WorkitemWrapup>(localVarStatusCode,
+            return new ApiResponse<WorkitemWrapupEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (WorkitemWrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemWrapup)),
+                (WorkitemWrapupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemWrapupEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7496,11 +7496,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
-        /// <returns>Task of WorkitemWrapup</returns>
+        /// <returns>Task of WorkitemWrapupEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<WorkitemWrapup> GetTaskmanagementWorkitemUserWrapupsAsync (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<WorkitemWrapupEntityListing> GetTaskmanagementWorkitemUserWrapupsAsync (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         {
-             ApiResponse<WorkitemWrapup> localVarResponse = await GetTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo(workitemId, userId, expands, after, pageSize, sortOrder);
+             ApiResponse<WorkitemWrapupEntityListing> localVarResponse = await GetTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo(workitemId, userId, expands, after, pageSize, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -7516,9 +7516,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 50. (optional, default to 25)</param>
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to descending)</param>
-        /// <returns>Task of ApiResponse (WorkitemWrapup)</returns>
+        /// <returns>Task of ApiResponse (WorkitemWrapupEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WorkitemWrapup>> GetTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WorkitemWrapupEntityListing>> GetTaskmanagementWorkitemUserWrapupsAsyncWithHttpInfo (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
         { 
             // verify the required parameter 'workitemId' is set
             if (workitemId == null)
@@ -7597,9 +7597,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetTaskmanagementWorkitemUserWrapups: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<WorkitemWrapup>(localVarStatusCode,
+            return new ApiResponse<WorkitemWrapupEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (WorkitemWrapup) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemWrapup)),
+                (WorkitemWrapupEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WorkitemWrapupEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
