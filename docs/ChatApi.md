@@ -612,7 +612,7 @@ namespace Example
 
 ## GetChatsRoomMessages
 
-> [**ChatMessageEntityListing**](ChatMessageEntityListing) GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null)
+> [**ChatMessageEntityListing**](ChatMessageEntityListing) GetChatsRoomMessages (string roomJid, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
 
 
 Get a room's message history
@@ -648,11 +648,12 @@ namespace Example
             var limit = limit_example;  // string | The maximum number of messages to retrieve (optional) 
             var before = before_example;  // string | The cutoff date for messages to retrieve (optional) 
             var after = after_example;  // string | The beginning date for messages to retrieve (optional) 
+            var excludeMetadata = true;  // bool? | Whether to exclude metadata for messages (optional) 
 
             try
             { 
                 // Get a room's message history
-                ChatMessageEntityListing result = apiInstance.GetChatsRoomMessages(roomJid, limit, before, after);
+                ChatMessageEntityListing result = apiInstance.GetChatsRoomMessages(roomJid, limit, before, after, excludeMetadata);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -673,6 +674,7 @@ namespace Example
 | **limit** | **string**| The maximum number of messages to retrieve | [optional]  |
 | **before** | **string**| The cutoff date for messages to retrieve | [optional]  |
 | **after** | **string**| The beginning date for messages to retrieve | [optional]  |
+| **excludeMetadata** | **bool?**| Whether to exclude metadata for messages | [optional]  |
 
 ### Return type
 
@@ -867,7 +869,7 @@ This endpoint does require any parameters.
 
 ## GetChatsThreadMessages
 
-> [**ChatMessageEntityListing**](ChatMessageEntityListing) GetChatsThreadMessages (string threadId, string limit = null, string before = null, string after = null)
+> [**ChatMessageEntityListing**](ChatMessageEntityListing) GetChatsThreadMessages (string threadId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
 
 
 Get history by thread
@@ -903,11 +905,12 @@ namespace Example
             var limit = limit_example;  // string | The maximum number of messages to retrieve (optional) 
             var before = before_example;  // string | The cutoff date for messages to retrieve (optional) 
             var after = after_example;  // string | The beginning date for messages to retrieve (optional) 
+            var excludeMetadata = true;  // bool? | Whether to exclude metadata for messages (optional) 
 
             try
             { 
                 // Get history by thread
-                ChatMessageEntityListing result = apiInstance.GetChatsThreadMessages(threadId, limit, before, after);
+                ChatMessageEntityListing result = apiInstance.GetChatsThreadMessages(threadId, limit, before, after, excludeMetadata);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -928,6 +931,7 @@ namespace Example
 | **limit** | **string**| The maximum number of messages to retrieve | [optional]  |
 | **before** | **string**| The cutoff date for messages to retrieve | [optional]  |
 | **after** | **string**| The beginning date for messages to retrieve | [optional]  |
+| **excludeMetadata** | **bool?**| Whether to exclude metadata for messages | [optional]  |
 
 ### Return type
 
@@ -1064,7 +1068,7 @@ namespace Example
 
 ## GetChatsUserMessages
 
-> [**ChatMessageResponse**](ChatMessageResponse) GetChatsUserMessages (string userId, string limit = null, string before = null, string after = null)
+> [**ChatMessageResponse**](ChatMessageResponse) GetChatsUserMessages (string userId, string limit = null, string before = null, string after = null, bool? excludeMetadata = null)
 
 
 Get 1on1 History between a user
@@ -1100,11 +1104,12 @@ namespace Example
             var limit = limit_example;  // string | The maximum number of messages to retrieve (optional) 
             var before = before_example;  // string | The cutoff date for messages to retrieve (optional) 
             var after = after_example;  // string | The beginning date for messages to retrieve (optional) 
+            var excludeMetadata = true;  // bool? | Whether to exclude metadata for messages (optional) 
 
             try
             { 
                 // Get 1on1 History between a user
-                ChatMessageResponse result = apiInstance.GetChatsUserMessages(userId, limit, before, after);
+                ChatMessageResponse result = apiInstance.GetChatsUserMessages(userId, limit, before, after, excludeMetadata);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1125,6 +1130,7 @@ namespace Example
 | **limit** | **string**| The maximum number of messages to retrieve | [optional]  |
 | **before** | **string**| The cutoff date for messages to retrieve | [optional]  |
 | **after** | **string**| The beginning date for messages to retrieve | [optional]  |
+| **excludeMetadata** | **bool?**| Whether to exclude metadata for messages | [optional]  |
 
 ### Return type
 
@@ -2207,4 +2213,4 @@ namespace Example
 [**ChatSettings**](ChatSettings)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

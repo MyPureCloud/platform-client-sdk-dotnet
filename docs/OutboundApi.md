@@ -36,6 +36,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundSchedulesEmailcampaign**](#DeleteOutboundSchedulesEmailcampaign) | **Delete** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Delete an email campaign schedule. |
 | [**DeleteOutboundSchedulesMessagingcampaign**](#DeleteOutboundSchedulesMessagingcampaign) | **Delete** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Delete a messaging campaign schedule. |
 | [**DeleteOutboundSchedulesSequence**](#DeleteOutboundSchedulesSequence) | **Delete** /api/v2/outbound/schedules/sequences/{sequenceId} | Delete a dialer sequence schedule. |
+| [**DeleteOutboundSchedulesWhatsappcampaign**](#DeleteOutboundSchedulesWhatsappcampaign) | **Delete** /api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId} | Delete a WhatsApp campaign schedule. |
 | [**DeleteOutboundSequence**](#DeleteOutboundSequence) | **Delete** /api/v2/outbound/sequences/{sequenceId} | Delete a dialer campaign sequence. |
 | [**GetOutboundAttemptlimit**](#GetOutboundAttemptlimit) | **Get** /api/v2/outbound/attemptlimits/{attemptLimitsId} | Get attempt limits |
 | [**GetOutboundAttemptlimits**](#GetOutboundAttemptlimits) | **Get** /api/v2/outbound/attemptlimits | Query attempt limits list |
@@ -103,6 +104,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundSchedulesMessagingcampaigns**](#GetOutboundSchedulesMessagingcampaigns) | **Get** /api/v2/outbound/schedules/messagingcampaigns | Query for a list of messaging campaign schedules. |
 | [**GetOutboundSchedulesSequence**](#GetOutboundSchedulesSequence) | **Get** /api/v2/outbound/schedules/sequences/{sequenceId} | Get a dialer sequence schedule. |
 | [**GetOutboundSchedulesSequences**](#GetOutboundSchedulesSequences) | **Get** /api/v2/outbound/schedules/sequences | Query for a list of dialer sequence schedules. |
+| [**GetOutboundSchedulesWhatsappcampaign**](#GetOutboundSchedulesWhatsappcampaign) | **Get** /api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId} | Get a WhatsApp campaign schedule. |
+| [**GetOutboundSchedulesWhatsappcampaigns**](#GetOutboundSchedulesWhatsappcampaigns) | **Get** /api/v2/outbound/schedules/whatsappcampaigns | Query for a list of WhatsApp campaign schedules. |
 | [**GetOutboundSequence**](#GetOutboundSequence) | **Get** /api/v2/outbound/sequences/{sequenceId} | Get a dialer campaign sequence. |
 | [**GetOutboundSequences**](#GetOutboundSequences) | **Get** /api/v2/outbound/sequences | Query a list of dialer campaign sequences. |
 | [**GetOutboundSettings**](#GetOutboundSettings) | **Get** /api/v2/outbound/settings | Get the outbound settings for this organization |
@@ -172,6 +175,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutOutboundSchedulesEmailcampaign**](#PutOutboundSchedulesEmailcampaign) | **Put** /api/v2/outbound/schedules/emailcampaigns/{emailCampaignId} | Update an email campaign schedule. |
 | [**PutOutboundSchedulesMessagingcampaign**](#PutOutboundSchedulesMessagingcampaign) | **Put** /api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId} | Update a new messaging campaign schedule. |
 | [**PutOutboundSchedulesSequence**](#PutOutboundSchedulesSequence) | **Put** /api/v2/outbound/schedules/sequences/{sequenceId} | Update a new sequence schedule. |
+| [**PutOutboundSchedulesWhatsappcampaign**](#PutOutboundSchedulesWhatsappcampaign) | **Put** /api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId} | Update a WhatsApp campaign schedule. |
 | [**PutOutboundSequence**](#PutOutboundSequence) | **Put** /api/v2/outbound/sequences/{sequenceId} | Update a new campaign sequence. |
 | [**PutOutboundWrapupcodemappings**](#PutOutboundWrapupcodemappings) | **Put** /api/v2/outbound/wrapupcodemappings | Update the Dialer wrap up code mapping. |
 
@@ -1991,6 +1995,7 @@ Delete a dialer sequence schedule.
 Requires ANY permissions: 
 
 * outbound:schedule:delete
+* outbound:campaignSequenceSchedule:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -2036,6 +2041,68 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sequenceId** | **string**| Sequence ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteOutboundSchedulesWhatsappcampaign
+
+> void DeleteOutboundSchedulesWhatsappcampaign (string whatsAppCampaignId)
+
+
+Delete a WhatsApp campaign schedule.
+
+Requires ANY permissions: 
+
+* outbound:whatsAppCampaignSchedule:delete
+* outbound:whatsAppCampaign:deleteSchedule
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteOutboundSchedulesWhatsappcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var whatsAppCampaignId = whatsAppCampaignId_example;  // string | WhatsApp Campaign ID
+
+            try
+            { 
+                // Delete a WhatsApp campaign schedule.
+                apiInstance.DeleteOutboundSchedulesWhatsappcampaign(whatsAppCampaignId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.DeleteOutboundSchedulesWhatsappcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **whatsAppCampaignId** | **string**| WhatsApp Campaign ID |  |
 
 ### Return type
 
@@ -6462,6 +6529,7 @@ Get a dialer sequence schedule.
 Requires ANY permissions: 
 
 * outbound:schedule:view
+* outbound:campaignSequenceSchedule:view
 
 ### Example
 ```{"language":"csharp"}
@@ -6524,6 +6592,7 @@ Query for a list of dialer sequence schedules.
 Requires ANY permissions: 
 
 * outbound:schedule:view
+* outbound:campaignSequenceSchedule:view
 
 ### Example
 ```{"language":"csharp"}
@@ -6569,6 +6638,127 @@ This endpoint does require any parameters.
 ### Return type
 
 [**List<SequenceSchedule>**](SequenceSchedule)
+
+
+## GetOutboundSchedulesWhatsappcampaign
+
+> [**WhatsAppCampaignSchedule**](WhatsAppCampaignSchedule) GetOutboundSchedulesWhatsappcampaign (string whatsAppCampaignId)
+
+
+Get a WhatsApp campaign schedule.
+
+Requires ANY permissions: 
+
+* outbound:whatsAppCampaignSchedule:view
+* outbound:whatsAppCampaign:viewSchedule
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundSchedulesWhatsappcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var whatsAppCampaignId = whatsAppCampaignId_example;  // string | WhatsApp Campaign ID
+
+            try
+            { 
+                // Get a WhatsApp campaign schedule.
+                WhatsAppCampaignSchedule result = apiInstance.GetOutboundSchedulesWhatsappcampaign(whatsAppCampaignId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundSchedulesWhatsappcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **whatsAppCampaignId** | **string**| WhatsApp Campaign ID |  |
+
+### Return type
+
+[**WhatsAppCampaignSchedule**](WhatsAppCampaignSchedule)
+
+
+## GetOutboundSchedulesWhatsappcampaigns
+
+> [**WhatsAppCampaignScheduleEntityListing**](WhatsAppCampaignScheduleEntityListing) GetOutboundSchedulesWhatsappcampaigns ()
+
+
+Query for a list of WhatsApp campaign schedules.
+
+Requires ANY permissions: 
+
+* outbound:whatsAppCampaignSchedule:view
+* outbound:whatsAppCampaign:viewSchedule
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundSchedulesWhatsappcampaignsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+
+            try
+            { 
+                // Query for a list of WhatsApp campaign schedules.
+                WhatsAppCampaignScheduleEntityListing result = apiInstance.GetOutboundSchedulesWhatsappcampaigns();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundSchedulesWhatsappcampaigns: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**WhatsAppCampaignScheduleEntityListing**](WhatsAppCampaignScheduleEntityListing)
 
 
 ## GetOutboundSequence
@@ -10911,6 +11101,7 @@ Update a new sequence schedule.
 Requires ANY permissions: 
 
 * outbound:schedule:edit
+* outbound:campaignSequenceSchedule:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -10963,6 +11154,71 @@ namespace Example
 ### Return type
 
 [**SequenceSchedule**](SequenceSchedule)
+
+
+## PutOutboundSchedulesWhatsappcampaign
+
+> [**WhatsAppCampaignSchedule**](WhatsAppCampaignSchedule) PutOutboundSchedulesWhatsappcampaign (string whatsAppCampaignId, WhatsAppCampaignSchedule body)
+
+
+Update a WhatsApp campaign schedule.
+
+Requires ANY permissions: 
+
+* outbound:whatsAppCampaignSchedule:edit
+* outbound:whatsAppCampaign:editSchedule
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutOutboundSchedulesWhatsappcampaignExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var whatsAppCampaignId = whatsAppCampaignId_example;  // string | WhatsApp Campaign ID
+            var body = new WhatsAppCampaignSchedule(); // WhatsAppCampaignSchedule | WhatsAppCampaignSchedule
+
+            try
+            { 
+                // Update a WhatsApp campaign schedule.
+                WhatsAppCampaignSchedule result = apiInstance.PutOutboundSchedulesWhatsappcampaign(whatsAppCampaignId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PutOutboundSchedulesWhatsappcampaign: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **whatsAppCampaignId** | **string**| WhatsApp Campaign ID |  |
+| **body** | [**WhatsAppCampaignSchedule**](WhatsAppCampaignSchedule)| WhatsAppCampaignSchedule |  |
+
+### Return type
+
+[**WhatsAppCampaignSchedule**](WhatsAppCampaignSchedule)
 
 
 ## PutOutboundSequence
@@ -11091,4 +11347,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

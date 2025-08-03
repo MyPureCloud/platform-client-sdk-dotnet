@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGuideVersionJob**](#GetGuideVersionJob) | **Get** /api/v2/guides/{guideId}/versions/{versionId}/jobs/{jobId} | Get the status of the publishing job for this guide version. |
 | [**GetGuides**](#GetGuides) | **Get** /api/v2/guides | Get all guides. |
 | [**GetGuidesJob**](#GetGuidesJob) | **Get** /api/v2/guides/jobs/{jobId} | Get the status of the guide content generation job. |
+| [**PatchGuide**](#PatchGuide) | **Patch** /api/v2/guides/{guideId} | Update a guide. |
 | [**PatchGuideVersion**](#PatchGuideVersion) | **Patch** /api/v2/guides/{guideId}/versions/{versionId} | Update a guide version. |
 | [**PostGuideVersionJobs**](#PostGuideVersionJobs) | **Post** /api/v2/guides/{guideId}/versions/{versionId}/jobs | Start the publishing of a guide version. |
 | [**PostGuideVersions**](#PostGuideVersions) | **Post** /api/v2/guides/{guideId}/versions | Create a guide version. |
@@ -489,6 +490,72 @@ namespace Example
 [**GuideContentGenerationJob**](GuideContentGenerationJob)
 
 
+## PatchGuide
+
+> [**Guide**](Guide) PatchGuide (string guideId, UpdateGuide body)
+
+
+Update a guide.
+
+PatchGuide is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* aiStudio:guide:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchGuideExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var guideId = guideId_example;  // string | Guide ID
+            var body = new UpdateGuide(); // UpdateGuide | 
+
+            try
+            { 
+                // Update a guide.
+                Guide result = apiInstance.PatchGuide(guideId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.PatchGuide: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **guideId** | **string**| Guide ID |  |
+| **body** | [**UpdateGuide**](UpdateGuide)|  |  |
+
+### Return type
+
+[**Guide**](Guide)
+
+
 ## PatchGuideVersion
 
 > [**GuideVersion**](GuideVersion) PatchGuideVersion (string guideId, string versionId, UpdateGuideVersion body)
@@ -819,4 +886,4 @@ namespace Example
 [**GuideContentGenerationJob**](GuideContentGenerationJob)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

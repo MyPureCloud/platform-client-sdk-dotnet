@@ -6,13 +6,140 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**GetTelephonyAgentGreetings**](#GetTelephonyAgentGreetings) | **Get** /api/v2/telephony/agents/{agentId}/greetings | Get an agent&#39;s greetings. |
+| [**GetTelephonyAgentsGreetingsMe**](#GetTelephonyAgentsGreetingsMe) | **Get** /api/v2/telephony/agents/greetings/me | Get the agent&#39;s own greetings. |
 | [**GetTelephonyMediaregions**](#GetTelephonyMediaregions) | **Get** /api/v2/telephony/mediaregions | Retrieve the list of AWS regions media can stream through. |
 | [**GetTelephonySipmessagesConversation**](#GetTelephonySipmessagesConversation) | **Get** /api/v2/telephony/sipmessages/conversations/{conversationId} | Get a SIP message. |
 | [**GetTelephonySipmessagesConversationHeaders**](#GetTelephonySipmessagesConversationHeaders) | **Get** /api/v2/telephony/sipmessages/conversations/{conversationId}/headers | Get SIP headers. |
 | [**GetTelephonySiptraces**](#GetTelephonySiptraces) | **Get** /api/v2/telephony/siptraces | Fetch SIP metadata |
 | [**GetTelephonySiptracesDownloadDownloadId**](#GetTelephonySiptracesDownloadDownloadId) | **Get** /api/v2/telephony/siptraces/download/{downloadId} | Get signed S3 URL for a pcap download |
 | [**PostTelephonySiptracesDownload**](#PostTelephonySiptracesDownload) | **Post** /api/v2/telephony/siptraces/download | Request a download of a pcap file to S3 |
+| [**PutTelephonyAgentGreetings**](#PutTelephonyAgentGreetings) | **Put** /api/v2/telephony/agents/{agentId}/greetings | Updates an agent&#39;s greetings. |
+| [**PutTelephonyAgentsGreetingsMe**](#PutTelephonyAgentsGreetingsMe) | **Put** /api/v2/telephony/agents/greetings/me | Updates the agent&#39;s own greetings. |
 
+
+
+## GetTelephonyAgentGreetings
+
+> [**AgentGreeting**](AgentGreeting) GetTelephonyAgentGreetings (string agentId)
+
+
+Get an agent's greetings.
+
+GetTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* telephony:otherAgentGreeting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyAgentGreetingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var agentId = agentId_example;  // string | User ID
+
+            try
+            { 
+                // Get an agent's greetings.
+                AgentGreeting result = apiInstance.GetTelephonyAgentGreetings(agentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonyAgentGreetings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| User ID |  |
+
+### Return type
+
+[**AgentGreeting**](AgentGreeting)
+
+
+## GetTelephonyAgentsGreetingsMe
+
+> [**SelfAgentGreeting**](SelfAgentGreeting) GetTelephonyAgentsGreetingsMe ()
+
+
+Get the agent's own greetings.
+
+GetTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* telephony:selfAgentGreeting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyAgentsGreetingsMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+
+            try
+            { 
+                // Get the agent's own greetings.
+                SelfAgentGreeting result = apiInstance.GetTelephonyAgentsGreetingsMe();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonyAgentsGreetingsMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**SelfAgentGreeting**](SelfAgentGreeting)
 
 
 ## GetTelephonyMediaregions
@@ -400,4 +527,134 @@ namespace Example
 [**SipDownloadResponse**](SipDownloadResponse)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+## PutTelephonyAgentGreetings
+
+> [**AgentGreeting**](AgentGreeting) PutTelephonyAgentGreetings (string agentId, AgentGreeting body)
+
+
+Updates an agent's greetings.
+
+PutTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* telephony:otherAgentGreeting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutTelephonyAgentGreetingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var agentId = agentId_example;  // string | User ID
+            var body = new AgentGreeting(); // AgentGreeting | Agent Greeting
+
+            try
+            { 
+                // Updates an agent's greetings.
+                AgentGreeting result = apiInstance.PutTelephonyAgentGreetings(agentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.PutTelephonyAgentGreetings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| User ID |  |
+| **body** | [**AgentGreeting**](AgentGreeting)| Agent Greeting |  |
+
+### Return type
+
+[**AgentGreeting**](AgentGreeting)
+
+
+## PutTelephonyAgentsGreetingsMe
+
+> [**SelfAgentGreeting**](SelfAgentGreeting) PutTelephonyAgentsGreetingsMe (SelfAgentGreeting body)
+
+
+Updates the agent's own greetings.
+
+PutTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* telephony:selfAgentGreeting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutTelephonyAgentsGreetingsMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var body = new SelfAgentGreeting(); // SelfAgentGreeting | Agent Greeting
+
+            try
+            { 
+                // Updates the agent's own greetings.
+                SelfAgentGreeting result = apiInstance.PutTelephonyAgentsGreetingsMe(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.PutTelephonyAgentsGreetingsMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SelfAgentGreeting**](SelfAgentGreeting)| Agent Greeting |  |
+
+### Return type
+
+[**SelfAgentGreeting**](SelfAgentGreeting)
+
+
+_PureCloudPlatform.Client.V2 239.0.0_

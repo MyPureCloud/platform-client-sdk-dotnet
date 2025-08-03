@@ -14,7 +14,8 @@
 | **Pattern** | [**DialerSequenceScheduleConfigChangeRecurrencePattern**](DialerSequenceScheduleConfigChangeRecurrencePattern) |  | [optional] |
 | **Alterations** | [**List&lt;DialerSequenceScheduleConfigChangeAlteration&gt;**](DialerSequenceScheduleConfigChangeAlteration) | modifications to the original recurrence schedule | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
+| **GetAdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

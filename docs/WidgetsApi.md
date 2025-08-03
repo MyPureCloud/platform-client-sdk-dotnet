@@ -24,7 +24,7 @@ This resource has been deprecated
 
 Delete a Widget deployment
 
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 Requires ANY permissions: 
 
@@ -91,7 +91,7 @@ This resource has been deprecated
 
 Get a Widget deployment
 
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 Requires ANY permissions: 
 
@@ -159,7 +159,7 @@ This resource has been deprecated
 
 List Widget deployments
 
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 Requires ANY permissions: 
 
@@ -222,7 +222,7 @@ This resource has been deprecated
 
 Create Widget deployment
 
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 Requires ANY permissions: 
 
@@ -290,7 +290,7 @@ This resource has been deprecated
 
 Update a Widget deployment
 
-This endpoint is deprecated. Please see the article https://help.mypurecloud.com/articles/deprecation-removal-of-acd-web-chat-version-2/. 
+This endpoint is deprecated. Please see the article https://help.genesys.cloud/articles/deprecation-removal-of-acd-web-chat-version-2/. 
 
 Requires ANY permissions: 
 
@@ -350,4 +350,4 @@ namespace Example
 [**WidgetDeployment**](WidgetDeployment)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

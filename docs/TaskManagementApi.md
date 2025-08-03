@@ -1099,7 +1099,7 @@ namespace Example
 
 ## GetTaskmanagementWorkitemUserWrapups
 
-> [**WorkitemWrapup**](WorkitemWrapup) GetTaskmanagementWorkitemUserWrapups (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
+> [**WorkitemWrapupEntityListing**](WorkitemWrapupEntityListing) GetTaskmanagementWorkitemUserWrapups (string workitemId, string userId, string expands = null, string after = null, int? pageSize = null, string sortOrder = null)
 
 
 Get all wrapup codes added for the given user for a workitem.
@@ -1140,7 +1140,7 @@ namespace Example
             try
             { 
                 // Get all wrapup codes added for the given user for a workitem.
-                WorkitemWrapup result = apiInstance.GetTaskmanagementWorkitemUserWrapups(workitemId, userId, expands, after, pageSize, sortOrder);
+                WorkitemWrapupEntityListing result = apiInstance.GetTaskmanagementWorkitemUserWrapups(workitemId, userId, expands, after, pageSize, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1166,7 +1166,7 @@ namespace Example
 
 ### Return type
 
-[**WorkitemWrapup**](WorkitemWrapup)
+[**WorkitemWrapupEntityListing**](WorkitemWrapupEntityListing)
 
 
 ## GetTaskmanagementWorkitemVersion
@@ -4925,4 +4925,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

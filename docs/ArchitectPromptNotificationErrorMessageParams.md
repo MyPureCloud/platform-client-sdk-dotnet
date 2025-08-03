@@ -7,7 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **AdditionalProperties** | **Dictionary&lt;string, string&gt;** |  | [optional] |
+| **GetAdditionalProperties** | **Dictionary&lt;string, string&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

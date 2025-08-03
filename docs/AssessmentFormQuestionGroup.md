@@ -9,6 +9,7 @@
 | **Id** | **string** | The ID of the question group, | [optional] |
 | **Name** | **string** | The question group name | |
 | **Type** | **string** | The question group type | |
+| **ContextId** | **string** | An identifier for this question group that stays the same across versions of the form. | [optional] |
 | **DefaultAnswersToHighest** | **bool?** |  | [optional] |
 | **DefaultAnswersToNA** | **bool?** |  | [optional] |
 | **NaEnabled** | **bool?** |  | [optional] |
@@ -20,4 +21,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_

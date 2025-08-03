@@ -13,7 +13,8 @@
 | **Percentage** | **long?** | numberOfContactsContacted/totalNumberOfContacts*100 | [optional] |
 | **NumberOfContactsSkipped** | **Dictionary&lt;string, long?&gt;** | A map of skipped reasons and the number of contacts associated with each. | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
+| **GetAdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 238.0.0_
+_PureCloudPlatform.Client.V2 239.0.0_
