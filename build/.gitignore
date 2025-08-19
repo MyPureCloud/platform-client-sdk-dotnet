@@ -15,11 +15,6 @@ x64/
 build/
 [Oo]bj/
 [Bb]in/*
-!bin/PureCloudPlatform.Client.V2.dll
-!bin/PureCloudPlatform.Client.V2.xml
-!bin/Newtonsoft.Json.dll
-!bin/RestSharp.dll
-!bin/INIFileParser.dll
 
 # NuGet Packages
 *.nupkg
