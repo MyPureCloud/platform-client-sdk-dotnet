@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsDictionaryfeedbackExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var dialect = "en-US";  // string | The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional) 
+            var nextPage = "nextPage_example";  // string | The key for listing the next page (optional) 
+            var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 500)
+
+            try
+            { 
+                // Get the list of Speech & Text Analytics dictionary feedbacks
+                DictionaryFeedbackEntityListing result = apiInstance.GetSpeechandtextanalyticsDictionaryfeedback(dialect, nextPage, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalytics.GetSpeechandtextanalyticsDictionaryfeedback: " + e.Message );
+            }
+        }
+    }
+}

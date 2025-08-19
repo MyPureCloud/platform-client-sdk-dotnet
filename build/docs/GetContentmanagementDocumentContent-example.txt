@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetContentmanagementDocumentContentExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ContentManagementApi();
+            var documentId = "documentId_example";  // string | Document ID
+            var disposition = "disposition_example";  // string | Request how the content will be downloaded: a file attachment or inline. Default is attachment. (optional) 
+            var contentType = "contentType_example";  // string | The requested format for the specified document. If supported, the document will be returned in that format. Example contentType=audio/wav (optional) 
+
+            try
+            { 
+                // Download a document.
+                DownloadResponse result = apiInstance.GetContentmanagementDocumentContent(documentId, disposition, contentType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ContentManagement.GetContentmanagementDocumentContent: " + e.Message );
+            }
+        }
+    }
+}

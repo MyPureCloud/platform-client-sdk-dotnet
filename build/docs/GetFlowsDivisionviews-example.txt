@@ -1,0 +1,47 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetFlowsDivisionviewsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ArchitectApi();
+            var type = new List<string>(); // List<string> | Type (optional) 
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = "sortBy_example";  // string | Sort by (optional)  (default to "id")
+            var sortOrder = "sortOrder_example";  // string | Sort order (optional)  (default to "asc")
+            var id = new List<string>(); // List<string> | ID (optional) 
+            var name = "name_example";  // string | Name (optional) 
+            var publishVersionId = "publishVersionId_example";  // string | Publish version ID (optional) 
+            var publishedAfter = "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01";  // string | Published after (optional) 
+            var publishedBefore = "2015-01-01T12:00:00-0600, 2015-01-01T18:00:00Z, 2015-01-01T12:00:00.000-0600, 2015-01-01T18:00:00.000Z, 2015-01-01";  // string | Published before (optional) 
+            var divisionId = new List<string>(); // List<string> | division ID(s) (optional) 
+            var includeSchemas = true;  // bool? | Include variable schemas (optional)  (default to false)
+
+            try
+            { 
+                // Get a pageable list of basic flow information objects filterable by query parameters.
+                FlowDivisionViewEntityListing result = apiInstance.GetFlowsDivisionviews(type, pageNumber, pageSize, sortBy, sortOrder, id, name, publishVersionId, publishedAfter, publishedBefore, divisionId, includeSchemas);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Architect.GetFlowsDivisionviews: " + e.Message );
+            }
+        }
+    }
+}

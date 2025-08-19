@@ -1,0 +1,36 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsTopicsGeneralStatusExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var dialect = "dialect_example";  // string | The dialect of the general topics, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional) 
+
+            try
+            { 
+                // Get the list of general topics from the org and the system with their current status
+                UnifiedGeneralTopicEntityListing result = apiInstance.GetSpeechandtextanalyticsTopicsGeneralStatus(dialect);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalytics.GetSpeechandtextanalyticsTopicsGeneralStatus: " + e.Message );
+            }
+        }
+    }
+}

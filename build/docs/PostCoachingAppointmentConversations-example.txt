@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostCoachingAppointmentConversationsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new CoachingApi();
+            var appointmentId = "appointmentId_example";  // string | The ID of the coaching appointment.
+            var body = new AddConversationRequest(); // AddConversationRequest | body
+
+            try
+            { 
+                // Add a conversation to an appointment
+                AddConversationResponse result = apiInstance.PostCoachingAppointmentConversations(appointmentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Coaching.PostCoachingAppointmentConversations: " + e.Message );
+            }
+        }
+    }
+}

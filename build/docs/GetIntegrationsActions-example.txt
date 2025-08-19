@@ -1,0 +1,46 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetIntegrationsActionsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new IntegrationsApi();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var nextPage = "nextPage_example";  // string | next page token (optional) 
+            var previousPage = "previousPage_example";  // string | Previous page token (optional) 
+            var sortBy = "sortBy_example";  // string | Root level field name to sort on. (optional) 
+            var sortOrder = "sortOrder_example";  // string | Direction to sort 'sortBy' field. (optional)  (default to asc)
+            var category = "category_example";  // string | Filter by category name. (optional) 
+            var name = "name_example";  // string | Filter by partial or complete action name. (optional) 
+            var ids = "ids_example";  // string | Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional) 
+            var secure = "secure_example";  // string | Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional) 
+            var includeAuthActions = "includeAuthActions_example";  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)  (default to false)
+
+            try
+            { 
+                // Retrieves all actions associated with filters passed in via query param.
+                ActionEntityListing result = apiInstance.GetIntegrationsActions(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Integrations.GetIntegrationsActions: " + e.Message );
+            }
+        }
+    }
+}

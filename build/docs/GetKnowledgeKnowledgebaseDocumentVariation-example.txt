@@ -1,0 +1,40 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentVariationExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new KnowledgeApi();
+            var documentVariationId = "documentVariationId_example";  // string | Globally unique identifier for a document variation.
+            var documentId = "documentId_example";  // string | Globally unique identifier for a document.
+            var knowledgeBaseId = "knowledgeBaseId_example";  // string | Globally unique identifier for a knowledge base.
+            var documentState = "documentState_example";  // string | The state of the document. (optional) 
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
+
+            try
+            { 
+                // Get a variation for a document.
+                DocumentVariationResponse result = apiInstance.GetKnowledgeKnowledgebaseDocumentVariation(documentVariationId, documentId, knowledgeBaseId, documentState, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Knowledge.GetKnowledgeKnowledgebaseDocumentVariation: " + e.Message );
+            }
+        }
+    }
+}

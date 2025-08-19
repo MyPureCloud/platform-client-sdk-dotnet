@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostAuthorizationPoliciesTargetValidateExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new AuthorizationApi();
+            var targetName = "targetName_example";  // string | The domain:entity:action target to which the policy will be applied
+            var body = new AuthorizationPolicy(); // AuthorizationPolicy | Access control policy
+
+            try
+            { 
+                // Validate the conditions and attributes of an access control policy for a specified resource target
+                ValidationErrorListing result = apiInstance.PostAuthorizationPoliciesTargetValidate(targetName, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Authorization.PostAuthorizationPoliciesTargetValidate: " + e.Message );
+            }
+        }
+    }
+}

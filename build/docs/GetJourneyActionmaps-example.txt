@@ -1,0 +1,43 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetJourneyActionmapsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new JourneyApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortBy = "sortBy_example";  // string | Field(s) to sort by. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate). (optional) 
+            var filterField = "filterField_example";  // string | Field to filter by (e.g. filterField=weight or filterField=action.actionTemplate.id). Requires 'filterField' to also be set. (optional) 
+            var filterValue = "filterValue_example";  // string | Value to filter by. Requires 'filterValue' to also be set. (optional) 
+            var actionMapIds = new List<string>(); // List<string> | IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional) 
+            var queryFields = new List<string>(); // List<string> | Action Map field(s) to query on. Requires 'queryValue' to also be set. (optional) 
+            var queryValue = "queryValue_example";  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
+
+            try
+            { 
+                // Retrieve all action maps.
+                ActionMapListing result = apiInstance.GetJourneyActionmaps(pageNumber, pageSize, sortBy, filterField, filterValue, actionMapIds, queryFields, queryValue);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Journey.GetJourneyActionmaps: " + e.Message );
+            }
+        }
+    }
+}

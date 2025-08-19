@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionspermittedMeExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new UsersApi();
+            var permission = "permission_example";  // string | The permission string, including the object to access, e.g. routing:queue:view
+            var name = "name_example";  // string | Search term to filter by division name (optional) 
+
+            try
+            { 
+                // Returns which divisions the current user has the given permission in.
+                List<AuthzDivision> result = apiInstance.GetAuthorizationDivisionspermittedMe(permission, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Users.GetAuthorizationDivisionspermittedMe: " + e.Message );
+            }
+        }
+    }
+}

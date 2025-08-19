@@ -1,0 +1,33 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetDocumentationSearchExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+
+            var apiInstance = new SearchApi();
+            var q64 = "q64_example";  // string | q64
+
+            try
+            { 
+                // Search documentation using the q64 value returned from a previous search
+                DocumentationSearchResponse result = apiInstance.GetDocumentationSearch(q64);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Search.GetDocumentationSearch: " + e.Message );
+            }
+        }
+    }
+}

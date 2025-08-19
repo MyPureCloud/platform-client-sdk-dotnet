@@ -1,0 +1,45 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetRoutingQueuesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new RoutingApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortOrder = "sortOrder_example";  // string | Note: results are sorted by name. (optional)  (default to asc)
+            var name = "name_example";  // string | Include only queues with the given name (leading and trailing asterisks allowed) (optional) 
+            var id = new List<string>(); // List<string> | Include only queues with the specified ID(s) (optional) 
+            var divisionId = new List<string>(); // List<string> | Include only queues in the specified division ID(s) (optional) 
+            var peerId = new List<string>(); // List<string> | Include only queues with the specified peer ID(s) (optional) 
+            var cannedResponseLibraryId = "cannedResponseLibraryId_example";  // string | Include only queues explicitly associated with the specified canned response library ID (optional) 
+            var hasPeer = true;  // bool? | Include only queues with a peer ID (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // Get list of queues.
+                QueueEntityListing result = apiInstance.GetRoutingQueues(pageNumber, pageSize, sortOrder, name, id, divisionId, peerId, cannedResponseLibraryId, hasPeer, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Routing.GetRoutingQueues: " + e.Message );
+            }
+        }
+    }
+}

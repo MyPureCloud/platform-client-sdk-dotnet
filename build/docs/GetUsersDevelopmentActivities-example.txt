@@ -1,0 +1,47 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetUsersDevelopmentActivitiesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new UsersApi();
+            var userId = new List<string>(); // List<string> | Specifies the list of user IDs to be queried, up to 100 user IDs. It searches for any relationship for the userId. (optional) 
+            var moduleId = "moduleId_example";  // string | Specifies the ID of the learning module. (optional) 
+            var interval = "interval_example";  // string | Specifies the dateDue range to be queried. Milliseconds will be truncated. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var completionInterval = "completionInterval_example";  // string | Specifies the range of completion dates to be used for filtering. A maximum of 1 year can be specified in the range. End date is not inclusive. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (optional) 
+            var overdue = "overdue_example";  // string | Specifies if non-overdue, overdue, or all activities are returned. If not specified, all activities are returned (optional)  (default to Any)
+            var pass = "pass_example";  // string | Specifies if only the failed (pass is \"False\") or passed (pass is \"True\") activities are returned. If pass is \"Any\" or if the pass parameter is not supplied, all activities are returned (optional)  (default to Any)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = "sortOrder_example";  // string | Specifies result set sort order sorted by the date due; if not specified, default sort order is descending (Desc) (optional)  (default to Desc)
+            var types = new List<string>(); // List<string> | Specifies the activity types. Informational, AssessedContent and Assessment are deprecated (optional) 
+            var statuses = new List<string>(); // List<string> | Specifies the activity statuses to filter by (optional) 
+            var relationship = new List<string>(); // List<string> | Specifies how the current user relation should be interpreted, and filters the activities returned to only the activities that have the specified relationship. If a value besides Attendee is specified, it will only return Coaching Appointments. If not specified, no filtering is applied. (optional) 
+
+            try
+            { 
+                // Get list of Development Activities
+                DevelopmentActivityListing result = apiInstance.GetUsersDevelopmentActivities(userId, moduleId, interval, completionInterval, overdue, pass, pageSize, pageNumber, sortOrder, types, statuses, relationship);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Users.GetUsersDevelopmentActivities: " + e.Message );
+            }
+        }
+    }
+}

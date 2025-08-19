@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostConversationsMessagesAgentlessExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ConversationsApi();
+            var body = new SendAgentlessOutboundMessageRequest(); // SendAgentlessOutboundMessageRequest | Create agentless outbound messaging request
+            var useNormalizedMessage = true;  // bool? | If true, response removes deprecated fields (textBody, messagingTemplate) (optional)  (default to false)
+
+            try
+            { 
+                // Send an agentless outbound message
+                SendAgentlessOutboundMessageResponse result = apiInstance.PostConversationsMessagesAgentless(body, useNormalizedMessage);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Conversations.PostConversationsMessagesAgentless: " + e.Message );
+            }
+        }
+    }
+}

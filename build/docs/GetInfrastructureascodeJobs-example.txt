@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetInfrastructureascodeJobsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new InfrastructureAsCodeApi();
+            var maxResults = 56;  // int? | Number of jobs to show (optional)  (default to 1)
+            var includeErrors = true;  // bool? | Include error messages (optional)  (default to false)
+            var sortBy = "sortBy_example";  // string | Sort by (optional)  (default to dateSubmitted)
+            var sortOrder = "sortOrder_example";  // string | Sort order (optional)  (default to desc)
+            var acceleratorId = "acceleratorId_example";  // string | Find only jobs associated with this accelerator (optional) 
+            var submittedBy = "submittedBy_example";  // string | Find only jobs submitted by this user (optional) 
+            var status = "status_example";  // string | Find only jobs in this state (optional) 
+
+            try
+            { 
+                // Get job history
+                InfrastructureascodeJob result = apiInstance.GetInfrastructureascodeJobs(maxResults, includeErrors, sortBy, sortOrder, acceleratorId, submittedBy, status);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling InfrastructureAsCode.GetInfrastructureascodeJobs: " + e.Message );
+            }
+        }
+    }
+}

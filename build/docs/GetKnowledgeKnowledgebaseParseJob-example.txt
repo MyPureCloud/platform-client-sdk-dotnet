@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseParseJobExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = "knowledgeBaseId_example";  // string | Knowledge base ID
+            var parseJobId = "parseJobId_example";  // string | Parse job ID
+            var expand = new List<string>(); // List<string> | If expand contains 'urls' downloadURL and failedEntitiesURL will be filled. (optional) 
+
+            try
+            { 
+                // Get parse job report
+                KnowledgeParseJobResponse result = apiInstance.GetKnowledgeKnowledgebaseParseJob(knowledgeBaseId, parseJobId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Knowledge.GetKnowledgeKnowledgebaseParseJob: " + e.Message );
+            }
+        }
+    }
+}

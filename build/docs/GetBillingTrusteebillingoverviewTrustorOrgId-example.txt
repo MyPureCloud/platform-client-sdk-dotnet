@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetBillingTrusteebillingoverviewTrustorOrgIdExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new BillingApi();
+            var trustorOrgId = "trustorOrgId_example";  // string | The organization ID of the trustor (customer) organization.
+            var billingPeriodIndex = 56;  // int? | 0 for active period (overview data may change until period closes). 1 for prior completed billing period. 2 for two billing cycles prior, and so on. (optional)  (default to 0)
+
+            try
+            { 
+                // Get the billing overview for an organization that is managed by a partner.
+                TrusteeBillingOverview result = apiInstance.GetBillingTrusteebillingoverviewTrustorOrgId(trustorOrgId, billingPeriodIndex);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Billing.GetBillingTrusteebillingoverviewTrustorOrgId: " + e.Message );
+            }
+        }
+    }
+}

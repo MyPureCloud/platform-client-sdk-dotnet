@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetOutboundDigitalrulesetsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortBy = "sortBy_example";  // string | The field to sort by (optional)  (default to name)
+            var sortOrder = "sortOrder_example";  // string | The direction to sort (optional)  (default to ascending)
+            var name = "name_example";  // string | Name (optional) 
+            var id = new List<string>(); // List<string> | A list of digital rule set ids to bulk fetch (optional) 
+
+            try
+            { 
+                // Query a list of Outbound Digital Rule Sets
+                DigitalRuleSetEntityListing result = apiInstance.GetOutboundDigitalrulesets(pageSize, pageNumber, sortBy, sortOrder, name, id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Outbound.GetOutboundDigitalrulesets: " + e.Message );
+            }
+        }
+    }
+}

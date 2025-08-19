@@ -1,0 +1,40 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetTeamsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new TeamsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var name = "name_example";  // string | Return only teams whose names start with this value (case-insensitive matching) (optional) 
+            var after = "after_example";  // string | The cursor that points to the next item in the complete list of teams (optional) 
+            var before = "before_example";  // string | The cursor that points to the previous item in the complete list of teams (optional) 
+            var expand = "expand_example";  // string | Expand the division on each team (optional) 
+
+            try
+            { 
+                // Get Team listing
+                TeamEntityListing result = apiInstance.GetTeams(pageSize, name, after, before, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Teams.GetTeams: " + e.Message );
+            }
+        }
+    }
+}

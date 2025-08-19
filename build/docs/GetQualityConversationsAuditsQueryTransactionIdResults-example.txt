@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetQualityConversationsAuditsQueryTransactionIdResultsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new QualityApi();
+            var transactionId = "transactionId_example";  // string | Transaction ID
+            var cursor = "cursor_example";  // string | Indicates where to resume query results (not required for first page) (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // Get results of audit query
+                QualityAuditQueryExecutionResultsResponse result = apiInstance.GetQualityConversationsAuditsQueryTransactionIdResults(transactionId, cursor, pageSize, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Quality.GetQualityConversationsAuditsQueryTransactionIdResults: " + e.Message );
+            }
+        }
+    }
+}

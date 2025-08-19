@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetOutboundCampaignLinedistributionExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new OutboundApi();
+            var campaignId = "campaignId_example";  // string | Campaign ID
+            var includeOnlyActiveCampaigns = true;  // bool? | If true will return only active Campaigns (optional)  (default to true)
+            var edgeGroupId = "edgeGroupId_example";  // string | Edge group to be used in line distribution calculations instead of current Campaign's Edge Group. Campaign's Site and Edge Group are mutually exclusive. (optional) 
+            var siteId = "siteId_example";  // string | Site to be used in line distribution calculations instead of current Campaign's Site.  Campaign's Site and Edge Group are mutually exclusive. (optional) 
+            var useWeight = true;  // bool? | Enable usage of weight, this value overrides current Campaign's setting in line distribution calculations (optional) 
+            var relativeWeight = 56;  // int? | Relative weight to be used in line distribution calculations instead of current Campaign's relative weight (optional) 
+            var outboundLineCount = 56;  // int? | The number of outbound lines to be used in line distribution calculations, instead of current Campaign's Outbound Lines Count (optional) 
+
+            try
+            { 
+                // Get line distribution information for campaigns using same Edge Group or Site as given campaign
+                CampaignOutboundLinesDistribution result = apiInstance.GetOutboundCampaignLinedistribution(campaignId, includeOnlyActiveCampaigns, edgeGroupId, siteId, useWeight, relativeWeight, outboundLineCount);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Outbound.GetOutboundCampaignLinedistribution: " + e.Message );
+            }
+        }
+    }
+}

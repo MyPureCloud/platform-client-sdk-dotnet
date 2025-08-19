@@ -1,0 +1,47 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetRoutingSmsPhonenumbersExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new RoutingApi();
+            var phoneNumber = "phoneNumber_example";  // string | Filter on phone number address. Allowable characters are the digits '0-9' and the wild card character '\\*'. If just digits are present, a contains search is done on the address pattern. For example, '317' could be matched anywhere in the address. An '\\*' will match multiple digits. For example, to match a specific area code within the US a pattern like '1317*' could be used. (optional) 
+            var phoneNumberType = new List<string>(); // List<string> | Filter on phone number type (optional) 
+            var phoneNumberStatus = new List<string>(); // List<string> | Filter on phone number status (optional) 
+            var countryCode = new List<string>(); // List<string> | Filter on country code (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortBy = "sortBy_example";  // string | Optional field to sort results (optional) 
+            var sortOrder = "sortOrder_example";  // string | Sort order (optional) 
+            var language = "en-US";  // string | A language tag (which is sometimes referred to as a \"locale identifier\") to use to localize country field and sort operations (optional)  (default to "en-US")
+            var integrationId = "integrationId_example";  // string | Filter on the Genesys Cloud integration id to which the phone number belongs to (optional) 
+            var supportedContentId = "supportedContentId_example";  // string | Filter based on the supported content ID (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand (optional) 
+
+            try
+            { 
+                // Get a list of provisioned phone numbers.
+                SmsPhoneNumberEntityListing result = apiInstance.GetRoutingSmsPhonenumbers(phoneNumber, phoneNumberType, phoneNumberStatus, countryCode, pageSize, pageNumber, sortBy, sortOrder, language, integrationId, supportedContentId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Routing.GetRoutingSmsPhonenumbers: " + e.Message );
+            }
+        }
+    }
+}

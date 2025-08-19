@@ -1,0 +1,40 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetFlowVersionIntentUtteranceHealthExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ArchitectApi();
+            var flowId = "flowId_example";  // string | Flow ID.
+            var versionId = "versionId_example";  // string | Version ID.
+            var intentId = "intentId_example";  // string | Intent ID.
+            var utteranceId = "utteranceId_example";  // string | Utterance ID.
+            var language = "language_example";  // string | Language to filter for
+
+            try
+            { 
+                // Get health metrics associated with a specific utterance of an intent.
+                FlowHealthUtterance result = apiInstance.GetFlowVersionIntentUtteranceHealth(flowId, versionId, intentId, utteranceId, language);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Architect.GetFlowVersionIntentUtteranceHealth: " + e.Message );
+            }
+        }
+    }
+}

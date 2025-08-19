@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetResponsemanagementLibrariesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ResponseManagementApi();
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var messagingTemplateFilter = "messagingTemplateFilter_example";  // string | Returns a list of libraries that contain responses with at least one messaging template defined for a specific message channel (optional) 
+            var libraryPrefix = "libraryPrefix_example";  // string | Returns a list of libraries that contain the prefix provided (optional) 
+
+            try
+            { 
+                // Gets a list of existing response libraries.
+                LibraryEntityListing result = apiInstance.GetResponsemanagementLibraries(pageNumber, pageSize, messagingTemplateFilter, libraryPrefix);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagement.GetResponsemanagementLibraries: " + e.Message );
+            }
+        }
+    }
+}

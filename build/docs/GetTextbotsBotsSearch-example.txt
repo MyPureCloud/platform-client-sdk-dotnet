@@ -1,0 +1,40 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetTextbotsBotsSearchExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new TextbotsApi();
+            var botType = new List<string>(); // List<string> | Bot types (optional) 
+            var botName = "botName_example";  // string | Bot name (optional) 
+            var botId = new List<string>(); // List<string> | Bot IDs. Maximum of 50 (optional) 
+            var virtualAgentEnabled = true;  // bool? | Include or exclude virtual agent flows, only applies to GenesysBotFlows or GenesysDigitalBotFlows (optional) 
+            var pageSize = 56;  // int? | The maximum results to return. Maximum of 100 (optional)  (default to 25)
+
+            try
+            { 
+                // Find bots using the currently configured friendly name or ID.
+                BotSearchResponseEntityListing result = apiInstance.GetTextbotsBotsSearch(botType, botName, botId, virtualAgentEnabled, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Textbots.GetTextbotsBotsSearch: " + e.Message );
+            }
+        }
+    }
+}

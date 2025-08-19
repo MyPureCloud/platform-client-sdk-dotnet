@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetIntegrationsBotconnectorBotExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new IntegrationsApi();
+            var integrationId = "integrationId_example";  // string | The integration ID for this group of bots
+            var botId = "botId_example";  // string | The bot ID for this bot
+            var version = "version_example";  // string | Specific Version (optional) 
+
+            try
+            { 
+                // Get a specific Bot details
+                Bot result = apiInstance.GetIntegrationsBotconnectorBot(integrationId, botId, version);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Integrations.GetIntegrationsBotconnectorBot: " + e.Message );
+            }
+        }
+    }
+}

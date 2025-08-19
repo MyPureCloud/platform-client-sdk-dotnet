@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetTelephonySiptracesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new TelephonyApi();
+            var dateStart = new DateTime();  // DateTime? | Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Zvar dateStart = 2013-10-20T19:20:30+01:00;  // DateTime? | Start date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+            var dateEnd = new DateTime();  // DateTime? | End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Zvar dateEnd = 2013-10-20T19:20:30+01:00;  // DateTime? | End date of the search. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+            var callId = "callId_example";  // string | unique identification of the placed call (optional) 
+            var toUser = "toUser_example";  // string | User to who the call was placed (optional) 
+            var fromUser = "fromUser_example";  // string | user who placed the call (optional) 
+            var conversationId = "conversationId_example";  // string | Unique identification of the conversation (optional) 
+
+            try
+            { 
+                // Fetch SIP metadata
+                SipSearchResult result = apiInstance.GetTelephonySiptraces(dateStart, dateEnd, callId, toUser, fromUser, conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Telephony.GetTelephonySiptraces: " + e.Message );
+            }
+        }
+    }
+}

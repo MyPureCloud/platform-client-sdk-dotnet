@@ -1,0 +1,40 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetOrganizationsLimitsChangerequestsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new OrganizationApi();
+            var after = 789;  // long? | Timestamp indicating the date to begin after when searching for requests. (optional) 
+            var before = 789;  // long? | Timestamp indicating the date to end before when searching for requests. (optional) 
+            var status = "status_example";  // string | Status of the request to be filtered by (optional) 
+            var pageSize = 56;  // int? | Page Size (optional)  (default to 25)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+
+            try
+            { 
+                // Get the available limit change requests
+                LimitChangeRequestsEntityListing result = apiInstance.GetOrganizationsLimitsChangerequests(after, before, status, pageSize, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Organization.GetOrganizationsLimitsChangerequests: " + e.Message );
+            }
+        }
+    }
+}

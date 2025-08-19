@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostKnowledgeKnowledgebaseDocumentsQueryExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = "knowledgeBaseId_example";  // string | Knowledge Base ID
+            var expand = new List<string>(); // List<string> | Fields, if any, to expand for each document in the search result matching the query. (optional) 
+            var body = new KnowledgeDocumentQuery(); // KnowledgeDocumentQuery |  (optional) 
+
+            try
+            { 
+                // Query for knowledge documents.
+                KnowledgeDocumentQueryResponse result = apiInstance.PostKnowledgeKnowledgebaseDocumentsQuery(knowledgeBaseId, expand, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Knowledge.PostKnowledgeKnowledgebaseDocumentsQuery: " + e.Message );
+            }
+        }
+    }
+}

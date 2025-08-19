@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetExternalcontactsContactJourneySessionsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new JourneyApi();
+            var contactId = "contactId_example";  // string | ExternalContact ID
+            var pageSize = "pageSize_example";  // string | Number of entities to return. Maximum of 200. (optional) 
+            var after = "after_example";  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var includeMerged = true;  // bool? | Indicates whether to return sessions from all external contacts in the merge-set of the given one. (optional) 
+
+            try
+            { 
+                // Retrieve all sessions for a given external contact.
+                SessionListing result = apiInstance.GetExternalcontactsContactJourneySessions(contactId, pageSize, after, includeMerged);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Journey.GetExternalcontactsContactJourneySessions: " + e.Message );
+            }
+        }
+    }
+}

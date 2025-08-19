@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetUsersQueryExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new UsersApi();
+            var cursor = "cursor_example";  // string | Cursor token to retrieve next page (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var sortOrder = "sortOrder_example";  // string | Ascending or descending sort order (optional)  (default to ASC)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead. (optional) 
+            var integrationPresenceSource = "integrationPresenceSource_example";  // string | Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100. (optional) 
+            var state = "state_example";  // string | Only list users of this state (optional)  (default to active)
+
+            try
+            { 
+                // Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
+                UserCursorEntityListing result = apiInstance.GetUsersQuery(cursor, pageSize, sortOrder, expand, integrationPresenceSource, state);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Users.GetUsersQuery: " + e.Message );
+            }
+        }
+    }
+}

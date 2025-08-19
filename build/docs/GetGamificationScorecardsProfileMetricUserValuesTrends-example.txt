@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetGamificationScorecardsProfileMetricUserValuesTrendsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new GamificationApi();
+            var profileId = "profileId_example";  // string | performanceProfileId
+            var metricId = "metricId_example";  // string | metricId
+            var userId = "userId_example";  // string | 
+            var startWorkday = new Date();  // String | Start workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var endWorkday = new Date();  // String | End workday of querying workdays range. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var referenceWorkday = new Date();  // String | Reference workday for the trend. Used to determine the associated metric definition. If not set, then the value of endWorkday is used. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var timeZone = "timeZone_example";  // string | Timezone for the workday. Defaults to UTC (optional)  (default to "UTC")
+
+            try
+            { 
+                // Average performance values trends by metric of a user
+                MetricValueTrendAverage result = apiInstance.GetGamificationScorecardsProfileMetricUserValuesTrends(profileId, metricId, userId, startWorkday, endWorkday, referenceWorkday, timeZone);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Gamification.GetGamificationScorecardsProfileMetricUserValuesTrends: " + e.Message );
+            }
+        }
+    }
+}

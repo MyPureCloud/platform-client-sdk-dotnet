@@ -1,0 +1,44 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetOutboundImporttemplatesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new OutboundApi();
+            var includeImportStatus = true;  // bool? | Import status (optional)  (default to false)
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var allowEmptyResult = true;  // bool? | Whether to return an empty page when there are no results for that page (optional)  (default to false)
+            var filterType = "filterType_example";  // string | Filter type (optional)  (default to Prefix)
+            var name = "name_example";  // string | Name (optional) 
+            var sortBy = "sortBy_example";  // string | Sort by (optional) 
+            var sortOrder = "sortOrder_example";  // string | Sort order (optional)  (default to a)
+            var contactListTemplateId = "contactListTemplateId_example";  // string | Contact List Template ID (optional) 
+
+            try
+            { 
+                // Query Import Templates
+                ImportTemplateEntityListing result = apiInstance.GetOutboundImporttemplates(includeImportStatus, pageSize, pageNumber, allowEmptyResult, filterType, name, sortBy, sortOrder, contactListTemplateId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Outbound.GetOutboundImporttemplates: " + e.Message );
+            }
+        }
+    }
+}

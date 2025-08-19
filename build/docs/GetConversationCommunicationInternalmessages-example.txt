@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetConversationCommunicationInternalmessagesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = "conversationId_example";  // string | conversationId
+            var communicationId = "communicationId_example";  // string | communicationId
+            var pageSize = 56;  // int? | Indicates maximum number of results in response. Default page size is 25 results. The maximum page size is 200. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Get messages for communication
+                InternalMessageDataEntityListing result = apiInstance.GetConversationCommunicationInternalmessages(conversationId, communicationId, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Conversations.GetConversationCommunicationInternalmessages: " + e.Message );
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetRoutingWrapupcodesDivisionviewsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new RoutingApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var name = "name_example";  // string | Name (trailing asterisks allowed) (optional) 
+            var id = new List<string>(); // List<string> | Wrapup code ID(s) (optional) 
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+            var includeState = "includeState_example";  // string | Wrapup code state(s) to include (optional) 
+
+            try
+            { 
+                // Get a paged listing of simplified wrapup code objects, filterable by name, wrapup code ID(s), or division ID(s).
+                WrapupCodeEntityListing result = apiInstance.GetRoutingWrapupcodesDivisionviews(pageSize, pageNumber, name, id, divisionId, includeState);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Routing.GetRoutingWrapupcodesDivisionviews: " + e.Message );
+            }
+        }
+    }
+}

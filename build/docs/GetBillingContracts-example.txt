@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetBillingContractsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new BillingApi();
+            var before = "before_example";  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = "after_example";  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = "pageSize_example";  // string | Number of entities to return. Maximum of 200. (optional) 
+            var dateStart = new Date();  // String | Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var dateEnd = new Date();  // String | End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var status = "status_example";  // string | Filter by the status of contracts (optional) 
+            var externalNumber = "externalNumber_example";  // string | Filter by the unique external number. (optional) 
+
+            try
+            { 
+                // Get billing contracts
+                BillingContractListing result = apiInstance.GetBillingContracts(before, after, pageSize, dateStart, dateEnd, status, externalNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Billing.GetBillingContracts: " + e.Message );
+            }
+        }
+    }
+}

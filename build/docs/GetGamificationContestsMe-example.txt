@@ -1,0 +1,43 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetGamificationContestsMeExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new GamificationApi();
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? |  (optional)  (default to 25)
+            var dateStart = new Date();  // String | Start date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var dateEnd = new Date();  // String | End date for the query. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+            var status = new List<string>(); // List<string> |  (optional) 
+            var sortBy = "sortBy_example";  // string |  (optional)  (default to dateStart)
+            var sortOrder = "sortOrder_example";  // string |  (optional)  (default to desc)
+            var view = "view_example";  // string |  (optional)  (default to participant)
+
+            try
+            { 
+                // Get a List of Contests (Agent/Supervisor)
+                GetContestsEssentialsListing result = apiInstance.GetGamificationContestsMe(pageNumber, pageSize, dateStart, dateEnd, status, sortBy, sortOrder, view);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Gamification.GetGamificationContestsMe: " + e.Message );
+            }
+        }
+    }
+}

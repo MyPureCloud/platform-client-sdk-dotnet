@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsReprocessingJobsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 100. Default is 25. (optional) 
+            var pageNumber = 56;  // int? | The page number for the listing. Defaults to 1. (optional) 
+            var sortOrder = "sortOrder_example";  // string | Results are sorted by dateCreated. Please choose the sort order. The default is descending (desc). (optional) 
+            var name = "name_example";  // string | Case insensitive partial name to filter by. (optional) 
+
+            try
+            { 
+                // Get the list of Speech & Text Analytics reprocess jobs
+                ReprocessJobEntityListingResponse result = apiInstance.GetSpeechandtextanalyticsReprocessingJobs(pageSize, pageNumber, sortOrder, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalytics.GetSpeechandtextanalyticsReprocessingJobs: " + e.Message );
+            }
+        }
+    }
+}

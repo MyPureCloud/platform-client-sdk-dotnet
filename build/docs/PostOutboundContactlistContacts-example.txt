@@ -1,0 +1,40 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostOutboundContactlistContactsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new OutboundApi();
+            var contactListId = "contactListId_example";  // string | Contact List ID
+            var body = new List<WritableDialerContact>(); // List<WritableDialerContact> | Contact
+            var priority = true;  // bool? | Contact priority. True means the contact(s) will be dialed next; false means the contact will go to the end of the contact queue. (optional) 
+            var clearSystemData = true;  // bool? | Clear system data. True means the system columns (attempts, callable status, etc) stored on the contact will be cleared if the contact already exists; false means they won't. (optional) 
+            var doNotQueue = true;  // bool? | Do not queue. True means that updated contacts will not have their positions in the queue altered, so contacts that have already been dialed will not be redialed. For new contacts, this parameter has no effect; False means that updated contacts will be re-queued, according to the 'priority' parameter. (optional) 
+
+            try
+            { 
+                // Add contacts to a contact list.
+                List<DialerContact> result = apiInstance.PostOutboundContactlistContacts(contactListId, body, priority, clearSystemData, doNotQueue);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Outbound.PostOutboundContactlistContacts: " + e.Message );
+            }
+        }
+    }
+}
