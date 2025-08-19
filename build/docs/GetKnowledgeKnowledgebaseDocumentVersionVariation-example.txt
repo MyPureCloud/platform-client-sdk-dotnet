@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetKnowledgeKnowledgebaseDocumentVersionVariationExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = "knowledgeBaseId_example";  // string | Globally unique identifier for the knowledge base.
+            var documentId = "documentId_example";  // string | Globally unique identifier for the document.
+            var versionId = "versionId_example";  // string | Globally unique identifier for the document version.
+            var variationId = "variationId_example";  // string | Globally unique identifier for the document version variation.
+
+            try
+            { 
+                // Get variation for the given document version.
+                KnowledgeDocumentVersionVariation result = apiInstance.GetKnowledgeKnowledgebaseDocumentVersionVariation(knowledgeBaseId, documentId, versionId, variationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Knowledge.GetKnowledgeKnowledgebaseDocumentVersionVariation: " + e.Message );
+            }
+        }
+    }
+}

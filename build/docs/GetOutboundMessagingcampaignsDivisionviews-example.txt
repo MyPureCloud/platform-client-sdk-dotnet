@@ -1,0 +1,44 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetOutboundMessagingcampaignsDivisionviewsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new OutboundApi();
+            var pageSize = 56;  // int? | Page size. The max that will be returned is 100. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = "sortOrder_example";  // string | The direction to sort (optional)  (default to a)
+            var name = "name_example";  // string | Name (optional) 
+            var type = "type_example";  // string | Campaign Type (optional) 
+            var id = new List<string>(); // List<string> | id (optional) 
+            var senderSmsPhoneNumber = "senderSmsPhoneNumber_example";  // string | Sender SMS Phone Number (optional) 
+            var contentTemplateId = "contentTemplateId_example";  // string | Content template ID (optional) 
+            var campaignStatus = "campaignStatus_example";  // string | Campaign Status (optional) 
+
+            try
+            { 
+                // Query a list of basic Messaging Campaign information objects
+                MessagingCampaignDivisionViewEntityListing result = apiInstance.GetOutboundMessagingcampaignsDivisionviews(pageSize, pageNumber, sortOrder, name, type, id, senderSmsPhoneNumber, contentTemplateId, campaignStatus);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Outbound.GetOutboundMessagingcampaignsDivisionviews: " + e.Message );
+            }
+        }
+    }
+}

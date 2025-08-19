@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetJourneyViewVersionJobResultsChartExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new JourneyApi();
+            var viewId = "viewId_example";  // string | Journey View Id
+            var journeyVersionId = "journeyVersionId_example";  // string | Journey View Version
+            var jobId = "jobId_example";  // string | JobId
+            var chartId = "chartId_example";  // string | ChartId
+
+            try
+            { 
+                // Get the chart result associated with a journey view job.
+                JourneyViewChartResult result = apiInstance.GetJourneyViewVersionJobResultsChart(viewId, journeyVersionId, jobId, chartId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Journey.GetJourneyViewVersionJobResultsChart: " + e.Message );
+            }
+        }
+    }
+}

@@ -1,0 +1,40 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetGamificationLeaderboardAllExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new GamificationApi();
+            var filterType = "filterType_example";  // string | Filter type for the query request.
+            var filterId = "filterId_example";  // string | ID for the filter type. For example, division or performance profile Id
+            var startWorkday = new Date();  // String | Start workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var endWorkday = new Date();  // String | End workday to retrieve for the leaderboard. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var metricId = "metricId_example";  // string | Metric Id for which the leaderboard is to be generated. The total points is used if nothing is given. (optional) 
+
+            try
+            { 
+                // Leaderboard by filter type
+                Leaderboard result = apiInstance.GetGamificationLeaderboardAll(filterType, filterId, startWorkday, endWorkday, metricId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Gamification.GetGamificationLeaderboardAll: " + e.Message );
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetQualityCalibrationsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new QualityApi();
+            var calibratorId = "calibratorId_example";  // string | user id of calibrator
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = "sortBy_example";  // string | variable name requested to sort by (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = "nextPage_example";  // string | next page token (optional) 
+            var previousPage = "previousPage_example";  // string | Previous page token (optional) 
+            var conversationId = "conversationId_example";  // string | conversation id (optional) 
+            var startTime = new DateTime();  // DateTime? | Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? | Beginning of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) 
+            var endTime = new DateTime();  // DateTime? | end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? | end of the calibration query. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) 
+
+            try
+            { 
+                // Get the list of calibrations
+                CalibrationEntityListing result = apiInstance.GetQualityCalibrations(calibratorId, pageSize, pageNumber, sortBy, expand, nextPage, previousPage, conversationId, startTime, endTime);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Quality.GetQualityCalibrations: " + e.Message );
+            }
+        }
+    }
+}

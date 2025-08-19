@@ -1,0 +1,40 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetConversationsChatMessagesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = "conversationId_example";  // string | conversationId
+            var after = "after_example";  // string | If specified, get the messages chronologically after the id of this message (optional) 
+            var before = "before_example";  // string | If specified, get the messages chronologically before the id of this message (optional) 
+            var sortOrder = "sortOrder_example";  // string | Sort order (optional)  (default to ascending)
+            var maxResults = 56;  // int? | Limit the returned number of messages, up to a maximum of 100 (optional)  (default to 100)
+
+            try
+            { 
+                // Get the messages of a chat conversation.
+                WebChatMessageEntityList result = apiInstance.GetConversationsChatMessages(conversationId, after, before, sortOrder, maxResults);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Conversations.GetConversationsChatMessages: " + e.Message );
+            }
+        }
+    }
+}

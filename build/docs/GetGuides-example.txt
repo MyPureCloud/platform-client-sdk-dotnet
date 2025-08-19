@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetGuidesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new AIStudioApi();
+            var name = "name_example";  // string | Filter by matching name - case insensitive. (optional) 
+            var nameContains = "nameContains_example";  // string | Filter by name contains - case insensitive. (optional) 
+            var status = "status_example";  // string | Filter by status. (optional) 
+            var sortBy = "sortBy_example";  // string | Sort by. Default value dateModified. (optional)  (default to dateModified)
+            var sortOrder = "sortOrder_example";  // string | Sort Order. Default value desc. (optional)  (default to desc)
+            var pageNumber = 56;  // int? | Page number. (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size. The maximum page size is 100. (optional)  (default to 25)
+
+            try
+            { 
+                // Get all guides.
+                GuideEntityListing result = apiInstance.GetGuides(name, nameContains, status, sortBy, sortOrder, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudio.GetGuides: " + e.Message );
+            }
+        }
+    }
+}

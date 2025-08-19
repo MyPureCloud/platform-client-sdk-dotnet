@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostOrgauthorizationTrusteesCareExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new OrganizationAuthorizationApi();
+            var assignDefaultRole = true;  // bool? | Assign Admin role to default pairing with Customer Care (optional) 
+            var autoExpire = true;  // bool? | Automatically expire pairing after 30 days (optional) 
+            var assignFullAccess = true;  // bool? | Grant Customer Care full access to the organization (optional) 
+            var allowTrustedUserAccess = true;  // bool? | Make Customer Care a Trusted User (optional) 
+
+            try
+            { 
+                // Create a new organization authorization trust with Customer Care. This is required to grant your regional Customer Care organization access to your organization.
+                TrustEntityListing result = apiInstance.PostOrgauthorizationTrusteesCare(assignDefaultRole, autoExpire, assignFullAccess, allowTrustedUserAccess);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OrganizationAuthorization.PostOrgauthorizationTrusteesCare: " + e.Message );
+            }
+        }
+    }
+}

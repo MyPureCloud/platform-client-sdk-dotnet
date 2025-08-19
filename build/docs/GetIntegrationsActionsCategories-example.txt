@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetIntegrationsActionsCategoriesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new IntegrationsApi();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var nextPage = "nextPage_example";  // string | next page token (optional) 
+            var previousPage = "previousPage_example";  // string | Previous page token (optional) 
+            var sortBy = "sortBy_example";  // string | Root level field name to sort on.  Only 'name' is supported on this endpoint. (optional) 
+            var sortOrder = "sortOrder_example";  // string | Direction to sort 'sortBy' field. (optional)  (default to asc)
+            var secure = "secure_example";  // string | Filter to only include secure actions. True will only include actions marked secured. False will include only unsecure actions. Do not use filter if you want all Actions. (optional) 
+
+            try
+            { 
+                // Retrieves all categories of available Actions
+                CategoryEntityListing result = apiInstance.GetIntegrationsActionsCategories(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, secure);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Integrations.GetIntegrationsActionsCategories: " + e.Message );
+            }
+        }
+    }
+}

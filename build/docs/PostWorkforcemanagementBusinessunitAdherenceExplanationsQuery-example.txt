@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitAdherenceExplanationsQueryExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = "businessUnitId_example";  // string | The ID of the business unit
+            var body = new BuQueryAdherenceExplanationsRequest(); // BuQueryAdherenceExplanationsRequest | The request body
+            var forceAsync = true;  // bool? | Force the result of this operation to be sent asynchronously via notification. For testing/app development purposes (optional) 
+            var forceDownloadService = true;  // bool? | Force the result of this operation to be sent via download service. For testing/app development purposes (optional) 
+
+            try
+            { 
+                // Query adherence explanations across an entire business unit for the requested period
+                BuQueryAdherenceExplanationsResponse result = apiInstance.PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery(businessUnitId, body, forceAsync, forceDownloadService);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagement.PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery: " + e.Message );
+            }
+        }
+    }
+}

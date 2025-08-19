@@ -1,0 +1,48 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetLanguageunderstandingDomainFeedbackExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var domainId = "domainId_example";  // string | ID of the NLU domain.
+            var intentName = "intentName_example";  // string | The top intent name to retrieve feedback for. (optional) 
+            var assessment = "assessment_example";  // string | The top assessment to retrieve feedback for. (optional) 
+            var dateStart = new Date();  // String | Begin of time window as ISO-8601 date. (optional) 
+            var dateEnd = new Date();  // String | End of time window as ISO-8601 date. (optional) 
+            var includeDeleted = true;  // bool? | Whether to include soft-deleted items in the result. (optional) 
+            var language = "language_example";  // string | Whether to filter response based on the language, e.g. en-us, pt-br. (optional) 
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var enableCursorPagination = true;  // bool? | Enable Cursor Pagination (optional)  (default to false)
+            var includeTrainingUtterances = true;  // bool? | Include Training Utterances. By default they're included. (optional)  (default to true)
+            var after = "after_example";  // string | The cursor that points to the end of the set of entities that has been returned. This is considered only when enableCursorPagination=true (optional) 
+            var fields = new List<string>(); // List<string> | Fields and properties to get, comma-separated (optional) 
+
+            try
+            { 
+                // Get all feedback in the given NLU Domain Version.
+                NluFeedbackListing result = apiInstance.GetLanguageunderstandingDomainFeedback(domainId, intentName, assessment, dateStart, dateEnd, includeDeleted, language, pageNumber, pageSize, enableCursorPagination, includeTrainingUtterances, after, fields);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstanding.GetLanguageunderstandingDomainFeedback: " + e.Message );
+            }
+        }
+    }
+}

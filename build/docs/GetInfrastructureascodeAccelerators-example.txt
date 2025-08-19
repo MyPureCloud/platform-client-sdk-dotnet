@@ -1,0 +1,45 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetInfrastructureascodeAcceleratorsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new InfrastructureAsCodeApi();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = "sortBy_example";  // string | variable name requested to sort by (optional) 
+            var sortOrder = "sortOrder_example";  // string | Sort order (optional)  (default to asc)
+            var name = "name_example";  // string | Filter by name (optional) 
+            var description = "description_example";  // string | Filter by description (optional) 
+            var origin = "origin_example";  // string | Filter by origin (optional) 
+            var type = "type_example";  // string | Filter by type (optional) 
+            var classification = "classification_example";  // string | Filter by classification (optional) 
+            var tags = "tags_example";  // string | Filter by tags (optional) 
+
+            try
+            { 
+                // Get a list of available accelerators
+                AcceleratorList result = apiInstance.GetInfrastructureascodeAccelerators(pageSize, pageNumber, sortBy, sortOrder, name, description, origin, type, classification, tags);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling InfrastructureAsCode.GetInfrastructureascodeAccelerators: " + e.Message );
+            }
+        }
+    }
+}

@@ -1,0 +1,50 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetQualityAgentsActivityExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new QualityApi();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = "sortBy_example";  // string | variable name requested to sort by (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = "nextPage_example";  // string | next page token (optional) 
+            var previousPage = "previousPage_example";  // string | Previous page token (optional) 
+            var startTime = new DateTime();  // DateTime? | Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) var startTime = 2013-10-20T19:20:30+01:00;  // DateTime? | Start time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) 
+            var endTime = new DateTime();  // DateTime? | End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) var endTime = 2013-10-20T19:20:30+01:00;  // DateTime? | End time of agent activity based on assigned date. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) 
+            var agentUserId = new List<string>(); // List<string> | user id of agent requested (optional) 
+            var evaluatorUserId = "evaluatorUserId_example";  // string | user id of the evaluator (optional) 
+            var name = "name_example";  // string | name (optional) 
+            var group = "group_example";  // string | group id (optional) 
+            var agentTeamId = "agentTeamId_example";  // string | team id of agents requested (optional) 
+            var formContextId = "formContextId_example";  // string | shared id between form versions (optional) 
+            var userState = "userState_example";  // string | 'Legacy' fetches active and inactive users when evaluatorUserId or no user filters are supplied; otherwise fetches active users.  'Any' fetches users of 'active', 'inactive' and 'deleted' states. (optional)  (default to Legacy)
+
+            try
+            { 
+                // Gets a list of Agent Activities
+                AgentActivityEntityListing result = apiInstance.GetQualityAgentsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, agentUserId, evaluatorUserId, name, group, agentTeamId, formContextId, userState);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Quality.GetQualityAgentsActivity: " + e.Message );
+            }
+        }
+    }
+}

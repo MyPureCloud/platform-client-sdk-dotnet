@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetAuthorizationRoleExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new AuthorizationApi();
+            var roleId = "roleId_example";  // string | Role ID
+            var userCount = "userCount_example";  // bool? | Fetch the count of users who have this role granted in at least one division. Setting this value or defaulting to 'true' can lead to slower load times or timeouts for role queries with large member counts. (optional)  (default to true)
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. \"unusedPermissions\" returns the permissions not used for the role (optional) 
+
+            try
+            { 
+                // Get a single organization role.
+                DomainOrganizationRole result = apiInstance.GetAuthorizationRole(roleId, userCount, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Authorization.GetAuthorizationRole: " + e.Message );
+            }
+        }
+    }
+}

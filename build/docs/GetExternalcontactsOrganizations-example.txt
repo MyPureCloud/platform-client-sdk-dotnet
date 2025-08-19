@@ -1,0 +1,43 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetExternalcontactsOrganizationsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ExternalContactsApi();
+            var pageSize = 56;  // int? | Page size (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 20)
+            var pageNumber = 56;  // int? | Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be <= 1,000) (optional)  (default to 1)
+            var q = "q_example";  // string | Search query (optional) 
+            var trustorId = new List<string>(); // List<string> | Search for external organizations by trustorIds (limit 25). If supplied, the 'q' parameters is ignored. Items are returned in the order requested (optional) 
+            var sortOrder = "sortOrder_example";  // string | The Organization field to sort by. Any of: [companyType, industry, name]. Direction: [asc, desc]. e.g. \"companyType:asc\", \"industry:desc\" (optional) 
+            var expand = new List<string>(); // List<string> | which fields, if any, to expand (optional) 
+            var includeTrustors = true;  // bool? | (true or false) whether or not to include trustor information embedded in the externalOrganization (optional) 
+            var divisionIds = new List<string>(); // List<string> | which divisions to search, up to 50 (optional) 
+
+            try
+            { 
+                // Search for external organizations
+                ExternalOrganizationListing result = apiInstance.GetExternalcontactsOrganizations(pageSize, pageNumber, q, trustorId, sortOrder, expand, includeTrustors, divisionIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContacts.GetExternalcontactsOrganizations: " + e.Message );
+            }
+        }
+    }
+}

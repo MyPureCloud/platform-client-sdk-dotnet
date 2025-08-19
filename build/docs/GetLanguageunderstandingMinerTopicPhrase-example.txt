@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetLanguageunderstandingMinerTopicPhraseExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var minerId = "minerId_example";  // string | Miner ID
+            var topicId = "topicId_example";  // string | The ID of the topic to be retrieved.
+            var phraseId = "phraseId_example";  // string | The ID of the phrase to be retrieved.
+
+            try
+            { 
+                // Retrieves utterances related to a phrase in a topic.
+                MinerTopicPhrase result = apiInstance.GetLanguageunderstandingMinerTopicPhrase(minerId, topicId, phraseId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstanding.GetLanguageunderstandingMinerTopicPhrase: " + e.Message );
+            }
+        }
+    }
+}

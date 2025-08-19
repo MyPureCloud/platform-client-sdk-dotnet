@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetRoutingSmsAvailablephonenumbersExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new RoutingApi();
+            var countryCode = "countryCode_example";  // string | The ISO 3166-1 alpha-2 country code of the county for which available phone numbers should be returned
+            var phoneNumberType = "phoneNumberType_example";  // string | Type of available phone numbers searched
+            var region = "region_example";  // string | Region/province/state that can be used to restrict the numbers returned (optional) 
+            var city = "city_example";  // string | City that can be used to restrict the numbers returned (optional) 
+            var areaCode = "areaCode_example";  // string | Area code that can be used to restrict the numbers returned (optional) 
+            var pattern = "pattern_example";  // string | A pattern to match phone numbers. Valid characters are '*' and [0-9a-zA-Z]. The '*' character will match any single digit. (optional) 
+            var addressRequirement = "addressRequirement_example";  // string | This indicates whether the phone number requires to have an Address registered. (optional) 
+
+            try
+            { 
+                // Get a list of available phone numbers for SMS provisioning.
+                SMSAvailablePhoneNumberEntityListing result = apiInstance.GetRoutingSmsAvailablephonenumbers(countryCode, phoneNumberType, region, city, areaCode, pattern, addressRequirement);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Routing.GetRoutingSmsAvailablephonenumbers: " + e.Message );
+            }
+        }
+    }
+}

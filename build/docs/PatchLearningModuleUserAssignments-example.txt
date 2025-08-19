@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PatchLearningModuleUserAssignmentsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new LearningApi();
+            var moduleId = "moduleId_example";  // string | Key identifier for the module
+            var userId = "userId_example";  // string | Key identifier for the user
+            var body = new LearningAssignmentExternalUpdate(); // LearningAssignmentExternalUpdate | The learning request for updating the assignment
+
+            try
+            { 
+                // Update an external assignment for a specific user
+                LearningAssignment result = apiInstance.PatchLearningModuleUserAssignments(moduleId, userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Learning.PatchLearningModuleUserAssignments: " + e.Message );
+            }
+        }
+    }
+}

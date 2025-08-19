@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetExternalcontactsScanNotesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ExternalContactsApi();
+            var limit = 56;  // int? | The number of notes per page; must be between 10 and 200, default is 100 (optional) 
+            var cursor = "cursor_example";  // string | Indicates where to resume query results (not required for first page), each page returns a new cursor with a 24h TTL (optional) 
+            var divisionId = "divisionId_example";  // string | The division to scan over (optional)  (default to "*")
+
+            try
+            { 
+                // Scan for notes using paging
+                CursorNoteListing result = apiInstance.GetExternalcontactsScanNotes(limit, cursor, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContacts.GetExternalcontactsScanNotes: " + e.Message );
+            }
+        }
+    }
+}

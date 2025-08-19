@@ -1,0 +1,35 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostKnowledgeGuestSessionDocumentFeedbackExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = "sessionId_example";  // string | Knowledge guest session ID.
+            var documentId = "documentId_example";  // string | Document ID.
+            var body = new KnowledgeGuestDocumentFeedback(); // KnowledgeGuestDocumentFeedback |  (optional) 
+
+            try
+            { 
+                // Give feedback on a document
+                KnowledgeGuestDocumentFeedback result = apiInstance.PostKnowledgeGuestSessionDocumentFeedback(sessionId, documentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Knowledge.PostKnowledgeGuestSessionDocumentFeedback: " + e.Message );
+            }
+        }
+    }
+}

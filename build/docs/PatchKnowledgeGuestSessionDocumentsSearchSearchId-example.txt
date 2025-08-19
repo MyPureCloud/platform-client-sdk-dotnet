@@ -1,0 +1,34 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PatchKnowledgeGuestSessionDocumentsSearchSearchIdExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+
+            var apiInstance = new KnowledgeApi();
+            var sessionId = "sessionId_example";  // string | Knowledge guest session ID.
+            var searchId = "searchId_example";  // string | Search Result ID
+            var body = new SearchUpdateRequest(); // SearchUpdateRequest | 
+
+            try
+            { 
+                // Update search result.
+                apiInstance.PatchKnowledgeGuestSessionDocumentsSearchSearchId(sessionId, searchId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Knowledge.PatchKnowledgeGuestSessionDocumentsSearchSearchId: " + e.Message );
+            }
+        }
+    }
+}

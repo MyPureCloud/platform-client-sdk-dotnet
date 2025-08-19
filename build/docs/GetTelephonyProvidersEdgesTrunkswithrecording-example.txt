@@ -1,0 +1,36 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesTrunkswithrecordingExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var trunkType = "trunkType_example";  // string | The type of this trunk base. (optional) 
+
+            try
+            { 
+                // Get Counts of trunks that have recording disabled or enabled
+                TrunkRecordingEnabledCount result = apiInstance.GetTelephonyProvidersEdgesTrunkswithrecording(trunkType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdge.GetTelephonyProvidersEdgesTrunkswithrecording: " + e.Message );
+            }
+        }
+    }
+}

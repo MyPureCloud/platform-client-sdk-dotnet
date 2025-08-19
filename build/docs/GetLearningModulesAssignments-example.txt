@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetLearningModulesAssignmentsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new LearningApi();
+            var userIds = new List<string>(); // List<string> | The IDs of the users to include
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var searchTerm = "searchTerm_example";  // string | Search Term (searches by name and description) (optional) 
+            var overdue = "overdue_example";  // string | Specifies if only modules with overdue/not overdue (overdue is \"True\" or \"False\") assignments are returned. If overdue is \"Any\" or omitted, both are returned and can including modules that are unassigned. (optional)  (default to Any)
+            var assignmentStates = new List<string>(); // List<string> | Specifies the assignment states to return. (optional) 
+            var expand = new List<string>(); // List<string> | Fields to expand in response(case insensitive) (optional) 
+
+            try
+            { 
+                // Get all learning modules of an organization including assignments for a specific user
+                AssignedLearningModuleDomainEntityListing result = apiInstance.GetLearningModulesAssignments(userIds, pageSize, pageNumber, searchTerm, overdue, assignmentStates, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Learning.GetLearningModulesAssignments: " + e.Message );
+            }
+        }
+    }
+}

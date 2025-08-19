@@ -1,0 +1,34 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PutQualitySurveysScorableExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+
+            var apiInstance = new QualityApi();
+            var customerSurveyUrl = "customerSurveyUrl_example";  // string | customerSurveyUrl
+            var body = new ScorableSurvey(); // ScorableSurvey | survey
+
+            try
+            { 
+                // Update a survey as an end-customer, for the purposes of scoring it.
+                ScorableSurvey result = apiInstance.PutQualitySurveysScorable(customerSurveyUrl, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Quality.PutQualitySurveysScorable: " + e.Message );
+            }
+        }
+    }
+}

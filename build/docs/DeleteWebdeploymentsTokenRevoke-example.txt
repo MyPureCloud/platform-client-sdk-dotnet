@@ -1,0 +1,33 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class DeleteWebdeploymentsTokenRevokeExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+
+            var apiInstance = new WebDeploymentsApi();
+            var xJourneySessionId = "xJourneySessionId_example";  // string | The Customer's journey sessionId. (optional) 
+            var xJourneySessionType = "xJourneySessionType_example";  // string | The Customer's journey session type. (optional) 
+
+            try
+            { 
+                // Invalidate JWT
+                apiInstance.DeleteWebdeploymentsTokenRevoke(xJourneySessionId, xJourneySessionType);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebDeployments.DeleteWebdeploymentsTokenRevoke: " + e.Message );
+            }
+        }
+    }
+}

@@ -1,0 +1,43 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetAnalyticsReportingSettingsUserDashboardsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new AnalyticsApi();
+            var userId = "userId_example";  // string | User ID
+            var sortBy = "sortBy_example";  // string |  (optional)  (default to "asc")
+            var pageNumber = 56;  // int? |  (optional)  (default to 1)
+            var pageSize = 56;  // int? |  (optional)  (default to 50)
+            var publicOnly = true;  // bool? | If true, retrieve only public dashboards (optional) 
+            var favoriteOnly = true;  // bool? | If true, retrieve only favorite dashboards (optional) 
+            var deletedOnly = true;  // bool? | If true, retrieve only deleted dashboards that are still recoverable (optional) 
+            var name = "name_example";  // string | retrieve dashboards that match with given name (optional) 
+
+            try
+            { 
+                // Get list of dashboards for an user
+                DashboardConfigurationListing result = apiInstance.GetAnalyticsReportingSettingsUserDashboards(userId, sortBy, pageNumber, pageSize, publicOnly, favoriteOnly, deletedOnly, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Analytics.GetAnalyticsReportingSettingsUserDashboards: " + e.Message );
+            }
+        }
+    }
+}

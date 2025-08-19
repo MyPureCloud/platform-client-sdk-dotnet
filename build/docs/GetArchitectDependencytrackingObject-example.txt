@@ -1,0 +1,43 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetArchitectDependencytrackingObjectExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ArchitectApi();
+            var id = "id_example";  // string | Object ID
+            var version = "version_example";  // string | Object version (optional) 
+            var objectType = "objectType_example";  // string | Object type (optional) 
+            var consumedResources = true;  // bool? | Include resources this item consumes (optional) 
+            var consumingResources = true;  // bool? | Include resources that consume this item (optional) 
+            var consumedResourceType = new List<string>(); // List<string> | Types of consumed resources to return, if consumed resources are requested (optional) 
+            var consumingResourceType = new List<string>(); // List<string> | Types of consuming resources to return, if consuming resources are requested (optional) 
+            var consumedResourceRequest = true;  // bool? | Indicate that this is going to look up a consumed resource object (optional) 
+
+            try
+            { 
+                // Get a Dependency Tracking object
+                DependencyObject result = apiInstance.GetArchitectDependencytrackingObject(id, version, objectType, consumedResources, consumingResources, consumedResourceType, consumingResourceType, consumedResourceRequest);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Architect.GetArchitectDependencytrackingObject: " + e.Message );
+            }
+        }
+    }
+}

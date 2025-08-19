@@ -1,0 +1,43 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetTelephonyProvidersEdgesDidsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new TelephonyProvidersEdgeApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortBy = "sortBy_example";  // string | Sort by (optional)  (default to "number")
+            var sortOrder = "sortOrder_example";  // string | Sort order (optional)  (default to "ASC")
+            var phoneNumber = "phoneNumber_example";  // string | Filter by phoneNumber (optional) 
+            var ownerId = "ownerId_example";  // string | Filter by the owner of a phone number (optional) 
+            var didPoolId = "didPoolId_example";  // string | Filter by the DID Pool assignment (optional) 
+            var id = new List<string>(); // List<string> | Filter by a specific list of ID's (optional) 
+
+            try
+            { 
+                // Get a listing of DIDs
+                DIDEntityListing result = apiInstance.GetTelephonyProvidersEdgesDids(pageSize, pageNumber, sortBy, sortOrder, phoneNumber, ownerId, didPoolId, id);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyProvidersEdge.GetTelephonyProvidersEdgesDids: " + e.Message );
+            }
+        }
+    }
+}

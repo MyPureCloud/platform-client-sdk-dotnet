@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostAuthorizationSubjectDivisionRoleExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new UsersApi();
+            var subjectId = "subjectId_example";  // string | Subject ID (user or group)
+            var divisionId = "divisionId_example";  // string | the id of the division to which to make the grant
+            var roleId = "roleId_example";  // string | the id of the role to grant
+            var subjectType = "subjectType_example";  // string | what the type of the subject is: PC_GROUP, PC_USER or PC_OAUTH_CLIENT (note: for cross-org authorization, please use the Organization Authorization endpoints) (optional)  (default to "PC_USER")
+
+            try
+            { 
+                // Make a grant of a role in a division
+                apiInstance.PostAuthorizationSubjectDivisionRole(subjectId, divisionId, roleId, subjectType);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Users.PostAuthorizationSubjectDivisionRole: " + e.Message );
+            }
+        }
+    }
+}

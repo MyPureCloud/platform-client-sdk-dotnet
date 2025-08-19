@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetGamificationProfileMetricsObjectivedetailsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new GamificationApi();
+            var profileId = "profileId_example";  // string | Performance Profile Id
+            var workday = new Date();  // String | The objective query workday. If not specified, then it retrieves the current objective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (optional) 
+
+            try
+            { 
+                // All metrics for a given performance profile with objective details such as order and maxPoints
+                GetMetricsResponse result = apiInstance.GetGamificationProfileMetricsObjectivedetails(profileId, workday);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Gamification.GetGamificationProfileMetricsObjectivedetails: " + e.Message );
+            }
+        }
+    }
+}

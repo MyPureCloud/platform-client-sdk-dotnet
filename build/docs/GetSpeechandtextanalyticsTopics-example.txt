@@ -1,0 +1,43 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsTopicsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var nextPage = "nextPage_example";  // string | The key for listing the next page (optional) 
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 500. (optional)  (default to 20)
+            var state = "state_example";  // string | Topic state. Defaults to latest (optional) 
+            var name = "name_example";  // string | Case insensitive partial name to filter by (optional) 
+            var ids = new List<string>(); // List<string> | Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional) 
+            var dialects = new List<string>(); // List<string> | Comma separated dialect strings to filter by. Maximum of 15 dialects allowed. (optional) 
+            var sortBy = "sortBy_example";  // string | Sort results by. Defaults to name (optional) 
+            var sortOrder = "sortOrder_example";  // string | Sort order. Defaults to asc (optional) 
+
+            try
+            { 
+                // Get the list of Speech & Text Analytics topics
+                TopicsEntityListing result = apiInstance.GetSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids, dialects, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalytics.GetSpeechandtextanalyticsTopics: " + e.Message );
+            }
+        }
+    }
+}

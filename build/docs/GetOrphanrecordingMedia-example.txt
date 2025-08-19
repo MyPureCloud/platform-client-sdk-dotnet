@@ -1,0 +1,44 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetOrphanrecordingMediaExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new RecordingApi();
+            var orphanId = "orphanId_example";  // string | Orphan ID
+            var formatId = "formatId_example";  // string | The desired media format. (optional)  (default to WEBM)
+            var emailFormatId = "emailFormatId_example";  // string | The desired media format when downloading an email recording. (optional)  (default to EML)
+            var chatFormatId = "chatFormatId_example";  // string | The desired media format when downloading a chat recording. (optional)  (default to ZIP)
+            var messageFormatId = "messageFormatId_example";  // string | The desired media format when downloading a message recording. (optional)  (default to ZIP)
+            var download = "download_example";  // bool? | requesting a download format of the recording (optional)  (default to false)
+            var fileName = "fileName_example";  // string | the name of the downloaded fileName (optional) 
+            var locale = "locale_example";  // string | The locale for the requested file when downloading, as an ISO 639-1 code (optional) 
+            var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3 (optional) 
+
+            try
+            { 
+                // Gets the media of a single orphan recording
+                Recording result = apiInstance.GetOrphanrecordingMedia(orphanId, formatId, emailFormatId, chatFormatId, messageFormatId, download, fileName, locale, mediaFormats);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Recording.GetOrphanrecordingMedia: " + e.Message );
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetRecordingCrossplatformMediaretentionpoliciesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new RecordingApi();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = "sortBy_example";  // string | variable name requested to sort by (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = "nextPage_example";  // string | next page token (optional) 
+            var previousPage = "previousPage_example";  // string | Previous page token (optional) 
+            var name = "name_example";  // string | the policy name - used for filtering results in searches. (optional) 
+            var enabled = true;  // bool? | checks to see if policy is enabled - use enabled = true or enabled = false (optional) 
+            var summary = true;  // bool? | provides a less verbose response of policy lists. (optional)  (default to false)
+            var hasErrors = true;  // bool? | provides a way to fetch all policies with errors or policies that do not have errors (optional) 
+            var deleteDaysThreshold = 56;  // int? | provides a way to fetch all policies with any actions having deleteDays exceeding the provided value (optional) 
+
+            try
+            { 
+                // Gets media retention policy list with query options to filter on name and enabled.
+                PolicyEntityListing result = apiInstance.GetRecordingCrossplatformMediaretentionpolicies(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, name, enabled, summary, hasErrors, deleteDaysThreshold);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Recording.GetRecordingCrossplatformMediaretentionpolicies: " + e.Message );
+            }
+        }
+    }
+}

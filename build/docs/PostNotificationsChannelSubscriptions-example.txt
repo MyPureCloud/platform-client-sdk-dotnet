@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostNotificationsChannelSubscriptionsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new NotificationsApi();
+            var channelId = "channelId_example";  // string | Channel ID
+            var body = new List<ChannelTopic>(); // List<ChannelTopic> | Body
+            var ignoreErrors = true;  // bool? | Optionally prevent throwing of errors for failed permissions checks. (optional)  (default to false)
+
+            try
+            { 
+                // Add a list of subscriptions to the existing list of subscriptions
+                ChannelTopicEntityListing result = apiInstance.PostNotificationsChannelSubscriptions(channelId, body, ignoreErrors);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Notifications.PostNotificationsChannelSubscriptions: " + e.Message );
+            }
+        }
+    }
+}

@@ -1,0 +1,46 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetGamificationInsightsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new GamificationApi();
+            var filterType = "filterType_example";  // string | Filter type for the query request.
+            var filterId = "filterId_example";  // string | ID for the filter type.
+            var granularity = "granularity_example";  // string | Granularity
+            var comparativePeriodStartWorkday = new Date();  // String | The start work day of comparative period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var primaryPeriodStartWorkday = new Date();  // String | The start work day of primary period. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortKey = "sortKey_example";  // string | Sort key (optional) 
+            var sortMetricId = "sortMetricId_example";  // string | Sort Metric Id (optional) 
+            var sortOrder = "sortOrder_example";  // string | Sort order (optional)  (default to asc)
+            var userIds = "userIds_example";  // string | A list of up to 100 comma-separated user Ids (optional) 
+
+            try
+            { 
+                // Get insights summary
+                InsightsSummary result = apiInstance.GetGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Gamification.GetGamificationInsights: " + e.Message );
+            }
+        }
+    }
+}

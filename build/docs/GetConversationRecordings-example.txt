@@ -1,0 +1,41 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetConversationRecordingsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new RecordingApi();
+            var conversationId = "conversationId_example";  // string | Conversation ID
+            var maxWaitMs = 56;  // int? | The maximum number of milliseconds to wait for the recording to be ready. Must be a positive value. (optional)  (default to 5000)
+            var formatId = "formatId_example";  // string | The desired media format. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3,NONE. (optional)  (default to WEBM)
+            var mediaFormats = new List<string>(); // List<string> | All acceptable media formats. Overrides formatId. Valid values:WAV,WEBM,WAV_ULAW,OGG_VORBIS,OGG_OPUS,MP3. (optional) 
+            var locale = "locale_example";  // string | The locale used for redacting sensitive information in requested files, as an ISO 639-1 code (optional) 
+            var includePauseAnnotationsForScreenRecordings = true;  // bool? | Include applicable Secure Pause annotations from all audio recordings to all screen recordings (optional)  (default to false)
+
+            try
+            { 
+                // Get all of a Conversation's Recordings.
+                List<Recording> result = apiInstance.GetConversationRecordings(conversationId, maxWaitMs, formatId, mediaFormats, locale, includePauseAnnotationsForScreenRecordings);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Recording.GetConversationRecordings: " + e.Message );
+            }
+        }
+    }
+}

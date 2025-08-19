@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostOutboundDnclistPhonenumbersExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new OutboundApi();
+            var dncListId = "dncListId_example";  // string | DncList ID
+            var body = new List<string>(); // List<string> | DNC Phone Numbers
+            var expirationDateTime = "expirationDateTime_example";  // string | Expiration date for DNC phone numbers in yyyy-MM-ddTHH:mmZ format (optional) 
+
+            try
+            { 
+                // Add phone numbers to a DNC list.
+                apiInstance.PostOutboundDnclistPhonenumbers(dncListId, body, expirationDateTime);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Outbound.PostOutboundDnclistPhonenumbers: " + e.Message );
+            }
+        }
+    }
+}

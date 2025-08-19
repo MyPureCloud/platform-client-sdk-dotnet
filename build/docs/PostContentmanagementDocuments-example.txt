@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostContentmanagementDocumentsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ContentManagementApi();
+            var body = new DocumentUpload(); // DocumentUpload | Document
+            var copySource = "copySource_example";  // string | Copy a document within a workspace or to a new workspace. Provide a document ID as the copy source. (optional) 
+            var moveSource = "moveSource_example";  // string | Move a document to a new workspace. Provide a document ID as the move source. (optional) 
+            var _override = true;  // bool? | Override any lock on the source document (optional) 
+
+            try
+            { 
+                // Add a document.
+                Document result = apiInstance.PostContentmanagementDocuments(body, copySource, moveSource, _override);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ContentManagement.PostContentmanagementDocuments: " + e.Message );
+            }
+        }
+    }
+}

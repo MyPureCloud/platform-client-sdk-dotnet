@@ -1,0 +1,37 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetScriptsUploadStatusExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ScriptsApi();
+            var uploadId = "uploadId_example";  // string | Upload ID
+            var longPoll = true;  // bool? | Enable longPolling endpoint (optional)  (default to false)
+
+            try
+            { 
+                // Get the upload status of an imported script
+                ImportScriptStatusResponse result = apiInstance.GetScriptsUploadStatus(uploadId, longPoll);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Scripts.GetScriptsUploadStatus: " + e.Message );
+            }
+        }
+    }
+}

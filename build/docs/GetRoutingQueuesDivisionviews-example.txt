@@ -1,0 +1,42 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetRoutingQueuesDivisionviewsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new RoutingApi();
+            var pageSize = 56;  // int? | Page size [max value is 100] (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number [max value is 5] (optional)  (default to 1)
+            var sortBy = "sortBy_example";  // string | Sort by (optional)  (default to name)
+            var sortOrder = "sortOrder_example";  // string | Sort order (optional)  (default to asc)
+            var name = "name_example";  // string | Name (optional) 
+            var id = new List<string>(); // List<string> | Queue ID(s) (optional) 
+            var divisionId = new List<string>(); // List<string> | Division ID(s) (optional) 
+
+            try
+            { 
+                // Get a paged listing of simplified queue objects, filterable by name, queue ID(s), or division ID(s).
+                QueueEntityListing result = apiInstance.GetRoutingQueuesDivisionviews(pageSize, pageNumber, sortBy, sortOrder, name, id, divisionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Routing.GetRoutingQueuesDivisionviews: " + e.Message );
+            }
+        }
+    }
+}

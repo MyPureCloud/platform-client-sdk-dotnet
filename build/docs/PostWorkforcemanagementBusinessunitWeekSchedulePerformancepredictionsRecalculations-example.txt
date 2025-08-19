@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = "businessUnitId_example";  // string | The ID of the business unit to which the performance prediction belongs
+            var weekId = "weekId_example";  // string | First day of schedule week in yyyy-MM-dd format
+            var scheduleId = "scheduleId_example";  // string | The ID of the schedule the performance prediction belongs to
+            var body = new WfmProcessUploadRequest(); // WfmProcessUploadRequest | body
+
+            try
+            { 
+                // Request a daily recalculation of the performance prediction for the associated schedule
+                PerformancePredictionRecalculationResponse result = apiInstance.PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations(businessUnitId, weekId, scheduleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagement.PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations: " + e.Message );
+            }
+        }
+    }
+}

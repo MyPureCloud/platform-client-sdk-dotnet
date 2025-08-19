@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class PostWebchatGuestConversationMemberTypingExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure API key authorization: Guest Chat JWT
+            Configuration.Default.ApiKey.Add("Authorization", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. BEARER) for API key, if needed
+            // Configuration.Default.ApiKeyPrefix.Add("Authorization", "BEARER");
+
+            var apiInstance = new WebChatApi();
+            var conversationId = "conversationId_example";  // string | conversationId
+            var memberId = "memberId_example";  // string | memberId
+
+            try
+            { 
+                // Send a typing-indicator in a chat conversation.
+                WebChatTyping result = apiInstance.PostWebchatGuestConversationMemberTyping(conversationId, memberId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WebChat.PostWebchatGuestConversationMemberTyping: " + e.Message );
+            }
+        }
+    }
+}

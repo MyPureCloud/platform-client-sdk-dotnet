@@ -1,0 +1,36 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class DeleteArchitectPromptResourceExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ArchitectApi();
+            var promptId = "promptId_example";  // string | Prompt ID
+            var languageCode = "languageCode_example";  // string | Language
+
+            try
+            { 
+                // Delete specified user prompt resource
+                apiInstance.DeleteArchitectPromptResource(promptId, languageCode);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Architect.DeleteArchitectPromptResource: " + e.Message );
+            }
+        }
+    }
+}

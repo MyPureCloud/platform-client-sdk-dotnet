@@ -1,0 +1,40 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetWorkforcemanagementManagementunitWeekSchedulesExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = "managementUnitId_example";  // string | The ID of the management unit, or 'mine' for the management unit of the logged-in user.
+            var weekId = "weekId_example";  // string | First day of schedule week in yyyy-MM-dd format.
+            var includeOnlyPublished = true;  // bool? | Return only published schedules (optional) 
+            var earliestWeekDate = "earliestWeekDate_example";  // string | The start date of the earliest week to query in yyyy-MM-dd format (optional) 
+            var latestWeekDate = "latestWeekDate_example";  // string | The start date of the latest week to query in yyyy-MM-dd format (optional) 
+
+            try
+            { 
+                // Deprecated.  Use the equivalent business unit resource instead. Get the list of schedules in a week in management unit
+                WeekScheduleListResponse result = apiInstance.GetWorkforcemanagementManagementunitWeekSchedules(managementUnitId, weekId, includeOnlyPublished, earliestWeekDate, latestWeekDate);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagement.GetWorkforcemanagementManagementunitWeekSchedules: " + e.Message );
+            }
+        }
+    }
+}

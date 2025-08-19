@@ -1,0 +1,38 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetExternalcontactsContactJourneySegmentsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new JourneyApi();
+            var contactId = "contactId_example";  // string | ExternalContact ID
+            var includeMerged = true;  // bool? | Indicates whether to return segment assignments from all external contacts in the merge-set of the given one. (optional) 
+            var limit = 56;  // int? | Number of entities to return. Default of 25, maximum of 500. (optional) 
+
+            try
+            { 
+                // Retrieve segment assignments by external contact ID.
+                SegmentAssignmentListing result = apiInstance.GetExternalcontactsContactJourneySegments(contactId, includeMerged, limit);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Journey.GetExternalcontactsContactJourneySegments: " + e.Message );
+            }
+        }
+    }
+}

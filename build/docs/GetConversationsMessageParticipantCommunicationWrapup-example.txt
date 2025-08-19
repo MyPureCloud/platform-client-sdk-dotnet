@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetConversationsMessageParticipantCommunicationWrapupExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = "conversationId_example";  // string | conversationId
+            var participantId = "participantId_example";  // string | participantId
+            var communicationId = "communicationId_example";  // string | communicationId
+            var provisional = true;  // bool? | Indicates whether or not to fetch provisional wrap-up code. (optional)  (default to false)
+
+            try
+            { 
+                // Get the wrap-up for this conversation communication. 
+                AssignedWrapupCode result = apiInstance.GetConversationsMessageParticipantCommunicationWrapup(conversationId, participantId, communicationId, provisional);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Conversations.GetConversationsMessageParticipantCommunicationWrapup: " + e.Message );
+            }
+        }
+    }
+}

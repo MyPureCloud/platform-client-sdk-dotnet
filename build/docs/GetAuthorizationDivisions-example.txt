@@ -1,0 +1,44 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetAuthorizationDivisionsExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Client Credentials Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("your_client_credential_grant_id", "your_client_credential_grant_secret");
+
+            var apiInstance = new ObjectsApi();
+            var pageSize = 56;  // int? | The total page size requested (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number requested (optional)  (default to 1)
+            var sortBy = "sortBy_example";  // string | variable name requested to sort by (optional) 
+            var expand = new List<string>(); // List<string> | variable name requested by expand list (optional) 
+            var nextPage = "nextPage_example";  // string | next page token (optional) 
+            var previousPage = "previousPage_example";  // string | Previous page token (optional) 
+            var objectCount = true;  // bool? | Include the count of objects contained in the division (optional)  (default to false)
+            var id = new List<string>(); // List<string> | Optionally request specific divisions by their IDs (optional) 
+            var name = "name_example";  // string | Search term to filter by division name (optional) 
+
+            try
+            { 
+                // Retrieve a list of all divisions defined for the organization
+                AuthzDivisionEntityListing result = apiInstance.GetAuthorizationDivisions(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, objectCount, id, name);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Objects.GetAuthorizationDivisions: " + e.Message );
+            }
+        }
+    }
+}

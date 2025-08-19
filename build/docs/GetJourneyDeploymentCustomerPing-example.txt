@@ -1,0 +1,39 @@
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+using PureCloudPlatform.Client.V2.Extensions;
+
+namespace Example
+{
+    public class GetJourneyDeploymentCustomerPingExample
+    {
+        static void Main(string[] args)
+        {   
+            PureCloudRegionHosts region = PureCloudRegionHosts.us_east_1; // Genesys Cloud region
+            Configuration.Default.ApiClient.setBasePath(region);
+            
+
+            var apiInstance = new JourneyApi();
+            var deploymentId = "deploymentId_example";  // string | The ID of the deployment sending the ping.
+            var customerCookieId = "customerCookieId_example";  // string | ID of the customer associated with the ping.
+            var dl = "dl_example";  // string | Document Location: 1) Web Page URL if overridden or URL fragment identifier (window.location.hash). OR  2) Application screen name that the ping request was sent from in the app. e.g. 'home' or 'help. Pings without this parameter will not return actions. (optional) 
+            var dt = "dt_example";  // string | Document Title.  A human readable name for the page or screen (optional) 
+            var appNamespace = "appNamespace_example";  // string | Namespace of the application (e.g. com.genesys.bancodinero). Used for domain filtering in application sessions (optional) 
+            var sessionId = "sessionId_example";  // string | UUID of the customer session. Use the same Session Id for all pings, AppEvents and ActionEvents in the session (optional) 
+            var sinceLastBeaconMilliseconds = 789;  // long? | How long (milliseconds) since the last app event or beacon was sent. The response may return a pollInternvalMilliseconds to reduce the frequency of pings. (optional) 
+
+            try
+            { 
+                // Send a ping.
+                DeploymentPing result = apiInstance.GetJourneyDeploymentCustomerPing(deploymentId, customerCookieId, dl, dt, appNamespace, sessionId, sinceLastBeaconMilliseconds);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling Journey.GetJourneyDeploymentCustomerPing: " + e.Message );
+            }
+        }
+    }
+}
