@@ -261,4 +261,4 @@ namespace Example
 [**Geolocation**](Geolocation)
 
 
-_PureCloudPlatform.Client.V2 239.0.0_
+_PureCloudPlatform.Client.V2 240.0.0_
