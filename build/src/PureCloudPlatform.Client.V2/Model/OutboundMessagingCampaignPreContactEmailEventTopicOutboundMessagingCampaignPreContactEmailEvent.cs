@@ -164,7 +164,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum OutboundStuckContact for "OUTBOUND_STUCK_CONTACT"
             /// </summary>
             [EnumMember(Value = "OUTBOUND_STUCK_CONTACT")]
-            OutboundStuckContact
+            OutboundStuckContact,
+            
+            /// <summary>
+            /// Enum OutboundContactDomainBlocked for "OUTBOUND_CONTACT_DOMAIN_BLOCKED"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_CONTACT_DOMAIN_BLOCKED")]
+            OutboundContactDomainBlocked
         }
         /// <summary>
         /// Gets or Sets OutboundCampaignType

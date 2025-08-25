@@ -5,7 +5,7 @@ Platform API Client SDK - .NET
 
 Documentation can be found at https://mypurecloud.github.io/platform-client-sdk-dotnet/
 
-Documentation version PureCloudPlatform.Client.V2 239.1.0
+Documentation version PureCloudPlatform.Client.V2 240.0.0
 
 ## Install Using nuget
 

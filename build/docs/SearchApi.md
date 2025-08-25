@@ -1646,4 +1646,4 @@ namespace Example
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 239.1.0_
+_PureCloudPlatform.Client.V2 240.0.0_

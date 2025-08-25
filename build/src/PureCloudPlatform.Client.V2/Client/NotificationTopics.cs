@@ -37,6 +37,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.businessunits.{id}.workforcemanagement.intraday", typeof(WfmBuIntradayDataUpdateTopicBuIntradayNotification)},
               {"v2.contentmanagement.documents.{id}", typeof(ContentManagementSingleDocumentTopicDocumentDataV2)},
               {"v2.contentmanagement.workspaces.{id}.documents", typeof(ContentManagementWorkspaceDocumentsTopicDocumentDataV2)},
+              {"v2.conversations.{id}.agentchecklist", typeof(ConversationChecklistTopicAgentChecklistRuntimeEventBody)},
               {"v2.conversations.{id}.transcription", typeof(TranscriptionTopicTranscriptionMessage)},
               {"v2.detail.events.collaboratechat.adhoc.{id}.messages", typeof(CollaborateChatAdhocMessageEventTopicCollaborateChatMessage)},
               {"v2.detail.events.collaboratechat.group.{id}.messages", typeof(CollaborateChatGroupMessageEventTopicCollaborateChatMessage)},
