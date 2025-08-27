@@ -16,6 +16,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAssistantsQueues**](#GetAssistantsQueues) | **Get** /api/v2/assistants/queues | Get all queues assigned to any assistant. |
 | [**PatchAssistant**](#PatchAssistant) | **Patch** /api/v2/assistants/{assistantId} | Update an assistant. |
 | [**PatchAssistantQueues**](#PatchAssistantQueues) | **Patch** /api/v2/assistants/{assistantId}/queues | Update Queues for an Assistant. |
+| [**PostAssistantQueueUsersBulkAdd**](#PostAssistantQueueUsersBulkAdd) | **Post** /api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/add | Bulk add users to assistant-queue (requires manual assignment mode). |
+| [**PostAssistantQueueUsersBulkRemove**](#PostAssistantQueueUsersBulkRemove) | **Post** /api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/remove | Bulk remove users from assistant-queue (requires manual assignment mode). |
+| [**PostAssistantQueueUsersQuery**](#PostAssistantQueueUsersQuery) | **Post** /api/v2/assistants/{assistantId}/queues/{queueId}/users/query | Query for users in the assistant-queue (requires manual assignment mode). |
 | [**PostAssistants**](#PostAssistants) | **Post** /api/v2/assistants | Create an Assistant. |
 | [**PutAssistantQueue**](#PutAssistantQueue) | **Put** /api/v2/assistants/{assistantId}/queues/{queueId} | Create a queue assistant association. |
 
@@ -678,6 +681,206 @@ namespace Example
 [**AssistantQueueListing**](AssistantQueueListing)
 
 
+## PostAssistantQueueUsersBulkAdd
+
+> [**BulkResponse**](BulkResponse) PostAssistantQueueUsersBulkAdd (string assistantId, string queueId, AssistantQueueUsersBulkAddRequest body)
+
+
+Bulk add users to assistant-queue (requires manual assignment mode).
+
+Requires ANY permissions: 
+
+* assistants:queueUserAssignment:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAssistantQueueUsersBulkAddExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+            var assistantId = assistantId_example;  // string | Assistant ID
+            var queueId = queueId_example;  // string | Queue ID
+            var body = new AssistantQueueUsersBulkAddRequest(); // AssistantQueueUsersBulkAddRequest | 
+
+            try
+            { 
+                // Bulk add users to assistant-queue (requires manual assignment mode).
+                BulkResponse result = apiInstance.PostAssistantQueueUsersBulkAdd(assistantId, queueId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.PostAssistantQueueUsersBulkAdd: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assistantId** | **string**| Assistant ID |  |
+| **queueId** | **string**| Queue ID |  |
+| **body** | [**AssistantQueueUsersBulkAddRequest**](AssistantQueueUsersBulkAddRequest)|  |  |
+
+### Return type
+
+[**BulkResponse**](BulkResponse)
+
+
+## PostAssistantQueueUsersBulkRemove
+
+> [**BulkResponse**](BulkResponse) PostAssistantQueueUsersBulkRemove (string assistantId, string queueId, AssistantQueueUsersBulkRemoveRequest body)
+
+
+Bulk remove users from assistant-queue (requires manual assignment mode).
+
+Requires ANY permissions: 
+
+* assistants:queueUserAssignment:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAssistantQueueUsersBulkRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+            var assistantId = assistantId_example;  // string | Assistant ID
+            var queueId = queueId_example;  // string | Queue ID
+            var body = new AssistantQueueUsersBulkRemoveRequest(); // AssistantQueueUsersBulkRemoveRequest | 
+
+            try
+            { 
+                // Bulk remove users from assistant-queue (requires manual assignment mode).
+                BulkResponse result = apiInstance.PostAssistantQueueUsersBulkRemove(assistantId, queueId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.PostAssistantQueueUsersBulkRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assistantId** | **string**| Assistant ID |  |
+| **queueId** | **string**| Queue ID |  |
+| **body** | [**AssistantQueueUsersBulkRemoveRequest**](AssistantQueueUsersBulkRemoveRequest)|  |  |
+
+### Return type
+
+[**BulkResponse**](BulkResponse)
+
+
+## PostAssistantQueueUsersQuery
+
+> [**AssistantQueueUsersQueryResponse**](AssistantQueueUsersQueryResponse) PostAssistantQueueUsersQuery (string assistantId, string queueId, AssistantQueueUsersQueryRequest body, List<string> expand = null)
+
+
+Query for users in the assistant-queue (requires manual assignment mode).
+
+Requires ANY permissions: 
+
+* assistants:queueUserAssignment:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAssistantQueueUsersQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+            var assistantId = assistantId_example;  // string | Assistant ID
+            var queueId = queueId_example;  // string | Queue ID
+            var body = new AssistantQueueUsersQueryRequest(); // AssistantQueueUsersQueryRequest | 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand with. (optional) 
+
+            try
+            { 
+                // Query for users in the assistant-queue (requires manual assignment mode).
+                AssistantQueueUsersQueryResponse result = apiInstance.PostAssistantQueueUsersQuery(assistantId, queueId, body, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.PostAssistantQueueUsersQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assistantId** | **string**| Assistant ID |  |
+| **queueId** | **string**| Queue ID |  |
+| **body** | [**AssistantQueueUsersQueryRequest**](AssistantQueueUsersQueryRequest)|  |  |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand with. | [optional] <br />**Values**: assistant, copilot |
+
+### Return type
+
+[**AssistantQueueUsersQueryResponse**](AssistantQueueUsersQueryResponse)
+
+
 ## PostAssistants
 
 > [**Assistant**](Assistant) PostAssistants (Assistant body)
@@ -806,4 +1009,4 @@ namespace Example
 [**AssistantQueue**](AssistantQueue)
 
 
-_PureCloudPlatform.Client.V2 240.0.0_
+_PureCloudPlatform.Client.V2 241.0.0_

@@ -11,8 +11,8 @@
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **PartialResults** | **bool?** |  | [optional] |
-| **NextUri** | **string** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
+| **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
@@ -20,4 +20,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 240.0.0_
+_PureCloudPlatform.Client.V2 241.0.0_

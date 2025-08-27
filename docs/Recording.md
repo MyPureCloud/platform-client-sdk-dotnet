@@ -31,8 +31,8 @@
 | **ExportedDate** | **DateTime?** | The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **OutputDurationMs** | **int?** | Duration of transcoded media in milliseconds | [optional] |
 | **OutputSizeInBytes** | **int?** | Size of transcoded media in bytes. 0 if there is no transcoded media. | [optional] |
-| **MaxAllowedRestorationsForOrg** | **int?** | How many archive restorations the organization is allowed to have. | [optional] |
-| **RemainingRestorationsAllowedForOrg** | **int?** | The remaining archive restorations the organization has. | [optional] |
+| **MaxAllowedRestorationsForOrg** | **int?** | How many archive restorations the organization is allowed to have. Deprecated - Always returns 10000 since the restoration limit is no longer enforced. | [optional] |
+| **RemainingRestorationsAllowedForOrg** | **int?** | The remaining archive restorations the organization has. Deprecated - Always returns 10000 since the restoration limit is no longer enforced. | [optional] |
 | **SessionId** | **string** | The session id represents an external resource id, such as email, call, chat, etc | [optional] |
 | **Users** | [**List&lt;User&gt;**](User) | The users participating in the conversation | [optional] |
 | **RecordingFileRole** | **string** | Role of the file recording. It can be either customer_experience or adhoc. | [optional] |
@@ -43,4 +43,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 240.0.0_
+_PureCloudPlatform.Client.V2 241.0.0_

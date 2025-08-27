@@ -1,22 +1,22 @@
-# PermissionCollectionEntityListing
+# DomainPermissionEntityListing
 
-## ININ.PureCloudApi.Model.PermissionCollectionEntityListing
+## ININ.PureCloudApi.Model.DomainPermissionEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;DomainPermissionCollection&gt;**](DomainPermissionCollection) |  | [optional] |
+| **Entities** | [**List&lt;DomainPermissionCollectionDomainPermission&gt;**](DomainPermissionCollectionDomainPermission) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 240.0.0_
+_PureCloudPlatform.Client.V2 241.0.0_
