@@ -69,11 +69,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="VendorName">The name of vendor used for knowledge suggestions. (required).</param>
         /// <param name="KnowledgeBase">The ID of knowledge base to query when Genesys is the knowledge suggestions provider..</param>
         /// <param name="KnowledgeBases">The knowledge bases to query based on dialect, when Genesys is the knowledge suggestions provider..</param>
-        public KnowledgeSuggestionConfig(VendorNameEnum? VendorName = null, KnowledgeBaseReference KnowledgeBase = null, List<KnowledgeBaseWithDialectReference> KnowledgeBases = null)
+        /// <param name="ReceiveSegmentedArticles">Include segmented articles in knowledge suggestions..</param>
+        public KnowledgeSuggestionConfig(VendorNameEnum? VendorName = null, KnowledgeBaseReference KnowledgeBase = null, List<KnowledgeBaseWithDialectReference> KnowledgeBases = null, bool? ReceiveSegmentedArticles = null)
         {
             this.VendorName = VendorName;
             this.KnowledgeBase = KnowledgeBase;
             this.KnowledgeBases = KnowledgeBases;
+            this.ReceiveSegmentedArticles = ReceiveSegmentedArticles;
             
         }
         
@@ -98,6 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<KnowledgeBaseWithDialectReference> KnowledgeBases { get; set; }
 
 
+
+        /// <summary>
+        /// Include segmented articles in knowledge suggestions.
+        /// </summary>
+        /// <value>Include segmented articles in knowledge suggestions.</value>
+        [DataMember(Name="receiveSegmentedArticles", EmitDefaultValue=false)]
+        public bool? ReceiveSegmentedArticles { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  VendorName: ").Append(VendorName).Append("\n");
             sb.Append("  KnowledgeBase: ").Append(KnowledgeBase).Append("\n");
             sb.Append("  KnowledgeBases: ").Append(KnowledgeBases).Append("\n");
+            sb.Append("  ReceiveSegmentedArticles: ").Append(ReceiveSegmentedArticles).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -164,6 +176,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.KnowledgeBases == other.KnowledgeBases ||
                     this.KnowledgeBases != null &&
                     this.KnowledgeBases.SequenceEqual(other.KnowledgeBases)
+                ) &&
+                (
+                    this.ReceiveSegmentedArticles == other.ReceiveSegmentedArticles ||
+                    this.ReceiveSegmentedArticles != null &&
+                    this.ReceiveSegmentedArticles.Equals(other.ReceiveSegmentedArticles)
                 );
         }
 
@@ -186,6 +203,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.KnowledgeBases != null)
                     hash = hash * 59 + this.KnowledgeBases.GetHashCode();
+
+                if (this.ReceiveSegmentedArticles != null)
+                    hash = hash * 59 + this.ReceiveSegmentedArticles.GetHashCode();
 
                 return hash;
             }

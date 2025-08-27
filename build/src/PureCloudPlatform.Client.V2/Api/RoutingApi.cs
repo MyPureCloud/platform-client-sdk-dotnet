@@ -942,30 +942,6 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EmailOutboundDomainResult> GetRoutingEmailOutboundDomainActivationWithHttpInfo (string domainId);
 
         /// <summary>
-        /// Search a domain across organizations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainId">domain ID</param>
-        /// <returns>OutboundDomain</returns>
-        
-        OutboundDomain GetRoutingEmailOutboundDomainSearch (string domainId);
-
-        /// <summary>
-        /// Search a domain across organizations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainId">domain ID</param>
-        /// <returns>ApiResponse of OutboundDomain</returns>
-        
-        ApiResponse<OutboundDomain> GetRoutingEmailOutboundDomainSearchWithHttpInfo (string domainId);
-
-        /// <summary>
         /// Get outbound domains
         /// </summary>
         /// <remarks>
@@ -3158,10 +3134,10 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<InboundRoute> PostRoutingEmailDomainRoutesWithHttpInfo (string domainName, InboundRoute body);
 
         /// <summary>
-        /// Tests the custom SMTP server integration connection set on this domain
+        /// Tests the custom SMTP server integration connection set on this ACD domain
         /// </summary>
         /// <remarks>
-        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
@@ -3171,10 +3147,10 @@ namespace PureCloudPlatform.Client.V2.Api
         TestMessage PostRoutingEmailDomainTestconnection (string domainId, TestMessage body = null);
 
         /// <summary>
-        /// Tests the custom SMTP server integration connection set on this domain
+        /// Tests the custom SMTP server integration connection set on this ACD domain
         /// </summary>
         /// <remarks>
-        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
@@ -5074,30 +5050,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> GetRoutingEmailOutboundDomainActivationAsyncWithHttpInfo (string domainId);
-
-        /// <summary>
-        /// Search a domain across organizations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainId">domain ID</param>
-        /// <returns>Task of OutboundDomain</returns>
-        
-        System.Threading.Tasks.Task<OutboundDomain> GetRoutingEmailOutboundDomainSearchAsync (string domainId);
-
-        /// <summary>
-        /// Search a domain across organizations
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainId">domain ID</param>
-        /// <returns>Task of ApiResponse (OutboundDomain)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> GetRoutingEmailOutboundDomainSearchAsyncWithHttpInfo (string domainId);
 
         /// <summary>
         /// Get outbound domains
@@ -7292,10 +7244,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<InboundRoute>> PostRoutingEmailDomainRoutesAsyncWithHttpInfo (string domainName, InboundRoute body);
 
         /// <summary>
-        /// Tests the custom SMTP server integration connection set on this domain
+        /// Tests the custom SMTP server integration connection set on this ACD domain
         /// </summary>
         /// <remarks>
-        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
@@ -7305,10 +7257,10 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<TestMessage> PostRoutingEmailDomainTestconnectionAsync (string domainId, TestMessage body = null);
 
         /// <summary>
-        /// Tests the custom SMTP server integration connection set on this domain
+        /// Tests the custom SMTP server integration connection set on this ACD domain
         /// </summary>
         /// <remarks>
-        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
@@ -15866,207 +15818,6 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EmailOutboundDomainResult>(localVarStatusCode,
                 localVarHeaders,
                 (EmailOutboundDomainResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EmailOutboundDomainResult)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-
-        /// <summary>
-        /// Search a domain across organizations 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainId">domain ID</param>
-        /// <returns>OutboundDomain</returns>
-        
-        public OutboundDomain GetRoutingEmailOutboundDomainSearch (string domainId)
-        {
-             ApiResponse<OutboundDomain> localVarResponse = GetRoutingEmailOutboundDomainSearchWithHttpInfo(domainId);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Search a domain across organizations 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainId">domain ID</param>
-        /// <returns>ApiResponse of OutboundDomain</returns>
-        
-        public ApiResponse< OutboundDomain > GetRoutingEmailOutboundDomainSearchWithHttpInfo (string domainId)
-        { 
-            // verify the required parameter 'domainId' is set
-            if (domainId == null)
-                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->GetRoutingEmailOutboundDomainSearch");
-
-            var localVarPath = "/api/v2/routing/email/outbound/domains/{domainId}/search";
-            var localVarHttpMethod = "Get";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailOutboundDomainSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailOutboundDomainSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<OutboundDomain>(localVarStatusCode,
-                localVarHeaders,
-                (OutboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundDomain)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
-
-
-        /// <summary>
-        /// Search a domain across organizations 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainId">domain ID</param>
-        /// <returns>Task of OutboundDomain</returns>
-        
-        public async System.Threading.Tasks.Task<OutboundDomain> GetRoutingEmailOutboundDomainSearchAsync (string domainId)
-        {
-             ApiResponse<OutboundDomain> localVarResponse = await GetRoutingEmailOutboundDomainSearchAsyncWithHttpInfo(domainId);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Search a domain across organizations 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="domainId">domain ID</param>
-        /// <returns>Task of ApiResponse (OutboundDomain)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> GetRoutingEmailOutboundDomainSearchAsyncWithHttpInfo (string domainId)
-        { 
-            // verify the required parameter 'domainId' is set
-            if (domainId == null)
-                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->GetRoutingEmailOutboundDomainSearch");
-            
-
-            var localVarPath = "/api/v2/routing/email/outbound/domains/{domainId}/search";
-            var localVarHttpMethod = "Get";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-
-
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
-
-            // make the HTTP request
-            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
-
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailOutboundDomainSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailOutboundDomainSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
-
-            return new ApiResponse<OutboundDomain>(localVarStatusCode,
-                localVarHeaders,
-                (OutboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundDomain)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33042,8 +32793,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Tests the custom SMTP server integration connection set on this domain 
-        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+        /// Tests the custom SMTP server integration connection set on this ACD domain 
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
@@ -33057,8 +32808,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Tests the custom SMTP server integration connection set on this domain 
-        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+        /// Tests the custom SMTP server integration connection set on this ACD domain 
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
@@ -33149,8 +32900,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Tests the custom SMTP server integration connection set on this domain 
-        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+        /// Tests the custom SMTP server integration connection set on this ACD domain 
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
@@ -33165,8 +32916,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Tests the custom SMTP server integration connection set on this domain 
-        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+        /// Tests the custom SMTP server integration connection set on this ACD domain 
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>

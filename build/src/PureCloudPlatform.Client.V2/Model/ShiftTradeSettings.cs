@@ -307,13 +307,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequiresMatchingSkills">Whether to constrain shift trades to agents with matching skills.</param>
         /// <param name="RequiresMatchingPlanningGroups">Whether to constrain shift trades to agents with matching planning groups.</param>
         /// <param name="ActivityCategoryRules">Rules that specify what to do with activity categories that are part of a shift defined in a trade.</param>
+        /// <param name="ExternalActivityRules">Rules that specify what to do with external activities that are part of a shift.</param>
+        /// <param name="ExternalActivityRuleIgnoresActivityCategoryRule">Whether external activity rules ignore activity category rules.</param>
         /// <param name="MaxTradeSpanWeeks">The maximum number of weeks a shift trade can span.</param>
         /// <param name="MaxTradesPerAgentPerWeek">The maximum number of shift trades an agent can submit per week.</param>
         /// <param name="MinMinutesBetweenShifts">The minimum number of minutes between shifts.</param>
         /// <param name="PlanningPeriodMinPaidViolations">How to handle shift trades which result in violations of planning period minimum paid time constraint.</param>
         /// <param name="PlanningPeriodMaxPaidViolations">How to handle shift trades which result in violations of planning period maximum paid time constraint.</param>
         /// <param name="MinMinutesBetweenShiftsViolations">How to handle shift trades which result in violations of minimum number of minutes between shifts constraint.</param>
-        public ShiftTradeSettings(bool? Enabled = null, bool? AutoReview = null, bool? AllowDirectTrades = null, int? MinHoursInFuture = null, UnequalPaidEnum? UnequalPaid = null, OneSidedEnum? OneSided = null, WeeklyMinPaidViolationsEnum? WeeklyMinPaidViolations = null, WeeklyMaxPaidViolationsEnum? WeeklyMaxPaidViolations = null, bool? RequiresMatchingQueues = null, bool? RequiresMatchingLanguages = null, bool? RequiresMatchingSkills = null, bool? RequiresMatchingPlanningGroups = null, List<ShiftTradeActivityRule> ActivityCategoryRules = null, int? MaxTradeSpanWeeks = null, int? MaxTradesPerAgentPerWeek = null, int? MinMinutesBetweenShifts = null, PlanningPeriodMinPaidViolationsEnum? PlanningPeriodMinPaidViolations = null, PlanningPeriodMaxPaidViolationsEnum? PlanningPeriodMaxPaidViolations = null, MinMinutesBetweenShiftsViolationsEnum? MinMinutesBetweenShiftsViolations = null)
+        public ShiftTradeSettings(bool? Enabled = null, bool? AutoReview = null, bool? AllowDirectTrades = null, int? MinHoursInFuture = null, UnequalPaidEnum? UnequalPaid = null, OneSidedEnum? OneSided = null, WeeklyMinPaidViolationsEnum? WeeklyMinPaidViolations = null, WeeklyMaxPaidViolationsEnum? WeeklyMaxPaidViolations = null, bool? RequiresMatchingQueues = null, bool? RequiresMatchingLanguages = null, bool? RequiresMatchingSkills = null, bool? RequiresMatchingPlanningGroups = null, List<ShiftTradeActivityRule> ActivityCategoryRules = null, List<ShiftTradeExternalActivityRule> ExternalActivityRules = null, bool? ExternalActivityRuleIgnoresActivityCategoryRule = null, int? MaxTradeSpanWeeks = null, int? MaxTradesPerAgentPerWeek = null, int? MinMinutesBetweenShifts = null, PlanningPeriodMinPaidViolationsEnum? PlanningPeriodMinPaidViolations = null, PlanningPeriodMaxPaidViolationsEnum? PlanningPeriodMaxPaidViolations = null, MinMinutesBetweenShiftsViolationsEnum? MinMinutesBetweenShiftsViolations = null)
         {
             this.Enabled = Enabled;
             this.AutoReview = AutoReview;
@@ -328,6 +330,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RequiresMatchingSkills = RequiresMatchingSkills;
             this.RequiresMatchingPlanningGroups = RequiresMatchingPlanningGroups;
             this.ActivityCategoryRules = ActivityCategoryRules;
+            this.ExternalActivityRules = ExternalActivityRules;
+            this.ExternalActivityRuleIgnoresActivityCategoryRule = ExternalActivityRuleIgnoresActivityCategoryRule;
             this.MaxTradeSpanWeeks = MaxTradeSpanWeeks;
             this.MaxTradesPerAgentPerWeek = MaxTradesPerAgentPerWeek;
             this.MinMinutesBetweenShifts = MinMinutesBetweenShifts;
@@ -429,6 +433,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Rules that specify what to do with external activities that are part of a shift
+        /// </summary>
+        /// <value>Rules that specify what to do with external activities that are part of a shift</value>
+        [DataMember(Name="externalActivityRules", EmitDefaultValue=false)]
+        public List<ShiftTradeExternalActivityRule> ExternalActivityRules { get; set; }
+
+
+
+        /// <summary>
+        /// Whether external activity rules ignore activity category rules
+        /// </summary>
+        /// <value>Whether external activity rules ignore activity category rules</value>
+        [DataMember(Name="externalActivityRuleIgnoresActivityCategoryRule", EmitDefaultValue=false)]
+        public bool? ExternalActivityRuleIgnoresActivityCategoryRule { get; set; }
+
+
+
+        /// <summary>
         /// The maximum number of weeks a shift trade can span
         /// </summary>
         /// <value>The maximum number of weeks a shift trade can span</value>
@@ -482,6 +504,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RequiresMatchingSkills: ").Append(RequiresMatchingSkills).Append("\n");
             sb.Append("  RequiresMatchingPlanningGroups: ").Append(RequiresMatchingPlanningGroups).Append("\n");
             sb.Append("  ActivityCategoryRules: ").Append(ActivityCategoryRules).Append("\n");
+            sb.Append("  ExternalActivityRules: ").Append(ExternalActivityRules).Append("\n");
+            sb.Append("  ExternalActivityRuleIgnoresActivityCategoryRule: ").Append(ExternalActivityRuleIgnoresActivityCategoryRule).Append("\n");
             sb.Append("  MaxTradeSpanWeeks: ").Append(MaxTradeSpanWeeks).Append("\n");
             sb.Append("  MaxTradesPerAgentPerWeek: ").Append(MaxTradesPerAgentPerWeek).Append("\n");
             sb.Append("  MinMinutesBetweenShifts: ").Append(MinMinutesBetweenShifts).Append("\n");
@@ -594,6 +618,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ActivityCategoryRules.SequenceEqual(other.ActivityCategoryRules)
                 ) &&
                 (
+                    this.ExternalActivityRules == other.ExternalActivityRules ||
+                    this.ExternalActivityRules != null &&
+                    this.ExternalActivityRules.SequenceEqual(other.ExternalActivityRules)
+                ) &&
+                (
+                    this.ExternalActivityRuleIgnoresActivityCategoryRule == other.ExternalActivityRuleIgnoresActivityCategoryRule ||
+                    this.ExternalActivityRuleIgnoresActivityCategoryRule != null &&
+                    this.ExternalActivityRuleIgnoresActivityCategoryRule.Equals(other.ExternalActivityRuleIgnoresActivityCategoryRule)
+                ) &&
+                (
                     this.MaxTradeSpanWeeks == other.MaxTradeSpanWeeks ||
                     this.MaxTradeSpanWeeks != null &&
                     this.MaxTradeSpanWeeks.Equals(other.MaxTradeSpanWeeks)
@@ -674,6 +708,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ActivityCategoryRules != null)
                     hash = hash * 59 + this.ActivityCategoryRules.GetHashCode();
+
+                if (this.ExternalActivityRules != null)
+                    hash = hash * 59 + this.ExternalActivityRules.GetHashCode();
+
+                if (this.ExternalActivityRuleIgnoresActivityCategoryRule != null)
+                    hash = hash * 59 + this.ExternalActivityRuleIgnoresActivityCategoryRule.GetHashCode();
 
                 if (this.MaxTradeSpanWeeks != null)
                     hash = hash * 59 + this.MaxTradeSpanWeeks.GetHashCode();

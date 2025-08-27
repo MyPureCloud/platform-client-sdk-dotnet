@@ -184,7 +184,49 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Campaignrightpartycontacts for "campaignRightPartyContacts"
             /// </summary>
             [EnumMember(Value = "campaignRightPartyContacts")]
-            Campaignrightpartycontacts
+            Campaignrightpartycontacts,
+            
+            /// <summary>
+            /// Enum Timeofday for "timeOfDay"
+            /// </summary>
+            [EnumMember(Value = "timeOfDay")]
+            Timeofday,
+            
+            /// <summary>
+            /// Enum Dayofweek for "dayOfWeek"
+            /// </summary>
+            [EnumMember(Value = "dayOfWeek")]
+            Dayofweek,
+            
+            /// <summary>
+            /// Enum Dayofmonth for "dayOfMonth"
+            /// </summary>
+            [EnumMember(Value = "dayOfMonth")]
+            Dayofmonth,
+            
+            /// <summary>
+            /// Enum Weekdayofmonth for "weekDayOfMonth"
+            /// </summary>
+            [EnumMember(Value = "weekDayOfMonth")]
+            Weekdayofmonth,
+            
+            /// <summary>
+            /// Enum Specificdate for "specificDate"
+            /// </summary>
+            [EnumMember(Value = "specificDate")]
+            Specificdate,
+            
+            /// <summary>
+            /// Enum Campaignruntime for "campaignRunTime"
+            /// </summary>
+            [EnumMember(Value = "campaignRunTime")]
+            Campaignruntime,
+            
+            /// <summary>
+            /// Enum Campaignwaittime for "campaignWaitTime"
+            /// </summary>
+            [EnumMember(Value = "campaignWaitTime")]
+            Campaignwaittime
         }
         /// <summary>
         /// Type of action

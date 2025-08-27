@@ -72,8 +72,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Date">A date value, must be in the format of yyyy-MM-dd, e.g. 2024-09-23. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="Datetime">A date time value, must be in the format of yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSSZ, e.g. 2024-10-02T01:01:01.111Z. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Special">A special value enum, such as Wildcard, Null, etc.</param>
+        /// <param name="Strings">A string list value.</param>
         /// <param name="Boolean">A boolean value.</param>
-        public Literal(string String = null, long? Integer = null, double? Number = null, String Date = null, DateTime? Datetime = null, SpecialEnum? Special = null, bool? Boolean = null)
+        public Literal(string String = null, long? Integer = null, double? Number = null, String Date = null, DateTime? Datetime = null, SpecialEnum? Special = null, List<string> Strings = null, bool? Boolean = null)
         {
             this.String = String;
             this.Integer = Integer;
@@ -81,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Date = Date;
             this.Datetime = Datetime;
             this.Special = Special;
+            this.Strings = Strings;
             this.Boolean = Boolean;
             
         }
@@ -135,6 +137,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// A string list value
+        /// </summary>
+        /// <value>A string list value</value>
+        [DataMember(Name="strings", EmitDefaultValue=false)]
+        public List<string> Strings { get; set; }
+
+
+
+        /// <summary>
         /// A boolean value
         /// </summary>
         /// <value>A boolean value</value>
@@ -157,6 +168,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Date: ").Append(Date).Append("\n");
             sb.Append("  Datetime: ").Append(Datetime).Append("\n");
             sb.Append("  Special: ").Append(Special).Append("\n");
+            sb.Append("  Strings: ").Append(Strings).Append("\n");
             sb.Append("  Boolean: ").Append(Boolean).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -229,6 +241,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Special.Equals(other.Special)
                 ) &&
                 (
+                    this.Strings == other.Strings ||
+                    this.Strings != null &&
+                    this.Strings.SequenceEqual(other.Strings)
+                ) &&
+                (
                     this.Boolean == other.Boolean ||
                     this.Boolean != null &&
                     this.Boolean.Equals(other.Boolean)
@@ -263,6 +280,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Special != null)
                     hash = hash * 59 + this.Special.GetHashCode();
+
+                if (this.Strings != null)
+                    hash = hash * 59 + this.Strings.GetHashCode();
 
                 if (this.Boolean != null)
                     hash = hash * 59 + this.Boolean.GetHashCode();

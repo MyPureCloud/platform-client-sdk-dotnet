@@ -15,12 +15,12 @@
 | **DateCreated** | **DateTime?** | Timestamp indicating when the escalation rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Timestamp indicating when the escalation rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Status** | **string** | The status of the escalation rule. | [optional] |
-| **OpenEscalation** | [**EscalationTarget**](EscalationTarget) | The target integration configuration used for an open social media message if the match criteria returns true. | [optional] |
-| **FacebookEscalation** | [**EscalationTarget**](EscalationTarget) | The target integration configuration used for a Facebook social media message if the match criteria returns true. | [optional] |
-| **InstagramEscalation** | [**EscalationTarget**](EscalationTarget) | The target integration configuration used for an Instagram social media message if the match criteria returns true. | [optional] |
-| **TwitterEscalation** | [**EscalationTarget**](EscalationTarget) | The target integration configuration used for a X (formerly Twitter) social media message if the match criteria returns true. | [optional] |
+| **OpenEscalation** | [**EscalationTarget**](EscalationTarget) | The target integration configuration used for an open message escalation. | [optional] |
+| **FacebookEscalation** | [**EscalationTarget**](EscalationTarget) | The target integration configuration used for a Facebook message escalation. | [optional] |
+| **InstagramEscalation** | [**EscalationTarget**](EscalationTarget) | The target integration configuration used for an Instagram message escalation. | [optional] |
+| **TwitterEscalation** | [**EscalationTarget**](EscalationTarget) | The target integration configuration used for a X (formerly Twitter) message escalation. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 240.0.0_
+_PureCloudPlatform.Client.V2 241.0.0_

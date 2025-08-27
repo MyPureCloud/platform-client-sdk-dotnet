@@ -40,6 +40,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Estimatedwaittime,
             
             /// <summary>
+            /// Enum Idleagentcount for "IdleAgentCount"
+            /// </summary>
+            [EnumMember(Value = "IdleAgentCount")]
+            Idleagentcount,
+            
+            /// <summary>
             /// Enum Servicelevel for "ServiceLevel"
             /// </summary>
             [EnumMember(Value = "ServiceLevel")]

@@ -80,6 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WhatsAppId">WhatsAppId.</param>
         /// <param name="FacebookId">FacebookId.</param>
         /// <param name="InstagramId">User information for an Instagram account.</param>
+        /// <param name="AppleOpaqueIds">User information for an Apple account.</param>
         /// <param name="ExternalIds">A list of external identifiers that identify this contact in an external system.</param>
         /// <param name="Identifiers">Identifiers claimed by this contact.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -89,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalSystemUrl">A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace..</param>
         /// <param name="Schema">The schema defining custom fields for this contact.</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
-        public ExternalContact(string Id = null, WritableStarrableDivision Division = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, InstagramId InstagramId = null, List<ExternalId> ExternalIds = null, List<ContactIdentifier> Identifiers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
+        public ExternalContact(string Id = null, WritableStarrableDivision Division = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, InstagramId InstagramId = null, List<AppleOpaqueId> AppleOpaqueIds = null, List<ExternalId> ExternalIds = null, List<ContactIdentifier> Identifiers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
         {
             this.Id = Id;
             this.Division = Division;
@@ -111,6 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.WhatsAppId = WhatsAppId;
             this.FacebookId = FacebookId;
             this.InstagramId = InstagramId;
+            this.AppleOpaqueIds = AppleOpaqueIds;
             this.ExternalIds = ExternalIds;
             this.Identifiers = Identifiers;
             this.ModifyDate = ModifyDate;
@@ -291,6 +293,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// User information for an Apple account
+        /// </summary>
+        /// <value>User information for an Apple account</value>
+        [DataMember(Name="appleOpaqueIds", EmitDefaultValue=false)]
+        public List<AppleOpaqueId> AppleOpaqueIds { get; set; }
+
+
+
+        /// <summary>
         /// A list of external identifiers that identify this contact in an external system
         /// </summary>
         /// <value>A list of external identifiers that identify this contact in an external system</value>
@@ -462,6 +473,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  WhatsAppId: ").Append(WhatsAppId).Append("\n");
             sb.Append("  FacebookId: ").Append(FacebookId).Append("\n");
             sb.Append("  InstagramId: ").Append(InstagramId).Append("\n");
+            sb.Append("  AppleOpaqueIds: ").Append(AppleOpaqueIds).Append("\n");
             sb.Append("  ExternalIds: ").Append(ExternalIds).Append("\n");
             sb.Append("  Identifiers: ").Append(Identifiers).Append("\n");
             sb.Append("  ModifyDate: ").Append(ModifyDate).Append("\n");
@@ -620,6 +632,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InstagramId.Equals(other.InstagramId)
                 ) &&
                 (
+                    this.AppleOpaqueIds == other.AppleOpaqueIds ||
+                    this.AppleOpaqueIds != null &&
+                    this.AppleOpaqueIds.SequenceEqual(other.AppleOpaqueIds)
+                ) &&
+                (
                     this.ExternalIds == other.ExternalIds ||
                     this.ExternalIds != null &&
                     this.ExternalIds.SequenceEqual(other.ExternalIds)
@@ -776,6 +793,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InstagramId != null)
                     hash = hash * 59 + this.InstagramId.GetHashCode();
+
+                if (this.AppleOpaqueIds != null)
+                    hash = hash * 59 + this.AppleOpaqueIds.GetHashCode();
 
                 if (this.ExternalIds != null)
                     hash = hash * 59 + this.ExternalIds.GetHashCode();

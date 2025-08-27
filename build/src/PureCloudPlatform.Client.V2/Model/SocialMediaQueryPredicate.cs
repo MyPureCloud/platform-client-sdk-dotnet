@@ -118,7 +118,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Text for "text"
             /// </summary>
             [EnumMember(Value = "text")]
-            Text
+            Text,
+            
+            /// <summary>
+            /// Enum Moderationflag for "moderationFlag"
+            /// </summary>
+            [EnumMember(Value = "moderationFlag")]
+            Moderationflag
         }
         /// <summary>
         /// Optional operator, default is matches

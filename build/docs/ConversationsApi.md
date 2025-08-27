@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteAnalyticsConversationsAggregatesJob**](#DeleteAnalyticsConversationsAggregatesJob) | **Delete** /api/v2/analytics/conversations/aggregates/jobs/{jobId} | Delete/cancel an async request for conversation aggregates |
 | [**DeleteAnalyticsConversationsDetailsJob**](#DeleteAnalyticsConversationsDetailsJob) | **Delete** /api/v2/analytics/conversations/details/jobs/{jobId} | Delete/cancel an async details job |
+| [**DeleteConversation**](#DeleteConversation) | **Delete** /api/v2/conversations/{conversationId} | Update a conversation by disconnecting all of the participants |
 | [**DeleteConversationParticipantCode**](#DeleteConversationParticipantCode) | **Delete** /api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode} | Delete a code used to add a communication to this participant |
 | [**DeleteConversationParticipantFlaggedreason**](#DeleteConversationParticipantFlaggedreason) | **Delete** /api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason | Remove flagged reason from conversation participant. |
 | [**DeleteConversationsCallParticipantConsult**](#DeleteConversationsCallParticipantConsult) | **Delete** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Cancel the transfer |
@@ -123,12 +124,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsVideosMeeting**](#GetConversationsVideosMeeting) | **Get** /api/v2/conversations/videos/meetings/{meetingId} | Gets a record for a given meetingId |
 | [**PatchConversationParticipant**](#PatchConversationParticipant) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId} | Update a participant. |
 | [**PatchConversationParticipantAttributes**](#PatchConversationParticipantAttributes) | **Patch** /api/v2/conversations/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
+| [**PatchConversationRecordingstate**](#PatchConversationRecordingstate) | **Patch** /api/v2/conversations/{conversationId}/recordingstate | Update a conversation by setting its recording state |
 | [**PatchConversationSecureattributes**](#PatchConversationSecureattributes) | **Patch** /api/v2/conversations/{conversationId}/secureattributes | Update the secure attributes on a conversation. |
 | [**PatchConversationSummaryEngagements**](#PatchConversationSummaryEngagements) | **Patch** /api/v2/conversations/{conversationId}/summaries/{summaryId}/engagements | Update agent&#39;s engagement for the summary. |
 | [**PatchConversationSummaryFeedback**](#PatchConversationSummaryFeedback) | **Patch** /api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback | Update the feedback for the summary. |
 | [**PatchConversationUtilizationlabel**](#PatchConversationUtilizationlabel) | **Patch** /api/v2/conversations/{conversationId}/utilizationlabel | Update the utilization label on a conversation. When there is no value provided, the system default label is applied |
 | [**PatchConversationsAftercallworkConversationIdParticipantCommunication**](#PatchConversationsAftercallworkConversationIdParticipantCommunication) | **Patch** /api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId} | Update after-call work for this conversation communication. |
 | [**PatchConversationsCall**](#PatchConversationsCall) | **Patch** /api/v2/conversations/calls/{conversationId} | Update a conversation by setting its recording state, merging in other conversations to create a conference, or disconnecting all of the participants |
+| [**PatchConversationsCallConference**](#PatchConversationsCallConference) | **Patch** /api/v2/conversations/calls/{conversationId}/conference | Update a conversation by merging in other conversations to create a conference |
 | [**PatchConversationsCallParticipant**](#PatchConversationsCallParticipant) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsCallParticipantAttributes**](#PatchConversationsCallParticipantAttributes) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsCallParticipantCommunication**](#PatchConversationsCallParticipantCommunication) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. This endpoint does not update wrapup. |
@@ -402,6 +405,67 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **jobId** | **string**| jobId |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteConversation
+
+> void DeleteConversation (string conversationId)
+
+
+Update a conversation by disconnecting all of the participants
+
+Requires ANY permissions: 
+
+* conversation:communication:disconnect
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+
+            try
+            { 
+                // Update a conversation by disconnecting all of the participants
+                apiInstance.DeleteConversation(conversationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
 
 ### Return type
 
@@ -7733,6 +7797,69 @@ namespace Example
 void (empty response body)
 
 
+## PatchConversationRecordingstate
+
+> void PatchConversationRecordingstate (string conversationId, SetRecordingState body)
+
+
+Update a conversation by setting its recording state
+
+Requires ANY permissions: 
+
+* conversation:recording:pauseOthers
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationRecordingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversation ID
+            var body = new SetRecordingState(); // SetRecordingState | SetRecordingState
+
+            try
+            { 
+                // Update a conversation by setting its recording state
+                apiInstance.PatchConversationRecordingstate(conversationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationRecordingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversation ID |  |
+| **body** | [**SetRecordingState**](SetRecordingState)| SetRecordingState |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PatchConversationSecureattributes
 
 > **string** PatchConversationSecureattributes (string conversationId, ConversationSecureAttributes body)
@@ -8121,6 +8248,69 @@ namespace Example
 ### Return type
 
 [**Conversation**](Conversation)
+
+
+## PatchConversationsCallConference
+
+> void PatchConversationsCallConference (string conversationId, UpdateConferenceRequest body)
+
+
+Update a conversation by merging in other conversations to create a conference
+
+Requires ANY permissions: 
+
+* conversation:conference:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsCallConferenceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var body = new UpdateConferenceRequest(); // UpdateConferenceRequest | UpdateConferenceRequest
+
+            try
+            { 
+                // Update a conversation by merging in other conversations to create a conference
+                apiInstance.PatchConversationsCallConference(conversationId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsCallConference: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **body** | [**UpdateConferenceRequest**](UpdateConferenceRequest)| UpdateConferenceRequest |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## PatchConversationsCallParticipant
@@ -18037,4 +18227,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 240.0.0_
+_PureCloudPlatform.Client.V2 241.0.0_

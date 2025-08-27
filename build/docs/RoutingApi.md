@@ -43,7 +43,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingEmailDomains**](#GetRoutingEmailDomains) | **Get** /api/v2/routing/email/domains | Get domains |
 | [**GetRoutingEmailOutboundDomain**](#GetRoutingEmailOutboundDomain) | **Get** /api/v2/routing/email/outbound/domains/{domainId} | Get domain |
 | [**GetRoutingEmailOutboundDomainActivation**](#GetRoutingEmailOutboundDomainActivation) | **Get** /api/v2/routing/email/outbound/domains/{domainId}/activation | Get activation status (cname + dkim) of an outbound domain |
-| [**GetRoutingEmailOutboundDomainSearch**](#GetRoutingEmailOutboundDomainSearch) | **Get** /api/v2/routing/email/outbound/domains/{domainId}/search | Search a domain across organizations |
 | [**GetRoutingEmailOutboundDomains**](#GetRoutingEmailOutboundDomains) | **Get** /api/v2/routing/email/outbound/domains | Get outbound domains |
 | [**GetRoutingEmailSetup**](#GetRoutingEmailSetup) | **Get** /api/v2/routing/email/setup | Get email setup |
 | [**GetRoutingLanguage**](#GetRoutingLanguage) | **Get** /api/v2/routing/languages/{languageId} | Get a routing language |
@@ -123,7 +122,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingAssessments**](#PostRoutingAssessments) | **Post** /api/v2/routing/assessments | Create a benefit assessment. |
 | [**PostRoutingAssessmentsJobs**](#PostRoutingAssessmentsJobs) | **Post** /api/v2/routing/assessments/jobs | Create a benefit assessment job. |
 | [**PostRoutingEmailDomainRoutes**](#PostRoutingEmailDomainRoutes) | **Post** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
-| [**PostRoutingEmailDomainTestconnection**](#PostRoutingEmailDomainTestconnection) | **Post** /api/v2/routing/email/domains/{domainId}/testconnection | Tests the custom SMTP server integration connection set on this domain |
+| [**PostRoutingEmailDomainTestconnection**](#PostRoutingEmailDomainTestconnection) | **Post** /api/v2/routing/email/domains/{domainId}/testconnection | Tests the custom SMTP server integration connection set on this ACD domain |
 | [**PostRoutingEmailDomains**](#PostRoutingEmailDomains) | **Post** /api/v2/routing/email/domains | Create a domain |
 | [**PostRoutingEmailOutboundDomains**](#PostRoutingEmailOutboundDomains) | **Post** /api/v2/routing/email/outbound/domains | Create a domain |
 | [**PostRoutingEmailOutboundDomainsSimulated**](#PostRoutingEmailOutboundDomainsSimulated) | **Post** /api/v2/routing/email/outbound/domains/simulated | Create a simulated domain |
@@ -2464,68 +2463,6 @@ namespace Example
 ### Return type
 
 [**EmailOutboundDomainResult**](EmailOutboundDomainResult)
-
-
-## GetRoutingEmailOutboundDomainSearch
-
-> [**OutboundDomain**](OutboundDomain) GetRoutingEmailOutboundDomainSearch (string domainId)
-
-
-Search a domain across organizations
-
-Requires ALL permissions: 
-
-* routing:email:manage
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetRoutingEmailOutboundDomainSearchExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new RoutingApi();
-            var domainId = domainId_example;  // string | domain ID
-
-            try
-            { 
-                // Search a domain across organizations
-                OutboundDomain result = apiInstance.GetRoutingEmailOutboundDomainSearch(domainId);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailOutboundDomainSearch: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **domainId** | **string**| domain ID |  |
-
-### Return type
-
-[**OutboundDomain**](OutboundDomain)
 
 
 ## GetRoutingEmailOutboundDomains
@@ -7736,9 +7673,9 @@ namespace Example
 > [**TestMessage**](TestMessage) PostRoutingEmailDomainTestconnection (string domainId, TestMessage body = null)
 
 
-Tests the custom SMTP server integration connection set on this domain
+Tests the custom SMTP server integration connection set on this ACD domain
 
-The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server. If the body is specified, there will be an attempt to send an email message to the server.
+The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server used by the ACD domain. If the body is specified, there will be an attempt to send an email message to the server.
 
 Requires ALL permissions: 
 
@@ -7771,7 +7708,7 @@ namespace Example
 
             try
             { 
-                // Tests the custom SMTP server integration connection set on this domain
+                // Tests the custom SMTP server integration connection set on this ACD domain
                 TestMessage result = apiInstance.PostRoutingEmailDomainTestconnection(domainId, body);
                 Debug.WriteLine(result);
             }
@@ -10210,4 +10147,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 240.0.0_
+_PureCloudPlatform.Client.V2 241.0.0_

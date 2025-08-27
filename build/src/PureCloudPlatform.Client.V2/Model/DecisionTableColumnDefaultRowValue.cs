@@ -67,10 +67,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="DecisionTableColumnDefaultRowValue" /> class.
         /// </summary>
         /// <param name="Value">A default string value for this column, will be cast to appropriate type according to the relevant contract schema property..</param>
+        /// <param name="Values">A default list of values for this column, items will be cast to appropriate type according to the relevant contract schema property.</param>
         /// <param name="Special">A default special value enum for this column..</param>
-        public DecisionTableColumnDefaultRowValue(string Value = null, SpecialEnum? Special = null)
+        public DecisionTableColumnDefaultRowValue(string Value = null, List<string> Values = null, SpecialEnum? Special = null)
         {
             this.Value = Value;
+            this.Values = Values;
             this.Special = Special;
             
         }
@@ -86,6 +88,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// A default list of values for this column, items will be cast to appropriate type according to the relevant contract schema property
+        /// </summary>
+        /// <value>A default list of values for this column, items will be cast to appropriate type according to the relevant contract schema property</value>
+        [DataMember(Name="values", EmitDefaultValue=false)]
+        public List<string> Values { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -97,6 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class DecisionTableColumnDefaultRowValue {\n");
 
             sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  Values: ").Append(Values).Append("\n");
             sb.Append("  Special: ").Append(Special).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -144,6 +156,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Value.Equals(other.Value)
                 ) &&
                 (
+                    this.Values == other.Values ||
+                    this.Values != null &&
+                    this.Values.SequenceEqual(other.Values)
+                ) &&
+                (
                     this.Special == other.Special ||
                     this.Special != null &&
                     this.Special.Equals(other.Special)
@@ -163,6 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Value != null)
                     hash = hash * 59 + this.Value.GetHashCode();
+
+                if (this.Values != null)
+                    hash = hash * 59 + this.Values.GetHashCode();
 
                 if (this.Special != null)
                     hash = hash * 59 + this.Special.GetHashCode();

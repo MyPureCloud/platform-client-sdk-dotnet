@@ -82,6 +82,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The rank of the event definition
+        /// </summary>
+        /// <value>The rank of the event definition</value>
+        [DataMember(Name="rank", EmitDefaultValue=false)]
+        public int? Rank { get; private set; }
+
+
+
+        /// <summary>
+        /// The display name of the event definition
+        /// </summary>
+        /// <value>The display name of the event definition</value>
+        [DataMember(Name="displayName", EmitDefaultValue=false)]
+        public string DisplayName { get; private set; }
+
+
+
+        /// <summary>
         /// The description of this event definition
         /// </summary>
         /// <value>The description of this event definition</value>
@@ -119,6 +137,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Source: ").Append(Source).Append("\n");
+            sb.Append("  Rank: ").Append(Rank).Append("\n");
+            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  JsonSchema: ").Append(JsonSchema).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -178,6 +198,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Source.Equals(other.Source)
                 ) &&
                 (
+                    this.Rank == other.Rank ||
+                    this.Rank != null &&
+                    this.Rank.Equals(other.Rank)
+                ) &&
+                (
+                    this.DisplayName == other.DisplayName ||
+                    this.DisplayName != null &&
+                    this.DisplayName.Equals(other.DisplayName)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -213,6 +243,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Source != null)
                     hash = hash * 59 + this.Source.GetHashCode();
+
+                if (this.Rank != null)
+                    hash = hash * 59 + this.Rank.GetHashCode();
+
+                if (this.DisplayName != null)
+                    hash = hash * 59 + this.DisplayName.GetHashCode();
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();

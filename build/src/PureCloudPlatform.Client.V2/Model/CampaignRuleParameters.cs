@@ -61,7 +61,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Lessthanequalto for "lessThanEqualTo"
             /// </summary>
             [EnumMember(Value = "lessThanEqualTo")]
-            Lessthanequalto
+            Lessthanequalto,
+            
+            /// <summary>
+            /// Enum Before for "before"
+            /// </summary>
+            [EnumMember(Value = "before")]
+            Before,
+            
+            /// <summary>
+            /// Enum After for "after"
+            /// </summary>
+            [EnumMember(Value = "after")]
+            After,
+            
+            /// <summary>
+            /// Enum Between for "between"
+            /// </summary>
+            [EnumMember(Value = "between")]
+            Between,
+            
+            /// <summary>
+            /// Enum In for "in"
+            /// </summary>
+            [EnumMember(Value = "in")]
+            In
         }
         /// <summary>
         /// The priority to set a campaign to. Required for the 'setCampaignPriority' action.

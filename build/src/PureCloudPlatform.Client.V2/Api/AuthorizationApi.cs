@@ -412,9 +412,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
-        /// <returns>PermissionCollectionEntityListing</returns>
+        /// <returns>DomainPermissionEntityListing</returns>
         
-        PermissionCollectionEntityListing GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
+        DomainPermissionEntityListing GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
 
         /// <summary>
         /// Get all permissions.
@@ -427,9 +427,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
-        /// <returns>ApiResponse of PermissionCollectionEntityListing</returns>
+        /// <returns>ApiResponse of DomainPermissionEntityListing</returns>
         
-        ApiResponse<PermissionCollectionEntityListing> GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
+        ApiResponse<DomainPermissionEntityListing> GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
 
         /// <summary>
         /// Get a page of access policies for an organization
@@ -2012,9 +2012,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
-        /// <returns>Task of PermissionCollectionEntityListing</returns>
+        /// <returns>Task of DomainPermissionEntityListing</returns>
         
-        System.Threading.Tasks.Task<PermissionCollectionEntityListing> GetAuthorizationPermissionsAsync (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
+        System.Threading.Tasks.Task<DomainPermissionEntityListing> GetAuthorizationPermissionsAsync (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
 
         /// <summary>
         /// Get all permissions.
@@ -2027,9 +2027,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
-        /// <returns>Task of ApiResponse (PermissionCollectionEntityListing)</returns>
+        /// <returns>Task of ApiResponse (DomainPermissionEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
+        System.Threading.Tasks.Task<ApiResponse<DomainPermissionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null);
 
         /// <summary>
         /// Get a page of access policies for an organization
@@ -6259,11 +6259,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
-        /// <returns>PermissionCollectionEntityListing</returns>
+        /// <returns>DomainPermissionEntityListing</returns>
         
-        public PermissionCollectionEntityListing GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
+        public DomainPermissionEntityListing GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         {
-             ApiResponse<PermissionCollectionEntityListing> localVarResponse = GetAuthorizationPermissionsWithHttpInfo(pageSize, pageNumber, queryType, query);
+             ApiResponse<DomainPermissionEntityListing> localVarResponse = GetAuthorizationPermissionsWithHttpInfo(pageSize, pageNumber, queryType, query);
              return localVarResponse.Data;
         }
 
@@ -6276,9 +6276,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
-        /// <returns>ApiResponse of PermissionCollectionEntityListing</returns>
+        /// <returns>ApiResponse of DomainPermissionEntityListing</returns>
         
-        public ApiResponse< PermissionCollectionEntityListing > GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
+        public ApiResponse< DomainPermissionEntityListing > GetAuthorizationPermissionsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         { 
 
             var localVarPath = "/api/v2/authorization/permissions";
@@ -6347,9 +6347,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPermissions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PermissionCollectionEntityListing>(localVarStatusCode,
+            return new ApiResponse<DomainPermissionEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (PermissionCollectionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionCollectionEntityListing)),
+                (DomainPermissionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainPermissionEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -6364,11 +6364,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
-        /// <returns>Task of PermissionCollectionEntityListing</returns>
+        /// <returns>Task of DomainPermissionEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<PermissionCollectionEntityListing> GetAuthorizationPermissionsAsync (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
+        public async System.Threading.Tasks.Task<DomainPermissionEntityListing> GetAuthorizationPermissionsAsync (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         {
-             ApiResponse<PermissionCollectionEntityListing> localVarResponse = await GetAuthorizationPermissionsAsyncWithHttpInfo(pageSize, pageNumber, queryType, query);
+             ApiResponse<DomainPermissionEntityListing> localVarResponse = await GetAuthorizationPermissionsAsyncWithHttpInfo(pageSize, pageNumber, queryType, query);
              return localVarResponse.Data;
 
         }
@@ -6382,9 +6382,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="queryType">Query filter type (optional)</param>
         /// <param name="query">Comma-separated list of permissions or domains to query (optional)</param>
-        /// <returns>Task of ApiResponse (PermissionCollectionEntityListing)</returns>
+        /// <returns>Task of ApiResponse (DomainPermissionEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DomainPermissionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
         { 
 
             var localVarPath = "/api/v2/authorization/permissions";
@@ -6453,9 +6453,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetAuthorizationPermissions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<PermissionCollectionEntityListing>(localVarStatusCode,
+            return new ApiResponse<DomainPermissionEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (PermissionCollectionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(PermissionCollectionEntityListing)),
+                (DomainPermissionEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DomainPermissionEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

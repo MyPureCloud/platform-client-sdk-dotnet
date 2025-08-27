@@ -58,6 +58,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Activitylateststarttimeminutesfromshiftstart,
             
             /// <summary>
+            /// Enum Activitymaximumlengthfromshiftendminutes for "ActivityMaximumLengthFromShiftEndMinutes"
+            /// </summary>
+            [EnumMember(Value = "ActivityMaximumLengthFromShiftEndMinutes")]
+            Activitymaximumlengthfromshiftendminutes,
+            
+            /// <summary>
             /// Enum Activityminimumlengthfromshiftendminutes for "ActivityMinimumLengthFromShiftEndMinutes"
             /// </summary>
             [EnumMember(Value = "ActivityMinimumLengthFromShiftEndMinutes")]

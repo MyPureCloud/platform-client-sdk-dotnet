@@ -13,17 +13,17 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A Typing event.
+    /// AdditionalMatchCriteria
     /// </summary>
     [DataContract]
-    public partial class EventTyping :  IEquatable<EventTyping>
+    public partial class AdditionalMatchCriteria :  IEquatable<AdditionalMatchCriteria>
     {
         /// <summary>
-        /// Describes the type of Typing event.
+        /// Escalate message based on media presence. Not setting any value will escalate all types of msg.
         /// </summary>
-        /// <value>Describes the type of Typing event.</value>
+        /// <value>Escalate message based on media presence. Not setting any value will escalate all types of msg.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum TypeEnum
+        public enum MediaFilterEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -34,43 +34,45 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum On for "On"
+            /// Enum Withmedia for "WithMedia"
             /// </summary>
-            [EnumMember(Value = "On")]
-            On
+            [EnumMember(Value = "WithMedia")]
+            Withmedia,
+            
+            /// <summary>
+            /// Enum Withoutmedia for "WithoutMedia"
+            /// </summary>
+            [EnumMember(Value = "WithoutMedia")]
+            Withoutmedia
         }
         /// <summary>
-        /// Describes the type of Typing event.
+        /// Escalate message based on media presence. Not setting any value will escalate all types of msg.
         /// </summary>
-        /// <value>Describes the type of Typing event.</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-
+        /// <value>Escalate message based on media presence. Not setting any value will escalate all types of msg.</value>
+        [DataMember(Name="mediaFilter", EmitDefaultValue=false)]
+        public MediaFilterEnum? MediaFilter { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="EventTyping" /> class.
+        /// Initializes a new instance of the <see cref="AdditionalMatchCriteria" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected EventTyping() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="EventTyping" /> class.
-        /// </summary>
-        /// <param name="Type">Describes the type of Typing event. (required).</param>
-        public EventTyping(TypeEnum? Type = null)
+        /// <param name="Topics">List of topics with specific data ingestion rules to filter messages for escalation..</param>
+        /// <param name="MediaFilter">Escalate message based on media presence. Not setting any value will escalate all types of msg..</param>
+        public AdditionalMatchCriteria(List<TopicCriteria> Topics = null, MediaFilterEnum? MediaFilter = null)
         {
-            this.Type = Type;
+            this.Topics = Topics;
+            this.MediaFilter = MediaFilter;
             
         }
         
 
 
-
-
         /// <summary>
-        /// The duration of the Typing event in milliseconds.
+        /// List of topics with specific data ingestion rules to filter messages for escalation.
         /// </summary>
-        /// <value>The duration of the Typing event in milliseconds.</value>
-        [DataMember(Name="duration", EmitDefaultValue=false)]
-        public long? Duration { get; private set; }
+        /// <value>List of topics with specific data ingestion rules to filter messages for escalation.</value>
+        [DataMember(Name="topics", EmitDefaultValue=false)]
+        public List<TopicCriteria> Topics { get; set; }
+
+
 
 
         /// <summary>
@@ -80,10 +82,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EventTyping {\n");
+            sb.Append("class AdditionalMatchCriteria {\n");
 
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Duration: ").Append(Duration).Append("\n");
+            sb.Append("  Topics: ").Append(Topics).Append("\n");
+            sb.Append("  MediaFilter: ").Append(MediaFilter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,15 +111,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EventTyping);
+            return this.Equals(obj as AdditionalMatchCriteria);
         }
 
         /// <summary>
-        /// Returns true if EventTyping instances are equal
+        /// Returns true if AdditionalMatchCriteria instances are equal
         /// </summary>
-        /// <param name="other">Instance of EventTyping to be compared</param>
+        /// <param name="other">Instance of AdditionalMatchCriteria to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EventTyping other)
+        public bool Equals(AdditionalMatchCriteria other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -125,14 +127,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.Topics == other.Topics ||
+                    this.Topics != null &&
+                    this.Topics.SequenceEqual(other.Topics)
                 ) &&
                 (
-                    this.Duration == other.Duration ||
-                    this.Duration != null &&
-                    this.Duration.Equals(other.Duration)
+                    this.MediaFilter == other.MediaFilter ||
+                    this.MediaFilter != null &&
+                    this.MediaFilter.Equals(other.MediaFilter)
                 );
         }
 
@@ -147,11 +149,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                if (this.Topics != null)
+                    hash = hash * 59 + this.Topics.GetHashCode();
 
-                if (this.Duration != null)
-                    hash = hash * 59 + this.Duration.GetHashCode();
+                if (this.MediaFilter != null)
+                    hash = hash * 59 + this.MediaFilter.GetHashCode();
 
                 return hash;
             }

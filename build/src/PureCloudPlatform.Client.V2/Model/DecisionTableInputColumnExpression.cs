@@ -103,7 +103,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Notcontains for "NotContains"
             /// </summary>
             [EnumMember(Value = "NotContains")]
-            Notcontains
+            Notcontains,
+            
+            /// <summary>
+            /// Enum Containsany for "ContainsAny"
+            /// </summary>
+            [EnumMember(Value = "ContainsAny")]
+            Containsany,
+            
+            /// <summary>
+            /// Enum Notcontainsany for "NotContainsAny"
+            /// </summary>
+            [EnumMember(Value = "NotContainsAny")]
+            Notcontainsany,
+            
+            /// <summary>
+            /// Enum Containsall for "ContainsAll"
+            /// </summary>
+            [EnumMember(Value = "ContainsAll")]
+            Containsall,
+            
+            /// <summary>
+            /// Enum Notcontainsall for "NotContainsAll"
+            /// </summary>
+            [EnumMember(Value = "NotContainsAll")]
+            Notcontainsall,
+            
+            /// <summary>
+            /// Enum Containsexactly for "ContainsExactly"
+            /// </summary>
+            [EnumMember(Value = "ContainsExactly")]
+            Containsexactly,
+            
+            /// <summary>
+            /// Enum Notcontainsexactly for "NotContainsExactly"
+            /// </summary>
+            [EnumMember(Value = "NotContainsExactly")]
+            Notcontainsexactly
         }
         /// <summary>
         /// A comparator used to join the left and right sides of a logical condition.

@@ -46,6 +46,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Userinput,
             
             /// <summary>
+            /// Enum Richmediainput for "RichMediaInput"
+            /// </summary>
+            [EnumMember(Value = "RichMediaInput")]
+            Richmediainput,
+            
+            /// <summary>
             /// Enum Error for "Error"
             /// </summary>
             [EnumMember(Value = "Error")]

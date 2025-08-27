@@ -13,18 +13,18 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DomainPermissionCollection
+    /// DomainPermissionCollectionDomainPermission
     /// </summary>
     [DataContract]
-    public partial class DomainPermissionCollection :  IEquatable<DomainPermissionCollection>
+    public partial class DomainPermissionCollectionDomainPermission :  IEquatable<DomainPermissionCollectionDomainPermission>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainPermissionCollection" /> class.
+        /// Initializes a new instance of the <see cref="DomainPermissionCollectionDomainPermission" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="Domain">Domain.</param>
         /// <param name="PermissionMap">PermissionMap.</param>
-        public DomainPermissionCollection(string Name = null, string Domain = null, Dictionary<string, List<DomainPermission>> PermissionMap = null)
+        public DomainPermissionCollectionDomainPermission(string Name = null, string Domain = null, Dictionary<string, List<DomainPermission>> PermissionMap = null)
         {
             this.Name = Name;
             this.Domain = Domain;
@@ -82,7 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DomainPermissionCollection {\n");
+            sb.Append("class DomainPermissionCollectionDomainPermission {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -114,15 +114,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DomainPermissionCollection);
+            return this.Equals(obj as DomainPermissionCollectionDomainPermission);
         }
 
         /// <summary>
-        /// Returns true if DomainPermissionCollection instances are equal
+        /// Returns true if DomainPermissionCollectionDomainPermission instances are equal
         /// </summary>
-        /// <param name="other">Instance of DomainPermissionCollection to be compared</param>
+        /// <param name="other">Instance of DomainPermissionCollectionDomainPermission to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DomainPermissionCollection other)
+        public bool Equals(DomainPermissionCollectionDomainPermission other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -988,7 +988,7 @@ namespace Example
 
 ## GetAuthorizationPermissions
 
-> [**PermissionCollectionEntityListing**](PermissionCollectionEntityListing) GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
+> [**DomainPermissionEntityListing**](DomainPermissionEntityListing) GetAuthorizationPermissions (int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
 
 
 Get all permissions.
@@ -1028,7 +1028,7 @@ namespace Example
             try
             { 
                 // Get all permissions.
-                PermissionCollectionEntityListing result = apiInstance.GetAuthorizationPermissions(pageSize, pageNumber, queryType, query);
+                DomainPermissionEntityListing result = apiInstance.GetAuthorizationPermissions(pageSize, pageNumber, queryType, query);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1052,7 +1052,7 @@ namespace Example
 
 ### Return type
 
-[**PermissionCollectionEntityListing**](PermissionCollectionEntityListing)
+[**DomainPermissionEntityListing**](DomainPermissionEntityListing)
 
 
 ## GetAuthorizationPolicies
@@ -3918,4 +3918,4 @@ namespace Example
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatform.Client.V2 240.0.0_
+_PureCloudPlatform.Client.V2 241.0.0_

@@ -259,7 +259,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Survey for "Survey"
             /// </summary>
             [EnumMember(Value = "Survey")]
-            Survey
+            Survey,
+            
+            /// <summary>
+            /// Enum Snippetrecording for "SnippetRecording"
+            /// </summary>
+            [EnumMember(Value = "SnippetRecording")]
+            Snippetrecording
         }
         /// <summary>
         /// Name of the service that logged this audit message.

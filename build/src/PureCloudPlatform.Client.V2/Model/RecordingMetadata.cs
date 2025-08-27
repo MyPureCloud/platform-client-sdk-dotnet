@@ -307,8 +307,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DeleteDate">The date the recording will be deleted. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ExportDate">The date the recording will be exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ExportedDate">The date the recording was exported. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="MaxAllowedRestorationsForOrg">How many archive restorations the organization is allowed to have..</param>
-        /// <param name="RemainingRestorationsAllowedForOrg">The remaining archive restorations the organization has..</param>
+        /// <param name="MaxAllowedRestorationsForOrg">How many archive restorations the organization is allowed to have. Deprecated - Always returns 10000 since the restoration limit is no longer enforced..</param>
+        /// <param name="RemainingRestorationsAllowedForOrg">The remaining archive restorations the organization has. Deprecated - Always returns 10000 since the restoration limit is no longer enforced..</param>
         /// <param name="SessionId">The session id represents an external resource id, such as email, call, chat, etc.</param>
         /// <param name="Region">The region the source recording is stored in.</param>
         public RecordingMetadata(string Name = null, string ConversationId = null, string Path = null, string StartTime = null, string EndTime = null, string Media = null, MediaSubtypeEnum? MediaSubtype = null, string MediaSubject = null, List<Annotation> Annotations = null, FileStateEnum? FileState = null, DateTime? RestoreExpirationTime = null, DateTime? ArchiveDate = null, ArchiveMediumEnum? ArchiveMedium = null, DateTime? DeleteDate = null, DateTime? ExportDate = null, DateTime? ExportedDate = null, int? MaxAllowedRestorationsForOrg = null, int? RemainingRestorationsAllowedForOrg = null, string SessionId = null, RegionEnum? Region = null)
@@ -467,18 +467,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// How many archive restorations the organization is allowed to have.
+        /// How many archive restorations the organization is allowed to have. Deprecated - Always returns 10000 since the restoration limit is no longer enforced.
         /// </summary>
-        /// <value>How many archive restorations the organization is allowed to have.</value>
+        /// <value>How many archive restorations the organization is allowed to have. Deprecated - Always returns 10000 since the restoration limit is no longer enforced.</value>
         [DataMember(Name="maxAllowedRestorationsForOrg", EmitDefaultValue=false)]
         public int? MaxAllowedRestorationsForOrg { get; set; }
 
 
 
         /// <summary>
-        /// The remaining archive restorations the organization has.
+        /// The remaining archive restorations the organization has. Deprecated - Always returns 10000 since the restoration limit is no longer enforced.
         /// </summary>
-        /// <value>The remaining archive restorations the organization has.</value>
+        /// <value>The remaining archive restorations the organization has. Deprecated - Always returns 10000 since the restoration limit is no longer enforced.</value>
         [DataMember(Name="remainingRestorationsAllowedForOrg", EmitDefaultValue=false)]
         public int? RemainingRestorationsAllowedForOrg { get; set; }
 

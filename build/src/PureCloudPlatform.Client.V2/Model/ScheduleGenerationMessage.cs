@@ -316,6 +316,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Unabletoproduceagentscheduleduetounavailabletimes,
             
             /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxshiftstartandpaiddurationvariancefromagenthistory for "UnableToSchedulePlanningPeriodMaxShiftStartAndPaidDurationVarianceFromAgentHistory"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxShiftStartAndPaidDurationVarianceFromAgentHistory")]
+            Unabletoscheduleplanningperiodmaxshiftstartandpaiddurationvariancefromagenthistory,
+            
+            /// <summary>
             /// Enum Unabletoscheduleplanningperiodmaxshiftstarttimevariancefromagenthistory for "UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromAgentHistory"
             /// </summary>
             [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromAgentHistory")]

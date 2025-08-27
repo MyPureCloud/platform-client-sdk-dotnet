@@ -69,10 +69,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Timestamp indicating when the escalation rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Timestamp indicating when the escalation rule was last updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Status">The status of the escalation rule..</param>
-        /// <param name="OpenEscalation">The target integration configuration used for an open social media message if the match criteria returns true..</param>
-        /// <param name="FacebookEscalation">The target integration configuration used for a Facebook social media message if the match criteria returns true..</param>
-        /// <param name="InstagramEscalation">The target integration configuration used for an Instagram social media message if the match criteria returns true..</param>
-        /// <param name="TwitterEscalation">The target integration configuration used for a X (formerly Twitter) social media message if the match criteria returns true..</param>
+        /// <param name="OpenEscalation">The target integration configuration used for an open message escalation..</param>
+        /// <param name="FacebookEscalation">The target integration configuration used for a Facebook message escalation..</param>
+        /// <param name="InstagramEscalation">The target integration configuration used for an Instagram message escalation..</param>
+        /// <param name="TwitterEscalation">The target integration configuration used for a X (formerly Twitter) message escalation..</param>
         public EscalationRuleResponse(string Id = null, string Name = null, string MatchCriteria = null, int? Priority = null, string DivisionId = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, EscalationTarget OpenEscalation = null, EscalationTarget FacebookEscalation = null, EscalationTarget InstagramEscalation = null, EscalationTarget TwitterEscalation = null)
         {
             this.Id = Id;
@@ -168,36 +168,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The target integration configuration used for an open social media message if the match criteria returns true.
+        /// The target integration configuration used for an open message escalation.
         /// </summary>
-        /// <value>The target integration configuration used for an open social media message if the match criteria returns true.</value>
+        /// <value>The target integration configuration used for an open message escalation.</value>
         [DataMember(Name="openEscalation", EmitDefaultValue=false)]
         public EscalationTarget OpenEscalation { get; set; }
 
 
 
         /// <summary>
-        /// The target integration configuration used for a Facebook social media message if the match criteria returns true.
+        /// The target integration configuration used for a Facebook message escalation.
         /// </summary>
-        /// <value>The target integration configuration used for a Facebook social media message if the match criteria returns true.</value>
+        /// <value>The target integration configuration used for a Facebook message escalation.</value>
         [DataMember(Name="facebookEscalation", EmitDefaultValue=false)]
         public EscalationTarget FacebookEscalation { get; set; }
 
 
 
         /// <summary>
-        /// The target integration configuration used for an Instagram social media message if the match criteria returns true.
+        /// The target integration configuration used for an Instagram message escalation.
         /// </summary>
-        /// <value>The target integration configuration used for an Instagram social media message if the match criteria returns true.</value>
+        /// <value>The target integration configuration used for an Instagram message escalation.</value>
         [DataMember(Name="instagramEscalation", EmitDefaultValue=false)]
         public EscalationTarget InstagramEscalation { get; set; }
 
 
 
         /// <summary>
-        /// The target integration configuration used for a X (formerly Twitter) social media message if the match criteria returns true.
+        /// The target integration configuration used for a X (formerly Twitter) message escalation.
         /// </summary>
-        /// <value>The target integration configuration used for a X (formerly Twitter) social media message if the match criteria returns true.</value>
+        /// <value>The target integration configuration used for a X (formerly Twitter) message escalation.</value>
         [DataMember(Name="twitterEscalation", EmitDefaultValue=false)]
         public EscalationTarget TwitterEscalation { get; set; }
 

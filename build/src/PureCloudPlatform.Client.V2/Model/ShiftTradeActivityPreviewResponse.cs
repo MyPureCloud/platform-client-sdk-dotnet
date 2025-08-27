@@ -19,6 +19,45 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ShiftTradeActivityPreviewResponse :  IEquatable<ShiftTradeActivityPreviewResponse>
     {
         /// <summary>
+        /// The type of the external activity associated with this activity, if applicable
+        /// </summary>
+        /// <value>The type of the external activity associated with this activity, if applicable</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ExternalActivityTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Activityplan for "ActivityPlan"
+            /// </summary>
+            [EnumMember(Value = "ActivityPlan")]
+            Activityplan,
+            
+            /// <summary>
+            /// Enum Coaching for "Coaching"
+            /// </summary>
+            [EnumMember(Value = "Coaching")]
+            Coaching,
+            
+            /// <summary>
+            /// Enum Learning for "Learning"
+            /// </summary>
+            [EnumMember(Value = "Learning")]
+            Learning
+        }
+        /// <summary>
+        /// The type of the external activity associated with this activity, if applicable
+        /// </summary>
+        /// <value>The type of the external activity associated with this activity, if applicable</value>
+        [DataMember(Name="externalActivityType", EmitDefaultValue=false)]
+        public ExternalActivityTypeEnum? ExternalActivityType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeActivityPreviewResponse" /> class.
         /// </summary>
         /// <param name="StartDate">The start date and time of this activity. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
@@ -26,13 +65,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActivityCodeId">The ID of the activity code for this activity.</param>
         /// <param name="CountsAsPaidTime">Whether this activity counts as paid time.</param>
         /// <param name="PayableMinutes">Payable minutes for this activity.</param>
-        public ShiftTradeActivityPreviewResponse(DateTime? StartDate = null, int? LengthMinutes = null, string ActivityCodeId = null, bool? CountsAsPaidTime = null, int? PayableMinutes = null)
+        /// <param name="ExternalActivityType">The type of the external activity associated with this activity, if applicable.</param>
+        /// <param name="ExternalActivityId">The ID of the external activity associated with this activity, if applicable.</param>
+        public ShiftTradeActivityPreviewResponse(DateTime? StartDate = null, int? LengthMinutes = null, string ActivityCodeId = null, bool? CountsAsPaidTime = null, int? PayableMinutes = null, ExternalActivityTypeEnum? ExternalActivityType = null, string ExternalActivityId = null)
         {
             this.StartDate = StartDate;
             this.LengthMinutes = LengthMinutes;
             this.ActivityCodeId = ActivityCodeId;
             this.CountsAsPaidTime = CountsAsPaidTime;
             this.PayableMinutes = PayableMinutes;
+            this.ExternalActivityType = ExternalActivityType;
+            this.ExternalActivityId = ExternalActivityId;
             
         }
         
@@ -82,6 +125,17 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? PayableMinutes { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// The ID of the external activity associated with this activity, if applicable
+        /// </summary>
+        /// <value>The ID of the external activity associated with this activity, if applicable</value>
+        [DataMember(Name="externalActivityId", EmitDefaultValue=false)]
+        public string ExternalActivityId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +150,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActivityCodeId: ").Append(ActivityCodeId).Append("\n");
             sb.Append("  CountsAsPaidTime: ").Append(CountsAsPaidTime).Append("\n");
             sb.Append("  PayableMinutes: ").Append(PayableMinutes).Append("\n");
+            sb.Append("  ExternalActivityType: ").Append(ExternalActivityType).Append("\n");
+            sb.Append("  ExternalActivityId: ").Append(ExternalActivityId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +216,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PayableMinutes == other.PayableMinutes ||
                     this.PayableMinutes != null &&
                     this.PayableMinutes.Equals(other.PayableMinutes)
+                ) &&
+                (
+                    this.ExternalActivityType == other.ExternalActivityType ||
+                    this.ExternalActivityType != null &&
+                    this.ExternalActivityType.Equals(other.ExternalActivityType)
+                ) &&
+                (
+                    this.ExternalActivityId == other.ExternalActivityId ||
+                    this.ExternalActivityId != null &&
+                    this.ExternalActivityId.Equals(other.ExternalActivityId)
                 );
         }
 
@@ -188,6 +254,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PayableMinutes != null)
                     hash = hash * 59 + this.PayableMinutes.GetHashCode();
+
+                if (this.ExternalActivityType != null)
+                    hash = hash * 59 + this.ExternalActivityType.GetHashCode();
+
+                if (this.ExternalActivityId != null)
+                    hash = hash * 59 + this.ExternalActivityId.GetHashCode();
 
                 return hash;
             }

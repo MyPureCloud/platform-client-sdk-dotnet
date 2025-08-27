@@ -79,7 +79,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Transferuser for "TransferUser"
             /// </summary>
             [EnumMember(Value = "TransferUser")]
-            Transferuser
+            Transferuser,
+            
+            /// <summary>
+            /// Enum Sessionexpired for "SessionExpired"
+            /// </summary>
+            [EnumMember(Value = "SessionExpired")]
+            Sessionexpired
         }
         /// <summary>
         /// Indicates how this communication was ended.

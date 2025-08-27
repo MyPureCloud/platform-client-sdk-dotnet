@@ -13,17 +13,17 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A Video event.
+    /// DataIngestionRuleCriteria
     /// </summary>
     [DataContract]
-    public partial class EventVideo :  IEquatable<EventVideo>
+    public partial class DataIngestionRuleCriteria :  IEquatable<DataIngestionRuleCriteria>
     {
         /// <summary>
-        /// Describes the type of Video event.
+        /// The effective platform for the data ingestion rule.
         /// </summary>
-        /// <value>Describes the type of Video event.</value>
+        /// <value>The effective platform for the data ingestion rule.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum TypeEnum
+        public enum EffectivePlatformEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -34,52 +34,56 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Offering for "Offering"
+            /// Enum Facebook for "Facebook"
             /// </summary>
-            [EnumMember(Value = "Offering")]
-            Offering,
+            [EnumMember(Value = "Facebook")]
+            Facebook,
             
             /// <summary>
-            /// Enum Offeringexpired for "OfferingExpired"
+            /// Enum Instagram for "Instagram"
             /// </summary>
-            [EnumMember(Value = "OfferingExpired")]
-            Offeringexpired,
+            [EnumMember(Value = "Instagram")]
+            Instagram,
             
             /// <summary>
-            /// Enum Offeringaccepted for "OfferingAccepted"
+            /// Enum Twitter for "Twitter"
             /// </summary>
-            [EnumMember(Value = "OfferingAccepted")]
-            Offeringaccepted,
+            [EnumMember(Value = "Twitter")]
+            Twitter,
             
             /// <summary>
-            /// Enum Offeringrejected for "OfferingRejected"
+            /// Enum Open for "Open"
             /// </summary>
-            [EnumMember(Value = "OfferingRejected")]
-            Offeringrejected
+            [EnumMember(Value = "Open")]
+            Open,
+            
+            /// <summary>
+            /// Enum Googlebusinessprofile for "GoogleBusinessProfile"
+            /// </summary>
+            [EnumMember(Value = "GoogleBusinessProfile")]
+            Googlebusinessprofile
         }
         /// <summary>
-        /// Describes the type of Video event.
+        /// The effective platform for the data ingestion rule.
         /// </summary>
-        /// <value>Describes the type of Video event.</value>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
+        /// <value>The effective platform for the data ingestion rule.</value>
+        [DataMember(Name="effectivePlatform", EmitDefaultValue=false)]
+        public EffectivePlatformEnum? EffectivePlatform { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="EventVideo" /> class.
+        /// Initializes a new instance of the <see cref="DataIngestionRuleCriteria" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected EventVideo() { }
+        protected DataIngestionRuleCriteria() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="EventVideo" /> class.
+        /// Initializes a new instance of the <see cref="DataIngestionRuleCriteria" /> class.
         /// </summary>
-        /// <param name="Type">Describes the type of Video event. (required).</param>
-        /// <param name="OfferingId">The Video offering ID..</param>
-        /// <param name="Jwt">The Video offering JWT token..</param>
-        public EventVideo(TypeEnum? Type = null, string OfferingId = null, string Jwt = null)
+        /// <param name="EffectivePlatform">The effective platform for the data ingestion rule. (required).</param>
+        /// <param name="Id">The ID of the data ingestion rule. (required).</param>
+        public DataIngestionRuleCriteria(EffectivePlatformEnum? EffectivePlatform = null, string Id = null)
         {
-            this.Type = Type;
-            this.OfferingId = OfferingId;
-            this.Jwt = Jwt;
+            this.EffectivePlatform = EffectivePlatform;
+            this.Id = Id;
             
         }
         
@@ -88,20 +92,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The Video offering ID.
+        /// The ID of the data ingestion rule.
         /// </summary>
-        /// <value>The Video offering ID.</value>
-        [DataMember(Name="offeringId", EmitDefaultValue=false)]
-        public string OfferingId { get; set; }
-
-
-
-        /// <summary>
-        /// The Video offering JWT token.
-        /// </summary>
-        /// <value>The Video offering JWT token.</value>
-        [DataMember(Name="jwt", EmitDefaultValue=false)]
-        public string Jwt { get; set; }
+        /// <value>The ID of the data ingestion rule.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
 
 
         /// <summary>
@@ -111,11 +106,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EventVideo {\n");
+            sb.Append("class DataIngestionRuleCriteria {\n");
 
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  OfferingId: ").Append(OfferingId).Append("\n");
-            sb.Append("  Jwt: ").Append(Jwt).Append("\n");
+            sb.Append("  EffectivePlatform: ").Append(EffectivePlatform).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,15 +135,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EventVideo);
+            return this.Equals(obj as DataIngestionRuleCriteria);
         }
 
         /// <summary>
-        /// Returns true if EventVideo instances are equal
+        /// Returns true if DataIngestionRuleCriteria instances are equal
         /// </summary>
-        /// <param name="other">Instance of EventVideo to be compared</param>
+        /// <param name="other">Instance of DataIngestionRuleCriteria to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EventVideo other)
+        public bool Equals(DataIngestionRuleCriteria other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -157,19 +151,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
+                    this.EffectivePlatform == other.EffectivePlatform ||
+                    this.EffectivePlatform != null &&
+                    this.EffectivePlatform.Equals(other.EffectivePlatform)
                 ) &&
                 (
-                    this.OfferingId == other.OfferingId ||
-                    this.OfferingId != null &&
-                    this.OfferingId.Equals(other.OfferingId)
-                ) &&
-                (
-                    this.Jwt == other.Jwt ||
-                    this.Jwt != null &&
-                    this.Jwt.Equals(other.Jwt)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
                 );
         }
 
@@ -184,14 +173,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+                if (this.EffectivePlatform != null)
+                    hash = hash * 59 + this.EffectivePlatform.GetHashCode();
 
-                if (this.OfferingId != null)
-                    hash = hash * 59 + this.OfferingId.GetHashCode();
-
-                if (this.Jwt != null)
-                    hash = hash * 59 + this.Jwt.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
 
                 return hash;
             }
