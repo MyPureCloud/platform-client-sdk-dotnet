@@ -11,8 +11,9 @@
 | **CnameVerificationResult** | [**VerificationResult**](VerificationResult) | CNAME registration Status | [optional] |
 | **DkimVerificationResult** | [**VerificationResult**](VerificationResult) | DKIM registration Status | [optional] |
 | **SenderType** | **string** | Sender Type | [optional] |
+| **EmailSetting** | [**EmailSetting**](EmailSetting) | The email settings associated with this domain. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_

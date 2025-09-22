@@ -29,10 +29,11 @@
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **Capabilities** | [**PhoneCapabilities**](PhoneCapabilities) |  | [optional] |
 | **WebRtcUser** | [**DomainEntityRef**](DomainEntityRef) | This is the user associated with a WebRTC type phone.  It is required for all WebRTC phones. | [optional] |
+| **StandAlone** | **bool?** | Boolean indicating whether the phone is standAlone. | [optional] |
 | **PrimaryEdge** | [**Edge**](Edge) |  | [optional] |
 | **SecondaryEdge** | [**Edge**](Edge) |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_

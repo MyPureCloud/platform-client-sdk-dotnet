@@ -1,6 +1,6 @@
-# OutboundDomainRequest
+# OutboundDomainCreateRequest
 
-## ININ.PureCloudApi.Model.OutboundDomainRequest
+## ININ.PureCloudApi.Model.OutboundDomainCreateRequest
 
 ## Properties
 
@@ -8,8 +8,9 @@
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | Unique Id of the domain such as: example.com | |
 | **SenderType** | **string** | Sender Type | [optional] |
+| **EmailSetting** | [**EmailSettingReference**](EmailSettingReference) | The email settings to associate with this domain. | [optional] |
 | **Name** | **string** | The domain such as: example.com | |
 
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_

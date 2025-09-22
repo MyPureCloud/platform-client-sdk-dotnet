@@ -2012,7 +2012,7 @@ This endpoint does require any parameters.
 
 ## GetRoutingEmailDomain
 
-> [**InboundDomain**](InboundDomain) GetRoutingEmailDomain (string domainId)
+> [**InboundDomain**](InboundDomain) GetRoutingEmailDomain (string domainId, string expand = null)
 
 
 Get domain
@@ -2044,11 +2044,12 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var domainId = domainId_example;  // string | domain ID
+            var expand = expand_example;  // string | Expand options. Valid values: settings (optional) 
 
             try
             { 
                 // Get domain
-                InboundDomain result = apiInstance.GetRoutingEmailDomain(domainId);
+                InboundDomain result = apiInstance.GetRoutingEmailDomain(domainId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2066,6 +2067,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
+| **expand** | **string**| Expand options. Valid values: settings | [optional] <br />**Values**: settings |
 
 ### Return type
 
@@ -2275,7 +2277,7 @@ namespace Example
 
 ## GetRoutingEmailDomains
 
-> [**InboundDomainEntityListing**](InboundDomainEntityListing) GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
+> [**InboundDomainEntityListing**](InboundDomainEntityListing) GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null, string expand = null)
 
 
 Get domains
@@ -2310,11 +2312,12 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var excludeStatus = true;  // bool? | Exclude MX record data (optional)  (default to false)
             var filter = filter_example;  // string | Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional) 
+            var expand = expand_example;  // string | Expand options. Valid values: settings (optional) 
 
             try
             { 
                 // Get domains
-                InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains(pageSize, pageNumber, excludeStatus, filter);
+                InboundDomainEntityListing result = apiInstance.GetRoutingEmailDomains(pageSize, pageNumber, excludeStatus, filter, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2335,6 +2338,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **excludeStatus** | **bool?**| Exclude MX record data | [optional] [default to false] |
 | **filter** | **string**| Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. | [optional]  |
+| **expand** | **string**| Expand options. Valid values: settings | [optional] <br />**Values**: settings |
 
 ### Return type
 
@@ -2343,7 +2347,7 @@ namespace Example
 
 ## GetRoutingEmailOutboundDomain
 
-> [**OutboundDomain**](OutboundDomain) GetRoutingEmailOutboundDomain (string domainId)
+> [**OutboundDomain**](OutboundDomain) GetRoutingEmailOutboundDomain (string domainId, string expand = null)
 
 
 Get domain
@@ -2375,11 +2379,12 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var domainId = domainId_example;  // string | domain ID
+            var expand = expand_example;  // string | Expand options. Valid values: settings (optional) 
 
             try
             { 
                 // Get domain
-                OutboundDomain result = apiInstance.GetRoutingEmailOutboundDomain(domainId);
+                OutboundDomain result = apiInstance.GetRoutingEmailOutboundDomain(domainId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2397,6 +2402,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **domainId** | **string**| domain ID |  |
+| **expand** | **string**| Expand options. Valid values: settings | [optional] <br />**Values**: settings |
 
 ### Return type
 
@@ -2467,7 +2473,7 @@ namespace Example
 
 ## GetRoutingEmailOutboundDomains
 
-> [**OutboundDomainEntityListing**](OutboundDomainEntityListing) GetRoutingEmailOutboundDomains (int? pageSize = null, int? pageNumber = null, string filter = null)
+> [**OutboundDomainEntityListing**](OutboundDomainEntityListing) GetRoutingEmailOutboundDomains (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null)
 
 
 Get outbound domains
@@ -2501,11 +2507,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var filter = filter_example;  // string | Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional) 
+            var expand = expand_example;  // string | Expand options. Valid values: settings (optional) 
 
             try
             { 
                 // Get outbound domains
-                OutboundDomainEntityListing result = apiInstance.GetRoutingEmailOutboundDomains(pageSize, pageNumber, filter);
+                OutboundDomainEntityListing result = apiInstance.GetRoutingEmailOutboundDomains(pageSize, pageNumber, filter, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2525,6 +2532,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **filter** | **string**| Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. | [optional]  |
+| **expand** | **string**| Expand options. Valid values: settings | [optional] <br />**Values**: settings |
 
 ### Return type
 
@@ -7736,7 +7744,7 @@ namespace Example
 
 ## PostRoutingEmailDomains
 
-> [**InboundDomain**](InboundDomain) PostRoutingEmailDomains (InboundDomain body)
+> [**InboundDomain**](InboundDomain) PostRoutingEmailDomains (InboundDomainCreateRequest body)
 
 
 Create a domain
@@ -7767,7 +7775,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var body = new InboundDomain(); // InboundDomain | Domain
+            var body = new InboundDomainCreateRequest(); // InboundDomainCreateRequest | Domain
 
             try
             { 
@@ -7789,7 +7797,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**InboundDomain**](InboundDomain)| Domain |  |
+| **body** | [**InboundDomainCreateRequest**](InboundDomainCreateRequest)| Domain |  |
 
 ### Return type
 
@@ -7798,7 +7806,7 @@ namespace Example
 
 ## PostRoutingEmailOutboundDomains
 
-> [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PostRoutingEmailOutboundDomains (OutboundDomainRequest body)
+> [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PostRoutingEmailOutboundDomains (OutboundDomainCreateRequest body)
 
 
 Create a domain
@@ -7829,7 +7837,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var body = new OutboundDomainRequest(); // OutboundDomainRequest | Domain
+            var body = new OutboundDomainCreateRequest(); // OutboundDomainCreateRequest | Domain
 
             try
             { 
@@ -7851,7 +7859,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OutboundDomainRequest**](OutboundDomainRequest)| Domain |  |
+| **body** | [**OutboundDomainCreateRequest**](OutboundDomainCreateRequest)| Domain |  |
 
 ### Return type
 
@@ -7860,7 +7868,7 @@ namespace Example
 
 ## PostRoutingEmailOutboundDomainsSimulated
 
-> [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PostRoutingEmailOutboundDomainsSimulated (OutboundDomainRequest body)
+> [**EmailOutboundDomainResult**](EmailOutboundDomainResult) PostRoutingEmailOutboundDomainsSimulated (OutboundDomainCreateRequest body)
 
 
 Create a simulated domain
@@ -7891,7 +7899,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var body = new OutboundDomainRequest(); // OutboundDomainRequest | Domain
+            var body = new OutboundDomainCreateRequest(); // OutboundDomainCreateRequest | Domain
 
             try
             { 
@@ -7913,7 +7921,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**OutboundDomainRequest**](OutboundDomainRequest)| Domain |  |
+| **body** | [**OutboundDomainCreateRequest**](OutboundDomainCreateRequest)| Domain |  |
 
 ### Return type
 
@@ -10147,4 +10155,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_
