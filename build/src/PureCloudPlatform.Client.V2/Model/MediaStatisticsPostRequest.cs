@@ -58,12 +58,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ClientInfo">Client information associated with media endpoint.</param>
         /// <param name="Rtp">Statistics of sent and received RTP. Reference: https://www.rfc-editor.org/rfc/rfc3550 (required).</param>
         /// <param name="ReconnectAttempts">Media reconnect attempt count.</param>
-        public MediaStatisticsPostRequest(SourceTypeEnum? SourceType = null, MediaStatisticsClientInfo ClientInfo = null, MediaRtpStatistics Rtp = null, int? ReconnectAttempts = null)
+        /// <param name="DateCreated">Media endpoint statistics creation time. Format: yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        public MediaStatisticsPostRequest(SourceTypeEnum? SourceType = null, MediaStatisticsClientInfo ClientInfo = null, MediaRtpStatistics Rtp = null, int? ReconnectAttempts = null, DateTime? DateCreated = null)
         {
             this.SourceType = SourceType;
             this.ClientInfo = ClientInfo;
             this.Rtp = Rtp;
             this.ReconnectAttempts = ReconnectAttempts;
+            this.DateCreated = DateCreated;
             
         }
         
@@ -97,6 +99,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? ReconnectAttempts { get; set; }
 
 
+
+        /// <summary>
+        /// Media endpoint statistics creation time. Format: yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Media endpoint statistics creation time. Format: yyyy-MM-dd&#39;T&#39;HH:mm:ss.SSS&#39;Z&#39;. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -110,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ClientInfo: ").Append(ClientInfo).Append("\n");
             sb.Append("  Rtp: ").Append(Rtp).Append("\n");
             sb.Append("  ReconnectAttempts: ").Append(ReconnectAttempts).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -169,6 +181,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ReconnectAttempts == other.ReconnectAttempts ||
                     this.ReconnectAttempts != null &&
                     this.ReconnectAttempts.Equals(other.ReconnectAttempts)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
                 );
         }
 
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ReconnectAttempts != null)
                     hash = hash * 59 + this.ReconnectAttempts.GetHashCode();
+
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
 
                 return hash;
             }

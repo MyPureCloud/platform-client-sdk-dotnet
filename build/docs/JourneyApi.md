@@ -52,6 +52,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyViewsEventdefinition**](#GetJourneyViewsEventdefinition) | **Get** /api/v2/journey/views/eventdefinitions/{eventDefinitionId} | Get an Event Definition |
 | [**GetJourneyViewsEventdefinitions**](#GetJourneyViewsEventdefinitions) | **Get** /api/v2/journey/views/eventdefinitions | Get a list of Event Definitions |
 | [**GetJourneyViewsJobs**](#GetJourneyViewsJobs) | **Get** /api/v2/journey/views/jobs | Get the jobs for an organization. |
+| [**GetJourneyViewsJobsMe**](#GetJourneyViewsJobsMe) | **Get** /api/v2/journey/views/jobs/me | Get my jobs |
 | [**GetJourneyViewsSchedules**](#GetJourneyViewsSchedules) | **Get** /api/v2/journey/views/schedules | Get the journey schedules for an organization. |
 | [**PatchJourneyActionmap**](#PatchJourneyActionmap) | **Patch** /api/v2/journey/actionmaps/{actionMapId} | Update single action map. |
 | [**PatchJourneyActiontarget**](#PatchJourneyActiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
@@ -3047,6 +3048,74 @@ namespace Example
 [**JourneyViewJobListing**](JourneyViewJobListing)
 
 
+## GetJourneyViewsJobsMe
+
+> [**JourneyViewJobListing**](JourneyViewJobListing) GetJourneyViewsJobsMe (int? pageNumber = null, int? pageSize = null, string interval = null, string statuses = null)
+
+
+Get my jobs
+
+Requires ALL permissions: 
+
+* journey:viewsJobs:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetJourneyViewsJobsMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new JourneyApi();
+            var pageNumber = 56;  // int? | The number of the page to return (optional)  (default to 1)
+            var pageSize = 56;  // int? | Max number of entities to return (optional)  (default to 25)
+            var interval = 2023-07-17T00:00:00Z/2023-07-18T00:00:00Z;  // string | An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. (optional) 
+            var statuses = statuses&#x3D;Accepted,Executing,Complete,Failed,Scheduled;  // string | Job statuses to filter for (optional) 
+
+            try
+            { 
+                // Get my jobs
+                JourneyViewJobListing result = apiInstance.GetJourneyViewsJobsMe(pageNumber, pageSize, interval, statuses);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling JourneyApi.GetJourneyViewsJobsMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageNumber** | **int?**| The number of the page to return | [optional] [default to 1] |
+| **pageSize** | **int?**| Max number of entities to return | [optional] [default to 25] |
+| **interval** | **string**| An absolute timeframe for filtering the jobs, expressed as an ISO 8601 interval. | [optional]  |
+| **statuses** | **string**| Job statuses to filter for | [optional]  |
+
+### Return type
+
+[**JourneyViewJobListing**](JourneyViewJobListing)
+
+
 ## GetJourneyViewsSchedules
 
 > [**JourneyViewScheduleListing**](JourneyViewScheduleListing) GetJourneyViewsSchedules (int? pageNumber = null, int? pageSize = null)
@@ -4810,4 +4879,4 @@ namespace Example
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_

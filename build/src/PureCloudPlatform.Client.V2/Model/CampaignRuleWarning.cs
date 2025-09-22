@@ -103,7 +103,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Noemailcontenttemplate for "NoEmailContentTemplate"
             /// </summary>
             [EnumMember(Value = "NoEmailContentTemplate")]
-            Noemailcontenttemplate
+            Noemailcontenttemplate,
+            
+            /// <summary>
+            /// Enum Conditionswaitingforlinesonlyprevieworexternal for "ConditionsWaitingForLinesOnlyPreviewOrExternal"
+            /// </summary>
+            [EnumMember(Value = "ConditionsWaitingForLinesOnlyPreviewOrExternal")]
+            Conditionswaitingforlinesonlyprevieworexternal,
+            
+            /// <summary>
+            /// Enum Conditionswaitingforagentsonlyagentless for "ConditionsWaitingForAgentsOnlyAgentless"
+            /// </summary>
+            [EnumMember(Value = "ConditionsWaitingForAgentsOnlyAgentless")]
+            Conditionswaitingforagentsonlyagentless
         }
         /// <summary>
         /// Warning code for this warning.

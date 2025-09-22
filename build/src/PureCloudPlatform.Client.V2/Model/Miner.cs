@@ -121,7 +121,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Dech for "de-ch"
             /// </summary>
             [EnumMember(Value = "de-ch")]
-            Dech
+            Dech,
+            
+            /// <summary>
+            /// Enum Jajp for "ja-jp"
+            /// </summary>
+            [EnumMember(Value = "ja-jp")]
+            Jajp,
+            
+            /// <summary>
+            /// Enum Kokr for "ko-kr"
+            /// </summary>
+            [EnumMember(Value = "ko-kr")]
+            Kokr
         }
         /// <summary>
         /// Type of the miner, intent or topic.

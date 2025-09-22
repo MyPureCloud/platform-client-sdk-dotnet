@@ -18,6 +18,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLanguageunderstandingDomainVersionReport**](#GetLanguageunderstandingDomainVersionReport) | **Get** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/report | Retrieved quality report for the specified NLU Domain Version |
 | [**GetLanguageunderstandingDomainVersions**](#GetLanguageunderstandingDomainVersions) | **Get** /api/v2/languageunderstanding/domains/{domainId}/versions | Get all NLU Domain Versions for a given Domain. |
 | [**GetLanguageunderstandingDomains**](#GetLanguageunderstandingDomains) | **Get** /api/v2/languageunderstanding/domains | Get all NLU Domains. |
+| [**GetLanguageunderstandingIgnorephrase**](#GetLanguageunderstandingIgnorephrase) | **Get** /api/v2/languageunderstanding/ignorephrases/{languageCode} | Get list of all ignored phrases of the specified language code |
+| [**GetLanguageunderstandingIgnoretopic**](#GetLanguageunderstandingIgnoretopic) | **Get** /api/v2/languageunderstanding/ignoretopics/{languageCode} | Get list of all ignored topics of the specified language code |
 | [**GetLanguageunderstandingMiner**](#GetLanguageunderstandingMiner) | **Get** /api/v2/languageunderstanding/miners/{minerId} | Get information about a miner. |
 | [**GetLanguageunderstandingMinerDraft**](#GetLanguageunderstandingMinerDraft) | **Get** /api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId} | Get information about a draft. |
 | [**GetLanguageunderstandingMinerDrafts**](#GetLanguageunderstandingMinerDrafts) | **Get** /api/v2/languageunderstanding/miners/{minerId}/drafts | Retrieve the list of drafts created. |
@@ -36,6 +38,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostLanguageunderstandingDomainVersionTrain**](#PostLanguageunderstandingDomainVersionTrain) | **Post** /api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/train | Train the draft NLU Domain Version. |
 | [**PostLanguageunderstandingDomainVersions**](#PostLanguageunderstandingDomainVersions) | **Post** /api/v2/languageunderstanding/domains/{domainId}/versions | Create an NLU Domain Version. |
 | [**PostLanguageunderstandingDomains**](#PostLanguageunderstandingDomains) | **Post** /api/v2/languageunderstanding/domains | Create an NLU Domain. |
+| [**PostLanguageunderstandingIgnorephrase**](#PostLanguageunderstandingIgnorephrase) | **Post** /api/v2/languageunderstanding/ignorephrases/{languageCode} | Add phrases to the ignored phrases list |
+| [**PostLanguageunderstandingIgnorephraseRemove**](#PostLanguageunderstandingIgnorephraseRemove) | **Post** /api/v2/languageunderstanding/ignorephrases/{languageCode}/remove | Delete ignored phrases |
+| [**PostLanguageunderstandingIgnoretopic**](#PostLanguageunderstandingIgnoretopic) | **Post** /api/v2/languageunderstanding/ignoretopics/{languageCode} | Add topics to the ignored topics list |
+| [**PostLanguageunderstandingIgnoretopicRemove**](#PostLanguageunderstandingIgnoretopicRemove) | **Post** /api/v2/languageunderstanding/ignoretopics/{languageCode}/remove | Delete ignored topics |
 | [**PostLanguageunderstandingMinerDrafts**](#PostLanguageunderstandingMinerDrafts) | **Post** /api/v2/languageunderstanding/miners/{minerId}/drafts | Create a new draft resource. |
 | [**PostLanguageunderstandingMinerExecute**](#PostLanguageunderstandingMinerExecute) | **Post** /api/v2/languageunderstanding/miners/{minerId}/execute | Start the mining process. Specify date range pair with mediaType, queueIds, participantType for mining data from Genesys Cloud. Specify only uploadKey for mining through an external file. |
 | [**PostLanguageunderstandingMiners**](#PostLanguageunderstandingMiners) | **Post** /api/v2/languageunderstanding/miners | Create a unique miner. |
@@ -838,6 +844,150 @@ namespace Example
 ### Return type
 
 [**NluDomainListing**](NluDomainListing)
+
+
+## GetLanguageunderstandingIgnorephrase
+
+> [**IgnoredMinedPhraseListing**](IgnoredMinedPhraseListing) GetLanguageunderstandingIgnorephrase (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null)
+
+
+Get list of all ignored phrases of the specified language code
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredPhrase:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingIgnorephraseExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var languageCode = languageCode_example;  // string | Language Code
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 200. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number for the listing (optional)  (default to 1)
+            var text = text_example;  // string | The phrase text filter applied to the listing (optional) 
+            var sortOrder = sortOrder_example;  // string | The sort order for the listing (optional)  (default to desc)
+            var sortBy = sortBy_example;  // string | The field to sort by for the listing (optional)  (default to dateModified)
+
+            try
+            { 
+                // Get list of all ignored phrases of the specified language code
+                IgnoredMinedPhraseListing result = apiInstance.GetLanguageunderstandingIgnorephrase(languageCode, pageSize, pageNumber, text, sortOrder, sortBy);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingIgnorephrase: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageCode** | **string**| Language Code |  |
+| **pageSize** | **int?**| The page size for the listing. The max that will be returned is 200. | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number for the listing | [optional] [default to 1] |
+| **text** | **string**| The phrase text filter applied to the listing | [optional]  |
+| **sortOrder** | **string**| The sort order for the listing | [optional] [default to desc]<br />**Values**: asc, desc |
+| **sortBy** | **string**| The field to sort by for the listing | [optional] [default to dateModified]<br />**Values**: dateModified, text |
+
+### Return type
+
+[**IgnoredMinedPhraseListing**](IgnoredMinedPhraseListing)
+
+
+## GetLanguageunderstandingIgnoretopic
+
+> [**IgnoredMinedTopicListing**](IgnoredMinedTopicListing) GetLanguageunderstandingIgnoretopic (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null)
+
+
+Get list of all ignored topics of the specified language code
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredTopic:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetLanguageunderstandingIgnoretopicExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var languageCode = languageCode_example;  // string | Language Code
+            var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 200. (optional)  (default to 25)
+            var pageNumber = 56;  // int? | The page number for the listing (optional)  (default to 1)
+            var text = text_example;  // string | The topic text filter applied to the listing (optional) 
+            var sortOrder = sortOrder_example;  // string | The sort order for the listing (optional)  (default to desc)
+            var sortBy = sortBy_example;  // string | The field to sort by for the listing (optional)  (default to dateModified)
+
+            try
+            { 
+                // Get list of all ignored topics of the specified language code
+                IgnoredMinedTopicListing result = apiInstance.GetLanguageunderstandingIgnoretopic(languageCode, pageSize, pageNumber, text, sortOrder, sortBy);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.GetLanguageunderstandingIgnoretopic: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageCode** | **string**| Language Code |  |
+| **pageSize** | **int?**| The page size for the listing. The max that will be returned is 200. | [optional] [default to 25] |
+| **pageNumber** | **int?**| The page number for the listing | [optional] [default to 1] |
+| **text** | **string**| The topic text filter applied to the listing | [optional]  |
+| **sortOrder** | **string**| The sort order for the listing | [optional] [default to desc]<br />**Values**: asc, desc |
+| **sortBy** | **string**| The field to sort by for the listing | [optional] [default to dateModified]<br />**Values**: dateModified, text |
+
+### Return type
+
+[**IgnoredMinedTopicListing**](IgnoredMinedTopicListing)
 
 
 ## GetLanguageunderstandingMiner
@@ -1998,6 +2148,260 @@ namespace Example
 [**NluDomain**](NluDomain)
 
 
+## PostLanguageunderstandingIgnorephrase
+
+> [**IgnorePhrasesResponse**](IgnorePhrasesResponse) PostLanguageunderstandingIgnorephrase (string languageCode, IgnorePhrasesRequest body)
+
+
+Add phrases to the ignored phrases list
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredPhrase:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLanguageunderstandingIgnorephraseExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var languageCode = languageCode_example;  // string | Language Code
+            var body = new IgnorePhrasesRequest(); // IgnorePhrasesRequest | Request body containing phrases to be ignored
+
+            try
+            { 
+                // Add phrases to the ignored phrases list
+                IgnorePhrasesResponse result = apiInstance.PostLanguageunderstandingIgnorephrase(languageCode, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.PostLanguageunderstandingIgnorephrase: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageCode** | **string**| Language Code |  |
+| **body** | [**IgnorePhrasesRequest**](IgnorePhrasesRequest)| Request body containing phrases to be ignored |  |
+
+### Return type
+
+[**IgnorePhrasesResponse**](IgnorePhrasesResponse)
+
+
+## PostLanguageunderstandingIgnorephraseRemove
+
+> void PostLanguageunderstandingIgnorephraseRemove (string languageCode, RemoveEntitiesRequest body)
+
+
+Delete ignored phrases
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredPhrase:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLanguageunderstandingIgnorephraseRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var languageCode = languageCode_example;  // string | Language Code
+            var body = new RemoveEntitiesRequest(); // RemoveEntitiesRequest | Request body containing entities to be removed
+
+            try
+            { 
+                // Delete ignored phrases
+                apiInstance.PostLanguageunderstandingIgnorephraseRemove(languageCode, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.PostLanguageunderstandingIgnorephraseRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageCode** | **string**| Language Code |  |
+| **body** | [**RemoveEntitiesRequest**](RemoveEntitiesRequest)| Request body containing entities to be removed |  |
+
+### Return type
+
+void (empty response body)
+
+
+## PostLanguageunderstandingIgnoretopic
+
+> [**IgnoreTopicsResponse**](IgnoreTopicsResponse) PostLanguageunderstandingIgnoretopic (string languageCode, IgnoreTopicsRequest body)
+
+
+Add topics to the ignored topics list
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredTopic:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLanguageunderstandingIgnoretopicExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var languageCode = languageCode_example;  // string | Language Code
+            var body = new IgnoreTopicsRequest(); // IgnoreTopicsRequest | Request body containing topics to be ignored
+
+            try
+            { 
+                // Add topics to the ignored topics list
+                IgnoreTopicsResponse result = apiInstance.PostLanguageunderstandingIgnoretopic(languageCode, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.PostLanguageunderstandingIgnoretopic: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageCode** | **string**| Language Code |  |
+| **body** | [**IgnoreTopicsRequest**](IgnoreTopicsRequest)| Request body containing topics to be ignored |  |
+
+### Return type
+
+[**IgnoreTopicsResponse**](IgnoreTopicsResponse)
+
+
+## PostLanguageunderstandingIgnoretopicRemove
+
+> void PostLanguageunderstandingIgnoretopicRemove (string languageCode, RemoveEntitiesRequest body)
+
+
+Delete ignored topics
+
+Requires ALL permissions: 
+
+* languageUnderstanding:ignoredTopic:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLanguageunderstandingIgnoretopicRemoveExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LanguageUnderstandingApi();
+            var languageCode = languageCode_example;  // string | Language Code
+            var body = new RemoveEntitiesRequest(); // RemoveEntitiesRequest | Request body containing entities to be removed
+
+            try
+            { 
+                // Delete ignored topics
+                apiInstance.PostLanguageunderstandingIgnoretopicRemove(languageCode, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LanguageUnderstandingApi.PostLanguageunderstandingIgnoretopicRemove: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **languageCode** | **string**| Language Code |  |
+| **body** | [**RemoveEntitiesRequest**](RemoveEntitiesRequest)| Request body containing entities to be removed |  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PostLanguageunderstandingMinerDrafts
 
 > [**Draft**](Draft) PostLanguageunderstandingMinerDrafts (string minerId, Draft body)
@@ -2255,4 +2659,4 @@ namespace Example
 [**NluDomainVersion**](NluDomainVersion)
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_

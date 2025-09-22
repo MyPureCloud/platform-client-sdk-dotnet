@@ -1397,7 +1397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute the recording bulk job.
         /// </summary>
         /// <remarks>
-        /// A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -1410,7 +1410,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute the recording bulk job.
         /// </summary>
         /// <remarks>
-        /// A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -1449,7 +1449,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// Policy does not work retroactively
+        /// Policy does not work retroactively. In the conditions.forUsers section, each user object can include the 'id' field containing the user's unique identifier. Example: [{\"id\":\"<userId>\"}].
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -1462,7 +1462,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// Policy does not work retroactively
+        /// Policy does not work retroactively. In the conditions.forUsers section, each user object can include the 'id' field containing the user's unique identifier. Example: [{\"id\":\"<userId>\"}].
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -2931,7 +2931,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute the recording bulk job.
         /// </summary>
         /// <remarks>
-        /// A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -2944,7 +2944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Execute the recording bulk job.
         /// </summary>
         /// <remarks>
-        /// A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -2983,7 +2983,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// Policy does not work retroactively
+        /// Policy does not work retroactively. In the conditions.forUsers section, each user object can include the 'id' field containing the user's unique identifier. Example: [{\"id\":\"<userId>\"}].
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -2996,7 +2996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a media retention policy
         /// </summary>
         /// <remarks>
-        /// Policy does not work retroactively
+        /// Policy does not work retroactively. In the conditions.forUsers section, each user object can include the 'id' field containing the user's unique identifier. Example: [{\"id\":\"<userId>\"}].
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -14099,7 +14099,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute the recording bulk job. 
-        /// A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -14114,7 +14114,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute the recording bulk job. 
-        /// A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -14209,7 +14209,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute the recording bulk job. 
-        /// A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -14225,7 +14225,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Execute the recording bulk job. 
-        /// A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+        /// Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">jobId</param>
@@ -14547,7 +14547,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a media retention policy 
-        /// Policy does not work retroactively
+        /// Policy does not work retroactively. In the conditions.forUsers section, each user object can include the 'id' field containing the user's unique identifier. Example: [{\"id\":\"<userId>\"}].
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -14562,7 +14562,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a media retention policy 
-        /// Policy does not work retroactively
+        /// Policy does not work retroactively. In the conditions.forUsers section, each user object can include the 'id' field containing the user's unique identifier. Example: [{\"id\":\"<userId>\"}].
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -14657,7 +14657,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a media retention policy 
-        /// Policy does not work retroactively
+        /// Policy does not work retroactively. In the conditions.forUsers section, each user object can include the 'id' field containing the user's unique identifier. Example: [{\"id\":\"<userId>\"}].
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>
@@ -14673,7 +14673,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a media retention policy 
-        /// Policy does not work retroactively
+        /// Policy does not work retroactively. In the conditions.forUsers section, each user object can include the 'id' field containing the user's unique identifier. Example: [{\"id\":\"<userId>\"}].
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">Policy ID</param>

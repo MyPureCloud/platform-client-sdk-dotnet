@@ -16,6 +16,30 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
+        /// Delete a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns></returns>
+        
+        void DeleteConversationsSummariesSetting (string summarySettingId);
+
+        /// <summary>
+        /// Delete a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteConversationsSummariesSettingWithHttpInfo (string summarySettingId);
+
+        /// <summary>
         /// Start the deletion of a guide.
         /// </summary>
         /// <remarks>
@@ -40,6 +64,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of GuideJob</returns>
         
         ApiResponse<GuideJob> DeleteGuideJobsWithHttpInfo (string guideId);
+
+        /// <summary>
+        /// Receive a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>SummarySetting</returns>
+        
+        SummarySetting GetConversationsSummariesSetting (string summarySettingId);
+
+        /// <summary>
+        /// Receive a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>ApiResponse of SummarySetting</returns>
+        
+        ApiResponse<SummarySetting> GetConversationsSummariesSettingWithHttpInfo (string summarySettingId);
+
+        /// <summary>
+        /// Get all summary settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="pageNumber">Page number. (optional, default to 1)</param>
+        /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <returns>SummarySettingEntityListing</returns>
+        
+        SummarySettingEntityListing GetConversationsSummariesSettings (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get all summary settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="pageNumber">Page number. (optional, default to 1)</param>
+        /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <returns>ApiResponse of SummarySettingEntityListing</returns>
+        
+        ApiResponse<SummarySettingEntityListing> GetConversationsSummariesSettingsWithHttpInfo (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get guide.
@@ -276,6 +358,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<GuideVersion> PatchGuideVersionWithHttpInfo (string guideId, string versionId, UpdateGuideVersion body);
 
         /// <summary>
+        /// Trigger summary preview event generation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns></returns>
+        
+        void PostConversationsSummariesPreview (SummarySettingWithTranscript body);
+
+        /// <summary>
+        /// Trigger summary preview event generation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostConversationsSummariesPreviewWithHttpInfo (SummarySettingWithTranscript body);
+
+        /// <summary>
+        /// Create a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>SummarySetting</returns>
+        
+        SummarySetting PostConversationsSummariesSettings (SummarySetting body);
+
+        /// <summary>
+        /// Create a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of SummarySetting</returns>
+        
+        ApiResponse<SummarySetting> PostConversationsSummariesSettingsWithHttpInfo (SummarySetting body);
+
+        /// <summary>
         /// Start the publishing of a guide version.
         /// </summary>
         /// <remarks>
@@ -385,9 +515,59 @@ namespace PureCloudPlatform.Client.V2.Api
         
         ApiResponse<GuideContentGenerationJob> PostGuidesJobsWithHttpInfo (GenerateGuideContentRequest body);
 
+        /// <summary>
+        /// Update a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <param name="body"></param>
+        /// <returns>SummarySetting</returns>
+        
+        SummarySetting PutConversationsSummariesSetting (string summarySettingId, SummarySetting body);
+
+        /// <summary>
+        /// Update a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of SummarySetting</returns>
+        
+        ApiResponse<SummarySetting> PutConversationsSummariesSettingWithHttpInfo (string summarySettingId, SummarySetting body);
+
         #endregion Synchronous Operations
 
         #region Asynchronous Operations
+
+        /// <summary>
+        /// Delete a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteConversationsSummariesSettingAsync (string summarySettingId);
+
+        /// <summary>
+        /// Delete a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsSummariesSettingAsyncWithHttpInfo (string summarySettingId);
 
         /// <summary>
         /// Start the deletion of a guide.
@@ -414,6 +594,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (GuideJob)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<GuideJob>> DeleteGuideJobsAsyncWithHttpInfo (string guideId);
+
+        /// <summary>
+        /// Receive a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>Task of SummarySetting</returns>
+        
+        System.Threading.Tasks.Task<SummarySetting> GetConversationsSummariesSettingAsync (string summarySettingId);
+
+        /// <summary>
+        /// Receive a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>Task of ApiResponse (SummarySetting)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SummarySetting>> GetConversationsSummariesSettingAsyncWithHttpInfo (string summarySettingId);
+
+        /// <summary>
+        /// Get all summary settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="pageNumber">Page number. (optional, default to 1)</param>
+        /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <returns>Task of SummarySettingEntityListing</returns>
+        
+        System.Threading.Tasks.Task<SummarySettingEntityListing> GetConversationsSummariesSettingsAsync (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get all summary settings.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="pageNumber">Page number. (optional, default to 1)</param>
+        /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (SummarySettingEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SummarySettingEntityListing>> GetConversationsSummariesSettingsAsyncWithHttpInfo (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
         /// Get guide.
@@ -650,6 +888,54 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<GuideVersion>> PatchGuideVersionAsyncWithHttpInfo (string guideId, string versionId, UpdateGuideVersion body);
 
         /// <summary>
+        /// Trigger summary preview event generation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostConversationsSummariesPreviewAsync (SummarySettingWithTranscript body);
+
+        /// <summary>
+        /// Trigger summary preview event generation.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsSummariesPreviewAsyncWithHttpInfo (SummarySettingWithTranscript body);
+
+        /// <summary>
+        /// Create a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of SummarySetting</returns>
+        
+        System.Threading.Tasks.Task<SummarySetting> PostConversationsSummariesSettingsAsync (SummarySetting body);
+
+        /// <summary>
+        /// Create a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (SummarySetting)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SummarySetting>> PostConversationsSummariesSettingsAsyncWithHttpInfo (SummarySetting body);
+
+        /// <summary>
         /// Start the publishing of a guide version.
         /// </summary>
         /// <remarks>
@@ -759,6 +1045,32 @@ namespace PureCloudPlatform.Client.V2.Api
         
         System.Threading.Tasks.Task<ApiResponse<GuideContentGenerationJob>> PostGuidesJobsAsyncWithHttpInfo (GenerateGuideContentRequest body);
 
+        /// <summary>
+        /// Update a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of SummarySetting</returns>
+        
+        System.Threading.Tasks.Task<SummarySetting> PutConversationsSummariesSettingAsync (string summarySettingId, SummarySetting body);
+
+        /// <summary>
+        /// Update a summary setting.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (SummarySetting)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SummarySetting>> PutConversationsSummariesSettingAsyncWithHttpInfo (string summarySettingId, SummarySetting body);
+
         #endregion Asynchronous Operations
 
     }
@@ -849,6 +1161,205 @@ namespace PureCloudPlatform.Client.V2.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+
+
+        /// <summary>
+        /// Delete a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns></returns>
+        
+        public void DeleteConversationsSummariesSetting (string summarySettingId)
+        {
+             DeleteConversationsSummariesSettingWithHttpInfo(summarySettingId);
+        }
+
+        /// <summary>
+        /// Delete a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteConversationsSummariesSettingWithHttpInfo (string summarySettingId)
+        { 
+            // verify the required parameter 'summarySettingId' is set
+            if (summarySettingId == null)
+                throw new ApiException(400, "Missing required parameter 'summarySettingId' when calling AIStudioApi->DeleteConversationsSummariesSetting");
+
+            var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (summarySettingId != null) localVarPathParams.Add("summarySettingId", this.Configuration.ApiClient.ParameterToString(summarySettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsSummariesSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsSummariesSetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteConversationsSummariesSettingAsync (string summarySettingId)
+        {
+             await DeleteConversationsSummariesSettingAsyncWithHttpInfo(summarySettingId);
+
+        }
+
+        /// <summary>
+        /// Delete a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsSummariesSettingAsyncWithHttpInfo (string summarySettingId)
+        { 
+            // verify the required parameter 'summarySettingId' is set
+            if (summarySettingId == null)
+                throw new ApiException(400, "Missing required parameter 'summarySettingId' when calling AIStudioApi->DeleteConversationsSummariesSetting");
+            
+
+            var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (summarySettingId != null) localVarPathParams.Add("summarySettingId", this.Configuration.ApiClient.ParameterToString(summarySettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsSummariesSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsSummariesSetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
 
 
         /// <summary>
@@ -1050,6 +1561,431 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<GuideJob>(localVarStatusCode,
                 localVarHeaders,
                 (GuideJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GuideJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Receive a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>SummarySetting</returns>
+        
+        public SummarySetting GetConversationsSummariesSetting (string summarySettingId)
+        {
+             ApiResponse<SummarySetting> localVarResponse = GetConversationsSummariesSettingWithHttpInfo(summarySettingId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Receive a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>ApiResponse of SummarySetting</returns>
+        
+        public ApiResponse< SummarySetting > GetConversationsSummariesSettingWithHttpInfo (string summarySettingId)
+        { 
+            // verify the required parameter 'summarySettingId' is set
+            if (summarySettingId == null)
+                throw new ApiException(400, "Missing required parameter 'summarySettingId' when calling AIStudioApi->GetConversationsSummariesSetting");
+
+            var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (summarySettingId != null) localVarPathParams.Add("summarySettingId", this.Configuration.ApiClient.ParameterToString(summarySettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsSummariesSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsSummariesSetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SummarySetting>(localVarStatusCode,
+                localVarHeaders,
+                (SummarySetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SummarySetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Receive a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>Task of SummarySetting</returns>
+        
+        public async System.Threading.Tasks.Task<SummarySetting> GetConversationsSummariesSettingAsync (string summarySettingId)
+        {
+             ApiResponse<SummarySetting> localVarResponse = await GetConversationsSummariesSettingAsyncWithHttpInfo(summarySettingId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Receive a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <returns>Task of ApiResponse (SummarySetting)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SummarySetting>> GetConversationsSummariesSettingAsyncWithHttpInfo (string summarySettingId)
+        { 
+            // verify the required parameter 'summarySettingId' is set
+            if (summarySettingId == null)
+                throw new ApiException(400, "Missing required parameter 'summarySettingId' when calling AIStudioApi->GetConversationsSummariesSetting");
+            
+
+            var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (summarySettingId != null) localVarPathParams.Add("summarySettingId", this.Configuration.ApiClient.ParameterToString(summarySettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsSummariesSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsSummariesSetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SummarySetting>(localVarStatusCode,
+                localVarHeaders,
+                (SummarySetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SummarySetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get all summary settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="pageNumber">Page number. (optional, default to 1)</param>
+        /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <returns>SummarySettingEntityListing</returns>
+        
+        public SummarySettingEntityListing GetConversationsSummariesSettings (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<SummarySettingEntityListing> localVarResponse = GetConversationsSummariesSettingsWithHttpInfo(language, name, sortBy, sortOrder, pageNumber, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all summary settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="pageNumber">Page number. (optional, default to 1)</param>
+        /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <returns>ApiResponse of SummarySettingEntityListing</returns>
+        
+        public ApiResponse< SummarySettingEntityListing > GetConversationsSummariesSettingsWithHttpInfo (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/conversations/summaries/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsSummariesSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsSummariesSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SummarySettingEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SummarySettingEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SummarySettingEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get all summary settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="pageNumber">Page number. (optional, default to 1)</param>
+        /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <returns>Task of SummarySettingEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<SummarySettingEntityListing> GetConversationsSummariesSettingsAsync (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+        {
+             ApiResponse<SummarySettingEntityListing> localVarResponse = await GetConversationsSummariesSettingsAsyncWithHttpInfo(language, name, sortBy, sortOrder, pageNumber, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all summary settings. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Filter by matching language - case insensitive. (optional)</param>
+        /// <param name="name">Filter by partially matching name - case insensitive. (optional)</param>
+        /// <param name="sortBy">Sort by. Default value dateModified. (optional, default to dateModified)</param>
+        /// <param name="sortOrder">Sort Order. Default value desc. (optional, default to desc)</param>
+        /// <param name="pageNumber">Page number. (optional, default to 1)</param>
+        /// <param name="pageSize">Page size. The maximum page size is 100. (optional, default to 25)</param>
+        /// <returns>Task of ApiResponse (SummarySettingEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SummarySettingEntityListing>> GetConversationsSummariesSettingsAsyncWithHttpInfo (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+        { 
+
+            var localVarPath = "/api/v2/conversations/summaries/settings";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsSummariesSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsSummariesSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SummarySettingEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (SummarySettingEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SummarySettingEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2837,6 +3773,426 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Trigger summary preview event generation. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns></returns>
+        
+        public void PostConversationsSummariesPreview (SummarySettingWithTranscript body)
+        {
+             PostConversationsSummariesPreviewWithHttpInfo(body);
+        }
+
+        /// <summary>
+        /// Trigger summary preview event generation. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostConversationsSummariesPreviewWithHttpInfo (SummarySettingWithTranscript body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostConversationsSummariesPreview");
+
+            var localVarPath = "/api/v2/conversations/summaries/preview";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsSummariesPreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsSummariesPreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Trigger summary preview event generation. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostConversationsSummariesPreviewAsync (SummarySettingWithTranscript body)
+        {
+             await PostConversationsSummariesPreviewAsyncWithHttpInfo(body);
+
+        }
+
+        /// <summary>
+        /// Trigger summary preview event generation. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostConversationsSummariesPreviewAsyncWithHttpInfo (SummarySettingWithTranscript body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostConversationsSummariesPreview");
+            
+
+            var localVarPath = "/api/v2/conversations/summaries/preview";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsSummariesPreview: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsSummariesPreview: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>SummarySetting</returns>
+        
+        public SummarySetting PostConversationsSummariesSettings (SummarySetting body)
+        {
+             ApiResponse<SummarySetting> localVarResponse = PostConversationsSummariesSettingsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of SummarySetting</returns>
+        
+        public ApiResponse< SummarySetting > PostConversationsSummariesSettingsWithHttpInfo (SummarySetting body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostConversationsSummariesSettings");
+
+            var localVarPath = "/api/v2/conversations/summaries/settings";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsSummariesSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsSummariesSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SummarySetting>(localVarStatusCode,
+                localVarHeaders,
+                (SummarySetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SummarySetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of SummarySetting</returns>
+        
+        public async System.Threading.Tasks.Task<SummarySetting> PostConversationsSummariesSettingsAsync (SummarySetting body)
+        {
+             ApiResponse<SummarySetting> localVarResponse = await PostConversationsSummariesSettingsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (SummarySetting)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SummarySetting>> PostConversationsSummariesSettingsAsyncWithHttpInfo (SummarySetting body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostConversationsSummariesSettings");
+            
+
+            var localVarPath = "/api/v2/conversations/summaries/settings";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsSummariesSettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsSummariesSettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SummarySetting>(localVarStatusCode,
+                localVarHeaders,
+                (SummarySetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SummarySetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Start the publishing of a guide version. 
         /// 
         /// PostGuideVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
@@ -3722,6 +5078,230 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<GuideContentGenerationJob>(localVarStatusCode,
                 localVarHeaders,
                 (GuideContentGenerationJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GuideContentGenerationJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <param name="body"></param>
+        /// <returns>SummarySetting</returns>
+        
+        public SummarySetting PutConversationsSummariesSetting (string summarySettingId, SummarySetting body)
+        {
+             ApiResponse<SummarySetting> localVarResponse = PutConversationsSummariesSettingWithHttpInfo(summarySettingId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of SummarySetting</returns>
+        
+        public ApiResponse< SummarySetting > PutConversationsSummariesSettingWithHttpInfo (string summarySettingId, SummarySetting body)
+        { 
+            // verify the required parameter 'summarySettingId' is set
+            if (summarySettingId == null)
+                throw new ApiException(400, "Missing required parameter 'summarySettingId' when calling AIStudioApi->PutConversationsSummariesSetting");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PutConversationsSummariesSetting");
+
+            var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (summarySettingId != null) localVarPathParams.Add("summarySettingId", this.Configuration.ApiClient.ParameterToString(summarySettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsSummariesSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsSummariesSetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SummarySetting>(localVarStatusCode,
+                localVarHeaders,
+                (SummarySetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SummarySetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of SummarySetting</returns>
+        
+        public async System.Threading.Tasks.Task<SummarySetting> PutConversationsSummariesSettingAsync (string summarySettingId, SummarySetting body)
+        {
+             ApiResponse<SummarySetting> localVarResponse = await PutConversationsSummariesSettingAsyncWithHttpInfo(summarySettingId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a summary setting. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="summarySettingId">Summary setting id</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (SummarySetting)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SummarySetting>> PutConversationsSummariesSettingAsyncWithHttpInfo (string summarySettingId, SummarySetting body)
+        { 
+            // verify the required parameter 'summarySettingId' is set
+            if (summarySettingId == null)
+                throw new ApiException(400, "Missing required parameter 'summarySettingId' when calling AIStudioApi->PutConversationsSummariesSetting");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PutConversationsSummariesSetting");
+            
+
+            var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (summarySettingId != null) localVarPathParams.Add("summarySettingId", this.Configuration.ApiClient.ParameterToString(summarySettingId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsSummariesSetting: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutConversationsSummariesSetting: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SummarySetting>(localVarStatusCode,
+                localVarHeaders,
+                (SummarySetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SummarySetting)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

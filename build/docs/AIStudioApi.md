@@ -6,7 +6,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteConversationsSummariesSetting**](#DeleteConversationsSummariesSetting) | **Delete** /api/v2/conversations/summaries/settings/{summarySettingId} | Delete a summary setting. |
 | [**DeleteGuideJobs**](#DeleteGuideJobs) | **Delete** /api/v2/guides/{guideId}/jobs | Start the deletion of a guide. |
+| [**GetConversationsSummariesSetting**](#GetConversationsSummariesSetting) | **Get** /api/v2/conversations/summaries/settings/{summarySettingId} | Receive a summary setting. |
+| [**GetConversationsSummariesSettings**](#GetConversationsSummariesSettings) | **Get** /api/v2/conversations/summaries/settings | Get all summary settings. |
 | [**GetGuide**](#GetGuide) | **Get** /api/v2/guides/{guideId} | Get guide. |
 | [**GetGuideJob**](#GetGuideJob) | **Get** /api/v2/guides/{guideId}/jobs/{jobId} | Get the specified guide deletion job. |
 | [**GetGuideVersion**](#GetGuideVersion) | **Get** /api/v2/guides/{guideId}/versions/{versionId} | Get a guide version. |
@@ -15,11 +18,75 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGuidesJob**](#GetGuidesJob) | **Get** /api/v2/guides/jobs/{jobId} | Get the status of the guide content generation job. |
 | [**PatchGuide**](#PatchGuide) | **Patch** /api/v2/guides/{guideId} | Update a guide. |
 | [**PatchGuideVersion**](#PatchGuideVersion) | **Patch** /api/v2/guides/{guideId}/versions/{versionId} | Update a guide version. |
+| [**PostConversationsSummariesPreview**](#PostConversationsSummariesPreview) | **Post** /api/v2/conversations/summaries/preview | Trigger summary preview event generation. |
+| [**PostConversationsSummariesSettings**](#PostConversationsSummariesSettings) | **Post** /api/v2/conversations/summaries/settings | Create a summary setting. |
 | [**PostGuideVersionJobs**](#PostGuideVersionJobs) | **Post** /api/v2/guides/{guideId}/versions/{versionId}/jobs | Start the publishing of a guide version. |
 | [**PostGuideVersions**](#PostGuideVersions) | **Post** /api/v2/guides/{guideId}/versions | Create a guide version. |
 | [**PostGuides**](#PostGuides) | **Post** /api/v2/guides | Create a guide. |
 | [**PostGuidesJobs**](#PostGuidesJobs) | **Post** /api/v2/guides/jobs | Start a guide content generation job. |
+| [**PutConversationsSummariesSetting**](#PutConversationsSummariesSetting) | **Put** /api/v2/conversations/summaries/settings/{summarySettingId} | Update a summary setting. |
 
+
+
+## DeleteConversationsSummariesSetting
+
+> void DeleteConversationsSummariesSetting (string summarySettingId)
+
+
+Delete a summary setting.
+
+Requires ALL permissions: 
+
+* aiStudio:summaryConfig:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsSummariesSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var summarySettingId = summarySettingId_example;  // string | Summary setting id
+
+            try
+            { 
+                // Delete a summary setting.
+                apiInstance.DeleteConversationsSummariesSetting(summarySettingId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.DeleteConversationsSummariesSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **summarySettingId** | **string**| Summary setting id |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## DeleteGuideJobs
@@ -84,6 +151,140 @@ namespace Example
 ### Return type
 
 [**GuideJob**](GuideJob)
+
+
+## GetConversationsSummariesSetting
+
+> [**SummarySetting**](SummarySetting) GetConversationsSummariesSetting (string summarySettingId)
+
+
+Receive a summary setting.
+
+Requires ALL permissions: 
+
+* aiStudio:summaryConfig:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsSummariesSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var summarySettingId = summarySettingId_example;  // string | Summary setting id
+
+            try
+            { 
+                // Receive a summary setting.
+                SummarySetting result = apiInstance.GetConversationsSummariesSetting(summarySettingId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.GetConversationsSummariesSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **summarySettingId** | **string**| Summary setting id |  |
+
+### Return type
+
+[**SummarySetting**](SummarySetting)
+
+
+## GetConversationsSummariesSettings
+
+> [**SummarySettingEntityListing**](SummarySettingEntityListing) GetConversationsSummariesSettings (string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
+
+
+Get all summary settings.
+
+Requires ALL permissions: 
+
+* aiStudio:summaryConfig:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsSummariesSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var language = language_example;  // string | Filter by matching language - case insensitive. (optional) 
+            var name = name_example;  // string | Filter by partially matching name - case insensitive. (optional) 
+            var sortBy = sortBy_example;  // string | Sort by. Default value dateModified. (optional)  (default to dateModified)
+            var sortOrder = sortOrder_example;  // string | Sort Order. Default value desc. (optional)  (default to desc)
+            var pageNumber = 56;  // int? | Page number. (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size. The maximum page size is 100. (optional)  (default to 25)
+
+            try
+            { 
+                // Get all summary settings.
+                SummarySettingEntityListing result = apiInstance.GetConversationsSummariesSettings(language, name, sortBy, sortOrder, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.GetConversationsSummariesSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **language** | **string**| Filter by matching language - case insensitive. | [optional]  |
+| **name** | **string**| Filter by partially matching name - case insensitive. | [optional]  |
+| **sortBy** | **string**| Sort by. Default value dateModified. | [optional] [default to dateModified]<br />**Values**: dateModified, name |
+| **sortOrder** | **string**| Sort Order. Default value desc. | [optional] [default to desc]<br />**Values**: asc, desc |
+| **pageNumber** | **int?**| Page number. | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size. The maximum page size is 100. | [optional] [default to 25] |
+
+### Return type
+
+[**SummarySettingEntityListing**](SummarySettingEntityListing)
 
 
 ## GetGuide
@@ -624,6 +825,129 @@ namespace Example
 [**GuideVersion**](GuideVersion)
 
 
+## PostConversationsSummariesPreview
+
+> void PostConversationsSummariesPreview (SummarySettingWithTranscript body)
+
+
+Trigger summary preview event generation.
+
+Requires ALL permissions: 
+
+* aiStudio:summaryPreview:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsSummariesPreviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var body = new SummarySettingWithTranscript(); // SummarySettingWithTranscript | 
+
+            try
+            { 
+                // Trigger summary preview event generation.
+                apiInstance.PostConversationsSummariesPreview(body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.PostConversationsSummariesPreview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SummarySettingWithTranscript**](SummarySettingWithTranscript)|  |  |
+
+### Return type
+
+void (empty response body)
+
+
+## PostConversationsSummariesSettings
+
+> [**SummarySetting**](SummarySetting) PostConversationsSummariesSettings (SummarySetting body)
+
+
+Create a summary setting.
+
+Requires ALL permissions: 
+
+* aiStudio:summaryConfig:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsSummariesSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var body = new SummarySetting(); // SummarySetting | 
+
+            try
+            { 
+                // Create a summary setting.
+                SummarySetting result = apiInstance.PostConversationsSummariesSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.PostConversationsSummariesSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**SummarySetting**](SummarySetting)|  |  |
+
+### Return type
+
+[**SummarySetting**](SummarySetting)
+
+
 ## PostGuideVersionJobs
 
 > [**GuideVersionPublishJob**](GuideVersionPublishJob) PostGuideVersionJobs (string guideId, string versionId, GuideVersionPublishJobRequest body)
@@ -886,4 +1210,68 @@ namespace Example
 [**GuideContentGenerationJob**](GuideContentGenerationJob)
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+## PutConversationsSummariesSetting
+
+> [**SummarySetting**](SummarySetting) PutConversationsSummariesSetting (string summarySettingId, SummarySetting body)
+
+
+Update a summary setting.
+
+Requires ALL permissions: 
+
+* aiStudio:summaryConfig:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutConversationsSummariesSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var summarySettingId = summarySettingId_example;  // string | Summary setting id
+            var body = new SummarySetting(); // SummarySetting | 
+
+            try
+            { 
+                // Update a summary setting.
+                SummarySetting result = apiInstance.PutConversationsSummariesSetting(summarySettingId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.PutConversationsSummariesSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **summarySettingId** | **string**| Summary setting id |  |
+| **body** | [**SummarySetting**](SummarySetting)|  |  |
+
+### Return type
+
+[**SummarySetting**](SummarySetting)
+
+
+_PureCloudPlatform.Client.V2 242.0.0_

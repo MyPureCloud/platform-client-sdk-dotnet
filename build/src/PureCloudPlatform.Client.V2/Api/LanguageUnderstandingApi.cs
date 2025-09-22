@@ -352,6 +352,74 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<NluDomainListing> GetLanguageunderstandingDomainsWithHttpInfo (int? pageNumber = null, int? pageSize = null);
 
         /// <summary>
+        /// Get list of all ignored phrases of the specified language code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The phrase text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>IgnoredMinedPhraseListing</returns>
+        
+        IgnoredMinedPhraseListing GetLanguageunderstandingIgnorephrase (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
+        /// Get list of all ignored phrases of the specified language code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The phrase text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>ApiResponse of IgnoredMinedPhraseListing</returns>
+        
+        ApiResponse<IgnoredMinedPhraseListing> GetLanguageunderstandingIgnorephraseWithHttpInfo (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
+        /// Get list of all ignored topics of the specified language code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The topic text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>IgnoredMinedTopicListing</returns>
+        
+        IgnoredMinedTopicListing GetLanguageunderstandingIgnoretopic (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
+        /// Get list of all ignored topics of the specified language code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The topic text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>ApiResponse of IgnoredMinedTopicListing</returns>
+        
+        ApiResponse<IgnoredMinedTopicListing> GetLanguageunderstandingIgnoretopicWithHttpInfo (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
         /// Get information about a miner.
         /// </summary>
         /// <remarks>
@@ -822,6 +890,110 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<NluDomain> PostLanguageunderstandingDomainsWithHttpInfo (NluDomain body);
 
         /// <summary>
+        /// Add phrases to the ignored phrases list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing phrases to be ignored</param>
+        /// <returns>IgnorePhrasesResponse</returns>
+        
+        IgnorePhrasesResponse PostLanguageunderstandingIgnorephrase (string languageCode, IgnorePhrasesRequest body);
+
+        /// <summary>
+        /// Add phrases to the ignored phrases list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing phrases to be ignored</param>
+        /// <returns>ApiResponse of IgnorePhrasesResponse</returns>
+        
+        ApiResponse<IgnorePhrasesResponse> PostLanguageunderstandingIgnorephraseWithHttpInfo (string languageCode, IgnorePhrasesRequest body);
+
+        /// <summary>
+        /// Delete ignored phrases
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns></returns>
+        
+        void PostLanguageunderstandingIgnorephraseRemove (string languageCode, RemoveEntitiesRequest body);
+
+        /// <summary>
+        /// Delete ignored phrases
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostLanguageunderstandingIgnorephraseRemoveWithHttpInfo (string languageCode, RemoveEntitiesRequest body);
+
+        /// <summary>
+        /// Add topics to the ignored topics list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing topics to be ignored</param>
+        /// <returns>IgnoreTopicsResponse</returns>
+        
+        IgnoreTopicsResponse PostLanguageunderstandingIgnoretopic (string languageCode, IgnoreTopicsRequest body);
+
+        /// <summary>
+        /// Add topics to the ignored topics list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing topics to be ignored</param>
+        /// <returns>ApiResponse of IgnoreTopicsResponse</returns>
+        
+        ApiResponse<IgnoreTopicsResponse> PostLanguageunderstandingIgnoretopicWithHttpInfo (string languageCode, IgnoreTopicsRequest body);
+
+        /// <summary>
+        /// Delete ignored topics
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns></returns>
+        
+        void PostLanguageunderstandingIgnoretopicRemove (string languageCode, RemoveEntitiesRequest body);
+
+        /// <summary>
+        /// Delete ignored topics
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PostLanguageunderstandingIgnoretopicRemoveWithHttpInfo (string languageCode, RemoveEntitiesRequest body);
+
+        /// <summary>
         /// Create a new draft resource.
         /// </summary>
         /// <remarks>
@@ -1264,6 +1436,74 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (NluDomainListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<NluDomainListing>> GetLanguageunderstandingDomainsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null);
+
+        /// <summary>
+        /// Get list of all ignored phrases of the specified language code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The phrase text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>Task of IgnoredMinedPhraseListing</returns>
+        
+        System.Threading.Tasks.Task<IgnoredMinedPhraseListing> GetLanguageunderstandingIgnorephraseAsync (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
+        /// Get list of all ignored phrases of the specified language code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The phrase text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>Task of ApiResponse (IgnoredMinedPhraseListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IgnoredMinedPhraseListing>> GetLanguageunderstandingIgnorephraseAsyncWithHttpInfo (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
+        /// Get list of all ignored topics of the specified language code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The topic text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>Task of IgnoredMinedTopicListing</returns>
+        
+        System.Threading.Tasks.Task<IgnoredMinedTopicListing> GetLanguageunderstandingIgnoretopicAsync (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
+        /// Get list of all ignored topics of the specified language code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The topic text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>Task of ApiResponse (IgnoredMinedTopicListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IgnoredMinedTopicListing>> GetLanguageunderstandingIgnoretopicAsyncWithHttpInfo (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null);
 
         /// <summary>
         /// Get information about a miner.
@@ -1734,6 +1974,110 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (NluDomain)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<NluDomain>> PostLanguageunderstandingDomainsAsyncWithHttpInfo (NluDomain body);
+
+        /// <summary>
+        /// Add phrases to the ignored phrases list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing phrases to be ignored</param>
+        /// <returns>Task of IgnorePhrasesResponse</returns>
+        
+        System.Threading.Tasks.Task<IgnorePhrasesResponse> PostLanguageunderstandingIgnorephraseAsync (string languageCode, IgnorePhrasesRequest body);
+
+        /// <summary>
+        /// Add phrases to the ignored phrases list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing phrases to be ignored</param>
+        /// <returns>Task of ApiResponse (IgnorePhrasesResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IgnorePhrasesResponse>> PostLanguageunderstandingIgnorephraseAsyncWithHttpInfo (string languageCode, IgnorePhrasesRequest body);
+
+        /// <summary>
+        /// Delete ignored phrases
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostLanguageunderstandingIgnorephraseRemoveAsync (string languageCode, RemoveEntitiesRequest body);
+
+        /// <summary>
+        /// Delete ignored phrases
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostLanguageunderstandingIgnorephraseRemoveAsyncWithHttpInfo (string languageCode, RemoveEntitiesRequest body);
+
+        /// <summary>
+        /// Add topics to the ignored topics list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing topics to be ignored</param>
+        /// <returns>Task of IgnoreTopicsResponse</returns>
+        
+        System.Threading.Tasks.Task<IgnoreTopicsResponse> PostLanguageunderstandingIgnoretopicAsync (string languageCode, IgnoreTopicsRequest body);
+
+        /// <summary>
+        /// Add topics to the ignored topics list
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing topics to be ignored</param>
+        /// <returns>Task of ApiResponse (IgnoreTopicsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IgnoreTopicsResponse>> PostLanguageunderstandingIgnoretopicAsyncWithHttpInfo (string languageCode, IgnoreTopicsRequest body);
+
+        /// <summary>
+        /// Delete ignored topics
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PostLanguageunderstandingIgnoretopicRemoveAsync (string languageCode, RemoveEntitiesRequest body);
+
+        /// <summary>
+        /// Delete ignored topics
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PostLanguageunderstandingIgnoretopicRemoveAsyncWithHttpInfo (string languageCode, RemoveEntitiesRequest body);
 
         /// <summary>
         /// Create a new draft resource.
@@ -4506,6 +4850,468 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<NluDomainListing>(localVarStatusCode,
                 localVarHeaders,
                 (NluDomainListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NluDomainListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get list of all ignored phrases of the specified language code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The phrase text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>IgnoredMinedPhraseListing</returns>
+        
+        public IgnoredMinedPhraseListing GetLanguageunderstandingIgnorephrase (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null)
+        {
+             ApiResponse<IgnoredMinedPhraseListing> localVarResponse = GetLanguageunderstandingIgnorephraseWithHttpInfo(languageCode, pageSize, pageNumber, text, sortOrder, sortBy);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of all ignored phrases of the specified language code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The phrase text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>ApiResponse of IgnoredMinedPhraseListing</returns>
+        
+        public ApiResponse< IgnoredMinedPhraseListing > GetLanguageunderstandingIgnorephraseWithHttpInfo (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->GetLanguageunderstandingIgnorephrase");
+
+            var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (text != null) localVarQueryParams.Add(new Tuple<string, string>("text", this.Configuration.ApiClient.ParameterToString(text)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingIgnorephrase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingIgnorephrase: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IgnoredMinedPhraseListing>(localVarStatusCode,
+                localVarHeaders,
+                (IgnoredMinedPhraseListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IgnoredMinedPhraseListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get list of all ignored phrases of the specified language code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The phrase text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>Task of IgnoredMinedPhraseListing</returns>
+        
+        public async System.Threading.Tasks.Task<IgnoredMinedPhraseListing> GetLanguageunderstandingIgnorephraseAsync (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null)
+        {
+             ApiResponse<IgnoredMinedPhraseListing> localVarResponse = await GetLanguageunderstandingIgnorephraseAsyncWithHttpInfo(languageCode, pageSize, pageNumber, text, sortOrder, sortBy);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of all ignored phrases of the specified language code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The phrase text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>Task of ApiResponse (IgnoredMinedPhraseListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IgnoredMinedPhraseListing>> GetLanguageunderstandingIgnorephraseAsyncWithHttpInfo (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->GetLanguageunderstandingIgnorephrase");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (text != null) localVarQueryParams.Add(new Tuple<string, string>("text", this.Configuration.ApiClient.ParameterToString(text)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingIgnorephrase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingIgnorephrase: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IgnoredMinedPhraseListing>(localVarStatusCode,
+                localVarHeaders,
+                (IgnoredMinedPhraseListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IgnoredMinedPhraseListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get list of all ignored topics of the specified language code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The topic text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>IgnoredMinedTopicListing</returns>
+        
+        public IgnoredMinedTopicListing GetLanguageunderstandingIgnoretopic (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null)
+        {
+             ApiResponse<IgnoredMinedTopicListing> localVarResponse = GetLanguageunderstandingIgnoretopicWithHttpInfo(languageCode, pageSize, pageNumber, text, sortOrder, sortBy);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get list of all ignored topics of the specified language code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The topic text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>ApiResponse of IgnoredMinedTopicListing</returns>
+        
+        public ApiResponse< IgnoredMinedTopicListing > GetLanguageunderstandingIgnoretopicWithHttpInfo (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->GetLanguageunderstandingIgnoretopic");
+
+            var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (text != null) localVarQueryParams.Add(new Tuple<string, string>("text", this.Configuration.ApiClient.ParameterToString(text)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingIgnoretopic: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingIgnoretopic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IgnoredMinedTopicListing>(localVarStatusCode,
+                localVarHeaders,
+                (IgnoredMinedTopicListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IgnoredMinedTopicListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get list of all ignored topics of the specified language code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The topic text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>Task of IgnoredMinedTopicListing</returns>
+        
+        public async System.Threading.Tasks.Task<IgnoredMinedTopicListing> GetLanguageunderstandingIgnoretopicAsync (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null)
+        {
+             ApiResponse<IgnoredMinedTopicListing> localVarResponse = await GetLanguageunderstandingIgnoretopicAsyncWithHttpInfo(languageCode, pageSize, pageNumber, text, sortOrder, sortBy);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get list of all ignored topics of the specified language code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 200. (optional, default to 25)</param>
+        /// <param name="pageNumber">The page number for the listing (optional, default to 1)</param>
+        /// <param name="text">The topic text filter applied to the listing (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional, default to desc)</param>
+        /// <param name="sortBy">The field to sort by for the listing (optional, default to dateModified)</param>
+        /// <returns>Task of ApiResponse (IgnoredMinedTopicListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IgnoredMinedTopicListing>> GetLanguageunderstandingIgnoretopicAsyncWithHttpInfo (string languageCode, int? pageSize = null, int? pageNumber = null, string text = null, string sortOrder = null, string sortBy = null)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->GetLanguageunderstandingIgnoretopic");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (text != null) localVarQueryParams.Add(new Tuple<string, string>("text", this.Configuration.ApiClient.ParameterToString(text)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingIgnoretopic: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLanguageunderstandingIgnoretopic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IgnoredMinedTopicListing>(localVarStatusCode,
+                localVarHeaders,
+                (IgnoredMinedTopicListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IgnoredMinedTopicListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8375,6 +9181,898 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<NluDomain>(localVarStatusCode,
                 localVarHeaders,
                 (NluDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(NluDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add phrases to the ignored phrases list 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing phrases to be ignored</param>
+        /// <returns>IgnorePhrasesResponse</returns>
+        
+        public IgnorePhrasesResponse PostLanguageunderstandingIgnorephrase (string languageCode, IgnorePhrasesRequest body)
+        {
+             ApiResponse<IgnorePhrasesResponse> localVarResponse = PostLanguageunderstandingIgnorephraseWithHttpInfo(languageCode, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add phrases to the ignored phrases list 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing phrases to be ignored</param>
+        /// <returns>ApiResponse of IgnorePhrasesResponse</returns>
+        
+        public ApiResponse< IgnorePhrasesResponse > PostLanguageunderstandingIgnorephraseWithHttpInfo (string languageCode, IgnorePhrasesRequest body)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephrase");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephrase");
+
+            var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnorephrase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnorephrase: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IgnorePhrasesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (IgnorePhrasesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IgnorePhrasesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add phrases to the ignored phrases list 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing phrases to be ignored</param>
+        /// <returns>Task of IgnorePhrasesResponse</returns>
+        
+        public async System.Threading.Tasks.Task<IgnorePhrasesResponse> PostLanguageunderstandingIgnorephraseAsync (string languageCode, IgnorePhrasesRequest body)
+        {
+             ApiResponse<IgnorePhrasesResponse> localVarResponse = await PostLanguageunderstandingIgnorephraseAsyncWithHttpInfo(languageCode, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add phrases to the ignored phrases list 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing phrases to be ignored</param>
+        /// <returns>Task of ApiResponse (IgnorePhrasesResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IgnorePhrasesResponse>> PostLanguageunderstandingIgnorephraseAsyncWithHttpInfo (string languageCode, IgnorePhrasesRequest body)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephrase");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephrase");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnorephrase: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnorephrase: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IgnorePhrasesResponse>(localVarStatusCode,
+                localVarHeaders,
+                (IgnorePhrasesResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IgnorePhrasesResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete ignored phrases 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns></returns>
+        
+        public void PostLanguageunderstandingIgnorephraseRemove (string languageCode, RemoveEntitiesRequest body)
+        {
+             PostLanguageunderstandingIgnorephraseRemoveWithHttpInfo(languageCode, body);
+        }
+
+        /// <summary>
+        /// Delete ignored phrases 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostLanguageunderstandingIgnorephraseRemoveWithHttpInfo (string languageCode, RemoveEntitiesRequest body)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephraseRemove");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephraseRemove");
+
+            var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}/remove";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnorephraseRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnorephraseRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete ignored phrases 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostLanguageunderstandingIgnorephraseRemoveAsync (string languageCode, RemoveEntitiesRequest body)
+        {
+             await PostLanguageunderstandingIgnorephraseRemoveAsyncWithHttpInfo(languageCode, body);
+
+        }
+
+        /// <summary>
+        /// Delete ignored phrases 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostLanguageunderstandingIgnorephraseRemoveAsyncWithHttpInfo (string languageCode, RemoveEntitiesRequest body)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephraseRemove");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephraseRemove");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}/remove";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnorephraseRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnorephraseRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add topics to the ignored topics list 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing topics to be ignored</param>
+        /// <returns>IgnoreTopicsResponse</returns>
+        
+        public IgnoreTopicsResponse PostLanguageunderstandingIgnoretopic (string languageCode, IgnoreTopicsRequest body)
+        {
+             ApiResponse<IgnoreTopicsResponse> localVarResponse = PostLanguageunderstandingIgnoretopicWithHttpInfo(languageCode, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add topics to the ignored topics list 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing topics to be ignored</param>
+        /// <returns>ApiResponse of IgnoreTopicsResponse</returns>
+        
+        public ApiResponse< IgnoreTopicsResponse > PostLanguageunderstandingIgnoretopicWithHttpInfo (string languageCode, IgnoreTopicsRequest body)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopic");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopic");
+
+            var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnoretopic: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnoretopic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IgnoreTopicsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (IgnoreTopicsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IgnoreTopicsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add topics to the ignored topics list 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing topics to be ignored</param>
+        /// <returns>Task of IgnoreTopicsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<IgnoreTopicsResponse> PostLanguageunderstandingIgnoretopicAsync (string languageCode, IgnoreTopicsRequest body)
+        {
+             ApiResponse<IgnoreTopicsResponse> localVarResponse = await PostLanguageunderstandingIgnoretopicAsyncWithHttpInfo(languageCode, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add topics to the ignored topics list 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing topics to be ignored</param>
+        /// <returns>Task of ApiResponse (IgnoreTopicsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IgnoreTopicsResponse>> PostLanguageunderstandingIgnoretopicAsyncWithHttpInfo (string languageCode, IgnoreTopicsRequest body)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopic");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopic");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnoretopic: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnoretopic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IgnoreTopicsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (IgnoreTopicsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IgnoreTopicsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete ignored topics 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns></returns>
+        
+        public void PostLanguageunderstandingIgnoretopicRemove (string languageCode, RemoveEntitiesRequest body)
+        {
+             PostLanguageunderstandingIgnoretopicRemoveWithHttpInfo(languageCode, body);
+        }
+
+        /// <summary>
+        /// Delete ignored topics 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PostLanguageunderstandingIgnoretopicRemoveWithHttpInfo (string languageCode, RemoveEntitiesRequest body)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopicRemove");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopicRemove");
+
+            var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}/remove";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnoretopicRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnoretopicRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete ignored topics 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PostLanguageunderstandingIgnoretopicRemoveAsync (string languageCode, RemoveEntitiesRequest body)
+        {
+             await PostLanguageunderstandingIgnoretopicRemoveAsyncWithHttpInfo(languageCode, body);
+
+        }
+
+        /// <summary>
+        /// Delete ignored topics 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="languageCode">Language Code</param>
+        /// <param name="body">Request body containing entities to be removed</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PostLanguageunderstandingIgnoretopicRemoveAsyncWithHttpInfo (string languageCode, RemoveEntitiesRequest body)
+        { 
+            // verify the required parameter 'languageCode' is set
+            if (languageCode == null)
+                throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopicRemove");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopicRemove");
+            
+
+            var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}/remove";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (languageCode != null) localVarPathParams.Add("languageCode", this.Configuration.ApiClient.ParameterToString(languageCode));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnoretopicRemove: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLanguageunderstandingIgnoretopicRemove: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

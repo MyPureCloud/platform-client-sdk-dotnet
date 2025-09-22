@@ -118,13 +118,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DomainName">DomainName.</param>
         /// <param name="SenderStatus">SenderStatus.</param>
         /// <param name="SenderType">SenderType.</param>
-        public EmailOutboundDomainResult(DnsRecordEntry DnsCnameBounceRecord = null, DnsRecordEntry DnsTxtSendingRecord = null, string DomainName = null, SenderStatusEnum? SenderStatus = null, SenderTypeEnum? SenderType = null)
+        /// <param name="EmailSetting">The email settings associated with this domain..</param>
+        public EmailOutboundDomainResult(DnsRecordEntry DnsCnameBounceRecord = null, DnsRecordEntry DnsTxtSendingRecord = null, string DomainName = null, SenderStatusEnum? SenderStatus = null, SenderTypeEnum? SenderType = null, EmailSetting EmailSetting = null)
         {
             this.DnsCnameBounceRecord = DnsCnameBounceRecord;
             this.DnsTxtSendingRecord = DnsTxtSendingRecord;
             this.DomainName = DomainName;
             this.SenderStatus = SenderStatus;
             this.SenderType = SenderType;
+            this.EmailSetting = EmailSetting;
             
         }
         
@@ -157,6 +159,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// The email settings associated with this domain.
+        /// </summary>
+        /// <value>The email settings associated with this domain.</value>
+        [DataMember(Name="emailSetting", EmitDefaultValue=false)]
+        public EmailSetting EmailSetting { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -171,6 +182,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DomainName: ").Append(DomainName).Append("\n");
             sb.Append("  SenderStatus: ").Append(SenderStatus).Append("\n");
             sb.Append("  SenderType: ").Append(SenderType).Append("\n");
+            sb.Append("  EmailSetting: ").Append(EmailSetting).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -235,6 +247,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SenderType == other.SenderType ||
                     this.SenderType != null &&
                     this.SenderType.Equals(other.SenderType)
+                ) &&
+                (
+                    this.EmailSetting == other.EmailSetting ||
+                    this.EmailSetting != null &&
+                    this.EmailSetting.Equals(other.EmailSetting)
                 );
         }
 
@@ -263,6 +280,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SenderType != null)
                     hash = hash * 59 + this.SenderType.GetHashCode();
+
+                if (this.EmailSetting != null)
+                    hash = hash * 59 + this.EmailSetting.GetHashCode();
 
                 return hash;
             }

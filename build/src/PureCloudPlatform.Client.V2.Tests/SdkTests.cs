@@ -317,6 +317,10 @@ namespace PureCloudPlatform.Client.V2.Tests
                  return PureCloudRegionHosts.ap_south_1;
                 case "use2.us-gov-pure.cloud":
                  return PureCloudRegionHosts.us_east_2;
+                case "mxc1.pure.cloud":
+                    return PureCloudRegionHosts.mx_central_1;
+                case "apse1.pure.cloud":
+                    return PureCloudRegionHosts.ap_southeast_1;
                 default:
                  Console.WriteLine("Value does not exist in enum using default val");
                  return null;
@@ -597,6 +601,10 @@ namespace PureCloudPlatform.Client.V2.Tests
                     return PureCloudRegionHosts.ap_south_1;
                 case "use2.us-gov-pure.cloud":
                     return PureCloudRegionHosts.us_east_2;
+                case "mxc1.pure.cloud":
+                    return PureCloudRegionHosts.mx_central_1;
+                case "apse1.pure.cloud":
+                    return PureCloudRegionHosts.ap_southeast_1;
                 default:
                     Console.WriteLine("Value does not exist in enum using default val");
                     return null;

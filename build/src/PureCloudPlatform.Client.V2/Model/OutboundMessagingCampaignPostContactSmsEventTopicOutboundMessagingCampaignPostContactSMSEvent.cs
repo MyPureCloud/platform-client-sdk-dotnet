@@ -92,7 +92,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum OutboundMessageThrottled for "OUTBOUND_MESSAGE_THROTTLED"
             /// </summary>
             [EnumMember(Value = "OUTBOUND_MESSAGE_THROTTLED")]
-            OutboundMessageThrottled
+            OutboundMessageThrottled,
+            
+            /// <summary>
+            /// Enum OutboundMessageAmbiguous for "OUTBOUND_MESSAGE_AMBIGUOUS"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_MESSAGE_AMBIGUOUS")]
+            OutboundMessageAmbiguous
         }
         /// <summary>
         /// Gets or Sets OutboundCampaignType

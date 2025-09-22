@@ -8,7 +8,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**DeleteUserrecording**](#DeleteUserrecording) | **Delete** /api/v2/userrecordings/{recordingId} | Delete a user recording. |
 | [**GetUserrecording**](#GetUserrecording) | **Get** /api/v2/userrecordings/{recordingId} | Get a user recording. |
-| [**GetUserrecordingMedia**](#GetUserrecordingMedia) | **Get** /api/v2/userrecordings/{recordingId}/media | Download a user recording. |
 | [**GetUserrecordingTranscoding**](#GetUserrecordingTranscoding) | **Get** /api/v2/userrecordings/{recordingId}/transcoding | Download a user recording. |
 | [**GetUserrecordings**](#GetUserrecordings) | **Get** /api/v2/userrecordings | Get a list of user recordings. |
 | [**GetUserrecordingsSummary**](#GetUserrecordingsSummary) | **Get** /api/v2/userrecordings/summary | Get user recording summary |
@@ -137,76 +136,6 @@ namespace Example
 ### Return type
 
 [**UserRecording**](UserRecording)
-
-
-## GetUserrecordingMedia
-
-> [**DownloadResponse**](DownloadResponse) GetUserrecordingMedia (string recordingId, string formatId = null, bool? async = null)
-
-:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
-This resource has been deprecated
-:::
-
-Download a user recording.
-
-API should migrate to use GET api/v2/userrecordings/{recordingId}/transcoding
-
-Requires NO permissions: 
-
-
-### Example
-```{"language":"csharp"}
-using System;
-using System.Diagnostics;
-using PureCloudPlatform.Client.V2.Api;
-using PureCloudPlatform.Client.V2.Client;
-using PureCloudPlatform.Client.V2.Model;
-
-namespace Example
-{
-    public class GetUserrecordingMediaExample
-    {
-        public void main()
-        { 
-            // Configure OAuth2 access token for authorization: PureCloud OAuth
-            // The following example is using the Authorization Code Grant
-            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
-                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
-                "http://redirecturi.com/",
-                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
-
-            var apiInstance = new UserRecordingsApi();
-            var recordingId = recordingId_example;  // string | User Recording ID
-            var formatId = formatId_example;  // string | The desired media format. (optional)  (default to WEBM)
-            var async = true;  // bool? | When set to true, api will return 202 response until the recording is ready for download (optional) 
-
-            try
-            { 
-                // Download a user recording.
-                DownloadResponse result = apiInstance.GetUserrecordingMedia(recordingId, formatId, async);
-                Debug.WriteLine(result);
-            }
-            catch (Exception e)
-            {
-                Debug.Print("Exception when calling UserRecordingsApi.GetUserrecordingMedia: " + e.Message );
-            }
-        }
-    }
-}
-```
-
-### Parameters
-
-
-|Name | Type | Description  | Notes |
-|------------- | ------------- | ------------- | -------------|
-| **recordingId** | **string**| User Recording ID |  |
-| **formatId** | **string**| The desired media format. | [optional] [default to WEBM]<br />**Values**: WAV, WEBM, WAV_ULAW, OGG_VORBIS, OGG_OPUS, MP3, NONE |
-| **async** | **bool?**| When set to true, api will return 202 response until the recording is ready for download | [optional]  |
-
-### Return type
-
-[**DownloadResponse**](DownloadResponse)
 
 
 ## GetUserrecordingTranscoding
@@ -459,4 +388,4 @@ namespace Example
 [**UserRecording**](UserRecording)
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_

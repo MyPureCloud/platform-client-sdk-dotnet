@@ -77,13 +77,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CnameVerificationResult">CNAME registration Status.</param>
         /// <param name="DkimVerificationResult">DKIM registration Status.</param>
         /// <param name="SenderType">Sender Type.</param>
-        public OutboundDomain(string Id = null, string Name = null, VerificationResult CnameVerificationResult = null, VerificationResult DkimVerificationResult = null, SenderTypeEnum? SenderType = null)
+        /// <param name="EmailSetting">The email settings associated with this domain..</param>
+        public OutboundDomain(string Id = null, string Name = null, VerificationResult CnameVerificationResult = null, VerificationResult DkimVerificationResult = null, SenderTypeEnum? SenderType = null, EmailSetting EmailSetting = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.CnameVerificationResult = CnameVerificationResult;
             this.DkimVerificationResult = DkimVerificationResult;
             this.SenderType = SenderType;
+            this.EmailSetting = EmailSetting;
             
         }
         
@@ -127,6 +129,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The email settings associated with this domain.
+        /// </summary>
+        /// <value>The email settings associated with this domain.</value>
+        [DataMember(Name="emailSetting", EmitDefaultValue=false)]
+        public EmailSetting EmailSetting { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -148,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CnameVerificationResult: ").Append(CnameVerificationResult).Append("\n");
             sb.Append("  DkimVerificationResult: ").Append(DkimVerificationResult).Append("\n");
             sb.Append("  SenderType: ").Append(SenderType).Append("\n");
+            sb.Append("  EmailSetting: ").Append(EmailSetting).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -215,6 +227,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SenderType.Equals(other.SenderType)
                 ) &&
                 (
+                    this.EmailSetting == other.EmailSetting ||
+                    this.EmailSetting != null &&
+                    this.EmailSetting.Equals(other.EmailSetting)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -246,6 +263,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SenderType != null)
                     hash = hash * 59 + this.SenderType.GetHashCode();
+
+                if (this.EmailSetting != null)
+                    hash = hash * 59 + this.EmailSetting.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

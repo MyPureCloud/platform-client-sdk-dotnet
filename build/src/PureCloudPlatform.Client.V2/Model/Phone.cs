@@ -302,6 +302,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Boolean indicating whether the phone is standAlone.
+        /// </summary>
+        /// <value>Boolean indicating whether the phone is standAlone.</value>
+        [DataMember(Name="standAlone", EmitDefaultValue=false)]
+        public bool? StandAlone { get; private set; }
+
+
+
+        /// <summary>
         /// Gets or Sets PrimaryEdge
         /// </summary>
         [DataMember(Name="primaryEdge", EmitDefaultValue=false)]
@@ -357,6 +366,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Properties: ").Append(Properties).Append("\n");
             sb.Append("  Capabilities: ").Append(Capabilities).Append("\n");
             sb.Append("  WebRtcUser: ").Append(WebRtcUser).Append("\n");
+            sb.Append("  StandAlone: ").Append(StandAlone).Append("\n");
             sb.Append("  PrimaryEdge: ").Append(PrimaryEdge).Append("\n");
             sb.Append("  SecondaryEdge: ").Append(SecondaryEdge).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -516,6 +526,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WebRtcUser.Equals(other.WebRtcUser)
                 ) &&
                 (
+                    this.StandAlone == other.StandAlone ||
+                    this.StandAlone != null &&
+                    this.StandAlone.Equals(other.StandAlone)
+                ) &&
+                (
                     this.PrimaryEdge == other.PrimaryEdge ||
                     this.PrimaryEdge != null &&
                     this.PrimaryEdge.Equals(other.PrimaryEdge)
@@ -611,6 +626,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WebRtcUser != null)
                     hash = hash * 59 + this.WebRtcUser.GetHashCode();
+
+                if (this.StandAlone != null)
+                    hash = hash * 59 + this.StandAlone.GetHashCode();
 
                 if (this.PrimaryEdge != null)
                     hash = hash * 59 + this.PrimaryEdge.GetHashCode();

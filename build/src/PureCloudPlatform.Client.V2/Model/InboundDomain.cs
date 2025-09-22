@@ -66,7 +66,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SubDomain">Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email..</param>
         /// <param name="MailFromSettings">The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false..</param>
         /// <param name="CustomSMTPServer">The custom SMTP server integration to use when sending outbound emails from this domain..</param>
-        public InboundDomain(string Id = null, string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null, MailFromResult MailFromSettings = null, DomainEntityRef CustomSMTPServer = null)
+        /// <param name="EmailSetting">The email settings associated with this domain..</param>
+        public InboundDomain(string Id = null, string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null, MailFromResult MailFromSettings = null, DomainEntityRef CustomSMTPServer = null, EmailSetting EmailSetting = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -74,6 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SubDomain = SubDomain;
             this.MailFromSettings = MailFromSettings;
             this.CustomSMTPServer = CustomSMTPServer;
+            this.EmailSetting = EmailSetting;
             
         }
         
@@ -126,6 +128,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The email settings associated with this domain.
+        /// </summary>
+        /// <value>The email settings associated with this domain.</value>
+        [DataMember(Name="emailSetting", EmitDefaultValue=false)]
+        public EmailSetting EmailSetting { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -148,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SubDomain: ").Append(SubDomain).Append("\n");
             sb.Append("  MailFromSettings: ").Append(MailFromSettings).Append("\n");
             sb.Append("  CustomSMTPServer: ").Append(CustomSMTPServer).Append("\n");
+            sb.Append("  EmailSetting: ").Append(EmailSetting).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -220,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CustomSMTPServer.Equals(other.CustomSMTPServer)
                 ) &&
                 (
+                    this.EmailSetting == other.EmailSetting ||
+                    this.EmailSetting != null &&
+                    this.EmailSetting.Equals(other.EmailSetting)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -254,6 +271,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CustomSMTPServer != null)
                     hash = hash * 59 + this.CustomSMTPServer.GetHashCode();
+
+                if (this.EmailSetting != null)
+                    hash = hash * 59 + this.EmailSetting.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

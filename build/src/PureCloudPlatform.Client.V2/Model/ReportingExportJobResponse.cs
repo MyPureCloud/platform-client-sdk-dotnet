@@ -871,7 +871,43 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum EvaluationPerformanceQuestionDetailView for "EVALUATION_PERFORMANCE_QUESTION_DETAIL_VIEW"
             /// </summary>
             [EnumMember(Value = "EVALUATION_PERFORMANCE_QUESTION_DETAIL_VIEW")]
-            EvaluationPerformanceQuestionDetailView
+            EvaluationPerformanceQuestionDetailView,
+            
+            /// <summary>
+            /// Enum QueueWorkitemActivitySummaryView for "QUEUE_WORKITEM_ACTIVITY_SUMMARY_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_WORKITEM_ACTIVITY_SUMMARY_VIEW")]
+            QueueWorkitemActivitySummaryView,
+            
+            /// <summary>
+            /// Enum QueueWorkitemActivityDetailView for "QUEUE_WORKITEM_ACTIVITY_DETAIL_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_WORKITEM_ACTIVITY_DETAIL_VIEW")]
+            QueueWorkitemActivityDetailView,
+            
+            /// <summary>
+            /// Enum DigitalAdoptionView for "DIGITAL_ADOPTION_VIEW"
+            /// </summary>
+            [EnumMember(Value = "DIGITAL_ADOPTION_VIEW")]
+            DigitalAdoptionView,
+            
+            /// <summary>
+            /// Enum DigitalIntentView for "DIGITAL_INTENT_VIEW"
+            /// </summary>
+            [EnumMember(Value = "DIGITAL_INTENT_VIEW")]
+            DigitalIntentView,
+            
+            /// <summary>
+            /// Enum DigitalPerformanceView for "DIGITAL_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "DIGITAL_PERFORMANCE_VIEW")]
+            DigitalPerformanceView,
+            
+            /// <summary>
+            /// Enum CopilotUsageView for "COPILOT_USAGE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "COPILOT_USAGE_VIEW")]
+            CopilotUsageView
         }
         /// <summary>
         /// The error message in case the export request failed

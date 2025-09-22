@@ -10,7 +10,6 @@
 | **Name** | **string** |  | [optional] |
 | **DateCreated** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **ContentUri** | **string** |  | [optional] |
 | **Workspace** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **CreatedBy** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
 | **Conversation** | [**Conversation**](Conversation) |  | [optional] |
@@ -22,4 +21,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_

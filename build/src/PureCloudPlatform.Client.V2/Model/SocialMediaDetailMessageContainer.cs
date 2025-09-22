@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="NormalizedMessage">NormalizedMessage.</param>
         /// <param name="EscalationInfo">EscalationInfo.</param>
-        public SocialMediaDetailMessageContainer(string Id = null, ConversationNormalizedMessage NormalizedMessage = null, SocialMediaMessageEscalationInfo EscalationInfo = null)
+        /// <param name="ContentModeration">ContentModeration.</param>
+        public SocialMediaDetailMessageContainer(string Id = null, ConversationNormalizedMessage NormalizedMessage = null, SocialMediaMessageEscalationInfo EscalationInfo = null, ContentModeration ContentModeration = null)
         {
             this.Id = Id;
             this.NormalizedMessage = NormalizedMessage;
             this.EscalationInfo = EscalationInfo;
+            this.ContentModeration = ContentModeration;
             
         }
         
@@ -57,6 +59,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public SocialMediaMessageEscalationInfo EscalationInfo { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets ContentModeration
+        /// </summary>
+        [DataMember(Name="contentModeration", EmitDefaultValue=false)]
+        public ContentModeration ContentModeration { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -69,6 +79,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  NormalizedMessage: ").Append(NormalizedMessage).Append("\n");
             sb.Append("  EscalationInfo: ").Append(EscalationInfo).Append("\n");
+            sb.Append("  ContentModeration: ").Append(ContentModeration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -123,6 +134,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EscalationInfo == other.EscalationInfo ||
                     this.EscalationInfo != null &&
                     this.EscalationInfo.Equals(other.EscalationInfo)
+                ) &&
+                (
+                    this.ContentModeration == other.ContentModeration ||
+                    this.ContentModeration != null &&
+                    this.ContentModeration.Equals(other.ContentModeration)
                 );
         }
 
@@ -145,6 +161,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EscalationInfo != null)
                     hash = hash * 59 + this.EscalationInfo.GetHashCode();
+
+                if (this.ContentModeration != null)
+                    hash = hash * 59 + this.ContentModeration.GetHashCode();
 
                 return hash;
             }

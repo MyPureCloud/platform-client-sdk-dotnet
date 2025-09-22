@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Metrics">A list of metrics to calculate within the chart by (aka the y axis) (required).</param>
         /// <param name="DisplayAttributes">Optional display attributes for rendering the chart.</param>
         /// <param name="GroupByMax">A maximum on the number of values being grouped by.</param>
-        public JourneyViewChart(string Name = null, GroupByTimeEnum? GroupByTime = null, List<JourneyViewChartGroupByAttribute> GroupByAttributes = null, List<JourneyViewChartMetric> Metrics = null, JourneyViewChartDisplayAttributes DisplayAttributes = null, int? GroupByMax = null)
+        public JourneyViewChart(string Name = null, GroupByTimeEnum? GroupByTime = null, List<JourneyViewChartGroupByAttribute> GroupByAttributes = null, List<JourneyViewChartMetric> Metrics = null, JourneyViewChartDisplayAttributes DisplayAttributes = null, long? GroupByMax = null)
         {
             this.Name = Name;
             this.GroupByTime = GroupByTime;
@@ -151,7 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>A maximum on the number of values being grouped by</value>
         [DataMember(Name="groupByMax", EmitDefaultValue=false)]
-        public int? GroupByMax { get; set; }
+        public long? GroupByMax { get; set; }
 
 
 

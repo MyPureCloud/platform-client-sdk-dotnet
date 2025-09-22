@@ -96,7 +96,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Botconnector for "bot-connector"
             /// </summary>
             [EnumMember(Value = "bot-connector")]
-            Botconnector
+            Botconnector,
+            
+            /// <summary>
+            /// Enum Byosmpp for "byo-smpp"
+            /// </summary>
+            [EnumMember(Value = "byo-smpp")]
+            Byosmpp
         }
         /// <summary>
         /// The direction of traffic for the IP range from the perspective of Genesys Cloud (e.g. inbound to Genesys; outbound from Genesys)

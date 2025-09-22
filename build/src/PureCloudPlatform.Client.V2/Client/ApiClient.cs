@@ -321,7 +321,7 @@ namespace PureCloudPlatform.Client.V2.Client
             );
 
             // Set SDK version
-            requestOptions.AddHeaderParam("purecloud-sdk", "241.0.0");
+            requestOptions.AddHeaderParam("purecloud-sdk", "242.0.0");
 
             Retry retry = new Retry(this.RetryConfig);
             

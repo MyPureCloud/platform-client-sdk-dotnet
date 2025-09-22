@@ -881,6 +881,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Active,
             
             /// <summary>
+            /// Enum Deleted for "Deleted"
+            /// </summary>
+            [EnumMember(Value = "Deleted")]
+            Deleted,
+            
+            /// <summary>
             /// Enum Write for "Write"
             /// </summary>
             [EnumMember(Value = "Write")]

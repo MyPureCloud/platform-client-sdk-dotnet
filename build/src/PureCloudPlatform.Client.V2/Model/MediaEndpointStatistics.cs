@@ -56,7 +56,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ReconnectAttempts">Media reconnect attempt count.</param>
         /// <param name="SourceType">Source type of media endpoint.</param>
         /// <param name="ClientInfo">Client information associated with media endpoint.</param>
-        public MediaEndpointStatistics(MediaStatisticsTrunkInfo Trunk = null, NamedEntity Station = null, NamedEntity User = null, MediaIceStatistics Ice = null, MediaRtpStatistics Rtp = null, int? ReconnectAttempts = null, SourceTypeEnum? SourceType = null, MediaStatisticsClientInfo ClientInfo = null)
+        /// <param name="DateCreated">Media endpoint statistics creation time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="DateProcessed">Media endpoint statistics processed time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public MediaEndpointStatistics(MediaStatisticsTrunkInfo Trunk = null, NamedEntity Station = null, NamedEntity User = null, MediaIceStatistics Ice = null, MediaRtpStatistics Rtp = null, int? ReconnectAttempts = null, SourceTypeEnum? SourceType = null, MediaStatisticsClientInfo ClientInfo = null, DateTime? DateCreated = null, DateTime? DateProcessed = null)
         {
             this.Trunk = Trunk;
             this.Station = Station;
@@ -66,6 +68,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ReconnectAttempts = ReconnectAttempts;
             this.SourceType = SourceType;
             this.ClientInfo = ClientInfo;
+            this.DateCreated = DateCreated;
+            this.DateProcessed = DateProcessed;
             
         }
         
@@ -135,6 +139,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public MediaStatisticsClientInfo ClientInfo { get; set; }
 
 
+
+        /// <summary>
+        /// Media endpoint statistics creation time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Media endpoint statistics creation time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateCreated", EmitDefaultValue=false)]
+        public DateTime? DateCreated { get; set; }
+
+
+
+        /// <summary>
+        /// Media endpoint statistics processed time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Media endpoint statistics processed time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateProcessed", EmitDefaultValue=false)]
+        public DateTime? DateProcessed { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -152,6 +174,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ReconnectAttempts: ").Append(ReconnectAttempts).Append("\n");
             sb.Append("  SourceType: ").Append(SourceType).Append("\n");
             sb.Append("  ClientInfo: ").Append(ClientInfo).Append("\n");
+            sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
+            sb.Append("  DateProcessed: ").Append(DateProcessed).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -231,6 +255,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ClientInfo == other.ClientInfo ||
                     this.ClientInfo != null &&
                     this.ClientInfo.Equals(other.ClientInfo)
+                ) &&
+                (
+                    this.DateCreated == other.DateCreated ||
+                    this.DateCreated != null &&
+                    this.DateCreated.Equals(other.DateCreated)
+                ) &&
+                (
+                    this.DateProcessed == other.DateProcessed ||
+                    this.DateProcessed != null &&
+                    this.DateProcessed.Equals(other.DateProcessed)
                 );
         }
 
@@ -268,6 +302,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ClientInfo != null)
                     hash = hash * 59 + this.ClientInfo.GetHashCode();
+
+                if (this.DateCreated != null)
+                    hash = hash * 59 + this.DateCreated.GetHashCode();
+
+                if (this.DateProcessed != null)
+                    hash = hash * 59 + this.DateProcessed.GetHashCode();
 
                 return hash;
             }

@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>number of external contacts who participated at the element</value>
         [DataMember(Name="participantCount", EmitDefaultValue=false)]
-        public int? ParticipantCount { get; private set; }
+        public long? ParticipantCount { get; private set; }
 
 
 
@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>number of external contacts who could still complete the journey</value>
         [DataMember(Name="activeCount", EmitDefaultValue=false)]
-        public int? ActiveCount { get; private set; }
+        public long? ActiveCount { get; private set; }
 
 
 
@@ -51,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>number of external contacts who completed the journey forward</value>
         [DataMember(Name="completedCount", EmitDefaultValue=false)]
-        public int? CompletedCount { get; private set; }
+        public long? CompletedCount { get; private set; }
 
 
 
@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>number of external contacts who did not make it to the next element</value>
         [DataMember(Name="dropoutCount", EmitDefaultValue=false)]
-        public int? DropoutCount { get; private set; }
+        public long? DropoutCount { get; private set; }
 
 
 
@@ -69,7 +69,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>number of external contacts who moved from one element to next element but did not complete the journey</value>
         [DataMember(Name="flowCount", EmitDefaultValue=false)]
-        public int? FlowCount { get; private set; }
+        public long? FlowCount { get; private set; }
 
 
         /// <summary>

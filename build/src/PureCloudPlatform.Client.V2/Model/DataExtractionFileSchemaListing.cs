@@ -1,0 +1,212 @@
+using System;
+using System.Linq;
+using System.IO;
+using System.Text;
+using System.Collections;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Runtime.Serialization;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using PureCloudPlatform.Client.V2.Client;
+
+namespace PureCloudPlatform.Client.V2.Model
+{
+    /// <summary>
+    /// DataExtractionFileSchemaListing
+    /// </summary>
+    [DataContract]
+    public partial class DataExtractionFileSchemaListing :  IEquatable<DataExtractionFileSchemaListing>
+    {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DataExtractionFileSchemaListing" /> class.
+        /// </summary>
+        /// <param name="Entities">Entities.</param>
+        /// <param name="NextUri">NextUri.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        /// <param name="PreviousUri">PreviousUri.</param>
+        /// <param name="EnabledDataSchemas">The data schemas that are enabled for extraction.</param>
+        /// <param name="Errors">Errors.</param>
+        public DataExtractionFileSchemaListing(List<DataExtractionFileSchema> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null, List<string> EnabledDataSchemas = null, ErrorBody Errors = null)
+        {
+            this.Entities = Entities;
+            this.NextUri = NextUri;
+            this.SelfUri = SelfUri;
+            this.PreviousUri = PreviousUri;
+            this.EnabledDataSchemas = EnabledDataSchemas;
+            this.Errors = Errors;
+            
+        }
+        
+
+
+        /// <summary>
+        /// Gets or Sets Entities
+        /// </summary>
+        [DataMember(Name="entities", EmitDefaultValue=false)]
+        public List<DataExtractionFileSchema> Entities { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets NextUri
+        /// </summary>
+        [DataMember(Name="nextUri", EmitDefaultValue=false)]
+        public string NextUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets SelfUri
+        /// </summary>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets PreviousUri
+        /// </summary>
+        [DataMember(Name="previousUri", EmitDefaultValue=false)]
+        public string PreviousUri { get; set; }
+
+
+
+        /// <summary>
+        /// The data schemas that are enabled for extraction
+        /// </summary>
+        /// <value>The data schemas that are enabled for extraction</value>
+        [DataMember(Name="enabledDataSchemas", EmitDefaultValue=false)]
+        public List<string> EnabledDataSchemas { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Errors
+        /// </summary>
+        [DataMember(Name="errors", EmitDefaultValue=false)]
+        public ErrorBody Errors { get; set; }
+
+
+        /// <summary>
+        /// Returns the string presentation of the object
+        /// </summary>
+        /// <returns>String presentation of the object</returns>
+        public override string ToString()
+        {
+            var sb = new StringBuilder();
+            sb.Append("class DataExtractionFileSchemaListing {\n");
+
+            sb.Append("  Entities: ").Append(Entities).Append("\n");
+            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
+            sb.Append("  EnabledDataSchemas: ").Append(EnabledDataSchemas).Append("\n");
+            sb.Append("  Errors: ").Append(Errors).Append("\n");
+            sb.Append("}\n");
+            return sb.ToString();
+        }
+  
+        /// <summary>
+        /// Returns the JSON string presentation of the object
+        /// </summary>
+        /// <returns>JSON string presentation of the object</returns>
+        public string ToJson()
+        {
+            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+            {
+                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+                Formatting = Formatting.Indented
+            });
+        }
+
+        /// <summary>
+        /// Returns true if objects are equal
+        /// </summary>
+        /// <param name="obj">Object to be compared</param>
+        /// <returns>Boolean</returns>
+        public override bool Equals(object obj)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            return this.Equals(obj as DataExtractionFileSchemaListing);
+        }
+
+        /// <summary>
+        /// Returns true if DataExtractionFileSchemaListing instances are equal
+        /// </summary>
+        /// <param name="other">Instance of DataExtractionFileSchemaListing to be compared</param>
+        /// <returns>Boolean</returns>
+        public bool Equals(DataExtractionFileSchemaListing other)
+        {
+            // credit: http://stackoverflow.com/a/10454552/677735
+            if (other == null)
+                return false;
+
+            return true &&
+                (
+                    this.Entities == other.Entities ||
+                    this.Entities != null &&
+                    this.Entities.SequenceEqual(other.Entities)
+                ) &&
+                (
+                    this.NextUri == other.NextUri ||
+                    this.NextUri != null &&
+                    this.NextUri.Equals(other.NextUri)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.PreviousUri == other.PreviousUri ||
+                    this.PreviousUri != null &&
+                    this.PreviousUri.Equals(other.PreviousUri)
+                ) &&
+                (
+                    this.EnabledDataSchemas == other.EnabledDataSchemas ||
+                    this.EnabledDataSchemas != null &&
+                    this.EnabledDataSchemas.SequenceEqual(other.EnabledDataSchemas)
+                ) &&
+                (
+                    this.Errors == other.Errors ||
+                    this.Errors != null &&
+                    this.Errors.Equals(other.Errors)
+                );
+        }
+
+        /// <summary>
+        /// Gets the hash code
+        /// </summary>
+        /// <returns>Hash code</returns>
+        public override int GetHashCode()
+        {
+            // credit: http://stackoverflow.com/a/263416/677735
+            unchecked // Overflow is fine, just wrap
+            {
+                int hash = 41;
+                // Suitable nullity checks etc, of course :)
+                if (this.Entities != null)
+                    hash = hash * 59 + this.Entities.GetHashCode();
+
+                if (this.NextUri != null)
+                    hash = hash * 59 + this.NextUri.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
+
+                if (this.PreviousUri != null)
+                    hash = hash * 59 + this.PreviousUri.GetHashCode();
+
+                if (this.EnabledDataSchemas != null)
+                    hash = hash * 59 + this.EnabledDataSchemas.GetHashCode();
+
+                if (this.Errors != null)
+                    hash = hash * 59 + this.Errors.GetHashCode();
+
+                return hash;
+            }
+        }
+    }
+
+}

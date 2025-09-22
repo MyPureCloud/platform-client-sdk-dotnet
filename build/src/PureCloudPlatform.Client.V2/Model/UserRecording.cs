@@ -24,7 +24,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name.</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="ContentUri">ContentUri.</param>
         /// <param name="Workspace">Workspace.</param>
         /// <param name="CreatedBy">CreatedBy.</param>
         /// <param name="Conversation">Conversation.</param>
@@ -32,12 +31,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DurationMilliseconds">DurationMilliseconds.</param>
         /// <param name="Thumbnails">Thumbnails.</param>
         /// <param name="Read">Read.</param>
-        public UserRecording(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, string ContentUri = null, DomainEntityRef Workspace = null, DomainEntityRef CreatedBy = null, Conversation Conversation = null, long? ContentLength = null, long? DurationMilliseconds = null, List<DocumentThumbnail> Thumbnails = null, bool? Read = null)
+        public UserRecording(string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef Workspace = null, DomainEntityRef CreatedBy = null, Conversation Conversation = null, long? ContentLength = null, long? DurationMilliseconds = null, List<DocumentThumbnail> Thumbnails = null, bool? Read = null)
         {
             this.Name = Name;
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
-            this.ContentUri = ContentUri;
             this.Workspace = Workspace;
             this.CreatedBy = CreatedBy;
             this.Conversation = Conversation;
@@ -82,14 +80,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateModified", EmitDefaultValue=false)]
         public DateTime? DateModified { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets ContentUri
-        /// </summary>
-        [DataMember(Name="contentUri", EmitDefaultValue=false)]
-        public string ContentUri { get; set; }
 
 
 
@@ -170,7 +160,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
-            sb.Append("  ContentUri: ").Append(ContentUri).Append("\n");
             sb.Append("  Workspace: ").Append(Workspace).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  Conversation: ").Append(Conversation).Append("\n");
@@ -240,11 +229,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateModified.Equals(other.DateModified)
                 ) &&
                 (
-                    this.ContentUri == other.ContentUri ||
-                    this.ContentUri != null &&
-                    this.ContentUri.Equals(other.ContentUri)
-                ) &&
-                (
                     this.Workspace == other.Workspace ||
                     this.Workspace != null &&
                     this.Workspace.Equals(other.Workspace)
@@ -308,9 +292,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateModified != null)
                     hash = hash * 59 + this.DateModified.GetHashCode();
-
-                if (this.ContentUri != null)
-                    hash = hash * 59 + this.ContentUri.GetHashCode();
 
                 if (this.Workspace != null)
                     hash = hash * 59 + this.Workspace.GetHashCode();

@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>the number of connections for the journey view link</value>
         [DataMember(Name="connectionCount", EmitDefaultValue=false)]
-        public int? ConnectionCount { get; private set; }
+        public long? ConnectionCount { get; private set; }
 
 
 

@@ -103,7 +103,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Recipientoptedout for "RecipientOptedOut"
             /// </summary>
             [EnumMember(Value = "RecipientOptedOut")]
-            Recipientoptedout
+            Recipientoptedout,
+            
+            /// <summary>
+            /// Enum Datafiltered for "DataFiltered"
+            /// </summary>
+            [EnumMember(Value = "DataFiltered")]
+            Datafiltered
         }
         /// <summary>
         /// The reason code for the failed message receipt.

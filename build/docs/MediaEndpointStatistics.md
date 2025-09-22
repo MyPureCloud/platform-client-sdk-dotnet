@@ -14,7 +14,9 @@
 | **ReconnectAttempts** | **int?** | Media reconnect attempt count | [optional] |
 | **SourceType** | **string** | Source type of media endpoint | [optional] |
 | **ClientInfo** | [**MediaStatisticsClientInfo**](MediaStatisticsClientInfo) | Client information associated with media endpoint | [optional] |
+| **DateCreated** | **DateTime?** | Media endpoint statistics creation time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **DateProcessed** | **DateTime?** | Media endpoint statistics processed time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_

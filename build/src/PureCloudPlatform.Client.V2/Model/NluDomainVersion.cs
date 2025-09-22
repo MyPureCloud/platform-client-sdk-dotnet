@@ -253,6 +253,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Map of language code to NLU domain version UUID for multilingual domains.
+        /// </summary>
+        /// <value>Map of language code to NLU domain version UUID for multilingual domains.</value>
+        [DataMember(Name="languageVersions", EmitDefaultValue=false)]
+        public Dictionary<string, string> LanguageVersions { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -283,6 +292,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Intents: ").Append(Intents).Append("\n");
             sb.Append("  EntityTypes: ").Append(EntityTypes).Append("\n");
             sb.Append("  Entities: ").Append(Entities).Append("\n");
+            sb.Append("  LanguageVersions: ").Append(LanguageVersions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -395,6 +405,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Entities.SequenceEqual(other.Entities)
                 ) &&
                 (
+                    this.LanguageVersions == other.LanguageVersions ||
+                    this.LanguageVersions != null &&
+                    this.LanguageVersions.SequenceEqual(other.LanguageVersions)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -453,6 +468,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
+
+                if (this.LanguageVersions != null)
+                    hash = hash * 59 + this.LanguageVersions.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

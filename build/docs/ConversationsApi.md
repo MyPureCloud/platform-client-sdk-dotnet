@@ -205,12 +205,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsCallParticipantReplace**](#PostConversationsCallParticipantReplace) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsCallParticipantVoiceConsult**](#PostConversationsCallParticipantVoiceConsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/voice/consult | Initiate voice consult transfer |
 | [**PostConversationsCallParticipants**](#PostConversationsCallParticipants) | **Post** /api/v2/conversations/calls/{conversationId}/participants | Add participants to a conversation |
+| [**PostConversationsCallParticipantsUserUserId**](#PostConversationsCallParticipantsUserUserId) | **Post** /api/v2/conversations/calls/{conversationId}/participants/user/{userId} | Add participants to a conversation without a user context |
 | [**PostConversationsCallbackParticipantCommunicationWrapup**](#PostConversationsCallbackParticipantCommunicationWrapup) | **Post** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsCallbackParticipantReplace**](#PostConversationsCallbackParticipantReplace) | **Post** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsCallbacks**](#PostConversationsCallbacks) | **Post** /api/v2/conversations/callbacks | Create a Callback |
 | [**PostConversationsCallbacksBulkDisconnect**](#PostConversationsCallbacksBulkDisconnect) | **Post** /api/v2/conversations/callbacks/bulk/disconnect | Disconnect multiple scheduled callbacks |
 | [**PostConversationsCallbacksBulkUpdate**](#PostConversationsCallbacksBulkUpdate) | **Post** /api/v2/conversations/callbacks/bulk/update | Update multiple scheduled callbacks |
 | [**PostConversationsCalls**](#PostConversationsCalls) | **Post** /api/v2/conversations/calls | Create a call conversation |
+| [**PostConversationsCallsUserUserId**](#PostConversationsCallsUserUserId) | **Post** /api/v2/conversations/calls/user/{userId} | Create a call conversation on behalf of a user |
 | [**PostConversationsChatCommunicationMessages**](#PostConversationsChatCommunicationMessages) | **Post** /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages | Send a message on behalf of a communication in a chat conversation. |
 | [**PostConversationsChatCommunicationTyping**](#PostConversationsChatCommunicationTyping) | **Post** /api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing | Send a typing-indicator on behalf of a communication in a chat conversation. |
 | [**PostConversationsChatParticipantCommunicationWrapup**](#PostConversationsChatParticipantCommunicationWrapup) | **Post** /api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
@@ -9874,6 +9876,7 @@ Update a conversation by disconnecting all of the participants
 Requires ANY permissions: 
 
 * conversation:communication:disconnect
+* conversation:message:park
 
 ### Example
 ```{"language":"csharp"}
@@ -13127,6 +13130,72 @@ namespace Example
 [**Conversation**](Conversation)
 
 
+## PostConversationsCallParticipantsUserUserId
+
+> [**Conversation**](Conversation) PostConversationsCallParticipantsUserUserId (string conversationId, string userId, Conversation body)
+
+
+Add participants to a conversation without a user context
+
+Requires ANY permissions: 
+
+* conversation:agentlessCall:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCallParticipantsUserUserIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var userId = userId_example;  // string | userId
+            var body = new Conversation(); // Conversation | Conversation
+
+            try
+            { 
+                // Add participants to a conversation without a user context
+                Conversation result = apiInstance.PostConversationsCallParticipantsUserUserId(conversationId, userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsCallParticipantsUserUserId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **userId** | **string**| userId |  |
+| **body** | [**Conversation**](Conversation)| Conversation |  |
+
+### Return type
+
+[**Conversation**](Conversation)
+
+
 ## PostConversationsCallbackParticipantCommunicationWrapup
 
 > void PostConversationsCallbackParticipantCommunicationWrapup (string conversationId, string participantId, string communicationId, WrapupInput body = null)
@@ -13499,6 +13568,71 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateCallRequest**](CreateCallRequest)| Call request |  |
+
+### Return type
+
+[**CreateCallResponse**](CreateCallResponse)
+
+
+## PostConversationsCallsUserUserId
+
+> [**CreateCallResponse**](CreateCallResponse) PostConversationsCallsUserUserId (string userId, CreateCallRequest body)
+
+
+Create a call conversation on behalf of a user
+
+Requires ANY permissions: 
+
+* conversation:agentlessCall:add
+* conversation:call:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCallsUserUserIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var userId = userId_example;  // string | userId
+            var body = new CreateCallRequest(); // CreateCallRequest | Call request
+
+            try
+            { 
+                // Create a call conversation on behalf of a user
+                CreateCallResponse result = apiInstance.PostConversationsCallsUserUserId(userId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsCallsUserUserId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **userId** | **string**| userId |  |
 | **body** | [**CreateCallRequest**](CreateCallRequest)| Call request |  |
 
 ### Return type
@@ -14323,6 +14457,8 @@ void (empty response body)
 
 
 Reconnect the user to the most recently disconnected customer on a fully disconnected email conversation
+
+This request is not valid when using the Client Credentials OAuth grant.
 
 Requires ANY permissions: 
 
@@ -18227,4 +18363,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_

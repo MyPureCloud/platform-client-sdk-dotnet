@@ -761,9 +761,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>InboundDomain</returns>
         
-        InboundDomain GetRoutingEmailDomain (string domainId);
+        InboundDomain GetRoutingEmailDomain (string domainId, string expand = null);
 
         /// <summary>
         /// Get domain
@@ -773,9 +774,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>ApiResponse of InboundDomain</returns>
         
-        ApiResponse<InboundDomain> GetRoutingEmailDomainWithHttpInfo (string domainId);
+        ApiResponse<InboundDomain> GetRoutingEmailDomainWithHttpInfo (string domainId, string expand = null);
 
         /// <summary>
         /// Get a route
@@ -874,9 +876,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>InboundDomainEntityListing</returns>
         
-        InboundDomainEntityListing GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
+        InboundDomainEntityListing GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null, string expand = null);
 
         /// <summary>
         /// Get domains
@@ -889,9 +892,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
         
-        ApiResponse<InboundDomainEntityListing> GetRoutingEmailDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
+        ApiResponse<InboundDomainEntityListing> GetRoutingEmailDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null, string expand = null);
 
         /// <summary>
         /// Get domain
@@ -901,9 +905,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>OutboundDomain</returns>
         
-        OutboundDomain GetRoutingEmailOutboundDomain (string domainId);
+        OutboundDomain GetRoutingEmailOutboundDomain (string domainId, string expand = null);
 
         /// <summary>
         /// Get domain
@@ -913,9 +918,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>ApiResponse of OutboundDomain</returns>
         
-        ApiResponse<OutboundDomain> GetRoutingEmailOutboundDomainWithHttpInfo (string domainId);
+        ApiResponse<OutboundDomain> GetRoutingEmailOutboundDomainWithHttpInfo (string domainId, string expand = null);
 
         /// <summary>
         /// Get activation status (cname + dkim) of an outbound domain
@@ -951,9 +957,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>OutboundDomainEntityListing</returns>
         
-        OutboundDomainEntityListing GetRoutingEmailOutboundDomains (int? pageSize = null, int? pageNumber = null, string filter = null);
+        OutboundDomainEntityListing GetRoutingEmailOutboundDomains (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null);
 
         /// <summary>
         /// Get outbound domains
@@ -965,9 +972,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>ApiResponse of OutboundDomainEntityListing</returns>
         
-        ApiResponse<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null);
+        ApiResponse<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null);
 
         /// <summary>
         /// Get email setup
@@ -3169,7 +3177,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>InboundDomain</returns>
         
-        InboundDomain PostRoutingEmailDomains (InboundDomain body);
+        InboundDomain PostRoutingEmailDomains (InboundDomainCreateRequest body);
 
         /// <summary>
         /// Create a domain
@@ -3181,7 +3189,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of InboundDomain</returns>
         
-        ApiResponse<InboundDomain> PostRoutingEmailDomainsWithHttpInfo (InboundDomain body);
+        ApiResponse<InboundDomain> PostRoutingEmailDomainsWithHttpInfo (InboundDomainCreateRequest body);
 
         /// <summary>
         /// Create a domain
@@ -3193,7 +3201,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
-        EmailOutboundDomainResult PostRoutingEmailOutboundDomains (OutboundDomainRequest body);
+        EmailOutboundDomainResult PostRoutingEmailOutboundDomains (OutboundDomainCreateRequest body);
 
         /// <summary>
         /// Create a domain
@@ -3205,7 +3213,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
-        ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsWithHttpInfo (OutboundDomainRequest body);
+        ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsWithHttpInfo (OutboundDomainCreateRequest body);
 
         /// <summary>
         /// Create a simulated domain
@@ -3217,7 +3225,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
-        EmailOutboundDomainResult PostRoutingEmailOutboundDomainsSimulated (OutboundDomainRequest body);
+        EmailOutboundDomainResult PostRoutingEmailOutboundDomainsSimulated (OutboundDomainCreateRequest body);
 
         /// <summary>
         /// Create a simulated domain
@@ -3229,7 +3237,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
-        ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomainRequest body);
+        ApiResponse<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomainCreateRequest body);
 
         /// <summary>
         /// Create Language
@@ -4871,9 +4879,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of InboundDomain</returns>
         
-        System.Threading.Tasks.Task<InboundDomain> GetRoutingEmailDomainAsync (string domainId);
+        System.Threading.Tasks.Task<InboundDomain> GetRoutingEmailDomainAsync (string domainId, string expand = null);
 
         /// <summary>
         /// Get domain
@@ -4883,9 +4892,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<InboundDomain>> GetRoutingEmailDomainAsyncWithHttpInfo (string domainId);
+        System.Threading.Tasks.Task<ApiResponse<InboundDomain>> GetRoutingEmailDomainAsyncWithHttpInfo (string domainId, string expand = null);
 
         /// <summary>
         /// Get a route
@@ -4984,9 +4994,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of InboundDomainEntityListing</returns>
         
-        System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
+        System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null, string expand = null);
 
         /// <summary>
         /// Get domains
@@ -4999,9 +5010,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null);
+        System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null, string expand = null);
 
         /// <summary>
         /// Get domain
@@ -5011,9 +5023,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of OutboundDomain</returns>
         
-        System.Threading.Tasks.Task<OutboundDomain> GetRoutingEmailOutboundDomainAsync (string domainId);
+        System.Threading.Tasks.Task<OutboundDomain> GetRoutingEmailOutboundDomainAsync (string domainId, string expand = null);
 
         /// <summary>
         /// Get domain
@@ -5023,9 +5036,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of ApiResponse (OutboundDomain)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> GetRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId);
+        System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> GetRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId, string expand = null);
 
         /// <summary>
         /// Get activation status (cname + dkim) of an outbound domain
@@ -5061,9 +5075,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of OutboundDomainEntityListing</returns>
         
-        System.Threading.Tasks.Task<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsAsync (int? pageSize = null, int? pageNumber = null, string filter = null);
+        System.Threading.Tasks.Task<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsAsync (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null);
 
         /// <summary>
         /// Get outbound domains
@@ -5075,9 +5090,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of ApiResponse (OutboundDomainEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null);
+        System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null);
 
         /// <summary>
         /// Get email setup
@@ -7279,7 +7295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of InboundDomain</returns>
         
-        System.Threading.Tasks.Task<InboundDomain> PostRoutingEmailDomainsAsync (InboundDomain body);
+        System.Threading.Tasks.Task<InboundDomain> PostRoutingEmailDomainsAsync (InboundDomainCreateRequest body);
 
         /// <summary>
         /// Create a domain
@@ -7291,7 +7307,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PostRoutingEmailDomainsAsyncWithHttpInfo (InboundDomain body);
+        System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PostRoutingEmailDomainsAsyncWithHttpInfo (InboundDomainCreateRequest body);
 
         /// <summary>
         /// Create a domain
@@ -7303,7 +7319,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
-        System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsAsync (OutboundDomainRequest body);
+        System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsAsync (OutboundDomainCreateRequest body);
 
         /// <summary>
         /// Create a domain
@@ -7315,7 +7331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsAsyncWithHttpInfo (OutboundDomainRequest body);
+        System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsAsyncWithHttpInfo (OutboundDomainCreateRequest body);
 
         /// <summary>
         /// Create a simulated domain
@@ -7327,7 +7343,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
-        System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedAsync (OutboundDomainRequest body);
+        System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedAsync (OutboundDomainCreateRequest body);
 
         /// <summary>
         /// Create a simulated domain
@@ -7339,7 +7355,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomainRequest body);
+        System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomainCreateRequest body);
 
         /// <summary>
         /// Create Language
@@ -14356,11 +14372,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>InboundDomain</returns>
         
-        public InboundDomain GetRoutingEmailDomain (string domainId)
+        public InboundDomain GetRoutingEmailDomain (string domainId, string expand = null)
         {
-             ApiResponse<InboundDomain> localVarResponse = GetRoutingEmailDomainWithHttpInfo(domainId);
+             ApiResponse<InboundDomain> localVarResponse = GetRoutingEmailDomainWithHttpInfo(domainId, expand);
              return localVarResponse.Data;
         }
 
@@ -14370,9 +14387,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>ApiResponse of InboundDomain</returns>
         
-        public ApiResponse< InboundDomain > GetRoutingEmailDomainWithHttpInfo (string domainId)
+        public ApiResponse< InboundDomain > GetRoutingEmailDomainWithHttpInfo (string domainId, string expand = null)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -14412,6 +14430,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -14455,11 +14474,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of InboundDomain</returns>
         
-        public async System.Threading.Tasks.Task<InboundDomain> GetRoutingEmailDomainAsync (string domainId)
+        public async System.Threading.Tasks.Task<InboundDomain> GetRoutingEmailDomainAsync (string domainId, string expand = null)
         {
-             ApiResponse<InboundDomain> localVarResponse = await GetRoutingEmailDomainAsyncWithHttpInfo(domainId);
+             ApiResponse<InboundDomain> localVarResponse = await GetRoutingEmailDomainAsyncWithHttpInfo(domainId, expand);
              return localVarResponse.Data;
 
         }
@@ -14470,9 +14490,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> GetRoutingEmailDomainAsyncWithHttpInfo (string domainId)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> GetRoutingEmailDomainAsyncWithHttpInfo (string domainId, string expand = null)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -14513,6 +14534,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -15219,11 +15241,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>InboundDomainEntityListing</returns>
         
-        public InboundDomainEntityListing GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
+        public InboundDomainEntityListing GetRoutingEmailDomains (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null, string expand = null)
         {
-             ApiResponse<InboundDomainEntityListing> localVarResponse = GetRoutingEmailDomainsWithHttpInfo(pageSize, pageNumber, excludeStatus, filter);
+             ApiResponse<InboundDomainEntityListing> localVarResponse = GetRoutingEmailDomainsWithHttpInfo(pageSize, pageNumber, excludeStatus, filter, expand);
              return localVarResponse.Data;
         }
 
@@ -15236,9 +15259,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>ApiResponse of InboundDomainEntityListing</returns>
         
-        public ApiResponse< InboundDomainEntityListing > GetRoutingEmailDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
+        public ApiResponse< InboundDomainEntityListing > GetRoutingEmailDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null, string expand = null)
         { 
 
             var localVarPath = "/api/v2/routing/email/domains";
@@ -15278,6 +15302,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (excludeStatus != null) localVarQueryParams.Add(new Tuple<string, string>("excludeStatus", this.Configuration.ApiClient.ParameterToString(excludeStatus)));
             if (filter != null) localVarQueryParams.Add(new Tuple<string, string>("filter", this.Configuration.ApiClient.ParameterToString(filter)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -15324,11 +15349,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of InboundDomainEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
+        public async System.Threading.Tasks.Task<InboundDomainEntityListing> GetRoutingEmailDomainsAsync (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null, string expand = null)
         {
-             ApiResponse<InboundDomainEntityListing> localVarResponse = await GetRoutingEmailDomainsAsyncWithHttpInfo(pageSize, pageNumber, excludeStatus, filter);
+             ApiResponse<InboundDomainEntityListing> localVarResponse = await GetRoutingEmailDomainsAsyncWithHttpInfo(pageSize, pageNumber, excludeStatus, filter, expand);
              return localVarResponse.Data;
 
         }
@@ -15342,9 +15368,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="excludeStatus">Exclude MX record data (optional, default to false)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of ApiResponse (InboundDomainEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundDomainEntityListing>> GetRoutingEmailDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? excludeStatus = null, string filter = null, string expand = null)
         { 
 
             var localVarPath = "/api/v2/routing/email/domains";
@@ -15384,6 +15411,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (excludeStatus != null) localVarQueryParams.Add(new Tuple<string, string>("excludeStatus", this.Configuration.ApiClient.ParameterToString(excludeStatus)));
             if (filter != null) localVarQueryParams.Add(new Tuple<string, string>("filter", this.Configuration.ApiClient.ParameterToString(filter)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -15428,11 +15456,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>OutboundDomain</returns>
         
-        public OutboundDomain GetRoutingEmailOutboundDomain (string domainId)
+        public OutboundDomain GetRoutingEmailOutboundDomain (string domainId, string expand = null)
         {
-             ApiResponse<OutboundDomain> localVarResponse = GetRoutingEmailOutboundDomainWithHttpInfo(domainId);
+             ApiResponse<OutboundDomain> localVarResponse = GetRoutingEmailOutboundDomainWithHttpInfo(domainId, expand);
              return localVarResponse.Data;
         }
 
@@ -15442,9 +15471,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>ApiResponse of OutboundDomain</returns>
         
-        public ApiResponse< OutboundDomain > GetRoutingEmailOutboundDomainWithHttpInfo (string domainId)
+        public ApiResponse< OutboundDomain > GetRoutingEmailOutboundDomainWithHttpInfo (string domainId, string expand = null)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -15484,6 +15514,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -15527,11 +15558,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of OutboundDomain</returns>
         
-        public async System.Threading.Tasks.Task<OutboundDomain> GetRoutingEmailOutboundDomainAsync (string domainId)
+        public async System.Threading.Tasks.Task<OutboundDomain> GetRoutingEmailOutboundDomainAsync (string domainId, string expand = null)
         {
-             ApiResponse<OutboundDomain> localVarResponse = await GetRoutingEmailOutboundDomainAsyncWithHttpInfo(domainId);
+             ApiResponse<OutboundDomain> localVarResponse = await GetRoutingEmailOutboundDomainAsyncWithHttpInfo(domainId, expand);
              return localVarResponse.Data;
 
         }
@@ -15542,9 +15574,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainId">domain ID</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of ApiResponse (OutboundDomain)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> GetRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> GetRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId, string expand = null)
         { 
             // verify the required parameter 'domainId' is set
             if (domainId == null)
@@ -15585,6 +15618,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -15832,11 +15866,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>OutboundDomainEntityListing</returns>
         
-        public OutboundDomainEntityListing GetRoutingEmailOutboundDomains (int? pageSize = null, int? pageNumber = null, string filter = null)
+        public OutboundDomainEntityListing GetRoutingEmailOutboundDomains (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null)
         {
-             ApiResponse<OutboundDomainEntityListing> localVarResponse = GetRoutingEmailOutboundDomainsWithHttpInfo(pageSize, pageNumber, filter);
+             ApiResponse<OutboundDomainEntityListing> localVarResponse = GetRoutingEmailOutboundDomainsWithHttpInfo(pageSize, pageNumber, filter, expand);
              return localVarResponse.Data;
         }
 
@@ -15848,9 +15883,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>ApiResponse of OutboundDomainEntityListing</returns>
         
-        public ApiResponse< OutboundDomainEntityListing > GetRoutingEmailOutboundDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null)
+        public ApiResponse< OutboundDomainEntityListing > GetRoutingEmailOutboundDomainsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null)
         { 
 
             var localVarPath = "/api/v2/routing/email/outbound/domains";
@@ -15889,6 +15925,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (filter != null) localVarQueryParams.Add(new Tuple<string, string>("filter", this.Configuration.ApiClient.ParameterToString(filter)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -15934,11 +15971,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of OutboundDomainEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsAsync (int? pageSize = null, int? pageNumber = null, string filter = null)
+        public async System.Threading.Tasks.Task<OutboundDomainEntityListing> GetRoutingEmailOutboundDomainsAsync (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null)
         {
-             ApiResponse<OutboundDomainEntityListing> localVarResponse = await GetRoutingEmailOutboundDomainsAsyncWithHttpInfo(pageSize, pageNumber, filter);
+             ApiResponse<OutboundDomainEntityListing> localVarResponse = await GetRoutingEmailOutboundDomainsAsyncWithHttpInfo(pageSize, pageNumber, filter, expand);
              return localVarResponse.Data;
 
         }
@@ -15951,9 +15989,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="filter">Optional search filter that, if defined, use the **filter** syntax, eg: **mySearchedPattern**. Note that **** is considered no filter. (optional)</param>
+        /// <param name="expand">Expand options. Valid values: settings (optional)</param>
         /// <returns>Task of ApiResponse (OutboundDomainEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null)
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundDomainEntityListing>> GetRoutingEmailOutboundDomainsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string filter = null, string expand = null)
         { 
 
             var localVarPath = "/api/v2/routing/email/outbound/domains";
@@ -15992,6 +16031,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
             if (filter != null) localVarQueryParams.Add(new Tuple<string, string>("filter", this.Configuration.ApiClient.ParameterToString(filter)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -33017,7 +33057,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>InboundDomain</returns>
         
-        public InboundDomain PostRoutingEmailDomains (InboundDomain body)
+        public InboundDomain PostRoutingEmailDomains (InboundDomainCreateRequest body)
         {
              ApiResponse<InboundDomain> localVarResponse = PostRoutingEmailDomainsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -33031,7 +33071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of InboundDomain</returns>
         
-        public ApiResponse< InboundDomain > PostRoutingEmailDomainsWithHttpInfo (InboundDomain body)
+        public ApiResponse< InboundDomain > PostRoutingEmailDomainsWithHttpInfo (InboundDomainCreateRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33121,7 +33161,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of InboundDomain</returns>
         
-        public async System.Threading.Tasks.Task<InboundDomain> PostRoutingEmailDomainsAsync (InboundDomain body)
+        public async System.Threading.Tasks.Task<InboundDomain> PostRoutingEmailDomainsAsync (InboundDomainCreateRequest body)
         {
              ApiResponse<InboundDomain> localVarResponse = await PostRoutingEmailDomainsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -33136,7 +33176,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PostRoutingEmailDomainsAsyncWithHttpInfo (InboundDomain body)
+        public async System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PostRoutingEmailDomainsAsyncWithHttpInfo (InboundDomainCreateRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33228,7 +33268,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
-        public EmailOutboundDomainResult PostRoutingEmailOutboundDomains (OutboundDomainRequest body)
+        public EmailOutboundDomainResult PostRoutingEmailOutboundDomains (OutboundDomainCreateRequest body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = PostRoutingEmailOutboundDomainsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -33242,7 +33282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
-        public ApiResponse< EmailOutboundDomainResult > PostRoutingEmailOutboundDomainsWithHttpInfo (OutboundDomainRequest body)
+        public ApiResponse< EmailOutboundDomainResult > PostRoutingEmailOutboundDomainsWithHttpInfo (OutboundDomainCreateRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33332,7 +33372,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
-        public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsAsync (OutboundDomainRequest body)
+        public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsAsync (OutboundDomainCreateRequest body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = await PostRoutingEmailOutboundDomainsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -33347,7 +33387,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsAsyncWithHttpInfo (OutboundDomainRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsAsyncWithHttpInfo (OutboundDomainCreateRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33439,7 +33479,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>EmailOutboundDomainResult</returns>
         
-        public EmailOutboundDomainResult PostRoutingEmailOutboundDomainsSimulated (OutboundDomainRequest body)
+        public EmailOutboundDomainResult PostRoutingEmailOutboundDomainsSimulated (OutboundDomainCreateRequest body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo(body);
              return localVarResponse.Data;
@@ -33453,7 +33493,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>ApiResponse of EmailOutboundDomainResult</returns>
         
-        public ApiResponse< EmailOutboundDomainResult > PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomainRequest body)
+        public ApiResponse< EmailOutboundDomainResult > PostRoutingEmailOutboundDomainsSimulatedWithHttpInfo (OutboundDomainCreateRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -33543,7 +33583,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of EmailOutboundDomainResult</returns>
         
-        public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedAsync (OutboundDomainRequest body)
+        public async System.Threading.Tasks.Task<EmailOutboundDomainResult> PostRoutingEmailOutboundDomainsSimulatedAsync (OutboundDomainCreateRequest body)
         {
              ApiResponse<EmailOutboundDomainResult> localVarResponse = await PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -33558,7 +33598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Domain</param>
         /// <returns>Task of ApiResponse (EmailOutboundDomainResult)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomainRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<EmailOutboundDomainResult>> PostRoutingEmailOutboundDomainsSimulatedAsyncWithHttpInfo (OutboundDomainCreateRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)

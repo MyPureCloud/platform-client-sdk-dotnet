@@ -47,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CallMediaPolicyConditions" /> class.
         /// </summary>
-        /// <param name="ForUsers">ForUsers.</param>
+        /// <param name="ForUsers">List of users to apply this policy to. Each user object can include the &#39;id&#39; field containing the user&#39;s unique identifier. Example: [{\&quot;id\&quot;:\&quot;&lt;userId&gt;\&quot;}]..</param>
         /// <param name="DateRanges">DateRanges.</param>
         /// <param name="ForQueues">ForQueues.</param>
         /// <param name="WrapupCodes">WrapupCodes.</param>
@@ -56,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Teams">Teams to match conversations against.</param>
         /// <param name="Directions">Directions.</param>
         /// <param name="Duration">Duration.</param>
-        public CallMediaPolicyConditions(List<User> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, List<Language> Languages = null, TimeAllowed TimeAllowed = null, List<Team> Teams = null, List<DirectionsEnum> Directions = null, DurationCondition Duration = null)
+        public CallMediaPolicyConditions(List<PolicyUser> ForUsers = null, List<string> DateRanges = null, List<Queue> ForQueues = null, List<WrapupCode> WrapupCodes = null, List<Language> Languages = null, TimeAllowed TimeAllowed = null, List<Team> Teams = null, List<DirectionsEnum> Directions = null, DurationCondition Duration = null)
         {
             this.ForUsers = ForUsers;
             this.DateRanges = DateRanges;
@@ -73,10 +73,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets ForUsers
+        /// List of users to apply this policy to. Each user object can include the &#39;id&#39; field containing the user&#39;s unique identifier. Example: [{\&quot;id\&quot;:\&quot;&lt;userId&gt;\&quot;}].
         /// </summary>
+        /// <value>List of users to apply this policy to. Each user object can include the &#39;id&#39; field containing the user&#39;s unique identifier. Example: [{\&quot;id\&quot;:\&quot;&lt;userId&gt;\&quot;}].</value>
         [DataMember(Name="forUsers", EmitDefaultValue=false)]
-        public List<User> ForUsers { get; set; }
+        public List<PolicyUser> ForUsers { get; set; }
 
 
 

@@ -89,6 +89,16 @@ namespace PureCloudPlatform.Client.V2.Client
         ///</Summary>
         [Description("https://api.euc2.pure.cloud")]
         eu_central_2,
+        ///<Summary>
+        /// mx_central_1 Region
+        ///</Summary>
+        [Description("https://api.mxc1.pure.cloud")]
+        mx_central_1,
+        ///<Summary>
+        /// ap_southeast_1 Region
+        ///</Summary>
+        [Description("https://api.apse1.pure.cloud")]
+        ap_southeast_1,
 
     }
 

@@ -142,7 +142,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Screen for "Screen"
             /// </summary>
             [EnumMember(Value = "Screen")]
-            Screen
+            Screen,
+            
+            /// <summary>
+            /// Enum Snippet for "Snippet"
+            /// </summary>
+            [EnumMember(Value = "Snippet")]
+            Snippet
         }
         /// <summary>
         /// Gets or Sets FileState
@@ -348,6 +354,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "me-central-1")]
             Mecentral1,
+            
+            /// <summary>
+            /// Enum Mxcentral1 for "mx-central-1"
+            /// </summary>
+            [EnumMember(Value = "mx-central-1")]
+            Mxcentral1,
             
             /// <summary>
             /// Enum Saeast1 for "sa-east-1"

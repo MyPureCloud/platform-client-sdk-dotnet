@@ -67,7 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unauthorized for "Unauthorized"
             /// </summary>
             [EnumMember(Value = "Unauthorized")]
-            Unauthorized
+            Unauthorized,
+            
+            /// <summary>
+            /// Enum Duplicateautomatedformwithcopiedscore for "DuplicateAutomatedFormWithCopiedScore"
+            /// </summary>
+            [EnumMember(Value = "DuplicateAutomatedFormWithCopiedScore")]
+            Duplicateautomatedformwithcopiedscore
         }
         /// <summary>
         /// The type of error that occurred while processing AI scores. It is null where there is no error.

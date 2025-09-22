@@ -13,72 +13,25 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// OutboundDomainRequest
+    /// Email Setting reference for email routing settings
     /// </summary>
     [DataContract]
-    public partial class OutboundDomainRequest :  IEquatable<OutboundDomainRequest>
+    public partial class EmailSettingReference :  IEquatable<EmailSettingReference>
     {
-        /// <summary>
-        /// Sender Type
-        /// </summary>
-        /// <value>Sender Type</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum SenderTypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Unknown for "Unknown"
-            /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown,
-            
-            /// <summary>
-            /// Enum Emaildomain for "EmailDomain"
-            /// </summary>
-            [EnumMember(Value = "EmailDomain")]
-            Emaildomain,
-            
-            /// <summary>
-            /// Enum Mockemaildomain for "MockEmailDomain"
-            /// </summary>
-            [EnumMember(Value = "MockEmailDomain")]
-            Mockemaildomain,
-            
-            /// <summary>
-            /// Enum Emailsmtpdomain for "EmailSmtpDomain"
-            /// </summary>
-            [EnumMember(Value = "EmailSmtpDomain")]
-            Emailsmtpdomain
-        }
-        /// <summary>
-        /// Sender Type
-        /// </summary>
-        /// <value>Sender Type</value>
-        [DataMember(Name="senderType", EmitDefaultValue=false)]
-        public SenderTypeEnum? SenderType { get; set; }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="OutboundDomainRequest" /> class.
+        /// Initializes a new instance of the <see cref="EmailSettingReference" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected OutboundDomainRequest() { }
+        protected EmailSettingReference() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="OutboundDomainRequest" /> class.
+        /// Initializes a new instance of the <see cref="EmailSettingReference" /> class.
         /// </summary>
-        /// <param name="Id">Unique Id of the domain such as: example.com (required).</param>
-        /// <param name="SenderType">Sender Type.</param>
-        /// <param name="Name">The domain such as: example.com (required).</param>
-        public OutboundDomainRequest(string Id = null, SenderTypeEnum? SenderType = null, string Name = null)
+        /// <param name="Id">The email setting unique identifier (required).</param>
+        /// <param name="Name">Name.</param>
+        public EmailSettingReference(string Id = null, string Name = null)
         {
             this.Id = Id;
-            this.SenderType = SenderType;
             this.Name = Name;
             
         }
@@ -86,22 +39,28 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Unique Id of the domain such as: example.com
+        /// The email setting unique identifier
         /// </summary>
-        /// <value>Unique Id of the domain such as: example.com</value>
+        /// <value>The email setting unique identifier</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
 
 
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
 
 
         /// <summary>
-        /// The domain such as: example.com
+        /// The email setting URI
         /// </summary>
-        /// <value>The domain such as: example.com</value>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+        /// <value>The email setting URI</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
 
 
         /// <summary>
@@ -111,11 +70,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class OutboundDomainRequest {\n");
+            sb.Append("class EmailSettingReference {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  SenderType: ").Append(SenderType).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -141,15 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OutboundDomainRequest);
+            return this.Equals(obj as EmailSettingReference);
         }
 
         /// <summary>
-        /// Returns true if OutboundDomainRequest instances are equal
+        /// Returns true if EmailSettingReference instances are equal
         /// </summary>
-        /// <param name="other">Instance of OutboundDomainRequest to be compared</param>
+        /// <param name="other">Instance of EmailSettingReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(OutboundDomainRequest other)
+        public bool Equals(EmailSettingReference other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -162,14 +121,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.SenderType == other.SenderType ||
-                    this.SenderType != null &&
-                    this.SenderType.Equals(other.SenderType)
-                ) &&
-                (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -187,11 +146,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.SenderType != null)
-                    hash = hash * 59 + this.SenderType.GetHashCode();
-
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

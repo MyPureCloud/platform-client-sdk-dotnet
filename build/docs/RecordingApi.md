@@ -3395,7 +3395,7 @@ namespace Example
 
 Execute the recording bulk job.
 
-A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
+Each organization can run up to a maximum of two concurrent jobs that are either in pending or processing state. A job must be executed by the same user whom originally created the job.  In addition, the user must have permission to update the recording's retention.
 
 Requires ALL permissions: 
 
@@ -3527,7 +3527,7 @@ namespace Example
 
 Update a media retention policy
 
-Policy does not work retroactively
+Policy does not work retroactively. In the conditions.forUsers section, each user object can include the 'id' field containing the user's unique identifier. Example: [{\"id\":\"<userId>\"}].
 
 Requires ANY permissions: 
 
@@ -3776,4 +3776,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 241.0.0_
+_PureCloudPlatform.Client.V2 242.0.0_

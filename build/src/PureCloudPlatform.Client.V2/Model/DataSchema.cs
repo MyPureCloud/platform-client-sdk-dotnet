@@ -66,7 +66,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum DecisionTable for "DECISION_TABLE"
             /// </summary>
             [EnumMember(Value = "DECISION_TABLE")]
-            DecisionTable
+            DecisionTable,
+            
+            /// <summary>
+            /// Enum UserCustomAttributes for "USER_CUSTOM_ATTRIBUTES"
+            /// </summary>
+            [EnumMember(Value = "USER_CUSTOM_ATTRIBUTES")]
+            UserCustomAttributes
         }
 
         /// <summary>

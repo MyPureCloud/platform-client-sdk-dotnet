@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Screen for "Screen"
             /// </summary>
             [EnumMember(Value = "Screen")]
-            Screen
+            Screen,
+            
+            /// <summary>
+            /// Enum Snippet for "Snippet"
+            /// </summary>
+            [EnumMember(Value = "Snippet")]
+            Snippet
         }
         /// <summary>
         /// Represents the current file state for a recording. Examples: Uploading, Archived, etc

@@ -316,16 +316,76 @@ namespace PureCloudPlatform.Client.V2.Model
             Unabletoproduceagentscheduleduetounavailabletimes,
             
             /// <summary>
+            /// Enum Unabletoschedulemaxactivitylengthfromshiftendfromdst for "UnableToScheduleMaxActivityLengthFromShiftEndFromDst"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMaxActivityLengthFromShiftEndFromDst")]
+            Unabletoschedulemaxactivitylengthfromshiftendfromdst,
+            
+            /// <summary>
+            /// Enum Unabletoschedulemaxactivitylengthfromshiftendfromtimeoff for "UnableToScheduleMaxActivityLengthFromShiftEndFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMaxActivityLengthFromShiftEndFromTimeOff")]
+            Unabletoschedulemaxactivitylengthfromshiftendfromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoschedulemaxshiftstartandpaiddurationvariancefromtimeoff for "UnableToScheduleMaxShiftStartAndPaidDurationVarianceFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMaxShiftStartAndPaidDurationVarianceFromTimeOff")]
+            Unabletoschedulemaxshiftstartandpaiddurationvariancefromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoschedulemaxshiftstarttimevariancefromdst for "UnableToScheduleMaxShiftStartTimeVarianceFromDst"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMaxShiftStartTimeVarianceFromDst")]
+            Unabletoschedulemaxshiftstarttimevariancefromdst,
+            
+            /// <summary>
+            /// Enum Unabletoschedulemaxshiftstarttimevariancefromtimeoff for "UnableToScheduleMaxShiftStartTimeVarianceFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMaxShiftStartTimeVarianceFromTimeOff")]
+            Unabletoschedulemaxshiftstarttimevariancefromtimeoff,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleminactivitylengthfromshiftendfromdst for "UnableToScheduleMinActivityLengthFromShiftEndFromDst"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMinActivityLengthFromShiftEndFromDst")]
+            Unabletoscheduleminactivitylengthfromshiftendfromdst,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleminactivitylengthfromshiftstartfromdst for "UnableToScheduleMinActivityLengthFromShiftStartFromDst"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMinActivityLengthFromShiftStartFromDst")]
+            Unabletoscheduleminactivitylengthfromshiftstartfromdst,
+            
+            /// <summary>
             /// Enum Unabletoscheduleplanningperiodmaxshiftstartandpaiddurationvariancefromagenthistory for "UnableToSchedulePlanningPeriodMaxShiftStartAndPaidDurationVarianceFromAgentHistory"
             /// </summary>
             [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxShiftStartAndPaidDurationVarianceFromAgentHistory")]
             Unabletoscheduleplanningperiodmaxshiftstartandpaiddurationvariancefromagenthistory,
             
             /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxshiftstartandpaiddurationvariancefromtimeoff for "UnableToSchedulePlanningPeriodMaxShiftStartAndPaidDurationVarianceFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxShiftStartAndPaidDurationVarianceFromTimeOff")]
+            Unabletoscheduleplanningperiodmaxshiftstartandpaiddurationvariancefromtimeoff,
+            
+            /// <summary>
             /// Enum Unabletoscheduleplanningperiodmaxshiftstarttimevariancefromagenthistory for "UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromAgentHistory"
             /// </summary>
             [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromAgentHistory")]
             Unabletoscheduleplanningperiodmaxshiftstarttimevariancefromagenthistory,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxshiftstarttimevariancefromdst for "UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromDst"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromDst")]
+            Unabletoscheduleplanningperiodmaxshiftstarttimevariancefromdst,
+            
+            /// <summary>
+            /// Enum Unabletoscheduleplanningperiodmaxshiftstarttimevariancefromtimeoff for "UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromTimeOff"
+            /// </summary>
+            [EnumMember(Value = "UnableToSchedulePlanningPeriodMaxShiftStartTimeVarianceFromTimeOff")]
+            Unabletoscheduleplanningperiodmaxshiftstarttimevariancefromtimeoff,
             
             /// <summary>
             /// Enum Unabletoscheduleplanningperiodmaxworkingweekendsfromagenthistory for "UnableToSchedulePlanningPeriodMaxWorkingWeekendsFromAgentHistory"
