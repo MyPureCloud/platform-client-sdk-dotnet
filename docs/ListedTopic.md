@@ -11,6 +11,7 @@
 | **Description** | **string** |  | [optional] |
 | **Published** | **bool?** |  | [optional] |
 | **Strictness** | **string** |  | [optional] |
+| **MatchingType** | **string** |  | [optional] |
 | **ProgramsCount** | **int?** |  | [optional] |
 | **Tags** | **List&lt;string&gt;** |  | [optional] |
 | **Dialect** | **string** |  | [optional] |
@@ -22,4 +23,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

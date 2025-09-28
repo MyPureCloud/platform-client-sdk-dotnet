@@ -20,9 +20,9 @@
 | **CreatedByApp** | **string** | The application that created the resource. | [optional] |
 | **Properties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 | **EdgeGroup** | [**DomainEntityRef**](DomainEntityRef) | The edge group associated with the line. (Deprecated) | [optional] |
-| **Template** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **Template** | [**DomainEntityRef**](DomainEntityRef) | The station base/template. (Deprecated - Please use the lineBaseSettings field instead, as it contains the same data) | [optional] |
 | **Site** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
-| **LineBaseSettings** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
+| **LineBaseSettings** | [**DomainEntityRef**](DomainEntityRef) | The station base/template. | [optional] |
 | **PrimaryEdge** | [**Edge**](Edge) | The primary edge associated to the line. (Deprecated) | [optional] |
 | **SecondaryEdge** | [**Edge**](Edge) | The secondary edge associated to the line. (Deprecated) | [optional] |
 | **LoggedInUser** | [**DomainEntityRef**](DomainEntityRef) |  | [optional] |
@@ -31,4 +31,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

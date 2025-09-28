@@ -9,7 +9,8 @@
 | **SessionId** | **string** | The unique identifier of this session | [optional] |
 | **Answered** | **bool?** | Mark the search as answered/unanswered | |
 | **SelectedAnswer** | [**SelectedAnswer**](SelectedAnswer) | The selected search result chosen as the answer. | [optional] |
+| **SelectedAnswers** | [**List&lt;SelectedAnswer&gt;**](SelectedAnswer) | The search results selected as answers | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

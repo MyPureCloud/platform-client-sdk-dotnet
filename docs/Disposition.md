@@ -11,7 +11,9 @@
 | **DispositionParameters** | [**DispositionParameters**](DispositionParameters) | Contains various parameters related to call analysis. | [optional] |
 | **DetectedSpeechStart** | **DateTime?** | Absolute time when the speech started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DetectedSpeechEnd** | **DateTime?** | Absolute time when the speech ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **AmdTimeout** | [**DispositionAmdTimeout**](DispositionAmdTimeout) | Answering Machine Detection timeout configuration. | [optional] |
+| **SilentCallTimeout** | [**DispositionSilentCallTimeout**](DispositionSilentCallTimeout) | Silent Call timeout configuration. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

@@ -40,6 +40,7 @@
 | **Dnis** | **string** | Dialed number identification service (number dialed by the calling party) | [optional] |
 | **EdgeId** | **string** | Unique identifier of the edge device | [optional] |
 | **EligibleAgentCounts** | **List&lt;int?&gt;** | Number of eligible agents for each predictive routing attempt | [optional] |
+| **EngagementSource** | **string** | Open Messaging engagement source type | [optional] |
 | **ExtendedDeliveryStatus** | **string** | Extended delivery status | [optional] |
 | **FlowInType** | **string** | Type of flow in that occurred when entering ACD. | [optional] |
 | **FlowOutType** | **string** | Type of flow out that occurred when emitting tFlowOut. | [optional] |
@@ -93,4 +94,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

@@ -2523,7 +2523,7 @@ Get an IVR IdentityResolutionConfig.
 Requires ALL permissions: 
 
 * routing:callRoute:view
-* routing:identityResolution:view
+* routing:identityResolutionIvr:view
 
 ### Example
 ```{"language":"csharp"}
@@ -9113,7 +9113,7 @@ Update an IVR IdentityResolutionConfig.
 Requires ALL permissions: 
 
 * routing:callRoute:edit
-* routing:identityResolution:edit
+* routing:identityResolutionIvr:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -9957,4 +9957,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

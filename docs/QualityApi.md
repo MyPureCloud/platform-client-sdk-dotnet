@@ -25,7 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityConversationsAuditsQueryTransactionId**](#GetQualityConversationsAuditsQueryTransactionId) | **Get** /api/v2/quality/conversations/audits/query/{transactionId} | Get status of audit query execution |
 | [**GetQualityConversationsAuditsQueryTransactionIdResults**](#GetQualityConversationsAuditsQueryTransactionIdResults) | **Get** /api/v2/quality/conversations/audits/query/{transactionId}/results | Get results of audit query |
 | [**GetQualityEvaluationsQuery**](#GetQualityEvaluationsQuery) | **Get** /api/v2/quality/evaluations/query | Queries Evaluations and returns a paged list |
-| [**GetQualityEvaluatorsActivity**](#GetQualityEvaluatorsActivity) | **Get** /api/v2/quality/evaluators/activity | Get an evaluator activity |
+| [**GetQualityEvaluatorsActivity**](#GetQualityEvaluatorsActivity) | **Get** /api/v2/quality/evaluators/activity | Get an evaluator activity. To ensure optimal performance and prevent timeouts when processing large datasets, startTime and endTime fields are highly recommended for all requests. |
 | [**GetQualityForm**](#GetQualityForm) | **Get** /api/v2/quality/forms/{formId} | Get an evaluation form |
 | [**GetQualityFormVersions**](#GetQualityFormVersions) | **Get** /api/v2/quality/forms/{formId}/versions | Gets all the revisions for a specific evaluation. |
 | [**GetQualityForms**](#GetQualityForms) | **Get** /api/v2/quality/forms | Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form. |
@@ -1386,7 +1386,7 @@ namespace Example
 > [**EvaluatorActivityEntityListing**](EvaluatorActivityEntityListing) GetQualityEvaluatorsActivity (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null, string agentTeamId = null)
 
 
-Get an evaluator activity
+Get an evaluator activity. To ensure optimal performance and prevent timeouts when processing large datasets, startTime and endTime fields are highly recommended for all requests.
 
 Requires ANY permissions: 
 
@@ -1429,7 +1429,7 @@ namespace Example
 
             try
             { 
-                // Get an evaluator activity
+                // Get an evaluator activity. To ensure optimal performance and prevent timeouts when processing large datasets, startTime and endTime fields are highly recommended for all requests.
                 EvaluatorActivityEntityListing result = apiInstance.GetQualityEvaluatorsActivity(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, startTime, endTime, name, permission, group, agentTeamId);
                 Debug.WriteLine(result);
             }
@@ -4576,4 +4576,4 @@ namespace Example
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

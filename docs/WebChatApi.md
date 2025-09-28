@@ -161,8 +161,13 @@ void (empty response body)
 
 > void DeleteWebchatSettings ()
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Remove WebChat deployment settings
+
+This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
 
 Requires ANY permissions: 
 
@@ -746,8 +751,13 @@ namespace Example
 
 > [**WebChatSettings**](WebChatSettings) GetWebchatSettings ()
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Get WebChat deployment settings
+
+This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
 
 Requires ANY permissions: 
 
@@ -1197,8 +1207,13 @@ namespace Example
 
 > [**WebChatSettings**](WebChatSettings) PutWebchatSettings (WebChatSettings body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
 Update WebChat deployment settings
+
+This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
 
 Requires ANY permissions: 
 
@@ -1255,4 +1270,4 @@ namespace Example
 [**WebChatSettings**](WebChatSettings)
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_
