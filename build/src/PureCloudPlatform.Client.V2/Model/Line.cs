@@ -72,9 +72,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">The current version of the resource..</param>
         /// <param name="Properties">Properties.</param>
         /// <param name="EdgeGroup">The edge group associated with the line. (Deprecated).</param>
-        /// <param name="Template">Template.</param>
+        /// <param name="Template">The station base/template. (Deprecated - Please use the lineBaseSettings field instead, as it contains the same data).</param>
         /// <param name="Site">Site.</param>
-        /// <param name="LineBaseSettings">LineBaseSettings.</param>
+        /// <param name="LineBaseSettings">The station base/template..</param>
         /// <param name="PrimaryEdge">The primary edge associated to the line. (Deprecated).</param>
         /// <param name="SecondaryEdge">The secondary edge associated to the line. (Deprecated).</param>
         /// <param name="LoggedInUser">LoggedInUser.</param>
@@ -218,8 +218,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Template
+        /// The station base/template. (Deprecated - Please use the lineBaseSettings field instead, as it contains the same data)
         /// </summary>
+        /// <value>The station base/template. (Deprecated - Please use the lineBaseSettings field instead, as it contains the same data)</value>
         [DataMember(Name="template", EmitDefaultValue=false)]
         public DomainEntityRef Template { get; set; }
 
@@ -234,8 +235,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets LineBaseSettings
+        /// The station base/template.
         /// </summary>
+        /// <value>The station base/template.</value>
         [DataMember(Name="lineBaseSettings", EmitDefaultValue=false)]
         public DomainEntityRef LineBaseSettings { get; set; }
 

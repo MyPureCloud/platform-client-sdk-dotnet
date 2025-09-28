@@ -29,10 +29,10 @@
 | **CreatedBy** | [**UserReference**](UserReference) | The user who created this activity plan | |
 | **ModifiedDate** | **DateTime?** | The date the activity plan was modified, in ISO-8601 format | |
 | **ModifiedBy** | [**UserReference**](UserReference) | The last user to modify this activity plan. The id may be &#39;System&#39; if it was an automated process | |
-| **LastRunDate** | **DateTime?** | The date the activity plan was last run, in ISO-8601 format | [optional] |
+| **LastRunDate** | **DateTime?** | The date on which the activity plan was last manually run, in ISO-8601 format | [optional] |
 | **LastRunBy** | [**UserReference**](UserReference) | The last user to run this activity plan | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

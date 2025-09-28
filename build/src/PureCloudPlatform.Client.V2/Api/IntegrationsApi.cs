@@ -184,9 +184,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="ids">Comma-separated list of integration IDs to filter by (max 100) (optional)</param>
+        /// <param name="integrationType">Filter integrations by integration type ID (optional)</param>
+        /// <param name="reportedState">Filter integrations by reported state (case-insensitive) (optional)</param>
         /// <returns>IntegrationEntityListing</returns>
         
-        IntegrationEntityListing GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        IntegrationEntityListing GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null);
 
         /// <summary>
         /// List integrations
@@ -201,9 +204,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="ids">Comma-separated list of integration IDs to filter by (max 100) (optional)</param>
+        /// <param name="integrationType">Filter integrations by integration type ID (optional)</param>
+        /// <param name="reportedState">Filter integrations by reported state (case-insensitive) (optional)</param>
         /// <returns>ApiResponse of IntegrationEntityListing</returns>
         
-        ApiResponse<IntegrationEntityListing> GetIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        ApiResponse<IntegrationEntityListing> GetIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null);
 
         /// <summary>
         /// Retrieves a single Action matching id.
@@ -2724,9 +2730,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="ids">Comma-separated list of integration IDs to filter by (max 100) (optional)</param>
+        /// <param name="integrationType">Filter integrations by integration type ID (optional)</param>
+        /// <param name="reportedState">Filter integrations by reported state (case-insensitive) (optional)</param>
         /// <returns>Task of IntegrationEntityListing</returns>
         
-        System.Threading.Tasks.Task<IntegrationEntityListing> GetIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<IntegrationEntityListing> GetIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null);
 
         /// <summary>
         /// List integrations
@@ -2741,9 +2750,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="ids">Comma-separated list of integration IDs to filter by (max 100) (optional)</param>
+        /// <param name="integrationType">Filter integrations by integration type ID (optional)</param>
+        /// <param name="reportedState">Filter integrations by reported state (case-insensitive) (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null);
+        System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null);
 
         /// <summary>
         /// Retrieves a single Action matching id.
@@ -6430,11 +6442,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="ids">Comma-separated list of integration IDs to filter by (max 100) (optional)</param>
+        /// <param name="integrationType">Filter integrations by integration type ID (optional)</param>
+        /// <param name="reportedState">Filter integrations by reported state (case-insensitive) (optional)</param>
         /// <returns>IntegrationEntityListing</returns>
         
-        public IntegrationEntityListing GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public IntegrationEntityListing GetIntegrations (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null)
         {
-             ApiResponse<IntegrationEntityListing> localVarResponse = GetIntegrationsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+             ApiResponse<IntegrationEntityListing> localVarResponse = GetIntegrationsWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, ids, integrationType, reportedState);
              return localVarResponse.Data;
         }
 
@@ -6449,9 +6464,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="ids">Comma-separated list of integration IDs to filter by (max 100) (optional)</param>
+        /// <param name="integrationType">Filter integrations by integration type ID (optional)</param>
+        /// <param name="reportedState">Filter integrations by reported state (case-insensitive) (optional)</param>
         /// <returns>ApiResponse of IntegrationEntityListing</returns>
         
-        public ApiResponse< IntegrationEntityListing > GetIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public ApiResponse< IntegrationEntityListing > GetIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null)
         { 
 
             var localVarPath = "/api/v2/integrations";
@@ -6493,6 +6511,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationType != null) localVarQueryParams.Add(new Tuple<string, string>("integrationType", this.Configuration.ApiClient.ParameterToString(integrationType)));
+            if (reportedState != null) localVarQueryParams.Add(new Tuple<string, string>("reportedState", this.Configuration.ApiClient.ParameterToString(reportedState)));
 
             // Header params
 
@@ -6541,11 +6562,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="ids">Comma-separated list of integration IDs to filter by (max 100) (optional)</param>
+        /// <param name="integrationType">Filter integrations by integration type ID (optional)</param>
+        /// <param name="reportedState">Filter integrations by reported state (case-insensitive) (optional)</param>
         /// <returns>Task of IntegrationEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<IntegrationEntityListing> GetIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<IntegrationEntityListing> GetIntegrationsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null)
         {
-             ApiResponse<IntegrationEntityListing> localVarResponse = await GetIntegrationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage);
+             ApiResponse<IntegrationEntityListing> localVarResponse = await GetIntegrationsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, expand, nextPage, previousPage, ids, integrationType, reportedState);
              return localVarResponse.Data;
 
         }
@@ -6561,9 +6585,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">variable name requested by expand list (optional)</param>
         /// <param name="nextPage">next page token (optional)</param>
         /// <param name="previousPage">Previous page token (optional)</param>
+        /// <param name="ids">Comma-separated list of integration IDs to filter by (max 100) (optional)</param>
+        /// <param name="integrationType">Filter integrations by integration type ID (optional)</param>
+        /// <param name="reportedState">Filter integrations by reported state (case-insensitive) (optional)</param>
         /// <returns>Task of ApiResponse (IntegrationEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
+        public async System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null)
         { 
 
             var localVarPath = "/api/v2/integrations";
@@ -6605,6 +6632,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (previousPage != null) localVarQueryParams.Add(new Tuple<string, string>("previousPage", this.Configuration.ApiClient.ParameterToString(previousPage)));
+            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (integrationType != null) localVarQueryParams.Add(new Tuple<string, string>("integrationType", this.Configuration.ApiClient.ParameterToString(integrationType)));
+            if (reportedState != null) localVarQueryParams.Add(new Tuple<string, string>("reportedState", this.Configuration.ApiClient.ParameterToString(reportedState)));
 
             // Header params
 

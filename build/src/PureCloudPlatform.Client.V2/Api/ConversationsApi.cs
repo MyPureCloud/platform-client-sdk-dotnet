@@ -220,6 +220,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteConversationsMessagesCachedmediaCachedMediaItemIdWithHttpInfo (string cachedMediaItemId);
 
         /// <summary>
+        /// Delete an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns></returns>
+        
+        void DeleteConversationsMessagingIntegrationsAppleIntegrationId (string integrationId);
+
+        /// <summary>
+        /// Delete an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteConversationsMessagingIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId);
+
+        /// <summary>
         /// Delete a Facebook messaging integration
         /// </summary>
         /// <remarks>
@@ -2178,7 +2202,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -2191,7 +2214,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -2374,6 +2396,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of MessagingIntegrationEntityListing</returns>
         
         ApiResponse<MessagingIntegrationEntityListing> GetConversationsMessagingIntegrationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string supportedContentId = null, string messagingSettingId = null);
+
+        /// <summary>
+        /// Get a list of Apple Integrations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>AppleIntegrationEntityListing</returns>
+        
+        AppleIntegrationEntityListing GetConversationsMessagingIntegrationsApple (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
+
+        /// <summary>
+        /// Get a list of Apple Integrations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>ApiResponse of AppleIntegrationEntityListing</returns>
+        
+        ApiResponse<AppleIntegrationEntityListing> GetConversationsMessagingIntegrationsAppleWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
+
+        /// <summary>
+        /// Get an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>AppleIntegration</returns>
+        
+        AppleIntegration GetConversationsMessagingIntegrationsAppleIntegrationId (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Get an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>ApiResponse of AppleIntegration</returns>
+        
+        ApiResponse<AppleIntegration> GetConversationsMessagingIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId, string expand = null);
 
         /// <summary>
         /// Get a list of Facebook Integrations
@@ -2686,6 +2766,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of WhatsAppIntegration</returns>
         
         ApiResponse<WhatsAppIntegration> GetConversationsMessagingIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Call Authentication provider callback to validate state and code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The authorization code to be sent to the authentication server during the token request.</param>
+        /// <param name="state">The state/nonce value generated by Genesys Auth-Client Service.</param>
+        /// <param name="error">Error parameter from OAuth provider (optional)</param>
+        /// <returns>OAuthAppleAuthorizationResponse</returns>
+        
+        OAuthAppleAuthorizationResponse GetConversationsMessagingOauthAppleCallback (string code, string state, string error = null);
+
+        /// <summary>
+        /// Call Authentication provider callback to validate state and code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The authorization code to be sent to the authentication server during the token request.</param>
+        /// <param name="state">The state/nonce value generated by Genesys Auth-Client Service.</param>
+        /// <param name="error">Error parameter from OAuth provider (optional)</param>
+        /// <returns>ApiResponse of OAuthAppleAuthorizationResponse</returns>
+        
+        ApiResponse<OAuthAppleAuthorizationResponse> GetConversationsMessagingOauthAppleCallbackWithHttpInfo (string code, string state, string error = null);
 
         /// <summary>
         /// Get a messaging setting
@@ -4046,6 +4154,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> PatchConversationsMessageParticipantCommunicationWithHttpInfo (string conversationId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
+        /// Update an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">AppleIntegrationUpdateRequest</param>
+        /// <returns>AppleIntegration</returns>
+        
+        AppleIntegration PatchConversationsMessagingIntegrationsAppleIntegrationId (string integrationId, AppleIntegrationUpdateRequest body);
+
+        /// <summary>
+        /// Update an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">AppleIntegrationUpdateRequest</param>
+        /// <returns>ApiResponse of AppleIntegration</returns>
+        
+        ApiResponse<AppleIntegration> PatchConversationsMessagingIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId, AppleIntegrationUpdateRequest body);
+
+        /// <summary>
         /// Update Facebook messaging integration
         /// </summary>
         /// <remarks>
@@ -5286,7 +5420,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Conversation> PostConversationsCallParticipantsWithHttpInfo (string conversationId, Conversation body);
 
         /// <summary>
-        /// Add participants to a conversation without a user context
+        /// Add participants to a conversation on behalf of a user
         /// </summary>
         /// <remarks>
         /// 
@@ -5300,7 +5434,7 @@ namespace PureCloudPlatform.Client.V2.Api
         Conversation PostConversationsCallParticipantsUserUserId (string conversationId, string userId, Conversation body);
 
         /// <summary>
-        /// Add participants to a conversation without a user context
+        /// Add participants to a conversation on behalf of a user
         /// </summary>
         /// <remarks>
         /// 
@@ -6400,6 +6534,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<OpenNormalizedMessage> PostConversationsMessagesInboundOpenWithHttpInfo (OpenNormalizedMessage body);
 
         /// <summary>
+        /// Create Apple Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AppleIntegrationRequest</param>
+        /// <returns>AppleIntegration</returns>
+        
+        AppleIntegration PostConversationsMessagingIntegrationsApple (AppleIntegrationRequest body);
+
+        /// <summary>
+        /// Create Apple Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AppleIntegrationRequest</param>
+        /// <returns>ApiResponse of AppleIntegration</returns>
+        
+        ApiResponse<AppleIntegration> PostConversationsMessagingIntegrationsAppleWithHttpInfo (AppleIntegrationRequest body);
+
+        /// <summary>
         /// Create a Facebook Integration
         /// </summary>
         /// <remarks>
@@ -7080,7 +7238,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -7094,7 +7251,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -7590,6 +7746,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagesCachedmediaCachedMediaItemIdAsyncWithHttpInfo (string cachedMediaItemId);
+
+        /// <summary>
+        /// Delete an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteConversationsMessagingIntegrationsAppleIntegrationIdAsync (string integrationId);
+
+        /// <summary>
+        /// Delete an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Delete a Facebook messaging integration
@@ -9550,7 +9730,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -9563,7 +9742,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -9746,6 +9924,64 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (MessagingIntegrationEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<MessagingIntegrationEntityListing>> GetConversationsMessagingIntegrationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> expand = null, string supportedContentId = null, string messagingSettingId = null);
+
+        /// <summary>
+        /// Get a list of Apple Integrations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>Task of AppleIntegrationEntityListing</returns>
+        
+        System.Threading.Tasks.Task<AppleIntegrationEntityListing> GetConversationsMessagingIntegrationsAppleAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
+
+        /// <summary>
+        /// Get a list of Apple Integrations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>Task of ApiResponse (AppleIntegrationEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AppleIntegrationEntityListing>> GetConversationsMessagingIntegrationsAppleAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null);
+
+        /// <summary>
+        /// Get an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of AppleIntegration</returns>
+        
+        System.Threading.Tasks.Task<AppleIntegration> GetConversationsMessagingIntegrationsAppleIntegrationIdAsync (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Get an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of ApiResponse (AppleIntegration)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AppleIntegration>> GetConversationsMessagingIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
 
         /// <summary>
         /// Get a list of Facebook Integrations
@@ -10058,6 +10294,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (WhatsAppIntegration)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegration>> GetConversationsMessagingIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null);
+
+        /// <summary>
+        /// Call Authentication provider callback to validate state and code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The authorization code to be sent to the authentication server during the token request.</param>
+        /// <param name="state">The state/nonce value generated by Genesys Auth-Client Service.</param>
+        /// <param name="error">Error parameter from OAuth provider (optional)</param>
+        /// <returns>Task of OAuthAppleAuthorizationResponse</returns>
+        
+        System.Threading.Tasks.Task<OAuthAppleAuthorizationResponse> GetConversationsMessagingOauthAppleCallbackAsync (string code, string state, string error = null);
+
+        /// <summary>
+        /// Call Authentication provider callback to validate state and code
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The authorization code to be sent to the authentication server during the token request.</param>
+        /// <param name="state">The state/nonce value generated by Genesys Auth-Client Service.</param>
+        /// <param name="error">Error parameter from OAuth provider (optional)</param>
+        /// <returns>Task of ApiResponse (OAuthAppleAuthorizationResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OAuthAppleAuthorizationResponse>> GetConversationsMessagingOauthAppleCallbackAsyncWithHttpInfo (string code, string state, string error = null);
 
         /// <summary>
         /// Get a messaging setting
@@ -11418,6 +11682,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsMessageParticipantCommunicationAsyncWithHttpInfo (string conversationId, string participantId, string communicationId, MediaParticipantRequest body);
 
         /// <summary>
+        /// Update an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">AppleIntegrationUpdateRequest</param>
+        /// <returns>Task of AppleIntegration</returns>
+        
+        System.Threading.Tasks.Task<AppleIntegration> PatchConversationsMessagingIntegrationsAppleIntegrationIdAsync (string integrationId, AppleIntegrationUpdateRequest body);
+
+        /// <summary>
+        /// Update an Apple messaging integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">AppleIntegrationUpdateRequest</param>
+        /// <returns>Task of ApiResponse (AppleIntegration)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AppleIntegration>> PatchConversationsMessagingIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId, AppleIntegrationUpdateRequest body);
+
+        /// <summary>
         /// Update Facebook messaging integration
         /// </summary>
         /// <remarks>
@@ -12658,7 +12948,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Conversation>> PostConversationsCallParticipantsAsyncWithHttpInfo (string conversationId, Conversation body);
 
         /// <summary>
-        /// Add participants to a conversation without a user context
+        /// Add participants to a conversation on behalf of a user
         /// </summary>
         /// <remarks>
         /// 
@@ -12672,7 +12962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<Conversation> PostConversationsCallParticipantsUserUserIdAsync (string conversationId, string userId, Conversation body);
 
         /// <summary>
-        /// Add participants to a conversation without a user context
+        /// Add participants to a conversation on behalf of a user
         /// </summary>
         /// <remarks>
         /// 
@@ -13772,6 +14062,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<OpenNormalizedMessage>> PostConversationsMessagesInboundOpenAsyncWithHttpInfo (OpenNormalizedMessage body);
 
         /// <summary>
+        /// Create Apple Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AppleIntegrationRequest</param>
+        /// <returns>Task of AppleIntegration</returns>
+        
+        System.Threading.Tasks.Task<AppleIntegration> PostConversationsMessagingIntegrationsAppleAsync (AppleIntegrationRequest body);
+
+        /// <summary>
+        /// Create Apple Integration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AppleIntegrationRequest</param>
+        /// <returns>Task of ApiResponse (AppleIntegration)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AppleIntegration>> PostConversationsMessagingIntegrationsAppleAsyncWithHttpInfo (AppleIntegrationRequest body);
+
+        /// <summary>
         /// Create a Facebook Integration
         /// </summary>
         /// <remarks>
@@ -14452,7 +14766,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -14466,7 +14779,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -16498,6 +16810,205 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagesCachedmediaCachedMediaItemId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagesCachedmediaCachedMediaItemId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns></returns>
+        
+        public void DeleteConversationsMessagingIntegrationsAppleIntegrationId (string integrationId)
+        {
+             DeleteConversationsMessagingIntegrationsAppleIntegrationIdWithHttpInfo(integrationId);
+        }
+
+        /// <summary>
+        /// Delete an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteConversationsMessagingIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsAppleIntegrationId");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteConversationsMessagingIntegrationsAppleIntegrationIdAsync (string integrationId)
+        {
+             await DeleteConversationsMessagingIntegrationsAppleIntegrationIdAsyncWithHttpInfo(integrationId);
+
+        }
+
+        /// <summary>
+        /// Delete an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsAppleIntegrationId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -32298,7 +32809,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get Apple messaging integration identity resolution settings 
         /// 
-        /// GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -32313,7 +32823,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get Apple messaging integration identity resolution settings 
         /// 
-        /// GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -32399,7 +32908,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get Apple messaging integration identity resolution settings 
         /// 
-        /// GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -32415,7 +32923,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get Apple messaging integration identity resolution settings 
         /// 
-        /// GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -33918,6 +34425,431 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<MessagingIntegrationEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (MessagingIntegrationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MessagingIntegrationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of Apple Integrations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>AppleIntegrationEntityListing</returns>
+        
+        public AppleIntegrationEntityListing GetConversationsMessagingIntegrationsApple (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+        {
+             ApiResponse<AppleIntegrationEntityListing> localVarResponse = GetConversationsMessagingIntegrationsAppleWithHttpInfo(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Apple Integrations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>ApiResponse of AppleIntegrationEntityListing</returns>
+        
+        public ApiResponse< AppleIntegrationEntityListing > GetConversationsMessagingIntegrationsAppleWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/apple";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
+            if (messagingSettingId != null) localVarQueryParams.Add(new Tuple<string, string>("messagingSetting.id", this.Configuration.ApiClient.ParameterToString(messagingSettingId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsApple: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsApple: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AppleIntegrationEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AppleIntegrationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIntegrationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of Apple Integrations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>Task of AppleIntegrationEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<AppleIntegrationEntityListing> GetConversationsMessagingIntegrationsAppleAsync (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+        {
+             ApiResponse<AppleIntegrationEntityListing> localVarResponse = await GetConversationsMessagingIntegrationsAppleAsyncWithHttpInfo(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Apple Integrations 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <param name="supportedContentId">Filter integrations returned based on the supported content ID (optional)</param>
+        /// <param name="messagingSettingId">Filter integrations returned based on the setting ID (optional)</param>
+        /// <returns>Task of ApiResponse (AppleIntegrationEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AppleIntegrationEntityListing>> GetConversationsMessagingIntegrationsAppleAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+        { 
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/apple";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (supportedContentId != null) localVarQueryParams.Add(new Tuple<string, string>("supportedContent.id", this.Configuration.ApiClient.ParameterToString(supportedContentId)));
+            if (messagingSettingId != null) localVarQueryParams.Add(new Tuple<string, string>("messagingSetting.id", this.Configuration.ApiClient.ParameterToString(messagingSettingId)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsApple: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsApple: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AppleIntegrationEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AppleIntegrationEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIntegrationEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>AppleIntegration</returns>
+        
+        public AppleIntegration GetConversationsMessagingIntegrationsAppleIntegrationId (string integrationId, string expand = null)
+        {
+             ApiResponse<AppleIntegration> localVarResponse = GetConversationsMessagingIntegrationsAppleIntegrationIdWithHttpInfo(integrationId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>ApiResponse of AppleIntegration</returns>
+        
+        public ApiResponse< AppleIntegration > GetConversationsMessagingIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId, string expand = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsAppleIntegrationId");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AppleIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (AppleIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of AppleIntegration</returns>
+        
+        public async System.Threading.Tasks.Task<AppleIntegration> GetConversationsMessagingIntegrationsAppleIntegrationIdAsync (string integrationId, string expand = null)
+        {
+             ApiResponse<AppleIntegration> localVarResponse = await GetConversationsMessagingIntegrationsAppleIntegrationIdAsyncWithHttpInfo(integrationId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="expand">Expand instructions for the return value. (optional)</param>
+        /// <returns>Task of ApiResponse (AppleIntegration)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AppleIntegration>> GetConversationsMessagingIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId, string expand = null)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsAppleIntegrationId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AppleIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (AppleIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIntegration)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -36231,6 +37163,212 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<WhatsAppIntegration>(localVarStatusCode,
                 localVarHeaders,
                 (WhatsAppIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Call Authentication provider callback to validate state and code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The authorization code to be sent to the authentication server during the token request.</param>
+        /// <param name="state">The state/nonce value generated by Genesys Auth-Client Service.</param>
+        /// <param name="error">Error parameter from OAuth provider (optional)</param>
+        /// <returns>OAuthAppleAuthorizationResponse</returns>
+        
+        public OAuthAppleAuthorizationResponse GetConversationsMessagingOauthAppleCallback (string code, string state, string error = null)
+        {
+             ApiResponse<OAuthAppleAuthorizationResponse> localVarResponse = GetConversationsMessagingOauthAppleCallbackWithHttpInfo(code, state, error);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Call Authentication provider callback to validate state and code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The authorization code to be sent to the authentication server during the token request.</param>
+        /// <param name="state">The state/nonce value generated by Genesys Auth-Client Service.</param>
+        /// <param name="error">Error parameter from OAuth provider (optional)</param>
+        /// <returns>ApiResponse of OAuthAppleAuthorizationResponse</returns>
+        
+        public ApiResponse< OAuthAppleAuthorizationResponse > GetConversationsMessagingOauthAppleCallbackWithHttpInfo (string code, string state, string error = null)
+        { 
+            // verify the required parameter 'code' is set
+            if (code == null)
+                throw new ApiException(400, "Missing required parameter 'code' when calling ConversationsApi->GetConversationsMessagingOauthAppleCallback");
+            // verify the required parameter 'state' is set
+            if (state == null)
+                throw new ApiException(400, "Missing required parameter 'state' when calling ConversationsApi->GetConversationsMessagingOauthAppleCallback");
+
+            var localVarPath = "/api/v2/conversations/messaging/oauth/apple/callback";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (code != null) localVarQueryParams.Add(new Tuple<string, string>("code", this.Configuration.ApiClient.ParameterToString(code)));
+            if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+            if (error != null) localVarQueryParams.Add(new Tuple<string, string>("error", this.Configuration.ApiClient.ParameterToString(error)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingOauthAppleCallback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingOauthAppleCallback: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthAppleAuthorizationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthAppleAuthorizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthAppleAuthorizationResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Call Authentication provider callback to validate state and code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The authorization code to be sent to the authentication server during the token request.</param>
+        /// <param name="state">The state/nonce value generated by Genesys Auth-Client Service.</param>
+        /// <param name="error">Error parameter from OAuth provider (optional)</param>
+        /// <returns>Task of OAuthAppleAuthorizationResponse</returns>
+        
+        public async System.Threading.Tasks.Task<OAuthAppleAuthorizationResponse> GetConversationsMessagingOauthAppleCallbackAsync (string code, string state, string error = null)
+        {
+             ApiResponse<OAuthAppleAuthorizationResponse> localVarResponse = await GetConversationsMessagingOauthAppleCallbackAsyncWithHttpInfo(code, state, error);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Call Authentication provider callback to validate state and code 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="code">The authorization code to be sent to the authentication server during the token request.</param>
+        /// <param name="state">The state/nonce value generated by Genesys Auth-Client Service.</param>
+        /// <param name="error">Error parameter from OAuth provider (optional)</param>
+        /// <returns>Task of ApiResponse (OAuthAppleAuthorizationResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OAuthAppleAuthorizationResponse>> GetConversationsMessagingOauthAppleCallbackAsyncWithHttpInfo (string code, string state, string error = null)
+        { 
+            // verify the required parameter 'code' is set
+            if (code == null)
+                throw new ApiException(400, "Missing required parameter 'code' when calling ConversationsApi->GetConversationsMessagingOauthAppleCallback");
+            
+            // verify the required parameter 'state' is set
+            if (state == null)
+                throw new ApiException(400, "Missing required parameter 'state' when calling ConversationsApi->GetConversationsMessagingOauthAppleCallback");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/oauth/apple/callback";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (code != null) localVarQueryParams.Add(new Tuple<string, string>("code", this.Configuration.ApiClient.ParameterToString(code)));
+            if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+            if (error != null) localVarQueryParams.Add(new Tuple<string, string>("error", this.Configuration.ApiClient.ParameterToString(error)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingOauthAppleCallback: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingOauthAppleCallback: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OAuthAppleAuthorizationResponse>(localVarStatusCode,
+                localVarHeaders,
+                (OAuthAppleAuthorizationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OAuthAppleAuthorizationResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -47529,6 +48667,230 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">AppleIntegrationUpdateRequest</param>
+        /// <returns>AppleIntegration</returns>
+        
+        public AppleIntegration PatchConversationsMessagingIntegrationsAppleIntegrationId (string integrationId, AppleIntegrationUpdateRequest body)
+        {
+             ApiResponse<AppleIntegration> localVarResponse = PatchConversationsMessagingIntegrationsAppleIntegrationIdWithHttpInfo(integrationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">AppleIntegrationUpdateRequest</param>
+        /// <returns>ApiResponse of AppleIntegration</returns>
+        
+        public ApiResponse< AppleIntegration > PatchConversationsMessagingIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId, AppleIntegrationUpdateRequest body)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->PatchConversationsMessagingIntegrationsAppleIntegrationId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsAppleIntegrationId");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AppleIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (AppleIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">AppleIntegrationUpdateRequest</param>
+        /// <returns>Task of AppleIntegration</returns>
+        
+        public async System.Threading.Tasks.Task<AppleIntegration> PatchConversationsMessagingIntegrationsAppleIntegrationIdAsync (string integrationId, AppleIntegrationUpdateRequest body)
+        {
+             ApiResponse<AppleIntegration> localVarResponse = await PatchConversationsMessagingIntegrationsAppleIntegrationIdAsyncWithHttpInfo(integrationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an Apple messaging integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="integrationId">Integration ID</param>
+        /// <param name="body">AppleIntegrationUpdateRequest</param>
+        /// <returns>Task of ApiResponse (AppleIntegration)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AppleIntegration>> PatchConversationsMessagingIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId, AppleIntegrationUpdateRequest body)
+        { 
+            // verify the required parameter 'integrationId' is set
+            if (integrationId == null)
+                throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->PatchConversationsMessagingIntegrationsAppleIntegrationId");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsAppleIntegrationId");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (integrationId != null) localVarPathParams.Add("integrationId", this.Configuration.ApiClient.ParameterToString(integrationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsMessagingIntegrationsAppleIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AppleIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (AppleIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update Facebook messaging integration 
         /// 
         /// </summary>
@@ -57913,7 +59275,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add participants to a conversation without a user context 
+        /// Add participants to a conversation on behalf of a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -57929,7 +59291,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add participants to a conversation without a user context 
+        /// Add participants to a conversation on behalf of a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -58029,7 +59391,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Add participants to a conversation without a user context 
+        /// Add participants to a conversation on behalf of a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -58046,7 +59408,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Add participants to a conversation without a user context 
+        /// Add participants to a conversation on behalf of a user 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -67319,6 +68681,217 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create Apple Integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AppleIntegrationRequest</param>
+        /// <returns>AppleIntegration</returns>
+        
+        public AppleIntegration PostConversationsMessagingIntegrationsApple (AppleIntegrationRequest body)
+        {
+             ApiResponse<AppleIntegration> localVarResponse = PostConversationsMessagingIntegrationsAppleWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create Apple Integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AppleIntegrationRequest</param>
+        /// <returns>ApiResponse of AppleIntegration</returns>
+        
+        public ApiResponse< AppleIntegration > PostConversationsMessagingIntegrationsAppleWithHttpInfo (AppleIntegrationRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsApple");
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/apple";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsApple: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsApple: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AppleIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (AppleIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create Apple Integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AppleIntegrationRequest</param>
+        /// <returns>Task of AppleIntegration</returns>
+        
+        public async System.Threading.Tasks.Task<AppleIntegration> PostConversationsMessagingIntegrationsAppleAsync (AppleIntegrationRequest body)
+        {
+             ApiResponse<AppleIntegration> localVarResponse = await PostConversationsMessagingIntegrationsAppleAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create Apple Integration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">AppleIntegrationRequest</param>
+        /// <returns>Task of ApiResponse (AppleIntegration)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AppleIntegration>> PostConversationsMessagingIntegrationsAppleAsyncWithHttpInfo (AppleIntegrationRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsApple");
+            
+
+            var localVarPath = "/api/v2/conversations/messaging/integrations/apple";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsApple: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostConversationsMessagingIntegrationsApple: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AppleIntegration>(localVarStatusCode,
+                localVarHeaders,
+                (AppleIntegration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIntegration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create a Facebook Integration 
         /// 
         /// </summary>
@@ -73078,7 +74651,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an identity resolution settings for a Apple messaging integration 
         /// 
-        /// PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -73094,7 +74666,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an identity resolution settings for a Apple messaging integration 
         /// 
-        /// PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -73190,7 +74761,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an identity resolution settings for a Apple messaging integration 
         /// 
-        /// PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
@@ -73207,7 +74777,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create an identity resolution settings for a Apple messaging integration 
         /// 
-        /// PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>

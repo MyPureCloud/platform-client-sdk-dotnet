@@ -1195,9 +1195,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <param name="kpiId">Standard or custom KPI id used to filter predictors. (optional)</param>
+        /// <param name="state">The state used to filter predictors. (optional)</param>
         /// <returns>PredictorListing</returns>
         
-        PredictorListing GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+        PredictorListing GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null);
 
         /// <summary>
         /// Retrieve all predictors.
@@ -1211,9 +1213,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <param name="kpiId">Standard or custom KPI id used to filter predictors. (optional)</param>
+        /// <param name="state">The state used to filter predictors. (optional)</param>
         /// <returns>ApiResponse of PredictorListing</returns>
         
-        ApiResponse<PredictorListing> GetRoutingPredictorsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+        ApiResponse<PredictorListing> GetRoutingPredictorsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null);
 
         /// <summary>
         /// Get a list of Key Performance Indicators
@@ -1278,7 +1282,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>AssistantQueue</returns>
         
-        AssistantQueue GetRoutingQueueAssistant (string queueId, string expand = null);
+        AssistantQueue GetRoutingQueueAssistant (string queueId, List<string> expand = null);
 
         /// <summary>
         /// Get an assistant associated with a queue.
@@ -1291,7 +1295,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of AssistantQueue</returns>
         
-        ApiResponse<AssistantQueue> GetRoutingQueueAssistantWithHttpInfo (string queueId, string expand = null);
+        ApiResponse<AssistantQueue> GetRoutingQueueAssistantWithHttpInfo (string queueId, List<string> expand = null);
 
         /// <summary>
         /// Get a Comparison Period.
@@ -5313,9 +5317,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <param name="kpiId">Standard or custom KPI id used to filter predictors. (optional)</param>
+        /// <param name="state">The state used to filter predictors. (optional)</param>
         /// <returns>Task of PredictorListing</returns>
         
-        System.Threading.Tasks.Task<PredictorListing> GetRoutingPredictorsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+        System.Threading.Tasks.Task<PredictorListing> GetRoutingPredictorsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null);
 
         /// <summary>
         /// Retrieve all predictors.
@@ -5329,9 +5335,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <param name="kpiId">Standard or custom KPI id used to filter predictors. (optional)</param>
+        /// <param name="state">The state used to filter predictors. (optional)</param>
         /// <returns>Task of ApiResponse (PredictorListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<PredictorListing>> GetRoutingPredictorsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null);
+        System.Threading.Tasks.Task<ApiResponse<PredictorListing>> GetRoutingPredictorsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null);
 
         /// <summary>
         /// Get a list of Key Performance Indicators
@@ -5396,7 +5404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of AssistantQueue</returns>
         
-        System.Threading.Tasks.Task<AssistantQueue> GetRoutingQueueAssistantAsync (string queueId, string expand = null);
+        System.Threading.Tasks.Task<AssistantQueue> GetRoutingQueueAssistantAsync (string queueId, List<string> expand = null);
 
         /// <summary>
         /// Get an assistant associated with a queue.
@@ -5409,7 +5417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (AssistantQueue)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AssistantQueue>> GetRoutingQueueAssistantAsyncWithHttpInfo (string queueId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<AssistantQueue>> GetRoutingQueueAssistantAsyncWithHttpInfo (string queueId, List<string> expand = null);
 
         /// <summary>
         /// Get a Comparison Period.
@@ -17716,11 +17724,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <param name="kpiId">Standard or custom KPI id used to filter predictors. (optional)</param>
+        /// <param name="state">The state used to filter predictors. (optional)</param>
         /// <returns>PredictorListing</returns>
         
-        public PredictorListing GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        public PredictorListing GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null)
         {
-             ApiResponse<PredictorListing> localVarResponse = GetRoutingPredictorsWithHttpInfo(before, after, limit, pageSize, queueId);
+             ApiResponse<PredictorListing> localVarResponse = GetRoutingPredictorsWithHttpInfo(before, after, limit, pageSize, queueId, kpiId, state);
              return localVarResponse.Data;
         }
 
@@ -17734,9 +17744,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <param name="kpiId">Standard or custom KPI id used to filter predictors. (optional)</param>
+        /// <param name="state">The state used to filter predictors. (optional)</param>
         /// <returns>ApiResponse of PredictorListing</returns>
         
-        public ApiResponse< PredictorListing > GetRoutingPredictorsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        public ApiResponse< PredictorListing > GetRoutingPredictorsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null)
         { 
 
             var localVarPath = "/api/v2/routing/predictors";
@@ -17777,6 +17789,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (queueId != null) queueId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (kpiId != null) localVarQueryParams.Add(new Tuple<string, string>("kpiId", this.Configuration.ApiClient.ParameterToString(kpiId)));
+            if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
 
@@ -17824,11 +17838,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <param name="kpiId">Standard or custom KPI id used to filter predictors. (optional)</param>
+        /// <param name="state">The state used to filter predictors. (optional)</param>
         /// <returns>Task of PredictorListing</returns>
         
-        public async System.Threading.Tasks.Task<PredictorListing> GetRoutingPredictorsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        public async System.Threading.Tasks.Task<PredictorListing> GetRoutingPredictorsAsync (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null)
         {
-             ApiResponse<PredictorListing> localVarResponse = await GetRoutingPredictorsAsyncWithHttpInfo(before, after, limit, pageSize, queueId);
+             ApiResponse<PredictorListing> localVarResponse = await GetRoutingPredictorsAsyncWithHttpInfo(before, after, limit, pageSize, queueId, kpiId, state);
              return localVarResponse.Data;
 
         }
@@ -17843,9 +17859,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="limit">Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional)</param>
         /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
         /// <param name="queueId">Comma-separated list of queue Ids to filter by. (optional)</param>
+        /// <param name="kpiId">Standard or custom KPI id used to filter predictors. (optional)</param>
+        /// <param name="state">The state used to filter predictors. (optional)</param>
         /// <returns>Task of ApiResponse (PredictorListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<PredictorListing>> GetRoutingPredictorsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<PredictorListing>> GetRoutingPredictorsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null)
         { 
 
             var localVarPath = "/api/v2/routing/predictors";
@@ -17886,6 +17904,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (limit != null) localVarQueryParams.Add(new Tuple<string, string>("limit", this.Configuration.ApiClient.ParameterToString(limit)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (queueId != null) queueId.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("queueId", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (kpiId != null) localVarQueryParams.Add(new Tuple<string, string>("kpiId", this.Configuration.ApiClient.ParameterToString(kpiId)));
+            if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
 
@@ -18340,7 +18360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>AssistantQueue</returns>
         
-        public AssistantQueue GetRoutingQueueAssistant (string queueId, string expand = null)
+        public AssistantQueue GetRoutingQueueAssistant (string queueId, List<string> expand = null)
         {
              ApiResponse<AssistantQueue> localVarResponse = GetRoutingQueueAssistantWithHttpInfo(queueId, expand);
              return localVarResponse.Data;
@@ -18355,7 +18375,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>ApiResponse of AssistantQueue</returns>
         
-        public ApiResponse< AssistantQueue > GetRoutingQueueAssistantWithHttpInfo (string queueId, string expand = null)
+        public ApiResponse< AssistantQueue > GetRoutingQueueAssistantWithHttpInfo (string queueId, List<string> expand = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -18395,7 +18415,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
 
             // Query params
-            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -18442,7 +18462,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of AssistantQueue</returns>
         
-        public async System.Threading.Tasks.Task<AssistantQueue> GetRoutingQueueAssistantAsync (string queueId, string expand = null)
+        public async System.Threading.Tasks.Task<AssistantQueue> GetRoutingQueueAssistantAsync (string queueId, List<string> expand = null)
         {
              ApiResponse<AssistantQueue> localVarResponse = await GetRoutingQueueAssistantAsyncWithHttpInfo(queueId, expand);
              return localVarResponse.Data;
@@ -18458,7 +18478,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <returns>Task of ApiResponse (AssistantQueue)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AssistantQueue>> GetRoutingQueueAssistantAsyncWithHttpInfo (string queueId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AssistantQueue>> GetRoutingQueueAssistantAsyncWithHttpInfo (string queueId, List<string> expand = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -18499,7 +18519,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
 
             // Query params
-            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

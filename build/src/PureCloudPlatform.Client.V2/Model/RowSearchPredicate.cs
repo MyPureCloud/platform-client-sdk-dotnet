@@ -67,7 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Lessthanorequals for "LessThanOrEquals"
             /// </summary>
             [EnumMember(Value = "LessThanOrEquals")]
-            Lessthanorequals
+            Lessthanorequals,
+            
+            /// <summary>
+            /// Enum Containsitem for "ContainsItem"
+            /// </summary>
+            [EnumMember(Value = "ContainsItem")]
+            Containsitem
         }
         /// <summary>
         /// The special value that will be searched for in rows. Exactly one of 'value' or 'special' can be used.

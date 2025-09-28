@@ -2017,9 +2017,10 @@ This endpoint does require any parameters.
 
 Get domain
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:email:manage
+* routing:email:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2150,7 +2151,7 @@ Get a route identity resolution setting.
 Requires ALL permissions: 
 
 * routing:email:manage
-* routing:identityResolution:view
+* routing:identityResolutionEmail:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2352,9 +2353,10 @@ namespace Example
 
 Get domain
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:email:manage
+* routing:email:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3046,7 +3048,7 @@ namespace Example
 
 ## GetRoutingPredictors
 
-> [**PredictorListing**](PredictorListing) GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null)
+> [**PredictorListing**](PredictorListing) GetRoutingPredictors (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null)
 
 
 Retrieve all predictors.
@@ -3083,11 +3085,13 @@ namespace Example
             var limit = limit_example;  // string | Number of entities to return. Maximum of 200. Deprecated in favour of pageSize (optional) 
             var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
             var queueId = new List<string>(); // List<string> | Comma-separated list of queue Ids to filter by. (optional) 
+            var kpiId = kpiId_example;  // string | Standard or custom KPI id used to filter predictors. (optional) 
+            var state = state_example;  // string | The state used to filter predictors. (optional) 
 
             try
             { 
                 // Retrieve all predictors.
-                PredictorListing result = apiInstance.GetRoutingPredictors(before, after, limit, pageSize, queueId);
+                PredictorListing result = apiInstance.GetRoutingPredictors(before, after, limit, pageSize, queueId, kpiId, state);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3109,6 +3113,8 @@ namespace Example
 | **limit** | **string**| Number of entities to return. Maximum of 200. Deprecated in favour of pageSize | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
 | **queueId** | [**List<string>**](string)| Comma-separated list of queue Ids to filter by. | [optional]  |
+| **kpiId** | **string**| Standard or custom KPI id used to filter predictors. | [optional]  |
+| **state** | **string**| The state used to filter predictors. | [optional] <br />**Values**: Created, Error, Active |
 
 ### Return type
 
@@ -3245,7 +3251,7 @@ namespace Example
 
 ## GetRoutingQueueAssistant
 
-> [**AssistantQueue**](AssistantQueue) GetRoutingQueueAssistant (string queueId, string expand = null)
+> [**AssistantQueue**](AssistantQueue) GetRoutingQueueAssistant (string queueId, List<string> expand = null)
 
 
 Get an assistant associated with a queue.
@@ -3277,7 +3283,7 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
-            var expand = expand_example;  // string | Which fields, if any, to expand. (optional) 
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
 
             try
             { 
@@ -3300,7 +3306,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
-| **expand** | **string**| Which fields, if any, to expand. | [optional] <br />**Values**: assistant |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: assistant, copilot |
 
 ### Return type
 
@@ -3509,7 +3515,7 @@ Get Queue IdentityResolution Settings.
 Requires ALL permissions: 
 
 * routing:queue:view
-* routing:identityResolution:view
+* queue:identityResolution:view
 
 ### Example
 ```{"language":"csharp"}
@@ -4933,7 +4939,7 @@ Get a SMS identity resolution settings.
 Requires ALL permissions: 
 
 * sms:phoneNumber:view
-* routing:identityResolution:view
+* sms:identityResolution:view
 
 ### Example
 ```{"language":"csharp"}
@@ -9206,7 +9212,7 @@ Update identity resolution settings for a route.
 Requires ALL permissions: 
 
 * routing:email:manage
-* routing:identityResolution:edit
+* routing:identityResolutionEmail:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -9463,7 +9469,7 @@ Update Queue IdentityResolution Settings.
 Requires ALL permissions: 
 
 * routing:queue:edit
-* routing:identityResolution:edit
+* queue:identityResolution:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -9652,7 +9658,7 @@ Update an SMS identity resolution settings.
 Requires ALL permissions: 
 
 * sms:phoneNumber:edit
-* routing:identityResolution:edit
+* sms:identityResolution:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -10155,4 +10161,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

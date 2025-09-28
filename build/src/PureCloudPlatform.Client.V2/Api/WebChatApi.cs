@@ -69,22 +69,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Remove WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteWebchatSettings ();
 
         /// <summary>
         /// Remove WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteWebchatSettingsWithHttpInfo ();
 
         /// <summary>
@@ -301,22 +301,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WebChatSettings</returns>
-        
+        [Obsolete]
         WebChatSettings GetWebchatSettings ();
 
         /// <summary>
         /// Get WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WebChatSettings</returns>
-        
+        [Obsolete]
         ApiResponse<WebChatSettings> GetWebchatSettingsWithHttpInfo ();
 
         /// <summary>
@@ -479,24 +479,24 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>WebChatSettings</returns>
-        
+        [Obsolete]
         WebChatSettings PutWebchatSettings (WebChatSettings body);
 
         /// <summary>
         /// Update WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>ApiResponse of WebChatSettings</returns>
-        
+        [Obsolete]
         ApiResponse<WebChatSettings> PutWebchatSettingsWithHttpInfo (WebChatSettings body);
 
         #endregion Synchronous Operations
@@ -557,22 +557,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Remove WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteWebchatSettingsAsync ();
 
         /// <summary>
         /// Remove WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebchatSettingsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -789,22 +789,22 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WebChatSettings</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WebChatSettings> GetWebchatSettingsAsync ();
 
         /// <summary>
         /// Get WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WebChatSettings)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WebChatSettings>> GetWebchatSettingsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -967,24 +967,24 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>Task of WebChatSettings</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<WebChatSettings> PutWebchatSettingsAsync (WebChatSettings body);
 
         /// <summary>
         /// Update WebChat deployment settings
         /// </summary>
         /// <remarks>
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>Task of ApiResponse (WebChatSettings)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<WebChatSettings>> PutWebchatSettingsAsyncWithHttpInfo (WebChatSettings body);
 
         #endregion Asynchronous Operations
@@ -1490,11 +1490,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Remove WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteWebchatSettings ()
         {
              DeleteWebchatSettingsWithHttpInfo();
@@ -1502,11 +1502,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Remove WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteWebchatSettingsWithHttpInfo ()
         { 
 
@@ -1582,11 +1582,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Remove WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteWebchatSettingsAsync ()
         {
              await DeleteWebchatSettingsAsyncWithHttpInfo();
@@ -1595,11 +1595,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Remove WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebchatSettingsAsyncWithHttpInfo ()
         { 
 
@@ -3340,11 +3340,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>WebChatSettings</returns>
-        
+        [Obsolete]
         public WebChatSettings GetWebchatSettings ()
         {
              ApiResponse<WebChatSettings> localVarResponse = GetWebchatSettingsWithHttpInfo();
@@ -3353,11 +3353,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of WebChatSettings</returns>
-        
+        [Obsolete]
         public ApiResponse< WebChatSettings > GetWebchatSettingsWithHttpInfo ()
         { 
 
@@ -3433,11 +3433,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of WebChatSettings</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WebChatSettings> GetWebchatSettingsAsync ()
         {
              ApiResponse<WebChatSettings> localVarResponse = await GetWebchatSettingsAsyncWithHttpInfo();
@@ -3447,11 +3447,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (WebChatSettings)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WebChatSettings>> GetWebchatSettingsAsyncWithHttpInfo ()
         { 
 
@@ -4842,12 +4842,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>WebChatSettings</returns>
-        
+        [Obsolete]
         public WebChatSettings PutWebchatSettings (WebChatSettings body)
         {
              ApiResponse<WebChatSettings> localVarResponse = PutWebchatSettingsWithHttpInfo(body);
@@ -4856,12 +4856,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>ApiResponse of WebChatSettings</returns>
-        
+        [Obsolete]
         public ApiResponse< WebChatSettings > PutWebchatSettingsWithHttpInfo (WebChatSettings body)
         { 
             // verify the required parameter 'body' is set
@@ -4946,12 +4946,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>Task of WebChatSettings</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<WebChatSettings> PutWebchatSettingsAsync (WebChatSettings body)
         {
              ApiResponse<WebChatSettings> localVarResponse = await PutWebchatSettingsAsyncWithHttpInfo(body);
@@ -4961,12 +4961,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update WebChat deployment settings 
-        /// 
+        /// This endpoint is deprecated. Please see the article https://community.genesys.com/discussion/deprecation-acd-chat-v20-and-resulting-impact-to-apiv2webchatsettings.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">webChatSettings</param>
         /// <returns>Task of ApiResponse (WebChatSettings)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<WebChatSettings>> PutWebchatSettingsAsyncWithHttpInfo (WebChatSettings body)
         { 
             // verify the required parameter 'body' is set

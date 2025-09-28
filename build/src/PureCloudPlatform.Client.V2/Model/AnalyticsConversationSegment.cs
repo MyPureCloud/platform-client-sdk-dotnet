@@ -82,6 +82,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Forwardtransfer,
             
             /// <summary>
+            /// Enum Inactivity for "inactivity"
+            /// </summary>
+            [EnumMember(Value = "inactivity")]
+            Inactivity,
+            
+            /// <summary>
             /// Enum Noanswertransfer for "noAnswerTransfer"
             /// </summary>
             [EnumMember(Value = "noAnswerTransfer")]
@@ -104,6 +110,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "peer")]
             Peer,
+            
+            /// <summary>
+            /// Enum Sessionexpired for "sessionExpired"
+            /// </summary>
+            [EnumMember(Value = "sessionExpired")]
+            Sessionexpired,
             
             /// <summary>
             /// Enum Spam for "spam"
@@ -139,13 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Uncallable for "uncallable"
             /// </summary>
             [EnumMember(Value = "uncallable")]
-            Uncallable,
-            
-            /// <summary>
-            /// Enum Inactivity for "inactivity"
-            /// </summary>
-            [EnumMember(Value = "inactivity")]
-            Inactivity
+            Uncallable
         }
         /// <summary>
         /// The activity that takes place in the segment, such as hold or interact

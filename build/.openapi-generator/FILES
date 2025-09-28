@@ -143,6 +143,11 @@ docs/AgentIntegrationsRequest.md
 docs/AgentIntegrationsResponse.md
 docs/AgentManagementUnitReference.md
 docs/AgentMaxUtilizationResponse.md
+docs/AgentMuQueryResponse.md
+docs/AgentMuScheduleItem.md
+docs/AgentMuScheduleQuery.md
+docs/AgentMuScheduleResult.md
+docs/AgentMuScheduleShift.md
 docs/AgentOwnedMappingPreview.md
 docs/AgentOwnedMappingPreviewListing.md
 docs/AgentOwnedRouting.md
@@ -151,6 +156,7 @@ docs/AgentPossibleWorkShiftsResponse.md
 docs/AgentQueryAdherenceExplanationsRequest.md
 docs/AgentQueryAdherenceExplanationsResponse.md
 docs/AgentQueueTimeRequest.md
+docs/AgentScheduleShiftActivity.md
 docs/AgentStateAgentQueryClause.md
 docs/AgentStateAgentQueryPredicate.md
 docs/AgentStateCountsRequest.md
@@ -269,7 +275,14 @@ docs/AppEventRequest.md
 docs/AppEventResponse.md
 docs/AppEventResponseSession.md
 docs/AppendToDncActionSettings.md
+docs/AppleAuthentication.md
+docs/AppleIMessageApp.md
+docs/AppleIntegration.md
+docs/AppleIntegrationEntityListing.md
+docs/AppleIntegrationRequest.md
+docs/AppleIntegrationUpdateRequest.md
 docs/AppleOpaqueId.md
+docs/ApplePay.md
 docs/ApprovalNamespace.md
 docs/ArchitectApi.json
 docs/ArchitectApi.md
@@ -1717,6 +1730,7 @@ docs/DeleteConversationRecordingAnnotation-example.txt
 docs/DeleteConversationsCallParticipantConsult-example.txt
 docs/DeleteConversationsEmailMessagesDraftAttachment-example.txt
 docs/DeleteConversationsMessagesCachedmediaCachedMediaItemId-example.txt
+docs/DeleteConversationsMessagingIntegrationsAppleIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsOpenIntegrationId-example.txt
@@ -2122,7 +2136,9 @@ docs/DisallowedEntityLearningAssignmentItem.md
 docs/DisallowedEntityLearningAssignmentReference.md
 docs/DisconnectReason.md
 docs/Disposition.md
+docs/DispositionAmdTimeout.md
 docs/DispositionParameters.md
+docs/DispositionSilentCallTimeout.md
 docs/Division.md
 docs/DivisionEntityRef.md
 docs/DivisionReference.md
@@ -2235,8 +2251,7 @@ docs/DomainOrganizationRole.md
 docs/DomainOrganizationRoleCreate.md
 docs/DomainOrganizationRoleUpdate.md
 docs/DomainPermission.md
-docs/DomainPermissionCollectionDomainPermission.md
-docs/DomainPermissionEntityListing.md
+docs/DomainPermissionCollection.md
 docs/DomainPermissionPolicy.md
 docs/DomainPhysicalCapabilities.md
 docs/DomainPhysicalInterface.md
@@ -2601,6 +2616,7 @@ docs/FaxTopicLockData.md
 docs/FaxTopicUserData.md
 docs/FaxTopicWorkspaceData.md
 docs/FeatureState.md
+docs/FeatureSupport.md
 docs/Feedback.md
 docs/FeedbackAddRequest.md
 docs/FeedbackUpdateRequest.md
@@ -2886,6 +2902,7 @@ docs/GetAssistantCopilot-example.txt
 docs/GetAssistantQueue-example.txt
 docs/GetAssistantQueues-example.txt
 docs/GetAssistants-example.txt
+docs/GetAssistantsCopilotFeaturesupport-example.txt
 docs/GetAssistantsQueues-example.txt
 docs/GetAuditsQueryRealtimeServicemapping-example.txt
 docs/GetAuditsQueryServicemapping-example.txt
@@ -3068,6 +3085,8 @@ docs/GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId
 docs/GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationTwitterOauthSettings-example.txt
 docs/GetConversationsMessagingIntegrations-example.txt
+docs/GetConversationsMessagingIntegrationsApple-example.txt
+docs/GetConversationsMessagingIntegrationsAppleIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsFacebook-example.txt
 docs/GetConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsInstagram-example.txt
@@ -3079,6 +3098,7 @@ docs/GetConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsTwitterOauthSettings-example.txt
 docs/GetConversationsMessagingIntegrationsWhatsapp-example.txt
 docs/GetConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
+docs/GetConversationsMessagingOauthAppleCallback-example.txt
 docs/GetConversationsMessagingSetting-example.txt
 docs/GetConversationsMessagingSettings-example.txt
 docs/GetConversationsMessagingSettingsDefault-example.txt
@@ -4732,6 +4752,8 @@ docs/Language.md
 docs/LanguageEntityListing.md
 docs/LanguageOverride.md
 docs/LanguageReference.md
+docs/LanguageSupportInfoRecord.md
+docs/LanguageSupportResponse.md
 docs/LanguageUnderstandingApi.json
 docs/LanguageUnderstandingApi.md
 docs/LanguagesApi.json
@@ -5136,6 +5158,8 @@ docs/NumberPlan.md
 docs/NumericRange.md
 docs/OAuthApi.json
 docs/OAuthApi.md
+docs/OAuthAppleAuthorizationResponse.md
+docs/OAuthAppleAuthorizationResponseError.md
 docs/OAuthAuthorization.md
 docs/OAuthAuthorizationListing.md
 docs/OAuthClient.md
@@ -5439,6 +5463,7 @@ docs/PatchConversationsMessage-example.txt
 docs/PatchConversationsMessageParticipant-example.txt
 docs/PatchConversationsMessageParticipantAttributes-example.txt
 docs/PatchConversationsMessageParticipantCommunication-example.txt
+docs/PatchConversationsMessagingIntegrationsAppleIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsOpenIntegrationId-example.txt
@@ -5630,6 +5655,7 @@ docs/PerformancePredictionRecalculationUploadResponse.md
 docs/PerformancePredictionResponse.md
 docs/PerformancePredictionUploadSchema.md
 docs/PerformanceProfile.md
+docs/PermissionCollectionEntityListing.md
 docs/PermissionDetails.md
 docs/Permissions.md
 docs/PersistentConnectionChangeTopicErrorInfo.md
@@ -5920,6 +5946,7 @@ docs/PostConversationsMessageParticipantReplace-example.txt
 docs/PostConversationsMessages-example.txt
 docs/PostConversationsMessagesAgentless-example.txt
 docs/PostConversationsMessagesInboundOpen-example.txt
+docs/PostConversationsMessagingIntegrationsApple-example.txt
 docs/PostConversationsMessagingIntegrationsFacebook-example.txt
 docs/PostConversationsMessagingIntegrationsInstagram-example.txt
 docs/PostConversationsMessagingIntegrationsOpen-example.txt
@@ -6415,6 +6442,7 @@ docs/PostWorkforcemanagementAgentAdherenceExplanationsQuery-example.txt
 docs/PostWorkforcemanagementAgents-example.txt
 docs/PostWorkforcemanagementAgentsIntegrationsHrisQuery-example.txt
 docs/PostWorkforcemanagementAgentsMePossibleworkshifts-example.txt
+docs/PostWorkforcemanagementAgentschedulesManagementunitsMine-example.txt
 docs/PostWorkforcemanagementAgentschedulesMine-example.txt
 docs/PostWorkforcemanagementAlternativeshiftsOffersJobs-example.txt
 docs/PostWorkforcemanagementAlternativeshiftsOffersSearchJobs-example.txt
@@ -9084,6 +9112,11 @@ src/PureCloudPlatform.Client.V2/Model/AgentIntegrationsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentIntegrationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentManagementUnitReference.cs
 src/PureCloudPlatform.Client.V2/Model/AgentMaxUtilizationResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AgentMuQueryResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AgentMuScheduleItem.cs
+src/PureCloudPlatform.Client.V2/Model/AgentMuScheduleQuery.cs
+src/PureCloudPlatform.Client.V2/Model/AgentMuScheduleResult.cs
+src/PureCloudPlatform.Client.V2/Model/AgentMuScheduleShift.cs
 src/PureCloudPlatform.Client.V2/Model/AgentOwnedMappingPreview.cs
 src/PureCloudPlatform.Client.V2/Model/AgentOwnedMappingPreviewListing.cs
 src/PureCloudPlatform.Client.V2/Model/AgentOwnedRouting.cs
@@ -9092,6 +9125,7 @@ src/PureCloudPlatform.Client.V2/Model/AgentPossibleWorkShiftsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentQueryAdherenceExplanationsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentQueryAdherenceExplanationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentQueueTimeRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AgentScheduleShiftActivity.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateAgentQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateAgentQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateCountsRequest.cs
@@ -9204,7 +9238,14 @@ src/PureCloudPlatform.Client.V2/Model/AppEventRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AppEventResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AppEventResponseSession.cs
 src/PureCloudPlatform.Client.V2/Model/AppendToDncActionSettings.cs
+src/PureCloudPlatform.Client.V2/Model/AppleAuthentication.cs
+src/PureCloudPlatform.Client.V2/Model/AppleIMessageApp.cs
+src/PureCloudPlatform.Client.V2/Model/AppleIntegration.cs
+src/PureCloudPlatform.Client.V2/Model/AppleIntegrationEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/AppleIntegrationRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AppleIntegrationUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AppleOpaqueId.cs
+src/PureCloudPlatform.Client.V2/Model/ApplePay.cs
 src/PureCloudPlatform.Client.V2/Model/ApprovalNamespace.cs
 src/PureCloudPlatform.Client.V2/Model/ArchitectDependencyTrackingBuildNotificationClient.cs
 src/PureCloudPlatform.Client.V2/Model/ArchitectDependencyTrackingBuildNotificationDependencyTrackingBuildNotification.cs
@@ -10694,7 +10735,9 @@ src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentItem.cs
 src/PureCloudPlatform.Client.V2/Model/DisallowedEntityLearningAssignmentReference.cs
 src/PureCloudPlatform.Client.V2/Model/DisconnectReason.cs
 src/PureCloudPlatform.Client.V2/Model/Disposition.cs
+src/PureCloudPlatform.Client.V2/Model/DispositionAmdTimeout.cs
 src/PureCloudPlatform.Client.V2/Model/DispositionParameters.cs
+src/PureCloudPlatform.Client.V2/Model/DispositionSilentCallTimeout.cs
 src/PureCloudPlatform.Client.V2/Model/Division.cs
 src/PureCloudPlatform.Client.V2/Model/DivisionEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/DivisionReference.cs
@@ -10807,8 +10850,7 @@ src/PureCloudPlatform.Client.V2/Model/DomainOrganizationRole.cs
 src/PureCloudPlatform.Client.V2/Model/DomainOrganizationRoleCreate.cs
 src/PureCloudPlatform.Client.V2/Model/DomainOrganizationRoleUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/DomainPermission.cs
-src/PureCloudPlatform.Client.V2/Model/DomainPermissionCollectionDomainPermission.cs
-src/PureCloudPlatform.Client.V2/Model/DomainPermissionEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/DomainPermissionCollection.cs
 src/PureCloudPlatform.Client.V2/Model/DomainPermissionPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/DomainPhysicalCapabilities.cs
 src/PureCloudPlatform.Client.V2/Model/DomainPhysicalInterface.cs
@@ -11161,6 +11203,7 @@ src/PureCloudPlatform.Client.V2/Model/FaxTopicLockData.cs
 src/PureCloudPlatform.Client.V2/Model/FaxTopicUserData.cs
 src/PureCloudPlatform.Client.V2/Model/FaxTopicWorkspaceData.cs
 src/PureCloudPlatform.Client.V2/Model/FeatureState.cs
+src/PureCloudPlatform.Client.V2/Model/FeatureSupport.cs
 src/PureCloudPlatform.Client.V2/Model/Feedback.cs
 src/PureCloudPlatform.Client.V2/Model/FeedbackAddRequest.cs
 src/PureCloudPlatform.Client.V2/Model/FeedbackUpdateRequest.cs
@@ -11852,6 +11895,8 @@ src/PureCloudPlatform.Client.V2/Model/Language.cs
 src/PureCloudPlatform.Client.V2/Model/LanguageEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/LanguageOverride.cs
 src/PureCloudPlatform.Client.V2/Model/LanguageReference.cs
+src/PureCloudPlatform.Client.V2/Model/LanguageSupportInfoRecord.cs
+src/PureCloudPlatform.Client.V2/Model/LanguageSupportResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LastAttemptByColumnConditionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/LastAttemptOverallConditionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/LastResultByColumnConditionSettings.cs
@@ -12236,6 +12281,8 @@ src/PureCloudPlatform.Client.V2/Model/NuanceOrganization.cs
 src/PureCloudPlatform.Client.V2/Model/Number.cs
 src/PureCloudPlatform.Client.V2/Model/NumberPlan.cs
 src/PureCloudPlatform.Client.V2/Model/NumericRange.cs
+src/PureCloudPlatform.Client.V2/Model/OAuthAppleAuthorizationResponse.cs
+src/PureCloudPlatform.Client.V2/Model/OAuthAppleAuthorizationResponseError.cs
 src/PureCloudPlatform.Client.V2/Model/OAuthAuthorization.cs
 src/PureCloudPlatform.Client.V2/Model/OAuthAuthorizationListing.cs
 src/PureCloudPlatform.Client.V2/Model/OAuthClient.cs
@@ -12500,6 +12547,7 @@ src/PureCloudPlatform.Client.V2/Model/PerformancePredictionRecalculationUploadRe
 src/PureCloudPlatform.Client.V2/Model/PerformancePredictionResponse.cs
 src/PureCloudPlatform.Client.V2/Model/PerformancePredictionUploadSchema.cs
 src/PureCloudPlatform.Client.V2/Model/PerformanceProfile.cs
+src/PureCloudPlatform.Client.V2/Model/PermissionCollectionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/PermissionDetails.cs
 src/PureCloudPlatform.Client.V2/Model/Permissions.cs
 src/PureCloudPlatform.Client.V2/Model/PersistentConnectionChangeTopicErrorInfo.cs

@@ -247,7 +247,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Inactivity for "inactivity"
             /// </summary>
             [EnumMember(Value = "inactivity")]
-            Inactivity
+            Inactivity,
+            
+            /// <summary>
+            /// Enum Sessionexpired for "session.expired"
+            /// </summary>
+            [EnumMember(Value = "session.expired")]
+            Sessionexpired
         }
         /// <summary>
         /// The reason specifying why participant flagged the conversation.

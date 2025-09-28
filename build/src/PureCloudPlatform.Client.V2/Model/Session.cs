@@ -178,7 +178,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Donotdisturbtransfer for "DoNotDisturbTransfer"
             /// </summary>
             [EnumMember(Value = "DoNotDisturbTransfer")]
-            Donotdisturbtransfer
+            Donotdisturbtransfer,
+            
+            /// <summary>
+            /// Enum Sessionexpired for "SessionExpired"
+            /// </summary>
+            [EnumMember(Value = "SessionExpired")]
+            Sessionexpired
         }
         /// <summary>
         /// Last ACD outcome for the conversation.

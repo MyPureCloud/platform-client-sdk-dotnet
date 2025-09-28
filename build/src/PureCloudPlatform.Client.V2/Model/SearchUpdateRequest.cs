@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Answered">Mark the search as answered/unanswered (required).</param>
         /// <param name="SelectedAnswer">The selected search result chosen as the answer..</param>
-        public SearchUpdateRequest(bool? Answered = null, SelectedAnswer SelectedAnswer = null)
+        /// <param name="SelectedAnswers">The search results selected as answers.</param>
+        public SearchUpdateRequest(bool? Answered = null, SelectedAnswer SelectedAnswer = null, List<SelectedAnswer> SelectedAnswers = null)
         {
             this.Answered = Answered;
             this.SelectedAnswer = SelectedAnswer;
+            this.SelectedAnswers = SelectedAnswers;
             
         }
         
@@ -64,6 +66,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public SelectedAnswer SelectedAnswer { get; set; }
 
 
+
+        /// <summary>
+        /// The search results selected as answers
+        /// </summary>
+        /// <value>The search results selected as answers</value>
+        [DataMember(Name="selectedAnswers", EmitDefaultValue=false)]
+        public List<SelectedAnswer> SelectedAnswers { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -76,6 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  Answered: ").Append(Answered).Append("\n");
             sb.Append("  SelectedAnswer: ").Append(SelectedAnswer).Append("\n");
+            sb.Append("  SelectedAnswers: ").Append(SelectedAnswers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,6 +142,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelectedAnswer == other.SelectedAnswer ||
                     this.SelectedAnswer != null &&
                     this.SelectedAnswer.Equals(other.SelectedAnswer)
+                ) &&
+                (
+                    this.SelectedAnswers == other.SelectedAnswers ||
+                    this.SelectedAnswers != null &&
+                    this.SelectedAnswers.SequenceEqual(other.SelectedAnswers)
                 );
         }
 
@@ -152,6 +169,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SelectedAnswer != null)
                     hash = hash * 59 + this.SelectedAnswer.GetHashCode();
+
+                if (this.SelectedAnswers != null)
+                    hash = hash * 59 + this.SelectedAnswers.GetHashCode();
 
                 return hash;
             }

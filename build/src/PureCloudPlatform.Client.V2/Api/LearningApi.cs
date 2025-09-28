@@ -968,9 +968,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
+        /// <param name="assign">Whether to assign the module to users or not (optional, default to true)</param>
         /// <returns>LearningModuleRule</returns>
         
-        LearningModuleRule PutLearningModuleRule (string moduleId, LearningModuleRule body);
+        LearningModuleRule PutLearningModuleRule (string moduleId, LearningModuleRule body, bool? assign = null);
 
         /// <summary>
         /// Update a learning module rule
@@ -981,9 +982,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
+        /// <param name="assign">Whether to assign the module to users or not (optional, default to true)</param>
         /// <returns>ApiResponse of LearningModuleRule</returns>
         
-        ApiResponse<LearningModuleRule> PutLearningModuleRuleWithHttpInfo (string moduleId, LearningModuleRule body);
+        ApiResponse<LearningModuleRule> PutLearningModuleRuleWithHttpInfo (string moduleId, LearningModuleRule body, bool? assign = null);
 
         #endregion Synchronous Operations
 
@@ -1942,9 +1944,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
+        /// <param name="assign">Whether to assign the module to users or not (optional, default to true)</param>
         /// <returns>Task of LearningModuleRule</returns>
         
-        System.Threading.Tasks.Task<LearningModuleRule> PutLearningModuleRuleAsync (string moduleId, LearningModuleRule body);
+        System.Threading.Tasks.Task<LearningModuleRule> PutLearningModuleRuleAsync (string moduleId, LearningModuleRule body, bool? assign = null);
 
         /// <summary>
         /// Update a learning module rule
@@ -1955,9 +1958,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
+        /// <param name="assign">Whether to assign the module to users or not (optional, default to true)</param>
         /// <returns>Task of ApiResponse (LearningModuleRule)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<LearningModuleRule>> PutLearningModuleRuleAsyncWithHttpInfo (string moduleId, LearningModuleRule body);
+        System.Threading.Tasks.Task<ApiResponse<LearningModuleRule>> PutLearningModuleRuleAsyncWithHttpInfo (string moduleId, LearningModuleRule body, bool? assign = null);
 
         #endregion Asynchronous Operations
 
@@ -9470,11 +9474,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
+        /// <param name="assign">Whether to assign the module to users or not (optional, default to true)</param>
         /// <returns>LearningModuleRule</returns>
         
-        public LearningModuleRule PutLearningModuleRule (string moduleId, LearningModuleRule body)
+        public LearningModuleRule PutLearningModuleRule (string moduleId, LearningModuleRule body, bool? assign = null)
         {
-             ApiResponse<LearningModuleRule> localVarResponse = PutLearningModuleRuleWithHttpInfo(moduleId, body);
+             ApiResponse<LearningModuleRule> localVarResponse = PutLearningModuleRuleWithHttpInfo(moduleId, body, assign);
              return localVarResponse.Data;
         }
 
@@ -9485,9 +9490,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
+        /// <param name="assign">Whether to assign the module to users or not (optional, default to true)</param>
         /// <returns>ApiResponse of LearningModuleRule</returns>
         
-        public ApiResponse< LearningModuleRule > PutLearningModuleRuleWithHttpInfo (string moduleId, LearningModuleRule body)
+        public ApiResponse< LearningModuleRule > PutLearningModuleRuleWithHttpInfo (string moduleId, LearningModuleRule body, bool? assign = null)
         { 
             // verify the required parameter 'moduleId' is set
             if (moduleId == null)
@@ -9531,6 +9537,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
 
             // Query params
+            if (assign != null) localVarQueryParams.Add(new Tuple<string, string>("assign", this.Configuration.ApiClient.ParameterToString(assign)));
 
             // Header params
 
@@ -9580,11 +9587,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
+        /// <param name="assign">Whether to assign the module to users or not (optional, default to true)</param>
         /// <returns>Task of LearningModuleRule</returns>
         
-        public async System.Threading.Tasks.Task<LearningModuleRule> PutLearningModuleRuleAsync (string moduleId, LearningModuleRule body)
+        public async System.Threading.Tasks.Task<LearningModuleRule> PutLearningModuleRuleAsync (string moduleId, LearningModuleRule body, bool? assign = null)
         {
-             ApiResponse<LearningModuleRule> localVarResponse = await PutLearningModuleRuleAsyncWithHttpInfo(moduleId, body);
+             ApiResponse<LearningModuleRule> localVarResponse = await PutLearningModuleRuleAsyncWithHttpInfo(moduleId, body, assign);
              return localVarResponse.Data;
 
         }
@@ -9596,9 +9604,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="moduleId">The ID of the learning module</param>
         /// <param name="body">The learning module rule to be updated</param>
+        /// <param name="assign">Whether to assign the module to users or not (optional, default to true)</param>
         /// <returns>Task of ApiResponse (LearningModuleRule)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<LearningModuleRule>> PutLearningModuleRuleAsyncWithHttpInfo (string moduleId, LearningModuleRule body)
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModuleRule>> PutLearningModuleRuleAsyncWithHttpInfo (string moduleId, LearningModuleRule body, bool? assign = null)
         { 
             // verify the required parameter 'moduleId' is set
             if (moduleId == null)
@@ -9644,6 +9653,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
 
             // Query params
+            if (assign != null) localVarQueryParams.Add(new Tuple<string, string>("assign", this.Configuration.ApiClient.ParameterToString(assign)));
 
             // Header params
 

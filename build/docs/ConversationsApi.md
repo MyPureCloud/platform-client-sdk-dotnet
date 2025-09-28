@@ -14,6 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteConversationsCallParticipantConsult**](#DeleteConversationsCallParticipantConsult) | **Delete** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Cancel the transfer |
 | [**DeleteConversationsEmailMessagesDraftAttachment**](#DeleteConversationsEmailMessagesDraftAttachment) | **Delete** /api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId} | Delete attachment from draft |
 | [**DeleteConversationsMessagesCachedmediaCachedMediaItemId**](#DeleteConversationsMessagesCachedmediaCachedMediaItemId) | **Delete** /api/v2/conversations/messages/cachedmedia/{cachedMediaItemId} | Remove a cached media item asychronously |
+| [**DeleteConversationsMessagingIntegrationsAppleIntegrationId**](#DeleteConversationsMessagingIntegrationsAppleIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/apple/{integrationId} | Delete an Apple messaging integration |
 | [**DeleteConversationsMessagingIntegrationsFacebookIntegrationId**](#DeleteConversationsMessagingIntegrationsFacebookIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Delete a Facebook messaging integration |
 | [**DeleteConversationsMessagingIntegrationsInstagramIntegrationId**](#DeleteConversationsMessagingIntegrationsInstagramIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Delete Instagram messaging integration |
 | [**DeleteConversationsMessagingIntegrationsOpenIntegrationId**](#DeleteConversationsMessagingIntegrationsOpenIntegrationId) | **Delete** /api/v2/conversations/messaging/integrations/open/{integrationId} | Delete an Open messaging integration |
@@ -98,6 +99,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId**](#GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId) | **Get** /api/v2/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId} | Get a whatsApp integration Identity Resolution settings |
 | [**GetConversationsMessagingIntegrationTwitterOauthSettings**](#GetConversationsMessagingIntegrationTwitterOauthSettings) | **Get** /api/v2/conversations/messaging/integrations/{integrationId}/twitter/oauth/settings | Get twitter oauth settings to patch an integration |
 | [**GetConversationsMessagingIntegrations**](#GetConversationsMessagingIntegrations) | **Get** /api/v2/conversations/messaging/integrations | Get a list of Integrations |
+| [**GetConversationsMessagingIntegrationsApple**](#GetConversationsMessagingIntegrationsApple) | **Get** /api/v2/conversations/messaging/integrations/apple | Get a list of Apple Integrations |
+| [**GetConversationsMessagingIntegrationsAppleIntegrationId**](#GetConversationsMessagingIntegrationsAppleIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/apple/{integrationId} | Get an Apple messaging integration |
 | [**GetConversationsMessagingIntegrationsFacebook**](#GetConversationsMessagingIntegrationsFacebook) | **Get** /api/v2/conversations/messaging/integrations/facebook | Get a list of Facebook Integrations |
 | [**GetConversationsMessagingIntegrationsFacebookIntegrationId**](#GetConversationsMessagingIntegrationsFacebookIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Get a Facebook messaging integration |
 | [**GetConversationsMessagingIntegrationsInstagram**](#GetConversationsMessagingIntegrationsInstagram) | **Get** /api/v2/conversations/messaging/integrations/instagram | Get a list of Instagram Integrations |
@@ -109,6 +112,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsMessagingIntegrationsTwitterOauthSettings**](#GetConversationsMessagingIntegrationsTwitterOauthSettings) | **Get** /api/v2/conversations/messaging/integrations/twitter/oauth/settings | Get twitter oauth settings |
 | [**GetConversationsMessagingIntegrationsWhatsapp**](#GetConversationsMessagingIntegrationsWhatsapp) | **Get** /api/v2/conversations/messaging/integrations/whatsapp | Get a list of WhatsApp Integrations |
 | [**GetConversationsMessagingIntegrationsWhatsappIntegrationId**](#GetConversationsMessagingIntegrationsWhatsappIntegrationId) | **Get** /api/v2/conversations/messaging/integrations/whatsapp/{integrationId} | Get a WhatsApp messaging integration |
+| [**GetConversationsMessagingOauthAppleCallback**](#GetConversationsMessagingOauthAppleCallback) | **Get** /api/v2/conversations/messaging/oauth/apple/callback | Call Authentication provider callback to validate state and code |
 | [**GetConversationsMessagingSetting**](#GetConversationsMessagingSetting) | **Get** /api/v2/conversations/messaging/settings/{messageSettingId} | Get a messaging setting |
 | [**GetConversationsMessagingSettings**](#GetConversationsMessagingSettings) | **Get** /api/v2/conversations/messaging/settings | Get a list of messaging settings |
 | [**GetConversationsMessagingSettingsDefault**](#GetConversationsMessagingSettingsDefault) | **Get** /api/v2/conversations/messaging/settings/default | Get the organization&#39;s default settings that will be used as the default when creating an integration. |
@@ -159,6 +163,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsMessageParticipant**](#PatchConversationsMessageParticipant) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsMessageParticipantAttributes**](#PatchConversationsMessageParticipantAttributes) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsMessageParticipantCommunication**](#PatchConversationsMessageParticipantCommunication) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. This endpoint does not update wrapup. |
+| [**PatchConversationsMessagingIntegrationsAppleIntegrationId**](#PatchConversationsMessagingIntegrationsAppleIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/apple/{integrationId} | Update an Apple messaging integration |
 | [**PatchConversationsMessagingIntegrationsFacebookIntegrationId**](#PatchConversationsMessagingIntegrationsFacebookIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Update Facebook messaging integration |
 | [**PatchConversationsMessagingIntegrationsInstagramIntegrationId**](#PatchConversationsMessagingIntegrationsInstagramIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Update Instagram messaging integration |
 | [**PatchConversationsMessagingIntegrationsOpenIntegrationId**](#PatchConversationsMessagingIntegrationsOpenIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/open/{integrationId} | Update an Open messaging integration |
@@ -205,7 +210,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsCallParticipantReplace**](#PostConversationsCallParticipantReplace) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsCallParticipantVoiceConsult**](#PostConversationsCallParticipantVoiceConsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/voice/consult | Initiate voice consult transfer |
 | [**PostConversationsCallParticipants**](#PostConversationsCallParticipants) | **Post** /api/v2/conversations/calls/{conversationId}/participants | Add participants to a conversation |
-| [**PostConversationsCallParticipantsUserUserId**](#PostConversationsCallParticipantsUserUserId) | **Post** /api/v2/conversations/calls/{conversationId}/participants/user/{userId} | Add participants to a conversation without a user context |
+| [**PostConversationsCallParticipantsUserUserId**](#PostConversationsCallParticipantsUserUserId) | **Post** /api/v2/conversations/calls/{conversationId}/participants/user/{userId} | Add participants to a conversation on behalf of a user |
 | [**PostConversationsCallbackParticipantCommunicationWrapup**](#PostConversationsCallbackParticipantCommunicationWrapup) | **Post** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
 | [**PostConversationsCallbackParticipantReplace**](#PostConversationsCallbackParticipantReplace) | **Post** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
 | [**PostConversationsCallbacks**](#PostConversationsCallbacks) | **Post** /api/v2/conversations/callbacks | Create a Callback |
@@ -247,6 +252,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsMessages**](#PostConversationsMessages) | **Post** /api/v2/conversations/messages | Create an outbound messaging conversation. |
 | [**PostConversationsMessagesAgentless**](#PostConversationsMessagesAgentless) | **Post** /api/v2/conversations/messages/agentless | Send an agentless outbound message |
 | [**PostConversationsMessagesInboundOpen**](#PostConversationsMessagesInboundOpen) | **Post** /api/v2/conversations/messages/inbound/open | Send an inbound Open Message |
+| [**PostConversationsMessagingIntegrationsApple**](#PostConversationsMessagingIntegrationsApple) | **Post** /api/v2/conversations/messaging/integrations/apple | Create Apple Integration |
 | [**PostConversationsMessagingIntegrationsFacebook**](#PostConversationsMessagingIntegrationsFacebook) | **Post** /api/v2/conversations/messaging/integrations/facebook | Create a Facebook Integration |
 | [**PostConversationsMessagingIntegrationsInstagram**](#PostConversationsMessagingIntegrationsInstagram) | **Post** /api/v2/conversations/messaging/integrations/instagram | Create Instagram Integration |
 | [**PostConversationsMessagingIntegrationsOpen**](#PostConversationsMessagingIntegrationsOpen) | **Post** /api/v2/conversations/messaging/integrations/open | Create an Open messaging integration |
@@ -779,6 +785,67 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **cachedMediaItemId** | **string**| cachedMediaItemId |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteConversationsMessagingIntegrationsAppleIntegrationId
+
+> void DeleteConversationsMessagingIntegrationsAppleIntegrationId (string integrationId)
+
+
+Delete an Apple messaging integration
+
+Requires ALL permissions: 
+
+* messaging:integration:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteConversationsMessagingIntegrationsAppleIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+
+            try
+            { 
+                // Delete an Apple messaging integration
+                apiInstance.DeleteConversationsMessagingIntegrationsAppleIntegrationId(integrationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.DeleteConversationsMessagingIntegrationsAppleIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
 
 ### Return type
 
@@ -5610,8 +5677,6 @@ This endpoint does require any parameters.
 
 Get Apple messaging integration identity resolution settings
 
-GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * messaging:integration:view
@@ -6113,6 +6178,140 @@ namespace Example
 ### Return type
 
 [**MessagingIntegrationEntityListing**](MessagingIntegrationEntityListing)
+
+
+## GetConversationsMessagingIntegrationsApple
+
+> [**AppleIntegrationEntityListing**](AppleIntegrationEntityListing) GetConversationsMessagingIntegrationsApple (int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
+
+
+Get a list of Apple Integrations
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsAppleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+            var supportedContentId = supportedContentId_example;  // string | Filter integrations returned based on the supported content ID (optional) 
+            var messagingSettingId = messagingSettingId_example;  // string | Filter integrations returned based on the setting ID (optional) 
+
+            try
+            { 
+                // Get a list of Apple Integrations
+                AppleIntegrationEntityListing result = apiInstance.GetConversationsMessagingIntegrationsApple(pageSize, pageNumber, expand, supportedContentId, messagingSettingId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsApple: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
+| **supportedContentId** | **string**| Filter integrations returned based on the supported content ID | [optional]  |
+| **messagingSettingId** | **string**| Filter integrations returned based on the setting ID | [optional]  |
+
+### Return type
+
+[**AppleIntegrationEntityListing**](AppleIntegrationEntityListing)
+
+
+## GetConversationsMessagingIntegrationsAppleIntegrationId
+
+> [**AppleIntegration**](AppleIntegration) GetConversationsMessagingIntegrationsAppleIntegrationId (string integrationId, string expand = null)
+
+
+Get an Apple messaging integration
+
+Requires ALL permissions: 
+
+* messaging:integration:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingIntegrationsAppleIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var expand = expand_example;  // string | Expand instructions for the return value. (optional) 
+
+            try
+            { 
+                // Get an Apple messaging integration
+                AppleIntegration result = apiInstance.GetConversationsMessagingIntegrationsAppleIntegrationId(integrationId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingIntegrationsAppleIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **expand** | **string**| Expand instructions for the return value. | [optional] <br />**Values**: supportedContent, messagingSetting, identityresolution |
+
+### Return type
+
+[**AppleIntegration**](AppleIntegration)
 
 
 ## GetConversationsMessagingIntegrationsFacebook
@@ -6844,6 +7043,65 @@ namespace Example
 ### Return type
 
 [**WhatsAppIntegration**](WhatsAppIntegration)
+
+
+## GetConversationsMessagingOauthAppleCallback
+
+> [**OAuthAppleAuthorizationResponse**](OAuthAppleAuthorizationResponse) GetConversationsMessagingOauthAppleCallback (string code, string state, string error = null)
+
+
+Call Authentication provider callback to validate state and code
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessagingOauthAppleCallbackExample
+    {
+        public void main()
+        { 
+
+            var apiInstance = new ConversationsApi();
+            var code = code_example;  // string | The authorization code to be sent to the authentication server during the token request.
+            var state = state_example;  // string | The state/nonce value generated by Genesys Auth-Client Service.
+            var error = error_example;  // string | Error parameter from OAuth provider (optional) 
+
+            try
+            { 
+                // Call Authentication provider callback to validate state and code
+                OAuthAppleAuthorizationResponse result = apiInstance.GetConversationsMessagingOauthAppleCallback(code, state, error);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessagingOauthAppleCallback: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **code** | **string**| The authorization code to be sent to the authentication server during the token request. |  |
+| **state** | **string**| The state/nonce value generated by Genesys Auth-Client Service. |  |
+| **error** | **string**| Error parameter from OAuth provider | [optional]  |
+
+### Return type
+
+[**OAuthAppleAuthorizationResponse**](OAuthAppleAuthorizationResponse)
 
 
 ## GetConversationsMessagingSetting
@@ -10130,6 +10388,70 @@ namespace Example
 **Object**
 
 
+## PatchConversationsMessagingIntegrationsAppleIntegrationId
+
+> [**AppleIntegration**](AppleIntegration) PatchConversationsMessagingIntegrationsAppleIntegrationId (string integrationId, AppleIntegrationUpdateRequest body)
+
+
+Update an Apple messaging integration
+
+Requires ALL permissions: 
+
+* messaging:appleIntegration:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessagingIntegrationsAppleIntegrationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var integrationId = integrationId_example;  // string | Integration ID
+            var body = new AppleIntegrationUpdateRequest(); // AppleIntegrationUpdateRequest | AppleIntegrationUpdateRequest
+
+            try
+            { 
+                // Update an Apple messaging integration
+                AppleIntegration result = apiInstance.PatchConversationsMessagingIntegrationsAppleIntegrationId(integrationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessagingIntegrationsAppleIntegrationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **integrationId** | **string**| Integration ID |  |
+| **body** | [**AppleIntegrationUpdateRequest**](AppleIntegrationUpdateRequest)| AppleIntegrationUpdateRequest |  |
+
+### Return type
+
+[**AppleIntegration**](AppleIntegration)
+
+
 ## PatchConversationsMessagingIntegrationsFacebookIntegrationId
 
 > [**FacebookIntegration**](FacebookIntegration) PatchConversationsMessagingIntegrationsFacebookIntegrationId (string integrationId, FacebookIntegrationUpdateRequest body)
@@ -13135,7 +13457,7 @@ namespace Example
 > [**Conversation**](Conversation) PostConversationsCallParticipantsUserUserId (string conversationId, string userId, Conversation body)
 
 
-Add participants to a conversation without a user context
+Add participants to a conversation on behalf of a user
 
 Requires ANY permissions: 
 
@@ -13169,7 +13491,7 @@ namespace Example
 
             try
             { 
-                // Add participants to a conversation without a user context
+                // Add participants to a conversation on behalf of a user
                 Conversation result = apiInstance.PostConversationsCallParticipantsUserUserId(conversationId, userId, body);
                 Debug.WriteLine(result);
             }
@@ -15901,6 +16223,68 @@ namespace Example
 [**OpenNormalizedMessage**](OpenNormalizedMessage)
 
 
+## PostConversationsMessagingIntegrationsApple
+
+> [**AppleIntegration**](AppleIntegration) PostConversationsMessagingIntegrationsApple (AppleIntegrationRequest body)
+
+
+Create Apple Integration
+
+Requires ALL permissions: 
+
+* messaging:appleIntegration:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsMessagingIntegrationsAppleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var body = new AppleIntegrationRequest(); // AppleIntegrationRequest | AppleIntegrationRequest
+
+            try
+            { 
+                // Create Apple Integration
+                AppleIntegration result = apiInstance.PostConversationsMessagingIntegrationsApple(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsMessagingIntegrationsApple: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AppleIntegrationRequest**](AppleIntegrationRequest)| AppleIntegrationRequest |  |
+
+### Return type
+
+[**AppleIntegration**](AppleIntegration)
+
+
 ## PostConversationsMessagingIntegrationsFacebook
 
 > [**FacebookIntegration**](FacebookIntegration) PostConversationsMessagingIntegrationsFacebook (FacebookIntegrationRequest body)
@@ -17589,8 +17973,6 @@ namespace Example
 
 Create an identity resolution settings for a Apple messaging integration
 
-PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * messaging:integration:edit
@@ -18363,4 +18745,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

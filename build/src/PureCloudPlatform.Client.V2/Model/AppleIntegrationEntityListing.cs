@@ -13,13 +13,13 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// DomainPermissionEntityListing
+    /// AppleIntegrationEntityListing
     /// </summary>
     [DataContract]
-    public partial class DomainPermissionEntityListing :  IEquatable<DomainPermissionEntityListing>, IPagedResource<DomainPermissionCollectionDomainPermission>
+    public partial class AppleIntegrationEntityListing :  IEquatable<AppleIntegrationEntityListing>, IPagedResource<AppleIntegration>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="DomainPermissionEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="AppleIntegrationEntityListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
@@ -28,10 +28,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FirstUri">FirstUri.</param>
         /// <param name="PreviousUri">PreviousUri.</param>
         /// <param name="NextUri">NextUri.</param>
-        /// <param name="LastUri">LastUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
+        /// <param name="LastUri">LastUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public DomainPermissionEntityListing(List<DomainPermissionCollectionDomainPermission> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
+        public AppleIntegrationEntityListing(List<AppleIntegration> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string SelfUri = null, string LastUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -40,8 +40,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FirstUri = FirstUri;
             this.PreviousUri = PreviousUri;
             this.NextUri = NextUri;
-            this.LastUri = LastUri;
             this.SelfUri = SelfUri;
+            this.LastUri = LastUri;
             this.PageCount = PageCount;
             
         }
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<DomainPermissionCollectionDomainPermission> Entities { get; set; }
+        public List<AppleIntegration> Entities { get; set; }
 
 
 
@@ -105,18 +105,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets LastUri
-        /// </summary>
-        [DataMember(Name="lastUri", EmitDefaultValue=false)]
-        public string LastUri { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets SelfUri
         /// </summary>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
         public string SelfUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets LastUri
+        /// </summary>
+        [DataMember(Name="lastUri", EmitDefaultValue=false)]
+        public string LastUri { get; set; }
 
 
 
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class DomainPermissionEntityListing {\n");
+            sb.Append("class AppleIntegrationEntityListing {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -143,8 +143,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FirstUri: ").Append(FirstUri).Append("\n");
             sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
             sb.Append("  NextUri: ").Append(NextUri).Append("\n");
-            sb.Append("  LastUri: ").Append(LastUri).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  LastUri: ").Append(LastUri).Append("\n");
             sb.Append("  PageCount: ").Append(PageCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -171,15 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DomainPermissionEntityListing);
+            return this.Equals(obj as AppleIntegrationEntityListing);
         }
 
         /// <summary>
-        /// Returns true if DomainPermissionEntityListing instances are equal
+        /// Returns true if AppleIntegrationEntityListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of DomainPermissionEntityListing to be compared</param>
+        /// <param name="other">Instance of AppleIntegrationEntityListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(DomainPermissionEntityListing other)
+        public bool Equals(AppleIntegrationEntityListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -222,14 +222,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.NextUri.Equals(other.NextUri)
                 ) &&
                 (
-                    this.LastUri == other.LastUri ||
-                    this.LastUri != null &&
-                    this.LastUri.Equals(other.LastUri)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.LastUri == other.LastUri ||
+                    this.LastUri != null &&
+                    this.LastUri.Equals(other.LastUri)
                 ) &&
                 (
                     this.PageCount == other.PageCount ||
@@ -270,11 +270,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.NextUri != null)
                     hash = hash * 59 + this.NextUri.GetHashCode();
 
-                if (this.LastUri != null)
-                    hash = hash * 59 + this.LastUri.GetHashCode();
-
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+
+                if (this.LastUri != null)
+                    hash = hash * 59 + this.LastUri.GetHashCode();
 
                 if (this.PageCount != null)
                     hash = hash * 59 + this.PageCount.GetHashCode();

@@ -217,7 +217,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nbno for "nb-NO"
             /// </summary>
             [EnumMember(Value = "nb-NO")]
-            Nbno
+            Nbno,
+            
+            /// <summary>
+            /// Enum Cscz for "cs-CZ"
+            /// </summary>
+            [EnumMember(Value = "cs-CZ")]
+            Cscz,
+            
+            /// <summary>
+            /// Enum Huhu for "hu-HU"
+            /// </summary>
+            [EnumMember(Value = "hu-HU")]
+            Huhu
         }
         /// <summary>
         /// The dialect for the knowledge base.

@@ -67,13 +67,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ContentModeration" /> class.
         /// </summary>
         /// <param name="Flag">The Content Moderation Flag of the message. (required).</param>
-        public ContentModeration(FlagEnum? Flag = null)
+        /// <param name="Categories">The Content Moderation Categories of the message..</param>
+        public ContentModeration(FlagEnum? Flag = null, List<string> Categories = null)
         {
             this.Flag = Flag;
+            this.Categories = Categories;
             
         }
         
 
+
+
+
+        /// <summary>
+        /// The Content Moderation Categories of the message.
+        /// </summary>
+        /// <value>The Content Moderation Categories of the message.</value>
+        [DataMember(Name="categories", EmitDefaultValue=false)]
+        public List<string> Categories { get; set; }
 
 
         /// <summary>
@@ -86,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ContentModeration {\n");
 
             sb.Append("  Flag: ").Append(Flag).Append("\n");
+            sb.Append("  Categories: ").Append(Categories).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -130,6 +142,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Flag == other.Flag ||
                     this.Flag != null &&
                     this.Flag.Equals(other.Flag)
+                ) &&
+                (
+                    this.Categories == other.Categories ||
+                    this.Categories != null &&
+                    this.Categories.SequenceEqual(other.Categories)
                 );
         }
 
@@ -146,6 +163,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Flag != null)
                     hash = hash * 59 + this.Flag.GetHashCode();
+
+                if (this.Categories != null)
+                    hash = hash * 59 + this.Categories.GetHashCode();
 
                 return hash;
             }

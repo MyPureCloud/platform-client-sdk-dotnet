@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OptimizationObjective">The optimization objective of this activity plan (required).</param>
         /// <param name="RecurrenceSettings">Recurrence settings for this activity plan.</param>
         /// <param name="State">The state of this activity plan (required).</param>
-        /// <param name="LastRunDate">The date the activity plan was last run, in ISO-8601 format.</param>
+        /// <param name="LastRunDate">The date on which the activity plan was last manually run, in ISO-8601 format.</param>
         /// <param name="LastRunBy">The last user to run this activity plan.</param>
         /// <param name="CreatedDate">The date the activity plan was created, in ISO-8601 format (required).</param>
         /// <param name="CreatedBy">The user who created this activity plan (required).</param>
@@ -222,9 +222,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The date the activity plan was last run, in ISO-8601 format
+        /// The date on which the activity plan was last manually run, in ISO-8601 format
         /// </summary>
-        /// <value>The date the activity plan was last run, in ISO-8601 format</value>
+        /// <value>The date on which the activity plan was last manually run, in ISO-8601 format</value>
         [DataMember(Name="lastRunDate", EmitDefaultValue=false)]
         public DateTime? LastRunDate { get; set; }
 

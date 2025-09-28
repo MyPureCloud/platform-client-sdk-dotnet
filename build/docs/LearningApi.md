@@ -2305,7 +2305,7 @@ namespace Example
 
 ## PutLearningModuleRule
 
-> [**LearningModuleRule**](LearningModuleRule) PutLearningModuleRule (string moduleId, LearningModuleRule body)
+> [**LearningModuleRule**](LearningModuleRule) PutLearningModuleRule (string moduleId, LearningModuleRule body, bool? assign = null)
 
 
 Update a learning module rule
@@ -2340,11 +2340,12 @@ namespace Example
             var apiInstance = new LearningApi();
             var moduleId = moduleId_example;  // string | The ID of the learning module
             var body = new LearningModuleRule(); // LearningModuleRule | The learning module rule to be updated
+            var assign = true;  // bool? | Whether to assign the module to users or not (optional)  (default to true)
 
             try
             { 
                 // Update a learning module rule
-                LearningModuleRule result = apiInstance.PutLearningModuleRule(moduleId, body);
+                LearningModuleRule result = apiInstance.PutLearningModuleRule(moduleId, body, assign);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2363,10 +2364,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **moduleId** | **string**| The ID of the learning module |  |
 | **body** | [**LearningModuleRule**](LearningModuleRule)| The learning module rule to be updated |  |
+| **assign** | **bool?**| Whether to assign the module to users or not | [optional] [default to true] |
 
 ### Return type
 
 [**LearningModuleRule**](LearningModuleRule)
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

@@ -186,8 +186,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">Text content..</param>
         /// <param name="QuickReplyV2">Quick reply V2 content..</param>
         /// <param name="Reactions">A set of reactions to a message..</param>
+        /// <param name="DatePicker">Date picker content..</param>
+        /// <param name="InteractiveApplication">InteractiveApplication content..</param>
+        /// <param name="ListPicker">List picker content..</param>
+        /// <param name="PaymentRequest">Payment request content..</param>
+        /// <param name="PaymentResponse">Payment response content..</param>
         /// <param name="Push">Push content..</param>
-        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentNotificationTemplate Template = null, ConversationContentStory Story = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null, ConversationContentText Text = null, ConversationContentQuickReplyV2 QuickReplyV2 = null, List<ConversationContentReaction> Reactions = null, ConversationContentPush Push = null)
+        /// <param name="Form">Form content..</param>
+        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentNotificationTemplate Template = null, ConversationContentStory Story = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null, ConversationContentText Text = null, ConversationContentQuickReplyV2 QuickReplyV2 = null, List<ConversationContentReaction> Reactions = null, ConversationContentDatePicker DatePicker = null, ConversationContentInteractiveApplication InteractiveApplication = null, ConversationContentListPicker ListPicker = null, ConversationContentPaymentRequest PaymentRequest = null, ConversationContentPaymentResponse PaymentResponse = null, ConversationContentPush Push = null, ConversationContentForm Form = null)
         {
             this.ContentType = ContentType;
             this.Location = Location;
@@ -201,7 +207,13 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Text = Text;
             this.QuickReplyV2 = QuickReplyV2;
             this.Reactions = Reactions;
+            this.DatePicker = DatePicker;
+            this.InteractiveApplication = InteractiveApplication;
+            this.ListPicker = ListPicker;
+            this.PaymentRequest = PaymentRequest;
+            this.PaymentResponse = PaymentResponse;
             this.Push = Push;
+            this.Form = Form;
             
         }
         
@@ -309,11 +321,65 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Date picker content.
+        /// </summary>
+        /// <value>Date picker content.</value>
+        [DataMember(Name="datePicker", EmitDefaultValue=false)]
+        public ConversationContentDatePicker DatePicker { get; set; }
+
+
+
+        /// <summary>
+        /// InteractiveApplication content.
+        /// </summary>
+        /// <value>InteractiveApplication content.</value>
+        [DataMember(Name="interactiveApplication", EmitDefaultValue=false)]
+        public ConversationContentInteractiveApplication InteractiveApplication { get; set; }
+
+
+
+        /// <summary>
+        /// List picker content.
+        /// </summary>
+        /// <value>List picker content.</value>
+        [DataMember(Name="listPicker", EmitDefaultValue=false)]
+        public ConversationContentListPicker ListPicker { get; set; }
+
+
+
+        /// <summary>
+        /// Payment request content.
+        /// </summary>
+        /// <value>Payment request content.</value>
+        [DataMember(Name="paymentRequest", EmitDefaultValue=false)]
+        public ConversationContentPaymentRequest PaymentRequest { get; set; }
+
+
+
+        /// <summary>
+        /// Payment response content.
+        /// </summary>
+        /// <value>Payment response content.</value>
+        [DataMember(Name="paymentResponse", EmitDefaultValue=false)]
+        public ConversationContentPaymentResponse PaymentResponse { get; set; }
+
+
+
+        /// <summary>
         /// Push content.
         /// </summary>
         /// <value>Push content.</value>
         [DataMember(Name="push", EmitDefaultValue=false)]
         public ConversationContentPush Push { get; set; }
+
+
+
+        /// <summary>
+        /// Form content.
+        /// </summary>
+        /// <value>Form content.</value>
+        [DataMember(Name="form", EmitDefaultValue=false)]
+        public ConversationContentForm Form { get; set; }
 
 
         /// <summary>
@@ -337,7 +403,13 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  QuickReplyV2: ").Append(QuickReplyV2).Append("\n");
             sb.Append("  Reactions: ").Append(Reactions).Append("\n");
+            sb.Append("  DatePicker: ").Append(DatePicker).Append("\n");
+            sb.Append("  InteractiveApplication: ").Append(InteractiveApplication).Append("\n");
+            sb.Append("  ListPicker: ").Append(ListPicker).Append("\n");
+            sb.Append("  PaymentRequest: ").Append(PaymentRequest).Append("\n");
+            sb.Append("  PaymentResponse: ").Append(PaymentResponse).Append("\n");
             sb.Append("  Push: ").Append(Push).Append("\n");
+            sb.Append("  Form: ").Append(Form).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -439,9 +511,39 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Reactions.SequenceEqual(other.Reactions)
                 ) &&
                 (
+                    this.DatePicker == other.DatePicker ||
+                    this.DatePicker != null &&
+                    this.DatePicker.Equals(other.DatePicker)
+                ) &&
+                (
+                    this.InteractiveApplication == other.InteractiveApplication ||
+                    this.InteractiveApplication != null &&
+                    this.InteractiveApplication.Equals(other.InteractiveApplication)
+                ) &&
+                (
+                    this.ListPicker == other.ListPicker ||
+                    this.ListPicker != null &&
+                    this.ListPicker.Equals(other.ListPicker)
+                ) &&
+                (
+                    this.PaymentRequest == other.PaymentRequest ||
+                    this.PaymentRequest != null &&
+                    this.PaymentRequest.Equals(other.PaymentRequest)
+                ) &&
+                (
+                    this.PaymentResponse == other.PaymentResponse ||
+                    this.PaymentResponse != null &&
+                    this.PaymentResponse.Equals(other.PaymentResponse)
+                ) &&
+                (
                     this.Push == other.Push ||
                     this.Push != null &&
                     this.Push.Equals(other.Push)
+                ) &&
+                (
+                    this.Form == other.Form ||
+                    this.Form != null &&
+                    this.Form.Equals(other.Form)
                 );
         }
 
@@ -492,8 +594,26 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Reactions != null)
                     hash = hash * 59 + this.Reactions.GetHashCode();
 
+                if (this.DatePicker != null)
+                    hash = hash * 59 + this.DatePicker.GetHashCode();
+
+                if (this.InteractiveApplication != null)
+                    hash = hash * 59 + this.InteractiveApplication.GetHashCode();
+
+                if (this.ListPicker != null)
+                    hash = hash * 59 + this.ListPicker.GetHashCode();
+
+                if (this.PaymentRequest != null)
+                    hash = hash * 59 + this.PaymentRequest.GetHashCode();
+
+                if (this.PaymentResponse != null)
+                    hash = hash * 59 + this.PaymentResponse.GetHashCode();
+
                 if (this.Push != null)
                     hash = hash * 59 + this.Push.GetHashCode();
+
+                if (this.Form != null)
+                    hash = hash * 59 + this.Form.GetHashCode();
 
                 return hash;
             }

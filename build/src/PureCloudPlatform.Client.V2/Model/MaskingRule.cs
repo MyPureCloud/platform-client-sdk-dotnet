@@ -52,11 +52,44 @@ namespace PureCloudPlatform.Client.V2.Model
             Default
         }
         /// <summary>
+        /// inbound/outbound
+        /// </summary>
+        /// <value>inbound/outbound</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum DirectionEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Inbound for "inbound"
+            /// </summary>
+            [EnumMember(Value = "inbound")]
+            Inbound,
+            
+            /// <summary>
+            /// Enum Outbound for "outbound"
+            /// </summary>
+            [EnumMember(Value = "outbound")]
+            Outbound
+        }
+        /// <summary>
         /// Masking rule type
         /// </summary>
         /// <value>Masking rule type</value>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// inbound/outbound
+        /// </summary>
+        /// <value>inbound/outbound</value>
+        [DataMember(Name="direction", EmitDefaultValue=false)]
+        public DirectionEnum? Direction { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="MaskingRule" /> class.
@@ -72,8 +105,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Definition">Definition of masking rule (a valid regex or builtin AI based mask name). (required).</param>
         /// <param name="Enabled">True/False (required).</param>
         /// <param name="Type">Masking rule type (required).</param>
+        /// <param name="Direction">inbound/outbound.</param>
         /// <param name="Integrations">Associated integration channels.</param>
-        public MaskingRule(string Name = null, string Description = null, string SubstituteCharacter = null, string Definition = null, bool? Enabled = null, TypeEnum? Type = null, List<string> Integrations = null)
+        public MaskingRule(string Name = null, string Description = null, string SubstituteCharacter = null, string Definition = null, bool? Enabled = null, TypeEnum? Type = null, DirectionEnum? Direction = null, List<string> Integrations = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -81,6 +115,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Definition = Definition;
             this.Enabled = Enabled;
             this.Type = Type;
+            this.Direction = Direction;
             this.Integrations = Integrations;
             
         }
@@ -143,6 +178,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Associated integration channels
         /// </summary>
@@ -185,6 +222,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Definition: ").Append(Definition).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  Direction: ").Append(Direction).Append("\n");
             sb.Append("  Integrations: ").Append(Integrations).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
@@ -264,6 +302,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type.Equals(other.Type)
                 ) &&
                 (
+                    this.Direction == other.Direction ||
+                    this.Direction != null &&
+                    this.Direction.Equals(other.Direction)
+                ) &&
+                (
                     this.Integrations == other.Integrations ||
                     this.Integrations != null &&
                     this.Integrations.SequenceEqual(other.Integrations)
@@ -311,6 +354,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.Direction != null)
+                    hash = hash * 59 + this.Direction.GetHashCode();
 
                 if (this.Integrations != null)
                     hash = hash * 59 + this.Integrations.GetHashCode();

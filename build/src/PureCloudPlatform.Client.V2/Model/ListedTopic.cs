@@ -69,6 +69,32 @@ namespace PureCloudPlatform.Client.V2.Model
             _90
         }
         /// <summary>
+        /// Gets or Sets MatchingType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum MatchingTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Lexical for "Lexical"
+            /// </summary>
+            [EnumMember(Value = "Lexical")]
+            Lexical,
+            
+            /// <summary>
+            /// Enum Semantic for "Semantic"
+            /// </summary>
+            [EnumMember(Value = "Semantic")]
+            Semantic
+        }
+        /// <summary>
         /// Gets or Sets Participants
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
@@ -106,6 +132,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="strictness", EmitDefaultValue=false)]
         public StrictnessEnum? Strictness { get; set; }
         /// <summary>
+        /// Gets or Sets MatchingType
+        /// </summary>
+        [DataMember(Name="matchingType", EmitDefaultValue=false)]
+        public MatchingTypeEnum? MatchingType { get; set; }
+        /// <summary>
         /// Gets or Sets Participants
         /// </summary>
         [DataMember(Name="participants", EmitDefaultValue=false)]
@@ -117,6 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description.</param>
         /// <param name="Published">Published.</param>
         /// <param name="Strictness">Strictness.</param>
+        /// <param name="MatchingType">MatchingType.</param>
         /// <param name="ProgramsCount">ProgramsCount.</param>
         /// <param name="Tags">Tags.</param>
         /// <param name="Dialect">Dialect.</param>
@@ -124,12 +156,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PhrasesCount">PhrasesCount.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public ListedTopic(string Name = null, string Description = null, bool? Published = null, StrictnessEnum? Strictness = null, int? ProgramsCount = null, List<string> Tags = null, string Dialect = null, ParticipantsEnum? Participants = null, int? PhrasesCount = null, AddressableEntityRef ModifiedBy = null, DateTime? DateModified = null)
+        public ListedTopic(string Name = null, string Description = null, bool? Published = null, StrictnessEnum? Strictness = null, MatchingTypeEnum? MatchingType = null, int? ProgramsCount = null, List<string> Tags = null, string Dialect = null, ParticipantsEnum? Participants = null, int? PhrasesCount = null, AddressableEntityRef ModifiedBy = null, DateTime? DateModified = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Published = Published;
             this.Strictness = Strictness;
+            this.MatchingType = MatchingType;
             this.ProgramsCount = ProgramsCount;
             this.Tags = Tags;
             this.Dialect = Dialect;
@@ -172,6 +205,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="published", EmitDefaultValue=false)]
         public bool? Published { get; set; }
+
+
 
 
 
@@ -250,6 +285,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  Strictness: ").Append(Strictness).Append("\n");
+            sb.Append("  MatchingType: ").Append(MatchingType).Append("\n");
             sb.Append("  ProgramsCount: ").Append(ProgramsCount).Append("\n");
             sb.Append("  Tags: ").Append(Tags).Append("\n");
             sb.Append("  Dialect: ").Append(Dialect).Append("\n");
@@ -324,6 +360,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Strictness.Equals(other.Strictness)
                 ) &&
                 (
+                    this.MatchingType == other.MatchingType ||
+                    this.MatchingType != null &&
+                    this.MatchingType.Equals(other.MatchingType)
+                ) &&
+                (
                     this.ProgramsCount == other.ProgramsCount ||
                     this.ProgramsCount != null &&
                     this.ProgramsCount.Equals(other.ProgramsCount)
@@ -390,6 +431,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Strictness != null)
                     hash = hash * 59 + this.Strictness.GetHashCode();
+
+                if (this.MatchingType != null)
+                    hash = hash * 59 + this.MatchingType.GetHashCode();
 
                 if (this.ProgramsCount != null)
                     hash = hash * 59 + this.ProgramsCount.GetHashCode();

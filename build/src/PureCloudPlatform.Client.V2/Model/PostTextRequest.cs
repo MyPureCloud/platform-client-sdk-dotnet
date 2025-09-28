@@ -199,7 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IntegrationId">the integration service id for the bot&#39;s credentials (required).</param>
         /// <param name="BotSessionId">GUID for this bot&#39;s session (required).</param>
         /// <param name="PostTextMessage">Message to send to the bot (required).</param>
-        /// <param name="LanguageCode">The launguage code the bot will run under.</param>
+        /// <param name="LanguageCode">The language code the bot will run under.</param>
         /// <param name="BotSessionTimeoutMinutes">Override timeout for the bot session. This should be greater than 10 minutes..</param>
         /// <param name="BotChannels">The channels this bot is utilizing.</param>
         /// <param name="BotCorrelationId">Id for tracking the activity - this will be returned in the response.</param>
@@ -275,9 +275,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The launguage code the bot will run under
+        /// The language code the bot will run under
         /// </summary>
-        /// <value>The launguage code the bot will run under</value>
+        /// <value>The language code the bot will run under</value>
         [DataMember(Name="languageCode", EmitDefaultValue=false)]
         public string LanguageCode { get; set; }
 

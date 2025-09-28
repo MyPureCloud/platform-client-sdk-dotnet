@@ -188,4 +188,4 @@ This endpoint does require any parameters.
 [**SchemaQuantityLimits**](SchemaQuantityLimits)
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

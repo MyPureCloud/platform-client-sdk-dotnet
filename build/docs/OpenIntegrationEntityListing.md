@@ -13,10 +13,10 @@
 | **FirstUri** | **string** |  | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 242.0.0_
+_PureCloudPlatform.Client.V2 243.0.0_

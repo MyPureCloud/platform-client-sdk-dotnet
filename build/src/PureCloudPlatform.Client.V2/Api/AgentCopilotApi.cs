@@ -40,6 +40,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Copilot> GetAssistantCopilotWithHttpInfo (string assistantId);
 
         /// <summary>
+        /// Get information about the support of features for all the languages or only for a certain language.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Which language are the features supported for (optional)</param>
+        /// <returns>LanguageSupportResponse</returns>
+        
+        LanguageSupportResponse GetAssistantsCopilotFeaturesupport (string language = null);
+
+        /// <summary>
+        /// Get information about the support of features for all the languages or only for a certain language.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Which language are the features supported for (optional)</param>
+        /// <returns>ApiResponse of LanguageSupportResponse</returns>
+        
+        ApiResponse<LanguageSupportResponse> GetAssistantsCopilotFeaturesupportWithHttpInfo (string language = null);
+
+        /// <summary>
         /// Update agent copilot configuration
         /// </summary>
         /// <remarks>
@@ -92,6 +116,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Copilot)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Copilot>> GetAssistantCopilotAsyncWithHttpInfo (string assistantId);
+
+        /// <summary>
+        /// Get information about the support of features for all the languages or only for a certain language.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Which language are the features supported for (optional)</param>
+        /// <returns>Task of LanguageSupportResponse</returns>
+        
+        System.Threading.Tasks.Task<LanguageSupportResponse> GetAssistantsCopilotFeaturesupportAsync (string language = null);
+
+        /// <summary>
+        /// Get information about the support of features for all the languages or only for a certain language.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Which language are the features supported for (optional)</param>
+        /// <returns>Task of ApiResponse (LanguageSupportResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LanguageSupportResponse>> GetAssistantsCopilotFeaturesupportAsyncWithHttpInfo (string language = null);
 
         /// <summary>
         /// Update agent copilot configuration
@@ -406,6 +454,200 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Copilot>(localVarStatusCode,
                 localVarHeaders,
                 (Copilot) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Copilot)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get information about the support of features for all the languages or only for a certain language. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Which language are the features supported for (optional)</param>
+        /// <returns>LanguageSupportResponse</returns>
+        
+        public LanguageSupportResponse GetAssistantsCopilotFeaturesupport (string language = null)
+        {
+             ApiResponse<LanguageSupportResponse> localVarResponse = GetAssistantsCopilotFeaturesupportWithHttpInfo(language);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get information about the support of features for all the languages or only for a certain language. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Which language are the features supported for (optional)</param>
+        /// <returns>ApiResponse of LanguageSupportResponse</returns>
+        
+        public ApiResponse< LanguageSupportResponse > GetAssistantsCopilotFeaturesupportWithHttpInfo (string language = null)
+        { 
+
+            var localVarPath = "/api/v2/assistants/copilot/featuresupport";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsCopilotFeaturesupport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsCopilotFeaturesupport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LanguageSupportResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LanguageSupportResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LanguageSupportResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get information about the support of features for all the languages or only for a certain language. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Which language are the features supported for (optional)</param>
+        /// <returns>Task of LanguageSupportResponse</returns>
+        
+        public async System.Threading.Tasks.Task<LanguageSupportResponse> GetAssistantsCopilotFeaturesupportAsync (string language = null)
+        {
+             ApiResponse<LanguageSupportResponse> localVarResponse = await GetAssistantsCopilotFeaturesupportAsyncWithHttpInfo(language);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get information about the support of features for all the languages or only for a certain language. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="language">Which language are the features supported for (optional)</param>
+        /// <returns>Task of ApiResponse (LanguageSupportResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LanguageSupportResponse>> GetAssistantsCopilotFeaturesupportAsyncWithHttpInfo (string language = null)
+        { 
+
+            var localVarPath = "/api/v2/assistants/copilot/featuresupport";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsCopilotFeaturesupport: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsCopilotFeaturesupport: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LanguageSupportResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LanguageSupportResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LanguageSupportResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

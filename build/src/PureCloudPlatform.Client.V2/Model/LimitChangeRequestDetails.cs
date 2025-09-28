@@ -34,6 +34,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Workforcemanagement for "workforce.management"
+            /// </summary>
+            [EnumMember(Value = "workforce.management")]
+            Workforcemanagement,
+            
+            /// <summary>
             /// Enum Agentassistant for "agent.assistant"
             /// </summary>
             [EnumMember(Value = "agent.assistant")]
@@ -86,6 +92,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "audiohook")]
             Audiohook,
+            
+            /// <summary>
+            /// Enum Audiohookmonitor for "audiohook.monitor"
+            /// </summary>
+            [EnumMember(Value = "audiohook.monitor")]
+            Audiohookmonitor,
             
             /// <summary>
             /// Enum Audit for "audit"
@@ -388,6 +400,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Scim,
             
             /// <summary>
+            /// Enum Screenmonitoring for "screen.monitoring"
+            /// </summary>
+            [EnumMember(Value = "screen.monitoring")]
+            Screenmonitoring,
+            
+            /// <summary>
             /// Enum Search for "search"
             /// </summary>
             [EnumMember(Value = "search")]
@@ -500,12 +518,6 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "workforce.management.forecast")]
             Workforcemanagementforecast,
-            
-            /// <summary>
-            /// Enum Workforcemanagement for "workforce.management"
-            /// </summary>
-            [EnumMember(Value = "workforce.management")]
-            Workforcemanagement,
             
             /// <summary>
             /// Enum System for "system"

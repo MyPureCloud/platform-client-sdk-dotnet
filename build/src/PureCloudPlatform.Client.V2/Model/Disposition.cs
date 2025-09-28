@@ -32,13 +32,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DispositionParameters">Contains various parameters related to call analysis..</param>
         /// <param name="DetectedSpeechStart">Absolute time when the speech started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DetectedSpeechEnd">Absolute time when the speech ended. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public Disposition(string Name = null, string Analyzer = null, DispositionParameters DispositionParameters = null, DateTime? DetectedSpeechStart = null, DateTime? DetectedSpeechEnd = null)
+        /// <param name="AmdTimeout">Answering Machine Detection timeout configuration..</param>
+        /// <param name="SilentCallTimeout">Silent Call timeout configuration..</param>
+        public Disposition(string Name = null, string Analyzer = null, DispositionParameters DispositionParameters = null, DateTime? DetectedSpeechStart = null, DateTime? DetectedSpeechEnd = null, DispositionAmdTimeout AmdTimeout = null, DispositionSilentCallTimeout SilentCallTimeout = null)
         {
             this.Name = Name;
             this.Analyzer = Analyzer;
             this.DispositionParameters = DispositionParameters;
             this.DetectedSpeechStart = DetectedSpeechStart;
             this.DetectedSpeechEnd = DetectedSpeechEnd;
+            this.AmdTimeout = AmdTimeout;
+            this.SilentCallTimeout = SilentCallTimeout;
             
         }
         
@@ -88,6 +92,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? DetectedSpeechEnd { get; set; }
 
 
+
+        /// <summary>
+        /// Answering Machine Detection timeout configuration.
+        /// </summary>
+        /// <value>Answering Machine Detection timeout configuration.</value>
+        [DataMember(Name="amdTimeout", EmitDefaultValue=false)]
+        public DispositionAmdTimeout AmdTimeout { get; set; }
+
+
+
+        /// <summary>
+        /// Silent Call timeout configuration.
+        /// </summary>
+        /// <value>Silent Call timeout configuration.</value>
+        [DataMember(Name="silentCallTimeout", EmitDefaultValue=false)]
+        public DispositionSilentCallTimeout SilentCallTimeout { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -102,6 +124,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DispositionParameters: ").Append(DispositionParameters).Append("\n");
             sb.Append("  DetectedSpeechStart: ").Append(DetectedSpeechStart).Append("\n");
             sb.Append("  DetectedSpeechEnd: ").Append(DetectedSpeechEnd).Append("\n");
+            sb.Append("  AmdTimeout: ").Append(AmdTimeout).Append("\n");
+            sb.Append("  SilentCallTimeout: ").Append(SilentCallTimeout).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -166,6 +190,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DetectedSpeechEnd == other.DetectedSpeechEnd ||
                     this.DetectedSpeechEnd != null &&
                     this.DetectedSpeechEnd.Equals(other.DetectedSpeechEnd)
+                ) &&
+                (
+                    this.AmdTimeout == other.AmdTimeout ||
+                    this.AmdTimeout != null &&
+                    this.AmdTimeout.Equals(other.AmdTimeout)
+                ) &&
+                (
+                    this.SilentCallTimeout == other.SilentCallTimeout ||
+                    this.SilentCallTimeout != null &&
+                    this.SilentCallTimeout.Equals(other.SilentCallTimeout)
                 );
         }
 
@@ -194,6 +228,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DetectedSpeechEnd != null)
                     hash = hash * 59 + this.DetectedSpeechEnd.GetHashCode();
+
+                if (this.AmdTimeout != null)
+                    hash = hash * 59 + this.AmdTimeout.GetHashCode();
+
+                if (this.SilentCallTimeout != null)
+                    hash = hash * 59 + this.SilentCallTimeout.GetHashCode();
 
                 return hash;
             }

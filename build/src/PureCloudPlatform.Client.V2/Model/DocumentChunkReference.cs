@@ -18,10 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class DocumentChunkReference :  IEquatable<DocumentChunkReference>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="DocumentChunkReference" /> class.
         /// </summary>
-        /// <param name="Id">The globally unique identifier for the document..</param>
+        [JsonConstructorAttribute]
+        protected DocumentChunkReference() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DocumentChunkReference" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the document. (required).</param>
         /// <param name="Title">The title of the document..</param>
         public DocumentChunkReference(string Id = null, string Title = null)
         {
@@ -49,6 +55,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Title { get; set; }
 
 
+
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +125,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -128,6 +149,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

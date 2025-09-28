@@ -217,7 +217,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ContentType">Indicates the content type for this message.</param>
         /// <param name="SocialVisibility">For social media messages, the visibility of the message in the originating social platform.</param>
         /// <param name="Events">List of event elements.</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, DatePicker DatePicker = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null)
+        /// <param name="InteractiveApplication">InteractiveApplication content..</param>
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, DatePicker DatePicker = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null, InteractiveApplication InteractiveApplication = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -241,6 +242,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ContentType = ContentType;
             this.SocialVisibility = SocialVisibility;
             this.Events = Events;
+            this.InteractiveApplication = InteractiveApplication;
             
         }
         
@@ -429,6 +431,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ConversationMessageEvent> Events { get; set; }
 
 
+
+        /// <summary>
+        /// InteractiveApplication content.
+        /// </summary>
+        /// <value>InteractiveApplication content.</value>
+        [DataMember(Name="interactiveApplication", EmitDefaultValue=false)]
+        public InteractiveApplication InteractiveApplication { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -460,6 +471,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  SocialVisibility: ").Append(SocialVisibility).Append("\n");
             sb.Append("  Events: ").Append(Events).Append("\n");
+            sb.Append("  InteractiveApplication: ").Append(InteractiveApplication).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -609,6 +621,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Events == other.Events ||
                     this.Events != null &&
                     this.Events.SequenceEqual(other.Events)
+                ) &&
+                (
+                    this.InteractiveApplication == other.InteractiveApplication ||
+                    this.InteractiveApplication != null &&
+                    this.InteractiveApplication.Equals(other.InteractiveApplication)
                 );
         }
 
@@ -688,6 +705,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Events != null)
                     hash = hash * 59 + this.Events.GetHashCode();
+
+                if (this.InteractiveApplication != null)
+                    hash = hash * 59 + this.InteractiveApplication.GetHashCode();
 
                 return hash;
             }

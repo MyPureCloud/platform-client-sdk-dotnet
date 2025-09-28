@@ -133,7 +133,55 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Kokr for "ko-kr"
             /// </summary>
             [EnumMember(Value = "ko-kr")]
-            Kokr
+            Kokr,
+            
+            /// <summary>
+            /// Enum Hiin for "hi-in"
+            /// </summary>
+            [EnumMember(Value = "hi-in")]
+            Hiin,
+            
+            /// <summary>
+            /// Enum Ar001 for "ar-001"
+            /// </summary>
+            [EnumMember(Value = "ar-001")]
+            Ar001,
+            
+            /// <summary>
+            /// Enum Arae for "ar-ae"
+            /// </summary>
+            [EnumMember(Value = "ar-ae")]
+            Arae,
+            
+            /// <summary>
+            /// Enum Arbh for "ar-bh"
+            /// </summary>
+            [EnumMember(Value = "ar-bh")]
+            Arbh,
+            
+            /// <summary>
+            /// Enum Areg for "ar-eg"
+            /// </summary>
+            [EnumMember(Value = "ar-eg")]
+            Areg,
+            
+            /// <summary>
+            /// Enum Aril for "ar-il"
+            /// </summary>
+            [EnumMember(Value = "ar-il")]
+            Aril,
+            
+            /// <summary>
+            /// Enum Arsa for "ar-sa"
+            /// </summary>
+            [EnumMember(Value = "ar-sa")]
+            Arsa,
+            
+            /// <summary>
+            /// Enum Artn for "ar-tn"
+            /// </summary>
+            [EnumMember(Value = "ar-tn")]
+            Artn
         }
         /// <summary>
         /// Type of the miner, intent or topic.

@@ -115,6 +115,219 @@ namespace PureCloudPlatform.Client.V2.Model
             Outbound
         }
         /// <summary>
+        /// Open Messaging engagement source type
+        /// </summary>
+        /// <value>Open Messaging engagement source type</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum EngagementSourceEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Applemessagesforbusiness for "AppleMessagesForBusiness"
+            /// </summary>
+            [EnumMember(Value = "AppleMessagesForBusiness")]
+            Applemessagesforbusiness,
+            
+            /// <summary>
+            /// Enum Discord for "Discord"
+            /// </summary>
+            [EnumMember(Value = "Discord")]
+            Discord,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Facebook for "Facebook"
+            /// </summary>
+            [EnumMember(Value = "Facebook")]
+            Facebook,
+            
+            /// <summary>
+            /// Enum Facebookmessenger for "FacebookMessenger"
+            /// </summary>
+            [EnumMember(Value = "FacebookMessenger")]
+            Facebookmessenger,
+            
+            /// <summary>
+            /// Enum Glassdoor for "Glassdoor"
+            /// </summary>
+            [EnumMember(Value = "Glassdoor")]
+            Glassdoor,
+            
+            /// <summary>
+            /// Enum Googlebusinessprofile for "GoogleBusinessProfile"
+            /// </summary>
+            [EnumMember(Value = "GoogleBusinessProfile")]
+            Googlebusinessprofile,
+            
+            /// <summary>
+            /// Enum Instagram for "Instagram"
+            /// </summary>
+            [EnumMember(Value = "Instagram")]
+            Instagram,
+            
+            /// <summary>
+            /// Enum Kakaotalk for "KakaoTalk"
+            /// </summary>
+            [EnumMember(Value = "KakaoTalk")]
+            Kakaotalk,
+            
+            /// <summary>
+            /// Enum Line for "Line"
+            /// </summary>
+            [EnumMember(Value = "Line")]
+            Line,
+            
+            /// <summary>
+            /// Enum Linkedin for "LinkedIn"
+            /// </summary>
+            [EnumMember(Value = "LinkedIn")]
+            Linkedin,
+            
+            /// <summary>
+            /// Enum Microsoftteams for "MicrosoftTeams"
+            /// </summary>
+            [EnumMember(Value = "MicrosoftTeams")]
+            Microsoftteams,
+            
+            /// <summary>
+            /// Enum Mobilechat for "MobileChat"
+            /// </summary>
+            [EnumMember(Value = "MobileChat")]
+            Mobilechat,
+            
+            /// <summary>
+            /// Enum Other for "Other"
+            /// </summary>
+            [EnumMember(Value = "Other")]
+            Other,
+            
+            /// <summary>
+            /// Enum Qq for "QQ"
+            /// </summary>
+            [EnumMember(Value = "QQ")]
+            Qq,
+            
+            /// <summary>
+            /// Enum Reddit for "Reddit"
+            /// </summary>
+            [EnumMember(Value = "Reddit")]
+            Reddit,
+            
+            /// <summary>
+            /// Enum Servicenow for "ServiceNow"
+            /// </summary>
+            [EnumMember(Value = "ServiceNow")]
+            Servicenow,
+            
+            /// <summary>
+            /// Enum Sfdc for "SFDC"
+            /// </summary>
+            [EnumMember(Value = "SFDC")]
+            Sfdc,
+            
+            /// <summary>
+            /// Enum Sms for "SMS"
+            /// </summary>
+            [EnumMember(Value = "SMS")]
+            Sms,
+            
+            /// <summary>
+            /// Enum Snapchat for "Snapchat"
+            /// </summary>
+            [EnumMember(Value = "Snapchat")]
+            Snapchat,
+            
+            /// <summary>
+            /// Enum Telegram for "Telegram"
+            /// </summary>
+            [EnumMember(Value = "Telegram")]
+            Telegram,
+            
+            /// <summary>
+            /// Enum Threads for "Threads"
+            /// </summary>
+            [EnumMember(Value = "Threads")]
+            Threads,
+            
+            /// <summary>
+            /// Enum Trustpilot for "Trustpilot"
+            /// </summary>
+            [EnumMember(Value = "Trustpilot")]
+            Trustpilot,
+            
+            /// <summary>
+            /// Enum Unspecified for "Unspecified"
+            /// </summary>
+            [EnumMember(Value = "Unspecified")]
+            Unspecified,
+            
+            /// <summary>
+            /// Enum Viber for "Viber"
+            /// </summary>
+            [EnumMember(Value = "Viber")]
+            Viber,
+            
+            /// <summary>
+            /// Enum Webchat for "WebChat"
+            /// </summary>
+            [EnumMember(Value = "WebChat")]
+            Webchat,
+            
+            /// <summary>
+            /// Enum Wechat for "WeChat"
+            /// </summary>
+            [EnumMember(Value = "WeChat")]
+            Wechat,
+            
+            /// <summary>
+            /// Enum Weibo for "Weibo"
+            /// </summary>
+            [EnumMember(Value = "Weibo")]
+            Weibo,
+            
+            /// <summary>
+            /// Enum Whatsapp for "WhatsApp"
+            /// </summary>
+            [EnumMember(Value = "WhatsApp")]
+            Whatsapp,
+            
+            /// <summary>
+            /// Enum X for "X"
+            /// </summary>
+            [EnumMember(Value = "X")]
+            X,
+            
+            /// <summary>
+            /// Enum Yelp for "Yelp"
+            /// </summary>
+            [EnumMember(Value = "Yelp")]
+            Yelp,
+            
+            /// <summary>
+            /// Enum Youtube for "YouTube"
+            /// </summary>
+            [EnumMember(Value = "YouTube")]
+            Youtube,
+            
+            /// <summary>
+            /// Enum Zendesk for "Zendesk"
+            /// </summary>
+            [EnumMember(Value = "Zendesk")]
+            Zendesk
+        }
+        /// <summary>
         /// The session media type
         /// </summary>
         /// <value>The session media type</value>
@@ -378,6 +591,12 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="direction", EmitDefaultValue=false)]
         public DirectionEnum? Direction { get; set; }
         /// <summary>
+        /// Open Messaging engagement source type
+        /// </summary>
+        /// <value>Open Messaging engagement source type</value>
+        [DataMember(Name="engagementSource", EmitDefaultValue=false)]
+        public EngagementSourceEnum? EngagementSource { get; set; }
+        /// <summary>
         /// The session media type
         /// </summary>
         /// <value>The session media type</value>
@@ -432,6 +651,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Dnis">Dialed number identification service (number dialed by the calling party).</param>
         /// <param name="EdgeId">Unique identifier of the edge device.</param>
         /// <param name="EligibleAgentCounts">Number of eligible agents for each predictive routing attempt.</param>
+        /// <param name="EngagementSource">Open Messaging engagement source type.</param>
         /// <param name="ExtendedDeliveryStatus">Extended delivery status.</param>
         /// <param name="FlowInType">Type of flow in that occurred when entering ACD..</param>
         /// <param name="FlowOutType">Type of flow out that occurred when emitting tFlowOut..</param>
@@ -482,7 +702,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
         /// <param name="Segments">List of segments for this session.</param>
-        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string BargedParticipantId = null, List<string> Bcc = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, List<string> Cc = null, bool? Cleared = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, bool? DeliveryPushed = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DateTime? DetectedSpeechEnd = null, DateTime? DetectedSpeechStart = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, string ExtendedDeliveryStatus = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsAgentGroup> AgentGroups = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string BargedParticipantId = null, List<string> Bcc = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, List<string> Cc = null, bool? Cleared = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, bool? DeliveryPushed = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DateTime? DetectedSpeechEnd = null, DateTime? DetectedSpeechStart = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, EngagementSourceEnum? EngagementSource = null, string ExtendedDeliveryStatus = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsAgentGroup> AgentGroups = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.ActiveSkillIds = ActiveSkillIds;
             this.AcwSkipped = AcwSkipped;
@@ -518,6 +738,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Dnis = Dnis;
             this.EdgeId = EdgeId;
             this.EligibleAgentCounts = EligibleAgentCounts;
+            this.EngagementSource = EngagementSource;
             this.ExtendedDeliveryStatus = ExtendedDeliveryStatus;
             this.FlowInType = FlowInType;
             this.FlowOutType = FlowOutType;
@@ -862,6 +1083,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Number of eligible agents for each predictive routing attempt</value>
         [DataMember(Name="eligibleAgentCounts", EmitDefaultValue=false)]
         public List<int?> EligibleAgentCounts { get; set; }
+
+
 
 
 
@@ -1336,6 +1559,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Dnis: ").Append(Dnis).Append("\n");
             sb.Append("  EdgeId: ").Append(EdgeId).Append("\n");
             sb.Append("  EligibleAgentCounts: ").Append(EligibleAgentCounts).Append("\n");
+            sb.Append("  EngagementSource: ").Append(EngagementSource).Append("\n");
             sb.Append("  ExtendedDeliveryStatus: ").Append(ExtendedDeliveryStatus).Append("\n");
             sb.Append("  FlowInType: ").Append(FlowInType).Append("\n");
             sb.Append("  FlowOutType: ").Append(FlowOutType).Append("\n");
@@ -1595,6 +1819,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EligibleAgentCounts == other.EligibleAgentCounts ||
                     this.EligibleAgentCounts != null &&
                     this.EligibleAgentCounts.SequenceEqual(other.EligibleAgentCounts)
+                ) &&
+                (
+                    this.EngagementSource == other.EngagementSource ||
+                    this.EngagementSource != null &&
+                    this.EngagementSource.Equals(other.EngagementSource)
                 ) &&
                 (
                     this.ExtendedDeliveryStatus == other.ExtendedDeliveryStatus ||
@@ -1960,6 +2189,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EligibleAgentCounts != null)
                     hash = hash * 59 + this.EligibleAgentCounts.GetHashCode();
+
+                if (this.EngagementSource != null)
+                    hash = hash * 59 + this.EngagementSource.GetHashCode();
 
                 if (this.ExtendedDeliveryStatus != null)
                     hash = hash * 59 + this.ExtendedDeliveryStatus.GetHashCode();

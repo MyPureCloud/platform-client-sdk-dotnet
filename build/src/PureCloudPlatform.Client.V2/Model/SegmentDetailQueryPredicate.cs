@@ -205,6 +205,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Edgeid,
             
             /// <summary>
+            /// Enum Engagementsource for "engagementSource"
+            /// </summary>
+            [EnumMember(Value = "engagementSource")]
+            Engagementsource,
+            
+            /// <summary>
             /// Enum Errorcode for "errorCode"
             /// </summary>
             [EnumMember(Value = "errorCode")]

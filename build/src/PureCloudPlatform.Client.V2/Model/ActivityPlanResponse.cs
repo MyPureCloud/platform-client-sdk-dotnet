@@ -148,7 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CreatedBy">The user who created this activity plan (required).</param>
         /// <param name="ModifiedDate">The date the activity plan was modified, in ISO-8601 format (required).</param>
         /// <param name="ModifiedBy">The last user to modify this activity plan. The id may be &#39;System&#39; if it was an automated process (required).</param>
-        /// <param name="LastRunDate">The date the activity plan was last run, in ISO-8601 format.</param>
+        /// <param name="LastRunDate">The date on which the activity plan was last manually run, in ISO-8601 format.</param>
         /// <param name="LastRunBy">The last user to run this activity plan.</param>
         public ActivityPlanResponse(string Name = null, List<ManagementUnitReference> ManagementUnits = null, string Description = null, ActivityCodeReference ActivityCode = null, TypeEnum? Type = null, SchedulingPeriod InitialSchedulePeriod = null, int? LengthMinutes = null, GroupSettings GroupSettings = null, RecurrenceSettings RecurrenceSettings = null, UserSearchRule AttendeesSearchRule = null, bool? Facilitated = null, UserSearchRule FacilitatorsSearchRule = null, int? TransitionTimeMinutes = null, ActivityPlanServiceGoalImpactOverrides ServiceGoalImpactOverrides = null, OptimizationObjectiveEnum? OptimizationObjective = null, List<FixedAvailability> FixedAvailability = null, StateEnum? State = null, bool? CountsAsPaidTime = null, DateTime? CreatedDate = null, UserReference CreatedBy = null, DateTime? ModifiedDate = null, UserReference ModifiedBy = null, DateTime? LastRunDate = null, UserReference LastRunBy = null)
         {
@@ -368,9 +368,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The date the activity plan was last run, in ISO-8601 format
+        /// The date on which the activity plan was last manually run, in ISO-8601 format
         /// </summary>
-        /// <value>The date the activity plan was last run, in ISO-8601 format</value>
+        /// <value>The date on which the activity plan was last manually run, in ISO-8601 format</value>
         [DataMember(Name="lastRunDate", EmitDefaultValue=false)]
         public DateTime? LastRunDate { get; set; }
 
