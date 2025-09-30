@@ -26,15 +26,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecordingId">RecordingId.</param>
         /// <param name="TranscriptId">TranscriptId.</param>
         /// <param name="MediaType">MediaType.</param>
+        /// <param name="ProgramId">ProgramId.</param>
         /// <param name="Topics">Topics.</param>
         /// <param name="Participants">Participants.</param>
-        public V2StaTopicsDetectedTopicTopicsDetectedMessage(string ConversationId = null, string CommunicationId = null, string RecordingId = null, string TranscriptId = null, string MediaType = null, List<V2StaTopicsDetectedTopicTopicDetected> Topics = null, List<V2StaTopicsDetectedTopicParticipant> Participants = null)
+        public V2StaTopicsDetectedTopicTopicsDetectedMessage(string ConversationId = null, string CommunicationId = null, string RecordingId = null, string TranscriptId = null, string MediaType = null, string ProgramId = null, List<V2StaTopicsDetectedTopicTopicDetected> Topics = null, List<V2StaTopicsDetectedTopicParticipant> Participants = null)
         {
             this.ConversationId = ConversationId;
             this.CommunicationId = CommunicationId;
             this.RecordingId = RecordingId;
             this.TranscriptId = TranscriptId;
             this.MediaType = MediaType;
+            this.ProgramId = ProgramId;
             this.Topics = Topics;
             this.Participants = Participants;
             
@@ -83,6 +85,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ProgramId
+        /// </summary>
+        [DataMember(Name="programId", EmitDefaultValue=false)]
+        public string ProgramId { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Topics
         /// </summary>
         [DataMember(Name="topics", EmitDefaultValue=false)]
@@ -111,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecordingId: ").Append(RecordingId).Append("\n");
             sb.Append("  TranscriptId: ").Append(TranscriptId).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  ProgramId: ").Append(ProgramId).Append("\n");
             sb.Append("  Topics: ").Append(Topics).Append("\n");
             sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("}\n");
@@ -179,6 +190,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MediaType.Equals(other.MediaType)
                 ) &&
                 (
+                    this.ProgramId == other.ProgramId ||
+                    this.ProgramId != null &&
+                    this.ProgramId.Equals(other.ProgramId)
+                ) &&
+                (
                     this.Topics == other.Topics ||
                     this.Topics != null &&
                     this.Topics.SequenceEqual(other.Topics)
@@ -215,6 +231,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MediaType != null)
                     hash = hash * 59 + this.MediaType.GetHashCode();
+
+                if (this.ProgramId != null)
+                    hash = hash * 59 + this.ProgramId.GetHashCode();
 
                 if (this.Topics != null)
                     hash = hash * 59 + this.Topics.GetHashCode();

@@ -9,8 +9,9 @@
 | **ConversationId** | **string** |  | [optional] |
 | **QueueIds** | **List&lt;string&gt;** |  | [optional] |
 | **DivisionIds** | **List&lt;string&gt;** |  | [optional] |
+| **FlowIds** | **List&lt;string&gt;** |  | [optional] |
 | **Agents** | [**List&lt;V2StaEmpathyOverallTopicAgentEmpathyScore&gt;**](V2StaEmpathyOverallTopicAgentEmpathyScore) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 243.0.0_
+_PureCloudPlatform.Client.V2 244.0.0_

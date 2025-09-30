@@ -150,7 +150,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Inactivity for "INACTIVITY"
             /// </summary>
             [EnumMember(Value = "INACTIVITY")]
-            Inactivity
+            Inactivity,
+            
+            /// <summary>
+            /// Enum SessionExpired for "SESSION_EXPIRED"
+            /// </summary>
+            [EnumMember(Value = "SESSION_EXPIRED")]
+            SessionExpired
         }
         /// <summary>
         /// Gets or Sets MediaType

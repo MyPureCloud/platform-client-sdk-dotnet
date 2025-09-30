@@ -354,7 +354,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Inactivity for "inactivity"
             /// </summary>
             [EnumMember(Value = "inactivity")]
-            Inactivity
+            Inactivity,
+            
+            /// <summary>
+            /// Enum Sessionexpired for "session.expired"
+            /// </summary>
+            [EnumMember(Value = "session.expired")]
+            Sessionexpired
         }
         /// <summary>
         /// Gets or Sets FlaggedReason
@@ -552,8 +558,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RecipientCountry">RecipientCountry.</param>
         /// <param name="RecipientType">RecipientType.</param>
         /// <param name="ByoSmsIntegrationId">ByoSmsIntegrationId.</param>
+        /// <param name="EngagementSource">EngagementSource.</param>
         /// <param name="MonitoredParticipantId">MonitoredParticipantId.</param>
-        public QueueConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationMessageEventTopicUriReference User = null, QueueConversationMessageEventTopicUriReference Queue = null, QueueConversationMessageEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationMessageEventTopicErrorBody ErrorInfo = null, QueueConversationMessageEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationMessageEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationMessageEventTopicUriReference ExternalOrganization = null, QueueConversationMessageEventTopicWrapup Wrapup = null, QueueConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationMessageEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationMessageEventTopicQueueMediaSettings QueueMediaSettings = null, List<QueueConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ByoSmsIntegrationId = null, string MonitoredParticipantId = null)
+        public QueueConversationMessageEventTopicMessageMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationMessageEventTopicUriReference User = null, QueueConversationMessageEventTopicUriReference Queue = null, QueueConversationMessageEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationMessageEventTopicErrorBody ErrorInfo = null, QueueConversationMessageEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationMessageEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationMessageEventTopicUriReference ExternalOrganization = null, QueueConversationMessageEventTopicWrapup Wrapup = null, QueueConversationMessageEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationMessageEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationMessageEventTopicQueueMediaSettings QueueMediaSettings = null, List<QueueConversationMessageEventTopicMessageDetails> Messages = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ByoSmsIntegrationId = null, string EngagementSource = null, string MonitoredParticipantId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -600,6 +607,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RecipientCountry = RecipientCountry;
             this.RecipientType = RecipientType;
             this.ByoSmsIntegrationId = ByoSmsIntegrationId;
+            this.EngagementSource = EngagementSource;
             this.MonitoredParticipantId = MonitoredParticipantId;
             
         }
@@ -931,6 +939,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets EngagementSource
+        /// </summary>
+        [DataMember(Name="engagementSource", EmitDefaultValue=false)]
+        public string EngagementSource { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets MonitoredParticipantId
         /// </summary>
         [DataMember(Name="monitoredParticipantId", EmitDefaultValue=false)]
@@ -991,6 +1007,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RecipientCountry: ").Append(RecipientCountry).Append("\n");
             sb.Append("  RecipientType: ").Append(RecipientType).Append("\n");
             sb.Append("  ByoSmsIntegrationId: ").Append(ByoSmsIntegrationId).Append("\n");
+            sb.Append("  EngagementSource: ").Append(EngagementSource).Append("\n");
             sb.Append("  MonitoredParticipantId: ").Append(MonitoredParticipantId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -1258,6 +1275,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ByoSmsIntegrationId.Equals(other.ByoSmsIntegrationId)
                 ) &&
                 (
+                    this.EngagementSource == other.EngagementSource ||
+                    this.EngagementSource != null &&
+                    this.EngagementSource.Equals(other.EngagementSource)
+                ) &&
+                (
                     this.MonitoredParticipantId == other.MonitoredParticipantId ||
                     this.MonitoredParticipantId != null &&
                     this.MonitoredParticipantId.Equals(other.MonitoredParticipantId)
@@ -1409,6 +1431,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ByoSmsIntegrationId != null)
                     hash = hash * 59 + this.ByoSmsIntegrationId.GetHashCode();
+
+                if (this.EngagementSource != null)
+                    hash = hash * 59 + this.EngagementSource.GetHashCode();
 
                 if (this.MonitoredParticipantId != null)
                     hash = hash * 59 + this.MonitoredParticipantId.GetHashCode();

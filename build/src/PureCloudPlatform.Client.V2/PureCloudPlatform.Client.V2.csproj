@@ -3,7 +3,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{A8670828-4877-4ABD-9926-1966E9C5F572}</ProjectGuid>
+    <ProjectGuid>{E927EF40-7A8F-492B-A44E-AF1FFAFCDBED}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PureCloudPlatform.Client.V2</RootNamespace>
@@ -56,12 +56,6 @@
       <HintPath Condition="Exists('..\packages')">..\packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
       <HintPath Condition="Exists('..\..\packages')">..\..\packages\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
       <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\WebSocketSharp.1.0.3-rc11\lib\websocket-sharp.dll</HintPath>
-    </Reference>
-    <Reference Include="ini-parser">
-      <HintPath Condition="Exists('$(SolutionDir)\packages')">$(SolutionDir)\packages\ini-parser.2.5.2\lib\net20\INIFileParser.dll</HintPath>
-      <HintPath Condition="Exists('..\packages')">..\packages\ini-parser.2.5.2\lib\net20\INIFileParser.dll</HintPath>
-      <HintPath Condition="Exists('..\..\packages')">..\..\packages\ini-parser.2.5.2\lib\net20\INIFileParser.dll</HintPath>
-      <HintPath Condition="Exists('..\..\vendor')">..\..\vendor\ini-parser.2.5.2\lib\net20\INIFileParser.dll</HintPath>
     </Reference>
      <Reference Include="System.Net.Http" />
     <Reference Include="System.Text.Json">

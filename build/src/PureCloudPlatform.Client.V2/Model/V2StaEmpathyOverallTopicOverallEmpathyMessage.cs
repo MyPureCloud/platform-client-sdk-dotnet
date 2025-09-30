@@ -24,12 +24,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationId">ConversationId.</param>
         /// <param name="QueueIds">QueueIds.</param>
         /// <param name="DivisionIds">DivisionIds.</param>
+        /// <param name="FlowIds">FlowIds.</param>
         /// <param name="Agents">Agents.</param>
-        public V2StaEmpathyOverallTopicOverallEmpathyMessage(string ConversationId = null, List<string> QueueIds = null, List<string> DivisionIds = null, List<V2StaEmpathyOverallTopicAgentEmpathyScore> Agents = null)
+        public V2StaEmpathyOverallTopicOverallEmpathyMessage(string ConversationId = null, List<string> QueueIds = null, List<string> DivisionIds = null, List<string> FlowIds = null, List<V2StaEmpathyOverallTopicAgentEmpathyScore> Agents = null)
         {
             this.ConversationId = ConversationId;
             this.QueueIds = QueueIds;
             this.DivisionIds = DivisionIds;
+            this.FlowIds = FlowIds;
             this.Agents = Agents;
             
         }
@@ -61,6 +63,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets FlowIds
+        /// </summary>
+        [DataMember(Name="flowIds", EmitDefaultValue=false)]
+        public List<string> FlowIds { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Agents
         /// </summary>
         [DataMember(Name="agents", EmitDefaultValue=false)]
@@ -79,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
+            sb.Append("  FlowIds: ").Append(FlowIds).Append("\n");
             sb.Append("  Agents: ").Append(Agents).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -136,6 +147,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DivisionIds.SequenceEqual(other.DivisionIds)
                 ) &&
                 (
+                    this.FlowIds == other.FlowIds ||
+                    this.FlowIds != null &&
+                    this.FlowIds.SequenceEqual(other.FlowIds)
+                ) &&
+                (
                     this.Agents == other.Agents ||
                     this.Agents != null &&
                     this.Agents.SequenceEqual(other.Agents)
@@ -161,6 +177,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();
+
+                if (this.FlowIds != null)
+                    hash = hash * 59 + this.FlowIds.GetHashCode();
 
                 if (this.Agents != null)
                     hash = hash * 59 + this.Agents.GetHashCode();

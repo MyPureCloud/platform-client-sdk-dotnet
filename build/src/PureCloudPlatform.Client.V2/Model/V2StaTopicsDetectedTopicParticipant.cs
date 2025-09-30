@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">QueueId.</param>
         /// <param name="DivisionId">DivisionId.</param>
         /// <param name="Purpose">Purpose.</param>
-        public V2StaTopicsDetectedTopicParticipant(string UserId = null, string QueueId = null, string DivisionId = null, string Purpose = null)
+        /// <param name="FlowId">FlowId.</param>
+        public V2StaTopicsDetectedTopicParticipant(string UserId = null, string QueueId = null, string DivisionId = null, string Purpose = null, string FlowId = null)
         {
             this.UserId = UserId;
             this.QueueId = QueueId;
             this.DivisionId = DivisionId;
             this.Purpose = Purpose;
+            this.FlowId = FlowId;
             
         }
         
@@ -67,6 +69,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Purpose { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets FlowId
+        /// </summary>
+        [DataMember(Name="flowId", EmitDefaultValue=false)]
+        public string FlowId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -80,6 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
+            sb.Append("  FlowId: ").Append(FlowId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -139,6 +150,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Purpose == other.Purpose ||
                     this.Purpose != null &&
                     this.Purpose.Equals(other.Purpose)
+                ) &&
+                (
+                    this.FlowId == other.FlowId ||
+                    this.FlowId != null &&
+                    this.FlowId.Equals(other.FlowId)
                 );
         }
 
@@ -164,6 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
+
+                if (this.FlowId != null)
+                    hash = hash * 59 + this.FlowId.GetHashCode();
 
                 return hash;
             }

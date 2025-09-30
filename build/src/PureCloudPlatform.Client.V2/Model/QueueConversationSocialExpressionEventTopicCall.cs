@@ -423,7 +423,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
         /// <param name="QueueMediaSettings">QueueMediaSettings.</param>
-        public QueueConversationSocialExpressionEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationSocialExpressionEventTopicRecordersState RecordersState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationSocialExpressionEventTopicAddress Self = null, QueueConversationSocialExpressionEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationSocialExpressionEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationSocialExpressionEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, QueueConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null)
+        /// <param name="Disposition">Disposition.</param>
+        public QueueConversationSocialExpressionEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationSocialExpressionEventTopicRecordersState RecordersState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationSocialExpressionEventTopicAddress Self = null, QueueConversationSocialExpressionEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationSocialExpressionEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationSocialExpressionEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, QueueConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null, QueueConversationSocialExpressionEventTopicDisposition Disposition = null)
         {
             this.Id = Id;
             this.State = State;
@@ -456,6 +457,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.AgentAssistantId = AgentAssistantId;
             this.QueueMediaSettings = QueueMediaSettings;
+            this.Disposition = Disposition;
             
         }
         
@@ -698,6 +700,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public QueueConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Disposition
+        /// </summary>
+        [DataMember(Name="disposition", EmitDefaultValue=false)]
+        public QueueConversationSocialExpressionEventTopicDisposition Disposition { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -738,6 +748,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
             sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
+            sb.Append("  Disposition: ").Append(Disposition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -932,6 +943,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueueMediaSettings == other.QueueMediaSettings ||
                     this.QueueMediaSettings != null &&
                     this.QueueMediaSettings.Equals(other.QueueMediaSettings)
+                ) &&
+                (
+                    this.Disposition == other.Disposition ||
+                    this.Disposition != null &&
+                    this.Disposition.Equals(other.Disposition)
                 );
         }
 
@@ -1038,6 +1054,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueueMediaSettings != null)
                     hash = hash * 59 + this.QueueMediaSettings.GetHashCode();
+
+                if (this.Disposition != null)
+                    hash = hash * 59 + this.Disposition.GetHashCode();
 
                 return hash;
             }

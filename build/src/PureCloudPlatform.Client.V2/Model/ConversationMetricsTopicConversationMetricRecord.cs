@@ -70,6 +70,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nconsulttransferred,
             
             /// <summary>
+            /// Enum Nconversations for "nConversations"
+            /// </summary>
+            [EnumMember(Value = "nConversations")]
+            Nconversations,
+            
+            /// <summary>
             /// Enum Nerror for "nError"
             /// </summary>
             [EnumMember(Value = "nError")]
@@ -749,6 +755,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "peer")]
             Peer,
+            
+            /// <summary>
+            /// Enum Sessionexpired for "sessionExpired"
+            /// </summary>
+            [EnumMember(Value = "sessionExpired")]
+            Sessionexpired,
             
             /// <summary>
             /// Enum Spam for "spam"

@@ -354,7 +354,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Inactivity for "inactivity"
             /// </summary>
             [EnumMember(Value = "inactivity")]
-            Inactivity
+            Inactivity,
+            
+            /// <summary>
+            /// Enum Sessionexpired for "session.expired"
+            /// </summary>
+            [EnumMember(Value = "session.expired")]
+            Sessionexpired
         }
         /// <summary>
         /// Gets or Sets FlaggedReason
@@ -486,6 +492,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Recording">Recording.</param>
         /// <param name="RecordingState">RecordingState.</param>
         /// <param name="RecordersState">RecordersState.</param>
+        /// <param name="Disposition">Disposition.</param>
         /// <param name="SecurePause">SecurePause.</param>
         /// <param name="Group">Group.</param>
         /// <param name="Ani">Ani.</param>
@@ -497,7 +504,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BargedTime">BargedTime.</param>
         /// <param name="ConsultParticipantId">ConsultParticipantId.</param>
         /// <param name="FaxStatus">FaxStatus.</param>
-        public QueueConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallEventTopicUriReference User = null, QueueConversationCallEventTopicUriReference Queue = null, QueueConversationCallEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCallEventTopicErrorBody ErrorInfo = null, QueueConversationCallEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationCallEventTopicUriReference ExternalOrganization = null, QueueConversationCallEventTopicWrapup Wrapup = null, QueueConversationCallEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationCallEventTopicQueueMediaSettings QueueMediaSettings = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationCallEventTopicRecordersState RecordersState = null, bool? SecurePause = null, QueueConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, DateTime? BargedTime = null, string ConsultParticipantId = null, QueueConversationCallEventTopicFaxStatus FaxStatus = null)
+        public QueueConversationCallEventTopicCallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, QueueConversationCallEventTopicUriReference User = null, QueueConversationCallEventTopicUriReference Queue = null, QueueConversationCallEventTopicUriReference Team = null, Dictionary<string, string> Attributes = null, QueueConversationCallEventTopicErrorBody ErrorInfo = null, QueueConversationCallEventTopicUriReference Script = null, long? WrapupTimeoutMs = null, bool? WrapupSkipped = null, long? AlertingTimeoutMs = null, string Provider = null, QueueConversationCallEventTopicUriReference ExternalContact = null, string ExternalContactInitialDivisionId = null, QueueConversationCallEventTopicUriReference ExternalOrganization = null, QueueConversationCallEventTopicWrapup Wrapup = null, QueueConversationCallEventTopicConversationRoutingData ConversationRoutingData = null, string Peer = null, string ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, QueueConversationCallEventTopicJourneyContext JourneyContext = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ResumeTime = null, DateTime? ParkTime = null, List<string> MediaRoles = null, QueueConversationCallEventTopicQueueMediaSettings QueueMediaSettings = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationCallEventTopicRecordersState RecordersState = null, QueueConversationCallEventTopicDisposition Disposition = null, bool? SecurePause = null, QueueConversationCallEventTopicUriReference Group = null, string Ani = null, string Dnis = null, string DocumentId = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, DateTime? BargedTime = null, string ConsultParticipantId = null, QueueConversationCallEventTopicFaxStatus FaxStatus = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -544,6 +551,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Recording = Recording;
             this.RecordingState = RecordingState;
             this.RecordersState = RecordersState;
+            this.Disposition = Disposition;
             this.SecurePause = SecurePause;
             this.Group = Group;
             this.Ani = Ani;
@@ -885,6 +893,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets Disposition
+        /// </summary>
+        [DataMember(Name="disposition", EmitDefaultValue=false)]
+        public QueueConversationCallEventTopicDisposition Disposition { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets SecurePause
         /// </summary>
         [DataMember(Name="securePause", EmitDefaultValue=false)]
@@ -1025,6 +1041,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Recording: ").Append(Recording).Append("\n");
             sb.Append("  RecordingState: ").Append(RecordingState).Append("\n");
             sb.Append("  RecordersState: ").Append(RecordersState).Append("\n");
+            sb.Append("  Disposition: ").Append(Disposition).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  Group: ").Append(Group).Append("\n");
             sb.Append("  Ani: ").Append(Ani).Append("\n");
@@ -1302,6 +1319,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RecordersState.Equals(other.RecordersState)
                 ) &&
                 (
+                    this.Disposition == other.Disposition ||
+                    this.Disposition != null &&
+                    this.Disposition.Equals(other.Disposition)
+                ) &&
+                (
                     this.SecurePause == other.SecurePause ||
                     this.SecurePause != null &&
                     this.SecurePause.Equals(other.SecurePause)
@@ -1503,6 +1525,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RecordersState != null)
                     hash = hash * 59 + this.RecordersState.GetHashCode();
+
+                if (this.Disposition != null)
+                    hash = hash * 59 + this.Disposition.GetHashCode();
 
                 if (this.SecurePause != null)
                     hash = hash * 59 + this.SecurePause.GetHashCode();

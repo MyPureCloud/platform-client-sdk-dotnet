@@ -469,6 +469,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Peer,
             
             /// <summary>
+            /// Enum Sessionexpired for "sessionExpired"
+            /// </summary>
+            [EnumMember(Value = "sessionExpired")]
+            Sessionexpired,
+            
+            /// <summary>
             /// Enum Spam for "spam"
             /// </summary>
             [EnumMember(Value = "spam")]

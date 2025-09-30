@@ -1879,6 +1879,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Alertablepresencesoverrides,
             
             /// <summary>
+            /// Enum Calleridgroup for "CallerIdGroup"
+            /// </summary>
+            [EnumMember(Value = "CallerIdGroup")]
+            Calleridgroup,
+            
+            /// <summary>
             /// Enum Did for "DID"
             /// </summary>
             [EnumMember(Value = "DID")]
@@ -2335,16 +2341,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Edgelog,
             
             /// <summary>
-            /// Enum Disasterrecoverylinkorg for "DisasterRecoveryLinkOrg"
+            /// Enum Organizationlink for "OrganizationLink"
             /// </summary>
-            [EnumMember(Value = "DisasterRecoveryLinkOrg")]
-            Disasterrecoverylinkorg,
+            [EnumMember(Value = "OrganizationLink")]
+            Organizationlink,
             
             /// <summary>
-            /// Enum Disasterrecoverynumberrouting for "DisasterRecoveryNumberRouting"
+            /// Enum Numberrouting for "NumberRouting"
             /// </summary>
-            [EnumMember(Value = "DisasterRecoveryNumberRouting")]
-            Disasterrecoverynumberrouting,
+            [EnumMember(Value = "NumberRouting")]
+            Numberrouting,
             
             /// <summary>
             /// Enum Organizationfeature for "OrganizationFeature"

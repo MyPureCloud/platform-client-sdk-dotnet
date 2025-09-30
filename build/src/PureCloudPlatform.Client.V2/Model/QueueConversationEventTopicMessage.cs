@@ -236,7 +236,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Inactivity for "inactivity"
             /// </summary>
             [EnumMember(Value = "inactivity")]
-            Inactivity
+            Inactivity,
+            
+            /// <summary>
+            /// Enum Sessionexpired for "session.expired"
+            /// </summary>
+            [EnumMember(Value = "session.expired")]
+            Sessionexpired
         }
         /// <summary>
         /// Indicates the type of message platform from which the message originated.
@@ -393,9 +399,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AfterCallWork">A communication&#39;s after-call work data..</param>
         /// <param name="AfterCallWorkRequired">Indicates if after-call is required for a communication. Only used when the ACW Setting is Agent Requested..</param>
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
+        /// <param name="EngagementSource">Provide more visibility into what integrations customers are creating with Open Messaging. String values are defined in the Constants.java named ENGAGEMENT_SOURCE_*.</param>
         /// <param name="ByoSmsIntegrationId">ByoSmsIntegrationId.</param>
         /// <param name="QueueMediaSettings">Represents the queue setting for this media..</param>
-        public QueueConversationEventTopicMessage(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, bool? Held = null, QueueConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicAddress ToAddress = null, QueueConversationEventTopicAddress FromAddress = null, List<QueueConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationEventTopicJourneyContext JourneyContext = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, string ByoSmsIntegrationId = null, QueueConversationEventTopicQueueMediaSettings QueueMediaSettings = null)
+        public QueueConversationEventTopicMessage(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, bool? Held = null, QueueConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicAddress ToAddress = null, QueueConversationEventTopicAddress FromAddress = null, List<QueueConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationEventTopicJourneyContext JourneyContext = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, string EngagementSource = null, string ByoSmsIntegrationId = null, QueueConversationEventTopicQueueMediaSettings QueueMediaSettings = null)
         {
             this.Id = Id;
             this.State = State;
@@ -422,6 +429,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AfterCallWork = AfterCallWork;
             this.AfterCallWorkRequired = AfterCallWorkRequired;
             this.AgentAssistantId = AgentAssistantId;
+            this.EngagementSource = EngagementSource;
             this.ByoSmsIntegrationId = ByoSmsIntegrationId;
             this.QueueMediaSettings = QueueMediaSettings;
             
@@ -620,6 +628,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Provide more visibility into what integrations customers are creating with Open Messaging. String values are defined in the Constants.java named ENGAGEMENT_SOURCE_*
+        /// </summary>
+        /// <value>Provide more visibility into what integrations customers are creating with Open Messaging. String values are defined in the Constants.java named ENGAGEMENT_SOURCE_*</value>
+        [DataMember(Name="engagementSource", EmitDefaultValue=false)]
+        public string EngagementSource { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets ByoSmsIntegrationId
         /// </summary>
         [DataMember(Name="byoSmsIntegrationId", EmitDefaultValue=false)]
@@ -669,6 +686,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AfterCallWork: ").Append(AfterCallWork).Append("\n");
             sb.Append("  AfterCallWorkRequired: ").Append(AfterCallWorkRequired).Append("\n");
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
+            sb.Append("  EngagementSource: ").Append(EngagementSource).Append("\n");
             sb.Append("  ByoSmsIntegrationId: ").Append(ByoSmsIntegrationId).Append("\n");
             sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
             sb.Append("}\n");
@@ -837,6 +855,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentAssistantId.Equals(other.AgentAssistantId)
                 ) &&
                 (
+                    this.EngagementSource == other.EngagementSource ||
+                    this.EngagementSource != null &&
+                    this.EngagementSource.Equals(other.EngagementSource)
+                ) &&
+                (
                     this.ByoSmsIntegrationId == other.ByoSmsIntegrationId ||
                     this.ByoSmsIntegrationId != null &&
                     this.ByoSmsIntegrationId.Equals(other.ByoSmsIntegrationId)
@@ -933,6 +956,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AgentAssistantId != null)
                     hash = hash * 59 + this.AgentAssistantId.GetHashCode();
+
+                if (this.EngagementSource != null)
+                    hash = hash * 59 + this.EngagementSource.GetHashCode();
 
                 if (this.ByoSmsIntegrationId != null)
                     hash = hash * 59 + this.ByoSmsIntegrationId.GetHashCode();

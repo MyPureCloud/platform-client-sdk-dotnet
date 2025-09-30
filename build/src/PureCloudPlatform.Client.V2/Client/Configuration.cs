@@ -11,10 +11,6 @@ using PureCloudPlatform.Client.V2.Extensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 
-using IniParser;
-using IniParser.Model;
-using IniParser.Exceptions;
-
 namespace PureCloudPlatform.Client.V2.Client
 {
     /// <summary>
@@ -285,7 +281,7 @@ namespace PureCloudPlatform.Client.V2.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "243.0.0";
+        public const string Version = "244.0.0";
 
         /// <summary>
         /// Gets or sets the default Configuration.
@@ -560,7 +556,7 @@ namespace PureCloudPlatform.Client.V2.Client
                      .GetReferencedAssemblies()
                      .Where(x => x.Name == "System.Core").First().Version.ToString()  + "\n";
             report += "    Version of the API: v2\n";
-            report += "    SDK Package Version: 243.0.0\n";
+            report += "    SDK Package Version: 244.0.0\n";
 
             return report;
         }
@@ -577,7 +573,7 @@ namespace PureCloudPlatform.Client.V2.Client
 
             private FileFormat _fileFormat;
 
-            private IniData _iniData;
+            private JObject _iniData;
 
             private JObject _jsonData;
 
@@ -585,11 +581,10 @@ namespace PureCloudPlatform.Client.V2.Client
             {
                 try
                 {
-                    var parser = new FileIniDataParser();
-                    _iniData = parser.ReadFile(_filePath);
-                    _fileFormat = FileFormat.INI;
+                    _jsonData = JObject.Parse(File.ReadAllText(_filePath));
+                    _fileFormat = FileFormat.JSON;
                 }
-                catch (ParsingException e)
+                catch (Exception e)
                 {
                     if (e.GetBaseException().GetType() == typeof(FileNotFoundException))
                     {
@@ -599,8 +594,91 @@ namespace PureCloudPlatform.Client.V2.Client
                     {
                         try
                         {
-                            _jsonData = JObject.Parse(File.ReadAllText(_filePath));
-                            _fileFormat = FileFormat.JSON;
+                            _iniData = new JObject();
+                            int nbSections = 0;
+                            var fileContent = File.ReadAllText(_filePath);
+                            string[] lines = fileContent.Split(new[] { "\r\n", "\n" }, StringSplitOptions.None).Select(line => line.Trim()).ToArray();
+                            if (lines.Length == 0) {
+                                throw new Exception("Empty configuration file (as INI)");
+                            }
+                            string section = null;
+                            for (int i = 0; i < lines.Length; i++)
+                            {
+                                string line = lines[i];
+
+                                if (!string.IsNullOrWhiteSpace(line) && !line.StartsWith(";"))
+                                {
+                                    // Ignore empty lines or lines with comments only
+                                    if (line.StartsWith("["))
+                                    {
+                                        // remove trailing comments
+                                        int sectionCommentsIndex = line.LastIndexOf(" ;", StringComparison.Ordinal);
+                                        if (sectionCommentsIndex > -1)
+                                        {
+                                            line = line.Substring(0, sectionCommentsIndex).Trim();
+                                        }
+                                        else
+                                        {
+                                            sectionCommentsIndex = line.LastIndexOf("\t;", StringComparison.Ordinal);
+                                            if (sectionCommentsIndex > -1)
+                                            {
+                                                line = line.Substring(0, sectionCommentsIndex).Trim();
+                                            }
+                                        }
+
+                                        if (line.EndsWith("]"))
+                                        {
+                                            section = line.Substring(1, line.Length - 2).Trim();
+                                            _iniData[section] = new JObject();
+                                            nbSections++;
+                                        }
+                                        else
+                                        {
+                                            throw new Exception("Configuration file with invalid section format for an INI file");
+                                        }
+                                    }
+                                    else
+                                    {
+                                        // remove trailing comments
+                                        int optionCommentsIndex = line.LastIndexOf(" ;", StringComparison.Ordinal);
+                                        if (optionCommentsIndex > -1)
+                                        {
+                                            line = line.Substring(0, optionCommentsIndex).Trim();
+                                        }
+                                        else
+                                        {
+                                            optionCommentsIndex = line.LastIndexOf("\t;", StringComparison.Ordinal);
+                                            if (optionCommentsIndex > -1)
+                                            {
+                                                line = line.Substring(0, optionCommentsIndex).Trim();
+                                            }
+                                        }
+
+                                        // split after first equal
+                                        int equalFirstIndex = line.IndexOf("=", StringComparison.Ordinal);
+                                        string optionKey = null;
+                                        string optionValue = null;
+                                        if (equalFirstIndex > -1)
+                                        {
+                                            optionKey = line.Substring(0, equalFirstIndex).Trim();
+                                            optionValue = "";
+                                            if (line.Length >= equalFirstIndex + 2)
+                                                optionValue = line.Substring(equalFirstIndex + 1).Trim();
+                                        }
+                                        else
+                                            throw new Exception("Configuration file with invalid option format for an INI file");
+
+                                        if (section != null) {
+                                            if (!string.IsNullOrWhiteSpace(optionKey))
+                                                _iniData[section][optionKey] = optionValue;
+                                        }
+                                    }
+                                }
+                            }
+                            if (nbSections == 0) {
+                                throw new Exception("Empty configuration file (as INI)");
+                            }
+                            _fileFormat = FileFormat.INI;
                         }
                         catch (Exception)
                         {
@@ -694,8 +772,11 @@ namespace PureCloudPlatform.Client.V2.Client
             {
                 try
                 {
-                    return _iniData[section][key].Trim().ToLower();
-                } catch (Exception) {
+                    JObject sectionData = (JObject) _iniData.GetValue(section);
+                    return sectionData.GetValue(key).ToString().Trim();
+                }
+                catch (Exception)
+                {
                     return "";
                 }
             }

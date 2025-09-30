@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SentimentTrendScore">SentimentTrendScore.</param>
         /// <param name="QueueIds">QueueIds.</param>
         /// <param name="DivisionIds">DivisionIds.</param>
-        public V2StaSentimentOverallTopicOverallSentimentMessage(string ConversationId = null, double? SentimentOverallScore = null, double? SentimentTrendScore = null, List<string> QueueIds = null, List<string> DivisionIds = null)
+        /// <param name="FlowIds">FlowIds.</param>
+        public V2StaSentimentOverallTopicOverallSentimentMessage(string ConversationId = null, double? SentimentOverallScore = null, double? SentimentTrendScore = null, List<string> QueueIds = null, List<string> DivisionIds = null, List<string> FlowIds = null)
         {
             this.ConversationId = ConversationId;
             this.SentimentOverallScore = SentimentOverallScore;
             this.SentimentTrendScore = SentimentTrendScore;
             this.QueueIds = QueueIds;
             this.DivisionIds = DivisionIds;
+            this.FlowIds = FlowIds;
             
         }
         
@@ -77,6 +79,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> DivisionIds { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets FlowIds
+        /// </summary>
+        [DataMember(Name="flowIds", EmitDefaultValue=false)]
+        public List<string> FlowIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -91,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SentimentTrendScore: ").Append(SentimentTrendScore).Append("\n");
             sb.Append("  QueueIds: ").Append(QueueIds).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
+            sb.Append("  FlowIds: ").Append(FlowIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,6 +166,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DivisionIds == other.DivisionIds ||
                     this.DivisionIds != null &&
                     this.DivisionIds.SequenceEqual(other.DivisionIds)
+                ) &&
+                (
+                    this.FlowIds == other.FlowIds ||
+                    this.FlowIds != null &&
+                    this.FlowIds.SequenceEqual(other.FlowIds)
                 );
         }
 
@@ -183,6 +199,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DivisionIds != null)
                     hash = hash * 59 + this.DivisionIds.GetHashCode();
+
+                if (this.FlowIds != null)
+                    hash = hash * 59 + this.FlowIds.GetHashCode();
 
                 return hash;
             }
