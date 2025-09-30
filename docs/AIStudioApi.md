@@ -1274,4 +1274,4 @@ namespace Example
 [**SummarySetting**](SummarySetting)
 
 
-_PureCloudPlatform.Client.V2 243.0.0_
+_PureCloudPlatform.Client.V2 244.0.0_

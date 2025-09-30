@@ -11,7 +11,8 @@
 | **SentimentTrendScore** | **double?** |  | [optional] |
 | **QueueIds** | **List&lt;string&gt;** |  | [optional] |
 | **DivisionIds** | **List&lt;string&gt;** |  | [optional] |
+| **FlowIds** | **List&lt;string&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 243.0.0_
+_PureCloudPlatform.Client.V2 244.0.0_
