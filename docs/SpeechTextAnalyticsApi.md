@@ -2279,7 +2279,7 @@ namespace Example
 
 ## GetSpeechandtextanalyticsTopics
 
-> [**TopicsEntityListing**](TopicsEntityListing) GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null)
+> [**TopicsEntityListing**](TopicsEntityListing) GetSpeechandtextanalyticsTopics (string nextPage = null, int? pageSize = null, int? pageNumber = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null)
 
 
 Get the list of Speech & Text Analytics topics
@@ -2312,6 +2312,7 @@ namespace Example
             var apiInstance = new SpeechTextAnalyticsApi();
             var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
             var pageSize = 56;  // int? | The page size for the listing. The max that will be returned is 500. (optional)  (default to 20)
+            var pageNumber = 56;  // int? | The page number for the listing (optional) 
             var state = state_example;  // string | Topic state. Defaults to latest (optional) 
             var name = name_example;  // string | Case insensitive partial name to filter by (optional) 
             var ids = new List<string>(); // List<string> | Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. (optional) 
@@ -2322,7 +2323,7 @@ namespace Example
             try
             { 
                 // Get the list of Speech & Text Analytics topics
-                TopicsEntityListing result = apiInstance.GetSpeechandtextanalyticsTopics(nextPage, pageSize, state, name, ids, dialects, sortBy, sortOrder);
+                TopicsEntityListing result = apiInstance.GetSpeechandtextanalyticsTopics(nextPage, pageSize, pageNumber, state, name, ids, dialects, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2341,6 +2342,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing. The max that will be returned is 500. | [optional] [default to 20] |
+| **pageNumber** | **int?**| The page number for the listing | [optional]  |
 | **state** | **string**| Topic state. Defaults to latest | [optional] <br />**Values**: latest, published |
 | **name** | **string**| Case insensitive partial name to filter by | [optional]  |
 | **ids** | [**List<string>**](string)| Comma separated Topic IDs to filter by. Cannot be used with other filters. Maximum of 50 IDs allowed. | [optional]  |
@@ -4044,4 +4046,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 244.0.0_
+_PureCloudPlatform.Client.V2 245.0.0_

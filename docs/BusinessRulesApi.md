@@ -783,7 +783,7 @@ namespace Example
 
 ## GetBusinessrulesSchema
 
-> [**DataSchema**](DataSchema) GetBusinessrulesSchema (string schemaId)
+> [**BusinessRulesDataSchema**](BusinessRulesDataSchema) GetBusinessrulesSchema (string schemaId)
 
 
 Get a schema
@@ -821,7 +821,7 @@ namespace Example
             try
             { 
                 // Get a schema
-                DataSchema result = apiInstance.GetBusinessrulesSchema(schemaId);
+                BusinessRulesDataSchema result = apiInstance.GetBusinessrulesSchema(schemaId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -842,12 +842,12 @@ namespace Example
 
 ### Return type
 
-[**DataSchema**](DataSchema)
+[**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
 ## GetBusinessrulesSchemas
 
-> [**DataSchemaListing**](DataSchemaListing) GetBusinessrulesSchemas ()
+> [**BusinessRulesDataSchemaListing**](BusinessRulesDataSchemaListing) GetBusinessrulesSchemas ()
 
 
 Get a list of schemas.
@@ -884,7 +884,7 @@ namespace Example
             try
             { 
                 // Get a list of schemas.
-                DataSchemaListing result = apiInstance.GetBusinessrulesSchemas();
+                BusinessRulesDataSchemaListing result = apiInstance.GetBusinessrulesSchemas();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -901,7 +901,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**DataSchemaListing**](DataSchemaListing)
+[**BusinessRulesDataSchemaListing**](BusinessRulesDataSchemaListing)
 
 
 ## GetBusinessrulesSchemasCoretype
@@ -1704,7 +1704,7 @@ namespace Example
 
 ## PostBusinessrulesSchemas
 
-> [**DataSchema**](DataSchema) PostBusinessrulesSchemas (DataSchema body)
+> [**BusinessRulesDataSchema**](BusinessRulesDataSchema) PostBusinessrulesSchemas (BusinessRulesSchemaCreateRequest body)
 
 
 Create a schema
@@ -1737,12 +1737,12 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new BusinessRulesApi();
-            var body = new DataSchema(); // DataSchema | Schema
+            var body = new BusinessRulesSchemaCreateRequest(); // BusinessRulesSchemaCreateRequest | Business Rules Schema Create Request
 
             try
             { 
                 // Create a schema
-                DataSchema result = apiInstance.PostBusinessrulesSchemas(body);
+                BusinessRulesDataSchema result = apiInstance.PostBusinessrulesSchemas(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1759,11 +1759,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**DataSchema**](DataSchema)| Schema |  |
+| **body** | [**BusinessRulesSchemaCreateRequest**](BusinessRulesSchemaCreateRequest)| Business Rules Schema Create Request |  |
 
 ### Return type
 
-[**DataSchema**](DataSchema)
+[**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
 ## PutBusinessrulesDecisiontableVersionPublish
@@ -1905,7 +1905,7 @@ namespace Example
 
 ## PutBusinessrulesSchema
 
-> [**DataSchema**](DataSchema) PutBusinessrulesSchema (string schemaId, DataSchema body)
+> [**BusinessRulesDataSchema**](BusinessRulesDataSchema) PutBusinessrulesSchema (string schemaId, BusinessRulesSchemaUpdateRequest body)
 
 
 Update a schema
@@ -1939,12 +1939,12 @@ namespace Example
 
             var apiInstance = new BusinessRulesApi();
             var schemaId = schemaId_example;  // string | Schema ID
-            var body = new DataSchema(); // DataSchema | Data Schema
+            var body = new BusinessRulesSchemaUpdateRequest(); // BusinessRulesSchemaUpdateRequest | Business Rules Schema Update Request
 
             try
             { 
                 // Update a schema
-                DataSchema result = apiInstance.PutBusinessrulesSchema(schemaId, body);
+                BusinessRulesDataSchema result = apiInstance.PutBusinessrulesSchema(schemaId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1962,11 +1962,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
-| **body** | [**DataSchema**](DataSchema)| Data Schema |  |
+| **body** | [**BusinessRulesSchemaUpdateRequest**](BusinessRulesSchemaUpdateRequest)| Business Rules Schema Update Request |  |
 
 ### Return type
 
-[**DataSchema**](DataSchema)
+[**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatform.Client.V2 244.0.0_
+_PureCloudPlatform.Client.V2 245.0.0_

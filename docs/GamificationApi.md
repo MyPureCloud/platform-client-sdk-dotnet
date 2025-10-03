@@ -878,7 +878,7 @@ namespace Example
 
 ## GetGamificationInsights
 
-> [**InsightsSummary**](InsightsSummary) GetGamificationInsights (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
+> [**InsightsSummary**](InsightsSummary) GetGamificationInsights (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null, string reportsTo = null)
 
 
 Get insights summary
@@ -920,11 +920,12 @@ namespace Example
             var sortMetricId = sortMetricId_example;  // string | Sort Metric Id (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to asc)
             var userIds = userIds_example;  // string | A list of up to 100 comma-separated user Ids (optional) 
+            var reportsTo = reportsTo_example;  // string | The reportsTo used by ABAC policies. (optional) 
 
             try
             { 
                 // Get insights summary
-                InsightsSummary result = apiInstance.GetGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds);
+                InsightsSummary result = apiInstance.GetGamificationInsights(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds, reportsTo);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -952,6 +953,7 @@ namespace Example
 | **sortMetricId** | **string**| Sort Metric Id | [optional]  |
 | **sortOrder** | **string**| Sort order | [optional] [default to asc]<br />**Values**: asc, desc |
 | **userIds** | **string**| A list of up to 100 comma-separated user Ids | [optional]  |
+| **reportsTo** | **string**| The reportsTo used by ABAC policies. | [optional]  |
 
 ### Return type
 
@@ -1178,7 +1180,7 @@ namespace Example
 
 ## GetGamificationInsightsMembers
 
-> [**InsightsAgents**](InsightsAgents) GetGamificationInsightsMembers (string filterType, string filterId, string granularity, String startWorkday)
+> [**InsightsAgents**](InsightsAgents) GetGamificationInsightsMembers (string filterType, string filterId, string granularity, String startWorkday, string reportsTo = null)
 
 
 Query users in a profile during a period of time
@@ -1213,11 +1215,12 @@ namespace Example
             var filterId = filterId_example;  // string | ID for the filter type.
             var granularity = granularity_example;  // string | Granularity
             var startWorkday = 2013-10-20;  // String | The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var reportsTo = reportsTo_example;  // string | The reportsTo used by ABAC policies. (optional) 
 
             try
             { 
                 // Query users in a profile during a period of time
-                InsightsAgents result = apiInstance.GetGamificationInsightsMembers(filterType, filterId, granularity, startWorkday);
+                InsightsAgents result = apiInstance.GetGamificationInsightsMembers(filterType, filterId, granularity, startWorkday, reportsTo);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1238,6 +1241,7 @@ namespace Example
 | **filterId** | **string**| ID for the filter type. |  |
 | **granularity** | **string**| Granularity | <br />**Values**: Weekly, Monthly |
 | **startWorkday** | **String**| The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **reportsTo** | **string**| The reportsTo used by ABAC policies. | [optional]  |
 
 ### Return type
 
@@ -1246,7 +1250,7 @@ namespace Example
 
 ## GetGamificationInsightsRankings
 
-> [**InsightsRankings**](InsightsRankings) GetGamificationInsightsRankings (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null)
+> [**InsightsRankings**](InsightsRankings) GetGamificationInsightsRankings (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null, string reportsTo = null)
 
 
 Get insights rankings
@@ -1286,11 +1290,12 @@ namespace Example
             var sortMetricId = sortMetricId_example;  // string | Sort Metric Id (optional) 
             var sectionSize = 56;  // int? | The number of top and bottom users to return before ties (optional) 
             var userIds = userIds_example;  // string | A list of up to 100 comma-separated user Ids (optional) 
+            var reportsTo = reportsTo_example;  // string | The reportsTo used by ABAC policies. (optional) 
 
             try
             { 
                 // Get insights rankings
-                InsightsRankings result = apiInstance.GetGamificationInsightsRankings(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds);
+                InsightsRankings result = apiInstance.GetGamificationInsightsRankings(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds, reportsTo);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1316,6 +1321,7 @@ namespace Example
 | **sortMetricId** | **string**| Sort Metric Id | [optional]  |
 | **sectionSize** | **int?**| The number of top and bottom users to return before ties | [optional]  |
 | **userIds** | **string**| A list of up to 100 comma-separated user Ids | [optional]  |
+| **reportsTo** | **string**| The reportsTo used by ABAC policies. | [optional]  |
 
 ### Return type
 
@@ -5152,4 +5158,4 @@ namespace Example
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatform.Client.V2 244.0.0_
+_PureCloudPlatform.Client.V2 245.0.0_

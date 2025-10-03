@@ -21,15 +21,19 @@
 | **MessageStickerAttachments** | [**List&lt;MessageStickerAttachment&gt;**](MessageStickerAttachment) | List of message stickers attached with this message. | [optional] |
 | **QuickReplies** | [**List&lt;QuickReply&gt;**](QuickReply) | List of quick reply options offered with this message. | [optional] |
 | **ButtonResponse** | [**ButtonResponse**](ButtonResponse) | Button Response selected by user for this message. | [optional] |
+| **ButtonResponses** | [**List&lt;ButtonResponse&gt;**](ButtonResponse) | List of Button Response selected by user for this message. | [optional] |
 | **Story** | [**RecordingContentStory**](RecordingContentStory) | Ephemeral story content. | [optional] |
 | **Cards** | [**List&lt;Card&gt;**](Card) | List of cards offered for this message | [optional] |
 | **NotificationTemplate** | [**RecordingNotificationTemplate**](RecordingNotificationTemplate) | Template notification content. | [optional] |
 | **DatePicker** | [**DatePicker**](DatePicker) | DatePicker content object. | [optional] |
+| **ListPicker** | [**ListPicker**](ListPicker) | ListPicker content object. | [optional] |
 | **ContentType** | **string** | Indicates the content type for this message | [optional] |
 | **SocialVisibility** | **string** | For social media messages, the visibility of the message in the originating social platform | [optional] |
 | **Events** | [**List&lt;ConversationMessageEvent&gt;**](ConversationMessageEvent) | List of event elements | [optional] |
 | **InteractiveApplication** | [**InteractiveApplication**](InteractiveApplication) | InteractiveApplication content. | [optional] |
+| **PaymentRequest** | [**PaymentRequest**](PaymentRequest) | Payment request content. | [optional] |
+| **PaymentResponse** | [**PaymentResponse**](PaymentResponse) | Payment response content. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 244.0.0_
+_PureCloudPlatform.Client.V2 245.0.0_
