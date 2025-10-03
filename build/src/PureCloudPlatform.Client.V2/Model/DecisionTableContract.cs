@@ -21,11 +21,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DecisionTableContract" /> class.
         /// </summary>
-        /// <param name="ParentSchema">DSS V1 schema entity defining source properties for the decision table contract schemas.</param>
+        /// <param name="ParentSchema">DSS schema entity defining source properties for the decision table contract schemas.</param>
         /// <param name="RowAuthoringSchema">JSON schema describing required value types for each column in every row in a decision table.</param>
         /// <param name="ExecutionInputSchema">JSON schema for execution input data for a decision table.</param>
         /// <param name="ExecutionOutputSchema">JSON schema for execution output data for a decision table.</param>
-        public DecisionTableContract(DomainEntityRef ParentSchema = null, JsonSchemaWithDefinitions RowAuthoringSchema = null, JsonSchemaWithDefinitions ExecutionInputSchema = null, JsonSchemaWithDefinitions ExecutionOutputSchema = null)
+        public DecisionTableContract(DomainEntityRef ParentSchema = null, ContractJsonSchema RowAuthoringSchema = null, ContractJsonSchema ExecutionInputSchema = null, ContractJsonSchema ExecutionOutputSchema = null)
         {
             this.ParentSchema = ParentSchema;
             this.RowAuthoringSchema = RowAuthoringSchema;
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// DSS V1 schema entity defining source properties for the decision table contract schemas
+        /// DSS schema entity defining source properties for the decision table contract schemas
         /// </summary>
-        /// <value>DSS V1 schema entity defining source properties for the decision table contract schemas</value>
+        /// <value>DSS schema entity defining source properties for the decision table contract schemas</value>
         [DataMember(Name="parentSchema", EmitDefaultValue=false)]
         public DomainEntityRef ParentSchema { get; set; }
 
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>JSON schema describing required value types for each column in every row in a decision table</value>
         [DataMember(Name="rowAuthoringSchema", EmitDefaultValue=false)]
-        public JsonSchemaWithDefinitions RowAuthoringSchema { get; set; }
+        public ContractJsonSchema RowAuthoringSchema { get; set; }
 
 
 
@@ -59,7 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>JSON schema for execution input data for a decision table</value>
         [DataMember(Name="executionInputSchema", EmitDefaultValue=false)]
-        public JsonSchemaWithDefinitions ExecutionInputSchema { get; set; }
+        public ContractJsonSchema ExecutionInputSchema { get; set; }
 
 
 
@@ -68,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>JSON schema for execution output data for a decision table</value>
         [DataMember(Name="executionOutputSchema", EmitDefaultValue=false)]
-        public JsonSchemaWithDefinitions ExecutionOutputSchema { get; set; }
+        public ContractJsonSchema ExecutionOutputSchema { get; set; }
 
 
         /// <summary>

@@ -654,6 +654,10 @@ docs/BulkUpdateShiftTradeStateResultItem.md
 docs/Bullseye.md
 docs/BusinessRulesApi.json
 docs/BusinessRulesApi.md
+docs/BusinessRulesDataSchema.md
+docs/BusinessRulesDataSchemaListing.md
+docs/BusinessRulesSchemaCreateRequest.md
+docs/BusinessRulesSchemaUpdateRequest.md
 docs/BusinessUnitActivityCode.md
 docs/BusinessUnitActivityCodeListing.md
 docs/BusinessUnitListItem.md
@@ -1037,6 +1041,10 @@ docs/ContextPattern.md
 docs/ContinuousForecastGetSessionResponse.md
 docs/ContinuousForecastSessionResponse.md
 docs/ContinuousForecastSnapshotResponse.md
+docs/ContractDefinition.md
+docs/ContractItems.md
+docs/ContractJsonSchema.md
+docs/ContractPropertyDefinition.md
 docs/Contractual.md
 docs/Conversation.md
 docs/ConversationActivityData.md
@@ -9634,6 +9642,10 @@ src/PureCloudPlatform.Client.V2/Model/BulkUpdateShiftTradeStateResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkUpdateShiftTradeStateResult.cs
 src/PureCloudPlatform.Client.V2/Model/BulkUpdateShiftTradeStateResultItem.cs
 src/PureCloudPlatform.Client.V2/Model/Bullseye.cs
+src/PureCloudPlatform.Client.V2/Model/BusinessRulesDataSchema.cs
+src/PureCloudPlatform.Client.V2/Model/BusinessRulesDataSchemaListing.cs
+src/PureCloudPlatform.Client.V2/Model/BusinessRulesSchemaCreateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/BusinessRulesSchemaUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitActivityCode.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitActivityCodeListing.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitListItem.cs
@@ -10009,6 +10021,10 @@ src/PureCloudPlatform.Client.V2/Model/ContextPattern.cs
 src/PureCloudPlatform.Client.V2/Model/ContinuousForecastGetSessionResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContinuousForecastSessionResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContinuousForecastSnapshotResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ContractDefinition.cs
+src/PureCloudPlatform.Client.V2/Model/ContractItems.cs
+src/PureCloudPlatform.Client.V2/Model/ContractJsonSchema.cs
+src/PureCloudPlatform.Client.V2/Model/ContractPropertyDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/Contractual.cs
 src/PureCloudPlatform.Client.V2/Model/Conversation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationActivityData.cs

@@ -367,9 +367,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>InsightsSummary</returns>
         
-        InsightsSummary GetGamificationInsights (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null);
+        InsightsSummary GetGamificationInsights (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null, string reportsTo = null);
 
         /// <summary>
         /// Get insights summary
@@ -389,9 +390,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>ApiResponse of InsightsSummary</returns>
         
-        ApiResponse<InsightsSummary> GetGamificationInsightsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null);
+        ApiResponse<InsightsSummary> GetGamificationInsightsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null, string reportsTo = null);
 
         /// <summary>
         /// Get insights details for the current user
@@ -508,9 +510,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>InsightsAgents</returns>
         
-        InsightsAgents GetGamificationInsightsMembers (string filterType, string filterId, string granularity, String startWorkday);
+        InsightsAgents GetGamificationInsightsMembers (string filterType, string filterId, string granularity, String startWorkday, string reportsTo = null);
 
         /// <summary>
         /// Query users in a profile during a period of time
@@ -523,9 +526,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>ApiResponse of InsightsAgents</returns>
         
-        ApiResponse<InsightsAgents> GetGamificationInsightsMembersWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday);
+        ApiResponse<InsightsAgents> GetGamificationInsightsMembersWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday, string reportsTo = null);
 
         /// <summary>
         /// Get insights rankings
@@ -543,9 +547,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>InsightsRankings</returns>
         
-        InsightsRankings GetGamificationInsightsRankings (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null);
+        InsightsRankings GetGamificationInsightsRankings (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null, string reportsTo = null);
 
         /// <summary>
         /// Get insights rankings
@@ -563,9 +568,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>ApiResponse of InsightsRankings</returns>
         
-        ApiResponse<InsightsRankings> GetGamificationInsightsRankingsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null);
+        ApiResponse<InsightsRankings> GetGamificationInsightsRankingsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null, string reportsTo = null);
 
         /// <summary>
         /// Get insights user trend for the current user
@@ -2513,9 +2519,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of InsightsSummary</returns>
         
-        System.Threading.Tasks.Task<InsightsSummary> GetGamificationInsightsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null);
+        System.Threading.Tasks.Task<InsightsSummary> GetGamificationInsightsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null, string reportsTo = null);
 
         /// <summary>
         /// Get insights summary
@@ -2535,9 +2542,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of ApiResponse (InsightsSummary)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<InsightsSummary>> GetGamificationInsightsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null);
+        System.Threading.Tasks.Task<ApiResponse<InsightsSummary>> GetGamificationInsightsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null, string reportsTo = null);
 
         /// <summary>
         /// Get insights details for the current user
@@ -2654,9 +2662,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of InsightsAgents</returns>
         
-        System.Threading.Tasks.Task<InsightsAgents> GetGamificationInsightsMembersAsync (string filterType, string filterId, string granularity, String startWorkday);
+        System.Threading.Tasks.Task<InsightsAgents> GetGamificationInsightsMembersAsync (string filterType, string filterId, string granularity, String startWorkday, string reportsTo = null);
 
         /// <summary>
         /// Query users in a profile during a period of time
@@ -2669,9 +2678,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of ApiResponse (InsightsAgents)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<InsightsAgents>> GetGamificationInsightsMembersAsyncWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday);
+        System.Threading.Tasks.Task<ApiResponse<InsightsAgents>> GetGamificationInsightsMembersAsyncWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday, string reportsTo = null);
 
         /// <summary>
         /// Get insights rankings
@@ -2689,9 +2699,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of InsightsRankings</returns>
         
-        System.Threading.Tasks.Task<InsightsRankings> GetGamificationInsightsRankingsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null);
+        System.Threading.Tasks.Task<InsightsRankings> GetGamificationInsightsRankingsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null, string reportsTo = null);
 
         /// <summary>
         /// Get insights rankings
@@ -2709,9 +2720,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of ApiResponse (InsightsRankings)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<InsightsRankings>> GetGamificationInsightsRankingsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null);
+        System.Threading.Tasks.Task<ApiResponse<InsightsRankings>> GetGamificationInsightsRankingsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null, string reportsTo = null);
 
         /// <summary>
         /// Get insights user trend for the current user
@@ -6943,11 +6955,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>InsightsSummary</returns>
         
-        public InsightsSummary GetGamificationInsights (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
+        public InsightsSummary GetGamificationInsights (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null, string reportsTo = null)
         {
-             ApiResponse<InsightsSummary> localVarResponse = GetGamificationInsightsWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds);
+             ApiResponse<InsightsSummary> localVarResponse = GetGamificationInsightsWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds, reportsTo);
              return localVarResponse.Data;
         }
 
@@ -6967,9 +6980,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>ApiResponse of InsightsSummary</returns>
         
-        public ApiResponse< InsightsSummary > GetGamificationInsightsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
+        public ApiResponse< InsightsSummary > GetGamificationInsightsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null, string reportsTo = null)
         { 
             // verify the required parameter 'filterType' is set
             if (filterType == null)
@@ -7031,6 +7045,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortMetricId != null) localVarQueryParams.Add(new Tuple<string, string>("sortMetricId", this.Configuration.ApiClient.ParameterToString(sortMetricId)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (userIds != null) localVarQueryParams.Add(new Tuple<string, string>("userIds", this.Configuration.ApiClient.ParameterToString(userIds)));
+            if (reportsTo != null) localVarQueryParams.Add(new Tuple<string, string>("reportsTo", this.Configuration.ApiClient.ParameterToString(reportsTo)));
 
             // Header params
 
@@ -7084,11 +7099,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of InsightsSummary</returns>
         
-        public async System.Threading.Tasks.Task<InsightsSummary> GetGamificationInsightsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
+        public async System.Threading.Tasks.Task<InsightsSummary> GetGamificationInsightsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null, string reportsTo = null)
         {
-             ApiResponse<InsightsSummary> localVarResponse = await GetGamificationInsightsAsyncWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds);
+             ApiResponse<InsightsSummary> localVarResponse = await GetGamificationInsightsAsyncWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, pageSize, pageNumber, sortKey, sortMetricId, sortOrder, userIds, reportsTo);
              return localVarResponse.Data;
 
         }
@@ -7109,9 +7125,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sortOrder">Sort order (optional, default to asc)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of ApiResponse (InsightsSummary)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<InsightsSummary>> GetGamificationInsightsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InsightsSummary>> GetGamificationInsightsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, int? pageSize = null, int? pageNumber = null, string sortKey = null, string sortMetricId = null, string sortOrder = null, string userIds = null, string reportsTo = null)
         { 
             // verify the required parameter 'filterType' is set
             if (filterType == null)
@@ -7178,6 +7195,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortMetricId != null) localVarQueryParams.Add(new Tuple<string, string>("sortMetricId", this.Configuration.ApiClient.ParameterToString(sortMetricId)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (userIds != null) localVarQueryParams.Add(new Tuple<string, string>("userIds", this.Configuration.ApiClient.ParameterToString(userIds)));
+            if (reportsTo != null) localVarQueryParams.Add(new Tuple<string, string>("reportsTo", this.Configuration.ApiClient.ParameterToString(reportsTo)));
 
             // Header params
 
@@ -8036,11 +8054,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>InsightsAgents</returns>
         
-        public InsightsAgents GetGamificationInsightsMembers (string filterType, string filterId, string granularity, String startWorkday)
+        public InsightsAgents GetGamificationInsightsMembers (string filterType, string filterId, string granularity, String startWorkday, string reportsTo = null)
         {
-             ApiResponse<InsightsAgents> localVarResponse = GetGamificationInsightsMembersWithHttpInfo(filterType, filterId, granularity, startWorkday);
+             ApiResponse<InsightsAgents> localVarResponse = GetGamificationInsightsMembersWithHttpInfo(filterType, filterId, granularity, startWorkday, reportsTo);
              return localVarResponse.Data;
         }
 
@@ -8053,9 +8072,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>ApiResponse of InsightsAgents</returns>
         
-        public ApiResponse< InsightsAgents > GetGamificationInsightsMembersWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday)
+        public ApiResponse< InsightsAgents > GetGamificationInsightsMembersWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday, string reportsTo = null)
         { 
             // verify the required parameter 'filterType' is set
             if (filterType == null)
@@ -8107,6 +8127,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (filterId != null) localVarQueryParams.Add(new Tuple<string, string>("filterId", this.Configuration.ApiClient.ParameterToString(filterId)));
             if (granularity != null) localVarQueryParams.Add(new Tuple<string, string>("granularity", this.Configuration.ApiClient.ParameterToString(granularity)));
             if (startWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("startWorkday", this.Configuration.ApiClient.ParameterToString(startWorkday)));
+            if (reportsTo != null) localVarQueryParams.Add(new Tuple<string, string>("reportsTo", this.Configuration.ApiClient.ParameterToString(reportsTo)));
 
             // Header params
 
@@ -8153,11 +8174,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of InsightsAgents</returns>
         
-        public async System.Threading.Tasks.Task<InsightsAgents> GetGamificationInsightsMembersAsync (string filterType, string filterId, string granularity, String startWorkday)
+        public async System.Threading.Tasks.Task<InsightsAgents> GetGamificationInsightsMembersAsync (string filterType, string filterId, string granularity, String startWorkday, string reportsTo = null)
         {
-             ApiResponse<InsightsAgents> localVarResponse = await GetGamificationInsightsMembersAsyncWithHttpInfo(filterType, filterId, granularity, startWorkday);
+             ApiResponse<InsightsAgents> localVarResponse = await GetGamificationInsightsMembersAsyncWithHttpInfo(filterType, filterId, granularity, startWorkday, reportsTo);
              return localVarResponse.Data;
 
         }
@@ -8171,9 +8193,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterId">ID for the filter type.</param>
         /// <param name="granularity">Granularity</param>
         /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of ApiResponse (InsightsAgents)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<InsightsAgents>> GetGamificationInsightsMembersAsyncWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday)
+        public async System.Threading.Tasks.Task<ApiResponse<InsightsAgents>> GetGamificationInsightsMembersAsyncWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday, string reportsTo = null)
         { 
             // verify the required parameter 'filterType' is set
             if (filterType == null)
@@ -8229,6 +8252,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (filterId != null) localVarQueryParams.Add(new Tuple<string, string>("filterId", this.Configuration.ApiClient.ParameterToString(filterId)));
             if (granularity != null) localVarQueryParams.Add(new Tuple<string, string>("granularity", this.Configuration.ApiClient.ParameterToString(granularity)));
             if (startWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("startWorkday", this.Configuration.ApiClient.ParameterToString(startWorkday)));
+            if (reportsTo != null) localVarQueryParams.Add(new Tuple<string, string>("reportsTo", this.Configuration.ApiClient.ParameterToString(reportsTo)));
 
             // Header params
 
@@ -8281,11 +8305,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>InsightsRankings</returns>
         
-        public InsightsRankings GetGamificationInsightsRankings (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null)
+        public InsightsRankings GetGamificationInsightsRankings (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null, string reportsTo = null)
         {
-             ApiResponse<InsightsRankings> localVarResponse = GetGamificationInsightsRankingsWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds);
+             ApiResponse<InsightsRankings> localVarResponse = GetGamificationInsightsRankingsWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds, reportsTo);
              return localVarResponse.Data;
         }
 
@@ -8303,9 +8328,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>ApiResponse of InsightsRankings</returns>
         
-        public ApiResponse< InsightsRankings > GetGamificationInsightsRankingsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null)
+        public ApiResponse< InsightsRankings > GetGamificationInsightsRankingsWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null, string reportsTo = null)
         { 
             // verify the required parameter 'filterType' is set
             if (filterType == null)
@@ -8368,6 +8394,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortMetricId != null) localVarQueryParams.Add(new Tuple<string, string>("sortMetricId", this.Configuration.ApiClient.ParameterToString(sortMetricId)));
             if (sectionSize != null) localVarQueryParams.Add(new Tuple<string, string>("sectionSize", this.Configuration.ApiClient.ParameterToString(sectionSize)));
             if (userIds != null) localVarQueryParams.Add(new Tuple<string, string>("userIds", this.Configuration.ApiClient.ParameterToString(userIds)));
+            if (reportsTo != null) localVarQueryParams.Add(new Tuple<string, string>("reportsTo", this.Configuration.ApiClient.ParameterToString(reportsTo)));
 
             // Header params
 
@@ -8419,11 +8446,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of InsightsRankings</returns>
         
-        public async System.Threading.Tasks.Task<InsightsRankings> GetGamificationInsightsRankingsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null)
+        public async System.Threading.Tasks.Task<InsightsRankings> GetGamificationInsightsRankingsAsync (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null, string reportsTo = null)
         {
-             ApiResponse<InsightsRankings> localVarResponse = await GetGamificationInsightsRankingsAsyncWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds);
+             ApiResponse<InsightsRankings> localVarResponse = await GetGamificationInsightsRankingsAsyncWithHttpInfo(filterType, filterId, granularity, comparativePeriodStartWorkday, primaryPeriodStartWorkday, sortKey, sortMetricId, sectionSize, userIds, reportsTo);
              return localVarResponse.Data;
 
         }
@@ -8442,9 +8470,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortMetricId">Sort Metric Id (optional)</param>
         /// <param name="sectionSize">The number of top and bottom users to return before ties (optional)</param>
         /// <param name="userIds">A list of up to 100 comma-separated user Ids (optional)</param>
+        /// <param name="reportsTo">The reportsTo used by ABAC policies. (optional)</param>
         /// <returns>Task of ApiResponse (InsightsRankings)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<InsightsRankings>> GetGamificationInsightsRankingsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<InsightsRankings>> GetGamificationInsightsRankingsAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String primaryPeriodStartWorkday, string sortKey, string sortMetricId = null, int? sectionSize = null, string userIds = null, string reportsTo = null)
         { 
             // verify the required parameter 'filterType' is set
             if (filterType == null)
@@ -8513,6 +8542,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortMetricId != null) localVarQueryParams.Add(new Tuple<string, string>("sortMetricId", this.Configuration.ApiClient.ParameterToString(sortMetricId)));
             if (sectionSize != null) localVarQueryParams.Add(new Tuple<string, string>("sectionSize", this.Configuration.ApiClient.ParameterToString(sectionSize)));
             if (userIds != null) localVarQueryParams.Add(new Tuple<string, string>("userIds", this.Configuration.ApiClient.ParameterToString(userIds)));
+            if (reportsTo != null) localVarQueryParams.Add(new Tuple<string, string>("reportsTo", this.Configuration.ApiClient.ParameterToString(reportsTo)));
 
             // Header params
 

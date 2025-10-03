@@ -352,9 +352,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>DataSchema</returns>
+        /// <returns>BusinessRulesDataSchema</returns>
         
-        DataSchema GetBusinessrulesSchema (string schemaId);
+        BusinessRulesDataSchema GetBusinessrulesSchema (string schemaId);
 
         /// <summary>
         /// Get a schema
@@ -365,9 +365,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <returns>ApiResponse of BusinessRulesDataSchema</returns>
         
-        ApiResponse<DataSchema> GetBusinessrulesSchemaWithHttpInfo (string schemaId);
+        ApiResponse<BusinessRulesDataSchema> GetBusinessrulesSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Get a list of schemas.
@@ -377,9 +377,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>DataSchemaListing</returns>
+        /// <returns>BusinessRulesDataSchemaListing</returns>
         
-        DataSchemaListing GetBusinessrulesSchemas ();
+        BusinessRulesDataSchemaListing GetBusinessrulesSchemas ();
 
         /// <summary>
         /// Get a list of schemas.
@@ -389,9 +389,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of DataSchemaListing</returns>
+        /// <returns>ApiResponse of BusinessRulesDataSchemaListing</returns>
         
-        ApiResponse<DataSchemaListing> GetBusinessrulesSchemasWithHttpInfo ();
+        ApiResponse<BusinessRulesDataSchemaListing> GetBusinessrulesSchemasWithHttpInfo ();
 
         /// <summary>
         /// Get a specific named core type.
@@ -741,10 +741,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Schema</param>
-        /// <returns>DataSchema</returns>
+        /// <param name="body">Business Rules Schema Create Request</param>
+        /// <returns>BusinessRulesDataSchema</returns>
         
-        DataSchema PostBusinessrulesSchemas (DataSchema body);
+        BusinessRulesDataSchema PostBusinessrulesSchemas (BusinessRulesSchemaCreateRequest body);
 
         /// <summary>
         /// Create a schema
@@ -754,10 +754,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Schema</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <param name="body">Business Rules Schema Create Request</param>
+        /// <returns>ApiResponse of BusinessRulesDataSchema</returns>
         
-        ApiResponse<DataSchema> PostBusinessrulesSchemasWithHttpInfo (DataSchema body);
+        ApiResponse<BusinessRulesDataSchema> PostBusinessrulesSchemasWithHttpInfo (BusinessRulesSchemaCreateRequest body);
 
         /// <summary>
         /// Publish a decision table version
@@ -828,10 +828,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="body">Data Schema</param>
-        /// <returns>DataSchema</returns>
+        /// <param name="body">Business Rules Schema Update Request</param>
+        /// <returns>BusinessRulesDataSchema</returns>
         
-        DataSchema PutBusinessrulesSchema (string schemaId, DataSchema body);
+        BusinessRulesDataSchema PutBusinessrulesSchema (string schemaId, BusinessRulesSchemaUpdateRequest body);
 
         /// <summary>
         /// Update a schema
@@ -842,10 +842,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="body">Data Schema</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <param name="body">Business Rules Schema Update Request</param>
+        /// <returns>ApiResponse of BusinessRulesDataSchema</returns>
         
-        ApiResponse<DataSchema> PutBusinessrulesSchemaWithHttpInfo (string schemaId, DataSchema body);
+        ApiResponse<BusinessRulesDataSchema> PutBusinessrulesSchemaWithHttpInfo (string schemaId, BusinessRulesSchemaUpdateRequest body);
 
         #endregion Synchronous Operations
 
@@ -1188,9 +1188,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <returns>Task of BusinessRulesDataSchema</returns>
         
-        System.Threading.Tasks.Task<DataSchema> GetBusinessrulesSchemaAsync (string schemaId);
+        System.Threading.Tasks.Task<BusinessRulesDataSchema> GetBusinessrulesSchemaAsync (string schemaId);
 
         /// <summary>
         /// Get a schema
@@ -1201,9 +1201,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchema)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetBusinessrulesSchemaAsyncWithHttpInfo (string schemaId);
+        System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchema>> GetBusinessrulesSchemaAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Get a list of schemas.
@@ -1213,9 +1213,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of DataSchemaListing</returns>
+        /// <returns>Task of BusinessRulesDataSchemaListing</returns>
         
-        System.Threading.Tasks.Task<DataSchemaListing> GetBusinessrulesSchemasAsync ();
+        System.Threading.Tasks.Task<BusinessRulesDataSchemaListing> GetBusinessrulesSchemasAsync ();
 
         /// <summary>
         /// Get a list of schemas.
@@ -1225,9 +1225,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchemaListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetBusinessrulesSchemasAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchemaListing>> GetBusinessrulesSchemasAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get a specific named core type.
@@ -1577,10 +1577,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Schema</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <param name="body">Business Rules Schema Create Request</param>
+        /// <returns>Task of BusinessRulesDataSchema</returns>
         
-        System.Threading.Tasks.Task<DataSchema> PostBusinessrulesSchemasAsync (DataSchema body);
+        System.Threading.Tasks.Task<BusinessRulesDataSchema> PostBusinessrulesSchemasAsync (BusinessRulesSchemaCreateRequest body);
 
         /// <summary>
         /// Create a schema
@@ -1590,10 +1590,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Schema</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <param name="body">Business Rules Schema Create Request</param>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchema)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostBusinessrulesSchemasAsyncWithHttpInfo (DataSchema body);
+        System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchema>> PostBusinessrulesSchemasAsyncWithHttpInfo (BusinessRulesSchemaCreateRequest body);
 
         /// <summary>
         /// Publish a decision table version
@@ -1664,10 +1664,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="body">Data Schema</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <param name="body">Business Rules Schema Update Request</param>
+        /// <returns>Task of BusinessRulesDataSchema</returns>
         
-        System.Threading.Tasks.Task<DataSchema> PutBusinessrulesSchemaAsync (string schemaId, DataSchema body);
+        System.Threading.Tasks.Task<BusinessRulesDataSchema> PutBusinessrulesSchemaAsync (string schemaId, BusinessRulesSchemaUpdateRequest body);
 
         /// <summary>
         /// Update a schema
@@ -1678,10 +1678,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="body">Data Schema</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <param name="body">Business Rules Schema Update Request</param>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchema)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutBusinessrulesSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
+        System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchema>> PutBusinessrulesSchemaAsyncWithHttpInfo (string schemaId, BusinessRulesSchemaUpdateRequest body);
 
         #endregion Asynchronous Operations
 
@@ -4190,11 +4190,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>DataSchema</returns>
+        /// <returns>BusinessRulesDataSchema</returns>
         
-        public DataSchema GetBusinessrulesSchema (string schemaId)
+        public BusinessRulesDataSchema GetBusinessrulesSchema (string schemaId)
         {
-             ApiResponse<DataSchema> localVarResponse = GetBusinessrulesSchemaWithHttpInfo(schemaId);
+             ApiResponse<BusinessRulesDataSchema> localVarResponse = GetBusinessrulesSchemaWithHttpInfo(schemaId);
              return localVarResponse.Data;
         }
 
@@ -4205,9 +4205,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <returns>ApiResponse of BusinessRulesDataSchema</returns>
         
-        public ApiResponse< DataSchema > GetBusinessrulesSchemaWithHttpInfo (string schemaId)
+        public ApiResponse< BusinessRulesDataSchema > GetBusinessrulesSchemaWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
@@ -4276,9 +4276,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<BusinessRulesDataSchema>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (BusinessRulesDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4291,11 +4291,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <returns>Task of BusinessRulesDataSchema</returns>
         
-        public async System.Threading.Tasks.Task<DataSchema> GetBusinessrulesSchemaAsync (string schemaId)
+        public async System.Threading.Tasks.Task<BusinessRulesDataSchema> GetBusinessrulesSchemaAsync (string schemaId)
         {
-             ApiResponse<DataSchema> localVarResponse = await GetBusinessrulesSchemaAsyncWithHttpInfo(schemaId);
+             ApiResponse<BusinessRulesDataSchema> localVarResponse = await GetBusinessrulesSchemaAsyncWithHttpInfo(schemaId);
              return localVarResponse.Data;
 
         }
@@ -4307,9 +4307,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchema)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetBusinessrulesSchemaAsyncWithHttpInfo (string schemaId)
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchema>> GetBusinessrulesSchemaAsyncWithHttpInfo (string schemaId)
         { 
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
@@ -4379,9 +4379,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<BusinessRulesDataSchema>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (BusinessRulesDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4394,11 +4394,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>DataSchemaListing</returns>
+        /// <returns>BusinessRulesDataSchemaListing</returns>
         
-        public DataSchemaListing GetBusinessrulesSchemas ()
+        public BusinessRulesDataSchemaListing GetBusinessrulesSchemas ()
         {
-             ApiResponse<DataSchemaListing> localVarResponse = GetBusinessrulesSchemasWithHttpInfo();
+             ApiResponse<BusinessRulesDataSchemaListing> localVarResponse = GetBusinessrulesSchemasWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -4408,9 +4408,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of DataSchemaListing</returns>
+        /// <returns>ApiResponse of BusinessRulesDataSchemaListing</returns>
         
-        public ApiResponse< DataSchemaListing > GetBusinessrulesSchemasWithHttpInfo ()
+        public ApiResponse< BusinessRulesDataSchemaListing > GetBusinessrulesSchemasWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/businessrules/schemas";
@@ -4475,9 +4475,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
+            return new ApiResponse<BusinessRulesDataSchemaListing>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                (BusinessRulesDataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchemaListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4489,11 +4489,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of DataSchemaListing</returns>
+        /// <returns>Task of BusinessRulesDataSchemaListing</returns>
         
-        public async System.Threading.Tasks.Task<DataSchemaListing> GetBusinessrulesSchemasAsync ()
+        public async System.Threading.Tasks.Task<BusinessRulesDataSchemaListing> GetBusinessrulesSchemasAsync ()
         {
-             ApiResponse<DataSchemaListing> localVarResponse = await GetBusinessrulesSchemasAsyncWithHttpInfo();
+             ApiResponse<BusinessRulesDataSchemaListing> localVarResponse = await GetBusinessrulesSchemasAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -4504,9 +4504,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// GetBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchemaListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetBusinessrulesSchemasAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchemaListing>> GetBusinessrulesSchemasAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/businessrules/schemas";
@@ -4571,9 +4571,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetBusinessrulesSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
+            return new ApiResponse<BusinessRulesDataSchemaListing>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                (BusinessRulesDataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchemaListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7294,12 +7294,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Schema</param>
-        /// <returns>DataSchema</returns>
+        /// <param name="body">Business Rules Schema Create Request</param>
+        /// <returns>BusinessRulesDataSchema</returns>
         
-        public DataSchema PostBusinessrulesSchemas (DataSchema body)
+        public BusinessRulesDataSchema PostBusinessrulesSchemas (BusinessRulesSchemaCreateRequest body)
         {
-             ApiResponse<DataSchema> localVarResponse = PostBusinessrulesSchemasWithHttpInfo(body);
+             ApiResponse<BusinessRulesDataSchema> localVarResponse = PostBusinessrulesSchemasWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -7309,10 +7309,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Schema</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <param name="body">Business Rules Schema Create Request</param>
+        /// <returns>ApiResponse of BusinessRulesDataSchema</returns>
         
-        public ApiResponse< DataSchema > PostBusinessrulesSchemasWithHttpInfo (DataSchema body)
+        public ApiResponse< BusinessRulesDataSchema > PostBusinessrulesSchemasWithHttpInfo (BusinessRulesSchemaCreateRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7386,9 +7386,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<BusinessRulesDataSchema>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (BusinessRulesDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7400,12 +7400,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Schema</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <param name="body">Business Rules Schema Create Request</param>
+        /// <returns>Task of BusinessRulesDataSchema</returns>
         
-        public async System.Threading.Tasks.Task<DataSchema> PostBusinessrulesSchemasAsync (DataSchema body)
+        public async System.Threading.Tasks.Task<BusinessRulesDataSchema> PostBusinessrulesSchemasAsync (BusinessRulesSchemaCreateRequest body)
         {
-             ApiResponse<DataSchema> localVarResponse = await PostBusinessrulesSchemasAsyncWithHttpInfo(body);
+             ApiResponse<BusinessRulesDataSchema> localVarResponse = await PostBusinessrulesSchemasAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -7416,10 +7416,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// PostBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body">Schema</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <param name="body">Business Rules Schema Create Request</param>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchema)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostBusinessrulesSchemasAsyncWithHttpInfo (DataSchema body)
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchema>> PostBusinessrulesSchemasAsyncWithHttpInfo (BusinessRulesSchemaCreateRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -7494,9 +7494,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostBusinessrulesSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<BusinessRulesDataSchema>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (BusinessRulesDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7982,12 +7982,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="body">Data Schema</param>
-        /// <returns>DataSchema</returns>
+        /// <param name="body">Business Rules Schema Update Request</param>
+        /// <returns>BusinessRulesDataSchema</returns>
         
-        public DataSchema PutBusinessrulesSchema (string schemaId, DataSchema body)
+        public BusinessRulesDataSchema PutBusinessrulesSchema (string schemaId, BusinessRulesSchemaUpdateRequest body)
         {
-             ApiResponse<DataSchema> localVarResponse = PutBusinessrulesSchemaWithHttpInfo(schemaId, body);
+             ApiResponse<BusinessRulesDataSchema> localVarResponse = PutBusinessrulesSchemaWithHttpInfo(schemaId, body);
              return localVarResponse.Data;
         }
 
@@ -7998,10 +7998,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="body">Data Schema</param>
-        /// <returns>ApiResponse of DataSchema</returns>
+        /// <param name="body">Business Rules Schema Update Request</param>
+        /// <returns>ApiResponse of BusinessRulesDataSchema</returns>
         
-        public ApiResponse< DataSchema > PutBusinessrulesSchemaWithHttpInfo (string schemaId, DataSchema body)
+        public ApiResponse< BusinessRulesDataSchema > PutBusinessrulesSchemaWithHttpInfo (string schemaId, BusinessRulesSchemaUpdateRequest body)
         { 
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
@@ -8079,9 +8079,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutBusinessrulesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<BusinessRulesDataSchema>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (BusinessRulesDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8094,12 +8094,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="body">Data Schema</param>
-        /// <returns>Task of DataSchema</returns>
+        /// <param name="body">Business Rules Schema Update Request</param>
+        /// <returns>Task of BusinessRulesDataSchema</returns>
         
-        public async System.Threading.Tasks.Task<DataSchema> PutBusinessrulesSchemaAsync (string schemaId, DataSchema body)
+        public async System.Threading.Tasks.Task<BusinessRulesDataSchema> PutBusinessrulesSchemaAsync (string schemaId, BusinessRulesSchemaUpdateRequest body)
         {
-             ApiResponse<DataSchema> localVarResponse = await PutBusinessrulesSchemaAsyncWithHttpInfo(schemaId, body);
+             ApiResponse<BusinessRulesDataSchema> localVarResponse = await PutBusinessrulesSchemaAsyncWithHttpInfo(schemaId, body);
              return localVarResponse.Data;
 
         }
@@ -8111,10 +8111,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
-        /// <param name="body">Data Schema</param>
-        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        /// <param name="body">Business Rules Schema Update Request</param>
+        /// <returns>Task of ApiResponse (BusinessRulesDataSchema)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutBusinessrulesSchemaAsyncWithHttpInfo (string schemaId, DataSchema body)
+        public async System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchema>> PutBusinessrulesSchemaAsyncWithHttpInfo (string schemaId, BusinessRulesSchemaUpdateRequest body)
         { 
             // verify the required parameter 'schemaId' is set
             if (schemaId == null)
@@ -8194,9 +8194,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutBusinessrulesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<DataSchema>(localVarStatusCode,
+            return new ApiResponse<BusinessRulesDataSchema>(localVarStatusCode,
                 localVarHeaders,
-                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                (BusinessRulesDataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BusinessRulesDataSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

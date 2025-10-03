@@ -18,10 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class EmailSetting :  IEquatable<EmailSetting>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="EmailSetting" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
+        [JsonConstructorAttribute]
+        protected EmailSetting() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="EmailSetting" /> class.
+        /// </summary>
+        /// <param name="Name">The name of the email setting. (required).</param>
         /// <param name="Domains">The domain list settings..</param>
         public EmailSetting(string Name = null, Domains Domains = null)
         {
@@ -42,8 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the email setting.
         /// </summary>
+        /// <value>The name of the email setting.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

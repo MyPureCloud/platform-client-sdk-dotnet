@@ -210,15 +210,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageStickerAttachments">List of message stickers attached with this message..</param>
         /// <param name="QuickReplies">List of quick reply options offered with this message..</param>
         /// <param name="ButtonResponse">Button Response selected by user for this message..</param>
+        /// <param name="ButtonResponses">List of Button Response selected by user for this message..</param>
         /// <param name="Story">Ephemeral story content..</param>
         /// <param name="Cards">List of cards offered for this message.</param>
         /// <param name="NotificationTemplate">Template notification content..</param>
         /// <param name="DatePicker">DatePicker content object..</param>
+        /// <param name="ListPicker">ListPicker content object..</param>
         /// <param name="ContentType">Indicates the content type for this message.</param>
         /// <param name="SocialVisibility">For social media messages, the visibility of the message in the originating social platform.</param>
         /// <param name="Events">List of event elements.</param>
         /// <param name="InteractiveApplication">InteractiveApplication content..</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, DatePicker DatePicker = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null, InteractiveApplication InteractiveApplication = null)
+        /// <param name="PaymentRequest">Payment request content..</param>
+        /// <param name="PaymentResponse">Payment response content..</param>
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, List<ButtonResponse> ButtonResponses = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, DatePicker DatePicker = null, ListPicker ListPicker = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null, InteractiveApplication InteractiveApplication = null, PaymentRequest PaymentRequest = null, PaymentResponse PaymentResponse = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -235,14 +239,18 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessageStickerAttachments = MessageStickerAttachments;
             this.QuickReplies = QuickReplies;
             this.ButtonResponse = ButtonResponse;
+            this.ButtonResponses = ButtonResponses;
             this.Story = Story;
             this.Cards = Cards;
             this.NotificationTemplate = NotificationTemplate;
             this.DatePicker = DatePicker;
+            this.ListPicker = ListPicker;
             this.ContentType = ContentType;
             this.SocialVisibility = SocialVisibility;
             this.Events = Events;
             this.InteractiveApplication = InteractiveApplication;
+            this.PaymentRequest = PaymentRequest;
+            this.PaymentResponse = PaymentResponse;
             
         }
         
@@ -384,6 +392,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// List of Button Response selected by user for this message.
+        /// </summary>
+        /// <value>List of Button Response selected by user for this message.</value>
+        [DataMember(Name="buttonResponses", EmitDefaultValue=false)]
+        public List<ButtonResponse> ButtonResponses { get; set; }
+
+
+
+        /// <summary>
         /// Ephemeral story content.
         /// </summary>
         /// <value>Ephemeral story content.</value>
@@ -419,6 +436,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// ListPicker content object.
+        /// </summary>
+        /// <value>ListPicker content object.</value>
+        [DataMember(Name="listPicker", EmitDefaultValue=false)]
+        public ListPicker ListPicker { get; set; }
+
+
+
 
 
 
@@ -438,6 +464,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>InteractiveApplication content.</value>
         [DataMember(Name="interactiveApplication", EmitDefaultValue=false)]
         public InteractiveApplication InteractiveApplication { get; set; }
+
+
+
+        /// <summary>
+        /// Payment request content.
+        /// </summary>
+        /// <value>Payment request content.</value>
+        [DataMember(Name="paymentRequest", EmitDefaultValue=false)]
+        public PaymentRequest PaymentRequest { get; set; }
+
+
+
+        /// <summary>
+        /// Payment response content.
+        /// </summary>
+        /// <value>Payment response content.</value>
+        [DataMember(Name="paymentResponse", EmitDefaultValue=false)]
+        public PaymentResponse PaymentResponse { get; set; }
 
 
         /// <summary>
@@ -464,14 +508,18 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessageStickerAttachments: ").Append(MessageStickerAttachments).Append("\n");
             sb.Append("  QuickReplies: ").Append(QuickReplies).Append("\n");
             sb.Append("  ButtonResponse: ").Append(ButtonResponse).Append("\n");
+            sb.Append("  ButtonResponses: ").Append(ButtonResponses).Append("\n");
             sb.Append("  Story: ").Append(Story).Append("\n");
             sb.Append("  Cards: ").Append(Cards).Append("\n");
             sb.Append("  NotificationTemplate: ").Append(NotificationTemplate).Append("\n");
             sb.Append("  DatePicker: ").Append(DatePicker).Append("\n");
+            sb.Append("  ListPicker: ").Append(ListPicker).Append("\n");
             sb.Append("  ContentType: ").Append(ContentType).Append("\n");
             sb.Append("  SocialVisibility: ").Append(SocialVisibility).Append("\n");
             sb.Append("  Events: ").Append(Events).Append("\n");
             sb.Append("  InteractiveApplication: ").Append(InteractiveApplication).Append("\n");
+            sb.Append("  PaymentRequest: ").Append(PaymentRequest).Append("\n");
+            sb.Append("  PaymentResponse: ").Append(PaymentResponse).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -588,6 +636,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ButtonResponse.Equals(other.ButtonResponse)
                 ) &&
                 (
+                    this.ButtonResponses == other.ButtonResponses ||
+                    this.ButtonResponses != null &&
+                    this.ButtonResponses.SequenceEqual(other.ButtonResponses)
+                ) &&
+                (
                     this.Story == other.Story ||
                     this.Story != null &&
                     this.Story.Equals(other.Story)
@@ -608,6 +661,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DatePicker.Equals(other.DatePicker)
                 ) &&
                 (
+                    this.ListPicker == other.ListPicker ||
+                    this.ListPicker != null &&
+                    this.ListPicker.Equals(other.ListPicker)
+                ) &&
+                (
                     this.ContentType == other.ContentType ||
                     this.ContentType != null &&
                     this.ContentType.Equals(other.ContentType)
@@ -626,6 +684,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InteractiveApplication == other.InteractiveApplication ||
                     this.InteractiveApplication != null &&
                     this.InteractiveApplication.Equals(other.InteractiveApplication)
+                ) &&
+                (
+                    this.PaymentRequest == other.PaymentRequest ||
+                    this.PaymentRequest != null &&
+                    this.PaymentRequest.Equals(other.PaymentRequest)
+                ) &&
+                (
+                    this.PaymentResponse == other.PaymentResponse ||
+                    this.PaymentResponse != null &&
+                    this.PaymentResponse.Equals(other.PaymentResponse)
                 );
         }
 
@@ -685,6 +753,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.ButtonResponse != null)
                     hash = hash * 59 + this.ButtonResponse.GetHashCode();
 
+                if (this.ButtonResponses != null)
+                    hash = hash * 59 + this.ButtonResponses.GetHashCode();
+
                 if (this.Story != null)
                     hash = hash * 59 + this.Story.GetHashCode();
 
@@ -697,6 +768,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DatePicker != null)
                     hash = hash * 59 + this.DatePicker.GetHashCode();
 
+                if (this.ListPicker != null)
+                    hash = hash * 59 + this.ListPicker.GetHashCode();
+
                 if (this.ContentType != null)
                     hash = hash * 59 + this.ContentType.GetHashCode();
 
@@ -708,6 +782,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InteractiveApplication != null)
                     hash = hash * 59 + this.InteractiveApplication.GetHashCode();
+
+                if (this.PaymentRequest != null)
+                    hash = hash * 59 + this.PaymentRequest.GetHashCode();
+
+                if (this.PaymentResponse != null)
+                    hash = hash * 59 + this.PaymentResponse.GetHashCode();
 
                 return hash;
             }

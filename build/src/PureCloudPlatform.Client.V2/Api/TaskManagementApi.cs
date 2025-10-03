@@ -384,7 +384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Workitem</returns>
         
-        Workitem GetTaskmanagementWorkitem (string workitemId, string expands = null);
+        Workitem GetTaskmanagementWorkitem (string workitemId, List<string> expands = null);
 
         /// <summary>
         /// Get a workitem
@@ -397,7 +397,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        ApiResponse<Workitem> GetTaskmanagementWorkitemWithHttpInfo (string workitemId, string expands = null);
+        ApiResponse<Workitem> GetTaskmanagementWorkitemWithHttpInfo (string workitemId, List<string> expands = null);
 
         /// <summary>
         /// Get a listing of a workitem&#39;s attribute change history
@@ -2356,7 +2356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Task of Workitem</returns>
         
-        System.Threading.Tasks.Task<Workitem> GetTaskmanagementWorkitemAsync (string workitemId, string expands = null);
+        System.Threading.Tasks.Task<Workitem> GetTaskmanagementWorkitemAsync (string workitemId, List<string> expands = null);
 
         /// <summary>
         /// Get a workitem
@@ -2369,7 +2369,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Workitem>> GetTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId, string expands = null);
+        System.Threading.Tasks.Task<ApiResponse<Workitem>> GetTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId, List<string> expands = null);
 
         /// <summary>
         /// Get a listing of a workitem&#39;s attribute change history
@@ -6951,7 +6951,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Workitem</returns>
         
-        public Workitem GetTaskmanagementWorkitem (string workitemId, string expands = null)
+        public Workitem GetTaskmanagementWorkitem (string workitemId, List<string> expands = null)
         {
              ApiResponse<Workitem> localVarResponse = GetTaskmanagementWorkitemWithHttpInfo(workitemId, expands);
              return localVarResponse.Data;
@@ -6966,7 +6966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>ApiResponse of Workitem</returns>
         
-        public ApiResponse< Workitem > GetTaskmanagementWorkitemWithHttpInfo (string workitemId, string expands = null)
+        public ApiResponse< Workitem > GetTaskmanagementWorkitemWithHttpInfo (string workitemId, List<string> expands = null)
         { 
             // verify the required parameter 'workitemId' is set
             if (workitemId == null)
@@ -7006,7 +7006,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (workitemId != null) localVarPathParams.Add("workitemId", this.Configuration.ApiClient.ParameterToString(workitemId));
 
             // Query params
-            if (expands != null) localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(expands)));
+            if (expands != null) expands.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -7053,7 +7053,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Task of Workitem</returns>
         
-        public async System.Threading.Tasks.Task<Workitem> GetTaskmanagementWorkitemAsync (string workitemId, string expands = null)
+        public async System.Threading.Tasks.Task<Workitem> GetTaskmanagementWorkitemAsync (string workitemId, List<string> expands = null)
         {
              ApiResponse<Workitem> localVarResponse = await GetTaskmanagementWorkitemAsyncWithHttpInfo(workitemId, expands);
              return localVarResponse.Data;
@@ -7069,7 +7069,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="expands">Which fields to expand. Comma separated if more than one. (optional)</param>
         /// <returns>Task of ApiResponse (Workitem)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Workitem>> GetTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId, string expands = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Workitem>> GetTaskmanagementWorkitemAsyncWithHttpInfo (string workitemId, List<string> expands = null)
         { 
             // verify the required parameter 'workitemId' is set
             if (workitemId == null)
@@ -7110,7 +7110,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (workitemId != null) localVarPathParams.Add("workitemId", this.Configuration.ApiClient.ParameterToString(workitemId));
 
             // Query params
-            if (expands != null) localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(expands)));
+            if (expands != null) expands.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expands", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

@@ -967,7 +967,7 @@ namespace Example
 
 ## GetTaskmanagementWorkitem
 
-> [**Workitem**](Workitem) GetTaskmanagementWorkitem (string workitemId, string expands = null)
+> [**Workitem**](Workitem) GetTaskmanagementWorkitem (string workitemId, List<string> expands = null)
 
 
 Get a workitem
@@ -999,7 +999,7 @@ namespace Example
 
             var apiInstance = new TaskManagementApi();
             var workitemId = workitemId_example;  // string | Workitem ID
-            var expands = expands_example;  // string | Which fields to expand. Comma separated if more than one. (optional) 
+            var expands = new List<string>(); // List<string> | Which fields to expand. Comma separated if more than one. (optional) 
 
             try
             { 
@@ -1022,7 +1022,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **workitemId** | **string**| Workitem ID |  |
-| **expands** | **string**| Which fields to expand. Comma separated if more than one. | [optional] <br />**Values**: type, workbin, status, queue, assignee |
+| **expands** | [**List<string>**](string)| Which fields to expand. Comma separated if more than one. | [optional] <br />**Values**: type, workbin, status, queue, assignee |
 
 ### Return type
 
@@ -4925,4 +4925,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 244.0.0_
+_PureCloudPlatform.Client.V2 245.0.0_
