@@ -21,9 +21,12 @@
 | **ModifiedBy** | [**DomainEntityRef**](DomainEntityRef) | User reference that last modified this Integration | [optional] |
 | **CreateStatus** | **string** | Status of asynchronous create operation | [optional] |
 | **CreateError** | [**ErrorBody**](ErrorBody) | Error information returned, if createStatus is set to Error | [optional] |
-| **IdentityResolution** | [**IdentityResolutionConfig**](IdentityResolutionConfig) | The configuration to control identity resolution. | [optional] |
+| **AppleIMessageApp** | [**AppleIMessageApp**](AppleIMessageApp) | Interactive Application (iMessage App) Settings. | [optional] |
+| **AppleAuthentication** | [**AppleAuthentication**](AppleAuthentication) | The Apple Messages for Business authentication setting. | [optional] |
+| **ApplePay** | [**ApplePay**](ApplePay) | Apple Pay settings. | [optional] |
+| **IdentityResolution** | [**AppleIdentityResolutionConfig**](AppleIdentityResolutionConfig) | The configuration to control identity resolution. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_

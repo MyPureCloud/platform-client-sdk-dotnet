@@ -2515,7 +2515,7 @@ namespace Example
 
 ## GetArchitectIvrIdentityresolution
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetArchitectIvrIdentityresolution (string ivrId)
+> [**IVRIdentityResolutionConfig**](IVRIdentityResolutionConfig) GetArchitectIvrIdentityresolution (string ivrId)
 
 
 Get an IVR IdentityResolutionConfig.
@@ -2552,7 +2552,7 @@ namespace Example
             try
             { 
                 // Get an IVR IdentityResolutionConfig.
-                IdentityResolutionConfig result = apiInstance.GetArchitectIvrIdentityresolution(ivrId);
+                IVRIdentityResolutionConfig result = apiInstance.GetArchitectIvrIdentityresolution(ivrId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2573,7 +2573,7 @@ namespace Example
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**IVRIdentityResolutionConfig**](IVRIdentityResolutionConfig)
 
 
 ## GetArchitectIvrs
@@ -9105,7 +9105,7 @@ namespace Example
 
 ## PutArchitectIvrIdentityresolution
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutArchitectIvrIdentityresolution (string ivrId, IdentityResolutionConfig body)
+> [**IVRIdentityResolutionConfig**](IVRIdentityResolutionConfig) PutArchitectIvrIdentityresolution (string ivrId, IVRIdentityResolutionConfig body)
 
 
 Update an IVR IdentityResolutionConfig.
@@ -9138,12 +9138,12 @@ namespace Example
 
             var apiInstance = new ArchitectApi();
             var ivrId = ivrId_example;  // string | IVR id
-            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | 
+            var body = new IVRIdentityResolutionConfig(); // IVRIdentityResolutionConfig | 
 
             try
             { 
                 // Update an IVR IdentityResolutionConfig.
-                IdentityResolutionConfig result = apiInstance.PutArchitectIvrIdentityresolution(ivrId, body);
+                IVRIdentityResolutionConfig result = apiInstance.PutArchitectIvrIdentityresolution(ivrId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9161,11 +9161,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ivrId** | **string**| IVR id |  |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  |  |
+| **body** | [**IVRIdentityResolutionConfig**](IVRIdentityResolutionConfig)|  |  |
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**IVRIdentityResolutionConfig**](IVRIdentityResolutionConfig)
 
 
 ## PutArchitectPrompt
@@ -9957,4 +9957,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_

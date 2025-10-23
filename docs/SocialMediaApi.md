@@ -760,7 +760,7 @@ namespace Example
 
 ## GetSocialmediaEscalationrule
 
-> [**EscalationRuleResponse**](EscalationRuleResponse) GetSocialmediaEscalationrule (string escalationRuleId)
+> [**EscalationRuleResponse**](EscalationRuleResponse) GetSocialmediaEscalationrule (string escalationRuleId, string expand = null)
 
 
 Get a single escalation rule.
@@ -792,11 +792,12 @@ namespace Example
 
             var apiInstance = new SocialMediaApi();
             var escalationRuleId = escalationRuleId_example;  // string | escalationRuleId
+            var expand = expand_example;  // string | which fields, if any, to expand (optional) 
 
             try
             { 
                 // Get a single escalation rule.
-                EscalationRuleResponse result = apiInstance.GetSocialmediaEscalationrule(escalationRuleId);
+                EscalationRuleResponse result = apiInstance.GetSocialmediaEscalationrule(escalationRuleId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -814,6 +815,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **escalationRuleId** | **string**| escalationRuleId |  |
+| **expand** | **string**| which fields, if any, to expand | [optional] <br />**Values**: dataIngestionRule |
 
 ### Return type
 
@@ -3324,4 +3326,4 @@ namespace Example
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_

@@ -52,6 +52,7 @@
 | **RecordingState** | **string** |  | [optional] |
 | **RecordersState** | [**QueueConversationCallEventTopicRecordersState**](QueueConversationCallEventTopicRecordersState) |  | [optional] |
 | **Disposition** | [**QueueConversationCallEventTopicDisposition**](QueueConversationCallEventTopicDisposition) |  | [optional] |
+| **TransferSource** | **string** |  | [optional] |
 | **SecurePause** | **bool?** |  | [optional] |
 | **Group** | [**QueueConversationCallEventTopicUriReference**](QueueConversationCallEventTopicUriReference) |  | [optional] |
 | **Ani** | **string** |  | [optional] |
@@ -66,4 +67,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_
