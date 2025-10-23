@@ -3250,6 +3250,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Campaign> PostOutboundCampaignsWithHttpInfo (Campaign body, bool? useMaxCallsPerAgentDecimal = null);
 
         /// <summary>
+        /// Get performance data for a list of campaigns
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs. Maximum of 50 IDs allowed.</param>
+        /// <returns>CampaignPerformanceDataListing</returns>
+        
+        CampaignPerformanceDataListing PostOutboundCampaignsPerformanceQuery (List<string> body);
+
+        /// <summary>
+        /// Get performance data for a list of campaigns
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs. Maximum of 50 IDs allowed.</param>
+        /// <returns>ApiResponse of CampaignPerformanceDataListing</returns>
+        
+        ApiResponse<CampaignPerformanceDataListing> PostOutboundCampaignsPerformanceQueryWithHttpInfo (List<string> body);
+
+        /// <summary>
         /// Get progress for a list of campaigns
         /// </summary>
         /// <remarks>
@@ -7832,6 +7856,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Campaign)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Campaign>> PostOutboundCampaignsAsyncWithHttpInfo (Campaign body, bool? useMaxCallsPerAgentDecimal = null);
+
+        /// <summary>
+        /// Get performance data for a list of campaigns
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs. Maximum of 50 IDs allowed.</param>
+        /// <returns>Task of CampaignPerformanceDataListing</returns>
+        
+        System.Threading.Tasks.Task<CampaignPerformanceDataListing> PostOutboundCampaignsPerformanceQueryAsync (List<string> body);
+
+        /// <summary>
+        /// Get performance data for a list of campaigns
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs. Maximum of 50 IDs allowed.</param>
+        /// <returns>Task of ApiResponse (CampaignPerformanceDataListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CampaignPerformanceDataListing>> PostOutboundCampaignsPerformanceQueryAsyncWithHttpInfo (List<string> body);
 
         /// <summary>
         /// Get progress for a list of campaigns
@@ -34229,6 +34277,217 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Campaign>(localVarStatusCode,
                 localVarHeaders,
                 (Campaign) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Campaign)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get performance data for a list of campaigns 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs. Maximum of 50 IDs allowed.</param>
+        /// <returns>CampaignPerformanceDataListing</returns>
+        
+        public CampaignPerformanceDataListing PostOutboundCampaignsPerformanceQuery (List<string> body)
+        {
+             ApiResponse<CampaignPerformanceDataListing> localVarResponse = PostOutboundCampaignsPerformanceQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get performance data for a list of campaigns 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs. Maximum of 50 IDs allowed.</param>
+        /// <returns>ApiResponse of CampaignPerformanceDataListing</returns>
+        
+        public ApiResponse< CampaignPerformanceDataListing > PostOutboundCampaignsPerformanceQueryWithHttpInfo (List<string> body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaignsPerformanceQuery");
+
+            var localVarPath = "/api/v2/outbound/campaigns/performance/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundCampaignsPerformanceQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundCampaignsPerformanceQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignPerformanceDataListing>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignPerformanceDataListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignPerformanceDataListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get performance data for a list of campaigns 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs. Maximum of 50 IDs allowed.</param>
+        /// <returns>Task of CampaignPerformanceDataListing</returns>
+        
+        public async System.Threading.Tasks.Task<CampaignPerformanceDataListing> PostOutboundCampaignsPerformanceQueryAsync (List<string> body)
+        {
+             ApiResponse<CampaignPerformanceDataListing> localVarResponse = await PostOutboundCampaignsPerformanceQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get performance data for a list of campaigns 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Campaign IDs. Maximum of 50 IDs allowed.</param>
+        /// <returns>Task of ApiResponse (CampaignPerformanceDataListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignPerformanceDataListing>> PostOutboundCampaignsPerformanceQueryAsyncWithHttpInfo (List<string> body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaignsPerformanceQuery");
+            
+
+            var localVarPath = "/api/v2/outbound/campaigns/performance/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundCampaignsPerformanceQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostOutboundCampaignsPerformanceQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignPerformanceDataListing>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignPerformanceDataListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignPerformanceDataListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -48,7 +48,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Disconnected for "disconnected"
             /// </summary>
             [EnumMember(Value = "disconnected")]
-            Disconnected
+            Disconnected,
+            
+            /// <summary>
+            /// Enum Parked for "parked"
+            /// </summary>
+            [EnumMember(Value = "parked")]
+            Parked
         }
         /// <summary>
         /// Gets or Sets InitialState
@@ -80,7 +86,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Disconnected for "disconnected"
             /// </summary>
             [EnumMember(Value = "disconnected")]
-            Disconnected
+            Disconnected,
+            
+            /// <summary>
+            /// Enum Parked for "parked"
+            /// </summary>
+            [EnumMember(Value = "parked")]
+            Parked
         }
         /// <summary>
         /// Whether a message is inbound or outbound.
@@ -402,7 +414,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EngagementSource">Provide more visibility into what integrations customers are creating with Open Messaging. String values are defined in the Constants.java named ENGAGEMENT_SOURCE_*.</param>
         /// <param name="ByoSmsIntegrationId">ByoSmsIntegrationId.</param>
         /// <param name="QueueMediaSettings">Represents the queue setting for this media..</param>
-        public QueueConversationEventTopicMessage(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, bool? Held = null, QueueConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicAddress ToAddress = null, QueueConversationEventTopicAddress FromAddress = null, List<QueueConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationEventTopicJourneyContext JourneyContext = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, string EngagementSource = null, string ByoSmsIntegrationId = null, QueueConversationEventTopicQueueMediaSettings QueueMediaSettings = null)
+        /// <param name="ResumeTime">The time when a parked message should resume..</param>
+        /// <param name="ParkTime">The time when an  parked message was parked..</param>
+        public QueueConversationEventTopicMessage(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, DirectionEnum? Direction = null, bool? Held = null, QueueConversationEventTopicErrorDetails ErrorInfo = null, string Provider = null, string ScriptId = null, string PeerId = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, QueueConversationEventTopicAddress ToAddress = null, QueueConversationEventTopicAddress FromAddress = null, List<QueueConversationEventTopicMessageDetails> Messages = null, string MessagesTranscriptUri = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, QueueConversationEventTopicJourneyContext JourneyContext = null, QueueConversationEventTopicWrapup Wrapup = null, QueueConversationEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, string EngagementSource = null, string ByoSmsIntegrationId = null, QueueConversationEventTopicQueueMediaSettings QueueMediaSettings = null, DateTime? ResumeTime = null, DateTime? ParkTime = null)
         {
             this.Id = Id;
             this.State = State;
@@ -432,6 +446,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EngagementSource = EngagementSource;
             this.ByoSmsIntegrationId = ByoSmsIntegrationId;
             this.QueueMediaSettings = QueueMediaSettings;
+            this.ResumeTime = ResumeTime;
+            this.ParkTime = ParkTime;
             
         }
         
@@ -652,6 +668,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public QueueConversationEventTopicQueueMediaSettings QueueMediaSettings { get; set; }
 
 
+
+        /// <summary>
+        /// The time when a parked message should resume.
+        /// </summary>
+        /// <value>The time when a parked message should resume.</value>
+        [DataMember(Name="resumeTime", EmitDefaultValue=false)]
+        public DateTime? ResumeTime { get; set; }
+
+
+
+        /// <summary>
+        /// The time when an  parked message was parked.
+        /// </summary>
+        /// <value>The time when an  parked message was parked.</value>
+        [DataMember(Name="parkTime", EmitDefaultValue=false)]
+        public DateTime? ParkTime { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -689,6 +723,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EngagementSource: ").Append(EngagementSource).Append("\n");
             sb.Append("  ByoSmsIntegrationId: ").Append(ByoSmsIntegrationId).Append("\n");
             sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
+            sb.Append("  ResumeTime: ").Append(ResumeTime).Append("\n");
+            sb.Append("  ParkTime: ").Append(ParkTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -868,6 +904,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueueMediaSettings == other.QueueMediaSettings ||
                     this.QueueMediaSettings != null &&
                     this.QueueMediaSettings.Equals(other.QueueMediaSettings)
+                ) &&
+                (
+                    this.ResumeTime == other.ResumeTime ||
+                    this.ResumeTime != null &&
+                    this.ResumeTime.Equals(other.ResumeTime)
+                ) &&
+                (
+                    this.ParkTime == other.ParkTime ||
+                    this.ParkTime != null &&
+                    this.ParkTime.Equals(other.ParkTime)
                 );
         }
 
@@ -965,6 +1011,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueueMediaSettings != null)
                     hash = hash * 59 + this.QueueMediaSettings.GetHashCode();
+
+                if (this.ResumeTime != null)
+                    hash = hash * 59 + this.ResumeTime.GetHashCode();
+
+                if (this.ParkTime != null)
+                    hash = hash * 59 + this.ParkTime.GetHashCode();
 
                 return hash;
             }

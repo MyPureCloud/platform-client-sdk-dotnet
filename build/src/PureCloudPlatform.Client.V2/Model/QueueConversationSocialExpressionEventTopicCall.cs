@@ -424,7 +424,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentAssistantId">UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation..</param>
         /// <param name="QueueMediaSettings">QueueMediaSettings.</param>
         /// <param name="Disposition">Disposition.</param>
-        public QueueConversationSocialExpressionEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationSocialExpressionEventTopicRecordersState RecordersState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationSocialExpressionEventTopicAddress Self = null, QueueConversationSocialExpressionEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationSocialExpressionEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationSocialExpressionEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, QueueConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null, QueueConversationSocialExpressionEventTopicDisposition Disposition = null)
+        /// <param name="TransferSource">Indicates how call reaches the agent..</param>
+        public QueueConversationSocialExpressionEventTopicCall(string Id = null, StateEnum? State = null, InitialStateEnum? InitialState = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, QueueConversationSocialExpressionEventTopicRecordersState RecordersState = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? SecurePause = null, QueueConversationSocialExpressionEventTopicErrorDetails ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DirectionEnum? Direction = null, string DocumentId = null, QueueConversationSocialExpressionEventTopicAddress Self = null, QueueConversationSocialExpressionEventTopicAddress Other = null, string Provider = null, string ScriptId = null, string PeerId = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, List<QueueConversationSocialExpressionEventTopicDisconnectReason> DisconnectReasons = null, QueueConversationSocialExpressionEventTopicFaxStatus FaxStatus = null, string UuiData = null, DateTime? BargedTime = null, QueueConversationSocialExpressionEventTopicWrapup Wrapup = null, QueueConversationSocialExpressionEventTopicAfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, QueueConversationSocialExpressionEventTopicQueueMediaSettings QueueMediaSettings = null, QueueConversationSocialExpressionEventTopicDisposition Disposition = null, string TransferSource = null)
         {
             this.Id = Id;
             this.State = State;
@@ -458,6 +459,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AgentAssistantId = AgentAssistantId;
             this.QueueMediaSettings = QueueMediaSettings;
             this.Disposition = Disposition;
+            this.TransferSource = TransferSource;
             
         }
         
@@ -708,6 +710,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public QueueConversationSocialExpressionEventTopicDisposition Disposition { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates how call reaches the agent.
+        /// </summary>
+        /// <value>Indicates how call reaches the agent.</value>
+        [DataMember(Name="transferSource", EmitDefaultValue=false)]
+        public string TransferSource { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -749,6 +760,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AgentAssistantId: ").Append(AgentAssistantId).Append("\n");
             sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
             sb.Append("  Disposition: ").Append(Disposition).Append("\n");
+            sb.Append("  TransferSource: ").Append(TransferSource).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -948,6 +960,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Disposition == other.Disposition ||
                     this.Disposition != null &&
                     this.Disposition.Equals(other.Disposition)
+                ) &&
+                (
+                    this.TransferSource == other.TransferSource ||
+                    this.TransferSource != null &&
+                    this.TransferSource.Equals(other.TransferSource)
                 );
         }
 
@@ -1057,6 +1074,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Disposition != null)
                     hash = hash * 59 + this.Disposition.GetHashCode();
+
+                if (this.TransferSource != null)
+                    hash = hash * 59 + this.TransferSource.GetHashCode();
 
                 return hash;
             }

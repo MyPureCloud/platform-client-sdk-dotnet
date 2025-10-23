@@ -102,8 +102,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PlannedShrinkage">Whether this activity code is considered planned or unplanned shrinkage.</param>
         /// <param name="Interruptible">Whether this activity code is considered interruptible.</param>
         /// <param name="SecondaryPresences">The secondary presences of this activity code.</param>
+        /// <param name="PlanningGroups">Planning groups associated with this activity code.</param>
         /// <param name="Metadata">Version metadata of this activity code.</param>
-        public BusinessUnitActivityCode(string Name = null, bool? Active = null, bool? DefaultCode = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, List<SecondaryPresence> SecondaryPresences = null, WfmVersionedEntityMetadata Metadata = null)
+        public BusinessUnitActivityCode(string Name = null, bool? Active = null, bool? DefaultCode = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, bool? CountsTowardShrinkage = null, bool? PlannedShrinkage = null, bool? Interruptible = null, List<SecondaryPresence> SecondaryPresences = null, List<PlanningGroupReference> PlanningGroups = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
             this.Active = Active;
@@ -117,6 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PlannedShrinkage = PlannedShrinkage;
             this.Interruptible = Interruptible;
             this.SecondaryPresences = SecondaryPresences;
+            this.PlanningGroups = PlanningGroups;
             this.Metadata = Metadata;
             
         }
@@ -233,6 +235,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Planning groups associated with this activity code
+        /// </summary>
+        /// <value>Planning groups associated with this activity code</value>
+        [DataMember(Name="planningGroups", EmitDefaultValue=false)]
+        public List<PlanningGroupReference> PlanningGroups { get; set; }
+
+
+
+        /// <summary>
         /// Version metadata of this activity code
         /// </summary>
         /// <value>Version metadata of this activity code</value>
@@ -271,6 +282,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PlannedShrinkage: ").Append(PlannedShrinkage).Append("\n");
             sb.Append("  Interruptible: ").Append(Interruptible).Append("\n");
             sb.Append("  SecondaryPresences: ").Append(SecondaryPresences).Append("\n");
+            sb.Append("  PlanningGroups: ").Append(PlanningGroups).Append("\n");
             sb.Append("  Metadata: ").Append(Metadata).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -379,6 +391,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SecondaryPresences.SequenceEqual(other.SecondaryPresences)
                 ) &&
                 (
+                    this.PlanningGroups == other.PlanningGroups ||
+                    this.PlanningGroups != null &&
+                    this.PlanningGroups.SequenceEqual(other.PlanningGroups)
+                ) &&
+                (
                     this.Metadata == other.Metadata ||
                     this.Metadata != null &&
                     this.Metadata.Equals(other.Metadata)
@@ -439,6 +456,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SecondaryPresences != null)
                     hash = hash * 59 + this.SecondaryPresences.GetHashCode();
+
+                if (this.PlanningGroups != null)
+                    hash = hash * 59 + this.PlanningGroups.GetHashCode();
 
                 if (this.Metadata != null)
                     hash = hash * 59 + this.Metadata.GetHashCode();

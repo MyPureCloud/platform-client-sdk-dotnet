@@ -31,12 +31,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QueueId">The identifier of the queue to be used for the callback..</param>
         /// <param name="AgentId">The agentId. (required).</param>
         /// <param name="CallbackScheduledTime">The scheduled date-time for the callback. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public PatchCallbackRequest(string ConversationId = null, string QueueId = null, string AgentId = null, DateTime? CallbackScheduledTime = null)
+        /// <param name="CountryCode">The countryCode.</param>
+        /// <param name="CallbackNumbers">The callbackNumbers.</param>
+        /// <param name="ValidateCallbackNumbers">validateCallbackNumbers.</param>
+        public PatchCallbackRequest(string ConversationId = null, string QueueId = null, string AgentId = null, DateTime? CallbackScheduledTime = null, string CountryCode = null, List<string> CallbackNumbers = null, bool? ValidateCallbackNumbers = null)
         {
             this.ConversationId = ConversationId;
             this.QueueId = QueueId;
             this.AgentId = AgentId;
             this.CallbackScheduledTime = CallbackScheduledTime;
+            this.CountryCode = CountryCode;
+            this.CallbackNumbers = CallbackNumbers;
+            this.ValidateCallbackNumbers = ValidateCallbackNumbers;
             
         }
         
@@ -77,6 +83,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? CallbackScheduledTime { get; set; }
 
 
+
+        /// <summary>
+        /// The countryCode
+        /// </summary>
+        /// <value>The countryCode</value>
+        [DataMember(Name="countryCode", EmitDefaultValue=false)]
+        public string CountryCode { get; set; }
+
+
+
+        /// <summary>
+        /// The callbackNumbers
+        /// </summary>
+        /// <value>The callbackNumbers</value>
+        [DataMember(Name="callbackNumbers", EmitDefaultValue=false)]
+        public List<string> CallbackNumbers { get; set; }
+
+
+
+        /// <summary>
+        /// validateCallbackNumbers
+        /// </summary>
+        /// <value>validateCallbackNumbers</value>
+        [DataMember(Name="validateCallbackNumbers", EmitDefaultValue=false)]
+        public bool? ValidateCallbackNumbers { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QueueId: ").Append(QueueId).Append("\n");
             sb.Append("  AgentId: ").Append(AgentId).Append("\n");
             sb.Append("  CallbackScheduledTime: ").Append(CallbackScheduledTime).Append("\n");
+            sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
+            sb.Append("  CallbackNumbers: ").Append(CallbackNumbers).Append("\n");
+            sb.Append("  ValidateCallbackNumbers: ").Append(ValidateCallbackNumbers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,6 +185,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CallbackScheduledTime == other.CallbackScheduledTime ||
                     this.CallbackScheduledTime != null &&
                     this.CallbackScheduledTime.Equals(other.CallbackScheduledTime)
+                ) &&
+                (
+                    this.CountryCode == other.CountryCode ||
+                    this.CountryCode != null &&
+                    this.CountryCode.Equals(other.CountryCode)
+                ) &&
+                (
+                    this.CallbackNumbers == other.CallbackNumbers ||
+                    this.CallbackNumbers != null &&
+                    this.CallbackNumbers.SequenceEqual(other.CallbackNumbers)
+                ) &&
+                (
+                    this.ValidateCallbackNumbers == other.ValidateCallbackNumbers ||
+                    this.ValidateCallbackNumbers != null &&
+                    this.ValidateCallbackNumbers.Equals(other.ValidateCallbackNumbers)
                 );
         }
 
@@ -174,6 +225,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CallbackScheduledTime != null)
                     hash = hash * 59 + this.CallbackScheduledTime.GetHashCode();
+
+                if (this.CountryCode != null)
+                    hash = hash * 59 + this.CountryCode.GetHashCode();
+
+                if (this.CallbackNumbers != null)
+                    hash = hash * 59 + this.CallbackNumbers.GetHashCode();
+
+                if (this.ValidateCallbackNumbers != null)
+                    hash = hash * 59 + this.ValidateCallbackNumbers.GetHashCode();
 
                 return hash;
             }

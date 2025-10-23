@@ -33,7 +33,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessagesForBusinessId">The Apple Messages for Business Id for the Apple messaging integration. (required).</param>
         /// <param name="BusinessName">The name of the business..</param>
         /// <param name="LogoUrl">The url of the businesses logo..</param>
-        public AppleIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingRequestReference MessagingSetting = null, string MessagesForBusinessId = null, string BusinessName = null, string LogoUrl = null)
+        /// <param name="AppleIMessageApp">Interactive Application (iMessage App) Settings..</param>
+        /// <param name="AppleAuthentication">The Apple Messages for Business authentication setting..</param>
+        /// <param name="ApplePay">Apple Pay settings..</param>
+        public AppleIntegrationRequest(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingRequestReference MessagingSetting = null, string MessagesForBusinessId = null, string BusinessName = null, string LogoUrl = null, AppleIMessageApp AppleIMessageApp = null, AppleAuthentication AppleAuthentication = null, ApplePay ApplePay = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
@@ -41,6 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MessagesForBusinessId = MessagesForBusinessId;
             this.BusinessName = BusinessName;
             this.LogoUrl = LogoUrl;
+            this.AppleIMessageApp = AppleIMessageApp;
+            this.AppleAuthentication = AppleAuthentication;
+            this.ApplePay = ApplePay;
             
         }
         
@@ -110,6 +116,33 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Interactive Application (iMessage App) Settings.
+        /// </summary>
+        /// <value>Interactive Application (iMessage App) Settings.</value>
+        [DataMember(Name="appleIMessageApp", EmitDefaultValue=false)]
+        public AppleIMessageApp AppleIMessageApp { get; set; }
+
+
+
+        /// <summary>
+        /// The Apple Messages for Business authentication setting.
+        /// </summary>
+        /// <value>The Apple Messages for Business authentication setting.</value>
+        [DataMember(Name="appleAuthentication", EmitDefaultValue=false)]
+        public AppleAuthentication AppleAuthentication { get; set; }
+
+
+
+        /// <summary>
+        /// Apple Pay settings.
+        /// </summary>
+        /// <value>Apple Pay settings.</value>
+        [DataMember(Name="applePay", EmitDefaultValue=false)]
+        public ApplePay ApplePay { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -133,6 +166,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessagesForBusinessId: ").Append(MessagesForBusinessId).Append("\n");
             sb.Append("  BusinessName: ").Append(BusinessName).Append("\n");
             sb.Append("  LogoUrl: ").Append(LogoUrl).Append("\n");
+            sb.Append("  AppleIMessageApp: ").Append(AppleIMessageApp).Append("\n");
+            sb.Append("  AppleAuthentication: ").Append(AppleAuthentication).Append("\n");
+            sb.Append("  ApplePay: ").Append(ApplePay).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -210,6 +246,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LogoUrl.Equals(other.LogoUrl)
                 ) &&
                 (
+                    this.AppleIMessageApp == other.AppleIMessageApp ||
+                    this.AppleIMessageApp != null &&
+                    this.AppleIMessageApp.Equals(other.AppleIMessageApp)
+                ) &&
+                (
+                    this.AppleAuthentication == other.AppleAuthentication ||
+                    this.AppleAuthentication != null &&
+                    this.AppleAuthentication.Equals(other.AppleAuthentication)
+                ) &&
+                (
+                    this.ApplePay == other.ApplePay ||
+                    this.ApplePay != null &&
+                    this.ApplePay.Equals(other.ApplePay)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -247,6 +298,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LogoUrl != null)
                     hash = hash * 59 + this.LogoUrl.GetHashCode();
+
+                if (this.AppleIMessageApp != null)
+                    hash = hash * 59 + this.AppleIMessageApp.GetHashCode();
+
+                if (this.AppleAuthentication != null)
+                    hash = hash * 59 + this.AppleAuthentication.GetHashCode();
+
+                if (this.ApplePay != null)
+                    hash = hash * 59 + this.ApplePay.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

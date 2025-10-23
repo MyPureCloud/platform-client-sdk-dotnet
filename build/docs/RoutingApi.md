@@ -37,9 +37,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingAvailablemediatypes**](#GetRoutingAvailablemediatypes) | **Get** /api/v2/routing/availablemediatypes | Get available media types |
 | [**GetRoutingDirectroutingbackupSettingsMe**](#GetRoutingDirectroutingbackupSettingsMe) | **Get** /api/v2/routing/directroutingbackup/settings/me | Get the user&#39;s Direct Routing Backup settings. |
 | [**GetRoutingEmailDomain**](#GetRoutingEmailDomain) | **Get** /api/v2/routing/email/domains/{domainId} | Get domain |
+| [**GetRoutingEmailDomainDkim**](#GetRoutingEmailDomainDkim) | **Get** /api/v2/routing/email/domains/{domainId}/dkim | Get domain dkim settings |
+| [**GetRoutingEmailDomainMailfrom**](#GetRoutingEmailDomainMailfrom) | **Get** /api/v2/routing/email/domains/{domainId}/mailfrom | Get domain mail from settings |
 | [**GetRoutingEmailDomainRoute**](#GetRoutingEmailDomainRoute) | **Get** /api/v2/routing/email/domains/{domainName}/routes/{routeId} | Get a route |
 | [**GetRoutingEmailDomainRouteIdentityresolution**](#GetRoutingEmailDomainRouteIdentityresolution) | **Get** /api/v2/routing/email/domains/{domainName}/routes/{routeId}/identityresolution | Get a route identity resolution setting. |
 | [**GetRoutingEmailDomainRoutes**](#GetRoutingEmailDomainRoutes) | **Get** /api/v2/routing/email/domains/{domainName}/routes | Get routes |
+| [**GetRoutingEmailDomainVerification**](#GetRoutingEmailDomainVerification) | **Get** /api/v2/routing/email/domains/{domainId}/verification | Get domain verification settings |
 | [**GetRoutingEmailDomains**](#GetRoutingEmailDomains) | **Get** /api/v2/routing/email/domains | Get domains |
 | [**GetRoutingEmailOutboundDomain**](#GetRoutingEmailOutboundDomain) | **Get** /api/v2/routing/email/outbound/domains/{domainId} | Get domain |
 | [**GetRoutingEmailOutboundDomainActivation**](#GetRoutingEmailOutboundDomainActivation) | **Get** /api/v2/routing/email/outbound/domains/{domainId}/activation | Get activation status (cname + dkim) of an outbound domain |
@@ -121,8 +124,11 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsRoutingActivityQuery**](#PostAnalyticsRoutingActivityQuery) | **Post** /api/v2/analytics/routing/activity/query | Query for user activity observations |
 | [**PostRoutingAssessments**](#PostRoutingAssessments) | **Post** /api/v2/routing/assessments | Create a benefit assessment. |
 | [**PostRoutingAssessmentsJobs**](#PostRoutingAssessmentsJobs) | **Post** /api/v2/routing/assessments/jobs | Create a benefit assessment job. |
+| [**PostRoutingEmailDomainDkim**](#PostRoutingEmailDomainDkim) | **Post** /api/v2/routing/email/domains/{domainId}/dkim | Restart domain dkim |
+| [**PostRoutingEmailDomainMailfrom**](#PostRoutingEmailDomainMailfrom) | **Post** /api/v2/routing/email/domains/{domainId}/mailfrom | Set domain mail from settings |
 | [**PostRoutingEmailDomainRoutes**](#PostRoutingEmailDomainRoutes) | **Post** /api/v2/routing/email/domains/{domainName}/routes | Create a route |
 | [**PostRoutingEmailDomainTestconnection**](#PostRoutingEmailDomainTestconnection) | **Post** /api/v2/routing/email/domains/{domainId}/testconnection | Tests the custom SMTP server integration connection set on this ACD domain |
+| [**PostRoutingEmailDomainVerification**](#PostRoutingEmailDomainVerification) | **Post** /api/v2/routing/email/domains/{domainId}/verification | Restart domain verification |
 | [**PostRoutingEmailDomains**](#PostRoutingEmailDomains) | **Post** /api/v2/routing/email/domains | Create a domain |
 | [**PostRoutingEmailOutboundDomains**](#PostRoutingEmailOutboundDomains) | **Post** /api/v2/routing/email/outbound/domains | Create a domain |
 | [**PostRoutingEmailOutboundDomainsSimulated**](#PostRoutingEmailOutboundDomainsSimulated) | **Post** /api/v2/routing/email/outbound/domains/simulated | Create a simulated domain |
@@ -2075,6 +2081,130 @@ namespace Example
 [**InboundDomain**](InboundDomain)
 
 
+## GetRoutingEmailDomainDkim
+
+> [**VerificationResult**](VerificationResult) GetRoutingEmailDomainDkim (string domainId)
+
+
+Get domain dkim settings
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingEmailDomainDkimExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            { 
+                // Get domain dkim settings
+                VerificationResult result = apiInstance.GetRoutingEmailDomainDkim(domainId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailDomainDkim: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+
+### Return type
+
+[**VerificationResult**](VerificationResult)
+
+
+## GetRoutingEmailDomainMailfrom
+
+> [**MailFromResult**](MailFromResult) GetRoutingEmailDomainMailfrom (string domainId)
+
+
+Get domain mail from settings
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingEmailDomainMailfromExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            { 
+                // Get domain mail from settings
+                MailFromResult result = apiInstance.GetRoutingEmailDomainMailfrom(domainId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailDomainMailfrom: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+
+### Return type
+
+[**MailFromResult**](MailFromResult)
+
+
 ## GetRoutingEmailDomainRoute
 
 > [**InboundRoute**](InboundRoute) GetRoutingEmailDomainRoute (string domainName, string routeId, List<string> expand = null)
@@ -2143,7 +2273,7 @@ namespace Example
 
 ## GetRoutingEmailDomainRouteIdentityresolution
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId)
+> [**RouteIdentityResolutionConfig**](RouteIdentityResolutionConfig) GetRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId)
 
 
 Get a route identity resolution setting.
@@ -2181,7 +2311,7 @@ namespace Example
             try
             { 
                 // Get a route identity resolution setting.
-                IdentityResolutionConfig result = apiInstance.GetRoutingEmailDomainRouteIdentityresolution(domainName, routeId);
+                RouteIdentityResolutionConfig result = apiInstance.GetRoutingEmailDomainRouteIdentityresolution(domainName, routeId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2203,7 +2333,7 @@ namespace Example
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**RouteIdentityResolutionConfig**](RouteIdentityResolutionConfig)
 
 
 ## GetRoutingEmailDomainRoutes
@@ -2274,6 +2404,68 @@ namespace Example
 ### Return type
 
 [**InboundRouteEntityListing**](InboundRouteEntityListing)
+
+
+## GetRoutingEmailDomainVerification
+
+> [**VerificationResult**](VerificationResult) GetRoutingEmailDomainVerification (string domainId)
+
+
+Get domain verification settings
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingEmailDomainVerificationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            { 
+                // Get domain verification settings
+                VerificationResult result = apiInstance.GetRoutingEmailDomainVerification(domainId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingEmailDomainVerification: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+
+### Return type
+
+[**VerificationResult**](VerificationResult)
 
 
 ## GetRoutingEmailDomains
@@ -4931,7 +5123,7 @@ namespace Example
 
 ## GetRoutingSmsIdentityresolutionPhonenumber
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetRoutingSmsIdentityresolutionPhonenumber (string addressId)
+> [**SmsIdentityResolutionConfig**](SmsIdentityResolutionConfig) GetRoutingSmsIdentityresolutionPhonenumber (string addressId)
 
 
 Get a SMS identity resolution settings.
@@ -4968,7 +5160,7 @@ namespace Example
             try
             { 
                 // Get a SMS identity resolution settings.
-                IdentityResolutionConfig result = apiInstance.GetRoutingSmsIdentityresolutionPhonenumber(addressId);
+                SmsIdentityResolutionConfig result = apiInstance.GetRoutingSmsIdentityresolutionPhonenumber(addressId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4989,7 +5181,7 @@ namespace Example
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**SmsIdentityResolutionConfig**](SmsIdentityResolutionConfig)
 
 
 ## GetRoutingSmsPhonenumber
@@ -7618,6 +7810,132 @@ namespace Example
 [**BenefitAssessmentJob**](BenefitAssessmentJob)
 
 
+## PostRoutingEmailDomainDkim
+
+> [**VerificationResult**](VerificationResult) PostRoutingEmailDomainDkim (string domainId)
+
+
+Restart domain dkim
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingEmailDomainDkimExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            { 
+                // Restart domain dkim
+                VerificationResult result = apiInstance.PostRoutingEmailDomainDkim(domainId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingEmailDomainDkim: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+
+### Return type
+
+[**VerificationResult**](VerificationResult)
+
+
+## PostRoutingEmailDomainMailfrom
+
+> [**MailFromResult**](MailFromResult) PostRoutingEmailDomainMailfrom (string domainId, MailFromResult body)
+
+
+Set domain mail from settings
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingEmailDomainMailfromExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+            var body = new MailFromResult(); // MailFromResult | Mail From Settings
+
+            try
+            { 
+                // Set domain mail from settings
+                MailFromResult result = apiInstance.PostRoutingEmailDomainMailfrom(domainId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingEmailDomainMailfrom: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+| **body** | [**MailFromResult**](MailFromResult)| Mail From Settings |  |
+
+### Return type
+
+[**MailFromResult**](MailFromResult)
+
+
 ## PostRoutingEmailDomainRoutes
 
 > [**InboundRoute**](InboundRoute) PostRoutingEmailDomainRoutes (string domainName, InboundRoute body)
@@ -7746,6 +8064,68 @@ namespace Example
 ### Return type
 
 [**TestMessage**](TestMessage)
+
+
+## PostRoutingEmailDomainVerification
+
+> [**VerificationResult**](VerificationResult) PostRoutingEmailDomainVerification (string domainId)
+
+
+Restart domain verification
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingEmailDomainVerificationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+
+            try
+            { 
+                // Restart domain verification
+                VerificationResult result = apiInstance.PostRoutingEmailDomainVerification(domainId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingEmailDomainVerification: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+
+### Return type
+
+[**VerificationResult**](VerificationResult)
 
 
 ## PostRoutingEmailDomains
@@ -9204,7 +9584,7 @@ namespace Example
 
 ## PutRoutingEmailDomainRouteIdentityresolution
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId, IdentityResolutionConfig body)
+> [**RouteIdentityResolutionConfig**](RouteIdentityResolutionConfig) PutRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId, RouteIdentityResolutionConfig body)
 
 
 Update identity resolution settings for a route.
@@ -9238,12 +9618,12 @@ namespace Example
             var apiInstance = new RoutingApi();
             var domainName = domainName_example;  // string | email domain
             var routeId = routeId_example;  // string | route ID
-            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | 
+            var body = new RouteIdentityResolutionConfig(); // RouteIdentityResolutionConfig | 
 
             try
             { 
                 // Update identity resolution settings for a route.
-                IdentityResolutionConfig result = apiInstance.PutRoutingEmailDomainRouteIdentityresolution(domainName, routeId, body);
+                RouteIdentityResolutionConfig result = apiInstance.PutRoutingEmailDomainRouteIdentityresolution(domainName, routeId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9262,11 +9642,11 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **domainName** | **string**| email domain |  |
 | **routeId** | **string**| route ID |  |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  |  |
+| **body** | [**RouteIdentityResolutionConfig**](RouteIdentityResolutionConfig)|  |  |
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**RouteIdentityResolutionConfig**](RouteIdentityResolutionConfig)
 
 
 ## PutRoutingEmailOutboundDomainActivation
@@ -9650,7 +10030,7 @@ namespace Example
 
 ## PutRoutingSmsIdentityresolutionPhonenumber
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutRoutingSmsIdentityresolutionPhonenumber (string addressId, IdentityResolutionConfig body)
+> [**SmsIdentityResolutionConfig**](SmsIdentityResolutionConfig) PutRoutingSmsIdentityresolutionPhonenumber (string addressId, SmsIdentityResolutionConfig body)
 
 
 Update an SMS identity resolution settings.
@@ -9683,12 +10063,12 @@ namespace Example
 
             var apiInstance = new RoutingApi();
             var addressId = addressId_example;  // string | Address ID
-            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | 
+            var body = new SmsIdentityResolutionConfig(); // SmsIdentityResolutionConfig | 
 
             try
             { 
                 // Update an SMS identity resolution settings.
-                IdentityResolutionConfig result = apiInstance.PutRoutingSmsIdentityresolutionPhonenumber(addressId, body);
+                SmsIdentityResolutionConfig result = apiInstance.PutRoutingSmsIdentityresolutionPhonenumber(addressId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -9706,11 +10086,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **addressId** | **string**| Address ID |  |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  |  |
+| **body** | [**SmsIdentityResolutionConfig**](SmsIdentityResolutionConfig)|  |  |
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**SmsIdentityResolutionConfig**](SmsIdentityResolutionConfig)
 
 
 ## PutRoutingUserDirectroutingbackupSettings
@@ -10161,4 +10541,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_

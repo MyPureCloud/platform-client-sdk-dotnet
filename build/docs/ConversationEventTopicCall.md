@@ -38,7 +38,8 @@
 | **AgentAssistantId** | **string** | UUID of virtual agent assistant that provide suggestions to the agent participant during the conversation. | [optional] |
 | **QueueMediaSettings** | [**ConversationEventTopicQueueMediaSettings**](ConversationEventTopicQueueMediaSettings) |  | [optional] |
 | **Disposition** | [**ConversationEventTopicDisposition**](ConversationEventTopicDisposition) |  | [optional] |
+| **TransferSource** | **string** | Indicates how call reaches the agent. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_

@@ -12,6 +12,8 @@
 | **TimeOffLimits** | [**List&lt;BuTimeOffLimitReference&gt;**](BuTimeOffLimitReference) | The IDs of time-off limits associated with this time-off plan | [optional] |
 | **AutoApprovalRule** | **string** | Auto approval rule for this time-off plan | |
 | **DaysBeforeStartToExpireFromWaitlist** | **int?** | The number of days before the time-off request start date for when the request will be expired from the waitlist | |
+| **AutoPublishApprovedTimeOffRequests** | **bool?** | Whether newly approved time-off requests with activity codes associated with this time-off plan should be automatically published to the schedule | [optional] |
+| **RestrictedActivityCodes** | [**ActivityCodesReference**](ActivityCodesReference) | The IDs of non time-off activity codes to check for conflicts in case the auto approval rule specifies checking activity codes. If these activity codes are present in schedule and overlap with the time-off request duration, the request will not be auto approved | [optional] |
 | **HrisTimeOffType** | [**HrisTimeOffType**](HrisTimeOffType) | Time-off type, if this time-off plan is associated with the integration | [optional] |
 | **Enabled** | **bool?** | Whether this time-off plan is currently being used by agents | |
 | **CountAgainstTimeOffLimits** | **bool?** | Whether this time-off plan counts against time-off limits | |
@@ -22,4 +24,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_

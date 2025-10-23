@@ -311,9 +311,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="escalationRuleId">escalationRuleId</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>EscalationRuleResponse</returns>
         
-        EscalationRuleResponse GetSocialmediaEscalationrule (string escalationRuleId);
+        EscalationRuleResponse GetSocialmediaEscalationrule (string escalationRuleId, string expand = null);
 
         /// <summary>
         /// Get a single escalation rule.
@@ -323,9 +324,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="escalationRuleId">escalationRuleId</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of EscalationRuleResponse</returns>
         
-        ApiResponse<EscalationRuleResponse> GetSocialmediaEscalationruleWithHttpInfo (string escalationRuleId);
+        ApiResponse<EscalationRuleResponse> GetSocialmediaEscalationruleWithHttpInfo (string escalationRuleId, string expand = null);
 
         /// <summary>
         /// Retrieve all escalation rules for a division.
@@ -1683,9 +1685,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="escalationRuleId">escalationRuleId</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of EscalationRuleResponse</returns>
         
-        System.Threading.Tasks.Task<EscalationRuleResponse> GetSocialmediaEscalationruleAsync (string escalationRuleId);
+        System.Threading.Tasks.Task<EscalationRuleResponse> GetSocialmediaEscalationruleAsync (string escalationRuleId, string expand = null);
 
         /// <summary>
         /// Get a single escalation rule.
@@ -1695,9 +1698,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="escalationRuleId">escalationRuleId</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (EscalationRuleResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<EscalationRuleResponse>> GetSocialmediaEscalationruleAsyncWithHttpInfo (string escalationRuleId);
+        System.Threading.Tasks.Task<ApiResponse<EscalationRuleResponse>> GetSocialmediaEscalationruleAsyncWithHttpInfo (string escalationRuleId, string expand = null);
 
         /// <summary>
         /// Retrieve all escalation rules for a division.
@@ -5148,11 +5152,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="escalationRuleId">escalationRuleId</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>EscalationRuleResponse</returns>
         
-        public EscalationRuleResponse GetSocialmediaEscalationrule (string escalationRuleId)
+        public EscalationRuleResponse GetSocialmediaEscalationrule (string escalationRuleId, string expand = null)
         {
-             ApiResponse<EscalationRuleResponse> localVarResponse = GetSocialmediaEscalationruleWithHttpInfo(escalationRuleId);
+             ApiResponse<EscalationRuleResponse> localVarResponse = GetSocialmediaEscalationruleWithHttpInfo(escalationRuleId, expand);
              return localVarResponse.Data;
         }
 
@@ -5162,9 +5167,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="escalationRuleId">escalationRuleId</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>ApiResponse of EscalationRuleResponse</returns>
         
-        public ApiResponse< EscalationRuleResponse > GetSocialmediaEscalationruleWithHttpInfo (string escalationRuleId)
+        public ApiResponse< EscalationRuleResponse > GetSocialmediaEscalationruleWithHttpInfo (string escalationRuleId, string expand = null)
         { 
             // verify the required parameter 'escalationRuleId' is set
             if (escalationRuleId == null)
@@ -5204,6 +5210,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (escalationRuleId != null) localVarPathParams.Add("escalationRuleId", this.Configuration.ApiClient.ParameterToString(escalationRuleId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 
@@ -5247,11 +5254,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="escalationRuleId">escalationRuleId</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of EscalationRuleResponse</returns>
         
-        public async System.Threading.Tasks.Task<EscalationRuleResponse> GetSocialmediaEscalationruleAsync (string escalationRuleId)
+        public async System.Threading.Tasks.Task<EscalationRuleResponse> GetSocialmediaEscalationruleAsync (string escalationRuleId, string expand = null)
         {
-             ApiResponse<EscalationRuleResponse> localVarResponse = await GetSocialmediaEscalationruleAsyncWithHttpInfo(escalationRuleId);
+             ApiResponse<EscalationRuleResponse> localVarResponse = await GetSocialmediaEscalationruleAsyncWithHttpInfo(escalationRuleId, expand);
              return localVarResponse.Data;
 
         }
@@ -5262,9 +5270,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="escalationRuleId">escalationRuleId</param>
+        /// <param name="expand">which fields, if any, to expand (optional)</param>
         /// <returns>Task of ApiResponse (EscalationRuleResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<EscalationRuleResponse>> GetSocialmediaEscalationruleAsyncWithHttpInfo (string escalationRuleId)
+        public async System.Threading.Tasks.Task<ApiResponse<EscalationRuleResponse>> GetSocialmediaEscalationruleAsyncWithHttpInfo (string escalationRuleId, string expand = null)
         { 
             // verify the required parameter 'escalationRuleId' is set
             if (escalationRuleId == null)
@@ -5305,6 +5314,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (escalationRuleId != null) localVarPathParams.Add("escalationRuleId", this.Configuration.ApiClient.ParameterToString(escalationRuleId));
 
             // Query params
+            if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
 

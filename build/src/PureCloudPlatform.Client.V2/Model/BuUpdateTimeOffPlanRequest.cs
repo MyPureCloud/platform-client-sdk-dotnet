@@ -82,18 +82,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ActivityCodeIds">The IDs of activity codes to associate with this time-off plan.</param>
         /// <param name="AutoApprovalRule">Auto approval rule for this time-off plan.</param>
         /// <param name="DaysBeforeStartToExpireFromWaitlist">The number of days before the time-off request start date for when the request will be expired from the waitlist.</param>
+        /// <param name="AutoPublishApprovedTimeOffRequests">Whether newly approved time-off requests with activity codes associated with this time-off plan should be automatically published to the schedule.</param>
+        /// <param name="RestrictedActivityCodeIds">The IDs of non time-off activity codes to check for conflicts in case the auto approval rule specifies checking activity codes. If these activity codes are present in schedule and overlap with the time-off request duration, the request will not be auto approved.</param>
         /// <param name="HrisTimeOffType">Time-off type, if this time-off plan is associated with the integration.</param>
         /// <param name="Enabled">Whether this time-off plan should be used by agents.</param>
         /// <param name="CountAgainstTimeOffLimits">Whether this time-off plan should count against time-off limits.</param>
         /// <param name="BusinessUnitAssociation">Business unit association, if the time-off plan belongs to a business unit. managementUnitAssociation must not be set if this is populated.</param>
         /// <param name="ManagementUnitAssociation">Management unit association, if the time-off plan belongs to a management unit. businessUnitAssociation must not be set if this is populated.</param>
         /// <param name="Metadata">Version metadata for this time-off plan (required).</param>
-        public BuUpdateTimeOffPlanRequest(string Name = null, SetWrapperString ActivityCodeIds = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, ValueWrapperHrisTimeOffType HrisTimeOffType = null, bool? Enabled = null, bool? CountAgainstTimeOffLimits = null, UpdateTimeOffPlanBusinessUnitAssociation BusinessUnitAssociation = null, UpdateTimeOffPlanManagementUnitAssociation ManagementUnitAssociation = null, WfmVersionedEntityMetadata Metadata = null)
+        public BuUpdateTimeOffPlanRequest(string Name = null, SetWrapperString ActivityCodeIds = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, bool? AutoPublishApprovedTimeOffRequests = null, SetWrapperString RestrictedActivityCodeIds = null, ValueWrapperHrisTimeOffType HrisTimeOffType = null, bool? Enabled = null, bool? CountAgainstTimeOffLimits = null, UpdateTimeOffPlanBusinessUnitAssociation BusinessUnitAssociation = null, UpdateTimeOffPlanManagementUnitAssociation ManagementUnitAssociation = null, WfmVersionedEntityMetadata Metadata = null)
         {
             this.Name = Name;
             this.ActivityCodeIds = ActivityCodeIds;
             this.AutoApprovalRule = AutoApprovalRule;
             this.DaysBeforeStartToExpireFromWaitlist = DaysBeforeStartToExpireFromWaitlist;
+            this.AutoPublishApprovedTimeOffRequests = AutoPublishApprovedTimeOffRequests;
+            this.RestrictedActivityCodeIds = RestrictedActivityCodeIds;
             this.HrisTimeOffType = HrisTimeOffType;
             this.Enabled = Enabled;
             this.CountAgainstTimeOffLimits = CountAgainstTimeOffLimits;
@@ -131,6 +135,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The number of days before the time-off request start date for when the request will be expired from the waitlist</value>
         [DataMember(Name="daysBeforeStartToExpireFromWaitlist", EmitDefaultValue=false)]
         public int? DaysBeforeStartToExpireFromWaitlist { get; set; }
+
+
+
+        /// <summary>
+        /// Whether newly approved time-off requests with activity codes associated with this time-off plan should be automatically published to the schedule
+        /// </summary>
+        /// <value>Whether newly approved time-off requests with activity codes associated with this time-off plan should be automatically published to the schedule</value>
+        [DataMember(Name="autoPublishApprovedTimeOffRequests", EmitDefaultValue=false)]
+        public bool? AutoPublishApprovedTimeOffRequests { get; set; }
+
+
+
+        /// <summary>
+        /// The IDs of non time-off activity codes to check for conflicts in case the auto approval rule specifies checking activity codes. If these activity codes are present in schedule and overlap with the time-off request duration, the request will not be auto approved
+        /// </summary>
+        /// <value>The IDs of non time-off activity codes to check for conflicts in case the auto approval rule specifies checking activity codes. If these activity codes are present in schedule and overlap with the time-off request duration, the request will not be auto approved</value>
+        [DataMember(Name="restrictedActivityCodeIds", EmitDefaultValue=false)]
+        public SetWrapperString RestrictedActivityCodeIds { get; set; }
 
 
 
@@ -200,6 +222,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActivityCodeIds: ").Append(ActivityCodeIds).Append("\n");
             sb.Append("  AutoApprovalRule: ").Append(AutoApprovalRule).Append("\n");
             sb.Append("  DaysBeforeStartToExpireFromWaitlist: ").Append(DaysBeforeStartToExpireFromWaitlist).Append("\n");
+            sb.Append("  AutoPublishApprovedTimeOffRequests: ").Append(AutoPublishApprovedTimeOffRequests).Append("\n");
+            sb.Append("  RestrictedActivityCodeIds: ").Append(RestrictedActivityCodeIds).Append("\n");
             sb.Append("  HrisTimeOffType: ").Append(HrisTimeOffType).Append("\n");
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  CountAgainstTimeOffLimits: ").Append(CountAgainstTimeOffLimits).Append("\n");
@@ -267,6 +291,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DaysBeforeStartToExpireFromWaitlist.Equals(other.DaysBeforeStartToExpireFromWaitlist)
                 ) &&
                 (
+                    this.AutoPublishApprovedTimeOffRequests == other.AutoPublishApprovedTimeOffRequests ||
+                    this.AutoPublishApprovedTimeOffRequests != null &&
+                    this.AutoPublishApprovedTimeOffRequests.Equals(other.AutoPublishApprovedTimeOffRequests)
+                ) &&
+                (
+                    this.RestrictedActivityCodeIds == other.RestrictedActivityCodeIds ||
+                    this.RestrictedActivityCodeIds != null &&
+                    this.RestrictedActivityCodeIds.Equals(other.RestrictedActivityCodeIds)
+                ) &&
+                (
                     this.HrisTimeOffType == other.HrisTimeOffType ||
                     this.HrisTimeOffType != null &&
                     this.HrisTimeOffType.Equals(other.HrisTimeOffType)
@@ -320,6 +354,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DaysBeforeStartToExpireFromWaitlist != null)
                     hash = hash * 59 + this.DaysBeforeStartToExpireFromWaitlist.GetHashCode();
+
+                if (this.AutoPublishApprovedTimeOffRequests != null)
+                    hash = hash * 59 + this.AutoPublishApprovedTimeOffRequests.GetHashCode();
+
+                if (this.RestrictedActivityCodeIds != null)
+                    hash = hash * 59 + this.RestrictedActivityCodeIds.GetHashCode();
 
                 if (this.HrisTimeOffType != null)
                     hash = hash * 59 + this.HrisTimeOffType.GetHashCode();

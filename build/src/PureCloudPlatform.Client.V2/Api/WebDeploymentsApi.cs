@@ -414,7 +414,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WebDeployment> PostWebdeploymentsDeploymentsWithHttpInfo (WebDeployment deployment);
 
         /// <summary>
-        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments.
         /// </summary>
         /// <remarks>
         /// 
@@ -426,7 +426,7 @@ namespace PureCloudPlatform.Client.V2.Api
         WebDeploymentsAuthorizationResponse PostWebdeploymentsTokenOauthcodegrantjwtexchange (WebDeploymentsOAuthExchangeRequest body);
 
         /// <summary>
-        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments.
         /// </summary>
         /// <remarks>
         /// 
@@ -942,7 +942,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WebDeployment>> PostWebdeploymentsDeploymentsAsyncWithHttpInfo (WebDeployment deployment);
 
         /// <summary>
-        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments.
         /// </summary>
         /// <remarks>
         /// 
@@ -954,7 +954,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<WebDeploymentsAuthorizationResponse> PostWebdeploymentsTokenOauthcodegrantjwtexchangeAsync (WebDeploymentsOAuthExchangeRequest body);
 
         /// <summary>
-        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments.
         /// </summary>
         /// <remarks>
         /// 
@@ -4390,7 +4390,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. 
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4404,7 +4404,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. 
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4487,7 +4487,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. 
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4502,7 +4502,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. 
+        /// Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>

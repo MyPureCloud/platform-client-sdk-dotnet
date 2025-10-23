@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="IdentityResolutionQueueConfig" /> class.
         /// </summary>
         /// <param name="CallOnBehalfOfQueue">CallOnBehalfOfQueue.</param>
-        public IdentityResolutionQueueConfig(IdentityResolutionConfig CallOnBehalfOfQueue = null)
+        public IdentityResolutionQueueConfig(OutboundQueueIdentityResolutionConfig CallOnBehalfOfQueue = null)
         {
             this.CallOnBehalfOfQueue = CallOnBehalfOfQueue;
             
@@ -34,7 +34,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets CallOnBehalfOfQueue
         /// </summary>
         [DataMember(Name="callOnBehalfOfQueue", EmitDefaultValue=false)]
-        public IdentityResolutionConfig CallOnBehalfOfQueue { get; set; }
+        public OutboundQueueIdentityResolutionConfig CallOnBehalfOfQueue { get; set; }
 
 
         /// <summary>

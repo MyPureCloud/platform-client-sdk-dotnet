@@ -29,7 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TranscriptionStartTimeMs">TranscriptionStartTimeMs.</param>
         /// <param name="Transcripts">Transcripts.</param>
         /// <param name="Status">Status.</param>
-        public TranscriptionTopicTranscriptionMessage(DateTime? EventTime = null, string OrganizationId = null, string ConversationId = null, string CommunicationId = null, long? SessionStartTimeMs = null, long? TranscriptionStartTimeMs = null, List<TranscriptionTopicTranscriptResult> Transcripts = null, TranscriptionTopicTranscriptionRequestStatus Status = null)
+        /// <param name="SpeechTextAnalyticsProgramId">SpeechTextAnalyticsProgramId.</param>
+        public TranscriptionTopicTranscriptionMessage(DateTime? EventTime = null, string OrganizationId = null, string ConversationId = null, string CommunicationId = null, long? SessionStartTimeMs = null, long? TranscriptionStartTimeMs = null, List<TranscriptionTopicTranscriptResult> Transcripts = null, TranscriptionTopicTranscriptionRequestStatus Status = null, string SpeechTextAnalyticsProgramId = null)
         {
             this.EventTime = EventTime;
             this.OrganizationId = OrganizationId;
@@ -39,6 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TranscriptionStartTimeMs = TranscriptionStartTimeMs;
             this.Transcripts = Transcripts;
             this.Status = Status;
+            this.SpeechTextAnalyticsProgramId = SpeechTextAnalyticsProgramId;
             
         }
         
@@ -107,6 +109,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public TranscriptionTopicTranscriptionRequestStatus Status { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets SpeechTextAnalyticsProgramId
+        /// </summary>
+        [DataMember(Name="speechTextAnalyticsProgramId", EmitDefaultValue=false)]
+        public string SpeechTextAnalyticsProgramId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -124,6 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TranscriptionStartTimeMs: ").Append(TranscriptionStartTimeMs).Append("\n");
             sb.Append("  Transcripts: ").Append(Transcripts).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  SpeechTextAnalyticsProgramId: ").Append(SpeechTextAnalyticsProgramId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -203,6 +214,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.SpeechTextAnalyticsProgramId == other.SpeechTextAnalyticsProgramId ||
+                    this.SpeechTextAnalyticsProgramId != null &&
+                    this.SpeechTextAnalyticsProgramId.Equals(other.SpeechTextAnalyticsProgramId)
                 );
         }
 
@@ -240,6 +256,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.SpeechTextAnalyticsProgramId != null)
+                    hash = hash * 59 + this.SpeechTextAnalyticsProgramId.GetHashCode();
 
                 return hash;
             }

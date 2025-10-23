@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum External for "EXTERNAL"
             /// </summary>
             [EnumMember(Value = "EXTERNAL")]
-            External
+            External,
+            
+            /// <summary>
+            /// Enum Dialer for "DIALER"
+            /// </summary>
+            [EnumMember(Value = "DIALER")]
+            Dialer
         }
         /// <summary>
         /// The type of the associated callback participant

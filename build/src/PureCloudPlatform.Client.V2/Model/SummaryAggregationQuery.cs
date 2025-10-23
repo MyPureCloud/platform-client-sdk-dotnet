@@ -200,9 +200,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Eventtime
         }
         /// <summary>
-        /// Query type to use. Use groupBy for all matching results, and topN for just top N results for the requested metric (group by exactly 1 dimension)
+        /// Query type to use. Use groupBy for all matching results, and topN/bottomN for N results ordered by the sortMetric. Default is groupBy.
         /// </summary>
-        /// <value>Query type to use. Use groupBy for all matching results, and topN for just top N results for the requested metric (group by exactly 1 dimension)</value>
+        /// <value>Query type to use. Use groupBy for all matching results, and topN/bottomN for N results ordered by the sortMetric. Default is groupBy.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum QueryTypeEnum
         {
@@ -213,6 +213,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OUTDATED_SDK_VERSION")]
             OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Bottomn for "bottomN"
+            /// </summary>
+            [EnumMember(Value = "bottomN")]
+            Bottomn,
             
             /// <summary>
             /// Enum Groupby for "groupBy"
@@ -233,9 +239,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="alternateTimeDimension", EmitDefaultValue=false)]
         public AlternateTimeDimensionEnum? AlternateTimeDimension { get; set; }
         /// <summary>
-        /// Query type to use. Use groupBy for all matching results, and topN for just top N results for the requested metric (group by exactly 1 dimension)
+        /// Query type to use. Use groupBy for all matching results, and topN/bottomN for N results ordered by the sortMetric. Default is groupBy.
         /// </summary>
-        /// <value>Query type to use. Use groupBy for all matching results, and topN for just top N results for the requested metric (group by exactly 1 dimension)</value>
+        /// <value>Query type to use. Use groupBy for all matching results, and topN/bottomN for N results ordered by the sortMetric. Default is groupBy.</value>
         [DataMember(Name="queryType", EmitDefaultValue=false)]
         public QueryTypeEnum? QueryType { get; set; }
 
@@ -256,9 +262,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlattenMultivaluedDimensions">Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;).</param>
         /// <param name="Views">Custom derived metric views.</param>
         /// <param name="AlternateTimeDimension">Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event..</param>
-        /// <param name="QueryType">Query type to use. Use groupBy for all matching results, and topN for just top N results for the requested metric (group by exactly 1 dimension).</param>
-        /// <param name="Limit">How many results you want in the topN list. Only applicable for topN query type..</param>
-        public SummaryAggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, SummaryAggregateQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null, List<SummaryAggregationView> Views = null, AlternateTimeDimensionEnum? AlternateTimeDimension = null, QueryTypeEnum? QueryType = null, int? Limit = null)
+        /// <param name="QueryType">Query type to use. Use groupBy for all matching results, and topN/bottomN for N results ordered by the sortMetric. Default is groupBy..</param>
+        /// <param name="SortMetric">Required when requesting multiple metrics. Only applicable for topN/bottomN query type..</param>
+        /// <param name="Limit">How many results you want in an ordered list. Only applicable for topN/bottomN query type..</param>
+        public SummaryAggregationQuery(string Interval = null, string Granularity = null, string TimeZone = null, List<GroupByEnum> GroupBy = null, SummaryAggregateQueryFilter Filter = null, List<MetricsEnum> Metrics = null, bool? FlattenMultivaluedDimensions = null, List<SummaryAggregationView> Views = null, AlternateTimeDimensionEnum? AlternateTimeDimension = null, QueryTypeEnum? QueryType = null, SummaryAggregationSort SortMetric = null, int? Limit = null)
         {
             this.Interval = Interval;
             this.Granularity = Granularity;
@@ -270,6 +277,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Views = Views;
             this.AlternateTimeDimension = AlternateTimeDimension;
             this.QueryType = QueryType;
+            this.SortMetric = SortMetric;
             this.Limit = Limit;
             
         }
@@ -353,9 +361,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// How many results you want in the topN list. Only applicable for topN query type.
+        /// Required when requesting multiple metrics. Only applicable for topN/bottomN query type.
         /// </summary>
-        /// <value>How many results you want in the topN list. Only applicable for topN query type.</value>
+        /// <value>Required when requesting multiple metrics. Only applicable for topN/bottomN query type.</value>
+        [DataMember(Name="sortMetric", EmitDefaultValue=false)]
+        public SummaryAggregationSort SortMetric { get; set; }
+
+
+
+        /// <summary>
+        /// How many results you want in an ordered list. Only applicable for topN/bottomN query type.
+        /// </summary>
+        /// <value>How many results you want in an ordered list. Only applicable for topN/bottomN query type.</value>
         [DataMember(Name="limit", EmitDefaultValue=false)]
         public int? Limit { get; set; }
 
@@ -379,6 +396,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Views: ").Append(Views).Append("\n");
             sb.Append("  AlternateTimeDimension: ").Append(AlternateTimeDimension).Append("\n");
             sb.Append("  QueryType: ").Append(QueryType).Append("\n");
+            sb.Append("  SortMetric: ").Append(SortMetric).Append("\n");
             sb.Append("  Limit: ").Append(Limit).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -471,6 +489,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueryType.Equals(other.QueryType)
                 ) &&
                 (
+                    this.SortMetric == other.SortMetric ||
+                    this.SortMetric != null &&
+                    this.SortMetric.Equals(other.SortMetric)
+                ) &&
+                (
                     this.Limit == other.Limit ||
                     this.Limit != null &&
                     this.Limit.Equals(other.Limit)
@@ -517,6 +540,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueryType != null)
                     hash = hash * 59 + this.QueryType.GetHashCode();
+
+                if (this.SortMetric != null)
+                    hash = hash * 59 + this.SortMetric.GetHashCode();
 
                 if (this.Limit != null)
                     hash = hash * 59 + this.Limit.GetHashCode();

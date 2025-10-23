@@ -13,8 +13,11 @@
 | **MessagesForBusinessId** | **string** | The Apple Messages for Business Id for the Apple messaging integration. | |
 | **BusinessName** | **string** | The name of the business. | [optional] |
 | **LogoUrl** | **string** | The url of the businesses logo. | [optional] |
+| **AppleIMessageApp** | [**AppleIMessageApp**](AppleIMessageApp) | Interactive Application (iMessage App) Settings. | [optional] |
+| **AppleAuthentication** | [**AppleAuthentication**](AppleAuthentication) | The Apple Messages for Business authentication setting. | [optional] |
+| **ApplePay** | [**ApplePay**](ApplePay) | Apple Pay settings. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_

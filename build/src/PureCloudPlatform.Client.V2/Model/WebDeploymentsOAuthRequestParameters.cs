@@ -27,15 +27,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WebDeploymentsOAuthRequestParameters" /> class.
         /// </summary>
-        /// <param name="Code">The authorization code to be sent to the authentication server during the token request.  Refer to https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest (required).</param>
+        /// <param name="Code">The authorization code to be sent to the authentication server during the token request.  Refer to https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest.</param>
+        /// <param name="IdToken">The implicit id_token to be sent to the authentication server during the token request.  Refer to https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest.</param>
         /// <param name="RedirectUri">Redirect URI sent in the \&quot;Authentication Request\&quot;Refer to https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest (required).</param>
         /// <param name="Nonce">Required if provided in the \&quot;Authentication Request\&quot;. Otherwise should be empty.String value used to associate a Client session with an ID Token, and to mitigate replay attacks. The value is passed through unmodified from the Authentication Request to the ID Token. Refer to https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest.</param>
         /// <param name="MaxAge">Required if provided in the  \&quot;Authentication Request\&quot;. Otherwise should be empty.Specifies the allowable elapsed time in seconds since the last time the End-User was actively authenticated.Refer to https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest.</param>
         /// <param name="CodeVerifier">Required if authorizing using Proof Key for Code Exchange (PKCE). Otherwise should be empty.Random URL-safe string with a minimum length of 43 characters generated at start of authorization flow to mitigate the threat of having the authorization code intercepted. Refer to https://datatracker.ietf.org/doc/html/rfc7636.</param>
         /// <param name="Iss">Optional parameter. Set it if authorization server discovery metadata authorization_response_iss_parameter_supported is enabled. Refer to https://datatracker.ietf.org/doc/html/rfc9207.</param>
-        public WebDeploymentsOAuthRequestParameters(string Code = null, string RedirectUri = null, string Nonce = null, int? MaxAge = null, string CodeVerifier = null, string Iss = null)
+        public WebDeploymentsOAuthRequestParameters(string Code = null, string IdToken = null, string RedirectUri = null, string Nonce = null, int? MaxAge = null, string CodeVerifier = null, string Iss = null)
         {
             this.Code = Code;
+            this.IdToken = IdToken;
             this.RedirectUri = RedirectUri;
             this.Nonce = Nonce;
             this.MaxAge = MaxAge;
@@ -52,6 +54,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The authorization code to be sent to the authentication server during the token request.  Refer to https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest</value>
         [DataMember(Name="code", EmitDefaultValue=false)]
         public string Code { get; set; }
+
+
+
+        /// <summary>
+        /// The implicit id_token to be sent to the authentication server during the token request.  Refer to https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest
+        /// </summary>
+        /// <value>The implicit id_token to be sent to the authentication server during the token request.  Refer to https://openid.net/specs/openid-connect-core-1_0.html#AuthRequest</value>
+        [DataMember(Name="idToken", EmitDefaultValue=false)]
+        public string IdToken { get; set; }
 
 
 
@@ -109,6 +120,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WebDeploymentsOAuthRequestParameters {\n");
 
             sb.Append("  Code: ").Append(Code).Append("\n");
+            sb.Append("  IdToken: ").Append(IdToken).Append("\n");
             sb.Append("  RedirectUri: ").Append(RedirectUri).Append("\n");
             sb.Append("  Nonce: ").Append(Nonce).Append("\n");
             sb.Append("  MaxAge: ").Append(MaxAge).Append("\n");
@@ -160,6 +172,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Code.Equals(other.Code)
                 ) &&
                 (
+                    this.IdToken == other.IdToken ||
+                    this.IdToken != null &&
+                    this.IdToken.Equals(other.IdToken)
+                ) &&
+                (
                     this.RedirectUri == other.RedirectUri ||
                     this.RedirectUri != null &&
                     this.RedirectUri.Equals(other.RedirectUri)
@@ -199,6 +216,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Code != null)
                     hash = hash * 59 + this.Code.GetHashCode();
+
+                if (this.IdToken != null)
+                    hash = hash * 59 + this.IdToken.GetHashCode();
 
                 if (this.RedirectUri != null)
                     hash = hash * 59 + this.RedirectUri.GetHashCode();

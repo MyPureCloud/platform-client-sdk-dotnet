@@ -780,6 +780,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<InboundDomain> GetRoutingEmailDomainWithHttpInfo (string domainId, string expand = null);
 
         /// <summary>
+        /// Get domain dkim settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>VerificationResult</returns>
+        
+        VerificationResult GetRoutingEmailDomainDkim (string domainId);
+
+        /// <summary>
+        /// Get domain dkim settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of VerificationResult</returns>
+        
+        ApiResponse<VerificationResult> GetRoutingEmailDomainDkimWithHttpInfo (string domainId);
+
+        /// <summary>
+        /// Get domain mail from settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>MailFromResult</returns>
+        
+        MailFromResult GetRoutingEmailDomainMailfrom (string domainId);
+
+        /// <summary>
+        /// Get domain mail from settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of MailFromResult</returns>
+        
+        ApiResponse<MailFromResult> GetRoutingEmailDomainMailfromWithHttpInfo (string domainId);
+
+        /// <summary>
         /// Get a route
         /// </summary>
         /// <remarks>
@@ -816,9 +864,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>RouteIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig GetRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId);
+        RouteIdentityResolutionConfig GetRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId);
 
         /// <summary>
         /// Get a route identity resolution setting.
@@ -829,9 +877,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of RouteIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> GetRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId);
+        ApiResponse<RouteIdentityResolutionConfig> GetRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId);
 
         /// <summary>
         /// Get routes
@@ -864,6 +912,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of InboundRouteEntityListing</returns>
         
         ApiResponse<InboundRouteEntityListing> GetRoutingEmailDomainRoutesWithHttpInfo (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get domain verification settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>VerificationResult</returns>
+        
+        VerificationResult GetRoutingEmailDomainVerification (string domainId);
+
+        /// <summary>
+        /// Get domain verification settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of VerificationResult</returns>
+        
+        ApiResponse<VerificationResult> GetRoutingEmailDomainVerificationWithHttpInfo (string domainId);
 
         /// <summary>
         /// Get domains
@@ -2011,9 +2083,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>SmsIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig GetRoutingSmsIdentityresolutionPhonenumber (string addressId);
+        SmsIdentityResolutionConfig GetRoutingSmsIdentityresolutionPhonenumber (string addressId);
 
         /// <summary>
         /// Get a SMS identity resolution settings.
@@ -2023,9 +2095,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of SmsIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> GetRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId);
+        ApiResponse<SmsIdentityResolutionConfig> GetRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId);
 
         /// <summary>
         /// Get a phone number provisioned for SMS.
@@ -3120,6 +3192,56 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BenefitAssessmentJob> PostRoutingAssessmentsJobsWithHttpInfo (CreateBenefitAssessmentJobRequest body = null);
 
         /// <summary>
+        /// Restart domain dkim
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>VerificationResult</returns>
+        
+        VerificationResult PostRoutingEmailDomainDkim (string domainId);
+
+        /// <summary>
+        /// Restart domain dkim
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of VerificationResult</returns>
+        
+        ApiResponse<VerificationResult> PostRoutingEmailDomainDkimWithHttpInfo (string domainId);
+
+        /// <summary>
+        /// Set domain mail from settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Mail From Settings</param>
+        /// <returns>MailFromResult</returns>
+        
+        MailFromResult PostRoutingEmailDomainMailfrom (string domainId, MailFromResult body);
+
+        /// <summary>
+        /// Set domain mail from settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Mail From Settings</param>
+        /// <returns>ApiResponse of MailFromResult</returns>
+        
+        ApiResponse<MailFromResult> PostRoutingEmailDomainMailfromWithHttpInfo (string domainId, MailFromResult body);
+
+        /// <summary>
         /// Create a route
         /// </summary>
         /// <remarks>
@@ -3170,6 +3292,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of TestMessage</returns>
         
         ApiResponse<TestMessage> PostRoutingEmailDomainTestconnectionWithHttpInfo (string domainId, TestMessage body = null);
+
+        /// <summary>
+        /// Restart domain verification
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>VerificationResult</returns>
+        
+        VerificationResult PostRoutingEmailDomainVerification (string domainId);
+
+        /// <summary>
+        /// Restart domain verification
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of VerificationResult</returns>
+        
+        ApiResponse<VerificationResult> PostRoutingEmailDomainVerificationWithHttpInfo (string domainId);
 
         /// <summary>
         /// Create a domain
@@ -3757,9 +3903,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <param name="body"></param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>RouteIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig PutRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId, IdentityResolutionConfig body);
+        RouteIdentityResolutionConfig PutRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId, RouteIdentityResolutionConfig body);
 
         /// <summary>
         /// Update identity resolution settings for a route.
@@ -3771,9 +3917,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of RouteIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> PutRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId, IdentityResolutionConfig body);
+        ApiResponse<RouteIdentityResolutionConfig> PutRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId, RouteIdentityResolutionConfig body);
 
         /// <summary>
         /// Request an activation status (cname + dkim) update of an outbound domain
@@ -3934,9 +4080,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body"></param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>SmsIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig PutRoutingSmsIdentityresolutionPhonenumber (string addressId, IdentityResolutionConfig body);
+        SmsIdentityResolutionConfig PutRoutingSmsIdentityresolutionPhonenumber (string addressId, SmsIdentityResolutionConfig body);
 
         /// <summary>
         /// Update an SMS identity resolution settings.
@@ -3947,9 +4093,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of SmsIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> PutRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId, IdentityResolutionConfig body);
+        ApiResponse<SmsIdentityResolutionConfig> PutRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId, SmsIdentityResolutionConfig body);
 
         /// <summary>
         /// Update the user&#39;s Direct Routing Backup settings.
@@ -4902,6 +5048,54 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> GetRoutingEmailDomainAsyncWithHttpInfo (string domainId, string expand = null);
 
         /// <summary>
+        /// Get domain dkim settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of VerificationResult</returns>
+        
+        System.Threading.Tasks.Task<VerificationResult> GetRoutingEmailDomainDkimAsync (string domainId);
+
+        /// <summary>
+        /// Get domain dkim settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (VerificationResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<VerificationResult>> GetRoutingEmailDomainDkimAsyncWithHttpInfo (string domainId);
+
+        /// <summary>
+        /// Get domain mail from settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of MailFromResult</returns>
+        
+        System.Threading.Tasks.Task<MailFromResult> GetRoutingEmailDomainMailfromAsync (string domainId);
+
+        /// <summary>
+        /// Get domain mail from settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (MailFromResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<MailFromResult>> GetRoutingEmailDomainMailfromAsyncWithHttpInfo (string domainId);
+
+        /// <summary>
         /// Get a route
         /// </summary>
         /// <remarks>
@@ -4938,9 +5132,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of RouteIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> GetRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId);
+        System.Threading.Tasks.Task<RouteIdentityResolutionConfig> GetRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId);
 
         /// <summary>
         /// Get a route identity resolution setting.
@@ -4951,9 +5145,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (RouteIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId);
+        System.Threading.Tasks.Task<ApiResponse<RouteIdentityResolutionConfig>> GetRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId);
 
         /// <summary>
         /// Get routes
@@ -4986,6 +5180,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (InboundRouteEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<InboundRouteEntityListing>> GetRoutingEmailDomainRoutesAsyncWithHttpInfo (string domainName, int? pageSize = null, int? pageNumber = null, string pattern = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get domain verification settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of VerificationResult</returns>
+        
+        System.Threading.Tasks.Task<VerificationResult> GetRoutingEmailDomainVerificationAsync (string domainId);
+
+        /// <summary>
+        /// Get domain verification settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (VerificationResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<VerificationResult>> GetRoutingEmailDomainVerificationAsyncWithHttpInfo (string domainId);
 
         /// <summary>
         /// Get domains
@@ -6133,9 +6351,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of SmsIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> GetRoutingSmsIdentityresolutionPhonenumberAsync (string addressId);
+        System.Threading.Tasks.Task<SmsIdentityResolutionConfig> GetRoutingSmsIdentityresolutionPhonenumberAsync (string addressId);
 
         /// <summary>
         /// Get a SMS identity resolution settings.
@@ -6145,9 +6363,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (SmsIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId);
+        System.Threading.Tasks.Task<ApiResponse<SmsIdentityResolutionConfig>> GetRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId);
 
         /// <summary>
         /// Get a phone number provisioned for SMS.
@@ -7242,6 +7460,56 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<BenefitAssessmentJob>> PostRoutingAssessmentsJobsAsyncWithHttpInfo (CreateBenefitAssessmentJobRequest body = null);
 
         /// <summary>
+        /// Restart domain dkim
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of VerificationResult</returns>
+        
+        System.Threading.Tasks.Task<VerificationResult> PostRoutingEmailDomainDkimAsync (string domainId);
+
+        /// <summary>
+        /// Restart domain dkim
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (VerificationResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<VerificationResult>> PostRoutingEmailDomainDkimAsyncWithHttpInfo (string domainId);
+
+        /// <summary>
+        /// Set domain mail from settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Mail From Settings</param>
+        /// <returns>Task of MailFromResult</returns>
+        
+        System.Threading.Tasks.Task<MailFromResult> PostRoutingEmailDomainMailfromAsync (string domainId, MailFromResult body);
+
+        /// <summary>
+        /// Set domain mail from settings
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Mail From Settings</param>
+        /// <returns>Task of ApiResponse (MailFromResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<MailFromResult>> PostRoutingEmailDomainMailfromAsyncWithHttpInfo (string domainId, MailFromResult body);
+
+        /// <summary>
         /// Create a route
         /// </summary>
         /// <remarks>
@@ -7292,6 +7560,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TestMessage)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TestMessage>> PostRoutingEmailDomainTestconnectionAsyncWithHttpInfo (string domainId, TestMessage body = null);
+
+        /// <summary>
+        /// Restart domain verification
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of VerificationResult</returns>
+        
+        System.Threading.Tasks.Task<VerificationResult> PostRoutingEmailDomainVerificationAsync (string domainId);
+
+        /// <summary>
+        /// Restart domain verification
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (VerificationResult)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<VerificationResult>> PostRoutingEmailDomainVerificationAsyncWithHttpInfo (string domainId);
 
         /// <summary>
         /// Create a domain
@@ -7879,9 +8171,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of RouteIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> PutRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<RouteIdentityResolutionConfig> PutRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId, RouteIdentityResolutionConfig body);
 
         /// <summary>
         /// Update identity resolution settings for a route.
@@ -7893,9 +8185,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (RouteIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<ApiResponse<RouteIdentityResolutionConfig>> PutRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId, RouteIdentityResolutionConfig body);
 
         /// <summary>
         /// Request an activation status (cname + dkim) update of an outbound domain
@@ -8056,9 +8348,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of SmsIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> PutRoutingSmsIdentityresolutionPhonenumberAsync (string addressId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<SmsIdentityResolutionConfig> PutRoutingSmsIdentityresolutionPhonenumberAsync (string addressId, SmsIdentityResolutionConfig body);
 
         /// <summary>
         /// Update an SMS identity resolution settings.
@@ -8069,9 +8361,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (SmsIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<ApiResponse<SmsIdentityResolutionConfig>> PutRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId, SmsIdentityResolutionConfig body);
 
         /// <summary>
         /// Update the user&#39;s Direct Routing Backup settings.
@@ -14582,6 +14874,408 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get domain dkim settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>VerificationResult</returns>
+        
+        public VerificationResult GetRoutingEmailDomainDkim (string domainId)
+        {
+             ApiResponse<VerificationResult> localVarResponse = GetRoutingEmailDomainDkimWithHttpInfo(domainId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get domain dkim settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of VerificationResult</returns>
+        
+        public ApiResponse< VerificationResult > GetRoutingEmailDomainDkimWithHttpInfo (string domainId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->GetRoutingEmailDomainDkim");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/dkim";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainDkim: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainDkim: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VerificationResult>(localVarStatusCode,
+                localVarHeaders,
+                (VerificationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerificationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get domain dkim settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of VerificationResult</returns>
+        
+        public async System.Threading.Tasks.Task<VerificationResult> GetRoutingEmailDomainDkimAsync (string domainId)
+        {
+             ApiResponse<VerificationResult> localVarResponse = await GetRoutingEmailDomainDkimAsyncWithHttpInfo(domainId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get domain dkim settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (VerificationResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<VerificationResult>> GetRoutingEmailDomainDkimAsyncWithHttpInfo (string domainId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->GetRoutingEmailDomainDkim");
+            
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/dkim";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainDkim: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainDkim: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VerificationResult>(localVarStatusCode,
+                localVarHeaders,
+                (VerificationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerificationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get domain mail from settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>MailFromResult</returns>
+        
+        public MailFromResult GetRoutingEmailDomainMailfrom (string domainId)
+        {
+             ApiResponse<MailFromResult> localVarResponse = GetRoutingEmailDomainMailfromWithHttpInfo(domainId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get domain mail from settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of MailFromResult</returns>
+        
+        public ApiResponse< MailFromResult > GetRoutingEmailDomainMailfromWithHttpInfo (string domainId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->GetRoutingEmailDomainMailfrom");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/mailfrom";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainMailfrom: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainMailfrom: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MailFromResult>(localVarStatusCode,
+                localVarHeaders,
+                (MailFromResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MailFromResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get domain mail from settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of MailFromResult</returns>
+        
+        public async System.Threading.Tasks.Task<MailFromResult> GetRoutingEmailDomainMailfromAsync (string domainId)
+        {
+             ApiResponse<MailFromResult> localVarResponse = await GetRoutingEmailDomainMailfromAsyncWithHttpInfo(domainId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get domain mail from settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (MailFromResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<MailFromResult>> GetRoutingEmailDomainMailfromAsyncWithHttpInfo (string domainId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->GetRoutingEmailDomainMailfrom");
+            
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/mailfrom";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainMailfrom: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainMailfrom: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MailFromResult>(localVarStatusCode,
+                localVarHeaders,
+                (MailFromResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MailFromResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a route 
         /// 
         /// </summary>
@@ -14808,11 +15502,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>RouteIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig GetRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId)
+        public RouteIdentityResolutionConfig GetRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = GetRoutingEmailDomainRouteIdentityresolutionWithHttpInfo(domainName, routeId);
+             ApiResponse<RouteIdentityResolutionConfig> localVarResponse = GetRoutingEmailDomainRouteIdentityresolutionWithHttpInfo(domainName, routeId);
              return localVarResponse.Data;
         }
 
@@ -14823,9 +15517,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of RouteIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > GetRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId)
+        public ApiResponse< RouteIdentityResolutionConfig > GetRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId)
         { 
             // verify the required parameter 'domainName' is set
             if (domainName == null)
@@ -14898,9 +15592,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<RouteIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (RouteIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RouteIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -14913,11 +15607,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of RouteIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId)
+        public async System.Threading.Tasks.Task<RouteIdentityResolutionConfig> GetRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo(domainName, routeId);
+             ApiResponse<RouteIdentityResolutionConfig> localVarResponse = await GetRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo(domainName, routeId);
              return localVarResponse.Data;
 
         }
@@ -14929,9 +15623,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (RouteIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId)
+        public async System.Threading.Tasks.Task<ApiResponse<RouteIdentityResolutionConfig>> GetRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId)
         { 
             // verify the required parameter 'domainName' is set
             if (domainName == null)
@@ -15006,9 +15700,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<RouteIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (RouteIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RouteIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15234,6 +15928,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<InboundRouteEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (InboundRouteEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundRouteEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get domain verification settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>VerificationResult</returns>
+        
+        public VerificationResult GetRoutingEmailDomainVerification (string domainId)
+        {
+             ApiResponse<VerificationResult> localVarResponse = GetRoutingEmailDomainVerificationWithHttpInfo(domainId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get domain verification settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of VerificationResult</returns>
+        
+        public ApiResponse< VerificationResult > GetRoutingEmailDomainVerificationWithHttpInfo (string domainId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->GetRoutingEmailDomainVerification");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/verification";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainVerification: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainVerification: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VerificationResult>(localVarStatusCode,
+                localVarHeaders,
+                (VerificationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerificationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get domain verification settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of VerificationResult</returns>
+        
+        public async System.Threading.Tasks.Task<VerificationResult> GetRoutingEmailDomainVerificationAsync (string domainId)
+        {
+             ApiResponse<VerificationResult> localVarResponse = await GetRoutingEmailDomainVerificationAsyncWithHttpInfo(domainId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get domain verification settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (VerificationResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<VerificationResult>> GetRoutingEmailDomainVerificationAsyncWithHttpInfo (string domainId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->GetRoutingEmailDomainVerification");
+            
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/verification";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainVerification: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingEmailDomainVerification: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VerificationResult>(localVarStatusCode,
+                localVarHeaders,
+                (VerificationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerificationResult)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -23729,11 +24624,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>SmsIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig GetRoutingSmsIdentityresolutionPhonenumber (string addressId)
+        public SmsIdentityResolutionConfig GetRoutingSmsIdentityresolutionPhonenumber (string addressId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = GetRoutingSmsIdentityresolutionPhonenumberWithHttpInfo(addressId);
+             ApiResponse<SmsIdentityResolutionConfig> localVarResponse = GetRoutingSmsIdentityresolutionPhonenumberWithHttpInfo(addressId);
              return localVarResponse.Data;
         }
 
@@ -23743,9 +24638,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of SmsIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > GetRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId)
+        public ApiResponse< SmsIdentityResolutionConfig > GetRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId)
         { 
             // verify the required parameter 'addressId' is set
             if (addressId == null)
@@ -23814,9 +24709,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<SmsIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (SmsIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -23828,11 +24723,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of SmsIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetRoutingSmsIdentityresolutionPhonenumberAsync (string addressId)
+        public async System.Threading.Tasks.Task<SmsIdentityResolutionConfig> GetRoutingSmsIdentityresolutionPhonenumberAsync (string addressId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo(addressId);
+             ApiResponse<SmsIdentityResolutionConfig> localVarResponse = await GetRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo(addressId);
              return localVarResponse.Data;
 
         }
@@ -23843,9 +24738,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (SmsIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId)
+        public async System.Threading.Tasks.Task<ApiResponse<SmsIdentityResolutionConfig>> GetRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId)
         { 
             // verify the required parameter 'addressId' is set
             if (addressId == null)
@@ -23915,9 +24810,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<SmsIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (SmsIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -32629,6 +33524,431 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Restart domain dkim 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>VerificationResult</returns>
+        
+        public VerificationResult PostRoutingEmailDomainDkim (string domainId)
+        {
+             ApiResponse<VerificationResult> localVarResponse = PostRoutingEmailDomainDkimWithHttpInfo(domainId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Restart domain dkim 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of VerificationResult</returns>
+        
+        public ApiResponse< VerificationResult > PostRoutingEmailDomainDkimWithHttpInfo (string domainId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PostRoutingEmailDomainDkim");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/dkim";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainDkim: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainDkim: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VerificationResult>(localVarStatusCode,
+                localVarHeaders,
+                (VerificationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerificationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Restart domain dkim 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of VerificationResult</returns>
+        
+        public async System.Threading.Tasks.Task<VerificationResult> PostRoutingEmailDomainDkimAsync (string domainId)
+        {
+             ApiResponse<VerificationResult> localVarResponse = await PostRoutingEmailDomainDkimAsyncWithHttpInfo(domainId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Restart domain dkim 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (VerificationResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<VerificationResult>> PostRoutingEmailDomainDkimAsyncWithHttpInfo (string domainId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PostRoutingEmailDomainDkim");
+            
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/dkim";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainDkim: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainDkim: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VerificationResult>(localVarStatusCode,
+                localVarHeaders,
+                (VerificationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerificationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Set domain mail from settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Mail From Settings</param>
+        /// <returns>MailFromResult</returns>
+        
+        public MailFromResult PostRoutingEmailDomainMailfrom (string domainId, MailFromResult body)
+        {
+             ApiResponse<MailFromResult> localVarResponse = PostRoutingEmailDomainMailfromWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Set domain mail from settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Mail From Settings</param>
+        /// <returns>ApiResponse of MailFromResult</returns>
+        
+        public ApiResponse< MailFromResult > PostRoutingEmailDomainMailfromWithHttpInfo (string domainId, MailFromResult body)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PostRoutingEmailDomainMailfrom");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingEmailDomainMailfrom");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/mailfrom";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainMailfrom: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainMailfrom: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MailFromResult>(localVarStatusCode,
+                localVarHeaders,
+                (MailFromResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MailFromResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Set domain mail from settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Mail From Settings</param>
+        /// <returns>Task of MailFromResult</returns>
+        
+        public async System.Threading.Tasks.Task<MailFromResult> PostRoutingEmailDomainMailfromAsync (string domainId, MailFromResult body)
+        {
+             ApiResponse<MailFromResult> localVarResponse = await PostRoutingEmailDomainMailfromAsyncWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Set domain mail from settings 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Mail From Settings</param>
+        /// <returns>Task of ApiResponse (MailFromResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<MailFromResult>> PostRoutingEmailDomainMailfromAsyncWithHttpInfo (string domainId, MailFromResult body)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PostRoutingEmailDomainMailfrom");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingEmailDomainMailfrom");
+            
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/mailfrom";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainMailfrom: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainMailfrom: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<MailFromResult>(localVarStatusCode,
+                localVarHeaders,
+                (MailFromResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(MailFromResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create a route 
         /// 
         /// </summary>
@@ -33063,6 +34383,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TestMessage>(localVarStatusCode,
                 localVarHeaders,
                 (TestMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TestMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Restart domain verification 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>VerificationResult</returns>
+        
+        public VerificationResult PostRoutingEmailDomainVerification (string domainId)
+        {
+             ApiResponse<VerificationResult> localVarResponse = PostRoutingEmailDomainVerificationWithHttpInfo(domainId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Restart domain verification 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>ApiResponse of VerificationResult</returns>
+        
+        public ApiResponse< VerificationResult > PostRoutingEmailDomainVerificationWithHttpInfo (string domainId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PostRoutingEmailDomainVerification");
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/verification";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainVerification: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainVerification: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VerificationResult>(localVarStatusCode,
+                localVarHeaders,
+                (VerificationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerificationResult)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Restart domain verification 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of VerificationResult</returns>
+        
+        public async System.Threading.Tasks.Task<VerificationResult> PostRoutingEmailDomainVerificationAsync (string domainId)
+        {
+             ApiResponse<VerificationResult> localVarResponse = await PostRoutingEmailDomainVerificationAsyncWithHttpInfo(domainId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Restart domain verification 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <returns>Task of ApiResponse (VerificationResult)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<VerificationResult>> PostRoutingEmailDomainVerificationAsyncWithHttpInfo (string domainId)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PostRoutingEmailDomainVerification");
+            
+
+            var localVarPath = "/api/v2/routing/email/domains/{domainId}/verification";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainVerification: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailDomainVerification: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<VerificationResult>(localVarStatusCode,
+                localVarHeaders,
+                (VerificationResult) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(VerificationResult)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -38034,11 +39555,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <param name="body"></param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>RouteIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig PutRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId, IdentityResolutionConfig body)
+        public RouteIdentityResolutionConfig PutRoutingEmailDomainRouteIdentityresolution (string domainName, string routeId, RouteIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = PutRoutingEmailDomainRouteIdentityresolutionWithHttpInfo(domainName, routeId, body);
+             ApiResponse<RouteIdentityResolutionConfig> localVarResponse = PutRoutingEmailDomainRouteIdentityresolutionWithHttpInfo(domainName, routeId, body);
              return localVarResponse.Data;
         }
 
@@ -38050,9 +39571,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of RouteIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > PutRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId, IdentityResolutionConfig body)
+        public ApiResponse< RouteIdentityResolutionConfig > PutRoutingEmailDomainRouteIdentityresolutionWithHttpInfo (string domainName, string routeId, RouteIdentityResolutionConfig body)
         { 
             // verify the required parameter 'domainName' is set
             if (domainName == null)
@@ -38134,9 +39655,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<RouteIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (RouteIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RouteIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -38150,11 +39671,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of RouteIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<RouteIdentityResolutionConfig> PutRoutingEmailDomainRouteIdentityresolutionAsync (string domainName, string routeId, RouteIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo(domainName, routeId, body);
+             ApiResponse<RouteIdentityResolutionConfig> localVarResponse = await PutRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo(domainName, routeId, body);
              return localVarResponse.Data;
 
         }
@@ -38167,9 +39688,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="domainName">email domain</param>
         /// <param name="routeId">route ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (RouteIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<ApiResponse<RouteIdentityResolutionConfig>> PutRoutingEmailDomainRouteIdentityresolutionAsyncWithHttpInfo (string domainName, string routeId, RouteIdentityResolutionConfig body)
         { 
             // verify the required parameter 'domainName' is set
             if (domainName == null)
@@ -38254,9 +39775,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRoutingEmailDomainRouteIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<RouteIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (RouteIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(RouteIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -39565,11 +41086,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body"></param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>SmsIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig PutRoutingSmsIdentityresolutionPhonenumber (string addressId, IdentityResolutionConfig body)
+        public SmsIdentityResolutionConfig PutRoutingSmsIdentityresolutionPhonenumber (string addressId, SmsIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = PutRoutingSmsIdentityresolutionPhonenumberWithHttpInfo(addressId, body);
+             ApiResponse<SmsIdentityResolutionConfig> localVarResponse = PutRoutingSmsIdentityresolutionPhonenumberWithHttpInfo(addressId, body);
              return localVarResponse.Data;
         }
 
@@ -39580,9 +41101,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of SmsIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > PutRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId, IdentityResolutionConfig body)
+        public ApiResponse< SmsIdentityResolutionConfig > PutRoutingSmsIdentityresolutionPhonenumberWithHttpInfo (string addressId, SmsIdentityResolutionConfig body)
         { 
             // verify the required parameter 'addressId' is set
             if (addressId == null)
@@ -39660,9 +41181,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<SmsIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (SmsIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -39675,11 +41196,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of SmsIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutRoutingSmsIdentityresolutionPhonenumberAsync (string addressId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<SmsIdentityResolutionConfig> PutRoutingSmsIdentityresolutionPhonenumberAsync (string addressId, SmsIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo(addressId, body);
+             ApiResponse<SmsIdentityResolutionConfig> localVarResponse = await PutRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo(addressId, body);
              return localVarResponse.Data;
 
         }
@@ -39691,9 +41212,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="addressId">Address ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (SmsIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<ApiResponse<SmsIdentityResolutionConfig>> PutRoutingSmsIdentityresolutionPhonenumberAsyncWithHttpInfo (string addressId, SmsIdentityResolutionConfig body)
         { 
             // verify the required parameter 'addressId' is set
             if (addressId == null)
@@ -39773,9 +41294,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutRoutingSmsIdentityresolutionPhonenumber: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<SmsIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (SmsIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SmsIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

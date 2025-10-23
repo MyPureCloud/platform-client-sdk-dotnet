@@ -22,7 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWebdeploymentsConfigurationVersionsDraftPublish**](#PostWebdeploymentsConfigurationVersionsDraftPublish) | **Post** /api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish | Publish the configuration draft and create a new version |
 | [**PostWebdeploymentsConfigurations**](#PostWebdeploymentsConfigurations) | **Post** /api/v2/webdeployments/configurations | Create a configuration draft |
 | [**PostWebdeploymentsDeployments**](#PostWebdeploymentsDeployments) | **Post** /api/v2/webdeployments/deployments | Create a deployment |
-| [**PostWebdeploymentsTokenOauthcodegrantjwtexchange**](#PostWebdeploymentsTokenOauthcodegrantjwtexchange) | **Post** /api/v2/webdeployments/token/oauthcodegrantjwtexchange | Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments. |
+| [**PostWebdeploymentsTokenOauthcodegrantjwtexchange**](#PostWebdeploymentsTokenOauthcodegrantjwtexchange) | **Post** /api/v2/webdeployments/token/oauthcodegrantjwtexchange | Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments. |
 | [**PostWebdeploymentsTokenRefresh**](#PostWebdeploymentsTokenRefresh) | **Post** /api/v2/webdeployments/token/refresh | Refresh a JWT. |
 | [**PutWebdeploymentsConfigurationVersionsDraft**](#PutWebdeploymentsConfigurationVersionsDraft) | **Put** /api/v2/webdeployments/configurations/{configurationId}/versions/draft | Update the configuration draft |
 | [**PutWebdeploymentsDeployment**](#PutWebdeploymentsDeployment) | **Put** /api/v2/webdeployments/deployments/{deploymentId} | Update a deployment |
@@ -1020,7 +1020,7 @@ namespace Example
 > [**WebDeploymentsAuthorizationResponse**](WebDeploymentsAuthorizationResponse) PostWebdeploymentsTokenOauthcodegrantjwtexchange (WebDeploymentsOAuthExchangeRequest body)
 
 
-Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments.
 
 Requires NO permissions: 
 
@@ -1045,7 +1045,7 @@ namespace Example
 
             try
             { 
-                // Exchange an oAuth code (obtained using the Authorization Code Flow) for a JWT that can be used by webdeployments.
+                // Exchange an oAuth code (obtained using the Authorization Code Flow or Implicit flow) for a JWT that can be used by webdeployments.
                 WebDeploymentsAuthorizationResponse result = apiInstance.PostWebdeploymentsTokenOauthcodegrantjwtexchange(body);
                 Debug.WriteLine(result);
             }
@@ -1318,4 +1318,4 @@ namespace Example
 [**DeploymentIdentityResolutionConfig**](DeploymentIdentityResolutionConfig)
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_

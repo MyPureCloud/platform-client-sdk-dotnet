@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="DeploymentIdentityResolutionConfig" /> class.
         /// </summary>
-        /// <param name="Division">The division to which this entity belongs..</param>
+        /// <param name="Division">The division to use when performing identity resolution..</param>
         /// <param name="ResolveIdentities">Whether the channel should resolve identities (required).</param>
         public DeploymentIdentityResolutionConfig(WritableStarrableDivision Division = null, bool? ResolveIdentities = null)
         {
@@ -48,9 +48,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The division to which this entity belongs.
+        /// The division to use when performing identity resolution.
         /// </summary>
-        /// <value>The division to which this entity belongs.</value>
+        /// <value>The division to use when performing identity resolution.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public WritableStarrableDivision Division { get; set; }
 

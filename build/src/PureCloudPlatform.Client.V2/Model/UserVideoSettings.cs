@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="AllowCamera">whether or not user camera is allowed.</param>
         /// <param name="AllowScreenShare">whether or not user screen share is allowed.</param>
-        public UserVideoSettings(bool? AllowCamera = null, bool? AllowScreenShare = null)
+        /// <param name="AllowMicrophone">whether or not user microphone is allowed.</param>
+        public UserVideoSettings(bool? AllowCamera = null, bool? AllowScreenShare = null, bool? AllowMicrophone = null)
         {
             this.AllowCamera = AllowCamera;
             this.AllowScreenShare = AllowScreenShare;
+            this.AllowMicrophone = AllowMicrophone;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AllowScreenShare { get; set; }
 
 
+
+        /// <summary>
+        /// whether or not user microphone is allowed
+        /// </summary>
+        /// <value>whether or not user microphone is allowed</value>
+        [DataMember(Name="allowMicrophone", EmitDefaultValue=false)]
+        public bool? AllowMicrophone { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  AllowCamera: ").Append(AllowCamera).Append("\n");
             sb.Append("  AllowScreenShare: ").Append(AllowScreenShare).Append("\n");
+            sb.Append("  AllowMicrophone: ").Append(AllowMicrophone).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AllowScreenShare == other.AllowScreenShare ||
                     this.AllowScreenShare != null &&
                     this.AllowScreenShare.Equals(other.AllowScreenShare)
+                ) &&
+                (
+                    this.AllowMicrophone == other.AllowMicrophone ||
+                    this.AllowMicrophone != null &&
+                    this.AllowMicrophone.Equals(other.AllowMicrophone)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AllowScreenShare != null)
                     hash = hash * 59 + this.AllowScreenShare.GetHashCode();
+
+                if (this.AllowMicrophone != null)
+                    hash = hash * 59 + this.AllowMicrophone.GetHashCode();
 
                 return hash;
             }

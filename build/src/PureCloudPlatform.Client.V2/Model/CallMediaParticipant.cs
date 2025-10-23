@@ -398,7 +398,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BargedTime">The timestamp when this participant was connected to the barge conference in the provider clock. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SecurePause">True when the recording of this call is in secure pause status..</param>
         /// <param name="Disposition">Call resolution data for Dialer bulk make calls commands..</param>
-        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, string ExternalContactInitialDivisionId = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, RecordersState RecordersState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null, bool? SecurePause = null, Disposition Disposition = null)
+        /// <param name="TransferSource">Indicates how call reaches the agent..</param>
+        public CallMediaParticipant(string Id = null, string Name = null, string Address = null, DateTime? StartTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? EndTime = null, DateTime? StartHoldTime = null, string Purpose = null, StateEnum? State = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, bool? Held = null, bool? WrapupRequired = null, string WrapupPrompt = null, List<string> MediaRoles = null, DomainEntityRef User = null, DomainEntityRef Queue = null, DomainEntityRef Team = null, Dictionary<string, string> Attributes = null, ErrorInfo ErrorInfo = null, DomainEntityRef Script = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, int? AlertingTimeoutMs = null, string Provider = null, DomainEntityRef ExternalContact = null, string ExternalContactInitialDivisionId = null, DomainEntityRef ExternalOrganization = null, Wrapup Wrapup = null, string Peer = null, FlaggedReasonEnum? FlaggedReason = null, JourneyContext JourneyContext = null, ConversationRoutingData ConversationRoutingData = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, DateTime? ParkTime = null, DateTime? ResumeTime = null, bool? Muted = null, bool? Confined = null, bool? Recording = null, RecordingStateEnum? RecordingState = null, RecordersState RecordersState = null, DomainEntityRef Group = null, string Ani = null, string Dnis = null, string DocumentId = null, FaxStatus FaxStatus = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, string BargedParticipantId = null, string ConsultParticipantId = null, string UuiData = null, DateTime? BargedTime = null, bool? SecurePause = null, Disposition Disposition = null, string TransferSource = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -456,6 +457,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.BargedTime = BargedTime;
             this.SecurePause = SecurePause;
             this.Disposition = Disposition;
+            this.TransferSource = TransferSource;
             
         }
         
@@ -929,6 +931,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public Disposition Disposition { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates how call reaches the agent.
+        /// </summary>
+        /// <value>Indicates how call reaches the agent.</value>
+        [DataMember(Name="transferSource", EmitDefaultValue=false)]
+        public string TransferSource { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -994,6 +1005,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  BargedTime: ").Append(BargedTime).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  Disposition: ").Append(Disposition).Append("\n");
+            sb.Append("  TransferSource: ").Append(TransferSource).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1313,6 +1325,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Disposition == other.Disposition ||
                     this.Disposition != null &&
                     this.Disposition.Equals(other.Disposition)
+                ) &&
+                (
+                    this.TransferSource == other.TransferSource ||
+                    this.TransferSource != null &&
+                    this.TransferSource.Equals(other.TransferSource)
                 );
         }
 
@@ -1494,6 +1511,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Disposition != null)
                     hash = hash * 59 + this.Disposition.GetHashCode();
+
+                if (this.TransferSource != null)
+                    hash = hash * 59 + this.TransferSource.GetHashCode();
 
                 return hash;
             }

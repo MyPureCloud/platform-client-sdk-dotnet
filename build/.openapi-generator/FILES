@@ -23,6 +23,7 @@ docs/ActionAggregateQueryFilter.md
 docs/ActionAggregateQueryPredicate.md
 docs/ActionAggregateQueryResponse.md
 docs/ActionAggregationQuery.md
+docs/ActionAggregationSort.md
 docs/ActionAggregationView.md
 docs/ActionAsyncAggregateQueryResponse.md
 docs/ActionAsyncAggregationQuery.md
@@ -128,6 +129,7 @@ docs/AgentCopilotAggregateQueryFilter.md
 docs/AgentCopilotAggregateQueryPredicate.md
 docs/AgentCopilotAggregateQueryResponse.md
 docs/AgentCopilotAggregationQuery.md
+docs/AgentCopilotAggregationSort.md
 docs/AgentCopilotAggregationView.md
 docs/AgentCopilotApi.json
 docs/AgentCopilotApi.md
@@ -277,6 +279,7 @@ docs/AppEventResponseSession.md
 docs/AppendToDncActionSettings.md
 docs/AppleAuthentication.md
 docs/AppleIMessageApp.md
+docs/AppleIdentityResolutionConfig.md
 docs/AppleIntegration.md
 docs/AppleIntegrationEntityListing.md
 docs/AppleIntegrationRequest.md
@@ -322,8 +325,6 @@ docs/ArchitectSystemPromptResourceNotificationSystemPromptResourceNotification.m
 docs/ArchiveRetention.md
 docs/ArrayNode.md
 docs/Article.md
-docs/ArticleContent.md
-docs/ArticleContentBody.md
 docs/ArticlesFilter.md
 docs/AssessmentForm.md
 docs/AssessmentFormQuestion.md
@@ -470,6 +471,7 @@ docs/BotAggregateQueryFilter.md
 docs/BotAggregateQueryPredicate.md
 docs/BotAggregateQueryResponse.md
 docs/BotAggregationQuery.md
+docs/BotAggregationSort.md
 docs/BotAggregationView.md
 docs/BotAsyncAggregateQueryResponse.md
 docs/BotAsyncAggregationQuery.md
@@ -723,6 +725,10 @@ docs/CampaignOutboundLinesAllocation.md
 docs/CampaignOutboundLinesDistribution.md
 docs/CampaignOutboundLinesReservation.md
 docs/CampaignPatchRequest.md
+docs/CampaignPerformanceData.md
+docs/CampaignPerformanceDataContactRate.md
+docs/CampaignPerformanceDataListing.md
+docs/CampaignPerformanceDataProgress.md
 docs/CampaignProgress.md
 docs/CampaignRule.md
 docs/CampaignRuleAction.md
@@ -780,7 +786,6 @@ docs/Category.md
 docs/CategoryCreateRequest.md
 docs/CategoryEntity.md
 docs/CategoryEntityListing.md
-docs/CategoryListing.md
 docs/CategoryReference.md
 docs/CategoryRequest.md
 docs/CategoryResponse.md
@@ -1063,6 +1068,7 @@ docs/ConversationAggregateQueryFilter.md
 docs/ConversationAggregateQueryPredicate.md
 docs/ConversationAggregateQueryResponse.md
 docs/ConversationAggregationQuery.md
+docs/ConversationAggregationSort.md
 docs/ConversationAggregationView.md
 docs/ConversationAppSettings.md
 docs/ConversationAssociation.md
@@ -1815,9 +1821,6 @@ docs/DeleteKnowledgeKnowledgebaseDocumentVariation-example.txt
 docs/DeleteKnowledgeKnowledgebaseExportJob-example.txt
 docs/DeleteKnowledgeKnowledgebaseImportJob-example.txt
 docs/DeleteKnowledgeKnowledgebaseLabel-example.txt
-docs/DeleteKnowledgeKnowledgebaseLanguageCategory-example.txt
-docs/DeleteKnowledgeKnowledgebaseLanguageDocument-example.txt
-docs/DeleteKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
 docs/DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId-example.txt
 docs/DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId-example.txt
 docs/DeleteKnowledgeKnowledgebaseSynchronizeJob-example.txt
@@ -2174,7 +2177,6 @@ docs/DnclistImportStatusObject.md
 docs/DnsRecordEntry.md
 docs/DoNotSendActionSettings.md
 docs/Document.md
-docs/DocumentArticle.md
 docs/DocumentAttribute.md
 docs/DocumentBody.md
 docs/DocumentBodyBlock.md
@@ -2206,7 +2208,6 @@ docs/DocumentBodyTableWithHighlight.md
 docs/DocumentBodyVideo.md
 docs/DocumentBodyVideoProperties.md
 docs/DocumentBodyWithHighlight.md
-docs/DocumentCategoryInput.md
 docs/DocumentChunkBlock.md
 docs/DocumentChunkReference.md
 docs/DocumentContentBlock.md
@@ -2214,10 +2215,8 @@ docs/DocumentContentBlockWithHighlight.md
 docs/DocumentContentHighlightIndex.md
 docs/DocumentElementLength.md
 docs/DocumentEntityListing.md
-docs/DocumentFaq.md
 docs/DocumentListContentBlock.md
 docs/DocumentListContentBlockWithHighlight.md
-docs/DocumentListing.md
 docs/DocumentQuery.md
 docs/DocumentQueryClause.md
 docs/DocumentQueryInterval.md
@@ -2600,6 +2599,7 @@ docs/FacebookDataIngestionRuleResponse.md
 docs/FacebookDataIngestionRuleVersionResponse.md
 docs/FacebookDataIngestionRuleVersionResponseEntityListing.md
 docs/FacebookId.md
+docs/FacebookIdentityResolutionConfig.md
 docs/FacebookIntegration.md
 docs/FacebookIntegrationEntityListing.md
 docs/FacebookIntegrationRequest.md
@@ -2662,6 +2662,7 @@ docs/FlowAggregateQueryFilter.md
 docs/FlowAggregateQueryPredicate.md
 docs/FlowAggregateQueryResponse.md
 docs/FlowAggregationQuery.md
+docs/FlowAggregationSort.md
 docs/FlowAggregationView.md
 docs/FlowAsyncAggregateQueryResponse.md
 docs/FlowAsyncAggregationQuery.md
@@ -2677,6 +2678,7 @@ docs/FlowExecutionAggregateQueryFilter.md
 docs/FlowExecutionAggregateQueryPredicate.md
 docs/FlowExecutionAggregateQueryResponse.md
 docs/FlowExecutionAggregationQuery.md
+docs/FlowExecutionAggregationSort.md
 docs/FlowExecutionAggregationView.md
 docs/FlowExecutionAsyncAggregateQueryResponse.md
 docs/FlowExecutionAsyncAggregationQuery.md
@@ -3467,14 +3469,6 @@ docs/GetKnowledgeKnowledgebaseExportJob-example.txt
 docs/GetKnowledgeKnowledgebaseImportJob-example.txt
 docs/GetKnowledgeKnowledgebaseLabel-example.txt
 docs/GetKnowledgeKnowledgebaseLabels-example.txt
-docs/GetKnowledgeKnowledgebaseLanguageCategories-example.txt
-docs/GetKnowledgeKnowledgebaseLanguageCategory-example.txt
-docs/GetKnowledgeKnowledgebaseLanguageDocument-example.txt
-docs/GetKnowledgeKnowledgebaseLanguageDocumentUpload-example.txt
-docs/GetKnowledgeKnowledgebaseLanguageDocuments-example.txt
-docs/GetKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
-docs/GetKnowledgeKnowledgebaseLanguageTraining-example.txt
-docs/GetKnowledgeKnowledgebaseLanguageTrainings-example.txt
 docs/GetKnowledgeKnowledgebaseOperations-example.txt
 docs/GetKnowledgeKnowledgebaseOperationsUsersQuery-example.txt
 docs/GetKnowledgeKnowledgebaseParseJob-example.txt
@@ -3743,9 +3737,12 @@ docs/GetRoutingAvailablemediatypes-example.txt
 docs/GetRoutingDirectroutingbackupSettingsMe-example.txt
 docs/GetRoutingDirectroutingbackupSettingsMe-example.txt
 docs/GetRoutingEmailDomain-example.txt
+docs/GetRoutingEmailDomainDkim-example.txt
+docs/GetRoutingEmailDomainMailfrom-example.txt
 docs/GetRoutingEmailDomainRoute-example.txt
 docs/GetRoutingEmailDomainRouteIdentityresolution-example.txt
 docs/GetRoutingEmailDomainRoutes-example.txt
+docs/GetRoutingEmailDomainVerification-example.txt
 docs/GetRoutingEmailDomains-example.txt
 docs/GetRoutingEmailOutboundDomain-example.txt
 docs/GetRoutingEmailOutboundDomainActivation-example.txt
@@ -4324,6 +4321,7 @@ docs/IVR.md
 docs/IVRDivisionView.md
 docs/IVRDivisionViewEntityListing.md
 docs/IVREntityListing.md
+docs/IVRIdentityResolutionConfig.md
 docs/IdentifierClaimRequest.md
 docs/IdentityNow.md
 docs/IdentityProvider.md
@@ -4331,7 +4329,6 @@ docs/IdentityProviderApi.json
 docs/IdentityProviderApi.md
 docs/IdentityProviderEntityListing.md
 docs/IdentityResolutionAutomergeConfig.md
-docs/IdentityResolutionConfig.md
 docs/IdentityResolutionExternalSource.md
 docs/IdentityResolutionQueueConfig.md
 docs/IdleEventTrigger.md
@@ -4349,10 +4346,8 @@ docs/IgnoredMinedPhraseListing.md
 docs/IgnoredMinedTopicListing.md
 docs/Image.md
 docs/ImapSettings.md
-docs/ImportError.md
 docs/ImportForecastResponse.md
 docs/ImportForecastUploadResponse.md
-docs/ImportReport.md
 docs/ImportScheduleUploadResponse.md
 docs/ImportScheduleUploadSchema.md
 docs/ImportScriptStatusResponse.md
@@ -4407,6 +4402,7 @@ docs/InstagramDataIngestionRuleResponse.md
 docs/InstagramDataIngestionRuleVersionResponse.md
 docs/InstagramDataIngestionRuleVersionResponseEntityListing.md
 docs/InstagramId.md
+docs/InstagramIdentityResolutionConfig.md
 docs/InstagramIntegration.md
 docs/InstagramIntegrationEntityListing.md
 docs/InstagramIntegrationRequest.md
@@ -4457,6 +4453,7 @@ docs/JourneyAggregateQueryFilter.md
 docs/JourneyAggregateQueryPredicate.md
 docs/JourneyAggregateQueryResponse.md
 docs/JourneyAggregationQuery.md
+docs/JourneyAggregationSort.md
 docs/JourneyAggregationView.md
 docs/JourneyApi.json
 docs/JourneyApi.md
@@ -4629,6 +4626,7 @@ docs/KnowledgeAggregateQueryFilter.md
 docs/KnowledgeAggregateQueryPredicate.md
 docs/KnowledgeAggregateQueryResponse.md
 docs/KnowledgeAggregationQuery.md
+docs/KnowledgeAggregationSort.md
 docs/KnowledgeAggregationView.md
 docs/KnowledgeAnswerConfig.md
 docs/KnowledgeAnswerDocumentResponse.md
@@ -4644,23 +4642,18 @@ docs/KnowledgeBaseListing.md
 docs/KnowledgeBaseReference.md
 docs/KnowledgeBaseUpdateRequest.md
 docs/KnowledgeBaseWithDialectReference.md
-docs/KnowledgeCategory.md
-docs/KnowledgeCategoryRequest.md
 docs/KnowledgeContextReference.md
 docs/KnowledgeContextValueReference.md
 docs/KnowledgeConversationContext.md
 docs/KnowledgeConversationContextResponse.md
-docs/KnowledgeDocument.md
 docs/KnowledgeDocumentAlternative.md
 docs/KnowledgeDocumentBulkRemoveRequest.md
-docs/KnowledgeDocumentBulkRequest.md
 docs/KnowledgeDocumentBulkUpdateEntity.md
 docs/KnowledgeDocumentBulkUpdateRequest.md
 docs/KnowledgeDocumentBulkVersionAddEntity.md
 docs/KnowledgeDocumentBulkVersionAddRequest.md
 docs/KnowledgeDocumentChunkRequest.md
 docs/KnowledgeDocumentChunkResponse.md
-docs/KnowledgeDocumentContentUpload.md
 docs/KnowledgeDocumentCopy.md
 docs/KnowledgeDocumentCreateRequest.md
 docs/KnowledgeDocumentDescriptor.md
@@ -4678,7 +4671,6 @@ docs/KnowledgeDocumentQueryResult.md
 docs/KnowledgeDocumentQueryVariation.md
 docs/KnowledgeDocumentReference.md
 docs/KnowledgeDocumentReq.md
-docs/KnowledgeDocumentRequest.md
 docs/KnowledgeDocumentResponse.md
 docs/KnowledgeDocumentResponseListing.md
 docs/KnowledgeDocumentSearch.md
@@ -4700,7 +4692,6 @@ docs/KnowledgeExportJobDocumentsFilter.md
 docs/KnowledgeExportJobFilter.md
 docs/KnowledgeExportJobRequest.md
 docs/KnowledgeExportJobResponse.md
-docs/KnowledgeExtendedCategory.md
 docs/KnowledgeGroupStatistics.md
 docs/KnowledgeGuestAnswerDocumentResponse.md
 docs/KnowledgeGuestAnswerDocumentsResponse.md
@@ -4722,7 +4713,6 @@ docs/KnowledgeGuestSearchDocumentResponse.md
 docs/KnowledgeGuestSession.md
 docs/KnowledgeGuestSessionApp.md
 docs/KnowledgeGuestSessionContext.md
-docs/KnowledgeImport.md
 docs/KnowledgeImportJobError.md
 docs/KnowledgeImportJobReport.md
 docs/KnowledgeImportJobRequest.md
@@ -4743,16 +4733,12 @@ docs/KnowledgeParseJobResponse.md
 docs/KnowledgeParseRecord.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocumentResponse.md
-docs/KnowledgeSearchDocumentV1.md
-docs/KnowledgeSearchRequest.md
-docs/KnowledgeSearchResponse.md
 docs/KnowledgeSuggestionConfig.md
 docs/KnowledgeSyncJobReport.md
 docs/KnowledgeSyncJobRequest.md
 docs/KnowledgeSyncJobResponse.md
 docs/KnowledgeSyncJobStatistics.md
 docs/KnowledgeSyncRequest.md
-docs/KnowledgeTraining.md
 docs/KpiResult.md
 docs/Label.md
 docs/LabelCreateRequest.md
@@ -5050,6 +5036,7 @@ docs/MessagingEndTransferEvent.md
 docs/MessagingExternalEstablishedEvent.md
 docs/MessagingFlowEstablishedEvent.md
 docs/MessagingHoldUpdatedEvent.md
+docs/MessagingIdentityResolutionConfig.md
 docs/MessagingInitialConfiguration.md
 docs/MessagingIntegration.md
 docs/MessagingIntegrationEntityListing.md
@@ -5351,6 +5338,7 @@ docs/OutboundPreviewCampaignPostContactOutboundPreviewCampaignPostContactEvent.m
 docs/OutboundPreviewCampaignPostContactVoiceAttributes.md
 docs/OutboundPreviewCampaignPreContactOutboundPreviewCampaignPreContactEvent.md
 docs/OutboundPreviewCampaignPreContactVoiceAttributes.md
+docs/OutboundQueueIdentityResolutionConfig.md
 docs/OutboundRoute.md
 docs/OutboundRouteBase.md
 docs/OutboundRouteBaseEntityListing.md
@@ -5463,6 +5451,7 @@ docs/PatchConversationsCallParticipant-example.txt
 docs/PatchConversationsCallParticipantAttributes-example.txt
 docs/PatchConversationsCallParticipantCommunication-example.txt
 docs/PatchConversationsCallParticipantConsult-example.txt
+docs/PatchConversationsCallParticipantUserUserId-example.txt
 docs/PatchConversationsCallback-example.txt
 docs/PatchConversationsCallbackParticipant-example.txt
 docs/PatchConversationsCallbackParticipantAttributes-example.txt
@@ -5536,10 +5525,6 @@ docs/PatchKnowledgeKnowledgebaseDocumentVariation-example.txt
 docs/PatchKnowledgeKnowledgebaseDocumentsSearchSearchId-example.txt
 docs/PatchKnowledgeKnowledgebaseImportJob-example.txt
 docs/PatchKnowledgeKnowledgebaseLabel-example.txt
-docs/PatchKnowledgeKnowledgebaseLanguageCategory-example.txt
-docs/PatchKnowledgeKnowledgebaseLanguageDocument-example.txt
-docs/PatchKnowledgeKnowledgebaseLanguageDocuments-example.txt
-docs/PatchKnowledgeKnowledgebaseLanguageDocumentsImport-example.txt
 docs/PatchKnowledgeKnowledgebaseParseJob-example.txt
 docs/PatchKnowledgeKnowledgebaseSynchronizeJob-example.txt
 docs/PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup-example.txt
@@ -6156,16 +6141,8 @@ docs/PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd-example.txt
 docs/PostKnowledgeKnowledgebaseExportJobs-example.txt
 docs/PostKnowledgeKnowledgebaseImportJobs-example.txt
 docs/PostKnowledgeKnowledgebaseLabels-example.txt
-docs/PostKnowledgeKnowledgebaseLanguageCategories-example.txt
-docs/PostKnowledgeKnowledgebaseLanguageDocumentUploads-example.txt
-docs/PostKnowledgeKnowledgebaseLanguageDocuments-example.txt
-docs/PostKnowledgeKnowledgebaseLanguageDocumentsImports-example.txt
-docs/PostKnowledgeKnowledgebaseLanguageTrainingPromote-example.txt
-docs/PostKnowledgeKnowledgebaseLanguageTrainings-example.txt
 docs/PostKnowledgeKnowledgebaseParseJobImport-example.txt
 docs/PostKnowledgeKnowledgebaseParseJobs-example.txt
-docs/PostKnowledgeKnowledgebaseSearch-example.txt
-docs/PostKnowledgeKnowledgebaseSearch-example.txt
 docs/PostKnowledgeKnowledgebaseSourcesSalesforce-example.txt
 docs/PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync-example.txt
 docs/PostKnowledgeKnowledgebaseSourcesServicenow-example.txt
@@ -6235,6 +6212,7 @@ docs/PostOutboundCampaignStart-example.txt
 docs/PostOutboundCampaignStop-example.txt
 docs/PostOutboundCampaignrules-example.txt
 docs/PostOutboundCampaigns-example.txt
+docs/PostOutboundCampaignsPerformanceQuery-example.txt
 docs/PostOutboundCampaignsProgress-example.txt
 docs/PostOutboundContactlistClear-example.txt
 docs/PostOutboundContactlistContacts-example.txt
@@ -6304,8 +6282,11 @@ docs/PostResponsemanagementResponses-example.txt
 docs/PostResponsemanagementResponsesQuery-example.txt
 docs/PostRoutingAssessments-example.txt
 docs/PostRoutingAssessmentsJobs-example.txt
+docs/PostRoutingEmailDomainDkim-example.txt
+docs/PostRoutingEmailDomainMailfrom-example.txt
 docs/PostRoutingEmailDomainRoutes-example.txt
 docs/PostRoutingEmailDomainTestconnection-example.txt
+docs/PostRoutingEmailDomainVerification-example.txt
 docs/PostRoutingEmailDomains-example.txt
 docs/PostRoutingEmailOutboundDomains-example.txt
 docs/PostRoutingEmailOutboundDomainsSimulated-example.txt
@@ -7242,6 +7223,7 @@ docs/RateLimitAggregateQueryFilter.md
 docs/RateLimitAggregateQueryPredicate.md
 docs/RateLimitAggregateQueryResponse.md
 docs/RateLimitAggregationQuery.md
+docs/RateLimitAggregationSort.md
 docs/RateLimitAggregationView.md
 docs/Reaction.md
 docs/RealTimeAdherenceExplanation.md
@@ -7363,6 +7345,7 @@ docs/ResolutionAggregateQueryFilter.md
 docs/ResolutionAggregateQueryPredicate.md
 docs/ResolutionAggregateQueryResponse.md
 docs/ResolutionAggregationQuery.md
+docs/ResolutionAggregationSort.md
 docs/ResolutionAggregationView.md
 docs/ResolutionAsyncAggregateQueryResponse.md
 docs/ResolutionAsyncAggregationQuery.md
@@ -7394,7 +7377,6 @@ docs/ResponseSubstitution.md
 docs/ResponseText.md
 docs/RestErrorDetail.md
 docs/RestorePresenceSettings.md
-docs/ResultCounters.md
 docs/RetentionDuration.md
 docs/ReverseWhitepagesLookupResult.md
 docs/ReviewAssessmentResults.md
@@ -7408,6 +7390,7 @@ docs/RoomParticipant.md
 docs/RoomParticipantResponse.md
 docs/RoomParticipantsResponse.md
 docs/RoomUpdateRequest.md
+docs/RouteIdentityResolutionConfig.md
 docs/RoutePathRequest.md
 docs/RoutePathResponse.md
 docs/RoutingActivityData.md
@@ -7660,6 +7643,7 @@ docs/SmsAddressProvision.md
 docs/SmsAlphanumericProvision.md
 docs/SmsAvailablePhoneNumber.md
 docs/SmsConfig.md
+docs/SmsIdentityResolutionConfig.md
 docs/SmsPhoneNumber.md
 docs/SmsPhoneNumberEntityListing.md
 docs/SmsPhoneNumberImport.md
@@ -7781,6 +7765,7 @@ docs/SummaryAggregateQueryFilter.md
 docs/SummaryAggregateQueryPredicate.md
 docs/SummaryAggregateQueryResponse.md
 docs/SummaryAggregationQuery.md
+docs/SummaryAggregationSort.md
 docs/SummaryAggregationView.md
 docs/SummaryAsyncAggregateQueryResponse.md
 docs/SummaryAsyncAggregationQuery.md
@@ -7822,6 +7807,7 @@ docs/SurveyAggregateQueryFilter.md
 docs/SurveyAggregateQueryPredicate.md
 docs/SurveyAggregateQueryResponse.md
 docs/SurveyAggregationQuery.md
+docs/SurveyAggregationSort.md
 docs/SurveyAggregationView.md
 docs/SurveyAssignment.md
 docs/SurveyAsyncAggregateQueryResponse.md
@@ -7860,6 +7846,7 @@ docs/TaskManagementAggregateQueryFilter.md
 docs/TaskManagementAggregateQueryPredicate.md
 docs/TaskManagementAggregateQueryResponse.md
 docs/TaskManagementAggregationQuery.md
+docs/TaskManagementAggregationSort.md
 docs/TaskManagementAggregationView.md
 docs/TaskManagementApi.json
 docs/TaskManagementApi.md
@@ -7909,7 +7896,11 @@ docs/TestTopicPhraseJob.md
 docs/TestTopicPhraseJobRequest.md
 docs/TestTopicPhraseJobs.md
 docs/TestTopicPhrasePhrase.md
+docs/TestTopicPhraseTestPhraseDetectedPhrase.md
+docs/TestTopicPhraseTestPhraseMatchedTranscript.md
+docs/TestTopicPhraseTestTopicPhraseResults.md
 docs/TestTopicPhraseTopic.md
+docs/TestTopicPhraseTopicsDefinitionsJob.md
 docs/TextBotChannel.md
 docs/TextBotDisconnectAction.md
 docs/TextBotErrorInputEvent.md
@@ -7991,13 +7982,13 @@ docs/TopicsEntityListing.md
 docs/Touchpoint.md
 docs/TouchpointResponse.md
 docs/TrackingSettings.md
-docs/TrainingListing.md
 docs/TranscriptAggregateDataContainer.md
 docs/TranscriptAggregateQueryClause.md
 docs/TranscriptAggregateQueryFilter.md
 docs/TranscriptAggregateQueryPredicate.md
 docs/TranscriptAggregateQueryResponse.md
 docs/TranscriptAggregationQuery.md
+docs/TranscriptAggregationSort.md
 docs/TranscriptAggregationView.md
 docs/TranscriptAsyncAggregateQueryResponse.md
 docs/TranscriptAsyncAggregationQuery.md
@@ -8095,6 +8086,7 @@ docs/TwitterDataIngestionRuleResponse.md
 docs/TwitterDataIngestionRuleVersionResponse.md
 docs/TwitterDataIngestionRuleVersionResponseEntityListing.md
 docs/TwitterId.md
+docs/TwitterIdentityResolutionConfig.md
 docs/TwitterIntegration.md
 docs/TwitterIntegrationEntityListing.md
 docs/TwitterIntegrationRequest.md
@@ -8368,12 +8360,9 @@ docs/V2MobiusRulesTopicCondition.md
 docs/V2MobiusRulesTopicConditionRulePredicate.md
 docs/V2MobiusRulesTopicEntityProperties.md
 docs/V2MobiusRulesTopicRule.md
-docs/V2QueueObservationMetricData.md
-docs/V2QueueObservationMetricGroup.md
-docs/V2QueueObservationMetricStats.md
-docs/V2QueueObservationObservation.md
-docs/V2QueueObservationObservationNotification.md
-docs/V2QueueObservationScoredAgent.md
+docs/V2QueueObservationMetricCountData.md
+docs/V2QueueObservationMetricCountGroup.md
+docs/V2QueueObservationObservationCountNotification.md
 docs/V2ReprocessJobStateChangedTopicJobStateChanged.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage.md
@@ -8381,6 +8370,7 @@ docs/V2SessionConversationsSummarySettingsPreviewEventConversationResolutionMess
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage.md
 docs/V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage.md
+docs/V2StaConversationCategoriesStaConversationCategoriesMessage.md
 docs/V2StaEmpathyOverallTopicAgentEmpathyScore.md
 docs/V2StaEmpathyOverallTopicOverallEmpathyMessage.md
 docs/V2StaSentimentOverallTopicOverallSentimentMessage.md
@@ -8722,6 +8712,7 @@ docs/WhatsAppDefinition.md
 docs/WhatsAppEmbeddedSignupIntegrationActivationRequest.md
 docs/WhatsAppEmbeddedSignupIntegrationRequest.md
 docs/WhatsAppId.md
+docs/WhatsAppIdentityResolutionConfig.md
 docs/WhatsAppIntegration.md
 docs/WhatsAppIntegrationEntityListing.md
 docs/WhatsAppIntegrationRequest.md
@@ -9031,6 +9022,7 @@ src/PureCloudPlatform.Client.V2/Model/ActionAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/ActionAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/ActionAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ActionAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/ActionAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/ActionAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/ActionAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ActionAsyncAggregationQuery.cs
@@ -9134,6 +9126,7 @@ src/PureCloudPlatform.Client.V2/Model/AgentCopilotAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/AgentCopilotAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/AgentCopilotAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentCopilotAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/AgentCopilotAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/AgentCopilotAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/AgentCopilotAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentCopilotAsyncAggregationQuery.cs
@@ -9275,6 +9268,7 @@ src/PureCloudPlatform.Client.V2/Model/AppEventResponseSession.cs
 src/PureCloudPlatform.Client.V2/Model/AppendToDncActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AppleAuthentication.cs
 src/PureCloudPlatform.Client.V2/Model/AppleIMessageApp.cs
+src/PureCloudPlatform.Client.V2/Model/AppleIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/AppleIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/AppleIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/AppleIntegrationRequest.cs
@@ -9318,8 +9312,6 @@ src/PureCloudPlatform.Client.V2/Model/ArchitectSystemPromptResourceNotificationS
 src/PureCloudPlatform.Client.V2/Model/ArchiveRetention.cs
 src/PureCloudPlatform.Client.V2/Model/ArrayNode.cs
 src/PureCloudPlatform.Client.V2/Model/Article.cs
-src/PureCloudPlatform.Client.V2/Model/ArticleContent.cs
-src/PureCloudPlatform.Client.V2/Model/ArticleContentBody.cs
 src/PureCloudPlatform.Client.V2/Model/ArticlesFilter.cs
 src/PureCloudPlatform.Client.V2/Model/AssessmentForm.cs
 src/PureCloudPlatform.Client.V2/Model/AssessmentFormQuestion.cs
@@ -9460,6 +9452,7 @@ src/PureCloudPlatform.Client.V2/Model/BotAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/BotAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/BotAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BotAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/BotAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/BotAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/BotAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BotAsyncAggregationQuery.cs
@@ -9711,6 +9704,10 @@ src/PureCloudPlatform.Client.V2/Model/CampaignOutboundLinesAllocation.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignOutboundLinesDistribution.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignOutboundLinesReservation.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignPatchRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignPerformanceData.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignPerformanceDataContactRate.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignPerformanceDataListing.cs
+src/PureCloudPlatform.Client.V2/Model/CampaignPerformanceDataProgress.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignProgress.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignRule.cs
 src/PureCloudPlatform.Client.V2/Model/CampaignRuleAction.cs
@@ -9766,7 +9763,6 @@ src/PureCloudPlatform.Client.V2/Model/Category.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryCreateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryEntity.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryEntityListing.cs
-src/PureCloudPlatform.Client.V2/Model/CategoryListing.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryReference.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CategoryResponse.cs
@@ -10043,6 +10039,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAppSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAssociation.cs
@@ -10808,7 +10805,6 @@ src/PureCloudPlatform.Client.V2/Model/DnclistImportStatusObject.cs
 src/PureCloudPlatform.Client.V2/Model/DnsRecordEntry.cs
 src/PureCloudPlatform.Client.V2/Model/DoNotSendActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Document.cs
-src/PureCloudPlatform.Client.V2/Model/DocumentArticle.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBody.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyBlock.cs
@@ -10840,7 +10836,6 @@ src/PureCloudPlatform.Client.V2/Model/DocumentBodyTableWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyVideo.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyVideoProperties.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentBodyWithHighlight.cs
-src/PureCloudPlatform.Client.V2/Model/DocumentCategoryInput.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentChunkBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentChunkReference.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentContentBlock.cs
@@ -10848,10 +10843,8 @@ src/PureCloudPlatform.Client.V2/Model/DocumentContentBlockWithHighlight.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentContentHighlightIndex.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentElementLength.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentEntityListing.cs
-src/PureCloudPlatform.Client.V2/Model/DocumentFaq.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentListContentBlock.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentListContentBlockWithHighlight.cs
-src/PureCloudPlatform.Client.V2/Model/DocumentListing.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentQuery.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/DocumentQueryInterval.cs
@@ -11224,6 +11217,7 @@ src/PureCloudPlatform.Client.V2/Model/FacebookDataIngestionRuleResponse.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookDataIngestionRuleVersionResponse.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookDataIngestionRuleVersionResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookId.cs
+src/PureCloudPlatform.Client.V2/Model/FacebookIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookIntegrationRequest.cs
@@ -11284,6 +11278,7 @@ src/PureCloudPlatform.Client.V2/Model/FlowAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/FlowAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/FlowAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/FlowAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/FlowAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/FlowAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/FlowAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/FlowAsyncAggregationQuery.cs
@@ -11299,6 +11294,7 @@ src/PureCloudPlatform.Client.V2/Model/FlowExecutionAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/FlowExecutionAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/FlowExecutionAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/FlowExecutionAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/FlowExecutionAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/FlowExecutionAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/FlowExecutionAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/FlowExecutionAsyncAggregationQuery.cs
@@ -11512,12 +11508,12 @@ src/PureCloudPlatform.Client.V2/Model/IVR.cs
 src/PureCloudPlatform.Client.V2/Model/IVRDivisionView.cs
 src/PureCloudPlatform.Client.V2/Model/IVRDivisionViewEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/IVREntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/IVRIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/IdentifierClaimRequest.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityNow.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityProvider.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityProviderEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityResolutionAutomergeConfig.cs
-src/PureCloudPlatform.Client.V2/Model/IdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityResolutionExternalSource.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityResolutionQueueConfig.cs
 src/PureCloudPlatform.Client.V2/Model/IdleEventTrigger.cs
@@ -11535,10 +11531,8 @@ src/PureCloudPlatform.Client.V2/Model/IgnoredMinedPhraseListing.cs
 src/PureCloudPlatform.Client.V2/Model/IgnoredMinedTopicListing.cs
 src/PureCloudPlatform.Client.V2/Model/Image.cs
 src/PureCloudPlatform.Client.V2/Model/ImapSettings.cs
-src/PureCloudPlatform.Client.V2/Model/ImportError.cs
 src/PureCloudPlatform.Client.V2/Model/ImportForecastResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ImportForecastUploadResponse.cs
-src/PureCloudPlatform.Client.V2/Model/ImportReport.cs
 src/PureCloudPlatform.Client.V2/Model/ImportScheduleUploadResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ImportScheduleUploadSchema.cs
 src/PureCloudPlatform.Client.V2/Model/ImportScriptStatusResponse.cs
@@ -11591,6 +11585,7 @@ src/PureCloudPlatform.Client.V2/Model/InstagramDataIngestionRuleResponse.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramDataIngestionRuleVersionResponse.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramDataIngestionRuleVersionResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramId.cs
+src/PureCloudPlatform.Client.V2/Model/InstagramIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/InstagramIntegrationRequest.cs
@@ -11639,6 +11634,7 @@ src/PureCloudPlatform.Client.V2/Model/JourneyAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyApp.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationActionMap.cs
@@ -11809,6 +11805,7 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeAnswerConfig.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeAnswerDocumentResponse.cs
@@ -11822,23 +11819,18 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeBaseListing.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeBaseReference.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeBaseUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeBaseWithDialectReference.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeCategory.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeCategoryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeContextReference.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeContextValueReference.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeConversationContext.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeConversationContextResponse.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeDocument.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentAlternative.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkRemoveRequest.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkUpdateEntity.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkVersionAddEntity.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkVersionAddRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentChunkRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentChunkResponse.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentContentUpload.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentCopy.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentCreateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentDescriptor.cs
@@ -11856,7 +11848,6 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentQueryResult.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentQueryVariation.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentReference.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentReq.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentResponseListing.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentSearch.cs
@@ -11878,7 +11869,6 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeExportJobDocumentsFilter.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeExportJobFilter.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeExportJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeExportJobResponse.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeExtendedCategory.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGroupStatistics.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestAnswerDocumentResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestAnswerDocumentsResponse.cs
@@ -11900,7 +11890,6 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestSearchDocumentResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestSession.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestSessionApp.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestSessionContext.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeImport.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobError.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobReport.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeImportJobRequest.cs
@@ -11921,16 +11910,12 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeParseRecord.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchClientApplication.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchDocumentResponse.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchDocumentV1.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchRequest.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSuggestionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncJobReport.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncJobStatistics.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncRequest.cs
-src/PureCloudPlatform.Client.V2/Model/KnowledgeTraining.cs
 src/PureCloudPlatform.Client.V2/Model/KpiResult.cs
 src/PureCloudPlatform.Client.V2/Model/Label.cs
 src/PureCloudPlatform.Client.V2/Model/LabelCreateRequest.cs
@@ -12214,6 +12199,7 @@ src/PureCloudPlatform.Client.V2/Model/MessagingEndTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingExternalEstablishedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingFlowEstablishedEvent.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingHoldUpdatedEvent.cs
+src/PureCloudPlatform.Client.V2/Model/MessagingIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingInitialConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/MessagingIntegrationEntityListing.cs
@@ -12499,6 +12485,7 @@ src/PureCloudPlatform.Client.V2/Model/OutboundPreviewCampaignPostContactOutbound
 src/PureCloudPlatform.Client.V2/Model/OutboundPreviewCampaignPostContactVoiceAttributes.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundPreviewCampaignPreContactOutboundPreviewCampaignPreContactEvent.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundPreviewCampaignPreContactVoiceAttributes.cs
+src/PureCloudPlatform.Client.V2/Model/OutboundQueueIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundRoute.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundRouteBase.cs
 src/PureCloudPlatform.Client.V2/Model/OutboundRouteBaseEntityListing.cs
@@ -13094,6 +13081,7 @@ src/PureCloudPlatform.Client.V2/Model/RateLimitAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/RateLimitAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/RateLimitAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/RateLimitAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/RateLimitAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/RateLimitAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/Reaction.cs
 src/PureCloudPlatform.Client.V2/Model/RealTimeAdherenceExplanation.cs
@@ -13213,6 +13201,7 @@ src/PureCloudPlatform.Client.V2/Model/ResolutionAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/ResolutionAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/ResolutionAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ResolutionAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/ResolutionAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/ResolutionAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/ResolutionAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ResolutionAsyncAggregationQuery.cs
@@ -13242,7 +13231,6 @@ src/PureCloudPlatform.Client.V2/Model/ResponseSubstitution.cs
 src/PureCloudPlatform.Client.V2/Model/ResponseText.cs
 src/PureCloudPlatform.Client.V2/Model/RestErrorDetail.cs
 src/PureCloudPlatform.Client.V2/Model/RestorePresenceSettings.cs
-src/PureCloudPlatform.Client.V2/Model/ResultCounters.cs
 src/PureCloudPlatform.Client.V2/Model/RetentionDuration.cs
 src/PureCloudPlatform.Client.V2/Model/ReverseWhitepagesLookupResult.cs
 src/PureCloudPlatform.Client.V2/Model/ReviewAssessmentResults.cs
@@ -13256,6 +13244,7 @@ src/PureCloudPlatform.Client.V2/Model/RoomParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/RoomParticipantResponse.cs
 src/PureCloudPlatform.Client.V2/Model/RoomParticipantsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/RoomUpdateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/RouteIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/RoutePathRequest.cs
 src/PureCloudPlatform.Client.V2/Model/RoutePathResponse.cs
 src/PureCloudPlatform.Client.V2/Model/RoutingActivityData.cs
@@ -13496,6 +13485,7 @@ src/PureCloudPlatform.Client.V2/Model/SmsAddressProvision.cs
 src/PureCloudPlatform.Client.V2/Model/SmsAlphanumericProvision.cs
 src/PureCloudPlatform.Client.V2/Model/SmsAvailablePhoneNumber.cs
 src/PureCloudPlatform.Client.V2/Model/SmsConfig.cs
+src/PureCloudPlatform.Client.V2/Model/SmsIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/SmsPhoneNumber.cs
 src/PureCloudPlatform.Client.V2/Model/SmsPhoneNumberEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SmsPhoneNumberImport.cs
@@ -13609,6 +13599,7 @@ src/PureCloudPlatform.Client.V2/Model/SummaryAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/SummaryAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/SummaryAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SummaryAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/SummaryAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/SummaryAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/SummaryAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SummaryAsyncAggregationQuery.cs
@@ -13650,6 +13641,7 @@ src/PureCloudPlatform.Client.V2/Model/SurveyAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/SurveyAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyAssignment.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyAsyncAggregateQueryResponse.cs
@@ -13688,6 +13680,7 @@ src/PureCloudPlatform.Client.V2/Model/TaskManagementAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/TaskManagementAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/TaskManagementAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TaskManagementAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/TaskManagementAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/TaskManagementAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/TaskManagementAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TaskManagementAsyncAggregationQuery.cs
@@ -13729,7 +13722,11 @@ src/PureCloudPlatform.Client.V2/Model/TestTopicPhraseJob.cs
 src/PureCloudPlatform.Client.V2/Model/TestTopicPhraseJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TestTopicPhraseJobs.cs
 src/PureCloudPlatform.Client.V2/Model/TestTopicPhrasePhrase.cs
+src/PureCloudPlatform.Client.V2/Model/TestTopicPhraseTestPhraseDetectedPhrase.cs
+src/PureCloudPlatform.Client.V2/Model/TestTopicPhraseTestPhraseMatchedTranscript.cs
+src/PureCloudPlatform.Client.V2/Model/TestTopicPhraseTestTopicPhraseResults.cs
 src/PureCloudPlatform.Client.V2/Model/TestTopicPhraseTopic.cs
+src/PureCloudPlatform.Client.V2/Model/TestTopicPhraseTopicsDefinitionsJob.cs
 src/PureCloudPlatform.Client.V2/Model/TextBotChannel.cs
 src/PureCloudPlatform.Client.V2/Model/TextBotDisconnectAction.cs
 src/PureCloudPlatform.Client.V2/Model/TextBotErrorInputEvent.cs
@@ -13807,13 +13804,13 @@ src/PureCloudPlatform.Client.V2/Model/TopicsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/Touchpoint.cs
 src/PureCloudPlatform.Client.V2/Model/TouchpointResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TrackingSettings.cs
-src/PureCloudPlatform.Client.V2/Model/TrainingListing.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptAggregateDataContainer.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptAggregateQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptAggregateQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptAggregateQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/TranscriptAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TranscriptAsyncAggregationQuery.cs
@@ -13911,6 +13908,7 @@ src/PureCloudPlatform.Client.V2/Model/TwitterDataIngestionRuleResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TwitterDataIngestionRuleVersionResponse.cs
 src/PureCloudPlatform.Client.V2/Model/TwitterDataIngestionRuleVersionResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TwitterId.cs
+src/PureCloudPlatform.Client.V2/Model/TwitterIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/TwitterIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/TwitterIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TwitterIntegrationRequest.cs
@@ -14174,12 +14172,9 @@ src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicCondition.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicConditionRulePredicate.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicEntityProperties.cs
 src/PureCloudPlatform.Client.V2/Model/V2MobiusRulesTopicRule.cs
-src/PureCloudPlatform.Client.V2/Model/V2QueueObservationMetricData.cs
-src/PureCloudPlatform.Client.V2/Model/V2QueueObservationMetricGroup.cs
-src/PureCloudPlatform.Client.V2/Model/V2QueueObservationMetricStats.cs
-src/PureCloudPlatform.Client.V2/Model/V2QueueObservationObservation.cs
-src/PureCloudPlatform.Client.V2/Model/V2QueueObservationObservationNotification.cs
-src/PureCloudPlatform.Client.V2/Model/V2QueueObservationScoredAgent.cs
+src/PureCloudPlatform.Client.V2/Model/V2QueueObservationMetricCountData.cs
+src/PureCloudPlatform.Client.V2/Model/V2QueueObservationMetricCountGroup.cs
+src/PureCloudPlatform.Client.V2/Model/V2QueueObservationObservationCountNotification.cs
 src/PureCloudPlatform.Client.V2/Model/V2ReprocessJobStateChangedTopicJobStateChanged.cs
 src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationFollowupAction.cs
 src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationReasonMessage.cs
@@ -14187,6 +14182,7 @@ src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPrevi
 src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryExtractedEntity.cs
 src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationSummaryMessage.cs
 src/PureCloudPlatform.Client.V2/Model/V2SessionConversationsSummarySettingsPreviewEventConversationSummarySettingsPreviewMessage.cs
+src/PureCloudPlatform.Client.V2/Model/V2StaConversationCategoriesStaConversationCategoriesMessage.cs
 src/PureCloudPlatform.Client.V2/Model/V2StaEmpathyOverallTopicAgentEmpathyScore.cs
 src/PureCloudPlatform.Client.V2/Model/V2StaEmpathyOverallTopicOverallEmpathyMessage.cs
 src/PureCloudPlatform.Client.V2/Model/V2StaSentimentOverallTopicOverallSentimentMessage.cs
@@ -14520,6 +14516,7 @@ src/PureCloudPlatform.Client.V2/Model/WhatsAppDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppEmbeddedSignupIntegrationActivationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppEmbeddedSignupIntegrationRequest.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppId.cs
+src/PureCloudPlatform.Client.V2/Model/WhatsAppIdentityResolutionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppIntegrationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/WhatsAppIntegrationRequest.cs

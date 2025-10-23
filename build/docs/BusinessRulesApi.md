@@ -45,8 +45,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete a decision table
 
-DeleteBusinessrulesDecisiontable is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:decisionTable:delete
@@ -110,8 +108,6 @@ void (empty response body)
 
 Delete a decision table version
 
-DeleteBusinessrulesDecisiontableVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:decisionTable:delete
@@ -174,8 +170,6 @@ void (empty response body)
 
 
 Delete a decision table row
-
-DeleteBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -243,8 +237,6 @@ void (empty response body)
 
 Delete a schema
 
-DeleteBusinessrulesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:businessRulesSchema:delete
@@ -305,8 +297,6 @@ void (empty response body)
 
 
 Get a decision table
-
-GetBusinessrulesDecisiontable is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -369,8 +359,6 @@ namespace Example
 
 
 Get a decision table version
-
-GetBusinessrulesDecisiontableVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -435,8 +423,6 @@ namespace Example
 
 
 Get a decision table row
-
-GetBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -503,8 +489,6 @@ namespace Example
 
 
 Get a list of decision table rows.
-
-GetBusinessrulesDecisiontableVersionRows is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -574,8 +558,6 @@ namespace Example
 
 Get a list of decision table versions
 
-GetBusinessrulesDecisiontableVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:decisionTable:view
@@ -641,8 +623,6 @@ namespace Example
 
 
 Get a list of decision tables.
-
-GetBusinessrulesDecisiontables is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -711,8 +691,6 @@ namespace Example
 
 
 Search for decision tables.
-
-GetBusinessrulesDecisiontablesSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -788,8 +766,6 @@ namespace Example
 
 Get a schema
 
-GetBusinessrulesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:businessRulesSchema:view
@@ -852,8 +828,6 @@ namespace Example
 
 Get a list of schemas.
 
-GetBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:businessRulesSchema:view
@@ -910,8 +884,6 @@ This endpoint does require any parameters.
 
 
 Get a specific named core type.
-
-GetBusinessrulesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -975,8 +947,6 @@ namespace Example
 
 Get the core types from which all schemas are built.
 
-GetBusinessrulesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:businessRulesSchema:view
@@ -1033,8 +1003,6 @@ This endpoint does require any parameters.
 
 
 Update a decision table
-
-PatchBusinessrulesDecisiontable is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1102,8 +1070,6 @@ namespace Example
 
 Update a decision table version
 
-PatchBusinessrulesDecisiontableVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:decisionTable:edit
@@ -1170,8 +1136,6 @@ namespace Example
 
 Execute a published decision table
 
-PostBusinessrulesDecisiontableExecute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:decisionTable:execute
@@ -1235,8 +1199,6 @@ namespace Example
 
 
 Copy a decision table version
-
-PostBusinessrulesDecisiontableVersionCopy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1304,8 +1266,6 @@ namespace Example
 
 Execute a decision table version
 
-PostBusinessrulesDecisiontableVersionExecute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:decisionTable:execute
@@ -1371,8 +1331,6 @@ namespace Example
 
 
 Create a decision table row
-
-PostBusinessrulesDecisiontableVersionRows is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1440,8 +1398,6 @@ namespace Example
 
 
 Search for decision table rows
-
-PostBusinessrulesDecisiontableVersionRowsSearch is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1513,8 +1469,6 @@ namespace Example
 
 Update the Business Rules Schema to the latest version for a given decision table version
 
-PostBusinessrulesDecisiontableVersionSync is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:decisionTable:edit
@@ -1579,8 +1533,6 @@ namespace Example
 
 Create a new decision table version
 
-PostBusinessrulesDecisiontableVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:decisionTable:add
@@ -1642,8 +1594,6 @@ namespace Example
 
 
 Create a decision table
-
-PostBusinessrulesDecisiontables is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1709,8 +1659,6 @@ namespace Example
 
 Create a schema
 
-PostBusinessrulesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:businessRulesSchema:add
@@ -1772,8 +1720,6 @@ namespace Example
 
 
 Publish a decision table version
-
-PutBusinessrulesDecisiontableVersionPublish is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1838,8 +1784,6 @@ namespace Example
 
 
 Full update a decision table row
-
-PutBusinessrulesDecisiontableVersionRow is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1910,8 +1854,6 @@ namespace Example
 
 Update a schema
 
-PutBusinessrulesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * businessrules:businessRulesSchema:edit
@@ -1969,4 +1911,4 @@ namespace Example
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_

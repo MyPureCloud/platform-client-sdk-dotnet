@@ -1015,9 +1015,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>IVRIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig GetArchitectIvrIdentityresolution (string ivrId);
+        IVRIdentityResolutionConfig GetArchitectIvrIdentityresolution (string ivrId);
 
         /// <summary>
         /// Get an IVR IdentityResolutionConfig.
@@ -1027,9 +1027,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of IVRIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> GetArchitectIvrIdentityresolutionWithHttpInfo (string ivrId);
+        ApiResponse<IVRIdentityResolutionConfig> GetArchitectIvrIdentityresolutionWithHttpInfo (string ivrId);
 
         /// <summary>
         /// Get IVR configs.
@@ -3796,9 +3796,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>IVRIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig PutArchitectIvrIdentityresolution (string ivrId, IdentityResolutionConfig body);
+        IVRIdentityResolutionConfig PutArchitectIvrIdentityresolution (string ivrId, IVRIdentityResolutionConfig body);
 
         /// <summary>
         /// Update an IVR IdentityResolutionConfig.
@@ -3809,9 +3809,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of IVRIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> PutArchitectIvrIdentityresolutionWithHttpInfo (string ivrId, IdentityResolutionConfig body);
+        ApiResponse<IVRIdentityResolutionConfig> PutArchitectIvrIdentityresolutionWithHttpInfo (string ivrId, IVRIdentityResolutionConfig body);
 
         /// <summary>
         /// Update specified user prompt
@@ -5139,9 +5139,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of IVRIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> GetArchitectIvrIdentityresolutionAsync (string ivrId);
+        System.Threading.Tasks.Task<IVRIdentityResolutionConfig> GetArchitectIvrIdentityresolutionAsync (string ivrId);
 
         /// <summary>
         /// Get an IVR IdentityResolutionConfig.
@@ -5151,9 +5151,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (IVRIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId);
+        System.Threading.Tasks.Task<ApiResponse<IVRIdentityResolutionConfig>> GetArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId);
 
         /// <summary>
         /// Get IVR configs.
@@ -7920,9 +7920,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of IVRIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> PutArchitectIvrIdentityresolutionAsync (string ivrId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<IVRIdentityResolutionConfig> PutArchitectIvrIdentityresolutionAsync (string ivrId, IVRIdentityResolutionConfig body);
 
         /// <summary>
         /// Update an IVR IdentityResolutionConfig.
@@ -7933,9 +7933,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (IVRIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<ApiResponse<IVRIdentityResolutionConfig>> PutArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId, IVRIdentityResolutionConfig body);
 
         /// <summary>
         /// Update specified user prompt
@@ -15966,11 +15966,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>IVRIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig GetArchitectIvrIdentityresolution (string ivrId)
+        public IVRIdentityResolutionConfig GetArchitectIvrIdentityresolution (string ivrId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = GetArchitectIvrIdentityresolutionWithHttpInfo(ivrId);
+             ApiResponse<IVRIdentityResolutionConfig> localVarResponse = GetArchitectIvrIdentityresolutionWithHttpInfo(ivrId);
              return localVarResponse.Data;
         }
 
@@ -15980,9 +15980,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of IVRIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > GetArchitectIvrIdentityresolutionWithHttpInfo (string ivrId)
+        public ApiResponse< IVRIdentityResolutionConfig > GetArchitectIvrIdentityresolutionWithHttpInfo (string ivrId)
         { 
             // verify the required parameter 'ivrId' is set
             if (ivrId == null)
@@ -16051,9 +16051,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetArchitectIvrIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<IVRIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (IVRIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVRIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16065,11 +16065,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of IVRIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetArchitectIvrIdentityresolutionAsync (string ivrId)
+        public async System.Threading.Tasks.Task<IVRIdentityResolutionConfig> GetArchitectIvrIdentityresolutionAsync (string ivrId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetArchitectIvrIdentityresolutionAsyncWithHttpInfo(ivrId);
+             ApiResponse<IVRIdentityResolutionConfig> localVarResponse = await GetArchitectIvrIdentityresolutionAsyncWithHttpInfo(ivrId);
              return localVarResponse.Data;
 
         }
@@ -16080,9 +16080,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (IVRIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId)
+        public async System.Threading.Tasks.Task<ApiResponse<IVRIdentityResolutionConfig>> GetArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId)
         { 
             // verify the required parameter 'ivrId' is set
             if (ivrId == null)
@@ -16152,9 +16152,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetArchitectIvrIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<IVRIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (IVRIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVRIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -37286,11 +37286,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>IVRIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig PutArchitectIvrIdentityresolution (string ivrId, IdentityResolutionConfig body)
+        public IVRIdentityResolutionConfig PutArchitectIvrIdentityresolution (string ivrId, IVRIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = PutArchitectIvrIdentityresolutionWithHttpInfo(ivrId, body);
+             ApiResponse<IVRIdentityResolutionConfig> localVarResponse = PutArchitectIvrIdentityresolutionWithHttpInfo(ivrId, body);
              return localVarResponse.Data;
         }
 
@@ -37301,9 +37301,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of IVRIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > PutArchitectIvrIdentityresolutionWithHttpInfo (string ivrId, IdentityResolutionConfig body)
+        public ApiResponse< IVRIdentityResolutionConfig > PutArchitectIvrIdentityresolutionWithHttpInfo (string ivrId, IVRIdentityResolutionConfig body)
         { 
             // verify the required parameter 'ivrId' is set
             if (ivrId == null)
@@ -37381,9 +37381,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutArchitectIvrIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<IVRIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (IVRIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVRIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -37396,11 +37396,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of IVRIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutArchitectIvrIdentityresolutionAsync (string ivrId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<IVRIdentityResolutionConfig> PutArchitectIvrIdentityresolutionAsync (string ivrId, IVRIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutArchitectIvrIdentityresolutionAsyncWithHttpInfo(ivrId, body);
+             ApiResponse<IVRIdentityResolutionConfig> localVarResponse = await PutArchitectIvrIdentityresolutionAsyncWithHttpInfo(ivrId, body);
              return localVarResponse.Data;
 
         }
@@ -37412,9 +37412,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ivrId">IVR id</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (IVRIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<ApiResponse<IVRIdentityResolutionConfig>> PutArchitectIvrIdentityresolutionAsyncWithHttpInfo (string ivrId, IVRIdentityResolutionConfig body)
         { 
             // verify the required parameter 'ivrId' is set
             if (ivrId == null)
@@ -37494,9 +37494,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutArchitectIvrIdentityresolution: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<IVRIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (IVRIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IVRIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

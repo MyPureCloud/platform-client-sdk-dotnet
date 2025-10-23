@@ -131,7 +131,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Body">Body text of the content offer..</param>
         /// <param name="CallToAction">Properties customizing the call to action button on the content offer..</param>
         /// <param name="Style">Properties customizing the styling of the content offer..</param>
-        public ContentOffer(string ImageUrl = null, DisplayModeEnum? DisplayMode = null, LayoutModeEnum? LayoutMode = null, string Title = null, string Headline = null, string Body = null, CallToAction CallToAction = null, ContentOfferStylingConfiguration Style = null)
+        /// <param name="ImageAltText">Image description text for accessibility compliance and assistive technology support..</param>
+        public ContentOffer(string ImageUrl = null, DisplayModeEnum? DisplayMode = null, LayoutModeEnum? LayoutMode = null, string Title = null, string Headline = null, string Body = null, CallToAction CallToAction = null, ContentOfferStylingConfiguration Style = null, string ImageAltText = null)
         {
             this.ImageUrl = ImageUrl;
             this.DisplayMode = DisplayMode;
@@ -141,6 +142,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Body = Body;
             this.CallToAction = CallToAction;
             this.Style = Style;
+            this.ImageAltText = ImageAltText;
             
         }
         
@@ -203,6 +205,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ContentOfferStylingConfiguration Style { get; set; }
 
 
+
+        /// <summary>
+        /// Image description text for accessibility compliance and assistive technology support.
+        /// </summary>
+        /// <value>Image description text for accessibility compliance and assistive technology support.</value>
+        [DataMember(Name="imageAltText", EmitDefaultValue=false)]
+        public string ImageAltText { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -220,6 +231,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Body: ").Append(Body).Append("\n");
             sb.Append("  CallToAction: ").Append(CallToAction).Append("\n");
             sb.Append("  Style: ").Append(Style).Append("\n");
+            sb.Append("  ImageAltText: ").Append(ImageAltText).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -299,6 +311,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Style == other.Style ||
                     this.Style != null &&
                     this.Style.Equals(other.Style)
+                ) &&
+                (
+                    this.ImageAltText == other.ImageAltText ||
+                    this.ImageAltText != null &&
+                    this.ImageAltText.Equals(other.ImageAltText)
                 );
         }
 
@@ -336,6 +353,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Style != null)
                     hash = hash * 59 + this.Style.GetHashCode();
+
+                if (this.ImageAltText != null)
+                    hash = hash * 59 + this.ImageAltText.GetHashCode();
 
                 return hash;
             }

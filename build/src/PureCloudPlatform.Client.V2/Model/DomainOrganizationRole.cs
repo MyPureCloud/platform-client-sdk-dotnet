@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoleNeedsUpdate">Optional unless patch operation..</param>
         /// <param name="BaseLicense">BaseLicense.</param>
         /// <param name="AddonLicenses">AddonLicenses.</param>
-        /// <param name="Base">Base.</param>
         /// <param name="Default">Default.</param>
-        public DomainOrganizationRole(string Id = null, string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, string BaseLicense = null, List<string> AddonLicenses = null, bool? Base = null, bool? Default = null)
+        /// <param name="Base">Base.</param>
+        public DomainOrganizationRole(string Id = null, string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, string BaseLicense = null, List<string> AddonLicenses = null, bool? Default = null, bool? Base = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -45,8 +45,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RoleNeedsUpdate = RoleNeedsUpdate;
             this.BaseLicense = BaseLicense;
             this.AddonLicenses = AddonLicenses;
-            this.Base = Base;
             this.Default = Default;
+            this.Base = Base;
             
         }
         
@@ -153,18 +153,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Base
-        /// </summary>
-        [DataMember(Name="base", EmitDefaultValue=false)]
-        public bool? Base { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets Default
         /// </summary>
         [DataMember(Name="default", EmitDefaultValue=false)]
         public bool? Default { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Base
+        /// </summary>
+        [DataMember(Name="base", EmitDefaultValue=false)]
+        public bool? Base { get; set; }
 
 
 
@@ -197,8 +197,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  BaseLicense: ").Append(BaseLicense).Append("\n");
             sb.Append("  AddonLicenses: ").Append(AddonLicenses).Append("\n");
             sb.Append("  DateLicenseLastUpdated: ").Append(DateLicenseLastUpdated).Append("\n");
-            sb.Append("  Base: ").Append(Base).Append("\n");
             sb.Append("  Default: ").Append(Default).Append("\n");
+            sb.Append("  Base: ").Append(Base).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -301,14 +301,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateLicenseLastUpdated.Equals(other.DateLicenseLastUpdated)
                 ) &&
                 (
-                    this.Base == other.Base ||
-                    this.Base != null &&
-                    this.Base.Equals(other.Base)
-                ) &&
-                (
                     this.Default == other.Default ||
                     this.Default != null &&
                     this.Default.Equals(other.Default)
+                ) &&
+                (
+                    this.Base == other.Base ||
+                    this.Base != null &&
+                    this.Base.Equals(other.Base)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -364,11 +364,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DateLicenseLastUpdated != null)
                     hash = hash * 59 + this.DateLicenseLastUpdated.GetHashCode();
 
-                if (this.Base != null)
-                    hash = hash * 59 + this.Base.GetHashCode();
-
                 if (this.Default != null)
                     hash = hash * 59 + this.Default.GetHashCode();
+
+                if (this.Base != null)
+                    hash = hash * 59 + this.Base.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

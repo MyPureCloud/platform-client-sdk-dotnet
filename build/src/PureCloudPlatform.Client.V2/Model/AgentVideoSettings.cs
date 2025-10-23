@@ -62,12 +62,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="AllowCamera">whether or not agent camera is allowed.</param>
         /// <param name="AllowScreenShare">whether or not agent screen share is allowed.</param>
+        /// <param name="AllowMicrophone">whether or not agent microphone is allowed.</param>
         /// <param name="Background">background for agent.</param>
         /// <param name="BackgroundImage">background image settings for agent.</param>
-        public AgentVideoSettings(bool? AllowCamera = null, bool? AllowScreenShare = null, BackgroundEnum? Background = null, BackgroundImageSettings BackgroundImage = null)
+        public AgentVideoSettings(bool? AllowCamera = null, bool? AllowScreenShare = null, bool? AllowMicrophone = null, BackgroundEnum? Background = null, BackgroundImageSettings BackgroundImage = null)
         {
             this.AllowCamera = AllowCamera;
             this.AllowScreenShare = AllowScreenShare;
+            this.AllowMicrophone = AllowMicrophone;
             this.Background = Background;
             this.BackgroundImage = BackgroundImage;
             
@@ -93,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// whether or not agent microphone is allowed
+        /// </summary>
+        /// <value>whether or not agent microphone is allowed</value>
+        [DataMember(Name="allowMicrophone", EmitDefaultValue=false)]
+        public bool? AllowMicrophone { get; set; }
+
+
+
 
 
         /// <summary>
@@ -114,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  AllowCamera: ").Append(AllowCamera).Append("\n");
             sb.Append("  AllowScreenShare: ").Append(AllowScreenShare).Append("\n");
+            sb.Append("  AllowMicrophone: ").Append(AllowMicrophone).Append("\n");
             sb.Append("  Background: ").Append(Background).Append("\n");
             sb.Append("  BackgroundImage: ").Append(BackgroundImage).Append("\n");
             sb.Append("}\n");
@@ -167,6 +179,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AllowScreenShare.Equals(other.AllowScreenShare)
                 ) &&
                 (
+                    this.AllowMicrophone == other.AllowMicrophone ||
+                    this.AllowMicrophone != null &&
+                    this.AllowMicrophone.Equals(other.AllowMicrophone)
+                ) &&
+                (
                     this.Background == other.Background ||
                     this.Background != null &&
                     this.Background.Equals(other.Background)
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AllowScreenShare != null)
                     hash = hash * 59 + this.AllowScreenShare.GetHashCode();
+
+                if (this.AllowMicrophone != null)
+                    hash = hash * 59 + this.AllowMicrophone.GetHashCode();
 
                 if (this.Background != null)
                     hash = hash * 59 + this.Background.GetHashCode();

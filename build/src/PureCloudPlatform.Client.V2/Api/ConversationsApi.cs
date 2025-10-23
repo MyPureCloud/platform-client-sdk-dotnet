@@ -2205,9 +2205,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>AppleIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId);
+        AppleIdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId);
 
         /// <summary>
         /// Get Apple messaging integration identity resolution settings
@@ -2217,9 +2217,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of AppleIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId);
+        ApiResponse<AppleIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Get Facebook messaging integration identity resolution settings
@@ -2229,9 +2229,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>FacebookIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId);
+        FacebookIdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId);
 
         /// <summary>
         /// Get Facebook messaging integration identity resolution settings
@@ -2241,9 +2241,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of FacebookIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId);
+        ApiResponse<FacebookIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Get an Instagram integration identity resolution settings
@@ -2253,9 +2253,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>InstagramIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId);
+        InstagramIdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId);
 
         /// <summary>
         /// Get an Instagram integration identity resolution settings
@@ -2265,9 +2265,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of InstagramIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo (string integrationId);
+        ApiResponse<InstagramIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Get an open messaging integration Identity Resolution settings
@@ -2301,9 +2301,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>TwitterIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId);
+        TwitterIdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId);
 
         /// <summary>
         /// Get X (Formally Twitter) messaging integration identity resolution settings
@@ -2313,9 +2313,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of TwitterIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId);
+        ApiResponse<TwitterIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Get a whatsApp integration Identity Resolution settings
@@ -2325,9 +2325,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>WhatsAppIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId);
+        WhatsAppIdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId);
 
         /// <summary>
         /// Get a whatsApp integration Identity Resolution settings
@@ -2337,9 +2337,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of WhatsAppIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId);
+        ApiResponse<WhatsAppIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Get twitter oauth settings to patch an integration
@@ -3510,6 +3510,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ConsultTransferResponse</returns>
         
         ApiResponse<ConsultTransferResponse> PatchConversationsCallParticipantConsultWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body);
+
+        /// <summary>
+        /// Update conversation participant on behalf of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Participant request</param>
+        /// <returns></returns>
+        
+        void PatchConversationsCallParticipantUserUserId (string conversationId, string participantId, string userId, MediaParticipantRequest body);
+
+        /// <summary>
+        /// Update conversation participant on behalf of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Participant request</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PatchConversationsCallParticipantUserUserIdWithHttpInfo (string conversationId, string participantId, string userId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants
@@ -7242,9 +7272,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>AppleIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId, IdentityResolutionConfig body);
+        AppleIdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId, AppleIdentityResolutionConfig body);
 
         /// <summary>
         /// Create an identity resolution settings for a Apple messaging integration
@@ -7255,9 +7285,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of AppleIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId, IdentityResolutionConfig body);
+        ApiResponse<AppleIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId, AppleIdentityResolutionConfig body);
 
         /// <summary>
         /// Create an identity resolution settings for a Facebook messaging integration
@@ -7268,9 +7298,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>FacebookIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId, IdentityResolutionConfig body);
+        FacebookIdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId, FacebookIdentityResolutionConfig body);
 
         /// <summary>
         /// Create an identity resolution settings for a Facebook messaging integration
@@ -7281,9 +7311,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of FacebookIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId, IdentityResolutionConfig body);
+        ApiResponse<FacebookIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId, FacebookIdentityResolutionConfig body);
 
         /// <summary>
         /// Create identity resolution settings for an Instagram messaging integration
@@ -7294,9 +7324,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>InstagramIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId, IdentityResolutionConfig body);
+        InstagramIdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId, InstagramIdentityResolutionConfig body);
 
         /// <summary>
         /// Create identity resolution settings for an Instagram messaging integration
@@ -7307,9 +7337,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of InstagramIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo (string integrationId, IdentityResolutionConfig body);
+        ApiResponse<InstagramIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo (string integrationId, InstagramIdentityResolutionConfig body);
 
         /// <summary>
         /// Update an open messaging integration Identity Resolution settings
@@ -7346,9 +7376,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>TwitterIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId, IdentityResolutionConfig body);
+        TwitterIdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId, TwitterIdentityResolutionConfig body);
 
         /// <summary>
         /// Create an identity resolution settings for an X (Formally Twitter) messaging integration
@@ -7359,9 +7389,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of TwitterIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, IdentityResolutionConfig body);
+        ApiResponse<TwitterIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, TwitterIdentityResolutionConfig body);
 
         /// <summary>
         /// Update a whatsApp integration Identity Resolution settings
@@ -7372,9 +7402,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body"></param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>WhatsAppIdentityResolutionConfig</returns>
         
-        IdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId, IdentityResolutionConfig body);
+        WhatsAppIdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId, WhatsAppIdentityResolutionConfig body);
 
         /// <summary>
         /// Update a whatsApp integration Identity Resolution settings
@@ -7385,9 +7415,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of WhatsAppIdentityResolutionConfig</returns>
         
-        ApiResponse<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId, IdentityResolutionConfig body);
+        ApiResponse<WhatsAppIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId, WhatsAppIdentityResolutionConfig body);
 
         /// <summary>
         /// Set the organization&#39;s default setting that may be applied to to integrations without settings
@@ -9733,9 +9763,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of AppleIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsync (string integrationId);
+        System.Threading.Tasks.Task<AppleIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsync (string integrationId);
 
         /// <summary>
         /// Get Apple messaging integration identity resolution settings
@@ -9745,9 +9775,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (AppleIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId);
+        System.Threading.Tasks.Task<ApiResponse<AppleIdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Get Facebook messaging integration identity resolution settings
@@ -9757,9 +9787,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of FacebookIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsync (string integrationId);
+        System.Threading.Tasks.Task<FacebookIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsync (string integrationId);
 
         /// <summary>
         /// Get Facebook messaging integration identity resolution settings
@@ -9769,9 +9799,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (FacebookIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId);
+        System.Threading.Tasks.Task<ApiResponse<FacebookIdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Get an Instagram integration identity resolution settings
@@ -9781,9 +9811,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of InstagramIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsync (string integrationId);
+        System.Threading.Tasks.Task<InstagramIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsync (string integrationId);
 
         /// <summary>
         /// Get an Instagram integration identity resolution settings
@@ -9793,9 +9823,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (InstagramIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo (string integrationId);
+        System.Threading.Tasks.Task<ApiResponse<InstagramIdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Get an open messaging integration Identity Resolution settings
@@ -9829,9 +9859,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of TwitterIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsync (string integrationId);
+        System.Threading.Tasks.Task<TwitterIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsync (string integrationId);
 
         /// <summary>
         /// Get X (Formally Twitter) messaging integration identity resolution settings
@@ -9841,9 +9871,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (TwitterIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId);
+        System.Threading.Tasks.Task<ApiResponse<TwitterIdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Get a whatsApp integration Identity Resolution settings
@@ -9853,9 +9883,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of WhatsAppIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsync (string integrationId);
+        System.Threading.Tasks.Task<WhatsAppIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsync (string integrationId);
 
         /// <summary>
         /// Get a whatsApp integration Identity Resolution settings
@@ -9865,9 +9895,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (WhatsAppIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId);
+        System.Threading.Tasks.Task<ApiResponse<WhatsAppIdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId);
 
         /// <summary>
         /// Get twitter oauth settings to patch an integration
@@ -11038,6 +11068,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ConsultTransferResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ConsultTransferResponse>> PatchConversationsCallParticipantConsultAsyncWithHttpInfo (string conversationId, string participantId, ConsultTransferUpdate body);
+
+        /// <summary>
+        /// Update conversation participant on behalf of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Participant request</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PatchConversationsCallParticipantUserUserIdAsync (string conversationId, string participantId, string userId, MediaParticipantRequest body);
+
+        /// <summary>
+        /// Update conversation participant on behalf of a user
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Participant request</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCallParticipantUserUserIdAsyncWithHttpInfo (string conversationId, string participantId, string userId, MediaParticipantRequest body);
 
         /// <summary>
         /// Update a conversation by disconnecting all of the participants
@@ -14770,9 +14830,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of AppleIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsync (string integrationId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<AppleIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsync (string integrationId, AppleIdentityResolutionConfig body);
 
         /// <summary>
         /// Create an identity resolution settings for a Apple messaging integration
@@ -14783,9 +14843,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (AppleIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<ApiResponse<AppleIdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId, AppleIdentityResolutionConfig body);
 
         /// <summary>
         /// Create an identity resolution settings for a Facebook messaging integration
@@ -14796,9 +14856,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of FacebookIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsync (string integrationId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<FacebookIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsync (string integrationId, FacebookIdentityResolutionConfig body);
 
         /// <summary>
         /// Create an identity resolution settings for a Facebook messaging integration
@@ -14809,9 +14869,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (FacebookIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<ApiResponse<FacebookIdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId, FacebookIdentityResolutionConfig body);
 
         /// <summary>
         /// Create identity resolution settings for an Instagram messaging integration
@@ -14822,9 +14882,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of InstagramIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsync (string integrationId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<InstagramIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsync (string integrationId, InstagramIdentityResolutionConfig body);
 
         /// <summary>
         /// Create identity resolution settings for an Instagram messaging integration
@@ -14835,9 +14895,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (InstagramIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo (string integrationId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<ApiResponse<InstagramIdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo (string integrationId, InstagramIdentityResolutionConfig body);
 
         /// <summary>
         /// Update an open messaging integration Identity Resolution settings
@@ -14874,9 +14934,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of TwitterIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsync (string integrationId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<TwitterIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsync (string integrationId, TwitterIdentityResolutionConfig body);
 
         /// <summary>
         /// Create an identity resolution settings for an X (Formally Twitter) messaging integration
@@ -14887,9 +14947,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (TwitterIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<ApiResponse<TwitterIdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, TwitterIdentityResolutionConfig body);
 
         /// <summary>
         /// Update a whatsApp integration Identity Resolution settings
@@ -14900,9 +14960,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of WhatsAppIdentityResolutionConfig</returns>
         
-        System.Threading.Tasks.Task<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsync (string integrationId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<WhatsAppIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsync (string integrationId, WhatsAppIdentityResolutionConfig body);
 
         /// <summary>
         /// Update a whatsApp integration Identity Resolution settings
@@ -14913,9 +14973,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (WhatsAppIdentityResolutionConfig)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId, IdentityResolutionConfig body);
+        System.Threading.Tasks.Task<ApiResponse<WhatsAppIdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId, WhatsAppIdentityResolutionConfig body);
 
         /// <summary>
         /// Set the organization&#39;s default setting that may be applied to to integrations without settings
@@ -32812,11 +32872,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>AppleIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId)
+        public AppleIdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo(integrationId);
+             ApiResponse<AppleIdentityResolutionConfig> localVarResponse = GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo(integrationId);
              return localVarResponse.Data;
         }
 
@@ -32826,9 +32886,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of AppleIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId)
+        public ApiResponse< AppleIdentityResolutionConfig > GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -32897,9 +32957,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<AppleIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (AppleIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -32911,11 +32971,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of AppleIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsync (string integrationId)
+        public async System.Threading.Tasks.Task<AppleIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsync (string integrationId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo(integrationId);
+             ApiResponse<AppleIdentityResolutionConfig> localVarResponse = await GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo(integrationId);
              return localVarResponse.Data;
 
         }
@@ -32926,9 +32986,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (AppleIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId)
+        public async System.Threading.Tasks.Task<ApiResponse<AppleIdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -32998,9 +33058,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<AppleIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (AppleIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33013,11 +33073,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>FacebookIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId)
+        public FacebookIdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo(integrationId);
+             ApiResponse<FacebookIdentityResolutionConfig> localVarResponse = GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo(integrationId);
              return localVarResponse.Data;
         }
 
@@ -33027,9 +33087,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of FacebookIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId)
+        public ApiResponse< FacebookIdentityResolutionConfig > GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -33098,9 +33158,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<FacebookIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (FacebookIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FacebookIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33112,11 +33172,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of FacebookIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsync (string integrationId)
+        public async System.Threading.Tasks.Task<FacebookIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsync (string integrationId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo(integrationId);
+             ApiResponse<FacebookIdentityResolutionConfig> localVarResponse = await GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo(integrationId);
              return localVarResponse.Data;
 
         }
@@ -33127,9 +33187,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (FacebookIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId)
+        public async System.Threading.Tasks.Task<ApiResponse<FacebookIdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -33199,9 +33259,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<FacebookIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (FacebookIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FacebookIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33214,11 +33274,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>InstagramIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId)
+        public InstagramIdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo(integrationId);
+             ApiResponse<InstagramIdentityResolutionConfig> localVarResponse = GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo(integrationId);
              return localVarResponse.Data;
         }
 
@@ -33228,9 +33288,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of InstagramIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo (string integrationId)
+        public ApiResponse< InstagramIdentityResolutionConfig > GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -33299,9 +33359,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<InstagramIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (InstagramIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstagramIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33313,11 +33373,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of InstagramIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsync (string integrationId)
+        public async System.Threading.Tasks.Task<InstagramIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsync (string integrationId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo(integrationId);
+             ApiResponse<InstagramIdentityResolutionConfig> localVarResponse = await GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo(integrationId);
              return localVarResponse.Data;
 
         }
@@ -33328,9 +33388,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (InstagramIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo (string integrationId)
+        public async System.Threading.Tasks.Task<ApiResponse<InstagramIdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -33400,9 +33460,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<InstagramIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (InstagramIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstagramIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33616,11 +33676,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>TwitterIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId)
+        public TwitterIdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId);
+             ApiResponse<TwitterIdentityResolutionConfig> localVarResponse = GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId);
              return localVarResponse.Data;
         }
 
@@ -33630,9 +33690,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of TwitterIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId)
+        public ApiResponse< TwitterIdentityResolutionConfig > GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -33701,9 +33761,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<TwitterIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (TwitterIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33715,11 +33775,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of TwitterIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsync (string integrationId)
+        public async System.Threading.Tasks.Task<TwitterIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsync (string integrationId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId);
+             ApiResponse<TwitterIdentityResolutionConfig> localVarResponse = await GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId);
              return localVarResponse.Data;
 
         }
@@ -33730,9 +33790,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (TwitterIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId)
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterIdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -33802,9 +33862,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<TwitterIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (TwitterIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33817,11 +33877,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>WhatsAppIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId)
+        public WhatsAppIdentityResolutionConfig GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo(integrationId);
+             ApiResponse<WhatsAppIdentityResolutionConfig> localVarResponse = GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo(integrationId);
              return localVarResponse.Data;
         }
 
@@ -33831,9 +33891,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of WhatsAppIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId)
+        public ApiResponse< WhatsAppIdentityResolutionConfig > GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -33902,9 +33962,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<WhatsAppIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (WhatsAppIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -33916,11 +33976,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of WhatsAppIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsync (string integrationId)
+        public async System.Threading.Tasks.Task<WhatsAppIdentityResolutionConfig> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsync (string integrationId)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo(integrationId);
+             ApiResponse<WhatsAppIdentityResolutionConfig> localVarResponse = await GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo(integrationId);
              return localVarResponse.Data;
 
         }
@@ -33931,9 +33991,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (WhatsAppIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId)
+        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIdentityResolutionConfig>> GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -34003,9 +34063,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<WhatsAppIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (WhatsAppIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -43283,6 +43343,254 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ConsultTransferResponse>(localVarStatusCode,
                 localVarHeaders,
                 (ConsultTransferResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ConsultTransferResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update conversation participant on behalf of a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Participant request</param>
+        /// <returns></returns>
+        
+        public void PatchConversationsCallParticipantUserUserId (string conversationId, string participantId, string userId, MediaParticipantRequest body)
+        {
+             PatchConversationsCallParticipantUserUserIdWithHttpInfo(conversationId, participantId, userId, body);
+        }
+
+        /// <summary>
+        /// Update conversation participant on behalf of a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Participant request</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PatchConversationsCallParticipantUserUserIdWithHttpInfo (string conversationId, string participantId, string userId, MediaParticipantRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationsCallParticipantUserUserId");
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsCallParticipantUserUserId");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ConversationsApi->PatchConversationsCallParticipantUserUserId");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipantUserUserId");
+
+            var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/user/{userId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", this.Configuration.ApiClient.ParameterToString(participantId));
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantUserUserId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantUserUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update conversation participant on behalf of a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Participant request</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PatchConversationsCallParticipantUserUserIdAsync (string conversationId, string participantId, string userId, MediaParticipantRequest body)
+        {
+             await PatchConversationsCallParticipantUserUserIdAsyncWithHttpInfo(conversationId, participantId, userId, body);
+
+        }
+
+        /// <summary>
+        /// Update conversation participant on behalf of a user 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="conversationId">conversationId</param>
+        /// <param name="participantId">participantId</param>
+        /// <param name="userId">userId</param>
+        /// <param name="body">Participant request</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchConversationsCallParticipantUserUserIdAsyncWithHttpInfo (string conversationId, string participantId, string userId, MediaParticipantRequest body)
+        { 
+            // verify the required parameter 'conversationId' is set
+            if (conversationId == null)
+                throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationsCallParticipantUserUserId");
+            
+            // verify the required parameter 'participantId' is set
+            if (participantId == null)
+                throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsCallParticipantUserUserId");
+            
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling ConversationsApi->PatchConversationsCallParticipantUserUserId");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipantUserUserId");
+            
+
+            var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/user/{userId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (conversationId != null) localVarPathParams.Add("conversationId", this.Configuration.ApiClient.ParameterToString(conversationId));
+            if (participantId != null) localVarPathParams.Add("participantId", this.Configuration.ApiClient.ParameterToString(participantId));
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantUserUserId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchConversationsCallParticipantUserUserId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -74655,11 +74963,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>AppleIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId, IdentityResolutionConfig body)
+        public AppleIdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId, AppleIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo(integrationId, body);
+             ApiResponse<AppleIdentityResolutionConfig> localVarResponse = PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo(integrationId, body);
              return localVarResponse.Data;
         }
 
@@ -74670,9 +74978,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of AppleIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId, IdentityResolutionConfig body)
+        public ApiResponse< AppleIdentityResolutionConfig > PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdWithHttpInfo (string integrationId, AppleIdentityResolutionConfig body)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -74750,9 +75058,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<AppleIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (AppleIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -74765,11 +75073,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of AppleIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsync (string integrationId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<AppleIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsync (string integrationId, AppleIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo(integrationId, body);
+             ApiResponse<AppleIdentityResolutionConfig> localVarResponse = await PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo(integrationId, body);
              return localVarResponse.Data;
 
         }
@@ -74781,9 +75089,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (AppleIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<ApiResponse<AppleIdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationIdAsyncWithHttpInfo (string integrationId, AppleIdentityResolutionConfig body)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -74863,9 +75171,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<AppleIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (AppleIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AppleIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -74879,11 +75187,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>FacebookIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId, IdentityResolutionConfig body)
+        public FacebookIdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId, FacebookIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo(integrationId, body);
+             ApiResponse<FacebookIdentityResolutionConfig> localVarResponse = PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo(integrationId, body);
              return localVarResponse.Data;
         }
 
@@ -74894,9 +75202,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of FacebookIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId, IdentityResolutionConfig body)
+        public ApiResponse< FacebookIdentityResolutionConfig > PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdWithHttpInfo (string integrationId, FacebookIdentityResolutionConfig body)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -74974,9 +75282,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<FacebookIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (FacebookIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FacebookIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -74989,11 +75297,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of FacebookIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsync (string integrationId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<FacebookIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsync (string integrationId, FacebookIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo(integrationId, body);
+             ApiResponse<FacebookIdentityResolutionConfig> localVarResponse = await PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo(integrationId, body);
              return localVarResponse.Data;
 
         }
@@ -75005,9 +75313,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (FacebookIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<ApiResponse<FacebookIdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationIdAsyncWithHttpInfo (string integrationId, FacebookIdentityResolutionConfig body)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -75087,9 +75395,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<FacebookIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (FacebookIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FacebookIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -75103,11 +75411,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>InstagramIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId, IdentityResolutionConfig body)
+        public InstagramIdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId, InstagramIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo(integrationId, body);
+             ApiResponse<InstagramIdentityResolutionConfig> localVarResponse = PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo(integrationId, body);
              return localVarResponse.Data;
         }
 
@@ -75118,9 +75426,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of InstagramIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo (string integrationId, IdentityResolutionConfig body)
+        public ApiResponse< InstagramIdentityResolutionConfig > PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdWithHttpInfo (string integrationId, InstagramIdentityResolutionConfig body)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -75198,9 +75506,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<InstagramIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (InstagramIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstagramIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -75213,11 +75521,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of InstagramIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsync (string integrationId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<InstagramIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsync (string integrationId, InstagramIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo(integrationId, body);
+             ApiResponse<InstagramIdentityResolutionConfig> localVarResponse = await PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo(integrationId, body);
              return localVarResponse.Data;
 
         }
@@ -75229,9 +75537,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (InstagramIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo (string integrationId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<ApiResponse<InstagramIdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationIdAsyncWithHttpInfo (string integrationId, InstagramIdentityResolutionConfig body)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -75311,9 +75619,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<InstagramIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (InstagramIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InstagramIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -75551,11 +75859,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>TwitterIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId, IdentityResolutionConfig body)
+        public TwitterIdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId, TwitterIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId, body);
+             ApiResponse<TwitterIdentityResolutionConfig> localVarResponse = PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo(integrationId, body);
              return localVarResponse.Data;
         }
 
@@ -75566,9 +75874,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of TwitterIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, IdentityResolutionConfig body)
+        public ApiResponse< TwitterIdentityResolutionConfig > PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdWithHttpInfo (string integrationId, TwitterIdentityResolutionConfig body)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -75646,9 +75954,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<TwitterIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (TwitterIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -75661,11 +75969,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of TwitterIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsync (string integrationId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<TwitterIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsync (string integrationId, TwitterIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId, body);
+             ApiResponse<TwitterIdentityResolutionConfig> localVarResponse = await PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo(integrationId, body);
              return localVarResponse.Data;
 
         }
@@ -75677,9 +75985,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration Id</param>
         /// <param name="body">IdentityResolutionConfig</param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (TwitterIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<ApiResponse<TwitterIdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationIdAsyncWithHttpInfo (string integrationId, TwitterIdentityResolutionConfig body)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -75759,9 +76067,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<TwitterIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (TwitterIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TwitterIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -75775,11 +76083,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body"></param>
-        /// <returns>IdentityResolutionConfig</returns>
+        /// <returns>WhatsAppIdentityResolutionConfig</returns>
         
-        public IdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId, IdentityResolutionConfig body)
+        public WhatsAppIdentityResolutionConfig PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId, WhatsAppIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo(integrationId, body);
+             ApiResponse<WhatsAppIdentityResolutionConfig> localVarResponse = PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo(integrationId, body);
              return localVarResponse.Data;
         }
 
@@ -75790,9 +76098,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body"></param>
-        /// <returns>ApiResponse of IdentityResolutionConfig</returns>
+        /// <returns>ApiResponse of WhatsAppIdentityResolutionConfig</returns>
         
-        public ApiResponse< IdentityResolutionConfig > PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId, IdentityResolutionConfig body)
+        public ApiResponse< WhatsAppIdentityResolutionConfig > PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdWithHttpInfo (string integrationId, WhatsAppIdentityResolutionConfig body)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -75870,9 +76178,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<WhatsAppIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (WhatsAppIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -75885,11 +76193,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of IdentityResolutionConfig</returns>
+        /// <returns>Task of WhatsAppIdentityResolutionConfig</returns>
         
-        public async System.Threading.Tasks.Task<IdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsync (string integrationId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<WhatsAppIdentityResolutionConfig> PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsync (string integrationId, WhatsAppIdentityResolutionConfig body)
         {
-             ApiResponse<IdentityResolutionConfig> localVarResponse = await PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo(integrationId, body);
+             ApiResponse<WhatsAppIdentityResolutionConfig> localVarResponse = await PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo(integrationId, body);
              return localVarResponse.Data;
 
         }
@@ -75901,9 +76209,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="integrationId">Integration ID</param>
         /// <param name="body"></param>
-        /// <returns>Task of ApiResponse (IdentityResolutionConfig)</returns>
+        /// <returns>Task of ApiResponse (WhatsAppIdentityResolutionConfig)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<IdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId, IdentityResolutionConfig body)
+        public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIdentityResolutionConfig>> PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationIdAsyncWithHttpInfo (string integrationId, WhatsAppIdentityResolutionConfig body)
         { 
             // verify the required parameter 'integrationId' is set
             if (integrationId == null)
@@ -75983,9 +76291,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<IdentityResolutionConfig>(localVarStatusCode,
+            return new ApiResponse<WhatsAppIdentityResolutionConfig>(localVarStatusCode,
                 localVarHeaders,
-                (IdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IdentityResolutionConfig)),
+                (WhatsAppIdentityResolutionConfig) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WhatsAppIdentityResolutionConfig)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

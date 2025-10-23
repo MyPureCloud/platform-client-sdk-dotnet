@@ -351,6 +351,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The WhatsApp Business Account Id (WABA Id)
+        /// </summary>
+        /// <value>The WhatsApp Business Account Id (WABA Id)</value>
+        [DataMember(Name="whatsAppBusinessAccountId", EmitDefaultValue=false)]
+        public string WhatsAppBusinessAccountId { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -384,6 +393,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ActivationErrorInfo: ").Append(ActivationErrorInfo).Append("\n");
             sb.Append("  CreateStatus: ").Append(CreateStatus).Append("\n");
             sb.Append("  CreateError: ").Append(CreateError).Append("\n");
+            sb.Append("  WhatsAppBusinessAccountId: ").Append(WhatsAppBusinessAccountId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -511,6 +521,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CreateError.Equals(other.CreateError)
                 ) &&
                 (
+                    this.WhatsAppBusinessAccountId == other.WhatsAppBusinessAccountId ||
+                    this.WhatsAppBusinessAccountId != null &&
+                    this.WhatsAppBusinessAccountId.Equals(other.WhatsAppBusinessAccountId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -578,6 +593,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CreateError != null)
                     hash = hash * 59 + this.CreateError.GetHashCode();
+
+                if (this.WhatsAppBusinessAccountId != null)
+                    hash = hash * 59 + this.WhatsAppBusinessAccountId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

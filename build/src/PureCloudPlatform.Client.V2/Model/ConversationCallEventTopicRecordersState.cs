@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AdhocState">Indicates the state of the adhoc recorder..</param>
         /// <param name="CustomerExperienceState">Indicates the state of the customer experience recorder..</param>
         /// <param name="AgentExperienceState">Indicates the state of the agent experience recorder..</param>
-        public ConversationCallEventTopicRecordersState(string AdhocState = null, string CustomerExperienceState = null, string AgentExperienceState = null)
+        /// <param name="SnippetState">State of the snippet recording for this session. Note that snippets may never be paused. Valid values are in Constants.java with a prefix of RECORDER_STATE_*..</param>
+        public ConversationCallEventTopicRecordersState(string AdhocState = null, string CustomerExperienceState = null, string AgentExperienceState = null, string SnippetState = null)
         {
             this.AdhocState = AdhocState;
             this.CustomerExperienceState = CustomerExperienceState;
             this.AgentExperienceState = AgentExperienceState;
+            this.SnippetState = SnippetState;
             
         }
         
@@ -60,6 +62,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string AgentExperienceState { get; set; }
 
 
+
+        /// <summary>
+        /// State of the snippet recording for this session. Note that snippets may never be paused. Valid values are in Constants.java with a prefix of RECORDER_STATE_*.
+        /// </summary>
+        /// <value>State of the snippet recording for this session. Note that snippets may never be paused. Valid values are in Constants.java with a prefix of RECORDER_STATE_*.</value>
+        [DataMember(Name="snippetState", EmitDefaultValue=false)]
+        public string SnippetState { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AdhocState: ").Append(AdhocState).Append("\n");
             sb.Append("  CustomerExperienceState: ").Append(CustomerExperienceState).Append("\n");
             sb.Append("  AgentExperienceState: ").Append(AgentExperienceState).Append("\n");
+            sb.Append("  SnippetState: ").Append(SnippetState).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +138,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentExperienceState == other.AgentExperienceState ||
                     this.AgentExperienceState != null &&
                     this.AgentExperienceState.Equals(other.AgentExperienceState)
+                ) &&
+                (
+                    this.SnippetState == other.SnippetState ||
+                    this.SnippetState != null &&
+                    this.SnippetState.Equals(other.SnippetState)
                 );
         }
 
@@ -148,6 +165,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AgentExperienceState != null)
                     hash = hash * 59 + this.AgentExperienceState.GetHashCode();
+
+                if (this.SnippetState != null)
+                    hash = hash * 59 + this.SnippetState.GetHashCode();
 
                 return hash;
             }

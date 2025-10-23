@@ -140,6 +140,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsCallParticipantAttributes**](#PatchConversationsCallParticipantAttributes) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsCallParticipantCommunication**](#PatchConversationsCallParticipantCommunication) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. This endpoint does not update wrapup. |
 | [**PatchConversationsCallParticipantConsult**](#PatchConversationsCallParticipantConsult) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Change who can speak |
+| [**PatchConversationsCallParticipantUserUserId**](#PatchConversationsCallParticipantUserUserId) | **Patch** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/user/{userId} | Update conversation participant on behalf of a user |
 | [**PatchConversationsCallback**](#PatchConversationsCallback) | **Patch** /api/v2/conversations/callbacks/{conversationId} | Update a conversation by disconnecting all of the participants |
 | [**PatchConversationsCallbackParticipant**](#PatchConversationsCallbackParticipant) | **Patch** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsCallbackParticipantAttributes**](#PatchConversationsCallbackParticipantAttributes) | **Patch** /api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
@@ -5672,7 +5673,7 @@ This endpoint does require any parameters.
 
 ## GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId)
+> [**AppleIdentityResolutionConfig**](AppleIdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId)
 
 
 Get Apple messaging integration identity resolution settings
@@ -5709,7 +5710,7 @@ namespace Example
             try
             { 
                 // Get Apple messaging integration identity resolution settings
-                IdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId);
+                AppleIdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5730,12 +5731,12 @@ namespace Example
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**AppleIdentityResolutionConfig**](AppleIdentityResolutionConfig)
 
 
 ## GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId)
+> [**FacebookIdentityResolutionConfig**](FacebookIdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId)
 
 
 Get Facebook messaging integration identity resolution settings
@@ -5772,7 +5773,7 @@ namespace Example
             try
             { 
                 // Get Facebook messaging integration identity resolution settings
-                IdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId);
+                FacebookIdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5793,12 +5794,12 @@ namespace Example
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**FacebookIdentityResolutionConfig**](FacebookIdentityResolutionConfig)
 
 
 ## GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId)
+> [**InstagramIdentityResolutionConfig**](InstagramIdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId)
 
 
 Get an Instagram integration identity resolution settings
@@ -5835,7 +5836,7 @@ namespace Example
             try
             { 
                 // Get an Instagram integration identity resolution settings
-                IdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId);
+                InstagramIdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5856,7 +5857,7 @@ namespace Example
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**InstagramIdentityResolutionConfig**](InstagramIdentityResolutionConfig)
 
 
 ## GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId
@@ -5924,7 +5925,7 @@ namespace Example
 
 ## GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId)
+> [**TwitterIdentityResolutionConfig**](TwitterIdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId)
 
 
 Get X (Formally Twitter) messaging integration identity resolution settings
@@ -5961,7 +5962,7 @@ namespace Example
             try
             { 
                 // Get X (Formally Twitter) messaging integration identity resolution settings
-                IdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId);
+                TwitterIdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5982,12 +5983,12 @@ namespace Example
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**TwitterIdentityResolutionConfig**](TwitterIdentityResolutionConfig)
 
 
 ## GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId)
+> [**WhatsAppIdentityResolutionConfig**](WhatsAppIdentityResolutionConfig) GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId)
 
 
 Get a whatsApp integration Identity Resolution settings
@@ -6024,7 +6025,7 @@ namespace Example
             try
             { 
                 // Get a whatsApp integration Identity Resolution settings
-                IdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId);
+                WhatsAppIdentityResolutionConfig result = apiInstance.GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -6045,7 +6046,7 @@ namespace Example
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**WhatsAppIdentityResolutionConfig**](WhatsAppIdentityResolutionConfig)
 
 
 ## GetConversationsMessagingIntegrationTwitterOauthSettings
@@ -8835,6 +8836,76 @@ namespace Example
 ### Return type
 
 [**ConsultTransferResponse**](ConsultTransferResponse)
+
+
+## PatchConversationsCallParticipantUserUserId
+
+> void PatchConversationsCallParticipantUserUserId (string conversationId, string participantId, string userId, MediaParticipantRequest body)
+
+
+Update conversation participant on behalf of a user
+
+Requires ANY permissions: 
+
+* conversation:participant:wrapup
+* conversation:call:record
+* conversation:communication:disconnect
+* conversation:agentlessCall:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsCallParticipantUserUserIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+            var userId = userId_example;  // string | userId
+            var body = new MediaParticipantRequest(); // MediaParticipantRequest | Participant request
+
+            try
+            { 
+                // Update conversation participant on behalf of a user
+                apiInstance.PatchConversationsCallParticipantUserUserId(conversationId, participantId, userId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsCallParticipantUserUserId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **userId** | **string**| userId |  |
+| **body** | [**MediaParticipantRequest**](MediaParticipantRequest)| Participant request |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## PatchConversationsCallback
@@ -17968,7 +18039,7 @@ namespace Example
 
 ## PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId, IdentityResolutionConfig body)
+> [**AppleIdentityResolutionConfig**](AppleIdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId (string integrationId, AppleIdentityResolutionConfig body)
 
 
 Create an identity resolution settings for a Apple messaging integration
@@ -18001,12 +18072,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var integrationId = integrationId_example;  // string | Integration ID
-            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | IdentityResolutionConfig
+            var body = new AppleIdentityResolutionConfig(); // AppleIdentityResolutionConfig | IdentityResolutionConfig
 
             try
             { 
                 // Create an identity resolution settings for a Apple messaging integration
-                IdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId, body);
+                AppleIdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId(integrationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -18024,16 +18095,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig |  |
+| **body** | [**AppleIdentityResolutionConfig**](AppleIdentityResolutionConfig)| IdentityResolutionConfig |  |
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**AppleIdentityResolutionConfig**](AppleIdentityResolutionConfig)
 
 
 ## PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId, IdentityResolutionConfig body)
+> [**FacebookIdentityResolutionConfig**](FacebookIdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId (string integrationId, FacebookIdentityResolutionConfig body)
 
 
 Create an identity resolution settings for a Facebook messaging integration
@@ -18066,12 +18137,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var integrationId = integrationId_example;  // string | Integration ID
-            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | IdentityResolutionConfig
+            var body = new FacebookIdentityResolutionConfig(); // FacebookIdentityResolutionConfig | IdentityResolutionConfig
 
             try
             { 
                 // Create an identity resolution settings for a Facebook messaging integration
-                IdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId, body);
+                FacebookIdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId(integrationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -18089,16 +18160,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig |  |
+| **body** | [**FacebookIdentityResolutionConfig**](FacebookIdentityResolutionConfig)| IdentityResolutionConfig |  |
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**FacebookIdentityResolutionConfig**](FacebookIdentityResolutionConfig)
 
 
 ## PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId, IdentityResolutionConfig body)
+> [**InstagramIdentityResolutionConfig**](InstagramIdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId (string integrationId, InstagramIdentityResolutionConfig body)
 
 
 Create identity resolution settings for an Instagram messaging integration
@@ -18131,12 +18202,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var integrationId = integrationId_example;  // string | Integration ID
-            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | IdentityResolutionConfig
+            var body = new InstagramIdentityResolutionConfig(); // InstagramIdentityResolutionConfig | IdentityResolutionConfig
 
             try
             { 
                 // Create identity resolution settings for an Instagram messaging integration
-                IdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId, body);
+                InstagramIdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId(integrationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -18154,11 +18225,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig |  |
+| **body** | [**InstagramIdentityResolutionConfig**](InstagramIdentityResolutionConfig)| IdentityResolutionConfig |  |
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**InstagramIdentityResolutionConfig**](InstagramIdentityResolutionConfig)
 
 
 ## PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId
@@ -18228,7 +18299,7 @@ namespace Example
 
 ## PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId, IdentityResolutionConfig body)
+> [**TwitterIdentityResolutionConfig**](TwitterIdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId (string integrationId, TwitterIdentityResolutionConfig body)
 
 
 Create an identity resolution settings for an X (Formally Twitter) messaging integration
@@ -18261,12 +18332,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var integrationId = integrationId_example;  // string | Integration Id
-            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | IdentityResolutionConfig
+            var body = new TwitterIdentityResolutionConfig(); // TwitterIdentityResolutionConfig | IdentityResolutionConfig
 
             try
             { 
                 // Create an identity resolution settings for an X (Formally Twitter) messaging integration
-                IdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId, body);
+                TwitterIdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId(integrationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -18284,16 +18355,16 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration Id |  |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)| IdentityResolutionConfig |  |
+| **body** | [**TwitterIdentityResolutionConfig**](TwitterIdentityResolutionConfig)| IdentityResolutionConfig |  |
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**TwitterIdentityResolutionConfig**](TwitterIdentityResolutionConfig)
 
 
 ## PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId
 
-> [**IdentityResolutionConfig**](IdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId, IdentityResolutionConfig body)
+> [**WhatsAppIdentityResolutionConfig**](WhatsAppIdentityResolutionConfig) PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId (string integrationId, WhatsAppIdentityResolutionConfig body)
 
 
 Update a whatsApp integration Identity Resolution settings
@@ -18326,12 +18397,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var integrationId = integrationId_example;  // string | Integration ID
-            var body = new IdentityResolutionConfig(); // IdentityResolutionConfig | 
+            var body = new WhatsAppIdentityResolutionConfig(); // WhatsAppIdentityResolutionConfig | 
 
             try
             { 
                 // Update a whatsApp integration Identity Resolution settings
-                IdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId, body);
+                WhatsAppIdentityResolutionConfig result = apiInstance.PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId(integrationId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -18349,11 +18420,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **integrationId** | **string**| Integration ID |  |
-| **body** | [**IdentityResolutionConfig**](IdentityResolutionConfig)|  |  |
+| **body** | [**WhatsAppIdentityResolutionConfig**](WhatsAppIdentityResolutionConfig)|  |  |
 
 ### Return type
 
-[**IdentityResolutionConfig**](IdentityResolutionConfig)
+[**WhatsAppIdentityResolutionConfig**](WhatsAppIdentityResolutionConfig)
 
 
 ## PutConversationsMessagingSettingsDefault
@@ -18745,4 +18816,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 245.0.0_
+_PureCloudPlatform.Client.V2 246.0.0_

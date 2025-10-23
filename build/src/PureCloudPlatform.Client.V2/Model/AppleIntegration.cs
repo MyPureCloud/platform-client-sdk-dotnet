@@ -77,7 +77,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Date this Integration was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">User reference that created this Integration.</param>
         /// <param name="ModifiedBy">User reference that last modified this Integration.</param>
-        public AppleIntegration(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string MessagesForBusinessId = null, string BusinessName = null, string LogoUrl = null, string Status = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null)
+        /// <param name="AppleIMessageApp">Interactive Application (iMessage App) Settings..</param>
+        /// <param name="AppleAuthentication">The Apple Messages for Business authentication setting..</param>
+        /// <param name="ApplePay">Apple Pay settings..</param>
+        public AppleIntegration(string Name = null, SupportedContentReference SupportedContent = null, MessagingSettingReference MessagingSetting = null, string MessagesForBusinessId = null, string BusinessName = null, string LogoUrl = null, string Status = null, DateTime? DateCreated = null, DateTime? DateModified = null, DomainEntityRef CreatedBy = null, DomainEntityRef ModifiedBy = null, AppleIMessageApp AppleIMessageApp = null, AppleAuthentication AppleAuthentication = null, ApplePay ApplePay = null)
         {
             this.Name = Name;
             this.SupportedContent = SupportedContent;
@@ -90,6 +93,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.CreatedBy = CreatedBy;
             this.ModifiedBy = ModifiedBy;
+            this.AppleIMessageApp = AppleIMessageApp;
+            this.AppleAuthentication = AppleAuthentication;
+            this.ApplePay = ApplePay;
             
         }
         
@@ -223,11 +229,38 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Interactive Application (iMessage App) Settings.
+        /// </summary>
+        /// <value>Interactive Application (iMessage App) Settings.</value>
+        [DataMember(Name="appleIMessageApp", EmitDefaultValue=false)]
+        public AppleIMessageApp AppleIMessageApp { get; set; }
+
+
+
+        /// <summary>
+        /// The Apple Messages for Business authentication setting.
+        /// </summary>
+        /// <value>The Apple Messages for Business authentication setting.</value>
+        [DataMember(Name="appleAuthentication", EmitDefaultValue=false)]
+        public AppleAuthentication AppleAuthentication { get; set; }
+
+
+
+        /// <summary>
+        /// Apple Pay settings.
+        /// </summary>
+        /// <value>Apple Pay settings.</value>
+        [DataMember(Name="applePay", EmitDefaultValue=false)]
+        public ApplePay ApplePay { get; set; }
+
+
+
+        /// <summary>
         /// The configuration to control identity resolution.
         /// </summary>
         /// <value>The configuration to control identity resolution.</value>
         [DataMember(Name="identityResolution", EmitDefaultValue=false)]
-        public IdentityResolutionConfig IdentityResolution { get; private set; }
+        public AppleIdentityResolutionConfig IdentityResolution { get; private set; }
 
 
 
@@ -263,6 +296,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
             sb.Append("  CreateStatus: ").Append(CreateStatus).Append("\n");
             sb.Append("  CreateError: ").Append(CreateError).Append("\n");
+            sb.Append("  AppleIMessageApp: ").Append(AppleIMessageApp).Append("\n");
+            sb.Append("  AppleAuthentication: ").Append(AppleAuthentication).Append("\n");
+            sb.Append("  ApplePay: ").Append(ApplePay).Append("\n");
             sb.Append("  IdentityResolution: ").Append(IdentityResolution).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -381,6 +417,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CreateError.Equals(other.CreateError)
                 ) &&
                 (
+                    this.AppleIMessageApp == other.AppleIMessageApp ||
+                    this.AppleIMessageApp != null &&
+                    this.AppleIMessageApp.Equals(other.AppleIMessageApp)
+                ) &&
+                (
+                    this.AppleAuthentication == other.AppleAuthentication ||
+                    this.AppleAuthentication != null &&
+                    this.AppleAuthentication.Equals(other.AppleAuthentication)
+                ) &&
+                (
+                    this.ApplePay == other.ApplePay ||
+                    this.ApplePay != null &&
+                    this.ApplePay.Equals(other.ApplePay)
+                ) &&
+                (
                     this.IdentityResolution == other.IdentityResolution ||
                     this.IdentityResolution != null &&
                     this.IdentityResolution.Equals(other.IdentityResolution)
@@ -447,6 +498,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CreateError != null)
                     hash = hash * 59 + this.CreateError.GetHashCode();
+
+                if (this.AppleIMessageApp != null)
+                    hash = hash * 59 + this.AppleIMessageApp.GetHashCode();
+
+                if (this.AppleAuthentication != null)
+                    hash = hash * 59 + this.AppleAuthentication.GetHashCode();
+
+                if (this.ApplePay != null)
+                    hash = hash * 59 + this.ApplePay.GetHashCode();
 
                 if (this.IdentityResolution != null)
                     hash = hash * 59 + this.IdentityResolution.GetHashCode();
