@@ -3900,7 +3900,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, groups, profileSkills, certifications, locations, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, dateWelcomeSent |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, groups, customAttributes, profileSkills, certifications, locations, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, dateWelcomeSent |
 | **name** | **string**| Filter by queue member name (contains-style search) | [optional]  |
 | **profileSkills** | [**List<string>**](string)| Filter by profile skill (contains-style search) | [optional]  |
 | **skills** | [**List<string>**](string)| Filter by skill (contains-style search) | [optional]  |
@@ -3989,7 +3989,7 @@ namespace Example
 | **pageNumber** | **int?**|  | [optional] [default to 1] |
 | **pageSize** | **int?**| Max value is 100 | [optional] [default to 25] |
 | **sortOrder** | **string**| Note: results are sorted by name. | [optional] [default to asc]<br />**Values**: asc, desc |
-| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, groups, profileSkills, certifications, locations, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, dateWelcomeSent |
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, groups, customAttributes, profileSkills, certifications, locations, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, dateWelcomeSent |
 | **joined** | **bool?**| Filter by joined status | [optional]  |
 | **name** | **string**| Filter by queue member name | [optional]  |
 | **profileSkills** | [**List<string>**](string)| Filter by profile skill | [optional]  |
@@ -10541,4 +10541,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 246.0.0_
+_PureCloudPlatform.Client.V2 247.0.0_

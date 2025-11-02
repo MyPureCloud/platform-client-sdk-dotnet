@@ -195,7 +195,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **searchType** | **string**| Search Type | <br />**Values**: NAME, ADDRESS, PHONE, EMAIL, TWITTER, INSTAGRAM, FACEBOOK |
+| **searchType** | **string**| Search Type | <br />**Values**: NAME, ADDRESS, PHONE, EMAIL, TWITTER, INSTAGRAM, FACEBOOK, APPLE_MESSAGES, EXTERNAL_ID |
 | **searchValue** | **string**| Search Value |  |
 
 ### Return type
@@ -267,4 +267,4 @@ namespace Example
 [**GDPRRequest**](GDPRRequest)
 
 
-_PureCloudPlatform.Client.V2 246.0.0_
+_PureCloudPlatform.Client.V2 247.0.0_

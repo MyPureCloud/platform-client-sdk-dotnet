@@ -22,6 +22,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetGamificationInsightsDetails**](#GetGamificationInsightsDetails) | **Get** /api/v2/gamification/insights/details | Get insights details for the current user |
 | [**GetGamificationInsightsGroupsTrends**](#GetGamificationInsightsGroupsTrends) | **Get** /api/v2/gamification/insights/groups/trends | Get insights overall trend for the current user |
 | [**GetGamificationInsightsGroupsTrendsAll**](#GetGamificationInsightsGroupsTrendsAll) | **Get** /api/v2/gamification/insights/groups/trends/all | Get insights overall trend |
+| [**GetGamificationInsightsManagers**](#GetGamificationInsightsManagers) | **Get** /api/v2/gamification/insights/managers | Query managers in a profile during a period of time |
 | [**GetGamificationInsightsMembers**](#GetGamificationInsightsMembers) | **Get** /api/v2/gamification/insights/members | Query users in a profile during a period of time |
 | [**GetGamificationInsightsRankings**](#GetGamificationInsightsRankings) | **Get** /api/v2/gamification/insights/rankings | Get insights rankings |
 | [**GetGamificationInsightsTrends**](#GetGamificationInsightsTrends) | **Get** /api/v2/gamification/insights/trends | Get insights user trend for the current user |
@@ -1176,6 +1177,78 @@ namespace Example
 ### Return type
 
 [**InsightsTrend**](InsightsTrend)
+
+
+## GetGamificationInsightsManagers
+
+> [**InsightsAgents**](InsightsAgents) GetGamificationInsightsManagers (string filterType, string filterId, string granularity, String startWorkday, int? pageSize = null, int? pageNumber = null)
+
+
+Query managers in a profile during a period of time
+
+Requires ANY permissions: 
+
+* gamification:insights:viewAll
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetGamificationInsightsManagersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new GamificationApi();
+            var filterType = filterType_example;  // string | Filter type for the query request.
+            var filterId = filterId_example;  // string | ID for the filter type.
+            var granularity = granularity_example;  // string | Granularity
+            var startWorkday = 2013-10-20;  // String | The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+            var pageSize = 56;  // int? | Page size (optional)  (default to 100)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Query managers in a profile during a period of time
+                InsightsAgents result = apiInstance.GetGamificationInsightsManagers(filterType, filterId, granularity, startWorkday, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling GamificationApi.GetGamificationInsightsManagers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **filterType** | **string**| Filter type for the query request. | <br />**Values**: PerformanceProfile, Division |
+| **filterId** | **string**| ID for the filter type. |  |
+| **granularity** | **string**| Granularity | <br />**Values**: Weekly, Monthly |
+| **startWorkday** | **String**| The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
+| **pageSize** | **int?**| Page size | [optional] [default to 100] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+
+### Return type
+
+[**InsightsAgents**](InsightsAgents)
 
 
 ## GetGamificationInsightsMembers
@@ -5158,4 +5231,4 @@ namespace Example
 [**GamificationStatus**](GamificationStatus)
 
 
-_PureCloudPlatform.Client.V2 246.0.0_
+_PureCloudPlatform.Client.V2 247.0.0_

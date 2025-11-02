@@ -1853,8 +1853,6 @@ namespace Example
 
 Get message
 
-GetConversationCommunicationInternalmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * conversation:internalMessaging:view
@@ -1920,8 +1918,6 @@ namespace Example
 
 
 Get messages for communication
-
-GetConversationCommunicationInternalmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2430,7 +2426,7 @@ namespace Example
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
-| **type** | **string**| Suggestion type to filter by. | [optional] <br />**Values**: Faq, Article, KnowledgeArticle, KnowledgeSearch, CannedResponse, Script |
+| **type** | **string**| Suggestion type to filter by. | [optional] <br />**Values**: Faq, Article, KnowledgeArticle, KnowledgeSearch, CannedResponse, Script, SuggestedKnowledgeAnswer |
 | **state** | **string**| Suggestion state to filter Copilot suggestions. | [optional] <br />**Values**: Suggested, Accepted, Dismissed, Failed, Rated |
 
 ### Return type
@@ -4679,8 +4675,6 @@ This endpoint does require any parameters.
 
 Get internal message conversation
 
-GetConversationsInternalmessage is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * conversation:internalMessaging:view
@@ -4742,8 +4736,6 @@ namespace Example
 
 
 Get active internal message conversations for the logged in user
-
-GetConversationsInternalmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -11688,8 +11680,6 @@ Send internal message
 
 Send a new internal message for an existing communication.
 
-PostConversationCommunicationInternalmessages is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * conversation:internalMessaging:create
@@ -11948,8 +11938,6 @@ void (empty response body)
 Setup internal message communication with user
 
 The target user of the digital consultation must have the `conversation:internalMessaging:accept` permission.
-
-PostConversationParticipantInternalmessagesUsersCommunications is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -15840,7 +15828,7 @@ namespace Example
 
 Get messages in batch
 
-The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\"a3069a33b-bbb1-4703-9d68-061d9e9db96e\", \"55bc6be3-078c-4a49-a4e6-1e05776ed7e8\"]
+The path parameter [conversationId] should contain the conversationId of the conversation being filtered. The body should contain the messageId(s) of messages being requested. For example: [\"a3069a33b-bbb1-4703-9d68-061d9e9db96e\", \"55bc6be3-078c-4a49-a4e6-1e05776ed7e8\"]. The max messages you can request in the body is 1,000. Best practice is to limit to only the messages you need in each request, rather than request large batches by default.
 
 Requires ANY permissions: 
 
@@ -18816,4 +18804,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 246.0.0_
+_PureCloudPlatform.Client.V2 247.0.0_

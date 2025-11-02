@@ -5562,7 +5562,7 @@ namespace Example
 
 ## GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement
 
-> [**BuForecastStaffingRequirementsResultResponse**](BuForecastStaffingRequirementsResultResponse) GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null)
+> [**BuForecastStaffingRequirementsResultResponse**](BuForecastStaffingRequirementsResultResponse) GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null, List<string> expand = null)
 
 
 Get the staffing requirement by planning group for a forecast
@@ -5597,11 +5597,12 @@ namespace Example
             var weekDateId = 2013-10-20;  // String | The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | The ID of the forecast
             var weekNumbers = new List<string>(); // List<string> | The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional) 
+            var expand = new List<string>(); // List<string> | Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional) 
 
             try
             { 
                 // Get the staffing requirement by planning group for a forecast
-                BuForecastStaffingRequirementsResultResponse result = apiInstance.GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId, weekDateId, forecastId, weekNumbers);
+                BuForecastStaffingRequirementsResultResponse result = apiInstance.GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement(businessUnitId, weekDateId, forecastId, weekNumbers, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5622,6 +5623,7 @@ namespace Example
 | **weekDateId** | **String**| The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| The ID of the forecast |  |
 | **weekNumbers** | [**List<string>**](string)| The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified | [optional]  |
+| **expand** | [**List<string>**](string)| Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) | [optional] <br />**Values**: results.planningGroupStaffingRequirements.minimumStaffPerInterval, results.planningGroupStaffingRequirements.effectiveStaffPerInterval |
 
 ### Return type
 
@@ -17415,4 +17417,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 246.0.0_
+_PureCloudPlatform.Client.V2 247.0.0_

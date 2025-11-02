@@ -242,4 +242,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 246.0.0_
+_PureCloudPlatform.Client.V2 247.0.0_
