@@ -22,13 +22,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="AgentGreeting" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="InboundPrompt">The agent greeting prompt to use when the call is connected.</param>
-        /// <param name="OutboundPrompt">The agent greeting prompt to use when the call is about to be disconnected.</param>
-        public AgentGreeting(string Name = null, Prompt InboundPrompt = null, Prompt OutboundPrompt = null)
+        /// <param name="InboundPrompt">The agent greeting prompt to use when inbound calls are connected.</param>
+        /// <param name="OutboundPrompt">The agent greeting prompt to use when outbound calls are connected.</param>
+        /// <param name="InboundPromptDefaultLanguage">The default language to use for the agent greeting inbound prompt.</param>
+        /// <param name="OutboundPromptDefaultLanguage">The default language to use for the agent greeting outbound prompt.</param>
+        public AgentGreeting(string Name = null, Prompt InboundPrompt = null, Prompt OutboundPrompt = null, string InboundPromptDefaultLanguage = null, string OutboundPromptDefaultLanguage = null)
         {
             this.Name = Name;
             this.InboundPrompt = InboundPrompt;
             this.OutboundPrompt = OutboundPrompt;
+            this.InboundPromptDefaultLanguage = InboundPromptDefaultLanguage;
+            this.OutboundPromptDefaultLanguage = OutboundPromptDefaultLanguage;
             
         }
         
@@ -52,20 +56,38 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The agent greeting prompt to use when the call is connected
+        /// The agent greeting prompt to use when inbound calls are connected
         /// </summary>
-        /// <value>The agent greeting prompt to use when the call is connected</value>
+        /// <value>The agent greeting prompt to use when inbound calls are connected</value>
         [DataMember(Name="inboundPrompt", EmitDefaultValue=false)]
         public Prompt InboundPrompt { get; set; }
 
 
 
         /// <summary>
-        /// The agent greeting prompt to use when the call is about to be disconnected
+        /// The agent greeting prompt to use when outbound calls are connected
         /// </summary>
-        /// <value>The agent greeting prompt to use when the call is about to be disconnected</value>
+        /// <value>The agent greeting prompt to use when outbound calls are connected</value>
         [DataMember(Name="outboundPrompt", EmitDefaultValue=false)]
         public Prompt OutboundPrompt { get; set; }
+
+
+
+        /// <summary>
+        /// The default language to use for the agent greeting inbound prompt
+        /// </summary>
+        /// <value>The default language to use for the agent greeting inbound prompt</value>
+        [DataMember(Name="inboundPromptDefaultLanguage", EmitDefaultValue=false)]
+        public string InboundPromptDefaultLanguage { get; set; }
+
+
+
+        /// <summary>
+        /// The default language to use for the agent greeting outbound prompt
+        /// </summary>
+        /// <value>The default language to use for the agent greeting outbound prompt</value>
+        [DataMember(Name="outboundPromptDefaultLanguage", EmitDefaultValue=false)]
+        public string OutboundPromptDefaultLanguage { get; set; }
 
 
 
@@ -90,6 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  InboundPrompt: ").Append(InboundPrompt).Append("\n");
             sb.Append("  OutboundPrompt: ").Append(OutboundPrompt).Append("\n");
+            sb.Append("  InboundPromptDefaultLanguage: ").Append(InboundPromptDefaultLanguage).Append("\n");
+            sb.Append("  OutboundPromptDefaultLanguage: ").Append(OutboundPromptDefaultLanguage).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -152,6 +176,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OutboundPrompt.Equals(other.OutboundPrompt)
                 ) &&
                 (
+                    this.InboundPromptDefaultLanguage == other.InboundPromptDefaultLanguage ||
+                    this.InboundPromptDefaultLanguage != null &&
+                    this.InboundPromptDefaultLanguage.Equals(other.InboundPromptDefaultLanguage)
+                ) &&
+                (
+                    this.OutboundPromptDefaultLanguage == other.OutboundPromptDefaultLanguage ||
+                    this.OutboundPromptDefaultLanguage != null &&
+                    this.OutboundPromptDefaultLanguage.Equals(other.OutboundPromptDefaultLanguage)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -180,6 +214,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OutboundPrompt != null)
                     hash = hash * 59 + this.OutboundPrompt.GetHashCode();
+
+                if (this.InboundPromptDefaultLanguage != null)
+                    hash = hash * 59 + this.InboundPromptDefaultLanguage.GetHashCode();
+
+                if (this.OutboundPromptDefaultLanguage != null)
+                    hash = hash * 59 + this.OutboundPromptDefaultLanguage.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

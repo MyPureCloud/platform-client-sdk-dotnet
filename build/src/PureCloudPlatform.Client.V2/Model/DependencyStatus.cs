@@ -51,6 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Buildinprogress,
             
             /// <summary>
+            /// Enum Buildqueued for "BUILDQUEUED"
+            /// </summary>
+            [EnumMember(Value = "BUILDQUEUED")]
+            Buildqueued,
+            
+            /// <summary>
             /// Enum Notbuilt for "NOTBUILT"
             /// </summary>
             [EnumMember(Value = "NOTBUILT")]

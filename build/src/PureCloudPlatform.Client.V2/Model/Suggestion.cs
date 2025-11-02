@@ -67,7 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Script for "Script"
             /// </summary>
             [EnumMember(Value = "Script")]
-            Script
+            Script,
+            
+            /// <summary>
+            /// Enum Suggestedknowledgeanswer for "SuggestedKnowledgeAnswer"
+            /// </summary>
+            [EnumMember(Value = "SuggestedKnowledgeAnswer")]
+            Suggestedknowledgeanswer
         }
         /// <summary>
         /// The trigger type of the suggestion.

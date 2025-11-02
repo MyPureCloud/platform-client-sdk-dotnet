@@ -21,11 +21,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="IpFilter" /> class.
         /// </summary>
-        public IpFilter()
+        /// <param name="IpAddress">IP address or CIDR range to filter (e.g. &#39;192.168.1.0/24&#39;)..</param>
+        /// <param name="Name">Descriptive name for the IP address filter..</param>
+        public IpFilter(string IpAddress = null, string Name = null)
         {
+            this.IpAddress = IpAddress;
+            this.Name = Name;
             
         }
         
+
+
+        /// <summary>
+        /// IP address or CIDR range to filter (e.g. &#39;192.168.1.0/24&#39;).
+        /// </summary>
+        /// <value>IP address or CIDR range to filter (e.g. &#39;192.168.1.0/24&#39;).</value>
+        [DataMember(Name="ipAddress", EmitDefaultValue=false)]
+        public string IpAddress { get; set; }
+
+
+
+        /// <summary>
+        /// Descriptive name for the IP address filter.
+        /// </summary>
+        /// <value>Descriptive name for the IP address filter.</value>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +58,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class IpFilter {\n");
 
+            sb.Append("  IpAddress: ").Append(IpAddress).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +99,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.IpAddress == other.IpAddress ||
+                    this.IpAddress != null &&
+                    this.IpAddress.Equals(other.IpAddress)
+                ) &&
+                (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                );
         }
 
         /// <summary>
@@ -89,6 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.IpAddress != null)
+                    hash = hash * 59 + this.IpAddress.GetHashCode();
+
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
+
                 return hash;
             }
         }

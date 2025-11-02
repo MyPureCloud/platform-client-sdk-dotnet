@@ -55,7 +55,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Shrinkagepercentage for "ShrinkagePercentage"
             /// </summary>
             [EnumMember(Value = "ShrinkagePercentage")]
-            Shrinkagepercentage
+            Shrinkagepercentage,
+            
+            /// <summary>
+            /// Enum Transfersfulltimeequivalentcount for "TransfersFullTimeEquivalentCount"
+            /// </summary>
+            [EnumMember(Value = "TransfersFullTimeEquivalentCount")]
+            Transfersfulltimeequivalentcount,
+            
+            /// <summary>
+            /// Enum Extratimeundertimefulltimeequivalentcount for "ExtraTimeUnderTimeFullTimeEquivalentCount"
+            /// </summary>
+            [EnumMember(Value = "ExtraTimeUnderTimeFullTimeEquivalentCount")]
+            Extratimeundertimefulltimeequivalentcount
         }
         /// <summary>
         /// The metric which is going to be modified for the selected staffing groups

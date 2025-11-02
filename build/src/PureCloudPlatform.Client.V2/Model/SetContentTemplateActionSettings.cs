@@ -27,8 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SetContentTemplateActionSettings" /> class.
         /// </summary>
-        /// <param name="SmsContentTemplateId">A string of sms contentTemplateId. (required).</param>
-        /// <param name="EmailContentTemplateId">A string of email contentTemplateId. (required).</param>
+        /// <param name="SmsContentTemplateId">A String containing the SMS contentTemplateId. (required).</param>
+        /// <param name="EmailContentTemplateId">A String containing the Email contentTemplateId. (required).</param>
         public SetContentTemplateActionSettings(string SmsContentTemplateId = null, string EmailContentTemplateId = null)
         {
             this.SmsContentTemplateId = SmsContentTemplateId;
@@ -39,18 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A string of sms contentTemplateId.
+        /// A String containing the SMS contentTemplateId.
         /// </summary>
-        /// <value>A string of sms contentTemplateId.</value>
+        /// <value>A String containing the SMS contentTemplateId.</value>
         [DataMember(Name="smsContentTemplateId", EmitDefaultValue=false)]
         public string SmsContentTemplateId { get; set; }
 
 
 
         /// <summary>
-        /// A string of email contentTemplateId.
+        /// A String containing the Email contentTemplateId.
         /// </summary>
-        /// <value>A string of email contentTemplateId.</value>
+        /// <value>A String containing the Email contentTemplateId.</value>
         [DataMember(Name="emailContentTemplateId", EmitDefaultValue=false)]
         public string EmailContentTemplateId { get; set; }
 

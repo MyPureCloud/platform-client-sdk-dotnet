@@ -2104,9 +2104,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <param name="expand">Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional)</param>
         /// <returns>BuForecastStaffingRequirementsResultResponse</returns>
         
-        BuForecastStaffingRequirementsResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null);
+        BuForecastStaffingRequirementsResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null, List<string> expand = null);
 
         /// <summary>
         /// Get the staffing requirement by planning group for a forecast
@@ -2119,9 +2120,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <param name="expand">Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional)</param>
         /// <returns>ApiResponse of BuForecastStaffingRequirementsResultResponse</returns>
         
-        ApiResponse<BuForecastStaffingRequirementsResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null);
+        ApiResponse<BuForecastStaffingRequirementsResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null, List<string> expand = null);
 
         /// <summary>
         /// Get short term forecasts
@@ -8994,9 +8996,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <param name="expand">Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional)</param>
         /// <returns>Task of BuForecastStaffingRequirementsResultResponse</returns>
         
-        System.Threading.Tasks.Task<BuForecastStaffingRequirementsResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsync (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null);
+        System.Threading.Tasks.Task<BuForecastStaffingRequirementsResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsync (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null, List<string> expand = null);
 
         /// <summary>
         /// Get the staffing requirement by planning group for a forecast
@@ -9009,9 +9012,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <param name="expand">Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional)</param>
         /// <returns>Task of ApiResponse (BuForecastStaffingRequirementsResultResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<BuForecastStaffingRequirementsResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null);
+        System.Threading.Tasks.Task<ApiResponse<BuForecastStaffingRequirementsResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null, List<string> expand = null);
 
         /// <summary>
         /// Get short term forecasts
@@ -30730,11 +30734,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <param name="expand">Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional)</param>
         /// <returns>BuForecastStaffingRequirementsResultResponse</returns>
         
-        public BuForecastStaffingRequirementsResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null)
+        public BuForecastStaffingRequirementsResultResponse GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null, List<string> expand = null)
         {
-             ApiResponse<BuForecastStaffingRequirementsResultResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithHttpInfo(businessUnitId, weekDateId, forecastId, weekNumbers);
+             ApiResponse<BuForecastStaffingRequirementsResultResponse> localVarResponse = GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithHttpInfo(businessUnitId, weekDateId, forecastId, weekNumbers, expand);
              return localVarResponse.Data;
         }
 
@@ -30747,9 +30752,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <param name="expand">Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional)</param>
         /// <returns>ApiResponse of BuForecastStaffingRequirementsResultResponse</returns>
         
-        public ApiResponse< BuForecastStaffingRequirementsResultResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null)
+        public ApiResponse< BuForecastStaffingRequirementsResultResponse > GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null, List<string> expand = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -30798,6 +30804,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (weekNumbers != null) weekNumbers.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("weekNumbers", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -30844,11 +30851,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <param name="expand">Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional)</param>
         /// <returns>Task of BuForecastStaffingRequirementsResultResponse</returns>
         
-        public async System.Threading.Tasks.Task<BuForecastStaffingRequirementsResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsync (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null)
+        public async System.Threading.Tasks.Task<BuForecastStaffingRequirementsResultResponse> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsync (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null, List<string> expand = null)
         {
-             ApiResponse<BuForecastStaffingRequirementsResultResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, weekNumbers);
+             ApiResponse<BuForecastStaffingRequirementsResultResponse> localVarResponse = await GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsyncWithHttpInfo(businessUnitId, weekDateId, forecastId, weekNumbers, expand);
              return localVarResponse.Data;
 
         }
@@ -30862,9 +30870,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="weekDateId">The week start date of the forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
         /// <param name="forecastId">The ID of the forecast</param>
         /// <param name="weekNumbers">The week numbers to fetch (for multi-week forecasts) staffing requirements. Returns all week data if the list is not specified (optional)</param>
+        /// <param name="expand">Expand to include minimum staffing values in (staffing requirement response or applied to base staffing requirement values) (optional)</param>
         /// <returns>Task of ApiResponse (BuForecastStaffingRequirementsResultResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<BuForecastStaffingRequirementsResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null)
+        public async System.Threading.Tasks.Task<ApiResponse<BuForecastStaffingRequirementsResultResponse>> GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirementAsyncWithHttpInfo (string businessUnitId, String weekDateId, string forecastId, List<string> weekNumbers = null, List<string> expand = null)
         { 
             // verify the required parameter 'businessUnitId' is set
             if (businessUnitId == null)
@@ -30916,6 +30925,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (weekNumbers != null) weekNumbers.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("weekNumbers", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

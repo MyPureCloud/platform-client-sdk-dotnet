@@ -10,7 +10,7 @@
 | **ExternalNumber** | **string** | Unique external number. | [optional] |
 | **Status** | **string** | The status of the contract. | [optional] |
 | **CommercialModel** | **string** | The type of commercial model. | [optional] |
-| **GetpurchaseOrderNumbers** | **List&lt;string&gt;** | List of po numbers periods for this contract. | [optional] |
+| **PurchaseOrderNumbers** | **List&lt;string&gt;** | List of po numbers periods for this contract. | [optional] |
 | **BillToCustomer** | [**Customer**](Customer) | The bill to customer. | [optional] |
 | **SoldToCustomer** | [**Customer**](Customer) | The sold to customer. | [optional] |
 | **EndCustomer** | [**Customer**](Customer) | The end customer. | [optional] |
@@ -23,4 +23,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 246.0.0_
+_PureCloudPlatform.Client.V2 247.0.0_

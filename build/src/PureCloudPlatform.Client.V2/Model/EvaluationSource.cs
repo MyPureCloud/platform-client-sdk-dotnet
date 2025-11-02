@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
-            Unknown
+            Unknown,
+            
+            /// <summary>
+            /// Enum Program for "Program"
+            /// </summary>
+            [EnumMember(Value = "Program")]
+            Program
         }
         /// <summary>
         /// Type of the evaluation source.

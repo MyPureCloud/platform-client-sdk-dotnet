@@ -500,6 +500,40 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<InsightsTrend> GetGamificationInsightsGroupsTrendsAllWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
 
         /// <summary>
+        /// Query managers in a profile during a period of time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>InsightsAgents</returns>
+        
+        InsightsAgents GetGamificationInsightsManagers (string filterType, string filterId, string granularity, String startWorkday, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Query managers in a profile during a period of time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of InsightsAgents</returns>
+        
+        ApiResponse<InsightsAgents> GetGamificationInsightsManagersWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
         /// Query users in a profile during a period of time
         /// </summary>
         /// <remarks>
@@ -2650,6 +2684,40 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (InsightsTrend)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<InsightsTrend>> GetGamificationInsightsGroupsTrendsAllAsyncWithHttpInfo (string filterType, string filterId, string granularity, String comparativePeriodStartWorkday, String comparativePeriodEndWorkday, String primaryPeriodStartWorkday, String primaryPeriodEndWorkday);
+
+        /// <summary>
+        /// Query managers in a profile during a period of time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of InsightsAgents</returns>
+        
+        System.Threading.Tasks.Task<InsightsAgents> GetGamificationInsightsManagersAsync (string filterType, string filterId, string granularity, String startWorkday, int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Query managers in a profile during a period of time
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (InsightsAgents)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<InsightsAgents>> GetGamificationInsightsManagersAsyncWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday, int? pageSize = null, int? pageNumber = null);
 
         /// <summary>
         /// Query users in a profile during a period of time
@@ -8039,6 +8107,258 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<InsightsTrend>(localVarStatusCode,
                 localVarHeaders,
                 (InsightsTrend) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsightsTrend)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query managers in a profile during a period of time 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>InsightsAgents</returns>
+        
+        public InsightsAgents GetGamificationInsightsManagers (string filterType, string filterId, string granularity, String startWorkday, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<InsightsAgents> localVarResponse = GetGamificationInsightsManagersWithHttpInfo(filterType, filterId, granularity, startWorkday, pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query managers in a profile during a period of time 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of InsightsAgents</returns>
+        
+        public ApiResponse< InsightsAgents > GetGamificationInsightsManagersWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'filterType' is set
+            if (filterType == null)
+                throw new ApiException(400, "Missing required parameter 'filterType' when calling GamificationApi->GetGamificationInsightsManagers");
+            // verify the required parameter 'filterId' is set
+            if (filterId == null)
+                throw new ApiException(400, "Missing required parameter 'filterId' when calling GamificationApi->GetGamificationInsightsManagers");
+            // verify the required parameter 'granularity' is set
+            if (granularity == null)
+                throw new ApiException(400, "Missing required parameter 'granularity' when calling GamificationApi->GetGamificationInsightsManagers");
+            // verify the required parameter 'startWorkday' is set
+            if (startWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationInsightsManagers");
+
+            var localVarPath = "/api/v2/gamification/insights/managers";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (filterId != null) localVarQueryParams.Add(new Tuple<string, string>("filterId", this.Configuration.ApiClient.ParameterToString(filterId)));
+            if (granularity != null) localVarQueryParams.Add(new Tuple<string, string>("granularity", this.Configuration.ApiClient.ParameterToString(granularity)));
+            if (startWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("startWorkday", this.Configuration.ApiClient.ParameterToString(startWorkday)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationInsightsManagers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationInsightsManagers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InsightsAgents>(localVarStatusCode,
+                localVarHeaders,
+                (InsightsAgents) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsightsAgents)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query managers in a profile during a period of time 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of InsightsAgents</returns>
+        
+        public async System.Threading.Tasks.Task<InsightsAgents> GetGamificationInsightsManagersAsync (string filterType, string filterId, string granularity, String startWorkday, int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<InsightsAgents> localVarResponse = await GetGamificationInsightsManagersAsyncWithHttpInfo(filterType, filterId, granularity, startWorkday, pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query managers in a profile during a period of time 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="filterType">Filter type for the query request.</param>
+        /// <param name="filterId">ID for the filter type.</param>
+        /// <param name="granularity">Granularity</param>
+        /// <param name="startWorkday">The start work day. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</param>
+        /// <param name="pageSize">Page size (optional, default to 100)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (InsightsAgents)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<InsightsAgents>> GetGamificationInsightsManagersAsyncWithHttpInfo (string filterType, string filterId, string granularity, String startWorkday, int? pageSize = null, int? pageNumber = null)
+        { 
+            // verify the required parameter 'filterType' is set
+            if (filterType == null)
+                throw new ApiException(400, "Missing required parameter 'filterType' when calling GamificationApi->GetGamificationInsightsManagers");
+            
+            // verify the required parameter 'filterId' is set
+            if (filterId == null)
+                throw new ApiException(400, "Missing required parameter 'filterId' when calling GamificationApi->GetGamificationInsightsManagers");
+            
+            // verify the required parameter 'granularity' is set
+            if (granularity == null)
+                throw new ApiException(400, "Missing required parameter 'granularity' when calling GamificationApi->GetGamificationInsightsManagers");
+            
+            // verify the required parameter 'startWorkday' is set
+            if (startWorkday == null)
+                throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationInsightsManagers");
+            
+
+            var localVarPath = "/api/v2/gamification/insights/managers";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (filterType != null) localVarQueryParams.Add(new Tuple<string, string>("filterType", this.Configuration.ApiClient.ParameterToString(filterType)));
+            if (filterId != null) localVarQueryParams.Add(new Tuple<string, string>("filterId", this.Configuration.ApiClient.ParameterToString(filterId)));
+            if (granularity != null) localVarQueryParams.Add(new Tuple<string, string>("granularity", this.Configuration.ApiClient.ParameterToString(granularity)));
+            if (startWorkday != null) localVarQueryParams.Add(new Tuple<string, string>("startWorkday", this.Configuration.ApiClient.ParameterToString(startWorkday)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationInsightsManagers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetGamificationInsightsManagers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<InsightsAgents>(localVarStatusCode,
+                localVarHeaders,
+                (InsightsAgents) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InsightsAgents)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

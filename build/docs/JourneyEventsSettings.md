@@ -16,8 +16,8 @@
 | **IdleEvents** | [**List&lt;IdleEventTrigger&gt;**](IdleEventTrigger) | Tracks when and where a visitor becomes inactive on a webpage. | [optional] |
 | **InViewportEvents** | [**List&lt;SelectorEventTrigger&gt;**](SelectorEventTrigger) | Tracks when elements become visible or hidden on screen. | [optional] |
 | **ScrollDepthEvents** | [**List&lt;ScrollPercentageEventTrigger&gt;**](ScrollPercentageEventTrigger) | Tracks when a visitor scrolls to a specific percentage of a webpage. | [optional] |
-| **TrackingSettings** | **Object** | Configuration settings for tracking behavior and filtering | [optional] |
+| **TrackingSettings** | [**TrackingSettings**](TrackingSettings) | Configuration settings for tracking behavior and filtering | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 246.0.0_
+_PureCloudPlatform.Client.V2 247.0.0_

@@ -19,16 +19,53 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class TimeOffSettingsRequest :  IEquatable<TimeOffSettingsRequest>
     {
         /// <summary>
+        /// The type of the submission range
+        /// </summary>
+        /// <value>The type of the submission range</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SubmissionRangeTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Relative for "Relative"
+            /// </summary>
+            [EnumMember(Value = "Relative")]
+            Relative,
+            
+            /// <summary>
+            /// Enum Fixedend for "FixedEnd"
+            /// </summary>
+            [EnumMember(Value = "FixedEnd")]
+            Fixedend
+        }
+        /// <summary>
+        /// The type of the submission range
+        /// </summary>
+        /// <value>The type of the submission range</value>
+        [DataMember(Name="submissionRangeType", EmitDefaultValue=false)]
+        public SubmissionRangeTypeEnum? SubmissionRangeType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffSettingsRequest" /> class.
         /// </summary>
         /// <param name="SubmissionRangeEnforced">Whether to enforce a submission range for agent time off requests.</param>
+        /// <param name="SubmissionRangeType">The type of the submission range.</param>
         /// <param name="SubmissionEarliestDaysFromNow">The earliest number of days from now for which an agent can submit a time off request.  Use negative numbers to indicate days in the past.</param>
         /// <param name="SubmissionLatestDaysFromNow">The latest number of days from now for which an agent can submit a time off request.</param>
-        public TimeOffSettingsRequest(bool? SubmissionRangeEnforced = null, int? SubmissionEarliestDaysFromNow = null, int? SubmissionLatestDaysFromNow = null)
+        /// <param name="SubmissionLatestDate">The latest date for the time off request submission interpreted in the business unit time zone in yyyy-MM-dd format.</param>
+        public TimeOffSettingsRequest(bool? SubmissionRangeEnforced = null, SubmissionRangeTypeEnum? SubmissionRangeType = null, int? SubmissionEarliestDaysFromNow = null, int? SubmissionLatestDaysFromNow = null, ValueWrapperLocalDate SubmissionLatestDate = null)
         {
             this.SubmissionRangeEnforced = SubmissionRangeEnforced;
+            this.SubmissionRangeType = SubmissionRangeType;
             this.SubmissionEarliestDaysFromNow = SubmissionEarliestDaysFromNow;
             this.SubmissionLatestDaysFromNow = SubmissionLatestDaysFromNow;
+            this.SubmissionLatestDate = SubmissionLatestDate;
             
         }
         
@@ -40,6 +77,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Whether to enforce a submission range for agent time off requests</value>
         [DataMember(Name="submissionRangeEnforced", EmitDefaultValue=false)]
         public bool? SubmissionRangeEnforced { get; set; }
+
+
 
 
 
@@ -60,6 +99,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? SubmissionLatestDaysFromNow { get; set; }
 
 
+
+        /// <summary>
+        /// The latest date for the time off request submission interpreted in the business unit time zone in yyyy-MM-dd format
+        /// </summary>
+        /// <value>The latest date for the time off request submission interpreted in the business unit time zone in yyyy-MM-dd format</value>
+        [DataMember(Name="submissionLatestDate", EmitDefaultValue=false)]
+        public ValueWrapperLocalDate SubmissionLatestDate { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -70,8 +118,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class TimeOffSettingsRequest {\n");
 
             sb.Append("  SubmissionRangeEnforced: ").Append(SubmissionRangeEnforced).Append("\n");
+            sb.Append("  SubmissionRangeType: ").Append(SubmissionRangeType).Append("\n");
             sb.Append("  SubmissionEarliestDaysFromNow: ").Append(SubmissionEarliestDaysFromNow).Append("\n");
             sb.Append("  SubmissionLatestDaysFromNow: ").Append(SubmissionLatestDaysFromNow).Append("\n");
+            sb.Append("  SubmissionLatestDate: ").Append(SubmissionLatestDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -118,6 +168,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SubmissionRangeEnforced.Equals(other.SubmissionRangeEnforced)
                 ) &&
                 (
+                    this.SubmissionRangeType == other.SubmissionRangeType ||
+                    this.SubmissionRangeType != null &&
+                    this.SubmissionRangeType.Equals(other.SubmissionRangeType)
+                ) &&
+                (
                     this.SubmissionEarliestDaysFromNow == other.SubmissionEarliestDaysFromNow ||
                     this.SubmissionEarliestDaysFromNow != null &&
                     this.SubmissionEarliestDaysFromNow.Equals(other.SubmissionEarliestDaysFromNow)
@@ -126,6 +181,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SubmissionLatestDaysFromNow == other.SubmissionLatestDaysFromNow ||
                     this.SubmissionLatestDaysFromNow != null &&
                     this.SubmissionLatestDaysFromNow.Equals(other.SubmissionLatestDaysFromNow)
+                ) &&
+                (
+                    this.SubmissionLatestDate == other.SubmissionLatestDate ||
+                    this.SubmissionLatestDate != null &&
+                    this.SubmissionLatestDate.Equals(other.SubmissionLatestDate)
                 );
         }
 
@@ -143,11 +203,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.SubmissionRangeEnforced != null)
                     hash = hash * 59 + this.SubmissionRangeEnforced.GetHashCode();
 
+                if (this.SubmissionRangeType != null)
+                    hash = hash * 59 + this.SubmissionRangeType.GetHashCode();
+
                 if (this.SubmissionEarliestDaysFromNow != null)
                     hash = hash * 59 + this.SubmissionEarliestDaysFromNow.GetHashCode();
 
                 if (this.SubmissionLatestDaysFromNow != null)
                     hash = hash * 59 + this.SubmissionLatestDaysFromNow.GetHashCode();
+
+                if (this.SubmissionLatestDate != null)
+                    hash = hash * 59 + this.SubmissionLatestDate.GetHashCode();
 
                 return hash;
             }

@@ -853,6 +853,11 @@ docs/CoachingAppointmentStatusResponse.md
 docs/CoachingAppointmentStatusResponseList.md
 docs/CoachingNotification.md
 docs/CoachingNotificationList.md
+docs/CoachingScheduleSlotsJobRequest.md
+docs/CoachingScheduleSlotsJobResponse.md
+docs/CoachingScheduleSlotsJobResult.md
+docs/CoachingScheduleSlotsJobSchedule.md
+docs/CoachingScheduleSlotsJobSlot.md
 docs/CoachingSlot.md
 docs/CoachingSlotsRequest.md
 docs/CoachingSlotsResponse.md
@@ -1074,6 +1079,7 @@ docs/ConversationAppSettings.md
 docs/ConversationAssociation.md
 docs/ConversationAsyncAggregateQueryResponse.md
 docs/ConversationAsyncAggregationQuery.md
+docs/ConversationAttributeFilter.md
 docs/ConversationBasic.md
 docs/ConversationCallEventTopicCallConversation.md
 docs/ConversationCallEventTopicCallMediaParticipant.md
@@ -1370,6 +1376,9 @@ docs/ConversationResponseSuggestionsTopicSuggestedIntentSlot.md
 docs/ConversationResponseSuggestionsTopicSuggestionContext.md
 docs/ConversationResponseSuggestionsTopicSuggestionFeedback.md
 docs/ConversationRoutingData.md
+docs/ConversationSchemaAttribute.md
+docs/ConversationSchemaData.md
+docs/ConversationSchemaReference.md
 docs/ConversationScreenShareEventTopicConversationDivisionMembership.md
 docs/ConversationScreenShareEventTopicConversationRoutingData.md
 docs/ConversationScreenShareEventTopicDetail.md
@@ -2442,8 +2451,6 @@ docs/EvaluationDetailQueryPredicate.md
 docs/EvaluationEntityListing.md
 docs/EvaluationForm.md
 docs/EvaluationFormAndScoringSet.md
-docs/EvaluationFormDivisionView.md
-docs/EvaluationFormDivisionViewListing.md
 docs/EvaluationFormResponse.md
 docs/EvaluationFormResponseEntityListing.md
 docs/EvaluationQualityV2TopicCalibration.md
@@ -3007,6 +3014,7 @@ docs/GetCoachingAppointments-example.txt
 docs/GetCoachingAppointmentsMe-example.txt
 docs/GetCoachingNotification-example.txt
 docs/GetCoachingNotifications-example.txt
+docs/GetCoachingScheduleslotsJob-example.txt
 docs/GetContentmanagementDocument-example.txt
 docs/GetContentmanagementDocumentContent-example.txt
 docs/GetContentmanagementDocuments-example.txt
@@ -3263,6 +3271,7 @@ docs/GetGamificationInsights-example.txt
 docs/GetGamificationInsightsDetails-example.txt
 docs/GetGamificationInsightsGroupsTrends-example.txt
 docs/GetGamificationInsightsGroupsTrendsAll-example.txt
+docs/GetGamificationInsightsManagers-example.txt
 docs/GetGamificationInsightsMembers-example.txt
 docs/GetGamificationInsightsRankings-example.txt
 docs/GetGamificationInsightsTrends-example.txt
@@ -3519,6 +3528,7 @@ docs/GetLearningModuleVersion-example.txt
 docs/GetLearningModules-example.txt
 docs/GetLearningModulesAssignments-example.txt
 docs/GetLearningModulesCoverartCoverArtId-example.txt
+docs/GetLearningScheduleslotsJob-example.txt
 docs/GetLearningScormScormId-example.txt
 docs/GetLicenseDefinition-example.txt
 docs/GetLicenseDefinitions-example.txt
@@ -3699,12 +3709,8 @@ docs/GetQualityPublishedform-example.txt
 docs/GetQualityPublishedforms-example.txt
 docs/GetQualityPublishedformsEvaluation-example.txt
 docs/GetQualityPublishedformsEvaluations-example.txt
-docs/GetQualityPublishedformsEvaluationsDivisionview-example.txt
-docs/GetQualityPublishedformsEvaluationsDivisionviews-example.txt
 docs/GetQualityPublishedformsSurvey-example.txt
 docs/GetQualityPublishedformsSurveys-example.txt
-docs/GetQualityPublishedformsSurveysDivisionview-example.txt
-docs/GetQualityPublishedformsSurveysDivisionviews-example.txt
 docs/GetQualitySurvey-example.txt
 docs/GetQualitySurveysScorable-example.txt
 docs/GetRecordingBatchrequest-example.txt
@@ -4733,6 +4739,7 @@ docs/KnowledgeParseJobResponse.md
 docs/KnowledgeParseRecord.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocumentResponse.md
+docs/KnowledgeSetting.md
 docs/KnowledgeSuggestionConfig.md
 docs/KnowledgeSyncJobReport.md
 docs/KnowledgeSyncJobRequest.md
@@ -4833,6 +4840,11 @@ docs/LearningModuleRule.md
 docs/LearningModuleRuleParts.md
 docs/LearningModuleSummary.md
 docs/LearningModulesDomainEntityListing.md
+docs/LearningScheduleSlotsJobRequest.md
+docs/LearningScheduleSlotsJobResponse.md
+docs/LearningScheduleSlotsJobResult.md
+docs/LearningScheduleSlotsJobSchedule.md
+docs/LearningScheduleSlotsJobSlot.md
 docs/LearningScheduleSlotsQueryRequest.md
 docs/LearningScheduleSlotsQueryResponse.md
 docs/LearningScormResponse.md
@@ -5871,6 +5883,7 @@ docs/PostCoachingAppointmentAnnotations-example.txt
 docs/PostCoachingAppointmentConversations-example.txt
 docs/PostCoachingAppointments-example.txt
 docs/PostCoachingAppointmentsAggregatesQuery-example.txt
+docs/PostCoachingScheduleslotsJobs-example.txt
 docs/PostCoachingScheduleslotsQuery-example.txt
 docs/PostContentmanagementDocument-example.txt
 docs/PostContentmanagementDocumentContent-example.txt
@@ -6177,6 +6190,7 @@ docs/PostLearningModuleJobs-example.txt
 docs/PostLearningModulePublish-example.txt
 docs/PostLearningModules-example.txt
 docs/PostLearningRulesQuery-example.txt
+docs/PostLearningScheduleslotsJobs-example.txt
 docs/PostLearningScheduleslotsQuery-example.txt
 docs/PostLearningScorm-example.txt
 docs/PostLicenseInfer-example.txt
@@ -7749,11 +7763,13 @@ docs/SuggestApi.json
 docs/SuggestApi.md
 docs/SuggestSearchCriteria.md
 docs/SuggestSearchRequest.md
+docs/SuggestedSearchChunk.md
 docs/Suggestion.md
 docs/SuggestionCannedResponse.md
 docs/SuggestionContext.md
 docs/SuggestionEngagement.md
 docs/SuggestionFeedback.md
+docs/SuggestionGeneratedKnowledgeAnswer.md
 docs/SuggestionKnowledgeAnswer.md
 docs/SuggestionKnowledgeArticle.md
 docs/SuggestionKnowledgeSearch.md
@@ -7818,8 +7834,6 @@ docs/SurveyDetailQueryPredicate.md
 docs/SurveyErrorDetails.md
 docs/SurveyForm.md
 docs/SurveyFormAndScoringSet.md
-docs/SurveyFormDivisionView.md
-docs/SurveyFormDivisionViewListing.md
 docs/SurveyFormEntityListing.md
 docs/SurveyQuestion.md
 docs/SurveyQuestionGroup.md
@@ -8019,6 +8033,7 @@ docs/TransferToAgentRequest.md
 docs/TransferToExternalContactRequest.md
 docs/TransferToExternalRequest.md
 docs/TransferToQueueRequest.md
+docs/TransfersFullTimeEquivalent.md
 docs/TranslateSupportedLanguage.md
 docs/TranslateSupportedLanguageList.md
 docs/TrendData.md
@@ -8214,6 +8229,7 @@ docs/UserConversationsEventMediaSummary.md
 docs/UserConversationsEventMediaSummaryDetail.md
 docs/UserConversationsEventUserConversationSummary.md
 docs/UserCursorEntityListing.md
+docs/UserCustomAttributes.md
 docs/UserDetailQueryClause.md
 docs/UserDetailQueryFilter.md
 docs/UserDetailQueryPredicate.md
@@ -9826,6 +9842,11 @@ src/PureCloudPlatform.Client.V2/Model/CoachingAppointmentStatusResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CoachingAppointmentStatusResponseList.cs
 src/PureCloudPlatform.Client.V2/Model/CoachingNotification.cs
 src/PureCloudPlatform.Client.V2/Model/CoachingNotificationList.cs
+src/PureCloudPlatform.Client.V2/Model/CoachingScheduleSlotsJobRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CoachingScheduleSlotsJobResponse.cs
+src/PureCloudPlatform.Client.V2/Model/CoachingScheduleSlotsJobResult.cs
+src/PureCloudPlatform.Client.V2/Model/CoachingScheduleSlotsJobSchedule.cs
+src/PureCloudPlatform.Client.V2/Model/CoachingScheduleSlotsJobSlot.cs
 src/PureCloudPlatform.Client.V2/Model/CoachingSlot.cs
 src/PureCloudPlatform.Client.V2/Model/CoachingSlotsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CoachingSlotsResponse.cs
@@ -10045,6 +10066,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationAppSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAssociation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAsyncAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationAttributeFilter.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationBasic.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicCallConversation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicCallMediaParticipant.cs
@@ -10341,6 +10363,9 @@ src/PureCloudPlatform.Client.V2/Model/ConversationResponseSuggestionsTopicSugges
 src/PureCloudPlatform.Client.V2/Model/ConversationResponseSuggestionsTopicSuggestionContext.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationResponseSuggestionsTopicSuggestionFeedback.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationRoutingData.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSchemaAttribute.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSchemaData.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSchemaReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicConversationDivisionMembership.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicConversationRoutingData.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicDetail.cs
@@ -11064,8 +11089,6 @@ src/PureCloudPlatform.Client.V2/Model/EvaluationDetailQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationForm.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationFormAndScoringSet.cs
-src/PureCloudPlatform.Client.V2/Model/EvaluationFormDivisionView.cs
-src/PureCloudPlatform.Client.V2/Model/EvaluationFormDivisionViewListing.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationFormResponse.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationFormResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/EvaluationQualityV2TopicCalibration.cs
@@ -11910,6 +11933,7 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeParseRecord.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchClientApplication.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchDocumentResponse.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSetting.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSuggestionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncJobReport.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncJobRequest.cs
@@ -12004,6 +12028,11 @@ src/PureCloudPlatform.Client.V2/Model/LearningModuleRule.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleRuleParts.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleSummary.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModulesDomainEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsJobRequest.cs
+src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsJobResponse.cs
+src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsJobResult.cs
+src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsJobSchedule.cs
+src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsJobSlot.cs
 src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsQueryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LearningScormResponse.cs
@@ -13583,11 +13612,13 @@ src/PureCloudPlatform.Client.V2/Model/Subscription.cs
 src/PureCloudPlatform.Client.V2/Model/SubscriptionOverviewUsage.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestSearchCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestSearchRequest.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestedSearchChunk.cs
 src/PureCloudPlatform.Client.V2/Model/Suggestion.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestionCannedResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestionContext.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestionEngagement.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestionFeedback.cs
+src/PureCloudPlatform.Client.V2/Model/SuggestionGeneratedKnowledgeAnswer.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestionKnowledgeAnswer.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestionKnowledgeArticle.cs
 src/PureCloudPlatform.Client.V2/Model/SuggestionKnowledgeSearch.cs
@@ -13652,8 +13683,6 @@ src/PureCloudPlatform.Client.V2/Model/SurveyDetailQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyErrorDetails.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyForm.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyFormAndScoringSet.cs
-src/PureCloudPlatform.Client.V2/Model/SurveyFormDivisionView.cs
-src/PureCloudPlatform.Client.V2/Model/SurveyFormDivisionViewListing.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyFormEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyQuestion.cs
 src/PureCloudPlatform.Client.V2/Model/SurveyQuestionGroup.cs
@@ -13841,6 +13870,7 @@ src/PureCloudPlatform.Client.V2/Model/TransferToAgentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TransferToExternalContactRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TransferToExternalRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TransferToQueueRequest.cs
+src/PureCloudPlatform.Client.V2/Model/TransfersFullTimeEquivalent.cs
 src/PureCloudPlatform.Client.V2/Model/TranslateSupportedLanguage.cs
 src/PureCloudPlatform.Client.V2/Model/TranslateSupportedLanguageList.cs
 src/PureCloudPlatform.Client.V2/Model/TrendData.cs
@@ -14032,6 +14062,7 @@ src/PureCloudPlatform.Client.V2/Model/UserConversationsEventMediaSummary.cs
 src/PureCloudPlatform.Client.V2/Model/UserConversationsEventMediaSummaryDetail.cs
 src/PureCloudPlatform.Client.V2/Model/UserConversationsEventUserConversationSummary.cs
 src/PureCloudPlatform.Client.V2/Model/UserCursorEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/UserCustomAttributes.cs
 src/PureCloudPlatform.Client.V2/Model/UserDetailQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/UserDetailQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/UserDetailQueryPredicate.cs

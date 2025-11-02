@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InViewportEvents">Tracks when elements become visible or hidden on screen..</param>
         /// <param name="ScrollDepthEvents">Tracks when a visitor scrolls to a specific percentage of a webpage..</param>
         /// <param name="TrackingSettings">Configuration settings for tracking behavior and filtering.</param>
-        public JourneyEventsSettings(bool? Enabled = null, List<string> ExcludedQueryParameters = null, bool? ShouldKeepUrlFragment = null, List<string> SearchQueryParameters = null, PageviewConfigEnum? PageviewConfig = null, List<SelectorEventTrigger> ClickEvents = null, List<FormsTrackTrigger> FormsTrackEvents = null, List<IdleEventTrigger> IdleEvents = null, List<SelectorEventTrigger> InViewportEvents = null, List<ScrollPercentageEventTrigger> ScrollDepthEvents = null, Object TrackingSettings = null)
+        public JourneyEventsSettings(bool? Enabled = null, List<string> ExcludedQueryParameters = null, bool? ShouldKeepUrlFragment = null, List<string> SearchQueryParameters = null, PageviewConfigEnum? PageviewConfig = null, List<SelectorEventTrigger> ClickEvents = null, List<FormsTrackTrigger> FormsTrackEvents = null, List<IdleEventTrigger> IdleEvents = null, List<SelectorEventTrigger> InViewportEvents = null, List<ScrollPercentageEventTrigger> ScrollDepthEvents = null, TrackingSettings TrackingSettings = null)
         {
             this.Enabled = Enabled;
             this.ExcludedQueryParameters = ExcludedQueryParameters;
@@ -177,7 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Configuration settings for tracking behavior and filtering</value>
         [DataMember(Name="trackingSettings", EmitDefaultValue=false)]
-        public Object TrackingSettings { get; set; }
+        public TrackingSettings TrackingSettings { get; set; }
 
 
         /// <summary>

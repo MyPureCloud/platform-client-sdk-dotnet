@@ -21,11 +21,55 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TrackingSettings" /> class.
         /// </summary>
-        public TrackingSettings()
+        /// <param name="ExcludedQueryParameters">List of parameters to be excluded from the query string..</param>
+        /// <param name="ShouldKeepUrlFragment">Whether or not to keep the URL fragment..</param>
+        /// <param name="SearchQueryParameters">List of query parameters used for search (e.g. &#39;query&#39;)..</param>
+        /// <param name="IpFilters">IP address filtering configuration for tracking restrictions..</param>
+        public TrackingSettings(List<string> ExcludedQueryParameters = null, bool? ShouldKeepUrlFragment = null, List<string> SearchQueryParameters = null, List<IpFilter> IpFilters = null)
         {
+            this.ExcludedQueryParameters = ExcludedQueryParameters;
+            this.ShouldKeepUrlFragment = ShouldKeepUrlFragment;
+            this.SearchQueryParameters = SearchQueryParameters;
+            this.IpFilters = IpFilters;
             
         }
         
+
+
+        /// <summary>
+        /// List of parameters to be excluded from the query string.
+        /// </summary>
+        /// <value>List of parameters to be excluded from the query string.</value>
+        [DataMember(Name="excludedQueryParameters", EmitDefaultValue=false)]
+        public List<string> ExcludedQueryParameters { get; set; }
+
+
+
+        /// <summary>
+        /// Whether or not to keep the URL fragment.
+        /// </summary>
+        /// <value>Whether or not to keep the URL fragment.</value>
+        [DataMember(Name="shouldKeepUrlFragment", EmitDefaultValue=false)]
+        public bool? ShouldKeepUrlFragment { get; set; }
+
+
+
+        /// <summary>
+        /// List of query parameters used for search (e.g. &#39;query&#39;).
+        /// </summary>
+        /// <value>List of query parameters used for search (e.g. &#39;query&#39;).</value>
+        [DataMember(Name="searchQueryParameters", EmitDefaultValue=false)]
+        public List<string> SearchQueryParameters { get; set; }
+
+
+
+        /// <summary>
+        /// IP address filtering configuration for tracking restrictions.
+        /// </summary>
+        /// <value>IP address filtering configuration for tracking restrictions.</value>
+        [DataMember(Name="ipFilters", EmitDefaultValue=false)]
+        public List<IpFilter> IpFilters { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +80,10 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class TrackingSettings {\n");
 
+            sb.Append("  ExcludedQueryParameters: ").Append(ExcludedQueryParameters).Append("\n");
+            sb.Append("  ShouldKeepUrlFragment: ").Append(ShouldKeepUrlFragment).Append("\n");
+            sb.Append("  SearchQueryParameters: ").Append(SearchQueryParameters).Append("\n");
+            sb.Append("  IpFilters: ").Append(IpFilters).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +123,27 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.ExcludedQueryParameters == other.ExcludedQueryParameters ||
+                    this.ExcludedQueryParameters != null &&
+                    this.ExcludedQueryParameters.SequenceEqual(other.ExcludedQueryParameters)
+                ) &&
+                (
+                    this.ShouldKeepUrlFragment == other.ShouldKeepUrlFragment ||
+                    this.ShouldKeepUrlFragment != null &&
+                    this.ShouldKeepUrlFragment.Equals(other.ShouldKeepUrlFragment)
+                ) &&
+                (
+                    this.SearchQueryParameters == other.SearchQueryParameters ||
+                    this.SearchQueryParameters != null &&
+                    this.SearchQueryParameters.SequenceEqual(other.SearchQueryParameters)
+                ) &&
+                (
+                    this.IpFilters == other.IpFilters ||
+                    this.IpFilters != null &&
+                    this.IpFilters.SequenceEqual(other.IpFilters)
+                );
         }
 
         /// <summary>
@@ -89,6 +157,18 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.ExcludedQueryParameters != null)
+                    hash = hash * 59 + this.ExcludedQueryParameters.GetHashCode();
+
+                if (this.ShouldKeepUrlFragment != null)
+                    hash = hash * 59 + this.ShouldKeepUrlFragment.GetHashCode();
+
+                if (this.SearchQueryParameters != null)
+                    hash = hash * 59 + this.SearchQueryParameters.GetHashCode();
+
+                if (this.IpFilters != null)
+                    hash = hash * 59 + this.IpFilters.GetHashCode();
+
                 return hash;
             }
         }

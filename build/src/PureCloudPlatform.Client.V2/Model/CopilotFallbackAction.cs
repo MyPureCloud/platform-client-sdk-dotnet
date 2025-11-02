@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Knowledgesearch for "KnowledgeSearch"
             /// </summary>
             [EnumMember(Value = "KnowledgeSearch")]
-            Knowledgesearch
+            Knowledgesearch,
+            
+            /// <summary>
+            /// Enum Thirdpartyaction for "ThirdPartyAction"
+            /// </summary>
+            [EnumMember(Value = "ThirdPartyAction")]
+            Thirdpartyaction
         }
         /// <summary>
         /// Type of action.

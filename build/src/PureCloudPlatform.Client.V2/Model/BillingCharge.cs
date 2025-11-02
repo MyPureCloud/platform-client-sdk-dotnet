@@ -23,21 +23,21 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Product">Represents the details of a product..</param>
         /// <param name="Organizations">List of plans within the organization..</param>
-        /// <param name="GetprepaidQuantity">The quantity of usage that is prepaid..</param>
-        /// <param name="GetfairuseQuantity">The quantity of usage allowed under fair use policies..</param>
-        /// <param name="GetactualQuantity">The actual quantity of usage..</param>
-        /// <param name="GetoverageQuantity">The quantity of usage that exceeds prepaid or fair use limits..</param>
+        /// <param name="PrepaidQuantity">The quantity of usage that is prepaid..</param>
+        /// <param name="FairuseQuantity">The quantity of usage allowed under fair use policies..</param>
+        /// <param name="ActualQuantity">The actual quantity of usage..</param>
+        /// <param name="OverageQuantity">The quantity of usage that exceeds prepaid or fair use limits..</param>
         /// <param name="OverageRate">The rate charged per unit of overage..</param>
         /// <param name="OverageCharge">The total charge for overage usage..</param>
         /// <param name="OverageCurrency">The currency in which the overage charge is billed..</param>
-        public BillingCharge(BillingProduct Product = null, List<NamedEntity> Organizations = null, int? GetprepaidQuantity = null, int? GetfairuseQuantity = null, int? GetactualQuantity = null, int? GetoverageQuantity = null, double? OverageRate = null, double? OverageCharge = null, string OverageCurrency = null)
+        public BillingCharge(BillingProduct Product = null, List<NamedEntity> Organizations = null, int? PrepaidQuantity = null, int? FairuseQuantity = null, int? ActualQuantity = null, int? OverageQuantity = null, double? OverageRate = null, double? OverageCharge = null, string OverageCurrency = null)
         {
             this.Product = Product;
             this.Organizations = Organizations;
-            this.GetprepaidQuantity = GetprepaidQuantity;
-            this.GetfairuseQuantity = GetfairuseQuantity;
-            this.GetactualQuantity = GetactualQuantity;
-            this.GetoverageQuantity = GetoverageQuantity;
+            this.PrepaidQuantity = PrepaidQuantity;
+            this.FairuseQuantity = FairuseQuantity;
+            this.ActualQuantity = ActualQuantity;
+            this.OverageQuantity = OverageQuantity;
             this.OverageRate = OverageRate;
             this.OverageCharge = OverageCharge;
             this.OverageCurrency = OverageCurrency;
@@ -77,8 +77,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// The quantity of usage that is prepaid.
         /// </summary>
         /// <value>The quantity of usage that is prepaid.</value>
-        [DataMember(Name="getprepaidQuantity", EmitDefaultValue=false)]
-        public int? GetprepaidQuantity { get; set; }
+        [DataMember(Name="prepaidQuantity", EmitDefaultValue=false)]
+        public int? PrepaidQuantity { get; set; }
 
 
 
@@ -86,8 +86,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// The quantity of usage allowed under fair use policies.
         /// </summary>
         /// <value>The quantity of usage allowed under fair use policies.</value>
-        [DataMember(Name="getfairuseQuantity", EmitDefaultValue=false)]
-        public int? GetfairuseQuantity { get; set; }
+        [DataMember(Name="fairuseQuantity", EmitDefaultValue=false)]
+        public int? FairuseQuantity { get; set; }
 
 
 
@@ -95,8 +95,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// The actual quantity of usage.
         /// </summary>
         /// <value>The actual quantity of usage.</value>
-        [DataMember(Name="getactualQuantity", EmitDefaultValue=false)]
-        public int? GetactualQuantity { get; set; }
+        [DataMember(Name="actualQuantity", EmitDefaultValue=false)]
+        public int? ActualQuantity { get; set; }
 
 
 
@@ -104,8 +104,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// The quantity of usage that exceeds prepaid or fair use limits.
         /// </summary>
         /// <value>The quantity of usage that exceeds prepaid or fair use limits.</value>
-        [DataMember(Name="getoverageQuantity", EmitDefaultValue=false)]
-        public int? GetoverageQuantity { get; set; }
+        [DataMember(Name="overageQuantity", EmitDefaultValue=false)]
+        public int? OverageQuantity { get; set; }
 
 
 
@@ -147,10 +147,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Product: ").Append(Product).Append("\n");
             sb.Append("  Organizations: ").Append(Organizations).Append("\n");
-            sb.Append("  GetprepaidQuantity: ").Append(GetprepaidQuantity).Append("\n");
-            sb.Append("  GetfairuseQuantity: ").Append(GetfairuseQuantity).Append("\n");
-            sb.Append("  GetactualQuantity: ").Append(GetactualQuantity).Append("\n");
-            sb.Append("  GetoverageQuantity: ").Append(GetoverageQuantity).Append("\n");
+            sb.Append("  PrepaidQuantity: ").Append(PrepaidQuantity).Append("\n");
+            sb.Append("  FairuseQuantity: ").Append(FairuseQuantity).Append("\n");
+            sb.Append("  ActualQuantity: ").Append(ActualQuantity).Append("\n");
+            sb.Append("  OverageQuantity: ").Append(OverageQuantity).Append("\n");
             sb.Append("  OverageRate: ").Append(OverageRate).Append("\n");
             sb.Append("  OverageCharge: ").Append(OverageCharge).Append("\n");
             sb.Append("  OverageCurrency: ").Append(OverageCurrency).Append("\n");
@@ -210,24 +210,24 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Organizations.SequenceEqual(other.Organizations)
                 ) &&
                 (
-                    this.GetprepaidQuantity == other.GetprepaidQuantity ||
-                    this.GetprepaidQuantity != null &&
-                    this.GetprepaidQuantity.Equals(other.GetprepaidQuantity)
+                    this.PrepaidQuantity == other.PrepaidQuantity ||
+                    this.PrepaidQuantity != null &&
+                    this.PrepaidQuantity.Equals(other.PrepaidQuantity)
                 ) &&
                 (
-                    this.GetfairuseQuantity == other.GetfairuseQuantity ||
-                    this.GetfairuseQuantity != null &&
-                    this.GetfairuseQuantity.Equals(other.GetfairuseQuantity)
+                    this.FairuseQuantity == other.FairuseQuantity ||
+                    this.FairuseQuantity != null &&
+                    this.FairuseQuantity.Equals(other.FairuseQuantity)
                 ) &&
                 (
-                    this.GetactualQuantity == other.GetactualQuantity ||
-                    this.GetactualQuantity != null &&
-                    this.GetactualQuantity.Equals(other.GetactualQuantity)
+                    this.ActualQuantity == other.ActualQuantity ||
+                    this.ActualQuantity != null &&
+                    this.ActualQuantity.Equals(other.ActualQuantity)
                 ) &&
                 (
-                    this.GetoverageQuantity == other.GetoverageQuantity ||
-                    this.GetoverageQuantity != null &&
-                    this.GetoverageQuantity.Equals(other.GetoverageQuantity)
+                    this.OverageQuantity == other.OverageQuantity ||
+                    this.OverageQuantity != null &&
+                    this.OverageQuantity.Equals(other.OverageQuantity)
                 ) &&
                 (
                     this.OverageRate == other.OverageRate ||
@@ -266,17 +266,17 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Organizations != null)
                     hash = hash * 59 + this.Organizations.GetHashCode();
 
-                if (this.GetprepaidQuantity != null)
-                    hash = hash * 59 + this.GetprepaidQuantity.GetHashCode();
+                if (this.PrepaidQuantity != null)
+                    hash = hash * 59 + this.PrepaidQuantity.GetHashCode();
 
-                if (this.GetfairuseQuantity != null)
-                    hash = hash * 59 + this.GetfairuseQuantity.GetHashCode();
+                if (this.FairuseQuantity != null)
+                    hash = hash * 59 + this.FairuseQuantity.GetHashCode();
 
-                if (this.GetactualQuantity != null)
-                    hash = hash * 59 + this.GetactualQuantity.GetHashCode();
+                if (this.ActualQuantity != null)
+                    hash = hash * 59 + this.ActualQuantity.GetHashCode();
 
-                if (this.GetoverageQuantity != null)
-                    hash = hash * 59 + this.GetoverageQuantity.GetHashCode();
+                if (this.OverageQuantity != null)
+                    hash = hash * 59 + this.OverageQuantity.GetHashCode();
 
                 if (this.OverageRate != null)
                     hash = hash * 59 + this.OverageRate.GetHashCode();

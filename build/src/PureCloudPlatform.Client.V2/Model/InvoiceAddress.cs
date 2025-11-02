@@ -66,7 +66,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="InvoiceAddress" /> class.
         /// </summary>
-        /// <param name="GetdateEffective">The date when the Address became effective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
+        /// <param name="DateEffective">The date when the Address became effective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="AddressType">The type of address..</param>
         /// <param name="CurrencyIsoCode">Contains the ISO code for any currency allowed by the organization..</param>
         /// <param name="Line1">The first line of the Address..</param>
@@ -76,13 +76,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PostalCode">The Postal or Zip Code..</param>
         /// <param name="StateCode">The code that reflects the geographic state for the Address..</param>
         /// <param name="CountryCode">The code representing the country for the Address (ISO_3166)..</param>
-        /// <param name="GetcitySubdivision1">The primary subdivision within a city (e.g., district, neighborhood)..</param>
+        /// <param name="CitySubdivision1">The primary subdivision within a city (e.g., district, neighborhood)..</param>
         /// <param name="RegionSubdivision1">The primary administrative division within a region (e.g., state, province)..</param>
         /// <param name="RegionSubdivision2">A secondary subdivision within the primary region subdivision (e.g., county, district)..</param>
         /// <param name="Country">Stores the name of the country in which the address is situated..</param>
-        public InvoiceAddress(String GetdateEffective = null, AddressTypeEnum? AddressType = null, string CurrencyIsoCode = null, string Line1 = null, string Line2 = null, string Line3 = null, string CityName = null, string PostalCode = null, string StateCode = null, string CountryCode = null, string GetcitySubdivision1 = null, string RegionSubdivision1 = null, string RegionSubdivision2 = null, string Country = null)
+        public InvoiceAddress(String DateEffective = null, AddressTypeEnum? AddressType = null, string CurrencyIsoCode = null, string Line1 = null, string Line2 = null, string Line3 = null, string CityName = null, string PostalCode = null, string StateCode = null, string CountryCode = null, string CitySubdivision1 = null, string RegionSubdivision1 = null, string RegionSubdivision2 = null, string Country = null)
         {
-            this.GetdateEffective = GetdateEffective;
+            this.DateEffective = DateEffective;
             this.AddressType = AddressType;
             this.CurrencyIsoCode = CurrencyIsoCode;
             this.Line1 = Line1;
@@ -92,7 +92,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PostalCode = PostalCode;
             this.StateCode = StateCode;
             this.CountryCode = CountryCode;
-            this.GetcitySubdivision1 = GetcitySubdivision1;
+            this.CitySubdivision1 = CitySubdivision1;
             this.RegionSubdivision1 = RegionSubdivision1;
             this.RegionSubdivision2 = RegionSubdivision2;
             this.Country = Country;
@@ -105,8 +105,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// The date when the Address became effective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
         /// <value>The date when the Address became effective. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
-        [DataMember(Name="getdateEffective", EmitDefaultValue=false)]
-        public String GetdateEffective { get; set; }
+        [DataMember(Name="dateEffective", EmitDefaultValue=false)]
+        public String DateEffective { get; set; }
 
 
 
@@ -188,8 +188,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// The primary subdivision within a city (e.g., district, neighborhood).
         /// </summary>
         /// <value>The primary subdivision within a city (e.g., district, neighborhood).</value>
-        [DataMember(Name="getcitySubdivision1", EmitDefaultValue=false)]
-        public string GetcitySubdivision1 { get; set; }
+        [DataMember(Name="citySubdivision1", EmitDefaultValue=false)]
+        public string CitySubdivision1 { get; set; }
 
 
 
@@ -228,7 +228,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class InvoiceAddress {\n");
 
-            sb.Append("  GetdateEffective: ").Append(GetdateEffective).Append("\n");
+            sb.Append("  DateEffective: ").Append(DateEffective).Append("\n");
             sb.Append("  AddressType: ").Append(AddressType).Append("\n");
             sb.Append("  CurrencyIsoCode: ").Append(CurrencyIsoCode).Append("\n");
             sb.Append("  Line1: ").Append(Line1).Append("\n");
@@ -238,7 +238,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PostalCode: ").Append(PostalCode).Append("\n");
             sb.Append("  StateCode: ").Append(StateCode).Append("\n");
             sb.Append("  CountryCode: ").Append(CountryCode).Append("\n");
-            sb.Append("  GetcitySubdivision1: ").Append(GetcitySubdivision1).Append("\n");
+            sb.Append("  CitySubdivision1: ").Append(CitySubdivision1).Append("\n");
             sb.Append("  RegionSubdivision1: ").Append(RegionSubdivision1).Append("\n");
             sb.Append("  RegionSubdivision2: ").Append(RegionSubdivision2).Append("\n");
             sb.Append("  Country: ").Append(Country).Append("\n");
@@ -283,9 +283,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.GetdateEffective == other.GetdateEffective ||
-                    this.GetdateEffective != null &&
-                    this.GetdateEffective.Equals(other.GetdateEffective)
+                    this.DateEffective == other.DateEffective ||
+                    this.DateEffective != null &&
+                    this.DateEffective.Equals(other.DateEffective)
                 ) &&
                 (
                     this.AddressType == other.AddressType ||
@@ -333,9 +333,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CountryCode.Equals(other.CountryCode)
                 ) &&
                 (
-                    this.GetcitySubdivision1 == other.GetcitySubdivision1 ||
-                    this.GetcitySubdivision1 != null &&
-                    this.GetcitySubdivision1.Equals(other.GetcitySubdivision1)
+                    this.CitySubdivision1 == other.CitySubdivision1 ||
+                    this.CitySubdivision1 != null &&
+                    this.CitySubdivision1.Equals(other.CitySubdivision1)
                 ) &&
                 (
                     this.RegionSubdivision1 == other.RegionSubdivision1 ||
@@ -365,8 +365,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.GetdateEffective != null)
-                    hash = hash * 59 + this.GetdateEffective.GetHashCode();
+                if (this.DateEffective != null)
+                    hash = hash * 59 + this.DateEffective.GetHashCode();
 
                 if (this.AddressType != null)
                     hash = hash * 59 + this.AddressType.GetHashCode();
@@ -395,8 +395,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.CountryCode != null)
                     hash = hash * 59 + this.CountryCode.GetHashCode();
 
-                if (this.GetcitySubdivision1 != null)
-                    hash = hash * 59 + this.GetcitySubdivision1.GetHashCode();
+                if (this.CitySubdivision1 != null)
+                    hash = hash * 59 + this.CitySubdivision1.GetHashCode();
 
                 if (this.RegionSubdivision1 != null)
                     hash = hash * 59 + this.RegionSubdivision1.GetHashCode();

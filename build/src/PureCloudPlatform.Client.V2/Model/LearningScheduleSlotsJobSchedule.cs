@@ -13,55 +13,60 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// EvaluationFormDivisionView
+    /// LearningScheduleSlotsJobSchedule
     /// </summary>
     [DataContract]
-    public partial class EvaluationFormDivisionView :  IEquatable<EvaluationFormDivisionView>
+    public partial class LearningScheduleSlotsJobSchedule :  IEquatable<LearningScheduleSlotsJobSchedule>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="EvaluationFormDivisionView" /> class.
+        /// Initializes a new instance of the <see cref="LearningScheduleSlotsJobSchedule" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
-        public EvaluationFormDivisionView(string Name = null)
+        /// <param name="Id">Id.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        /// <param name="WeekDate">The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
+        /// <param name="WeekCount">The number of weeks in this schedule.</param>
+        public LearningScheduleSlotsJobSchedule(string Id = null, string SelfUri = null, String WeekDate = null, int? WeekCount = null)
         {
-            this.Name = Name;
+            this.Id = Id;
+            this.SelfUri = SelfUri;
+            this.WeekDate = WeekDate;
+            this.WeekCount = WeekCount;
             
         }
         
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// Gets or Sets Id
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Name
+        /// Gets or Sets SelfUri
         /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
-
-
-
-        /// <summary>
-        /// Unique Id for all versions of this form
-        /// </summary>
-        /// <value>Unique Id for all versions of this form</value>
-        [DataMember(Name="contextId", EmitDefaultValue=false)]
-        public string ContextId { get; private set; }
-
-
-
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
         [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+        public string SelfUri { get; set; }
+
+
+
+        /// <summary>
+        /// The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// </summary>
+        /// <value>The start week date for this schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        [DataMember(Name="weekDate", EmitDefaultValue=false)]
+        public String WeekDate { get; set; }
+
+
+
+        /// <summary>
+        /// The number of weeks in this schedule
+        /// </summary>
+        /// <value>The number of weeks in this schedule</value>
+        [DataMember(Name="weekCount", EmitDefaultValue=false)]
+        public int? WeekCount { get; set; }
 
 
         /// <summary>
@@ -71,12 +76,12 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class EvaluationFormDivisionView {\n");
+            sb.Append("class LearningScheduleSlotsJobSchedule {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  ContextId: ").Append(ContextId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
+            sb.Append("  WeekCount: ").Append(WeekCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,15 +107,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as EvaluationFormDivisionView);
+            return this.Equals(obj as LearningScheduleSlotsJobSchedule);
         }
 
         /// <summary>
-        /// Returns true if EvaluationFormDivisionView instances are equal
+        /// Returns true if LearningScheduleSlotsJobSchedule instances are equal
         /// </summary>
-        /// <param name="other">Instance of EvaluationFormDivisionView to be compared</param>
+        /// <param name="other">Instance of LearningScheduleSlotsJobSchedule to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(EvaluationFormDivisionView other)
+        public bool Equals(LearningScheduleSlotsJobSchedule other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -123,19 +128,19 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.ContextId == other.ContextId ||
-                    this.ContextId != null &&
-                    this.ContextId.Equals(other.ContextId)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.WeekDate == other.WeekDate ||
+                    this.WeekDate != null &&
+                    this.WeekDate.Equals(other.WeekDate)
+                ) &&
+                (
+                    this.WeekCount == other.WeekCount ||
+                    this.WeekCount != null &&
+                    this.WeekCount.Equals(other.WeekCount)
                 );
         }
 
@@ -153,14 +158,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
-
-                if (this.ContextId != null)
-                    hash = hash * 59 + this.ContextId.GetHashCode();
-
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+
+                if (this.WeekDate != null)
+                    hash = hash * 59 + this.WeekDate.GetHashCode();
+
+                if (this.WeekCount != null)
+                    hash = hash * 59 + this.WeekCount.GetHashCode();
 
                 return hash;
             }

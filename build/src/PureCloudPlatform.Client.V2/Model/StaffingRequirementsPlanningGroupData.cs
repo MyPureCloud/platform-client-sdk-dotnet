@@ -29,10 +29,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="PlanningGroupId">The ID of the planning group to which this data applies (required).</param>
         /// <param name="StaffingRequirementsPerInterval">Staffing requirements per interval for this week forecast (required).</param>
-        public StaffingRequirementsPlanningGroupData(string PlanningGroupId = null, List<double?> StaffingRequirementsPerInterval = null)
+        /// <param name="MinimumStaffPerInterval">Minimum Staff per interval for this week forecast.</param>
+        /// <param name="EffectiveStaffPerInterval">Effective Staff per interval for this week forecast.</param>
+        public StaffingRequirementsPlanningGroupData(string PlanningGroupId = null, List<double?> StaffingRequirementsPerInterval = null, List<double?> MinimumStaffPerInterval = null, List<double?> EffectiveStaffPerInterval = null)
         {
             this.PlanningGroupId = PlanningGroupId;
             this.StaffingRequirementsPerInterval = StaffingRequirementsPerInterval;
+            this.MinimumStaffPerInterval = MinimumStaffPerInterval;
+            this.EffectiveStaffPerInterval = EffectiveStaffPerInterval;
             
         }
         
@@ -55,6 +59,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<double?> StaffingRequirementsPerInterval { get; set; }
 
 
+
+        /// <summary>
+        /// Minimum Staff per interval for this week forecast
+        /// </summary>
+        /// <value>Minimum Staff per interval for this week forecast</value>
+        [DataMember(Name="minimumStaffPerInterval", EmitDefaultValue=false)]
+        public List<double?> MinimumStaffPerInterval { get; set; }
+
+
+
+        /// <summary>
+        /// Effective Staff per interval for this week forecast
+        /// </summary>
+        /// <value>Effective Staff per interval for this week forecast</value>
+        [DataMember(Name="effectiveStaffPerInterval", EmitDefaultValue=false)]
+        public List<double?> EffectiveStaffPerInterval { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +88,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  PlanningGroupId: ").Append(PlanningGroupId).Append("\n");
             sb.Append("  StaffingRequirementsPerInterval: ").Append(StaffingRequirementsPerInterval).Append("\n");
+            sb.Append("  MinimumStaffPerInterval: ").Append(MinimumStaffPerInterval).Append("\n");
+            sb.Append("  EffectiveStaffPerInterval: ").Append(EffectiveStaffPerInterval).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +139,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StaffingRequirementsPerInterval == other.StaffingRequirementsPerInterval ||
                     this.StaffingRequirementsPerInterval != null &&
                     this.StaffingRequirementsPerInterval.SequenceEqual(other.StaffingRequirementsPerInterval)
+                ) &&
+                (
+                    this.MinimumStaffPerInterval == other.MinimumStaffPerInterval ||
+                    this.MinimumStaffPerInterval != null &&
+                    this.MinimumStaffPerInterval.SequenceEqual(other.MinimumStaffPerInterval)
+                ) &&
+                (
+                    this.EffectiveStaffPerInterval == other.EffectiveStaffPerInterval ||
+                    this.EffectiveStaffPerInterval != null &&
+                    this.EffectiveStaffPerInterval.SequenceEqual(other.EffectiveStaffPerInterval)
                 );
         }
 
@@ -134,6 +168,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.StaffingRequirementsPerInterval != null)
                     hash = hash * 59 + this.StaffingRequirementsPerInterval.GetHashCode();
+
+                if (this.MinimumStaffPerInterval != null)
+                    hash = hash * 59 + this.MinimumStaffPerInterval.GetHashCode();
+
+                if (this.EffectiveStaffPerInterval != null)
+                    hash = hash * 59 + this.EffectiveStaffPerInterval.GetHashCode();
 
                 return hash;
             }

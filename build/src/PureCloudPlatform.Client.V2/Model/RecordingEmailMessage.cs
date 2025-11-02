@@ -28,11 +28,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Cc">Cc.</param>
         /// <param name="Bcc">Bcc.</param>
         /// <param name="From">From.</param>
-        /// <param name="ReplyTo">ReplyTo.</param>
         /// <param name="Subject">Subject.</param>
         /// <param name="Attachments">Attachments.</param>
         /// <param name="Time">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public RecordingEmailMessage(string HtmlBody = null, string TextBody = null, string Id = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, EmailAddress ReplyTo = null, string Subject = null, List<EmailAttachment> Attachments = null, DateTime? Time = null)
+        public RecordingEmailMessage(string HtmlBody = null, string TextBody = null, string Id = null, List<EmailAddress> To = null, List<EmailAddress> Cc = null, List<EmailAddress> Bcc = null, EmailAddress From = null, string Subject = null, List<EmailAttachment> Attachments = null, DateTime? Time = null)
         {
             this.HtmlBody = HtmlBody;
             this.TextBody = TextBody;
@@ -41,7 +40,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Cc = Cc;
             this.Bcc = Bcc;
             this.From = From;
-            this.ReplyTo = ReplyTo;
             this.Subject = Subject;
             this.Attachments = Attachments;
             this.Time = Time;
@@ -107,14 +105,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets ReplyTo
-        /// </summary>
-        [DataMember(Name="replyTo", EmitDefaultValue=false)]
-        public EmailAddress ReplyTo { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets Subject
         /// </summary>
         [DataMember(Name="subject", EmitDefaultValue=false)]
@@ -154,7 +144,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Cc: ").Append(Cc).Append("\n");
             sb.Append("  Bcc: ").Append(Bcc).Append("\n");
             sb.Append("  From: ").Append(From).Append("\n");
-            sb.Append("  ReplyTo: ").Append(ReplyTo).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  Attachments: ").Append(Attachments).Append("\n");
             sb.Append("  Time: ").Append(Time).Append("\n");
@@ -234,11 +223,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.From.Equals(other.From)
                 ) &&
                 (
-                    this.ReplyTo == other.ReplyTo ||
-                    this.ReplyTo != null &&
-                    this.ReplyTo.Equals(other.ReplyTo)
-                ) &&
-                (
                     this.Subject == other.Subject ||
                     this.Subject != null &&
                     this.Subject.Equals(other.Subject)
@@ -286,9 +270,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.From != null)
                     hash = hash * 59 + this.From.GetHashCode();
-
-                if (this.ReplyTo != null)
-                    hash = hash * 59 + this.ReplyTo.GetHashCode();
 
                 if (this.Subject != null)
                     hash = hash * 59 + this.Subject.GetHashCode();

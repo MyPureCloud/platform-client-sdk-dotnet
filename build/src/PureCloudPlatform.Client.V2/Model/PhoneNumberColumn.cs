@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ColumnName">ColumnName.</param>
         /// <param name="Type">Type.</param>
-        public PhoneNumberColumn(string ColumnName = null, string Type = null)
+        /// <param name="CallableTimeColumnName">CallableTimeColumnName.</param>
+        public PhoneNumberColumn(string ColumnName = null, string Type = null, string CallableTimeColumnName = null)
         {
             this.ColumnName = ColumnName;
             this.Type = Type;
+            this.CallableTimeColumnName = CallableTimeColumnName;
             
         }
         
@@ -47,6 +49,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Type { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets CallableTimeColumnName
+        /// </summary>
+        [DataMember(Name="callableTimeColumnName", EmitDefaultValue=false)]
+        public string CallableTimeColumnName { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -58,6 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ColumnName: ").Append(ColumnName).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
+            sb.Append("  CallableTimeColumnName: ").Append(CallableTimeColumnName).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,6 +118,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Type == other.Type ||
                     this.Type != null &&
                     this.Type.Equals(other.Type)
+                ) &&
+                (
+                    this.CallableTimeColumnName == other.CallableTimeColumnName ||
+                    this.CallableTimeColumnName != null &&
+                    this.CallableTimeColumnName.Equals(other.CallableTimeColumnName)
                 );
         }
 
@@ -126,6 +142,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Type != null)
                     hash = hash * 59 + this.Type.GetHashCode();
+
+                if (this.CallableTimeColumnName != null)
+                    hash = hash * 59 + this.CallableTimeColumnName.GetHashCode();
 
                 return hash;
             }

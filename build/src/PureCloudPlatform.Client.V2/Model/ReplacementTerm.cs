@@ -73,7 +73,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Facebook for "FACEBOOK"
             /// </summary>
             [EnumMember(Value = "FACEBOOK")]
-            Facebook
+            Facebook,
+            
+            /// <summary>
+            /// Enum AppleMessages for "APPLE_MESSAGES"
+            /// </summary>
+            [EnumMember(Value = "APPLE_MESSAGES")]
+            AppleMessages,
+            
+            /// <summary>
+            /// Enum ExternalId for "EXTERNAL_ID"
+            /// </summary>
+            [EnumMember(Value = "EXTERNAL_ID")]
+            ExternalId
         }
         /// <summary>
         /// Replacement term type

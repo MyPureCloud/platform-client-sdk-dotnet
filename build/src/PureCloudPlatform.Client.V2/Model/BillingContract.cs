@@ -57,7 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalNumber">Unique external number..</param>
         /// <param name="Status">The status of the contract..</param>
         /// <param name="CommercialModel">The type of commercial model..</param>
-        /// <param name="GetpurchaseOrderNumbers">List of po numbers periods for this contract..</param>
+        /// <param name="PurchaseOrderNumbers">List of po numbers periods for this contract..</param>
         /// <param name="BillToCustomer">The bill to customer..</param>
         /// <param name="SoldToCustomer">The sold to customer..</param>
         /// <param name="EndCustomer">The end customer..</param>
@@ -67,12 +67,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateRampEnd">the date when the first revenue or quantity in a ramped deal ends. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="BillingPeriods">List of billing periods for the contract..</param>
         /// <param name="Plans">The collection of prices for the related organizations..</param>
-        public BillingContract(string ExternalNumber = null, StatusEnum? Status = null, string CommercialModel = null, List<string> GetpurchaseOrderNumbers = null, Customer BillToCustomer = null, Customer SoldToCustomer = null, Customer EndCustomer = null, String DateStart = null, String DateEnd = null, String DateRampStart = null, String DateRampEnd = null, List<BillingContractPeriod> BillingPeriods = null, List<BillingPlan> Plans = null)
+        public BillingContract(string ExternalNumber = null, StatusEnum? Status = null, string CommercialModel = null, List<string> PurchaseOrderNumbers = null, Customer BillToCustomer = null, Customer SoldToCustomer = null, Customer EndCustomer = null, String DateStart = null, String DateEnd = null, String DateRampStart = null, String DateRampEnd = null, List<BillingContractPeriod> BillingPeriods = null, List<BillingPlan> Plans = null)
         {
             this.ExternalNumber = ExternalNumber;
             this.Status = Status;
             this.CommercialModel = CommercialModel;
-            this.GetpurchaseOrderNumbers = GetpurchaseOrderNumbers;
+            this.PurchaseOrderNumbers = PurchaseOrderNumbers;
             this.BillToCustomer = BillToCustomer;
             this.SoldToCustomer = SoldToCustomer;
             this.EndCustomer = EndCustomer;
@@ -120,8 +120,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// List of po numbers periods for this contract.
         /// </summary>
         /// <value>List of po numbers periods for this contract.</value>
-        [DataMember(Name="getpurchaseOrderNumbers", EmitDefaultValue=false)]
-        public List<string> GetpurchaseOrderNumbers { get; set; }
+        [DataMember(Name="purchaseOrderNumbers", EmitDefaultValue=false)]
+        public List<string> PurchaseOrderNumbers { get; set; }
 
 
 
@@ -218,7 +218,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalNumber: ").Append(ExternalNumber).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  CommercialModel: ").Append(CommercialModel).Append("\n");
-            sb.Append("  GetpurchaseOrderNumbers: ").Append(GetpurchaseOrderNumbers).Append("\n");
+            sb.Append("  PurchaseOrderNumbers: ").Append(PurchaseOrderNumbers).Append("\n");
             sb.Append("  BillToCustomer: ").Append(BillToCustomer).Append("\n");
             sb.Append("  SoldToCustomer: ").Append(SoldToCustomer).Append("\n");
             sb.Append("  EndCustomer: ").Append(EndCustomer).Append("\n");
@@ -289,9 +289,9 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CommercialModel.Equals(other.CommercialModel)
                 ) &&
                 (
-                    this.GetpurchaseOrderNumbers == other.GetpurchaseOrderNumbers ||
-                    this.GetpurchaseOrderNumbers != null &&
-                    this.GetpurchaseOrderNumbers.SequenceEqual(other.GetpurchaseOrderNumbers)
+                    this.PurchaseOrderNumbers == other.PurchaseOrderNumbers ||
+                    this.PurchaseOrderNumbers != null &&
+                    this.PurchaseOrderNumbers.SequenceEqual(other.PurchaseOrderNumbers)
                 ) &&
                 (
                     this.BillToCustomer == other.BillToCustomer ||
@@ -363,8 +363,8 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.CommercialModel != null)
                     hash = hash * 59 + this.CommercialModel.GetHashCode();
 
-                if (this.GetpurchaseOrderNumbers != null)
-                    hash = hash * 59 + this.GetpurchaseOrderNumbers.GetHashCode();
+                if (this.PurchaseOrderNumbers != null)
+                    hash = hash * 59 + this.PurchaseOrderNumbers.GetHashCode();
 
                 if (this.BillToCustomer != null)
                     hash = hash * 59 + this.BillToCustomer.GetHashCode();

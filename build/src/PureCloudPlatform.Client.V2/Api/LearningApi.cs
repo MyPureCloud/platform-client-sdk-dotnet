@@ -456,6 +456,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LearningModuleCoverArtResponse> GetLearningModulesCoverartCoverArtIdWithHttpInfo (string coverArtId);
 
         /// <summary>
+        /// Retrieve the status of the job for the slots where a learning activity can be scheduled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>LearningScheduleSlotsJobResponse</returns>
+        
+        LearningScheduleSlotsJobResponse GetLearningScheduleslotsJob (string jobId);
+
+        /// <summary>
+        /// Retrieve the status of the job for the slots where a learning activity can be scheduled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>ApiResponse of LearningScheduleSlotsJobResponse</returns>
+        
+        ApiResponse<LearningScheduleSlotsJobResponse> GetLearningScheduleslotsJobWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Get Learning SCORM Result
         /// </summary>
         /// <remarks>
@@ -858,6 +882,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of LearningAssignmentUserListing</returns>
         
         ApiResponse<LearningAssignmentUserListing> PostLearningRulesQueryWithHttpInfo (int? pageSize, int? pageNumber, LearningAssignmentUserQuery body);
+
+        /// <summary>
+        /// Start job to retrieve slots where a learning activity can be scheduled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The slots search request</param>
+        /// <returns>LearningScheduleSlotsJobResponse</returns>
+        
+        LearningScheduleSlotsJobResponse PostLearningScheduleslotsJobs (LearningScheduleSlotsJobRequest body);
+
+        /// <summary>
+        /// Start job to retrieve slots where a learning activity can be scheduled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The slots search request</param>
+        /// <returns>ApiResponse of LearningScheduleSlotsJobResponse</returns>
+        
+        ApiResponse<LearningScheduleSlotsJobResponse> PostLearningScheduleslotsJobsWithHttpInfo (LearningScheduleSlotsJobRequest body);
 
         /// <summary>
         /// Get list of possible slots where a learning activity can be scheduled.
@@ -1432,6 +1480,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<LearningModuleCoverArtResponse>> GetLearningModulesCoverartCoverArtIdAsyncWithHttpInfo (string coverArtId);
 
         /// <summary>
+        /// Retrieve the status of the job for the slots where a learning activity can be scheduled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>Task of LearningScheduleSlotsJobResponse</returns>
+        
+        System.Threading.Tasks.Task<LearningScheduleSlotsJobResponse> GetLearningScheduleslotsJobAsync (string jobId);
+
+        /// <summary>
+        /// Retrieve the status of the job for the slots where a learning activity can be scheduled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>Task of ApiResponse (LearningScheduleSlotsJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LearningScheduleSlotsJobResponse>> GetLearningScheduleslotsJobAsyncWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Get Learning SCORM Result
         /// </summary>
         /// <remarks>
@@ -1834,6 +1906,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LearningAssignmentUserListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<LearningAssignmentUserListing>> PostLearningRulesQueryAsyncWithHttpInfo (int? pageSize, int? pageNumber, LearningAssignmentUserQuery body);
+
+        /// <summary>
+        /// Start job to retrieve slots where a learning activity can be scheduled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The slots search request</param>
+        /// <returns>Task of LearningScheduleSlotsJobResponse</returns>
+        
+        System.Threading.Tasks.Task<LearningScheduleSlotsJobResponse> PostLearningScheduleslotsJobsAsync (LearningScheduleSlotsJobRequest body);
+
+        /// <summary>
+        /// Start job to retrieve slots where a learning activity can be scheduled.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The slots search request</param>
+        /// <returns>Task of ApiResponse (LearningScheduleSlotsJobResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LearningScheduleSlotsJobResponse>> PostLearningScheduleslotsJobsAsyncWithHttpInfo (LearningScheduleSlotsJobRequest body);
 
         /// <summary>
         /// Get list of possible slots where a learning activity can be scheduled.
@@ -5171,6 +5267,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LearningModuleCoverArtResponse>(localVarStatusCode,
                 localVarHeaders,
                 (LearningModuleCoverArtResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModuleCoverArtResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieve the status of the job for the slots where a learning activity can be scheduled. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>LearningScheduleSlotsJobResponse</returns>
+        
+        public LearningScheduleSlotsJobResponse GetLearningScheduleslotsJob (string jobId)
+        {
+             ApiResponse<LearningScheduleSlotsJobResponse> localVarResponse = GetLearningScheduleslotsJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve the status of the job for the slots where a learning activity can be scheduled. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>ApiResponse of LearningScheduleSlotsJobResponse</returns>
+        
+        public ApiResponse< LearningScheduleSlotsJobResponse > GetLearningScheduleslotsJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling LearningApi->GetLearningScheduleslotsJob");
+
+            var localVarPath = "/api/v2/learning/scheduleslots/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningScheduleslotsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningScheduleslotsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningScheduleSlotsJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningScheduleSlotsJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningScheduleSlotsJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieve the status of the job for the slots where a learning activity can be scheduled. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>Task of LearningScheduleSlotsJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<LearningScheduleSlotsJobResponse> GetLearningScheduleslotsJobAsync (string jobId)
+        {
+             ApiResponse<LearningScheduleSlotsJobResponse> localVarResponse = await GetLearningScheduleslotsJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve the status of the job for the slots where a learning activity can be scheduled. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The ID of the job</param>
+        /// <returns>Task of ApiResponse (LearningScheduleSlotsJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LearningScheduleSlotsJobResponse>> GetLearningScheduleslotsJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling LearningApi->GetLearningScheduleslotsJob");
+            
+
+            var localVarPath = "/api/v2/learning/scheduleslots/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningScheduleslotsJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetLearningScheduleslotsJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningScheduleSlotsJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningScheduleSlotsJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningScheduleSlotsJobResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8598,6 +8895,217 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LearningAssignmentUserListing>(localVarStatusCode,
                 localVarHeaders,
                 (LearningAssignmentUserListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningAssignmentUserListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Start job to retrieve slots where a learning activity can be scheduled. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The slots search request</param>
+        /// <returns>LearningScheduleSlotsJobResponse</returns>
+        
+        public LearningScheduleSlotsJobResponse PostLearningScheduleslotsJobs (LearningScheduleSlotsJobRequest body)
+        {
+             ApiResponse<LearningScheduleSlotsJobResponse> localVarResponse = PostLearningScheduleslotsJobsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Start job to retrieve slots where a learning activity can be scheduled. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The slots search request</param>
+        /// <returns>ApiResponse of LearningScheduleSlotsJobResponse</returns>
+        
+        public ApiResponse< LearningScheduleSlotsJobResponse > PostLearningScheduleslotsJobsWithHttpInfo (LearningScheduleSlotsJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningScheduleslotsJobs");
+
+            var localVarPath = "/api/v2/learning/scheduleslots/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningScheduleslotsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningScheduleslotsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningScheduleSlotsJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningScheduleSlotsJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningScheduleSlotsJobResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Start job to retrieve slots where a learning activity can be scheduled. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The slots search request</param>
+        /// <returns>Task of LearningScheduleSlotsJobResponse</returns>
+        
+        public async System.Threading.Tasks.Task<LearningScheduleSlotsJobResponse> PostLearningScheduleslotsJobsAsync (LearningScheduleSlotsJobRequest body)
+        {
+             ApiResponse<LearningScheduleSlotsJobResponse> localVarResponse = await PostLearningScheduleslotsJobsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Start job to retrieve slots where a learning activity can be scheduled. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The slots search request</param>
+        /// <returns>Task of ApiResponse (LearningScheduleSlotsJobResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LearningScheduleSlotsJobResponse>> PostLearningScheduleslotsJobsAsyncWithHttpInfo (LearningScheduleSlotsJobRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningScheduleslotsJobs");
+            
+
+            var localVarPath = "/api/v2/learning/scheduleslots/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningScheduleslotsJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningScheduleslotsJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningScheduleSlotsJobResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningScheduleSlotsJobResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningScheduleSlotsJobResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

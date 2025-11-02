@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetCoachingAppointmentsMe**](#GetCoachingAppointmentsMe) | **Get** /api/v2/coaching/appointments/me | Get my appointments for a given date range |
 | [**GetCoachingNotification**](#GetCoachingNotification) | **Get** /api/v2/coaching/notifications/{notificationId} | Get an existing notification |
 | [**GetCoachingNotifications**](#GetCoachingNotifications) | **Get** /api/v2/coaching/notifications | Retrieve the list of your notifications. |
+| [**GetCoachingScheduleslotsJob**](#GetCoachingScheduleslotsJob) | **Get** /api/v2/coaching/scheduleslots/jobs/{jobId} | Retrieve the status of the job for the slots where a coaching appointment can be scheduled. |
 | [**PatchCoachingAppointment**](#PatchCoachingAppointment) | **Patch** /api/v2/coaching/appointments/{appointmentId} | Update an existing appointment |
 | [**PatchCoachingAppointmentAnnotation**](#PatchCoachingAppointmentAnnotation) | **Patch** /api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId} | Update an existing annotation. |
 | [**PatchCoachingAppointmentStatus**](#PatchCoachingAppointmentStatus) | **Patch** /api/v2/coaching/appointments/{appointmentId}/status | Update the status of a coaching appointment |
@@ -24,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostCoachingAppointmentConversations**](#PostCoachingAppointmentConversations) | **Post** /api/v2/coaching/appointments/{appointmentId}/conversations | Add a conversation to an appointment |
 | [**PostCoachingAppointments**](#PostCoachingAppointments) | **Post** /api/v2/coaching/appointments | Create a new appointment |
 | [**PostCoachingAppointmentsAggregatesQuery**](#PostCoachingAppointmentsAggregatesQuery) | **Post** /api/v2/coaching/appointments/aggregates/query | Retrieve aggregated appointment data |
+| [**PostCoachingScheduleslotsJobs**](#PostCoachingScheduleslotsJobs) | **Post** /api/v2/coaching/scheduleslots/jobs | Start job to retrieve the slots where a coaching appointment can be scheduled. |
 | [**PostCoachingScheduleslotsQuery**](#PostCoachingScheduleslotsQuery) | **Post** /api/v2/coaching/scheduleslots/query | Get list of possible slots where a coaching appointment can be scheduled. |
 
 
@@ -718,6 +720,68 @@ namespace Example
 [**CoachingNotificationList**](CoachingNotificationList)
 
 
+## GetCoachingScheduleslotsJob
+
+> [**CoachingScheduleSlotsJobResponse**](CoachingScheduleSlotsJobResponse) GetCoachingScheduleslotsJob (string jobId)
+
+
+Retrieve the status of the job for the slots where a coaching appointment can be scheduled.
+
+Requires ANY permissions: 
+
+* coaching:scheduleSlotJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetCoachingScheduleslotsJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CoachingApi();
+            var jobId = jobId_example;  // string | The ID of job
+
+            try
+            { 
+                // Retrieve the status of the job for the slots where a coaching appointment can be scheduled.
+                CoachingScheduleSlotsJobResponse result = apiInstance.GetCoachingScheduleslotsJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CoachingApi.GetCoachingScheduleslotsJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The ID of job |  |
+
+### Return type
+
+[**CoachingScheduleSlotsJobResponse**](CoachingScheduleSlotsJobResponse)
+
+
 ## PatchCoachingAppointment
 
 > [**CoachingAppointmentResponse**](CoachingAppointmentResponse) PatchCoachingAppointment (string appointmentId, UpdateCoachingAppointmentRequest body)
@@ -1242,6 +1306,68 @@ namespace Example
 [**CoachingAppointmentAggregateResponse**](CoachingAppointmentAggregateResponse)
 
 
+## PostCoachingScheduleslotsJobs
+
+> [**CoachingScheduleSlotsJobResponse**](CoachingScheduleSlotsJobResponse) PostCoachingScheduleslotsJobs (CoachingScheduleSlotsJobRequest body)
+
+
+Start job to retrieve the slots where a coaching appointment can be scheduled.
+
+Requires ANY permissions: 
+
+* coaching:scheduleSlotJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostCoachingScheduleslotsJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CoachingApi();
+            var body = new CoachingScheduleSlotsJobRequest(); // CoachingScheduleSlotsJobRequest | The slots search request
+
+            try
+            { 
+                // Start job to retrieve the slots where a coaching appointment can be scheduled.
+                CoachingScheduleSlotsJobResponse result = apiInstance.PostCoachingScheduleslotsJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CoachingApi.PostCoachingScheduleslotsJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CoachingScheduleSlotsJobRequest**](CoachingScheduleSlotsJobRequest)| The slots search request |  |
+
+### Return type
+
+[**CoachingScheduleSlotsJobResponse**](CoachingScheduleSlotsJobResponse)
+
+
 ## PostCoachingScheduleslotsQuery
 
 > [**CoachingSlotsResponse**](CoachingSlotsResponse) PostCoachingScheduleslotsQuery (CoachingSlotsRequest body)
@@ -1304,4 +1430,4 @@ namespace Example
 [**CoachingSlotsResponse**](CoachingSlotsResponse)
 
 
-_PureCloudPlatform.Client.V2 246.0.0_
+_PureCloudPlatform.Client.V2 247.0.0_

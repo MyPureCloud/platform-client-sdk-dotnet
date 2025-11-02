@@ -46,6 +46,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Genesysknowledge,
             
             /// <summary>
+            /// Enum Genesysknowledgev3 for "GenesysKnowledgeV3"
+            /// </summary>
+            [EnumMember(Value = "GenesysKnowledgeV3")]
+            Genesysknowledgev3,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
