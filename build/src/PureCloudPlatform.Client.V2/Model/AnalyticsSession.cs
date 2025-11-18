@@ -325,7 +325,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Zendesk for "Zendesk"
             /// </summary>
             [EnumMember(Value = "Zendesk")]
-            Zendesk
+            Zendesk,
+            
+            /// <summary>
+            /// Enum Openmessaging for "OpenMessaging"
+            /// </summary>
+            [EnumMember(Value = "OpenMessaging")]
+            Openmessaging
         }
         /// <summary>
         /// The session media type

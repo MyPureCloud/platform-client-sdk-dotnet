@@ -907,7 +907,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum CopilotUsageView for "COPILOT_USAGE_VIEW"
             /// </summary>
             [EnumMember(Value = "COPILOT_USAGE_VIEW")]
-            CopilotUsageView
+            CopilotUsageView,
+            
+            /// <summary>
+            /// Enum PredictiveRoutingThroughputView for "PREDICTIVE_ROUTING_THROUGHPUT_VIEW"
+            /// </summary>
+            [EnumMember(Value = "PREDICTIVE_ROUTING_THROUGHPUT_VIEW")]
+            PredictiveRoutingThroughputView
         }
         /// <summary>
         /// The error message in case the export request failed

@@ -55,11 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="State">State.</param>
         /// <param name="RejectionReason">RejectionReason.</param>
-        public ChannelTopic(string Id = null, StateEnum? State = null, string RejectionReason = null)
+        /// <param name="MissingPermissions">MissingPermissions.</param>
+        public ChannelTopic(string Id = null, StateEnum? State = null, string RejectionReason = null, List<string> MissingPermissions = null)
         {
             this.Id = Id;
             this.State = State;
             this.RejectionReason = RejectionReason;
+            this.MissingPermissions = MissingPermissions;
             
         }
         
@@ -84,6 +86,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets MissingPermissions
+        /// </summary>
+        [DataMember(Name="missingPermissions", EmitDefaultValue=false)]
+        public List<string> MissingPermissions { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -103,6 +113,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  RejectionReason: ").Append(RejectionReason).Append("\n");
+            sb.Append("  MissingPermissions: ").Append(MissingPermissions).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -160,6 +171,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RejectionReason.Equals(other.RejectionReason)
                 ) &&
                 (
+                    this.MissingPermissions == other.MissingPermissions ||
+                    this.MissingPermissions != null &&
+                    this.MissingPermissions.SequenceEqual(other.MissingPermissions)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -185,6 +201,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RejectionReason != null)
                     hash = hash * 59 + this.RejectionReason.GetHashCode();
+
+                if (this.MissingPermissions != null)
+                    hash = hash * 59 + this.MissingPermissions.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

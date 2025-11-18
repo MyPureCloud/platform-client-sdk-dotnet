@@ -1,6 +1,6 @@
-# LearningModulesDomainEntityListing
+# LearningModuleList
 
-## ININ.PureCloudApi.Model.LearningModulesDomainEntityListing
+## ININ.PureCloudApi.Model.LearningModuleList
 
 ## Properties
 
@@ -10,13 +10,14 @@
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
-| **FirstUri** | **string** |  | [optional] |
-| **LastUri** | **string** |  | [optional] |
-| **SelfUri** | **string** |  | [optional] |
+| **TotalLegacyRules** | **long?** | The total number of unmigrated rules | [optional] |
 | **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **LastUri** | **string** |  | [optional] |
+| **FirstUri** | **string** |  | [optional] |
+| **SelfUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 247.0.0_
+_PureCloudPlatform.Client.V2 248.0.0_

@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Date for "Date"
             /// </summary>
             [EnumMember(Value = "Date")]
-            Date
+            Date,
+            
+            /// <summary>
+            /// Enum Planninggroupid for "PlanningGroupId"
+            /// </summary>
+            [EnumMember(Value = "PlanningGroupId")]
+            Planninggroupid
         }
         /// <summary>
         /// The type of this message parameter

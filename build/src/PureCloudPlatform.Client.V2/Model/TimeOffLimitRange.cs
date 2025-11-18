@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class TimeOffLimitRange :  IEquatable<TimeOffLimitRange>
     {
         /// <summary>
-        /// Granularity choice for the time off limit
+        /// Granularity choice for the time-off limit
         /// </summary>
-        /// <value>Granularity choice for the time off limit</value>
+        /// <value>Granularity choice for the time-off limit</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum GranularityEnum
         {
@@ -37,12 +37,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Daily for "Daily"
             /// </summary>
             [EnumMember(Value = "Daily")]
-            Daily
+            Daily,
+            
+            /// <summary>
+            /// Enum Fifteenminutes for "FifteenMinutes"
+            /// </summary>
+            [EnumMember(Value = "FifteenMinutes")]
+            Fifteenminutes
         }
         /// <summary>
-        /// Granularity choice for the time off limit
+        /// Granularity choice for the time-off limit
         /// </summary>
-        /// <value>Granularity choice for the time off limit</value>
+        /// <value>Granularity choice for the time-off limit</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public GranularityEnum? Granularity { get; set; }
 
@@ -55,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="TimeOffLimitRange" /> class.
         /// </summary>
         /// <param name="StartDate">Start date of the range. The end date is determined by &#39;granularity&#39; and the size of &#39;limitMinutesPerInterval&#39;. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        /// <param name="Granularity">Granularity choice for the time off limit (required).</param>
+        /// <param name="Granularity">Granularity choice for the time-off limit (required).</param>
         /// <param name="LimitMinutesPerInterval">The list of time off limit values in minutes per granularity interval. If &#39;null&#39; is specified, then interval specific value is cleared. Such interval will have &#39;defaultLimitMinutes&#39; value (required).</param>
         public TimeOffLimitRange(String StartDate = null, GranularityEnum? Granularity = null, List<int?> LimitMinutesPerInterval = null)
         {

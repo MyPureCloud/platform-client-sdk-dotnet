@@ -222,7 +222,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="InteractiveApplication">InteractiveApplication content..</param>
         /// <param name="PaymentRequest">Payment request content..</param>
         /// <param name="PaymentResponse">Payment response content..</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, List<ButtonResponse> ButtonResponses = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, DatePicker DatePicker = null, ListPicker ListPicker = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null, InteractiveApplication InteractiveApplication = null, PaymentRequest PaymentRequest = null, PaymentResponse PaymentResponse = null)
+        /// <param name="Form">Form content..</param>
+        /// <param name="RoadsideAssistance">Roadside Assistance content..</param>
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, List<ButtonResponse> ButtonResponses = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, DatePicker DatePicker = null, ListPicker ListPicker = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null, InteractiveApplication InteractiveApplication = null, PaymentRequest PaymentRequest = null, PaymentResponse PaymentResponse = null, RecordingForm Form = null, RecordingRoadsideAssistance RoadsideAssistance = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -251,6 +253,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InteractiveApplication = InteractiveApplication;
             this.PaymentRequest = PaymentRequest;
             this.PaymentResponse = PaymentResponse;
+            this.Form = Form;
+            this.RoadsideAssistance = RoadsideAssistance;
             
         }
         
@@ -484,6 +488,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public PaymentResponse PaymentResponse { get; set; }
 
 
+
+        /// <summary>
+        /// Form content.
+        /// </summary>
+        /// <value>Form content.</value>
+        [DataMember(Name="form", EmitDefaultValue=false)]
+        public RecordingForm Form { get; set; }
+
+
+
+        /// <summary>
+        /// Roadside Assistance content.
+        /// </summary>
+        /// <value>Roadside Assistance content.</value>
+        [DataMember(Name="roadsideAssistance", EmitDefaultValue=false)]
+        public RecordingRoadsideAssistance RoadsideAssistance { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -520,6 +542,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InteractiveApplication: ").Append(InteractiveApplication).Append("\n");
             sb.Append("  PaymentRequest: ").Append(PaymentRequest).Append("\n");
             sb.Append("  PaymentResponse: ").Append(PaymentResponse).Append("\n");
+            sb.Append("  Form: ").Append(Form).Append("\n");
+            sb.Append("  RoadsideAssistance: ").Append(RoadsideAssistance).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -694,6 +718,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PaymentResponse == other.PaymentResponse ||
                     this.PaymentResponse != null &&
                     this.PaymentResponse.Equals(other.PaymentResponse)
+                ) &&
+                (
+                    this.Form == other.Form ||
+                    this.Form != null &&
+                    this.Form.Equals(other.Form)
+                ) &&
+                (
+                    this.RoadsideAssistance == other.RoadsideAssistance ||
+                    this.RoadsideAssistance != null &&
+                    this.RoadsideAssistance.Equals(other.RoadsideAssistance)
                 );
         }
 
@@ -788,6 +822,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PaymentResponse != null)
                     hash = hash * 59 + this.PaymentResponse.GetHashCode();
+
+                if (this.Form != null)
+                    hash = hash * 59 + this.Form.GetHashCode();
+
+                if (this.RoadsideAssistance != null)
+                    hash = hash * 59 + this.RoadsideAssistance.GetHashCode();
 
                 return hash;
             }

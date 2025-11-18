@@ -83,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">A description of the data ingestion rule..</param>
         /// <param name="Status">The status of the data ingestion rule..</param>
         /// <param name="Version">The version number of the data ingestion rule..</param>
-        /// <param name="IntegrationId">The Integration Id from which public social posts are ingested. This entity is created using the /conversations/messaging/integrations/facebook resource.</param>
+        /// <param name="IntegrationId">Id of the Integration when source is owned (Authenticated). This entity is created using the /conversations/messaging/integrations/facebook resource. Optional when configuring non-owned pages..</param>
         public FacebookDataIngestionRuleResponse(string Id = null, string Name = null, string Description = null, StatusEnum? Status = null, int? Version = null, string IntegrationId = null)
         {
             this.Id = Id;
@@ -172,9 +172,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The Integration Id from which public social posts are ingested. This entity is created using the /conversations/messaging/integrations/facebook resource
+        /// Id of the Integration when source is owned (Authenticated). This entity is created using the /conversations/messaging/integrations/facebook resource. Optional when configuring non-owned pages.
         /// </summary>
-        /// <value>The Integration Id from which public social posts are ingested. This entity is created using the /conversations/messaging/integrations/facebook resource</value>
+        /// <value>Id of the Integration when source is owned (Authenticated). This entity is created using the /conversations/messaging/integrations/facebook resource. Optional when configuring non-owned pages.</value>
         [DataMember(Name="integrationId", EmitDefaultValue=false)]
         public string IntegrationId { get; set; }
 

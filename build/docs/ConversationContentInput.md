@@ -12,7 +12,9 @@
 | **PlaceholderText** | **string** | Placeholder text for input field(s). | [optional] |
 | **IsRequired** | **bool?** | Whether the input field(s) are required to be filled in. | |
 | **IsMultipleLine** | **bool?** | Whether the input should allow multiple lines of text. | |
+| **KeyboardType** | **string** | Type of keyboard to be shown. | [optional] |
+| **AutoCompleteType** | **string** | A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 247.0.0_
+_PureCloudPlatform.Client.V2 248.0.0_

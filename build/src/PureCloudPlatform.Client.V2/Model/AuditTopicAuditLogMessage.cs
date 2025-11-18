@@ -1243,6 +1243,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Organizationauthorizationusertrust,
             
             /// <summary>
+            /// Enum Mfaverifier for "MFAVerifier"
+            /// </summary>
+            [EnumMember(Value = "MFAVerifier")]
+            Mfaverifier,
+            
+            /// <summary>
             /// Enum Role for "Role"
             /// </summary>
             [EnumMember(Value = "Role")]

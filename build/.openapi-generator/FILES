@@ -162,6 +162,7 @@ docs/AgentScheduleShiftActivity.md
 docs/AgentStateAgentQueryClause.md
 docs/AgentStateAgentQueryPredicate.md
 docs/AgentStateCountsRequest.md
+docs/AgentStateEventTopicAgentStateEventNotification.md
 docs/AgentStateIsOutOfOfficeCount.md
 docs/AgentStatePresenceCount.md
 docs/AgentStateQueryRequest.md
@@ -1197,6 +1198,8 @@ docs/ConversationContentQuickReplyV2.md
 docs/ConversationContentReaction.md
 docs/ConversationContentReceivedReplyMessage.md
 docs/ConversationContentRequiredContactField.md
+docs/ConversationContentRichLink.md
+docs/ConversationContentRichLinkHeader.md
 docs/ConversationContentRoadsideAssistance.md
 docs/ConversationContentStory.md
 docs/ConversationContentText.md
@@ -2598,6 +2601,7 @@ docs/ExternalOrganizationIdentifierClaimRequest.md
 docs/ExternalOrganizationIdentifierListing.md
 docs/ExternalOrganizationListing.md
 docs/ExternalOrganizationTrustorLink.md
+docs/ExternalPageMetadata.md
 docs/ExternalSegment.md
 docs/ExternalSource.md
 docs/FacebookAppCredentials.md
@@ -3091,6 +3095,7 @@ docs/GetConversationsInternalmessages-example.txt
 docs/GetConversationsKeyconfiguration-example.txt
 docs/GetConversationsKeyconfigurations-example.txt
 docs/GetConversationsMessage-example.txt
+docs/GetConversationsMessageCommunicationMessagesMedia-example.txt
 docs/GetConversationsMessageCommunicationMessagesMediaMediaId-example.txt
 docs/GetConversationsMessageDetails-example.txt
 docs/GetConversationsMessageMessage-example.txt
@@ -4489,6 +4494,7 @@ docs/JourneyAppEventsNotificationWebActionMessage.md
 docs/JourneyAsyncAggregateQueryResponse.md
 docs/JourneyAsyncAggregationQuery.md
 docs/JourneyCampaign.md
+docs/JourneyCaseAssociation.md
 docs/JourneyContext.md
 docs/JourneyCustomer.md
 docs/JourneyCustomerSession.md
@@ -4561,6 +4567,8 @@ docs/JourneyViewElementFilterRange.md
 docs/JourneyViewElementFilterRangeData.md
 docs/JourneyViewJob.md
 docs/JourneyViewJobListing.md
+docs/JourneyViewJobNotificationTopicJourneyView.md
+docs/JourneyViewJobNotificationTopicJourneyViewJobNotificationEventV2.md
 docs/JourneyViewLink.md
 docs/JourneyViewLinkTimeConstraint.md
 docs/JourneyViewListing.md
@@ -4821,6 +4829,7 @@ docs/LearningModuleInformStep.md
 docs/LearningModuleInformStepRequest.md
 docs/LearningModuleJobRequest.md
 docs/LearningModuleJobResponse.md
+docs/LearningModuleList.md
 docs/LearningModulePreviewGetResponse.md
 docs/LearningModulePreviewGetResponseAssignment.md
 docs/LearningModulePreviewGetResponseStep.md
@@ -4839,7 +4848,6 @@ docs/LearningModuleRequest.md
 docs/LearningModuleRule.md
 docs/LearningModuleRuleParts.md
 docs/LearningModuleSummary.md
-docs/LearningModulesDomainEntityListing.md
 docs/LearningScheduleSlotsJobRequest.md
 docs/LearningScheduleSlotsJobResponse.md
 docs/LearningScheduleSlotsJobResult.md
@@ -5020,6 +5028,7 @@ docs/MessageInfo.md
 docs/MessageMedia.md
 docs/MessageMediaAttachment.md
 docs/MessageMediaData.md
+docs/MessageMediaListing.md
 docs/MessageMediaParticipant.md
 docs/MessageMediaPolicy.md
 docs/MessageMediaPolicyConditions.md
@@ -7595,6 +7604,7 @@ docs/SetSmsPhoneNumberActionSettings.md
 docs/SetTimeOffIntegrationStatusRequest.md
 docs/SetTimeOffLimitValuesRequest.md
 docs/SetUuiDataRequest.md
+docs/SetWhatsAppIntegrationActionSettings.md
 docs/SetWrapperDayOfWeek.md
 docs/SetWrapperRoutePathRequest.md
 docs/SetWrapperString.md
@@ -9173,6 +9183,7 @@ src/PureCloudPlatform.Client.V2/Model/AgentScheduleShiftActivity.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateAgentQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateAgentQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateCountsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AgentStateEventTopicAgentStateEventNotification.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateIsOutOfOfficeCount.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStatePresenceCount.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateQueryRequest.cs
@@ -10184,6 +10195,8 @@ src/PureCloudPlatform.Client.V2/Model/ConversationContentQuickReplyV2.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentReaction.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentReceivedReplyMessage.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentRequiredContactField.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentRichLink.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentRichLinkHeader.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentRoadsideAssistance.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentStory.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentText.cs
@@ -11232,6 +11245,7 @@ src/PureCloudPlatform.Client.V2/Model/ExternalOrganizationIdentifierClaimRequest
 src/PureCloudPlatform.Client.V2/Model/ExternalOrganizationIdentifierListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalOrganizationListing.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalOrganizationTrustorLink.cs
+src/PureCloudPlatform.Client.V2/Model/ExternalPageMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalSegment.cs
 src/PureCloudPlatform.Client.V2/Model/ExternalSource.cs
 src/PureCloudPlatform.Client.V2/Model/FacebookAppCredentials.cs
@@ -11685,6 +11699,7 @@ src/PureCloudPlatform.Client.V2/Model/JourneyAppEventsNotificationWebActionMessa
 src/PureCloudPlatform.Client.V2/Model/JourneyAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyAsyncAggregationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyCampaign.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyCaseAssociation.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyCustomer.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyCustomerSession.cs
@@ -11757,6 +11772,8 @@ src/PureCloudPlatform.Client.V2/Model/JourneyViewElementFilterRange.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewElementFilterRangeData.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewJob.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewJobListing.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyViewJobNotificationTopicJourneyView.cs
+src/PureCloudPlatform.Client.V2/Model/JourneyViewJobNotificationTopicJourneyViewJobNotificationEventV2.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewLink.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewLinkTimeConstraint.cs
 src/PureCloudPlatform.Client.V2/Model/JourneyViewListing.cs
@@ -12009,6 +12026,7 @@ src/PureCloudPlatform.Client.V2/Model/LearningModuleInformStep.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleInformStepRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleJobResponse.cs
+src/PureCloudPlatform.Client.V2/Model/LearningModuleList.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModulePreviewGetResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModulePreviewGetResponseAssignment.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModulePreviewGetResponseStep.cs
@@ -12027,7 +12045,6 @@ src/PureCloudPlatform.Client.V2/Model/LearningModuleRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleRule.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleRuleParts.cs
 src/PureCloudPlatform.Client.V2/Model/LearningModuleSummary.cs
-src/PureCloudPlatform.Client.V2/Model/LearningModulesDomainEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/LearningScheduleSlotsJobResult.cs
@@ -12202,6 +12219,7 @@ src/PureCloudPlatform.Client.V2/Model/MessageInfo.cs
 src/PureCloudPlatform.Client.V2/Model/MessageMedia.cs
 src/PureCloudPlatform.Client.V2/Model/MessageMediaAttachment.cs
 src/PureCloudPlatform.Client.V2/Model/MessageMediaData.cs
+src/PureCloudPlatform.Client.V2/Model/MessageMediaListing.cs
 src/PureCloudPlatform.Client.V2/Model/MessageMediaParticipant.cs
 src/PureCloudPlatform.Client.V2/Model/MessageMediaPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/MessageMediaPolicyConditions.cs
@@ -13454,6 +13472,7 @@ src/PureCloudPlatform.Client.V2/Model/SetSmsPhoneNumberActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/SetTimeOffIntegrationStatusRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SetTimeOffLimitValuesRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SetUuiDataRequest.cs
+src/PureCloudPlatform.Client.V2/Model/SetWhatsAppIntegrationActionSettings.cs
 src/PureCloudPlatform.Client.V2/Model/SetWrapperDayOfWeek.cs
 src/PureCloudPlatform.Client.V2/Model/SetWrapperRoutePathRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SetWrapperString.cs

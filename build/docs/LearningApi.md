@@ -807,7 +807,7 @@ namespace Example
 
 ## GetLearningModules
 
-> [**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing) GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
+> [**LearningModuleList**](LearningModuleList) GetLearningModules (bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
 
 
 Get all learning modules of an organization
@@ -853,7 +853,7 @@ namespace Example
             try
             { 
                 // Get all learning modules of an organization
-                LearningModulesDomainEntityListing result = apiInstance.GetLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds);
+                LearningModuleList result = apiInstance.GetLearningModules(isArchived, types, pageSize, pageNumber, sortOrder, sortBy, searchTerm, expand, isPublished, statuses, externalIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -884,7 +884,7 @@ namespace Example
 
 ### Return type
 
-[**LearningModulesDomainEntityListing**](LearningModulesDomainEntityListing)
+[**LearningModuleList**](LearningModuleList)
 
 
 ## GetLearningModulesAssignments
@@ -2497,4 +2497,4 @@ namespace Example
 [**LearningModuleRule**](LearningModuleRule)
 
 
-_PureCloudPlatform.Client.V2 247.0.0_
+_PureCloudPlatform.Client.V2 248.0.0_

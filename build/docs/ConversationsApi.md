@@ -80,6 +80,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetConversationsKeyconfiguration**](#GetConversationsKeyconfiguration) | **Get** /api/v2/conversations/keyconfigurations/{keyconfigurationsId} | Get the encryption key configurations |
 | [**GetConversationsKeyconfigurations**](#GetConversationsKeyconfigurations) | **Get** /api/v2/conversations/keyconfigurations | Get a list of key configurations data |
 | [**GetConversationsMessage**](#GetConversationsMessage) | **Get** /api/v2/conversations/messages/{conversationId} | Get message conversation |
+| [**GetConversationsMessageCommunicationMessagesMedia**](#GetConversationsMessageCommunicationMessagesMedia) | **Get** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media | Get message media list by status |
 | [**GetConversationsMessageCommunicationMessagesMediaMediaId**](#GetConversationsMessageCommunicationMessagesMediaMediaId) | **Get** /api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId} | Get media |
 | [**GetConversationsMessageDetails**](#GetConversationsMessageDetails) | **Get** /api/v2/conversations/messages/{messageId}/details | Get message |
 | [**GetConversationsMessageMessage**](#GetConversationsMessageMessage) | **Get** /api/v2/conversations/messages/{conversationId}/messages/{messageId} | Get conversation message |
@@ -4965,6 +4966,76 @@ namespace Example
 ### Return type
 
 [**MessageConversation**](MessageConversation)
+
+
+## GetConversationsMessageCommunicationMessagesMedia
+
+> [**MessageMediaListing**](MessageMediaListing) GetConversationsMessageCommunicationMessagesMedia (string conversationId, string communicationId, string status = null, int? pageNumber = null, int? pageSize = null)
+
+
+Get message media list by status
+
+Requires ANY permissions: 
+
+* conversation:messageMedia:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationsMessageCommunicationMessagesMediaExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var communicationId = communicationId_example;  // string | communicationId
+            var status = status_example;  // string | The status on which to filter the response. (optional) 
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Get message media list by status
+                MessageMediaListing result = apiInstance.GetConversationsMessageCommunicationMessagesMedia(conversationId, communicationId, status, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationsMessageCommunicationMessagesMedia: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **communicationId** | **string**| communicationId |  |
+| **status** | **string**| The status on which to filter the response. | [optional] <br />**Values**: uploading, valid, invalid |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+
+### Return type
+
+[**MessageMediaListing**](MessageMediaListing)
 
 
 ## GetConversationsMessageCommunicationMessagesMediaMediaId
@@ -18804,4 +18875,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 247.0.0_
+_PureCloudPlatform.Client.V2 248.0.0_

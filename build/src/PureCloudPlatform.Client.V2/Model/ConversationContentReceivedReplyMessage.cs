@@ -21,17 +21,30 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationContentReceivedReplyMessage" /> class.
         /// </summary>
+        /// <param name="Header">Text to show in the header..</param>
         /// <param name="Title">Text to show in the title..</param>
         /// <param name="Subtitle">Text to show in the subtitle..</param>
+        /// <param name="ButtonLabel">Text to show on the button label..</param>
         /// <param name="ImageUrl">URL of an image..</param>
-        public ConversationContentReceivedReplyMessage(string Title = null, string Subtitle = null, string ImageUrl = null)
+        public ConversationContentReceivedReplyMessage(string Header = null, string Title = null, string Subtitle = null, string ButtonLabel = null, string ImageUrl = null)
         {
+            this.Header = Header;
             this.Title = Title;
             this.Subtitle = Subtitle;
+            this.ButtonLabel = ButtonLabel;
             this.ImageUrl = ImageUrl;
             
         }
         
+
+
+        /// <summary>
+        /// Text to show in the header.
+        /// </summary>
+        /// <value>Text to show in the header.</value>
+        [DataMember(Name="header", EmitDefaultValue=false)]
+        public string Header { get; set; }
+
 
 
         /// <summary>
@@ -53,6 +66,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Text to show on the button label.
+        /// </summary>
+        /// <value>Text to show on the button label.</value>
+        [DataMember(Name="buttonLabel", EmitDefaultValue=false)]
+        public string ButtonLabel { get; set; }
+
+
+
+        /// <summary>
         /// URL of an image.
         /// </summary>
         /// <value>URL of an image.</value>
@@ -69,8 +91,10 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ConversationContentReceivedReplyMessage {\n");
 
+            sb.Append("  Header: ").Append(Header).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Subtitle: ").Append(Subtitle).Append("\n");
+            sb.Append("  ButtonLabel: ").Append(ButtonLabel).Append("\n");
             sb.Append("  ImageUrl: ").Append(ImageUrl).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -113,6 +137,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Header == other.Header ||
+                    this.Header != null &&
+                    this.Header.Equals(other.Header)
+                ) &&
+                (
                     this.Title == other.Title ||
                     this.Title != null &&
                     this.Title.Equals(other.Title)
@@ -121,6 +150,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Subtitle == other.Subtitle ||
                     this.Subtitle != null &&
                     this.Subtitle.Equals(other.Subtitle)
+                ) &&
+                (
+                    this.ButtonLabel == other.ButtonLabel ||
+                    this.ButtonLabel != null &&
+                    this.ButtonLabel.Equals(other.ButtonLabel)
                 ) &&
                 (
                     this.ImageUrl == other.ImageUrl ||
@@ -140,11 +174,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Header != null)
+                    hash = hash * 59 + this.Header.GetHashCode();
+
                 if (this.Title != null)
                     hash = hash * 59 + this.Title.GetHashCode();
 
                 if (this.Subtitle != null)
                     hash = hash * 59 + this.Subtitle.GetHashCode();
+
+                if (this.ButtonLabel != null)
+                    hash = hash * 59 + this.ButtonLabel.GetHashCode();
 
                 if (this.ImageUrl != null)
                     hash = hash * 59 + this.ImageUrl.GetHashCode();

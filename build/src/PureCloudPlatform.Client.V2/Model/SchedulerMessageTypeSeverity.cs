@@ -88,6 +88,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Unabletoproduceagentschedule,
             
             /// <summary>
+            /// Enum Unabletoschedulemincoverageforplanninggroup for "UnableToScheduleMinCoverageForPlanningGroup"
+            /// </summary>
+            [EnumMember(Value = "UnableToScheduleMinCoverageForPlanningGroup")]
+            Unabletoschedulemincoverageforplanninggroup,
+            
+            /// <summary>
             /// Enum Unabletoschedulemaxconsecutiveworkingdays for "UnableToScheduleMaxConsecutiveWorkingDays"
             /// </summary>
             [EnumMember(Value = "UnableToScheduleMaxConsecutiveWorkingDays")]

@@ -65,13 +65,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaType">The detected internet media type of the the media object.  If null then the media type should be dictated by the url..</param>
         /// <param name="ContentLengthBytes">The optional content length of the the media object, in bytes..</param>
         /// <param name="UploadUrl">The URL returned to upload an attachment.</param>
-        public MessageMediaData(string Name = null, string Url = null, string MediaType = null, int? ContentLengthBytes = null, string UploadUrl = null)
+        /// <param name="ConversationId">ConversationId.</param>
+        /// <param name="CommunicationId">CommunicationId.</param>
+        public MessageMediaData(string Name = null, string Url = null, string MediaType = null, int? ContentLengthBytes = null, string UploadUrl = null, string ConversationId = null, string CommunicationId = null)
         {
             this.Name = Name;
             this.Url = Url;
             this.MediaType = MediaType;
             this.ContentLengthBytes = ContentLengthBytes;
             this.UploadUrl = UploadUrl;
+            this.ConversationId = ConversationId;
+            this.CommunicationId = CommunicationId;
             
         }
         
@@ -133,6 +137,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ConversationId
+        /// </summary>
+        [DataMember(Name="conversationId", EmitDefaultValue=false)]
+        public string ConversationId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets CommunicationId
+        /// </summary>
+        [DataMember(Name="communicationId", EmitDefaultValue=false)]
+        public string CommunicationId { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -156,6 +176,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ContentLengthBytes: ").Append(ContentLengthBytes).Append("\n");
             sb.Append("  UploadUrl: ").Append(UploadUrl).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
+            sb.Append("  CommunicationId: ").Append(CommunicationId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -233,6 +255,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
+                    this.ConversationId == other.ConversationId ||
+                    this.ConversationId != null &&
+                    this.ConversationId.Equals(other.ConversationId)
+                ) &&
+                (
+                    this.CommunicationId == other.CommunicationId ||
+                    this.CommunicationId != null &&
+                    this.CommunicationId.Equals(other.CommunicationId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -270,6 +302,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.ConversationId != null)
+                    hash = hash * 59 + this.ConversationId.GetHashCode();
+
+                if (this.CommunicationId != null)
+                    hash = hash * 59 + this.CommunicationId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

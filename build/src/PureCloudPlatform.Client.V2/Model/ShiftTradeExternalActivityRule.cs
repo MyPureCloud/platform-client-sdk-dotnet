@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Learning for "Learning"
             /// </summary>
             [EnumMember(Value = "Learning")]
-            Learning
+            Learning,
+            
+            /// <summary>
+            /// Enum Opportunity for "Opportunity"
+            /// </summary>
+            [EnumMember(Value = "Opportunity")]
+            Opportunity
         }
         /// <summary>
         /// The action this rule invokes

@@ -10,7 +10,8 @@
 | **Type** | **string** | Describes the button that resulted in the Button Response. | [optional] |
 | **Text** | **string** | The response text from the button click. | |
 | **Payload** | **string** | The response payload associated with the clicked button. | |
+| **OriginatingMessageId** | **string** | Id of original structured message that this message responds to. | |
 
 
 
-_PureCloudPlatform.Client.V2 247.0.0_
+_PureCloudPlatform.Client.V2 248.0.0_

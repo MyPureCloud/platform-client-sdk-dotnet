@@ -102,7 +102,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Byosmpp for "byo-smpp"
             /// </summary>
             [EnumMember(Value = "byo-smpp")]
-            Byosmpp
+            Byosmpp,
+            
+            /// <summary>
+            /// Enum Encryption for "encryption"
+            /// </summary>
+            [EnumMember(Value = "encryption")]
+            Encryption
         }
         /// <summary>
         /// The direction of traffic for the IP range from the perspective of Genesys Cloud (e.g. inbound to Genesys; outbound from Genesys)

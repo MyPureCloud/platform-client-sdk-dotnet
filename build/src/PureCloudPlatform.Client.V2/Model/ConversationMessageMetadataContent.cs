@@ -154,6 +154,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Roadsideassistance,
             
             /// <summary>
+            /// Enum Richlink for "RichLink"
+            /// </summary>
+            [EnumMember(Value = "RichLink")]
+            Richlink,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

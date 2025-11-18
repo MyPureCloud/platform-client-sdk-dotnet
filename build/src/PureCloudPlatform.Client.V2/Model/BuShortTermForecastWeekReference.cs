@@ -27,9 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuShortTermForecastWeekReference" /> class.
         /// </summary>
-        /// <param name="Id">Forecast id used in this work plan bid (required).</param>
+        /// <param name="Id">The ID of the forecast (required).</param>
         /// <param name="WeekDate">The weekDate of the short term forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        /// <param name="WeekNumber">The week number used for this bid. First week starts with number 1 (required).</param>
+        /// <param name="WeekNumber">The week number to be used from the selected forecast. First week starts with number 1 (required).</param>
         public BuShortTermForecastWeekReference(string Id = null, String WeekDate = null, int? WeekNumber = null)
         {
             this.Id = Id;
@@ -41,9 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Forecast id used in this work plan bid
+        /// The ID of the forecast
         /// </summary>
-        /// <value>Forecast id used in this work plan bid</value>
+        /// <value>The ID of the forecast</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
@@ -68,9 +68,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The week number used for this bid. First week starts with number 1
+        /// The week number to be used from the selected forecast. First week starts with number 1
         /// </summary>
-        /// <value>The week number used for this bid. First week starts with number 1</value>
+        /// <value>The week number to be used from the selected forecast. First week starts with number 1</value>
         [DataMember(Name="weekNumber", EmitDefaultValue=false)]
         public int? WeekNumber { get; set; }
 

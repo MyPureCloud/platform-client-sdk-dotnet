@@ -37,7 +37,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Daily for "Daily"
             /// </summary>
             [EnumMember(Value = "Daily")]
-            Daily
+            Daily,
+            
+            /// <summary>
+            /// Enum Fifteenminutes for "FifteenMinutes"
+            /// </summary>
+            [EnumMember(Value = "FifteenMinutes")]
+            Fifteenminutes
         }
         /// <summary>
         /// Granularity choice for time off limit. If not specified, 'Daily' is assumed

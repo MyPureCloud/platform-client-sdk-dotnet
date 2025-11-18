@@ -27,7 +27,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NonOnQueueActivitiesEquivalent">Whether to treat all non-on-queue activities as equivalent for adherence purposes.</param>
         /// <param name="TrackOnQueueActivity">Whether to track on-queue activities.</param>
         /// <param name="IgnoredActivityCategories">Activity categories that should be ignored for adherence purposes.</param>
-        public AdherenceSettings(int? SevereAlertThresholdMinutes = null, int? AdherenceTargetPercent = null, int? AdherenceExceptionThresholdSeconds = null, bool? NonOnQueueActivitiesEquivalent = null, bool? TrackOnQueueActivity = null, IgnoredActivityCategories IgnoredActivityCategories = null)
+        /// <param name="IgnoredActivityCodeIds">Activity code IDs that should be ignored for adherence purposes.</param>
+        public AdherenceSettings(int? SevereAlertThresholdMinutes = null, int? AdherenceTargetPercent = null, int? AdherenceExceptionThresholdSeconds = null, bool? NonOnQueueActivitiesEquivalent = null, bool? TrackOnQueueActivity = null, IgnoredActivityCategories IgnoredActivityCategories = null, IgnoredActivityCodeIds IgnoredActivityCodeIds = null)
         {
             this.SevereAlertThresholdMinutes = SevereAlertThresholdMinutes;
             this.AdherenceTargetPercent = AdherenceTargetPercent;
@@ -35,6 +36,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.NonOnQueueActivitiesEquivalent = NonOnQueueActivitiesEquivalent;
             this.TrackOnQueueActivity = TrackOnQueueActivity;
             this.IgnoredActivityCategories = IgnoredActivityCategories;
+            this.IgnoredActivityCodeIds = IgnoredActivityCodeIds;
             
         }
         
@@ -93,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public IgnoredActivityCategories IgnoredActivityCategories { get; set; }
 
 
+
+        /// <summary>
+        /// Activity code IDs that should be ignored for adherence purposes
+        /// </summary>
+        /// <value>Activity code IDs that should be ignored for adherence purposes</value>
+        [DataMember(Name="ignoredActivityCodeIds", EmitDefaultValue=false)]
+        public IgnoredActivityCodeIds IgnoredActivityCodeIds { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NonOnQueueActivitiesEquivalent: ").Append(NonOnQueueActivitiesEquivalent).Append("\n");
             sb.Append("  TrackOnQueueActivity: ").Append(TrackOnQueueActivity).Append("\n");
             sb.Append("  IgnoredActivityCategories: ").Append(IgnoredActivityCategories).Append("\n");
+            sb.Append("  IgnoredActivityCodeIds: ").Append(IgnoredActivityCodeIds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IgnoredActivityCategories == other.IgnoredActivityCategories ||
                     this.IgnoredActivityCategories != null &&
                     this.IgnoredActivityCategories.Equals(other.IgnoredActivityCategories)
+                ) &&
+                (
+                    this.IgnoredActivityCodeIds == other.IgnoredActivityCodeIds ||
+                    this.IgnoredActivityCodeIds != null &&
+                    this.IgnoredActivityCodeIds.Equals(other.IgnoredActivityCodeIds)
                 );
         }
 
@@ -208,6 +225,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IgnoredActivityCategories != null)
                     hash = hash * 59 + this.IgnoredActivityCategories.GetHashCode();
+
+                if (this.IgnoredActivityCodeIds != null)
+                    hash = hash * 59 + this.IgnoredActivityCodeIds.GetHashCode();
 
                 return hash;
             }

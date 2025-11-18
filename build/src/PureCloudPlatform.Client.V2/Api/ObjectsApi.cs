@@ -186,7 +186,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Page size (max 200, default 25) (optional, default to "25")</param>
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Optionally request specific divisions by division name (optional)</param>
         /// <returns>AuthzDivisionCursorListing</returns>
@@ -202,7 +202,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Page size (max 200, default 25) (optional, default to "25")</param>
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Optionally request specific divisions by division name (optional)</param>
         /// <returns>ApiResponse of AuthzDivisionCursorListing</returns>
@@ -488,7 +488,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Page size (max 200, default 25) (optional, default to "25")</param>
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Optionally request specific divisions by division name (optional)</param>
         /// <returns>Task of AuthzDivisionCursorListing</returns>
@@ -504,7 +504,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Page size (max 200, default 25) (optional, default to "25")</param>
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Optionally request specific divisions by division name (optional)</param>
         /// <returns>Task of ApiResponse (AuthzDivisionCursorListing)</returns>
@@ -1944,7 +1944,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Page size (max 200, default 25) (optional, default to "25")</param>
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Optionally request specific divisions by division name (optional)</param>
         /// <returns>AuthzDivisionCursorListing</returns>
@@ -1962,7 +1962,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Page size (max 200, default 25) (optional, default to "25")</param>
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Optionally request specific divisions by division name (optional)</param>
         /// <returns>ApiResponse of AuthzDivisionCursorListing</returns>
@@ -2052,7 +2052,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Page size (max 200, default 25) (optional, default to "25")</param>
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Optionally request specific divisions by division name (optional)</param>
         /// <returns>Task of AuthzDivisionCursorListing</returns>
@@ -2071,7 +2071,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
-        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="pageSize">Page size (max 200, default 25) (optional, default to "25")</param>
         /// <param name="id">Optionally request specific divisions by their IDs (optional)</param>
         /// <param name="name">Optionally request specific divisions by division name (optional)</param>
         /// <returns>Task of ApiResponse (AuthzDivisionCursorListing)</returns>
