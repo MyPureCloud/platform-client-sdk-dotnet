@@ -3209,7 +3209,7 @@ void (empty response body)
 
 ## PatchTaskmanagementWorkitemUserWrapups
 
-> [**WorkitemWrapup**](WorkitemWrapup) PatchTaskmanagementWorkitemUserWrapups (string workitemId, string userId, WorkitemWrapupUpdate body)
+> void PatchTaskmanagementWorkitemUserWrapups (string workitemId, string userId, WorkitemWrapupUpdate body)
 
 
 Add/Remove a wrapup code for a given user in a workitem.
@@ -3247,8 +3247,7 @@ namespace Example
             try
             { 
                 // Add/Remove a wrapup code for a given user in a workitem.
-                WorkitemWrapup result = apiInstance.PatchTaskmanagementWorkitemUserWrapups(workitemId, userId, body);
-                Debug.WriteLine(result);
+                apiInstance.PatchTaskmanagementWorkitemUserWrapups(workitemId, userId, body);
             }
             catch (Exception e)
             {
@@ -3270,12 +3269,12 @@ namespace Example
 
 ### Return type
 
-[**WorkitemWrapup**](WorkitemWrapup)
+void (empty response body)
 
 
 ## PatchTaskmanagementWorkitemUsersMeWrapups
 
-> [**WorkitemWrapup**](WorkitemWrapup) PatchTaskmanagementWorkitemUsersMeWrapups (string workitemId, WorkitemWrapupUpdate body)
+> void PatchTaskmanagementWorkitemUsersMeWrapups (string workitemId, WorkitemWrapupUpdate body)
 
 
 Add/Remove a wrapup code for the current user in a workitem.
@@ -3312,8 +3311,7 @@ namespace Example
             try
             { 
                 // Add/Remove a wrapup code for the current user in a workitem.
-                WorkitemWrapup result = apiInstance.PatchTaskmanagementWorkitemUsersMeWrapups(workitemId, body);
-                Debug.WriteLine(result);
+                apiInstance.PatchTaskmanagementWorkitemUsersMeWrapups(workitemId, body);
             }
             catch (Exception e)
             {
@@ -3334,7 +3332,7 @@ namespace Example
 
 ### Return type
 
-[**WorkitemWrapup**](WorkitemWrapup)
+void (empty response body)
 
 
 ## PatchTaskmanagementWorkitemsBulkAddJob
@@ -4925,4 +4923,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 247.0.0_
+_PureCloudPlatform.Client.V2 248.0.0_

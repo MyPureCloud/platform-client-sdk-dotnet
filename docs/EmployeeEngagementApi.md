@@ -326,4 +326,4 @@ namespace Example
 [**RecognitionBase**](RecognitionBase)
 
 
-_PureCloudPlatform.Client.V2 247.0.0_
+_PureCloudPlatform.Client.V2 248.0.0_

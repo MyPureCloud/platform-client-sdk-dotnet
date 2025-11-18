@@ -9,8 +9,9 @@
 | **Id** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **RejectionReason** | **string** |  | [optional] |
+| **MissingPermissions** | **List&lt;string&gt;** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 247.0.0_
+_PureCloudPlatform.Client.V2 248.0.0_
