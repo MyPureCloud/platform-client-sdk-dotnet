@@ -13,38 +13,28 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// KlaxonHeartBeatRulesTopicNotificationUser
+    /// ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion
     /// </summary>
     [DataContract]
-    public partial class KlaxonHeartBeatRulesTopicNotificationUser :  IEquatable<KlaxonHeartBeatRulesTopicNotificationUser>
+    public partial class ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion :  IEquatable<ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="KlaxonHeartBeatRulesTopicNotificationUser" /> class.
+        /// Initializes a new instance of the <see cref="ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="DisplayName">DisplayName.</param>
-        public KlaxonHeartBeatRulesTopicNotificationUser(string Id = null, string DisplayName = null)
+        /// <param name="Text">Text.</param>
+        public ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion(string Text = null)
         {
-            this.Id = Id;
-            this.DisplayName = DisplayName;
+            this.Text = Text;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Id
+        /// Gets or Sets Text
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets DisplayName
-        /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
-        public string DisplayName { get; set; }
+        [DataMember(Name="text", EmitDefaultValue=false)]
+        public string Text { get; set; }
 
 
         /// <summary>
@@ -54,10 +44,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class KlaxonHeartBeatRulesTopicNotificationUser {\n");
+            sb.Append("class ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,15 +72,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as KlaxonHeartBeatRulesTopicNotificationUser);
+            return this.Equals(obj as ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion);
         }
 
         /// <summary>
-        /// Returns true if KlaxonHeartBeatRulesTopicNotificationUser instances are equal
+        /// Returns true if ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion instances are equal
         /// </summary>
-        /// <param name="other">Instance of KlaxonHeartBeatRulesTopicNotificationUser to be compared</param>
+        /// <param name="other">Instance of ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KlaxonHeartBeatRulesTopicNotificationUser other)
+        public bool Equals(ConversationThirdPartyActionSuggestionsTopicThirdPartySuggestion other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -99,14 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.Text == other.Text ||
+                    this.Text != null &&
+                    this.Text.Equals(other.Text)
                 );
         }
 
@@ -121,11 +105,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
+                if (this.Text != null)
+                    hash = hash * 59 + this.Text.GetHashCode();
 
                 return hash;
             }

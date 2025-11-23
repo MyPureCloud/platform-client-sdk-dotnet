@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Division** | [**QueueConversationVideoEventTopicDomainEntityRef**](QueueConversationVideoEventTopicDomainEntityRef) |  | [optional] |
+| **Division** | [**QueueConversationVideoEventTopicDomainEntityRef**](QueueConversationVideoEventTopicDomainEntityRef) | A reference to another domain entity. | [optional] |
 | **Entities** | [**List&lt;QueueConversationVideoEventTopicDivisionEntityRef&gt;**](QueueConversationVideoEventTopicDivisionEntityRef) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 248.0.0_
+_PureCloudPlatform.Client.V2 249.0.0_

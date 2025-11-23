@@ -403,6 +403,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Average for "average"
+            /// </summary>
+            [EnumMember(Value = "average")]
+            Average,
+            
+            /// <summary>
             /// Enum Count for "count"
             /// </summary>
             [EnumMember(Value = "count")]

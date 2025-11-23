@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ttl for "ttl"
             /// </summary>
             [EnumMember(Value = "ttl")]
-            Ttl
+            Ttl,
+            
+            /// <summary>
+            /// Enum Datecreated for "dateCreated"
+            /// </summary>
+            [EnumMember(Value = "dateCreated")]
+            Datecreated
         }
         /// <summary>
         /// The name of the workitem date attribute.

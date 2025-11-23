@@ -13,38 +13,35 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// KlaxonInteractionStatsRulesTopicNotificationUser
+    /// Migrate response
     /// </summary>
     [DataContract]
-    public partial class KlaxonInteractionStatsRulesTopicNotificationUser :  IEquatable<KlaxonInteractionStatsRulesTopicNotificationUser>
+    public partial class LearningModuleMigrateResponse :  IEquatable<LearningModuleMigrateResponse>
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="KlaxonInteractionStatsRulesTopicNotificationUser" /> class.
+        /// Initializes a new instance of the <see cref="LearningModuleMigrateResponse" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="DisplayName">DisplayName.</param>
-        public KlaxonInteractionStatsRulesTopicNotificationUser(string Id = null, string DisplayName = null)
+        [JsonConstructorAttribute]
+        protected LearningModuleMigrateResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LearningModuleMigrateResponse" /> class.
+        /// </summary>
+        /// <param name="AutoAssign">The autoAssign Response (required).</param>
+        public LearningModuleMigrateResponse(LearningModuleAutoAssignResponse AutoAssign = null)
         {
-            this.Id = Id;
-            this.DisplayName = DisplayName;
+            this.AutoAssign = AutoAssign;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The autoAssign Response
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets DisplayName
-        /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
-        public string DisplayName { get; set; }
+        /// <value>The autoAssign Response</value>
+        [DataMember(Name="autoAssign", EmitDefaultValue=false)]
+        public LearningModuleAutoAssignResponse AutoAssign { get; set; }
 
 
         /// <summary>
@@ -54,10 +51,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class KlaxonInteractionStatsRulesTopicNotificationUser {\n");
+            sb.Append("class LearningModuleMigrateResponse {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  AutoAssign: ").Append(AutoAssign).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,15 +79,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as KlaxonInteractionStatsRulesTopicNotificationUser);
+            return this.Equals(obj as LearningModuleMigrateResponse);
         }
 
         /// <summary>
-        /// Returns true if KlaxonInteractionStatsRulesTopicNotificationUser instances are equal
+        /// Returns true if LearningModuleMigrateResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of KlaxonInteractionStatsRulesTopicNotificationUser to be compared</param>
+        /// <param name="other">Instance of LearningModuleMigrateResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KlaxonInteractionStatsRulesTopicNotificationUser other)
+        public bool Equals(LearningModuleMigrateResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -99,14 +95,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.AutoAssign == other.AutoAssign ||
+                    this.AutoAssign != null &&
+                    this.AutoAssign.Equals(other.AutoAssign)
                 );
         }
 
@@ -121,11 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
+                if (this.AutoAssign != null)
+                    hash = hash * 59 + this.AutoAssign.GetHashCode();
 
                 return hash;
             }

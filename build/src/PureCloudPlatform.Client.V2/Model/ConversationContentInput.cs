@@ -316,7 +316,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Flightnumber for "FlightNumber"
             /// </summary>
             [EnumMember(Value = "FlightNumber")]
-            Flightnumber
+            Flightnumber,
+            
+            /// <summary>
+            /// Enum Url for "Url"
+            /// </summary>
+            [EnumMember(Value = "Url")]
+            Url
         }
         /// <summary>
         /// Type of keyboard to be shown.

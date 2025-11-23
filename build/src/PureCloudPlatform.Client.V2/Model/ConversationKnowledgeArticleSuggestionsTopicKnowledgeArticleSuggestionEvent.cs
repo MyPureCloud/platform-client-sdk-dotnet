@@ -66,7 +66,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Rated for "Rated"
             /// </summary>
             [EnumMember(Value = "Rated")]
-            Rated
+            Rated,
+            
+            /// <summary>
+            /// Enum Triggered for "Triggered"
+            /// </summary>
+            [EnumMember(Value = "Triggered")]
+            Triggered
         }
         /// <summary>
         /// Gets or Sets TriggerType

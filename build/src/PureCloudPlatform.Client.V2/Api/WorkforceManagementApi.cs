@@ -680,6 +680,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentManagementUnitReference> GetWorkforcemanagementAgentManagementunitWithHttpInfo (string agentId);
 
         /// <summary>
+        /// Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>WfmAgentHistoricalAdherenceResponse</returns>
+        
+        WfmAgentHistoricalAdherenceResponse GetWorkforcemanagementAgentsMeAdherenceHistoricalJob (string jobId);
+
+        /// <summary>
+        /// Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>ApiResponse of WfmAgentHistoricalAdherenceResponse</returns>
+        
+        ApiResponse<WfmAgentHistoricalAdherenceResponse> GetWorkforcemanagementAgentsMeAdherenceHistoricalJobWithHttpInfo (string jobId);
+
+        /// <summary>
         /// Get the management unit to which the currently logged in agent belongs
         /// </summary>
         /// <remarks>
@@ -4500,6 +4524,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AgentsIntegrationsListing> PostWorkforcemanagementAgentsIntegrationsHrisQueryWithHttpInfo (QueryAgentsIntegrationsRequest body);
 
         /// <summary>
+        /// Request an agent historical adherence report
+        /// </summary>
+        /// <remarks>
+        /// The maximum supported range for historical adherence queries is 31 days, or 7 days when the expand query parameter includes any of the following: exceptionInfo, actuals, scheduledActivities
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WfmAgentHistoricalAdherenceResponse</returns>
+        
+        WfmAgentHistoricalAdherenceResponse PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs (List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null);
+
+        /// <summary>
+        /// Request an agent historical adherence report
+        /// </summary>
+        /// <remarks>
+        /// The maximum supported range for historical adherence queries is 31 days, or 7 days when the expand query parameter includes any of the following: exceptionInfo, actuals, scheduledActivities
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WfmAgentHistoricalAdherenceResponse</returns>
+        
+        ApiResponse<WfmAgentHistoricalAdherenceResponse> PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsWithHttpInfo (List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null);
+
+        /// <summary>
         /// Get agent possible work shifts for requested time frame
         /// </summary>
         /// <remarks>
@@ -7570,6 +7620,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AgentManagementUnitReference)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<AgentManagementUnitReference>> GetWorkforcemanagementAgentManagementunitAsyncWithHttpInfo (string agentId);
+
+        /// <summary>
+        /// Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>Task of WfmAgentHistoricalAdherenceResponse</returns>
+        
+        System.Threading.Tasks.Task<WfmAgentHistoricalAdherenceResponse> GetWorkforcemanagementAgentsMeAdherenceHistoricalJobAsync (string jobId);
+
+        /// <summary>
+        /// Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status
+        /// </summary>
+        /// <remarks>
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>Task of ApiResponse (WfmAgentHistoricalAdherenceResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WfmAgentHistoricalAdherenceResponse>> GetWorkforcemanagementAgentsMeAdherenceHistoricalJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
         /// Get the management unit to which the currently logged in agent belongs
@@ -11390,6 +11464,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AgentsIntegrationsListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<AgentsIntegrationsListing>> PostWorkforcemanagementAgentsIntegrationsHrisQueryAsyncWithHttpInfo (QueryAgentsIntegrationsRequest body);
+
+        /// <summary>
+        /// Request an agent historical adherence report
+        /// </summary>
+        /// <remarks>
+        /// The maximum supported range for historical adherence queries is 31 days, or 7 days when the expand query parameter includes any of the following: exceptionInfo, actuals, scheduledActivities
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WfmAgentHistoricalAdherenceResponse</returns>
+        
+        System.Threading.Tasks.Task<WfmAgentHistoricalAdherenceResponse> PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsAsync (List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null);
+
+        /// <summary>
+        /// Request an agent historical adherence report
+        /// </summary>
+        /// <remarks>
+        /// The maximum supported range for historical adherence queries is 31 days, or 7 days when the expand query parameter includes any of the following: exceptionInfo, actuals, scheduledActivities
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WfmAgentHistoricalAdherenceResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<WfmAgentHistoricalAdherenceResponse>> PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsAsyncWithHttpInfo (List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null);
 
         /// <summary>
         /// Get agent possible work shifts for requested time frame
@@ -19324,6 +19424,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AgentManagementUnitReference>(localVarStatusCode,
                 localVarHeaders,
                 (AgentManagementUnitReference) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentManagementUnitReference)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>WfmAgentHistoricalAdherenceResponse</returns>
+        
+        public WfmAgentHistoricalAdherenceResponse GetWorkforcemanagementAgentsMeAdherenceHistoricalJob (string jobId)
+        {
+             ApiResponse<WfmAgentHistoricalAdherenceResponse> localVarResponse = GetWorkforcemanagementAgentsMeAdherenceHistoricalJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>ApiResponse of WfmAgentHistoricalAdherenceResponse</returns>
+        
+        public ApiResponse< WfmAgentHistoricalAdherenceResponse > GetWorkforcemanagementAgentsMeAdherenceHistoricalJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentsMeAdherenceHistoricalJob");
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/me/adherence/historical/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAgentsMeAdherenceHistoricalJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAgentsMeAdherenceHistoricalJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmAgentHistoricalAdherenceResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WfmAgentHistoricalAdherenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmAgentHistoricalAdherenceResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>Task of WfmAgentHistoricalAdherenceResponse</returns>
+        
+        public async System.Threading.Tasks.Task<WfmAgentHistoricalAdherenceResponse> GetWorkforcemanagementAgentsMeAdherenceHistoricalJobAsync (string jobId)
+        {
+             ApiResponse<WfmAgentHistoricalAdherenceResponse> localVarResponse = await GetWorkforcemanagementAgentsMeAdherenceHistoricalJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status 
+        /// Job details are only retained if the initial request returned a 202 ACCEPTED response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">ID of the job to get</param>
+        /// <returns>Task of ApiResponse (WfmAgentHistoricalAdherenceResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WfmAgentHistoricalAdherenceResponse>> GetWorkforcemanagementAgentsMeAdherenceHistoricalJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentsMeAdherenceHistoricalJob");
+            
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/me/adherence/historical/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAgentsMeAdherenceHistoricalJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetWorkforcemanagementAgentsMeAdherenceHistoricalJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmAgentHistoricalAdherenceResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WfmAgentHistoricalAdherenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmAgentHistoricalAdherenceResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -50622,6 +50923,216 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AgentsIntegrationsListing>(localVarStatusCode,
                 localVarHeaders,
                 (AgentsIntegrationsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentsIntegrationsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Request an agent historical adherence report 
+        /// The maximum supported range for historical adherence queries is 31 days, or 7 days when the expand query parameter includes any of the following: exceptionInfo, actuals, scheduledActivities
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>WfmAgentHistoricalAdherenceResponse</returns>
+        
+        public WfmAgentHistoricalAdherenceResponse PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs (List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null)
+        {
+             ApiResponse<WfmAgentHistoricalAdherenceResponse> localVarResponse = PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsWithHttpInfo(expand, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Request an agent historical adherence report 
+        /// The maximum supported range for historical adherence queries is 31 days, or 7 days when the expand query parameter includes any of the following: exceptionInfo, actuals, scheduledActivities
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>ApiResponse of WfmAgentHistoricalAdherenceResponse</returns>
+        
+        public ApiResponse< WfmAgentHistoricalAdherenceResponse > PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsWithHttpInfo (List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/me/adherence/historical/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmAgentHistoricalAdherenceResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WfmAgentHistoricalAdherenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmAgentHistoricalAdherenceResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Request an agent historical adherence report 
+        /// The maximum supported range for historical adherence queries is 31 days, or 7 days when the expand query parameter includes any of the following: exceptionInfo, actuals, scheduledActivities
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of WfmAgentHistoricalAdherenceResponse</returns>
+        
+        public async System.Threading.Tasks.Task<WfmAgentHistoricalAdherenceResponse> PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsAsync (List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null)
+        {
+             ApiResponse<WfmAgentHistoricalAdherenceResponse> localVarResponse = await PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsAsyncWithHttpInfo(expand, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Request an agent historical adherence report 
+        /// The maximum supported range for historical adherence queries is 31 days, or 7 days when the expand query parameter includes any of the following: exceptionInfo, actuals, scheduledActivities
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="expand">Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional)</param>
+        /// <param name="body">body (optional)</param>
+        /// <returns>Task of ApiResponse (WfmAgentHistoricalAdherenceResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<WfmAgentHistoricalAdherenceResponse>> PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsAsyncWithHttpInfo (List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null)
+        { 
+
+            var localVarPath = "/api/v2/workforcemanagement/agents/me/adherence/historical/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<WfmAgentHistoricalAdherenceResponse>(localVarStatusCode,
+                localVarHeaders,
+                (WfmAgentHistoricalAdherenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(WfmAgentHistoricalAdherenceResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

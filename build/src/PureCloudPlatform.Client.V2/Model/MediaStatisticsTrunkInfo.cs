@@ -87,6 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tiecloudproxy,
             
             /// <summary>
+            /// Enum Tiecloudproxycallsession for "tie.cloud.proxy.callsession"
+            /// </summary>
+            [EnumMember(Value = "tie.cloud.proxy.callsession")]
+            Tiecloudproxycallsession,
+            
+            /// <summary>
             /// Enum Station for "station"
             /// </summary>
             [EnumMember(Value = "station")]

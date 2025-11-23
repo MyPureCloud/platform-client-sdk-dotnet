@@ -135,7 +135,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum TieCloudProxy for "TIE_CLOUD_PROXY"
             /// </summary>
             [EnumMember(Value = "TIE_CLOUD_PROXY")]
-            TieCloudProxy
+            TieCloudProxy,
+            
+            /// <summary>
+            /// Enum TieCloudProxyCallsession for "TIE_CLOUD_PROXY_CALLSESSION"
+            /// </summary>
+            [EnumMember(Value = "TIE_CLOUD_PROXY_CALLSESSION")]
+            TieCloudProxyCallsession
         }
         /// <summary>
         /// Indicates if the resource is active, inactive, or deleted.

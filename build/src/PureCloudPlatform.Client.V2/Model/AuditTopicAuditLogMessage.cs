@@ -683,6 +683,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Revokeprotection,
             
             /// <summary>
+            /// Enum Start for "Start"
+            /// </summary>
+            [EnumMember(Value = "Start")]
+            Start,
+            
+            /// <summary>
+            /// Enum Stop for "Stop"
+            /// </summary>
+            [EnumMember(Value = "Stop")]
+            Stop,
+            
+            /// <summary>
             /// Enum Rotate for "Rotate"
             /// </summary>
             [EnumMember(Value = "Rotate")]
@@ -1439,6 +1451,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "SnippetRecordingSettings")]
             Snippetrecordingsettings,
+            
+            /// <summary>
+            /// Enum Screenmonitoring for "ScreenMonitoring"
+            /// </summary>
+            [EnumMember(Value = "ScreenMonitoring")]
+            Screenmonitoring,
             
             /// <summary>
             /// Enum Recordingkey for "RecordingKey"

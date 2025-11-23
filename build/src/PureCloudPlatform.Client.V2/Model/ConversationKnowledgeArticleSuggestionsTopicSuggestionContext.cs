@@ -72,7 +72,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UtteranceId">UtteranceId.</param>
         /// <param name="MessageId">MessageId.</param>
         /// <param name="QueryStatement">QueryStatement.</param>
-        public ConversationKnowledgeArticleSuggestionsTopicSuggestionContext(Guid? QueueId = null, MediaTypeEnum? MediaType = null, Guid? UserId = null, Guid? ExternalContactId = null, Guid? AssistantId = null, Guid? UtteranceId = null, string MessageId = null, string QueryStatement = null)
+        /// <param name="Language">Language.</param>
+        public ConversationKnowledgeArticleSuggestionsTopicSuggestionContext(Guid? QueueId = null, MediaTypeEnum? MediaType = null, Guid? UserId = null, Guid? ExternalContactId = null, Guid? AssistantId = null, Guid? UtteranceId = null, string MessageId = null, string QueryStatement = null, string Language = null)
         {
             this.QueueId = QueueId;
             this.MediaType = MediaType;
@@ -82,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UtteranceId = UtteranceId;
             this.MessageId = MessageId;
             this.QueryStatement = QueryStatement;
+            this.Language = Language;
             
         }
         
@@ -144,6 +146,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string QueryStatement { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Language
+        /// </summary>
+        [DataMember(Name="language", EmitDefaultValue=false)]
+        public string Language { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -161,6 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UtteranceId: ").Append(UtteranceId).Append("\n");
             sb.Append("  MessageId: ").Append(MessageId).Append("\n");
             sb.Append("  QueryStatement: ").Append(QueryStatement).Append("\n");
+            sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -240,6 +251,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.QueryStatement == other.QueryStatement ||
                     this.QueryStatement != null &&
                     this.QueryStatement.Equals(other.QueryStatement)
+                ) &&
+                (
+                    this.Language == other.Language ||
+                    this.Language != null &&
+                    this.Language.Equals(other.Language)
                 );
         }
 
@@ -277,6 +293,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.QueryStatement != null)
                     hash = hash * 59 + this.QueryStatement.GetHashCode();
+
+                if (this.Language != null)
+                    hash = hash * 59 + this.Language.GetHashCode();
 
                 return hash;
             }

@@ -28,15 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="JourneyCaseAssociation" /> class.
         /// </summary>
         /// <param name="Id">The ID of the association. (required).</param>
+        /// <param name="AssociatedCase">The case that was associated with the journey session..</param>
         /// <param name="CaseReference">The reference for the case that was associated with the journey session..</param>
         /// <param name="DateAssociated">The date of the association. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="Case">The case that was associated with the journey session..</param>
-        public JourneyCaseAssociation(string Id = null, string CaseReference = null, DateTime? DateAssociated = null, AddressableEntityRef Case = null)
+        public JourneyCaseAssociation(string Id = null, AddressableEntityRef AssociatedCase = null, string CaseReference = null, DateTime? DateAssociated = null)
         {
             this.Id = Id;
+            this.AssociatedCase = AssociatedCase;
             this.CaseReference = CaseReference;
             this.DateAssociated = DateAssociated;
-            this.Case = Case;
             
         }
         
@@ -48,6 +48,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The ID of the association.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// The case that was associated with the journey session.
+        /// </summary>
+        /// <value>The case that was associated with the journey session.</value>
+        [DataMember(Name="associatedCase", EmitDefaultValue=false)]
+        public AddressableEntityRef AssociatedCase { get; set; }
 
 
 
@@ -77,15 +86,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string SelfUri { get; private set; }
 
 
-
-        /// <summary>
-        /// The case that was associated with the journey session.
-        /// </summary>
-        /// <value>The case that was associated with the journey session.</value>
-        [DataMember(Name="case", EmitDefaultValue=false)]
-        public AddressableEntityRef Case { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,10 +96,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class JourneyCaseAssociation {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  AssociatedCase: ").Append(AssociatedCase).Append("\n");
             sb.Append("  CaseReference: ").Append(CaseReference).Append("\n");
             sb.Append("  DateAssociated: ").Append(DateAssociated).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            sb.Append("  Case: ").Append(Case).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -146,6 +146,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.AssociatedCase == other.AssociatedCase ||
+                    this.AssociatedCase != null &&
+                    this.AssociatedCase.Equals(other.AssociatedCase)
+                ) &&
+                (
                     this.CaseReference == other.CaseReference ||
                     this.CaseReference != null &&
                     this.CaseReference.Equals(other.CaseReference)
@@ -159,11 +164,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
-                    this.Case == other.Case ||
-                    this.Case != null &&
-                    this.Case.Equals(other.Case)
                 );
         }
 
@@ -181,6 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
+                if (this.AssociatedCase != null)
+                    hash = hash * 59 + this.AssociatedCase.GetHashCode();
+
                 if (this.CaseReference != null)
                     hash = hash * 59 + this.CaseReference.GetHashCode();
 
@@ -189,9 +192,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-
-                if (this.Case != null)
-                    hash = hash * 59 + this.Case.GetHashCode();
 
                 return hash;
             }

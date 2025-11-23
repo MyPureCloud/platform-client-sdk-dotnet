@@ -80,9 +80,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AnswerOptions">Options from which to choose an answer for this question. Only used by Multiple Choice type questions..</param>
         /// <param name="MultipleSelectOptionQuestions">Only used by Multiple Select type questions. A list of multiple choice questions representing selectable options..</param>
         /// <param name="DefaultAnswer">The default selected answer for the question.</param>
-        /// <param name="IsCritical">IsCritical.</param>
         /// <param name="IsKill">IsKill.</param>
-        public EvaluationQuestion(string Id = null, string Text = null, string HelpText = null, TypeEnum? Type = null, bool? NaEnabled = null, bool? CommentsRequired = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null, List<EvaluationQuestion> MultipleSelectOptionQuestions = null, DefaultAnswer DefaultAnswer = null, bool? IsCritical = null, bool? IsKill = null)
+        /// <param name="IsCritical">IsCritical.</param>
+        public EvaluationQuestion(string Id = null, string Text = null, string HelpText = null, TypeEnum? Type = null, bool? NaEnabled = null, bool? CommentsRequired = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null, List<EvaluationQuestion> MultipleSelectOptionQuestions = null, DefaultAnswer DefaultAnswer = null, bool? IsKill = null, bool? IsCritical = null)
         {
             this.Id = Id;
             this.Text = Text;
@@ -94,8 +94,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AnswerOptions = AnswerOptions;
             this.MultipleSelectOptionQuestions = MultipleSelectOptionQuestions;
             this.DefaultAnswer = DefaultAnswer;
-            this.IsCritical = IsCritical;
             this.IsKill = IsKill;
+            this.IsCritical = IsCritical;
             
         }
         
@@ -188,18 +188,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets IsCritical
-        /// </summary>
-        [DataMember(Name="isCritical", EmitDefaultValue=false)]
-        public bool? IsCritical { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets IsKill
         /// </summary>
         [DataMember(Name="isKill", EmitDefaultValue=false)]
         public bool? IsKill { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets IsCritical
+        /// </summary>
+        [DataMember(Name="isCritical", EmitDefaultValue=false)]
+        public bool? IsCritical { get; set; }
 
 
         /// <summary>
@@ -222,8 +222,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AnswerOptions: ").Append(AnswerOptions).Append("\n");
             sb.Append("  MultipleSelectOptionQuestions: ").Append(MultipleSelectOptionQuestions).Append("\n");
             sb.Append("  DefaultAnswer: ").Append(DefaultAnswer).Append("\n");
-            sb.Append("  IsCritical: ").Append(IsCritical).Append("\n");
             sb.Append("  IsKill: ").Append(IsKill).Append("\n");
+            sb.Append("  IsCritical: ").Append(IsCritical).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -320,14 +320,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DefaultAnswer.Equals(other.DefaultAnswer)
                 ) &&
                 (
-                    this.IsCritical == other.IsCritical ||
-                    this.IsCritical != null &&
-                    this.IsCritical.Equals(other.IsCritical)
-                ) &&
-                (
                     this.IsKill == other.IsKill ||
                     this.IsKill != null &&
                     this.IsKill.Equals(other.IsKill)
+                ) &&
+                (
+                    this.IsCritical == other.IsCritical ||
+                    this.IsCritical != null &&
+                    this.IsCritical.Equals(other.IsCritical)
                 );
         }
 
@@ -375,11 +375,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DefaultAnswer != null)
                     hash = hash * 59 + this.DefaultAnswer.GetHashCode();
 
-                if (this.IsCritical != null)
-                    hash = hash * 59 + this.IsCritical.GetHashCode();
-
                 if (this.IsKill != null)
                     hash = hash * 59 + this.IsKill.GetHashCode();
+
+                if (this.IsCritical != null)
+                    hash = hash * 59 + this.IsCritical.GetHashCode();
 
                 return hash;
             }

@@ -31,8 +31,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
         /// <param name="SecurePause">SecurePause.</param>
         /// <param name="InactivityTimeout">InactivityTimeout.</param>
+        /// <param name="AssociatedConversation">AssociatedConversation.</param>
+        /// <param name="ConsultationConversations">ConsultationConversations.</param>
         /// <param name="Divisions">Divisions.</param>
-        public ConversationEventTopicConversation(string Id = null, long? MaxParticipants = null, List<ConversationEventTopicParticipant> Participants = null, List<ConversationEventTopicTransferResponse> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, string UtilizationLabelId = null, bool? SecurePause = null, DateTime? InactivityTimeout = null, List<ConversationEventTopicConversationDivisionMembership> Divisions = null)
+        public ConversationEventTopicConversation(string Id = null, long? MaxParticipants = null, List<ConversationEventTopicParticipant> Participants = null, List<ConversationEventTopicTransferResponse> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, string UtilizationLabelId = null, bool? SecurePause = null, DateTime? InactivityTimeout = null, ConversationEventTopicDomainEntityRef AssociatedConversation = null, List<ConversationEventTopicDomainEntityRef> ConsultationConversations = null, List<ConversationEventTopicConversationDivisionMembership> Divisions = null)
         {
             this.Id = Id;
             this.MaxParticipants = MaxParticipants;
@@ -44,6 +46,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.UtilizationLabelId = UtilizationLabelId;
             this.SecurePause = SecurePause;
             this.InactivityTimeout = InactivityTimeout;
+            this.AssociatedConversation = AssociatedConversation;
+            this.ConsultationConversations = ConsultationConversations;
             this.Divisions = Divisions;
             
         }
@@ -131,6 +135,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets AssociatedConversation
+        /// </summary>
+        [DataMember(Name="associatedConversation", EmitDefaultValue=false)]
+        public ConversationEventTopicDomainEntityRef AssociatedConversation { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ConsultationConversations
+        /// </summary>
+        [DataMember(Name="consultationConversations", EmitDefaultValue=false)]
+        public List<ConversationEventTopicDomainEntityRef> ConsultationConversations { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Divisions
         /// </summary>
         [DataMember(Name="divisions", EmitDefaultValue=false)]
@@ -156,6 +176,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  InactivityTimeout: ").Append(InactivityTimeout).Append("\n");
+            sb.Append("  AssociatedConversation: ").Append(AssociatedConversation).Append("\n");
+            sb.Append("  ConsultationConversations: ").Append(ConsultationConversations).Append("\n");
             sb.Append("  Divisions: ").Append(Divisions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -248,6 +270,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InactivityTimeout.Equals(other.InactivityTimeout)
                 ) &&
                 (
+                    this.AssociatedConversation == other.AssociatedConversation ||
+                    this.AssociatedConversation != null &&
+                    this.AssociatedConversation.Equals(other.AssociatedConversation)
+                ) &&
+                (
+                    this.ConsultationConversations == other.ConsultationConversations ||
+                    this.ConsultationConversations != null &&
+                    this.ConsultationConversations.SequenceEqual(other.ConsultationConversations)
+                ) &&
+                (
                     this.Divisions == other.Divisions ||
                     this.Divisions != null &&
                     this.Divisions.SequenceEqual(other.Divisions)
@@ -294,6 +326,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InactivityTimeout != null)
                     hash = hash * 59 + this.InactivityTimeout.GetHashCode();
+
+                if (this.AssociatedConversation != null)
+                    hash = hash * 59 + this.AssociatedConversation.GetHashCode();
+
+                if (this.ConsultationConversations != null)
+                    hash = hash * 59 + this.ConsultationConversations.GetHashCode();
 
                 if (this.Divisions != null)
                     hash = hash * 59 + this.Divisions.GetHashCode();

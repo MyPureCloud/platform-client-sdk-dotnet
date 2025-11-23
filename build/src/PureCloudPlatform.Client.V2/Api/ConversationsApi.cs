@@ -3128,7 +3128,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetConversationsVideosMeeting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="meetingId">meetingId</param>
@@ -3141,7 +3140,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetConversationsVideosMeeting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="meetingId">meetingId</param>
@@ -6946,7 +6944,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostConversationsVideosMeetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MeetingIdRequest</param>
@@ -6959,7 +6956,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostConversationsVideosMeetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MeetingIdRequest</param>
@@ -10706,7 +10702,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetConversationsVideosMeeting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="meetingId">meetingId</param>
@@ -10719,7 +10714,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetConversationsVideosMeeting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="meetingId">meetingId</param>
@@ -14524,7 +14518,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostConversationsVideosMeetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MeetingIdRequest</param>
@@ -14537,7 +14530,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostConversationsVideosMeetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MeetingIdRequest</param>
@@ -40152,7 +40144,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets a record for a given meetingId 
         /// 
-        /// GetConversationsVideosMeeting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="meetingId">meetingId</param>
@@ -40167,7 +40158,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets a record for a given meetingId 
         /// 
-        /// GetConversationsVideosMeeting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="meetingId">meetingId</param>
@@ -40253,7 +40243,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets a record for a given meetingId 
         /// 
-        /// GetConversationsVideosMeeting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="meetingId">meetingId</param>
@@ -40269,7 +40258,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Gets a record for a given meetingId 
         /// 
-        /// GetConversationsVideosMeeting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="meetingId">meetingId</param>
@@ -72290,7 +72278,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Generate a meetingId for a given conferenceId 
         /// 
-        /// PostConversationsVideosMeetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MeetingIdRequest</param>
@@ -72305,7 +72292,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Generate a meetingId for a given conferenceId 
         /// 
-        /// PostConversationsVideosMeetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MeetingIdRequest</param>
@@ -72396,7 +72382,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Generate a meetingId for a given conferenceId 
         /// 
-        /// PostConversationsVideosMeetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MeetingIdRequest</param>
@@ -72412,7 +72397,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Generate a meetingId for a given conferenceId 
         /// 
-        /// PostConversationsVideosMeetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">MeetingIdRequest</param>

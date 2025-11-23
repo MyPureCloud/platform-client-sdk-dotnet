@@ -46,6 +46,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ndistinctsuggestions,
             
             /// <summary>
+            /// Enum Nknowledgeanswersuggestions for "nKnowledgeAnswerSuggestions"
+            /// </summary>
+            [EnumMember(Value = "nKnowledgeAnswerSuggestions")]
+            Nknowledgeanswersuggestions,
+            
+            /// <summary>
             /// Enum Nknowledgearticlesuggestions for "nKnowledgeArticleSuggestions"
             /// </summary>
             [EnumMember(Value = "nKnowledgeArticleSuggestions")]
@@ -77,6 +83,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OUTDATED_SDK_VERSION")]
             OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Average for "average"
+            /// </summary>
+            [EnumMember(Value = "average")]
+            Average,
             
             /// <summary>
             /// Enum Count for "count"

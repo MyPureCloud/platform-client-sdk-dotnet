@@ -87,6 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Botstate,
             
             /// <summary>
+            /// Enum Callagenticvirtualagentaction for "CallAgenticVirtualAgentAction"
+            /// </summary>
+            [EnumMember(Value = "CallAgenticVirtualAgentAction")]
+            Callagenticvirtualagentaction,
+            
+            /// <summary>
             /// Enum Callbotflowaction for "CallBotFlowAction"
             /// </summary>
             [EnumMember(Value = "CallBotFlowAction")]

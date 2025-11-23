@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// A reference to another domain entity.
+    /// QueueConversationEventTopicDomainEntityRef
     /// </summary>
     [DataContract]
     public partial class QueueConversationEventTopicDomainEntityRef :  IEquatable<QueueConversationEventTopicDomainEntityRef>

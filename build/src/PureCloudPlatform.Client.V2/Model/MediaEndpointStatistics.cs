@@ -37,7 +37,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Client for "Client"
             /// </summary>
             [EnumMember(Value = "Client")]
-            Client
+            Client,
+            
+            /// <summary>
+            /// Enum Server for "Server"
+            /// </summary>
+            [EnumMember(Value = "Server")]
+            Server
         }
         /// <summary>
         /// Source type of media endpoint

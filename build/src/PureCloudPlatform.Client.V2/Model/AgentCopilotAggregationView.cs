@@ -46,6 +46,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ndistinctsuggestions,
             
             /// <summary>
+            /// Enum Nknowledgeanswersuggestions for "nKnowledgeAnswerSuggestions"
+            /// </summary>
+            [EnumMember(Value = "nKnowledgeAnswerSuggestions")]
+            Nknowledgeanswersuggestions,
+            
+            /// <summary>
             /// Enum Nknowledgearticlesuggestions for "nKnowledgeArticleSuggestions"
             /// </summary>
             [EnumMember(Value = "nKnowledgeArticleSuggestions")]

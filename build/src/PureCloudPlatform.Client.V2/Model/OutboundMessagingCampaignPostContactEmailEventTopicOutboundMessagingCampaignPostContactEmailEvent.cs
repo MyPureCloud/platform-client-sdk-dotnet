@@ -98,7 +98,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum OutboundMessageAmbiguous for "OUTBOUND_MESSAGE_AMBIGUOUS"
             /// </summary>
             [EnumMember(Value = "OUTBOUND_MESSAGE_AMBIGUOUS")]
-            OutboundMessageAmbiguous
+            OutboundMessageAmbiguous,
+            
+            /// <summary>
+            /// Enum IninOutboundCampaignForcedOff for "ININ_OUTBOUND_CAMPAIGN_FORCED_OFF"
+            /// </summary>
+            [EnumMember(Value = "ININ_OUTBOUND_CAMPAIGN_FORCED_OFF")]
+            IninOutboundCampaignForcedOff
         }
         /// <summary>
         /// Gets or Sets OutboundCampaignType

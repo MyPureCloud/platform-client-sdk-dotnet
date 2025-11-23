@@ -51,6 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Cannedresponselibraryid,
             
             /// <summary>
+            /// Enum Chunkcount for "chunkCount"
+            /// </summary>
+            [EnumMember(Value = "chunkCount")]
+            Chunkcount,
+            
+            /// <summary>
             /// Enum Conversationid for "conversationId"
             /// </summary>
             [EnumMember(Value = "conversationId")]
@@ -79,6 +85,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "hasAnswerHighlight")]
             Hasanswerhighlight,
+            
+            /// <summary>
+            /// Enum Hasgeneratedanswer for "hasGeneratedAnswer"
+            /// </summary>
+            [EnumMember(Value = "hasGeneratedAnswer")]
+            Hasgeneratedanswer,
             
             /// <summary>
             /// Enum Knowledgebasedocumentid for "knowledgeBaseDocumentId"
@@ -189,6 +201,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nDistinctSuggestions")]
             Ndistinctsuggestions,
+            
+            /// <summary>
+            /// Enum Nknowledgeanswersuggestions for "nKnowledgeAnswerSuggestions"
+            /// </summary>
+            [EnumMember(Value = "nKnowledgeAnswerSuggestions")]
+            Nknowledgeanswersuggestions,
             
             /// <summary>
             /// Enum Nknowledgearticlesuggestions for "nKnowledgeArticleSuggestions"

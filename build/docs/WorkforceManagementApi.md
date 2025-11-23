@@ -32,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementAdherenceHistoricalJob**](#GetWorkforcemanagementAdherenceHistoricalJob) | **Get** /api/v2/workforcemanagement/adherence/historical/jobs/{jobId} | Query the status of a historical adherence request operation. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementAgentAdherenceExplanation**](#GetWorkforcemanagementAgentAdherenceExplanation) | **Get** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId} | Get an adherence explanation |
 | [**GetWorkforcemanagementAgentManagementunit**](#GetWorkforcemanagementAgentManagementunit) | **Get** /api/v2/workforcemanagement/agents/{agentId}/managementunit | Get the management unit to which the agent belongs |
+| [**GetWorkforcemanagementAgentsMeAdherenceHistoricalJob**](#GetWorkforcemanagementAgentsMeAdherenceHistoricalJob) | **Get** /api/v2/workforcemanagement/agents/me/adherence/historical/jobs/{jobId} | Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementAgentsMeManagementunit**](#GetWorkforcemanagementAgentsMeManagementunit) | **Get** /api/v2/workforcemanagement/agents/me/managementunit | Get the management unit to which the currently logged in agent belongs |
 | [**GetWorkforcemanagementAlternativeshiftsOffersJob**](#GetWorkforcemanagementAlternativeshiftsOffersJob) | **Get** /api/v2/workforcemanagement/alternativeshifts/offers/jobs/{jobId} | Query the status of an alternative shift offers operation. Only the user who started the operation can query the status |
 | [**GetWorkforcemanagementAlternativeshiftsOffersSearchJob**](#GetWorkforcemanagementAlternativeshiftsOffersSearchJob) | **Get** /api/v2/workforcemanagement/alternativeshifts/offers/search/jobs/{jobId} | Query the status of an alternative shift search offers operation. Only the user who started the operation can query the status |
@@ -177,6 +178,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAgentAdherenceExplanationsQuery**](#PostWorkforcemanagementAgentAdherenceExplanationsQuery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query | Query adherence explanations for the given agent across a specified range |
 | [**PostWorkforcemanagementAgents**](#PostWorkforcemanagementAgents) | **Post** /api/v2/workforcemanagement/agents | Move agents in and out of management unit |
 | [**PostWorkforcemanagementAgentsIntegrationsHrisQuery**](#PostWorkforcemanagementAgentsIntegrationsHrisQuery) | **Post** /api/v2/workforcemanagement/agents/integrations/hris/query | Query integrations for agents |
+| [**PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs**](#PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs) | **Post** /api/v2/workforcemanagement/agents/me/adherence/historical/jobs | Request an agent historical adherence report |
 | [**PostWorkforcemanagementAgentsMePossibleworkshifts**](#PostWorkforcemanagementAgentsMePossibleworkshifts) | **Post** /api/v2/workforcemanagement/agents/me/possibleworkshifts | Get agent possible work shifts for requested time frame |
 | [**PostWorkforcemanagementAgentschedulesManagementunitsMine**](#PostWorkforcemanagementAgentschedulesManagementunitsMine) | **Post** /api/v2/workforcemanagement/agentschedules/managementunits/mine | Fetch agent schedules for the logged in user&#39;s management unit |
 | [**PostWorkforcemanagementAgentschedulesMine**](#PostWorkforcemanagementAgentschedulesMine) | **Post** /api/v2/workforcemanagement/agentschedules/mine | Get published schedule for the current user |
@@ -1912,6 +1914,69 @@ namespace Example
 ### Return type
 
 [**AgentManagementUnitReference**](AgentManagementUnitReference)
+
+
+## GetWorkforcemanagementAgentsMeAdherenceHistoricalJob
+
+> [**WfmAgentHistoricalAdherenceResponse**](WfmAgentHistoricalAdherenceResponse) GetWorkforcemanagementAgentsMeAdherenceHistoricalJob (string jobId)
+
+
+Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status
+
+Job details are only retained if the initial request returned a 202 ACCEPTED response
+
+Requires NO permissions: 
+
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementAgentsMeAdherenceHistoricalJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | ID of the job to get
+
+            try
+            { 
+                // Request to fetch the status of the agent adherence job. Only the user who started the operation can query the status
+                WfmAgentHistoricalAdherenceResponse result = apiInstance.GetWorkforcemanagementAgentsMeAdherenceHistoricalJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementAgentsMeAdherenceHistoricalJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| ID of the job to get |  |
+
+### Return type
+
+[**WfmAgentHistoricalAdherenceResponse**](WfmAgentHistoricalAdherenceResponse)
 
 
 ## GetWorkforcemanagementAgentsMeManagementunit
@@ -11582,6 +11647,73 @@ namespace Example
 [**AgentsIntegrationsListing**](AgentsIntegrationsListing)
 
 
+## PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs
+
+> [**WfmAgentHistoricalAdherenceResponse**](WfmAgentHistoricalAdherenceResponse) PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs (List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null)
+
+
+Request an agent historical adherence report
+
+The maximum supported range for historical adherence queries is 31 days, or 7 days when the expand query parameter includes any of the following: exceptionInfo, actuals, scheduledActivities
+
+Requires ANY permissions: 
+
+* wfm:agentHistoricalAdherence:view
+* wfm:agentHistoricalAdherenceConformance:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var expand = new List<string>(); // List<string> | Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. (optional) 
+            var body = new WfmHistoricalAdherenceQueryForAgent(); // WfmHistoricalAdherenceQueryForAgent | body (optional) 
+
+            try
+            { 
+                // Request an agent historical adherence report
+                WfmAgentHistoricalAdherenceResponse result = apiInstance.PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs(expand, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string)| Which fields, if any, to expand with. wfm:AgentHistoricalAdherenceConformance:view permission is required for conformance, and wfm:agentSchedule:view permission is required for scheduledActivities. | [optional] <br />**Values**: exceptionInfo, actuals, scheduledActivities, conformance |
+| **body** | [**WfmHistoricalAdherenceQueryForAgent**](WfmHistoricalAdherenceQueryForAgent)| body | [optional]  |
+
+### Return type
+
+[**WfmAgentHistoricalAdherenceResponse**](WfmAgentHistoricalAdherenceResponse)
+
+
 ## PostWorkforcemanagementAgentsMePossibleworkshifts
 
 > [**AgentPossibleWorkShiftsResponse**](AgentPossibleWorkShiftsResponse) PostWorkforcemanagementAgentsMePossibleworkshifts (AgentPossibleWorkShiftsRequest body)
@@ -17417,4 +17549,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 248.0.0_
+_PureCloudPlatform.Client.V2 249.0.0_

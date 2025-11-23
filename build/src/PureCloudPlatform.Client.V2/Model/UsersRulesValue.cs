@@ -13,38 +13,46 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// KlaxonInteractionStatsAlertsTopicNotificationUser
+    /// UsersRulesValue
     /// </summary>
     [DataContract]
-    public partial class KlaxonInteractionStatsAlertsTopicNotificationUser :  IEquatable<KlaxonInteractionStatsAlertsTopicNotificationUser>
+    public partial class UsersRulesValue :  IEquatable<UsersRulesValue>
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="KlaxonInteractionStatsAlertsTopicNotificationUser" /> class.
+        /// Initializes a new instance of the <see cref="UsersRulesValue" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="DisplayName">DisplayName.</param>
-        public KlaxonInteractionStatsAlertsTopicNotificationUser(string Id = null, string DisplayName = null)
+        [JsonConstructorAttribute]
+        protected UsersRulesValue() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="UsersRulesValue" /> class.
+        /// </summary>
+        /// <param name="ContextId">The contextId for this group.</param>
+        /// <param name="Ids">The ids to select for this group (required).</param>
+        public UsersRulesValue(string ContextId = null, List<string> Ids = null)
         {
-            this.Id = Id;
-            this.DisplayName = DisplayName;
+            this.ContextId = ContextId;
+            this.Ids = Ids;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The contextId for this group
         /// </summary>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+        /// <value>The contextId for this group</value>
+        [DataMember(Name="contextId", EmitDefaultValue=false)]
+        public string ContextId { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets DisplayName
+        /// The ids to select for this group
         /// </summary>
-        [DataMember(Name="displayName", EmitDefaultValue=false)]
-        public string DisplayName { get; set; }
+        /// <value>The ids to select for this group</value>
+        [DataMember(Name="ids", EmitDefaultValue=false)]
+        public List<string> Ids { get; set; }
 
 
         /// <summary>
@@ -54,10 +62,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class KlaxonInteractionStatsAlertsTopicNotificationUser {\n");
+            sb.Append("class UsersRulesValue {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  DisplayName: ").Append(DisplayName).Append("\n");
+            sb.Append("  ContextId: ").Append(ContextId).Append("\n");
+            sb.Append("  Ids: ").Append(Ids).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,15 +91,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as KlaxonInteractionStatsAlertsTopicNotificationUser);
+            return this.Equals(obj as UsersRulesValue);
         }
 
         /// <summary>
-        /// Returns true if KlaxonInteractionStatsAlertsTopicNotificationUser instances are equal
+        /// Returns true if UsersRulesValue instances are equal
         /// </summary>
-        /// <param name="other">Instance of KlaxonInteractionStatsAlertsTopicNotificationUser to be compared</param>
+        /// <param name="other">Instance of UsersRulesValue to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(KlaxonInteractionStatsAlertsTopicNotificationUser other)
+        public bool Equals(UsersRulesValue other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -99,14 +107,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
+                    this.ContextId == other.ContextId ||
+                    this.ContextId != null &&
+                    this.ContextId.Equals(other.ContextId)
                 ) &&
                 (
-                    this.DisplayName == other.DisplayName ||
-                    this.DisplayName != null &&
-                    this.DisplayName.Equals(other.DisplayName)
+                    this.Ids == other.Ids ||
+                    this.Ids != null &&
+                    this.Ids.SequenceEqual(other.Ids)
                 );
         }
 
@@ -121,11 +129,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+                if (this.ContextId != null)
+                    hash = hash * 59 + this.ContextId.GetHashCode();
 
-                if (this.DisplayName != null)
-                    hash = hash * 59 + this.DisplayName.GetHashCode();
+                if (this.Ids != null)
+                    hash = hash * 59 + this.Ids.GetHashCode();
 
                 return hash;
             }

@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="QueueConversationVideoEventTopicConversationDivisionMembership" /> class.
         /// </summary>
-        /// <param name="Division">Division.</param>
+        /// <param name="Division">A reference to another domain entity..</param>
         /// <param name="Entities">Entities.</param>
         public QueueConversationVideoEventTopicConversationDivisionMembership(QueueConversationVideoEventTopicDomainEntityRef Division = null, List<QueueConversationVideoEventTopicDivisionEntityRef> Entities = null)
         {
@@ -33,8 +33,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Division
+        /// A reference to another domain entity.
         /// </summary>
+        /// <value>A reference to another domain entity.</value>
         [DataMember(Name="division", EmitDefaultValue=false)]
         public QueueConversationVideoEventTopicDomainEntityRef Division { get; set; }
 

@@ -21,14 +21,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SelfAgentGreeting" /> class.
         /// </summary>
-        /// <param name="Name">Name.</param>
         /// <param name="InboundPrompt">The agent greeting prompt to use when inbound calls are connected.</param>
         /// <param name="OutboundPrompt">The agent greeting prompt to use when outbound calls are connected.</param>
         /// <param name="InboundPromptDefaultLanguage">The default language to use for the agent greeting inbound prompt.</param>
         /// <param name="OutboundPromptDefaultLanguage">The default language to use for the agent greeting outbound prompt.</param>
-        public SelfAgentGreeting(string Name = null, Prompt InboundPrompt = null, Prompt OutboundPrompt = null, string InboundPromptDefaultLanguage = null, string OutboundPromptDefaultLanguage = null)
+        public SelfAgentGreeting(Prompt InboundPrompt = null, Prompt OutboundPrompt = null, string InboundPromptDefaultLanguage = null, string OutboundPromptDefaultLanguage = null)
         {
-            this.Name = Name;
             this.InboundPrompt = InboundPrompt;
             this.OutboundPrompt = OutboundPrompt;
             this.InboundPromptDefaultLanguage = InboundPromptDefaultLanguage;
@@ -39,19 +37,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
+        /// The ID of the associated user.
         /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
+        /// <value>The ID of the associated user.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
 
 
 
@@ -109,7 +99,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class SelfAgentGreeting {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  InboundPrompt: ").Append(InboundPrompt).Append("\n");
             sb.Append("  OutboundPrompt: ").Append(OutboundPrompt).Append("\n");
             sb.Append("  InboundPromptDefaultLanguage: ").Append(InboundPromptDefaultLanguage).Append("\n");
@@ -161,11 +150,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
                     this.InboundPrompt == other.InboundPrompt ||
                     this.InboundPrompt != null &&
                     this.InboundPrompt.Equals(other.InboundPrompt)
@@ -205,9 +189,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
 
                 if (this.InboundPrompt != null)
                     hash = hash * 59 + this.InboundPrompt.GetHashCode();

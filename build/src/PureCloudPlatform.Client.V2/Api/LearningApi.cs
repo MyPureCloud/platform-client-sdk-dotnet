@@ -832,6 +832,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<LearningModulePublishResponse> PostLearningModulePublishWithHttpInfo (string moduleId, LearningModulePublishRequest body = null);
 
         /// <summary>
+        /// Migrate a legacy learning module rule to a users rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostLearningModuleRuleMigrate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>LearningModuleMigrateResponse</returns>
+        
+        LearningModuleMigrateResponse PostLearningModuleRuleMigrate (string moduleId);
+
+        /// <summary>
+        /// Migrate a legacy learning module rule to a users rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostLearningModuleRuleMigrate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>ApiResponse of LearningModuleMigrateResponse</returns>
+        
+        ApiResponse<LearningModuleMigrateResponse> PostLearningModuleRuleMigrateWithHttpInfo (string moduleId);
+
+        /// <summary>
         /// Create a new learning module
         /// </summary>
         /// <remarks>
@@ -1854,6 +1880,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (LearningModulePublishResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<LearningModulePublishResponse>> PostLearningModulePublishAsyncWithHttpInfo (string moduleId, LearningModulePublishRequest body = null);
+
+        /// <summary>
+        /// Migrate a legacy learning module rule to a users rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostLearningModuleRuleMigrate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>Task of LearningModuleMigrateResponse</returns>
+        
+        System.Threading.Tasks.Task<LearningModuleMigrateResponse> PostLearningModuleRuleMigrateAsync (string moduleId);
+
+        /// <summary>
+        /// Migrate a legacy learning module rule to a users rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostLearningModuleRuleMigrate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>Task of ApiResponse (LearningModuleMigrateResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<LearningModuleMigrateResponse>> PostLearningModuleRuleMigrateAsyncWithHttpInfo (string moduleId);
 
         /// <summary>
         /// Create a new learning module
@@ -8447,6 +8499,211 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<LearningModulePublishResponse>(localVarStatusCode,
                 localVarHeaders,
                 (LearningModulePublishResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModulePublishResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Migrate a legacy learning module rule to a users rule. 
+        /// 
+        /// PostLearningModuleRuleMigrate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>LearningModuleMigrateResponse</returns>
+        
+        public LearningModuleMigrateResponse PostLearningModuleRuleMigrate (string moduleId)
+        {
+             ApiResponse<LearningModuleMigrateResponse> localVarResponse = PostLearningModuleRuleMigrateWithHttpInfo(moduleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Migrate a legacy learning module rule to a users rule. 
+        /// 
+        /// PostLearningModuleRuleMigrate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>ApiResponse of LearningModuleMigrateResponse</returns>
+        
+        public ApiResponse< LearningModuleMigrateResponse > PostLearningModuleRuleMigrateWithHttpInfo (string moduleId)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PostLearningModuleRuleMigrate");
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/rule/migrate";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningModuleRuleMigrate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningModuleRuleMigrate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModuleMigrateResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModuleMigrateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModuleMigrateResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Migrate a legacy learning module rule to a users rule. 
+        /// 
+        /// PostLearningModuleRuleMigrate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>Task of LearningModuleMigrateResponse</returns>
+        
+        public async System.Threading.Tasks.Task<LearningModuleMigrateResponse> PostLearningModuleRuleMigrateAsync (string moduleId)
+        {
+             ApiResponse<LearningModuleMigrateResponse> localVarResponse = await PostLearningModuleRuleMigrateAsyncWithHttpInfo(moduleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Migrate a legacy learning module rule to a users rule. 
+        /// 
+        /// PostLearningModuleRuleMigrate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="moduleId">The ID of the learning module</param>
+        /// <returns>Task of ApiResponse (LearningModuleMigrateResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<LearningModuleMigrateResponse>> PostLearningModuleRuleMigrateAsyncWithHttpInfo (string moduleId)
+        { 
+            // verify the required parameter 'moduleId' is set
+            if (moduleId == null)
+                throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PostLearningModuleRuleMigrate");
+            
+
+            var localVarPath = "/api/v2/learning/modules/{moduleId}/rule/migrate";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (moduleId != null) localVarPathParams.Add("moduleId", this.Configuration.ApiClient.ParameterToString(moduleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningModuleRuleMigrate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLearningModuleRuleMigrate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<LearningModuleMigrateResponse>(localVarStatusCode,
+                localVarHeaders,
+                (LearningModuleMigrateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LearningModuleMigrateResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
