@@ -7931,8 +7931,6 @@ namespace Example
 
 Gets a record for a given meetingId
 
-GetConversationsVideosMeeting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * video:video:access
@@ -17261,8 +17259,6 @@ void (empty response body)
 
 Generate a meetingId for a given conferenceId
 
-PostConversationsVideosMeetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * video:video:access
@@ -18875,4 +18871,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 248.0.0_
+_PureCloudPlatform.Client.V2 249.0.0_

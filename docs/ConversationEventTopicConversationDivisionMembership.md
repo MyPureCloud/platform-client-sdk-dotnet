@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Division** | [**ConversationEventTopicDomainEntityRef**](ConversationEventTopicDomainEntityRef) |  | [optional] |
+| **Division** | [**ConversationEventTopicDomainEntityRef**](ConversationEventTopicDomainEntityRef) | A reference to another domain entity. | [optional] |
 | **Entities** | [**List&lt;ConversationEventTopicDivisionEntityRef&gt;**](ConversationEventTopicDivisionEntityRef) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 248.0.0_
+_PureCloudPlatform.Client.V2 249.0.0_

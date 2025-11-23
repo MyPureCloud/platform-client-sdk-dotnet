@@ -35,6 +35,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostLearningAssignmentsBulkremove**](#PostLearningAssignmentsBulkremove) | **Post** /api/v2/learning/assignments/bulkremove | Remove multiple Learning Assignments |
 | [**PostLearningModuleJobs**](#PostLearningModuleJobs) | **Post** /api/v2/learning/modules/{moduleId}/jobs | Starts a specified operation on learning module |
 | [**PostLearningModulePublish**](#PostLearningModulePublish) | **Post** /api/v2/learning/modules/{moduleId}/publish | Publish a Learning module |
+| [**PostLearningModuleRuleMigrate**](#PostLearningModuleRuleMigrate) | **Post** /api/v2/learning/modules/{moduleId}/rule/migrate | Migrate a legacy learning module rule to a users rule. |
 | [**PostLearningModules**](#PostLearningModules) | **Post** /api/v2/learning/modules | Create a new learning module |
 | [**PostLearningRulesQuery**](#PostLearningRulesQuery) | **Post** /api/v2/learning/rules/query | Get users for learning module rule |
 | [**PostLearningScheduleslotsJobs**](#PostLearningScheduleslotsJobs) | **Post** /api/v2/learning/scheduleslots/jobs | Start job to retrieve slots where a learning activity can be scheduled. |
@@ -1979,6 +1980,70 @@ namespace Example
 [**LearningModulePublishResponse**](LearningModulePublishResponse)
 
 
+## PostLearningModuleRuleMigrate
+
+> [**LearningModuleMigrateResponse**](LearningModuleMigrateResponse) PostLearningModuleRuleMigrate (string moduleId)
+
+
+Migrate a legacy learning module rule to a users rule.
+
+PostLearningModuleRuleMigrate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* learning:module:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLearningModuleRuleMigrateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LearningApi();
+            var moduleId = moduleId_example;  // string | The ID of the learning module
+
+            try
+            { 
+                // Migrate a legacy learning module rule to a users rule.
+                LearningModuleMigrateResponse result = apiInstance.PostLearningModuleRuleMigrate(moduleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LearningApi.PostLearningModuleRuleMigrate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **moduleId** | **string**| The ID of the learning module |  |
+
+### Return type
+
+[**LearningModuleMigrateResponse**](LearningModuleMigrateResponse)
+
+
 ## PostLearningModules
 
 > [**LearningModule**](LearningModule) PostLearningModules (LearningModuleRequest body)
@@ -2497,4 +2562,4 @@ namespace Example
 [**LearningModuleRule**](LearningModuleRule)
 
 
-_PureCloudPlatform.Client.V2 248.0.0_
+_PureCloudPlatform.Client.V2 249.0.0_
