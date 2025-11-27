@@ -512,4 +512,4 @@ namespace Example
 [**ChannelTopicEntityListing**](ChannelTopicEntityListing)
 
 
-_PureCloudPlatform.Client.V2 249.0.0_
+_PureCloudPlatform.Client.V2 250.0.0_

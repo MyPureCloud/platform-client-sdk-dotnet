@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteEmployeeengagementCelebration**](#DeleteEmployeeengagementCelebration) | **Delete** /api/v2/employeeengagement/celebrations/{celebrationId} | Deletes a celebration |
 | [**GetEmployeeengagementCelebrations**](#GetEmployeeengagementCelebrations) | **Get** /api/v2/employeeengagement/celebrations | Get all celebrations |
 | [**GetEmployeeengagementRecognition**](#GetEmployeeengagementRecognition) | **Get** /api/v2/employeeengagement/recognitions/{recognitionId} | Gets a single recognition |
+| [**GetEmployeeengagementRecognitions**](#GetEmployeeengagementRecognitions) | **Get** /api/v2/employeeengagement/recognitions | Gets sent recognitions |
 | [**PatchEmployeeengagementCelebration**](#PatchEmployeeengagementCelebration) | **Patch** /api/v2/employeeengagement/celebrations/{celebrationId} | Set a state for a celebration |
 | [**PostEmployeeengagementRecognitions**](#PostEmployeeengagementRecognitions) | **Post** /api/v2/employeeengagement/recognitions | Creates a recognition |
 
@@ -201,6 +202,78 @@ namespace Example
 [**Recognition**](Recognition)
 
 
+## GetEmployeeengagementRecognitions
+
+> [**Recognitions**](Recognitions) GetEmployeeengagementRecognitions (string direction = null, string recipient = null, DateTime? dateStart = null, DateTime? dateEnd = null, int? pageSize = null, int? pageNumber = null)
+
+
+Gets sent recognitions
+
+Requires ANY permissions: 
+
+* engagement:recognition:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetEmployeeengagementRecognitionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new EmployeeEngagementApi();
+            var direction = direction_example;  // string | The direction of the recognitions. (optional)  (default to received)
+            var recipient = recipient_example;  // string | The ID of the recipient (when direction is sent). (optional) 
+            var dateStart = 2013-10-20T19:20:30+01:00;  // DateTime? | The start date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) 
+            var dateEnd = 2013-10-20T19:20:30+01:00;  // DateTime? | The end date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (optional) 
+            var pageSize = 56;  // int? | Page size (optional)  (default to 100)
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+
+            try
+            { 
+                // Gets sent recognitions
+                Recognitions result = apiInstance.GetEmployeeengagementRecognitions(direction, recipient, dateStart, dateEnd, pageSize, pageNumber);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EmployeeEngagementApi.GetEmployeeengagementRecognitions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **direction** | **string**| The direction of the recognitions. | [optional] [default to received]<br />**Values**: sent, received |
+| **recipient** | **string**| The ID of the recipient (when direction is sent). | [optional]  |
+| **dateStart** | **DateTime?**| The start date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
+| **dateEnd** | **DateTime?**| The end date of the search range. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional]  |
+| **pageSize** | **int?**| Page size | [optional] [default to 100] |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+
+### Return type
+
+[**Recognitions**](Recognitions)
+
+
 ## PatchEmployeeengagementCelebration
 
 > void PatchEmployeeengagementCelebration (string celebrationId, CelebrationStateParam body)
@@ -326,4 +399,4 @@ namespace Example
 [**RecognitionBase**](RecognitionBase)
 
 
-_PureCloudPlatform.Client.V2 249.0.0_
+_PureCloudPlatform.Client.V2 250.0.0_
