@@ -132,11 +132,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">The phrase text (required).</param>
         /// <param name="Strictness">The phrase strictness, default value is null.</param>
         /// <param name="Sentiment">The phrase sentiment, default value is Unspecified. Note: Sentiment value for phrases is currently not in use and has no impact to the system..</param>
-        public Phrase(string Text = null, StrictnessEnum? Strictness = null, SentimentEnum? Sentiment = null)
+        /// <param name="IsAIGenerated">Indicates whether the phrase is AI generated.</param>
+        public Phrase(string Text = null, StrictnessEnum? Strictness = null, SentimentEnum? Sentiment = null, bool? IsAIGenerated = null)
         {
             this.Text = Text;
             this.Strictness = Strictness;
             this.Sentiment = Sentiment;
+            this.IsAIGenerated = IsAIGenerated;
             
         }
         
@@ -154,6 +156,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Indicates whether the phrase is AI generated
+        /// </summary>
+        /// <value>Indicates whether the phrase is AI generated</value>
+        [DataMember(Name="isAIGenerated", EmitDefaultValue=false)]
+        public bool? IsAIGenerated { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -166,6 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Strictness: ").Append(Strictness).Append("\n");
             sb.Append("  Sentiment: ").Append(Sentiment).Append("\n");
+            sb.Append("  IsAIGenerated: ").Append(IsAIGenerated).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -220,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Sentiment == other.Sentiment ||
                     this.Sentiment != null &&
                     this.Sentiment.Equals(other.Sentiment)
+                ) &&
+                (
+                    this.IsAIGenerated == other.IsAIGenerated ||
+                    this.IsAIGenerated != null &&
+                    this.IsAIGenerated.Equals(other.IsAIGenerated)
                 );
         }
 
@@ -242,6 +259,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Sentiment != null)
                     hash = hash * 59 + this.Sentiment.GetHashCode();
+
+                if (this.IsAIGenerated != null)
+                    hash = hash * 59 + this.IsAIGenerated.GetHashCode();
 
                 return hash;
             }

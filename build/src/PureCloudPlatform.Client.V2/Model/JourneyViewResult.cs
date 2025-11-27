@@ -36,6 +36,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<JourneyViewResultElement> Elements { get; private set; }
 
 
+
+        /// <summary>
+        /// The chart results within the journey view result
+        /// </summary>
+        /// <value>The chart results within the journey view result</value>
+        [DataMember(Name="charts", EmitDefaultValue=false)]
+        public List<JourneyViewChartResult> Charts { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -46,6 +55,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class JourneyViewResult {\n");
 
             sb.Append("  Elements: ").Append(Elements).Append("\n");
+            sb.Append("  Charts: ").Append(Charts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -90,6 +100,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Elements == other.Elements ||
                     this.Elements != null &&
                     this.Elements.SequenceEqual(other.Elements)
+                ) &&
+                (
+                    this.Charts == other.Charts ||
+                    this.Charts != null &&
+                    this.Charts.SequenceEqual(other.Charts)
                 );
         }
 
@@ -106,6 +121,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Elements != null)
                     hash = hash * 59 + this.Elements.GetHashCode();
+
+                if (this.Charts != null)
+                    hash = hash * 59 + this.Charts.GetHashCode();
 
                 return hash;
             }

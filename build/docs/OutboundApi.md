@@ -5789,7 +5789,7 @@ namespace Example
 
 ## GetOutboundMessagingcampaigns
 
-> [**MessagingCampaignEntityListing**](MessagingCampaignEntityListing) GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null)
+> [**MessagingCampaignEntityListing**](MessagingCampaignEntityListing) GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null)
 
 
 Query a list of Messaging Campaigns
@@ -5834,11 +5834,12 @@ namespace Example
             var id = new List<string>(); // List<string> | A list of messaging campaign ids to bulk fetch (optional) 
             var contentTemplateId = contentTemplateId_example;  // string | Content template ID (optional) 
             var campaignStatus = campaignStatus_example;  // string | Campaign Status (optional) 
+            var ruleSetIds = new List<string>(); // List<string> | Ruleset ID(s) (optional) 
 
             try
             { 
                 // Query a list of Messaging Campaigns
-                MessagingCampaignEntityListing result = apiInstance.GetOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id, contentTemplateId, campaignStatus);
+                MessagingCampaignEntityListing result = apiInstance.GetOutboundMessagingcampaigns(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id, contentTemplateId, campaignStatus, ruleSetIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5867,6 +5868,7 @@ namespace Example
 | **id** | [**List<string>**](string)| A list of messaging campaign ids to bulk fetch | [optional]  |
 | **contentTemplateId** | **string**| Content template ID | [optional]  |
 | **campaignStatus** | **string**| Campaign Status | [optional] <br />**Values**: on, stopping, off, complete, invalid, forced_off, forced_stopping |
+| **ruleSetIds** | [**List<string>**](string)| Ruleset ID(s) | [optional]  |
 
 ### Return type
 
@@ -11411,4 +11413,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 249.0.0_
+_PureCloudPlatform.Client.V2 250.0.0_

@@ -2388,9 +2388,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <param name="contentTemplateId">Content template ID (optional)</param>
         /// <param name="campaignStatus">Campaign Status (optional)</param>
+        /// <param name="ruleSetIds">Ruleset ID(s) (optional)</param>
         /// <returns>MessagingCampaignEntityListing</returns>
         
-        MessagingCampaignEntityListing GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null);
+        MessagingCampaignEntityListing GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null);
 
         /// <summary>
         /// Query a list of Messaging Campaigns
@@ -2411,9 +2412,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <param name="contentTemplateId">Content template ID (optional)</param>
         /// <param name="campaignStatus">Campaign Status (optional)</param>
+        /// <param name="ruleSetIds">Ruleset ID(s) (optional)</param>
         /// <returns>ApiResponse of MessagingCampaignEntityListing</returns>
         
-        ApiResponse<MessagingCampaignEntityListing> GetOutboundMessagingcampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null);
+        ApiResponse<MessagingCampaignEntityListing> GetOutboundMessagingcampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null);
 
         /// <summary>
         /// Get a basic Messaging Campaign information object
@@ -6996,9 +6998,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <param name="contentTemplateId">Content template ID (optional)</param>
         /// <param name="campaignStatus">Campaign Status (optional)</param>
+        /// <param name="ruleSetIds">Ruleset ID(s) (optional)</param>
         /// <returns>Task of MessagingCampaignEntityListing</returns>
         
-        System.Threading.Tasks.Task<MessagingCampaignEntityListing> GetOutboundMessagingcampaignsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null);
+        System.Threading.Tasks.Task<MessagingCampaignEntityListing> GetOutboundMessagingcampaignsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null);
 
         /// <summary>
         /// Query a list of Messaging Campaigns
@@ -7019,9 +7022,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <param name="contentTemplateId">Content template ID (optional)</param>
         /// <param name="campaignStatus">Campaign Status (optional)</param>
+        /// <param name="ruleSetIds">Ruleset ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (MessagingCampaignEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<MessagingCampaignEntityListing>> GetOutboundMessagingcampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null);
+        System.Threading.Tasks.Task<ApiResponse<MessagingCampaignEntityListing>> GetOutboundMessagingcampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null);
 
         /// <summary>
         /// Get a basic Messaging Campaign information object
@@ -27205,11 +27209,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <param name="contentTemplateId">Content template ID (optional)</param>
         /// <param name="campaignStatus">Campaign Status (optional)</param>
+        /// <param name="ruleSetIds">Ruleset ID(s) (optional)</param>
         /// <returns>MessagingCampaignEntityListing</returns>
         
-        public MessagingCampaignEntityListing GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null)
+        public MessagingCampaignEntityListing GetOutboundMessagingcampaigns (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null)
         {
-             ApiResponse<MessagingCampaignEntityListing> localVarResponse = GetOutboundMessagingcampaignsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id, contentTemplateId, campaignStatus);
+             ApiResponse<MessagingCampaignEntityListing> localVarResponse = GetOutboundMessagingcampaignsWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id, contentTemplateId, campaignStatus, ruleSetIds);
              return localVarResponse.Data;
         }
 
@@ -27230,9 +27235,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <param name="contentTemplateId">Content template ID (optional)</param>
         /// <param name="campaignStatus">Campaign Status (optional)</param>
+        /// <param name="ruleSetIds">Ruleset ID(s) (optional)</param>
         /// <returns>ApiResponse of MessagingCampaignEntityListing</returns>
         
-        public ApiResponse< MessagingCampaignEntityListing > GetOutboundMessagingcampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null)
+        public ApiResponse< MessagingCampaignEntityListing > GetOutboundMessagingcampaignsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null)
         { 
 
             var localVarPath = "/api/v2/outbound/messagingcampaigns";
@@ -27280,6 +27286,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (contentTemplateId != null) localVarQueryParams.Add(new Tuple<string, string>("contentTemplateId", this.Configuration.ApiClient.ParameterToString(contentTemplateId)));
             if (campaignStatus != null) localVarQueryParams.Add(new Tuple<string, string>("campaignStatus", this.Configuration.ApiClient.ParameterToString(campaignStatus)));
+            if (ruleSetIds != null) ruleSetIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ruleSetIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -27334,11 +27341,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <param name="contentTemplateId">Content template ID (optional)</param>
         /// <param name="campaignStatus">Campaign Status (optional)</param>
+        /// <param name="ruleSetIds">Ruleset ID(s) (optional)</param>
         /// <returns>Task of MessagingCampaignEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<MessagingCampaignEntityListing> GetOutboundMessagingcampaignsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null)
+        public async System.Threading.Tasks.Task<MessagingCampaignEntityListing> GetOutboundMessagingcampaignsAsync (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null)
         {
-             ApiResponse<MessagingCampaignEntityListing> localVarResponse = await GetOutboundMessagingcampaignsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id, contentTemplateId, campaignStatus);
+             ApiResponse<MessagingCampaignEntityListing> localVarResponse = await GetOutboundMessagingcampaignsAsyncWithHttpInfo(pageSize, pageNumber, sortBy, sortOrder, name, contactListId, divisionId, type, senderSmsPhoneNumber, id, contentTemplateId, campaignStatus, ruleSetIds);
              return localVarResponse.Data;
 
         }
@@ -27360,9 +27368,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">A list of messaging campaign ids to bulk fetch (optional)</param>
         /// <param name="contentTemplateId">Content template ID (optional)</param>
         /// <param name="campaignStatus">Campaign Status (optional)</param>
+        /// <param name="ruleSetIds">Ruleset ID(s) (optional)</param>
         /// <returns>Task of ApiResponse (MessagingCampaignEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignEntityListing>> GetOutboundMessagingcampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null)
+        public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignEntityListing>> GetOutboundMessagingcampaignsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null)
         { 
 
             var localVarPath = "/api/v2/outbound/messagingcampaigns";
@@ -27410,6 +27419,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (contentTemplateId != null) localVarQueryParams.Add(new Tuple<string, string>("contentTemplateId", this.Configuration.ApiClient.ParameterToString(contentTemplateId)));
             if (campaignStatus != null) localVarQueryParams.Add(new Tuple<string, string>("campaignStatus", this.Configuration.ApiClient.ParameterToString(campaignStatus)));
+            if (ruleSetIds != null) ruleSetIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ruleSetIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

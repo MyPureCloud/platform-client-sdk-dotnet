@@ -108,7 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkitemQueryJobFilter" /> class.
         /// </summary>
-        /// <param name="Name">Attribute name. (required).</param>
+        /// <param name="Name">Attribute name. Valid filter names are: &#39;workbinId&#39;, &#39;id&#39;, &#39;typeId&#39;, &#39;priority&#39;, &#39;dateCreated&#39;, &#39;dateDue&#39;, &#39;statusId&#39;, &#39;dateClosed&#39;, &#39;externalContactId&#39;, &#39;assigneeId&#39;, &#39;assignmentState&#39;, &#39;queueId&#39;, &#39;externalTag&#39;, &#39;divisionId&#39; (required).</param>
         /// <param name="Operator">Filter operator. (required).</param>
         /// <param name="Values">List of values to be used in the filter. (required).</param>
         public WorkitemQueryJobFilter(string Name = null, OperatorEnum? Operator = null, List<string> Values = null)
@@ -122,9 +122,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Attribute name.
+        /// Attribute name. Valid filter names are: &#39;workbinId&#39;, &#39;id&#39;, &#39;typeId&#39;, &#39;priority&#39;, &#39;dateCreated&#39;, &#39;dateDue&#39;, &#39;statusId&#39;, &#39;dateClosed&#39;, &#39;externalContactId&#39;, &#39;assigneeId&#39;, &#39;assignmentState&#39;, &#39;queueId&#39;, &#39;externalTag&#39;, &#39;divisionId&#39;
         /// </summary>
-        /// <value>Attribute name.</value>
+        /// <value>Attribute name. Valid filter names are: &#39;workbinId&#39;, &#39;id&#39;, &#39;typeId&#39;, &#39;priority&#39;, &#39;dateCreated&#39;, &#39;dateDue&#39;, &#39;statusId&#39;, &#39;dateClosed&#39;, &#39;externalContactId&#39;, &#39;assigneeId&#39;, &#39;assignmentState&#39;, &#39;queueId&#39;, &#39;externalTag&#39;, &#39;divisionId&#39;</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

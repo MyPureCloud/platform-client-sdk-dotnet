@@ -51,6 +51,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Acdwrapupcode,
             
             /// <summary>
+            /// Enum Agenticvirtualagent for "AGENTICVIRTUALAGENT"
+            /// </summary>
+            [EnumMember(Value = "AGENTICVIRTUALAGENT")]
+            Agenticvirtualagent,
+            
+            /// <summary>
+            /// Enum Agenticvirtualagentversion for "AGENTICVIRTUALAGENTVERSION"
+            /// </summary>
+            [EnumMember(Value = "AGENTICVIRTUALAGENTVERSION")]
+            Agenticvirtualagentversion,
+            
+            /// <summary>
             /// Enum Audioconnectorbot for "AUDIOCONNECTORBOT"
             /// </summary>
             [EnumMember(Value = "AUDIOCONNECTORBOT")]

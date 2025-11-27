@@ -3171,6 +3171,7 @@ docs/GetEmailsSettingsThreading-example.txt
 docs/GetEmailsSettingsThreading-example.txt
 docs/GetEmployeeengagementCelebrations-example.txt
 docs/GetEmployeeengagementRecognition-example.txt
+docs/GetEmployeeengagementRecognitions-example.txt
 docs/GetEmployeeperformanceExternalmetricsDefinition-example.txt
 docs/GetEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/GetExternalcontactsContact-example.txt
@@ -7273,6 +7274,7 @@ docs/RecipientListing.md
 docs/RecipientRequest.md
 docs/Recognition.md
 docs/RecognitionBase.md
+docs/Recognitions.md
 docs/Record.md
 docs/RecordersState.md
 docs/Recording.md
@@ -7303,6 +7305,8 @@ docs/RecordingJobEntityListing.md
 docs/RecordingJobFailedRecording.md
 docs/RecordingJobsQuery.md
 docs/RecordingLocation.md
+docs/RecordingMessageReceipt.md
+docs/RecordingMessageReceiptReason.md
 docs/RecordingMessagingMessage.md
 docs/RecordingMetadata.md
 docs/RecordingNotificationTemplate.md
@@ -13179,6 +13183,7 @@ src/PureCloudPlatform.Client.V2/Model/RecipientListing.cs
 src/PureCloudPlatform.Client.V2/Model/RecipientRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Recognition.cs
 src/PureCloudPlatform.Client.V2/Model/RecognitionBase.cs
+src/PureCloudPlatform.Client.V2/Model/Recognitions.cs
 src/PureCloudPlatform.Client.V2/Model/Record.cs
 src/PureCloudPlatform.Client.V2/Model/RecordersState.cs
 src/PureCloudPlatform.Client.V2/Model/Recording.cs
@@ -13207,6 +13212,8 @@ src/PureCloudPlatform.Client.V2/Model/RecordingJobEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingJobFailedRecording.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingJobsQuery.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingLocation.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingMessageReceipt.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingMessageReceiptReason.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingMessagingMessage.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingNotificationTemplate.cs
