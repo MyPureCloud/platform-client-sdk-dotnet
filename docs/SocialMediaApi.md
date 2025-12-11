@@ -890,7 +890,7 @@ namespace Example
 
 ## GetSocialmediaTopic
 
-> [**SocialTopicResponse**](SocialTopicResponse) GetSocialmediaTopic (string topicId, bool? includeDeleted = null)
+> [**SocialTopicWithDataIngestionRuleMetadataResponse**](SocialTopicWithDataIngestionRuleMetadataResponse) GetSocialmediaTopic (string topicId, bool? includeDeleted = null)
 
 
 Get a single social topic.
@@ -927,7 +927,7 @@ namespace Example
             try
             { 
                 // Get a single social topic.
-                SocialTopicResponse result = apiInstance.GetSocialmediaTopic(topicId, includeDeleted);
+                SocialTopicWithDataIngestionRuleMetadataResponse result = apiInstance.GetSocialmediaTopic(topicId, includeDeleted);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -949,7 +949,7 @@ namespace Example
 
 ### Return type
 
-[**SocialTopicResponse**](SocialTopicResponse)
+[**SocialTopicWithDataIngestionRuleMetadataResponse**](SocialTopicWithDataIngestionRuleMetadataResponse)
 
 
 ## GetSocialmediaTopicDataingestionrules
@@ -1838,7 +1838,7 @@ namespace Example
 
 ## GetSocialmediaTopics
 
-> [**SocialTopicResponseEntityListing**](SocialTopicResponseEntityListing) GetSocialmediaTopics (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null)
+> [**SocialTopicResponseEntityListing**](SocialTopicResponseEntityListing) GetSocialmediaTopics (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null)
 
 
 Retrieve all social topics.
@@ -1873,11 +1873,12 @@ namespace Example
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var divisionIds = new List<string>(); // List<string> | One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional) 
             var includeDeleted = true;  // bool? | Determines whether to include soft-deleted items in the result. (optional) 
+            var name = name_example;  // string | Search for topic by name that contains the given search string, search is case insensitive (optional) 
 
             try
             { 
                 // Retrieve all social topics.
-                SocialTopicResponseEntityListing result = apiInstance.GetSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted);
+                SocialTopicResponseEntityListing result = apiInstance.GetSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted, name);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1898,6 +1899,7 @@ namespace Example
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **divisionIds** | [**List<string>**](string)| One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. | [optional]  |
 | **includeDeleted** | **bool?**| Determines whether to include soft-deleted items in the result. | [optional]  |
+| **name** | **string**| Search for topic by name that contains the given search string, search is case insensitive | [optional]  |
 
 ### Return type
 
@@ -3326,4 +3328,4 @@ namespace Example
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

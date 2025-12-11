@@ -1889,7 +1889,7 @@ namespace Example
 
 Retrieve a list of the latest published evaluation form versions by context ids
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * quality:evaluationForm:view
 
@@ -2155,7 +2155,7 @@ namespace Example
 
 Retrieve a list of survey forms by their ids
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * quality:surveyForm:view
 
@@ -2217,7 +2217,7 @@ namespace Example
 
 Retrieve a list of the latest form versions by context ids
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * quality:surveyForm:view
 
@@ -4308,4 +4308,4 @@ namespace Example
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

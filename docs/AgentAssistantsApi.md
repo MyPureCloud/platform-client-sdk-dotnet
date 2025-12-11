@@ -9,10 +9,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAssistant**](#DeleteAssistant) | **Delete** /api/v2/assistants/{assistantId} | Delete an assistant. |
 | [**DeleteAssistantQueue**](#DeleteAssistantQueue) | **Delete** /api/v2/assistants/{assistantId}/queues/{queueId} | Disassociate a queue from an assistant. |
 | [**DeleteAssistantQueues**](#DeleteAssistantQueues) | **Delete** /api/v2/assistants/{assistantId}/queues | Disassociate the queues from an assistant for the given assistant ID and queue IDs. |
+| [**DeleteAssistantsAgentchecklist**](#DeleteAssistantsAgentchecklist) | **Delete** /api/v2/assistants/agentchecklists/{agentChecklistId} | Delete an agent checklist |
 | [**GetAssistant**](#GetAssistant) | **Get** /api/v2/assistants/{assistantId} | Get an assistant. |
 | [**GetAssistantQueue**](#GetAssistantQueue) | **Get** /api/v2/assistants/{assistantId}/queues/{queueId} | Get queue Information for an assistant. |
 | [**GetAssistantQueues**](#GetAssistantQueues) | **Get** /api/v2/assistants/{assistantId}/queues | Get all the queues associated with an assistant. |
 | [**GetAssistants**](#GetAssistants) | **Get** /api/v2/assistants | Get all assistants. |
+| [**GetAssistantsAgentchecklist**](#GetAssistantsAgentchecklist) | **Get** /api/v2/assistants/agentchecklists/{agentChecklistId} | Get an agent checklist |
+| [**GetAssistantsAgentchecklists**](#GetAssistantsAgentchecklists) | **Get** /api/v2/assistants/agentchecklists | Get the list of agent checklists |
+| [**GetAssistantsAgentchecklistsLanguages**](#GetAssistantsAgentchecklistsLanguages) | **Get** /api/v2/assistants/agentchecklists/languages | Get the list of supported languages |
 | [**GetAssistantsQueues**](#GetAssistantsQueues) | **Get** /api/v2/assistants/queues | Get all queues assigned to any assistant. |
 | [**PatchAssistant**](#PatchAssistant) | **Patch** /api/v2/assistants/{assistantId} | Update an assistant. |
 | [**PatchAssistantQueues**](#PatchAssistantQueues) | **Patch** /api/v2/assistants/{assistantId}/queues | Update Queues for an Assistant. |
@@ -20,7 +24,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAssistantQueueUsersBulkRemove**](#PostAssistantQueueUsersBulkRemove) | **Post** /api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/remove | Bulk remove users from assistant-queue (requires manual assignment mode). |
 | [**PostAssistantQueueUsersQuery**](#PostAssistantQueueUsersQuery) | **Post** /api/v2/assistants/{assistantId}/queues/{queueId}/users/query | Query for users in the assistant-queue (requires manual assignment mode). |
 | [**PostAssistants**](#PostAssistants) | **Post** /api/v2/assistants | Create an Assistant. |
+| [**PostAssistantsAgentchecklists**](#PostAssistantsAgentchecklists) | **Post** /api/v2/assistants/agentchecklists | Create an agent checklist |
 | [**PutAssistantQueue**](#PutAssistantQueue) | **Put** /api/v2/assistants/{assistantId}/queues/{queueId} | Create a queue assistant association. |
+| [**PutAssistantsAgentchecklist**](#PutAssistantsAgentchecklist) | **Put** /api/v2/assistants/agentchecklists/{agentChecklistId} | Update an agent checklist |
 
 
 
@@ -205,6 +211,67 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
 | **queueIds** | **string**| Comma-separated identifiers of the queues that need to be deleted. | [optional]  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteAssistantsAgentchecklist
+
+> void DeleteAssistantsAgentchecklist (string agentChecklistId)
+
+
+Delete an agent checklist
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAssistantsAgentchecklistExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+            var agentChecklistId = agentChecklistId_example;  // string | Agent Checklist ID
+
+            try
+            { 
+                // Delete an agent checklist
+                apiInstance.DeleteAssistantsAgentchecklist(agentChecklistId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.DeleteAssistantsAgentchecklist: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentChecklistId** | **string**| Agent Checklist ID |  |
 
 ### Return type
 
@@ -481,6 +548,199 @@ namespace Example
 ### Return type
 
 [**AssistantListing**](AssistantListing)
+
+
+## GetAssistantsAgentchecklist
+
+> [**AgentChecklist**](AgentChecklist) GetAssistantsAgentchecklist (string agentChecklistId)
+
+
+Get an agent checklist
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAssistantsAgentchecklistExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+            var agentChecklistId = agentChecklistId_example;  // string | Agent Checklist ID
+
+            try
+            { 
+                // Get an agent checklist
+                AgentChecklist result = apiInstance.GetAssistantsAgentchecklist(agentChecklistId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.GetAssistantsAgentchecklist: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentChecklistId** | **string**| Agent Checklist ID |  |
+
+### Return type
+
+[**AgentChecklist**](AgentChecklist)
+
+
+## GetAssistantsAgentchecklists
+
+> [**AgentChecklistListing**](AgentChecklistListing) GetAssistantsAgentchecklists (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null)
+
+
+Get the list of agent checklists
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAssistantsAgentchecklistsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | The page size for the listing. The max that will be returned is 100. (optional)  (default to "25")
+            var namePrefix = namePrefix_example;  // string | The agent checklist name prefix filter applied to the listing. (optional) 
+            var language = language_example;  // string | The agent checklist language filter applied to the listing. (optional) 
+            var sortOrder = sortOrder_example;  // string | The sort order for the listing (optional) 
+            var sortBy = sortBy_example;  // string | The field to sort by for the listing. (optional) 
+
+            try
+            { 
+                // Get the list of agent checklists
+                AgentChecklistListing result = apiInstance.GetAssistantsAgentchecklists(before, after, pageSize, namePrefix, language, sortOrder, sortBy);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.GetAssistantsAgentchecklists: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| The page size for the listing. The max that will be returned is 100. | [optional] [default to "25"] |
+| **namePrefix** | **string**| The agent checklist name prefix filter applied to the listing. | [optional]  |
+| **language** | **string**| The agent checklist language filter applied to the listing. | [optional]  |
+| **sortOrder** | **string**| The sort order for the listing | [optional] <br />**Values**: asc, desc |
+| **sortBy** | **string**| The field to sort by for the listing. | [optional] <br />**Values**: dateModified, language, name |
+
+### Return type
+
+[**AgentChecklistListing**](AgentChecklistListing)
+
+
+## GetAssistantsAgentchecklistsLanguages
+
+> [**EntityListing**](EntityListing) GetAssistantsAgentchecklistsLanguages ()
+
+
+Get the list of supported languages
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAssistantsAgentchecklistsLanguagesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+
+            try
+            { 
+                // Get the list of supported languages
+                EntityListing result = apiInstance.GetAssistantsAgentchecklistsLanguages();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.GetAssistantsAgentchecklistsLanguages: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**EntityListing**](EntityListing)
 
 
 ## GetAssistantsQueues
@@ -943,6 +1203,68 @@ namespace Example
 [**Assistant**](Assistant)
 
 
+## PostAssistantsAgentchecklists
+
+> [**AgentChecklist**](AgentChecklist) PostAssistantsAgentchecklists (AgentChecklist body)
+
+
+Create an agent checklist
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAssistantsAgentchecklistsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+            var body = new AgentChecklist(); // AgentChecklist | Request body containing details of checklist to be added
+
+            try
+            { 
+                // Create an agent checklist
+                AgentChecklist result = apiInstance.PostAssistantsAgentchecklists(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.PostAssistantsAgentchecklists: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**AgentChecklist**](AgentChecklist)| Request body containing details of checklist to be added |  |
+
+### Return type
+
+[**AgentChecklist**](AgentChecklist)
+
+
 ## PutAssistantQueue
 
 > [**AssistantQueue**](AssistantQueue) PutAssistantQueue (string assistantId, string queueId, AssistantQueue body)
@@ -1009,4 +1331,68 @@ namespace Example
 [**AssistantQueue**](AssistantQueue)
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+## PutAssistantsAgentchecklist
+
+> [**AgentChecklist**](AgentChecklist) PutAssistantsAgentchecklist (string agentChecklistId, AgentChecklist body)
+
+
+Update an agent checklist
+
+Requires ALL permissions: 
+
+* assistants:agentchecklist:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutAssistantsAgentchecklistExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+            var agentChecklistId = agentChecklistId_example;  // string | Agent Checklist ID
+            var body = new AgentChecklist(); // AgentChecklist | Request body containing details of checklist to be updated
+
+            try
+            { 
+                // Update an agent checklist
+                AgentChecklist result = apiInstance.PutAssistantsAgentchecklist(agentChecklistId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.PutAssistantsAgentchecklist: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentChecklistId** | **string**| Agent Checklist ID |  |
+| **body** | [**AgentChecklist**](AgentChecklist)| Request body containing details of checklist to be updated |  |
+
+### Return type
+
+[**AgentChecklist**](AgentChecklist)
+
+
+_PureCloudPlatform.Client.V2 251.0.0_

@@ -31,6 +31,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsConversationsDetailsJobResults**](#GetAnalyticsConversationsDetailsJobResults) | **Get** /api/v2/analytics/conversations/details/jobs/{jobId}/results | Fetch a page of results for an async details job |
 | [**GetAnalyticsConversationsDetailsJobsAvailability**](#GetAnalyticsConversationsDetailsJobsAvailability) | **Get** /api/v2/analytics/conversations/details/jobs/availability | Lookup the datalake availability date and time |
 | [**GetConversation**](#GetConversation) | **Get** /api/v2/conversations/{conversationId} | Get conversation |
+| [**GetConversationCommunicationAgentchecklist**](#GetConversationCommunicationAgentchecklist) | **Get** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists/{agentChecklistId} | Get checklist info for a single checklist. |
+| [**GetConversationCommunicationAgentchecklistJob**](#GetConversationCommunicationAgentchecklistJob) | **Get** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists/{agentChecklistId}/jobs/{jobId} | Get inference job status |
+| [**GetConversationCommunicationAgentchecklists**](#GetConversationCommunicationAgentchecklists) | **Get** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists | Get information of all checklists associated with a conversation. |
 | [**GetConversationCommunicationInternalmessage**](#GetConversationCommunicationInternalmessage) | **Get** /api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages/{messageId} | Get message |
 | [**GetConversationCommunicationInternalmessages**](#GetConversationCommunicationInternalmessages) | **Get** /api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages | Get messages for communication |
 | [**GetConversationParticipantSecureivrsession**](#GetConversationParticipantSecureivrsession) | **Get** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId} | Fetch info on a secure session |
@@ -184,15 +187,19 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationAssign**](#PostConversationAssign) | **Post** /api/v2/conversations/{conversationId}/assign | Attempts to manually assign a specified conversation to a specified user.  Ignores bullseye ring, PAR score, skills, and languages. |
 | [**PostConversationBarge**](#PostConversationBarge) | **Post** /api/v2/conversations/{conversationId}/barge | Barge a conversation creating a barged in conference of connected participants. |
 | [**PostConversationCobrowse**](#PostConversationCobrowse) | **Post** /api/v2/conversations/{conversationId}/cobrowse | Creates a cobrowse session. Requires \&quot;conversation:cobrowse:add\&quot; (for web messaging) or \&quot;conversation:cobrowsevoice:add\&quot; permission. |
+| [**PostConversationCommunicationAgentchecklist**](#PostConversationCommunicationAgentchecklist) | **Post** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists/{agentChecklistId} | Agent Checklist activation API |
+| [**PostConversationCommunicationAgentchecklistAgentaction**](#PostConversationCommunicationAgentchecklistAgentaction) | **Post** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists/{agentChecklistId}/agentaction | API invoked to capture an agent action. |
+| [**PostConversationCommunicationAgentchecklistJobs**](#PostConversationCommunicationAgentchecklistJobs) | **Post** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists/{agentChecklistId}/jobs | Create inference job |
+| [**PostConversationCommunicationAgentchecklistsFinalize**](#PostConversationCommunicationAgentchecklistsFinalize) | **Post** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists/finalize | API invoked to finalize agent checklist evaluation. |
 | [**PostConversationCommunicationInternalmessages**](#PostConversationCommunicationInternalmessages) | **Post** /api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages | Send internal message |
 | [**PostConversationDisconnect**](#PostConversationDisconnect) | **Post** /api/v2/conversations/{conversationId}/disconnect | Performs a full conversation teardown. Issues disconnect requests for any connected media. Applies a system wrap-up code to any participants that are pending wrap-up. This is not intended to be the normal way of ending interactions but is available in the event of problems with the application to allow a resynchronization of state across all components. It is recommended that users submit a support case if they are relying on this endpoint systematically as there is likely something that needs investigation. |
 | [**PostConversationParticipantCallbacks**](#PostConversationParticipantCallbacks) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/callbacks | Create a new callback for the specified participant on the conversation. |
 | [**PostConversationParticipantDigits**](#PostConversationParticipantDigits) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/digits | Sends DTMF to the participant |
 | [**PostConversationParticipantInternalmessagesUsersCommunications**](#PostConversationParticipantInternalmessagesUsersCommunications) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/internalmessages/users/communications | Setup internal message communication with user |
-| [**PostConversationParticipantReplace**](#PostConversationParticipantReplace) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationParticipantReplace**](#PostConversationParticipantReplace) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace | Replace this participant (Deprecated) |
 | [**PostConversationParticipantReplaceAgent**](#PostConversationParticipantReplaceAgent) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent | Replace this participant with the specified agent |
 | [**PostConversationParticipantReplaceContactExternal**](#PostConversationParticipantReplaceContactExternal) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/contact/external | Replace this participant with the an external contact |
-| [**PostConversationParticipantReplaceExternal**](#PostConversationParticipantReplaceExternal) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external | Replace this participant with the an external contact |
+| [**PostConversationParticipantReplaceExternal**](#PostConversationParticipantReplaceExternal) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/external | Replace this participant with the an external contact (Deprecated) |
 | [**PostConversationParticipantReplaceQueue**](#PostConversationParticipantReplaceQueue) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue | Replace this participant with the specified queue |
 | [**PostConversationParticipantSecureivrsessions**](#PostConversationParticipantSecureivrsessions) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions | Create secure IVR session. Only a participant in the conversation can invoke a secure IVR. |
 | [**PostConversationParticipantTransfer**](#PostConversationParticipantTransfer) | **Post** /api/v2/conversations/{conversationId}/participants/{participantId}/transfer | Replace this participant by another one using the address of the destination. |
@@ -203,10 +210,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsCallParticipantBarge**](#PostConversationsCallParticipantBarge) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/barge | Barge a given participant&#39;s call creating a barged in conference of connected participants. |
 | [**PostConversationsCallParticipantCoach**](#PostConversationsCallParticipantCoach) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach | Listen in on the conversation from the point of view of a given participant while speaking to just the given participant. |
 | [**PostConversationsCallParticipantCommunicationWrapup**](#PostConversationsCallParticipantCommunicationWrapup) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup | Apply wrap-up for this conversation communication |
-| [**PostConversationsCallParticipantConsult**](#PostConversationsCallParticipantConsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer |
+| [**PostConversationsCallParticipantConsult**](#PostConversationsCallParticipantConsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult | Initiate and update consult transfer (Deprecated) |
 | [**PostConversationsCallParticipantConsultAgent**](#PostConversationsCallParticipantConsultAgent) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent | Initiate a consult transfer to an agent |
 | [**PostConversationsCallParticipantConsultContactExternal**](#PostConversationsCallParticipantConsultContactExternal) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/contact/external | Initiate a consult transfer to an external contact |
-| [**PostConversationsCallParticipantConsultExternal**](#PostConversationsCallParticipantConsultExternal) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external | Initiate a consult transfer to an external contact |
+| [**PostConversationsCallParticipantConsultExternal**](#PostConversationsCallParticipantConsultExternal) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external | Initiate a consult transfer to an external contact (Deprecated) |
 | [**PostConversationsCallParticipantConsultQueue**](#PostConversationsCallParticipantConsultQueue) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue | Initiate a consult transfer to a queue |
 | [**PostConversationsCallParticipantMonitor**](#PostConversationsCallParticipantMonitor) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
 | [**PostConversationsCallParticipantReplace**](#PostConversationsCallParticipantReplace) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
@@ -1845,6 +1852,204 @@ namespace Example
 ### Return type
 
 [**Conversation**](Conversation)
+
+
+## GetConversationCommunicationAgentchecklist
+
+> [**AgentChecklistResponse**](AgentChecklistResponse) GetConversationCommunicationAgentchecklist (string conversationId, string communicationId, string agentChecklistId)
+
+
+Get checklist info for a single checklist.
+
+Requires ALL permissions: 
+
+* conversation:agentchecklist:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationCommunicationAgentchecklistExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var communicationId = communicationId_example;  // string | Communication ID
+            var agentChecklistId = agentChecklistId_example;  // string | Agent Checklist ID
+
+            try
+            { 
+                // Get checklist info for a single checklist.
+                AgentChecklistResponse result = apiInstance.GetConversationCommunicationAgentchecklist(conversationId, communicationId, agentChecklistId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationCommunicationAgentchecklist: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **communicationId** | **string**| Communication ID |  |
+| **agentChecklistId** | **string**| Agent Checklist ID |  |
+
+### Return type
+
+[**AgentChecklistResponse**](AgentChecklistResponse)
+
+
+## GetConversationCommunicationAgentchecklistJob
+
+> [**ChecklistInferenceJobResponse**](ChecklistInferenceJobResponse) GetConversationCommunicationAgentchecklistJob (string conversationId, string communicationId, string agentChecklistId, string jobId)
+
+
+Get inference job status
+
+Requires ALL permissions: 
+
+* conversation:agentchecklist:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationCommunicationAgentchecklistJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var communicationId = communicationId_example;  // string | Communication ID
+            var agentChecklistId = agentChecklistId_example;  // string | Agent Checklist ID
+            var jobId = jobId_example;  // string | Inference Job ID
+
+            try
+            { 
+                // Get inference job status
+                ChecklistInferenceJobResponse result = apiInstance.GetConversationCommunicationAgentchecklistJob(conversationId, communicationId, agentChecklistId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationCommunicationAgentchecklistJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **communicationId** | **string**| Communication ID |  |
+| **agentChecklistId** | **string**| Agent Checklist ID |  |
+| **jobId** | **string**| Inference Job ID |  |
+
+### Return type
+
+[**ChecklistInferenceJobResponse**](ChecklistInferenceJobResponse)
+
+
+## GetConversationCommunicationAgentchecklists
+
+> [**AgentChecklistResponseList**](AgentChecklistResponseList) GetConversationCommunicationAgentchecklists (string conversationId, string communicationId)
+
+
+Get information of all checklists associated with a conversation.
+
+Requires ALL permissions: 
+
+* conversation:agentchecklist:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationCommunicationAgentchecklistsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var communicationId = communicationId_example;  // string | Communication ID
+
+            try
+            { 
+                // Get information of all checklists associated with a conversation.
+                AgentChecklistResponseList result = apiInstance.GetConversationCommunicationAgentchecklists(conversationId, communicationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationCommunicationAgentchecklists: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **communicationId** | **string**| Communication ID |  |
+
+### Return type
+
+[**AgentChecklistResponseList**](AgentChecklistResponseList)
 
 
 ## GetConversationCommunicationInternalmessage
@@ -11740,6 +11945,276 @@ namespace Example
 [**CobrowseWebMessagingSession**](CobrowseWebMessagingSession)
 
 
+## PostConversationCommunicationAgentchecklist
+
+> [**AgentChecklistResponse**](AgentChecklistResponse) PostConversationCommunicationAgentchecklist (string conversationId, string communicationId, string agentChecklistId, ChecklistActivationPayload body)
+
+
+Agent Checklist activation API
+
+Requires ALL permissions: 
+
+* conversation:agentchecklist:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationCommunicationAgentchecklistExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var communicationId = communicationId_example;  // string | Communication ID
+            var agentChecklistId = agentChecklistId_example;  // string | Agent Checklist ID
+            var body = new ChecklistActivationPayload(); // ChecklistActivationPayload | Agent checklist activation payload
+
+            try
+            { 
+                // Agent Checklist activation API
+                AgentChecklistResponse result = apiInstance.PostConversationCommunicationAgentchecklist(conversationId, communicationId, agentChecklistId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationCommunicationAgentchecklist: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **communicationId** | **string**| Communication ID |  |
+| **agentChecklistId** | **string**| Agent Checklist ID |  |
+| **body** | [**ChecklistActivationPayload**](ChecklistActivationPayload)| Agent checklist activation payload |  |
+
+### Return type
+
+[**AgentChecklistResponse**](AgentChecklistResponse)
+
+
+## PostConversationCommunicationAgentchecklistAgentaction
+
+> [**AgentChecklistResponse**](AgentChecklistResponse) PostConversationCommunicationAgentchecklistAgentaction (string conversationId, string communicationId, string agentChecklistId, AgentActionPayload body)
+
+
+API invoked to capture an agent action.
+
+Requires ALL permissions: 
+
+* conversation:agentchecklist:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationCommunicationAgentchecklistAgentactionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var communicationId = communicationId_example;  // string | Communication ID
+            var agentChecklistId = agentChecklistId_example;  // string | Agent Checklist ID
+            var body = new AgentActionPayload(); // AgentActionPayload | Agent action payload
+
+            try
+            { 
+                // API invoked to capture an agent action.
+                AgentChecklistResponse result = apiInstance.PostConversationCommunicationAgentchecklistAgentaction(conversationId, communicationId, agentChecklistId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationCommunicationAgentchecklistAgentaction: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **communicationId** | **string**| Communication ID |  |
+| **agentChecklistId** | **string**| Agent Checklist ID |  |
+| **body** | [**AgentActionPayload**](AgentActionPayload)| Agent action payload |  |
+
+### Return type
+
+[**AgentChecklistResponse**](AgentChecklistResponse)
+
+
+## PostConversationCommunicationAgentchecklistJobs
+
+> [**ChecklistInferenceJobCreationResponse**](ChecklistInferenceJobCreationResponse) PostConversationCommunicationAgentchecklistJobs (string conversationId, string communicationId, string agentChecklistId, ChecklistInferenceJobPayload body)
+
+
+Create inference job
+
+Requires ALL permissions: 
+
+* conversation:agentchecklist:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationCommunicationAgentchecklistJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var communicationId = communicationId_example;  // string | Communication ID
+            var agentChecklistId = agentChecklistId_example;  // string | Agent Checklist ID
+            var body = new ChecklistInferenceJobPayload(); // ChecklistInferenceJobPayload | Agent checklist inference job payload
+
+            try
+            { 
+                // Create inference job
+                ChecklistInferenceJobCreationResponse result = apiInstance.PostConversationCommunicationAgentchecklistJobs(conversationId, communicationId, agentChecklistId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationCommunicationAgentchecklistJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **communicationId** | **string**| Communication ID |  |
+| **agentChecklistId** | **string**| Agent Checklist ID |  |
+| **body** | [**ChecklistInferenceJobPayload**](ChecklistInferenceJobPayload)| Agent checklist inference job payload |  |
+
+### Return type
+
+[**ChecklistInferenceJobCreationResponse**](ChecklistInferenceJobCreationResponse)
+
+
+## PostConversationCommunicationAgentchecklistsFinalize
+
+> [**AgentChecklistResponseList**](AgentChecklistResponseList) PostConversationCommunicationAgentchecklistsFinalize (string conversationId, string communicationId, ChecklistFinalizePayload body)
+
+
+API invoked to finalize agent checklist evaluation.
+
+Requires ALL permissions: 
+
+* conversation:agentchecklist:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationCommunicationAgentchecklistsFinalizeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID
+            var communicationId = communicationId_example;  // string | Communication ID
+            var body = new ChecklistFinalizePayload(); // ChecklistFinalizePayload | Agent checklist finalize payload
+
+            try
+            { 
+                // API invoked to finalize agent checklist evaluation.
+                AgentChecklistResponseList result = apiInstance.PostConversationCommunicationAgentchecklistsFinalize(conversationId, communicationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationCommunicationAgentchecklistsFinalize: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID |  |
+| **communicationId** | **string**| Communication ID |  |
+| **body** | [**ChecklistFinalizePayload**](ChecklistFinalizePayload)| Agent checklist finalize payload |  |
+
+### Return type
+
+[**AgentChecklistResponseList**](AgentChecklistResponseList)
+
+
 ## PostConversationCommunicationInternalmessages
 
 > [**InternalMessageData**](InternalMessageData) PostConversationCommunicationInternalmessages (string conversationId, string communicationId, InternalMessageRequest body)
@@ -12071,8 +12546,13 @@ namespace Example
 
 > void PostConversationParticipantReplace (string conversationId, string participantId, TransferRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Replace this participant with the specified user and/or address
+Replace this participant (Deprecated)
+
+This endpoint is deprecated. Use one of the following endpoints instead: /transfer, /replace/agent, /replace/queue, or /replace/contact/external.
 
 Requires ANY permissions: 
 
@@ -12106,7 +12586,7 @@ namespace Example
 
             try
             { 
-                // Replace this participant with the specified user and/or address
+                // Replace this participant (Deprecated)
                 apiInstance.PostConversationParticipantReplace(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -12205,8 +12685,6 @@ void (empty response body)
 
 Replace this participant with the an external contact
 
-PostConversationParticipantReplaceContactExternal is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * conversation:communication:blindTransfer
@@ -12270,8 +12748,13 @@ void (empty response body)
 
 > void PostConversationParticipantReplaceExternal (string conversationId, string participantId, TransferToExternalRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Replace this participant with the an external contact
+Replace this participant with the an external contact (Deprecated)
+
+This endpoint is deprecated. Use /replace/contact/external endpoint instead.
 
 Requires ANY permissions: 
 
@@ -12306,7 +12789,7 @@ namespace Example
 
             try
             { 
-                // Replace this participant with the an external contact
+                // Replace this participant with the an external contact (Deprecated)
                 apiInstance.PostConversationParticipantReplaceExternal(conversationId, participantId, body);
             }
             catch (Exception e)
@@ -12469,8 +12952,6 @@ namespace Example
 
 
 Replace this participant by another one using the address of the destination.
-
-PostConversationParticipantTransfer is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -12989,8 +13470,13 @@ void (empty response body)
 
 > [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsult (string conversationId, string participantId, ConsultTransfer body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Initiate and update consult transfer
+Initiate and update consult transfer (Deprecated)
+
+This endpoint is deprecated. Use one of the following endpoints instead: /voice/consult, /consult/agent, /consult/queue, or /consult/contact/external.
 
 Requires ANY permissions: 
 
@@ -13024,7 +13510,7 @@ namespace Example
 
             try
             { 
-                // Initiate and update consult transfer
+                // Initiate and update consult transfer (Deprecated)
                 ConsultTransferResponse result = apiInstance.PostConversationsCallParticipantConsult(conversationId, participantId, body);
                 Debug.WriteLine(result);
             }
@@ -13125,8 +13611,6 @@ namespace Example
 
 Initiate a consult transfer to an external contact
 
-PostConversationsCallParticipantConsultContactExternal is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * conversation:communication:consultTransfer
@@ -13191,8 +13675,13 @@ namespace Example
 
 > [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantConsultExternal (string conversationId, string participantId, ConsultTransferToExternal body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Initiate a consult transfer to an external contact
+Initiate a consult transfer to an external contact (Deprecated)
+
+This endpoint is deprecated. Use /consult/contact/external endpoints instead.
 
 Requires ANY permissions: 
 
@@ -13227,7 +13716,7 @@ namespace Example
 
             try
             { 
-                // Initiate a consult transfer to an external contact
+                // Initiate a consult transfer to an external contact (Deprecated)
                 ConsultTransferResponse result = apiInstance.PostConversationsCallParticipantConsultExternal(conversationId, participantId, body);
                 Debug.WriteLine(result);
             }
@@ -13455,8 +13944,6 @@ void (empty response body)
 
 
 Initiate voice consult transfer
-
-PostConversationsCallParticipantVoiceConsult is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -18871,4 +19358,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

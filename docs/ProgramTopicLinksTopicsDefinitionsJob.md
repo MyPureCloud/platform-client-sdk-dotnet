@@ -9,7 +9,8 @@
 | **Id** | **string** |  | [optional] |
 | **State** | **string** |  | [optional] |
 | **TestTopicPhraseResults** | [**List&lt;ProgramTopicLinksTestTopicPhraseResults&gt;**](ProgramTopicLinksTestTopicPhraseResults) |  | [optional] |
+| **GenAIPhrasesResults** | **List&lt;string&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

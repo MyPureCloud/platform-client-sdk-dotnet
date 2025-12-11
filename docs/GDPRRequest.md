@@ -15,8 +15,9 @@
 | **Status** | **string** | The status of the request | |
 | **Subject** | [**GDPRSubject**](GDPRSubject) | The subject of the GDPR request | |
 | **ResultsUrl** | **string** | The location where the results of the request can be retrieved | [optional] |
+| **ResultsUrls** | **List&lt;string&gt;** | The locations where the results of the request can be retrieved if multiple archive files created | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

@@ -9,6 +9,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAnalyticsActionsAggregatesJob**](#DeleteAnalyticsActionsAggregatesJob) | **Delete** /api/v2/analytics/actions/aggregates/jobs/{jobId} | Delete/cancel an async request for action aggregates |
 | [**DeleteAnalyticsAgentcopilotsAggregatesJob**](#DeleteAnalyticsAgentcopilotsAggregatesJob) | **Delete** /api/v2/analytics/agentcopilots/aggregates/jobs/{jobId} | Delete/cancel an async request for agent copilot aggregates |
 | [**DeleteAnalyticsBotsAggregatesJob**](#DeleteAnalyticsBotsAggregatesJob) | **Delete** /api/v2/analytics/bots/aggregates/jobs/{jobId} | Delete/cancel an async request for bot aggregates |
+| [**DeleteAnalyticsCasemanagementAggregatesJob**](#DeleteAnalyticsCasemanagementAggregatesJob) | **Delete** /api/v2/analytics/casemanagement/aggregates/jobs/{jobId} | Delete/cancel an async request for case management aggregates |
 | [**DeleteAnalyticsConversationsAggregatesJob**](#DeleteAnalyticsConversationsAggregatesJob) | **Delete** /api/v2/analytics/conversations/aggregates/jobs/{jobId} | Delete/cancel an async request for conversation aggregates |
 | [**DeleteAnalyticsConversationsDetailsJob**](#DeleteAnalyticsConversationsDetailsJob) | **Delete** /api/v2/analytics/conversations/details/jobs/{jobId} | Delete/cancel an async details job |
 | [**DeleteAnalyticsEvaluationsAggregatesJob**](#DeleteAnalyticsEvaluationsAggregatesJob) | **Delete** /api/v2/analytics/evaluations/aggregates/jobs/{jobId} | Delete/cancel an async request for evaluation aggregates |
@@ -33,6 +34,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsBotflowSessions**](#GetAnalyticsBotflowSessions) | **Get** /api/v2/analytics/botflows/{botFlowId}/sessions | Get Bot Flow Sessions. |
 | [**GetAnalyticsBotsAggregatesJob**](#GetAnalyticsBotsAggregatesJob) | **Get** /api/v2/analytics/bots/aggregates/jobs/{jobId} | Get status for async query for bot aggregates |
 | [**GetAnalyticsBotsAggregatesJobResults**](#GetAnalyticsBotsAggregatesJobResults) | **Get** /api/v2/analytics/bots/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
+| [**GetAnalyticsCasemanagementAggregatesJob**](#GetAnalyticsCasemanagementAggregatesJob) | **Get** /api/v2/analytics/casemanagement/aggregates/jobs/{jobId} | Get status for async query for case management aggregates |
+| [**GetAnalyticsCasemanagementAggregatesJobResults**](#GetAnalyticsCasemanagementAggregatesJobResults) | **Get** /api/v2/analytics/casemanagement/aggregates/jobs/{jobId}/results | Fetch a page of results for an async case management query |
 | [**GetAnalyticsConversationDetails**](#GetAnalyticsConversationDetails) | **Get** /api/v2/analytics/conversations/{conversationId}/details | Get a conversation by id |
 | [**GetAnalyticsConversationsAggregatesJob**](#GetAnalyticsConversationsAggregatesJob) | **Get** /api/v2/analytics/conversations/aggregates/jobs/{jobId} | Get status for async query for conversation aggregates |
 | [**GetAnalyticsConversationsAggregatesJobResults**](#GetAnalyticsConversationsAggregatesJobResults) | **Get** /api/v2/analytics/conversations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
@@ -84,6 +87,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsAgentsStatusQuery**](#PostAnalyticsAgentsStatusQuery) | **Post** /api/v2/analytics/agents/status/query | Retrieve the top 50 agents matching the query filters |
 | [**PostAnalyticsBotsAggregatesJobs**](#PostAnalyticsBotsAggregatesJobs) | **Post** /api/v2/analytics/bots/aggregates/jobs | Query for bot aggregates asynchronously |
 | [**PostAnalyticsBotsAggregatesQuery**](#PostAnalyticsBotsAggregatesQuery) | **Post** /api/v2/analytics/bots/aggregates/query | Query for bot aggregates |
+| [**PostAnalyticsCasemanagementAggregatesJobs**](#PostAnalyticsCasemanagementAggregatesJobs) | **Post** /api/v2/analytics/casemanagement/aggregates/jobs | Query for case management aggregates asynchronously |
+| [**PostAnalyticsCasemanagementAggregatesQuery**](#PostAnalyticsCasemanagementAggregatesQuery) | **Post** /api/v2/analytics/casemanagement/aggregates/query | Query for case management aggregates |
 | [**PostAnalyticsConversationDetailsProperties**](#PostAnalyticsConversationDetailsProperties) | **Post** /api/v2/analytics/conversations/{conversationId}/details/properties | Index conversation properties |
 | [**PostAnalyticsConversationsActivityQuery**](#PostAnalyticsConversationsActivityQuery) | **Post** /api/v2/analytics/conversations/activity/query | Query for conversation activity observations |
 | [**PostAnalyticsConversationsAggregatesJobs**](#PostAnalyticsConversationsAggregatesJobs) | **Post** /api/v2/analytics/conversations/aggregates/jobs | Query for conversation aggregates asynchronously |
@@ -303,6 +308,69 @@ namespace Example
             catch (Exception e)
             {
                 Debug.Print("Exception when calling AnalyticsApi.DeleteAnalyticsBotsAggregatesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteAnalyticsCasemanagementAggregatesJob
+
+> void DeleteAnalyticsCasemanagementAggregatesJob (string jobId)
+
+
+Delete/cancel an async request for case management aggregates
+
+DeleteAnalyticsCasemanagementAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:caseManagementAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteAnalyticsCasemanagementAggregatesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Delete/cancel an async request for case management aggregates
+                apiInstance.DeleteAnalyticsCasemanagementAggregatesJob(jobId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.DeleteAnalyticsCasemanagementAggregatesJob: " + e.Message );
             }
         }
     }
@@ -1885,6 +1953,136 @@ namespace Example
 ### Return type
 
 [**BotAsyncAggregateQueryResponse**](BotAsyncAggregateQueryResponse)
+
+
+## GetAnalyticsCasemanagementAggregatesJob
+
+> [**AsyncQueryStatus**](AsyncQueryStatus) GetAnalyticsCasemanagementAggregatesJob (string jobId)
+
+
+Get status for async query for case management aggregates
+
+GetAnalyticsCasemanagementAggregatesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:caseManagementAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsCasemanagementAggregatesJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var jobId = jobId_example;  // string | jobId
+
+            try
+            { 
+                // Get status for async query for case management aggregates
+                AsyncQueryStatus result = apiInstance.GetAnalyticsCasemanagementAggregatesJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsCasemanagementAggregatesJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+
+### Return type
+
+[**AsyncQueryStatus**](AsyncQueryStatus)
+
+
+## GetAnalyticsCasemanagementAggregatesJobResults
+
+> [**CaseManagementAsyncAggregateQueryResponse**](CaseManagementAsyncAggregateQueryResponse) GetAnalyticsCasemanagementAggregatesJobResults (string jobId, string cursor = null)
+
+
+Fetch a page of results for an async case management query
+
+GetAnalyticsCasemanagementAggregatesJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:caseManagementAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAnalyticsCasemanagementAggregatesJobResultsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var jobId = jobId_example;  // string | jobId
+            var cursor = cursor_example;  // string | Cursor token to retrieve next page (optional) 
+
+            try
+            { 
+                // Fetch a page of results for an async case management query
+                CaseManagementAsyncAggregateQueryResponse result = apiInstance.GetAnalyticsCasemanagementAggregatesJobResults(jobId, cursor);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.GetAnalyticsCasemanagementAggregatesJobResults: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| jobId |  |
+| **cursor** | **string**| Cursor token to retrieve next page | [optional]  |
+
+### Return type
+
+[**CaseManagementAsyncAggregateQueryResponse**](CaseManagementAsyncAggregateQueryResponse)
 
 
 ## GetAnalyticsConversationDetails
@@ -5166,6 +5364,134 @@ namespace Example
 [**BotAggregateQueryResponse**](BotAggregateQueryResponse)
 
 
+## PostAnalyticsCasemanagementAggregatesJobs
+
+> [**AsyncQueryResponse**](AsyncQueryResponse) PostAnalyticsCasemanagementAggregatesJobs (CaseManagementAsyncAggregationQuery body)
+
+
+Query for case management aggregates asynchronously
+
+PostAnalyticsCasemanagementAggregatesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:caseManagementAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsCasemanagementAggregatesJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new CaseManagementAsyncAggregationQuery(); // CaseManagementAsyncAggregationQuery | query
+
+            try
+            { 
+                // Query for case management aggregates asynchronously
+                AsyncQueryResponse result = apiInstance.PostAnalyticsCasemanagementAggregatesJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsCasemanagementAggregatesJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CaseManagementAsyncAggregationQuery**](CaseManagementAsyncAggregationQuery)| query |  |
+
+### Return type
+
+[**AsyncQueryResponse**](AsyncQueryResponse)
+
+
+## PostAnalyticsCasemanagementAggregatesQuery
+
+> [**CaseManagementAggregateQueryResponse**](CaseManagementAggregateQueryResponse) PostAnalyticsCasemanagementAggregatesQuery (CaseManagementAggregationQuery body)
+
+
+Query for case management aggregates
+
+PostAnalyticsCasemanagementAggregatesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* analytics:caseManagementAggregate:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsCasemanagementAggregatesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new CaseManagementAggregationQuery(); // CaseManagementAggregationQuery | query
+
+            try
+            { 
+                // Query for case management aggregates
+                CaseManagementAggregateQueryResponse result = apiInstance.PostAnalyticsCasemanagementAggregatesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsCasemanagementAggregatesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CaseManagementAggregationQuery**](CaseManagementAggregationQuery)| query |  |
+
+### Return type
+
+[**CaseManagementAggregateQueryResponse**](CaseManagementAggregateQueryResponse)
+
+
 ## PostAnalyticsConversationDetailsProperties
 
 > [**PropertyIndexRequest**](PropertyIndexRequest) PostAnalyticsConversationDetailsProperties (string conversationId, PropertyIndexRequest body)
@@ -7947,4 +8273,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_
