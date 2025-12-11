@@ -23,8 +23,7 @@
 | **PublishResultUri** | **string** |  | [optional] |
 | **InputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument) |  | [optional] |
 | **OutputSchema** | [**JsonSchemaDocument**](JsonSchemaDocument) |  | [optional] |
-| **VirtualAgentEnabled** | **bool?** |  | [optional] |
-| **AgenticVirtualAgentEnabled** | **bool?** |  | [optional] |
+| **VirtualAgentEnabled** | **bool?** | Indicates whether virtual agent is enabled for this flow. | [optional] |
 | **DatePublished** | **DateTime?** | The date this version became the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DatePublishedEnd** | **DateTime?** | The date this version was no longer the published version of the flow. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **NluInfo** | [**NluInfo**](NluInfo) | Information about the natural language understanding configuration for the flow version | [optional] |
@@ -34,4 +33,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

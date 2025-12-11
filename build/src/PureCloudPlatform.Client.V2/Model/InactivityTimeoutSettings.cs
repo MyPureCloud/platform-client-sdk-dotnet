@@ -19,13 +19,72 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class InactivityTimeoutSettings :  IEquatable<InactivityTimeoutSettings>
     {
         /// <summary>
+        /// Action to take when timeout occurs
+        /// </summary>
+        /// <value>Action to take when timeout occurs</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ActionTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Disconnect for "DISCONNECT"
+            /// </summary>
+            [EnumMember(Value = "DISCONNECT")]
+            Disconnect,
+            
+            /// <summary>
+            /// Enum SendToArchitectFlow for "SEND_TO_ARCHITECT_FLOW"
+            /// </summary>
+            [EnumMember(Value = "SEND_TO_ARCHITECT_FLOW")]
+            SendToArchitectFlow
+        }
+        /// <summary>
+        /// Action to take when timeout occurs
+        /// </summary>
+        /// <value>Action to take when timeout occurs</value>
+        [DataMember(Name="actionType", EmitDefaultValue=false)]
+        public ActionTypeEnum? ActionType { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="InactivityTimeoutSettings" /> class.
         /// </summary>
-        public InactivityTimeoutSettings()
+        /// <param name="TimeoutSeconds">Timeout in seconds for inactivity on the interaction.</param>
+        /// <param name="ActionType">Action to take when timeout occurs.</param>
+        /// <param name="FlowId">Flow ID for architect flow action.</param>
+        public InactivityTimeoutSettings(int? TimeoutSeconds = null, ActionTypeEnum? ActionType = null, DomainEntityRef FlowId = null)
         {
+            this.TimeoutSeconds = TimeoutSeconds;
+            this.ActionType = ActionType;
+            this.FlowId = FlowId;
             
         }
         
+
+
+        /// <summary>
+        /// Timeout in seconds for inactivity on the interaction
+        /// </summary>
+        /// <value>Timeout in seconds for inactivity on the interaction</value>
+        [DataMember(Name="timeoutSeconds", EmitDefaultValue=false)]
+        public int? TimeoutSeconds { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// Flow ID for architect flow action
+        /// </summary>
+        /// <value>Flow ID for architect flow action</value>
+        [DataMember(Name="flowId", EmitDefaultValue=false)]
+        public DomainEntityRef FlowId { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +95,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class InactivityTimeoutSettings {\n");
 
+            sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
+            sb.Append("  ActionType: ").Append(ActionType).Append("\n");
+            sb.Append("  FlowId: ").Append(FlowId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +137,22 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.TimeoutSeconds == other.TimeoutSeconds ||
+                    this.TimeoutSeconds != null &&
+                    this.TimeoutSeconds.Equals(other.TimeoutSeconds)
+                ) &&
+                (
+                    this.ActionType == other.ActionType ||
+                    this.ActionType != null &&
+                    this.ActionType.Equals(other.ActionType)
+                ) &&
+                (
+                    this.FlowId == other.FlowId ||
+                    this.FlowId != null &&
+                    this.FlowId.Equals(other.FlowId)
+                );
         }
 
         /// <summary>
@@ -89,6 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.TimeoutSeconds != null)
+                    hash = hash * 59 + this.TimeoutSeconds.GetHashCode();
+
+                if (this.ActionType != null)
+                    hash = hash * 59 + this.ActionType.GetHashCode();
+
+                if (this.FlowId != null)
+                    hash = hash * 59 + this.FlowId.GetHashCode();
+
                 return hash;
             }
         }

@@ -138,8 +138,6 @@ void (empty response body)
 
 Delete an access control policy
 
-DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * authorization:policy:delete
@@ -1062,8 +1060,6 @@ namespace Example
 
 Get a page of access policies for an organization
 
-GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * authorization:policy:view
@@ -1127,8 +1123,6 @@ namespace Example
 
 
 Get a page of access policies for a given subject
-
-GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1196,8 +1190,6 @@ namespace Example
 
 Get a page of access policies for a given policy target
 
-GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * authorization:policy:view
@@ -1264,8 +1256,6 @@ namespace Example
 
 Get an access control policy for a specified resource target and subject
 
-GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * authorization:policy:view
@@ -1330,8 +1320,6 @@ namespace Example
 
 Get a map of policy targets to valid attributes for those targets
 
-GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * authorization:policy:view
@@ -1388,8 +1376,6 @@ This endpoint does require any parameters.
 
 
 Get an access control policy with the specified policy ID
-
-GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -1452,8 +1438,6 @@ namespace Example
 
 
 Get the list of attributes used to evaluate an access control policy with the specified policy ID
-
-GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2623,8 +2607,6 @@ namespace Example
 
 Add an access control policy for a specified resource target and subject
 
-PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * authorization:policy:add
@@ -2689,8 +2671,6 @@ namespace Example
 
 Validate the conditions and attributes of an access control policy for a specified resource target
 
-PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * authorization:policy:add
@@ -2754,8 +2734,6 @@ namespace Example
 
 
 Simulate a request and evaluate the specified policy ID against the provided values
-
-PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3407,8 +3385,6 @@ namespace Example
 
 Add an access control policy for a specified resource target and subject, overwriting any existing policy
 
-PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * authorization:policy:edit
@@ -3473,8 +3449,6 @@ namespace Example
 
 
 Update an access control policy with a given ID
-
-PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3918,4 +3892,4 @@ namespace Example
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

@@ -27,7 +27,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AutoAnswerAlertToneSeconds">How long to play the alerting tone for an auto-answer interaction.</param>
         /// <param name="ManualAnswerAlertToneSeconds">How long to play the alerting tone for a manual-answer interaction.</param>
         /// <param name="SubTypeSettings">Map of media subtype to media subtype specific settings..</param>
-        public MessageMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, Dictionary<string, MessageSubtypeSettings> SubTypeSettings = null)
+        /// <param name="EnableInactivityTimeout">Indicates if inactivity timeout is enabled for all subtypes..</param>
+        /// <param name="InactivityTimeoutSettings">Inactivity timeout settings for messages.</param>
+        public MessageMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, Dictionary<string, MessageSubtypeSettings> SubTypeSettings = null, bool? EnableInactivityTimeout = null, InactivityTimeoutSettings InactivityTimeoutSettings = null)
         {
             this.EnableAutoAnswer = EnableAutoAnswer;
             this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
@@ -35,6 +37,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AutoAnswerAlertToneSeconds = AutoAnswerAlertToneSeconds;
             this.ManualAnswerAlertToneSeconds = ManualAnswerAlertToneSeconds;
             this.SubTypeSettings = SubTypeSettings;
+            this.EnableInactivityTimeout = EnableInactivityTimeout;
+            this.InactivityTimeoutSettings = InactivityTimeoutSettings;
             
         }
         
@@ -93,6 +97,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, MessageSubtypeSettings> SubTypeSettings { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates if inactivity timeout is enabled for all subtypes.
+        /// </summary>
+        /// <value>Indicates if inactivity timeout is enabled for all subtypes.</value>
+        [DataMember(Name="enableInactivityTimeout", EmitDefaultValue=false)]
+        public bool? EnableInactivityTimeout { get; set; }
+
+
+
+        /// <summary>
+        /// Inactivity timeout settings for messages
+        /// </summary>
+        /// <value>Inactivity timeout settings for messages</value>
+        [DataMember(Name="inactivityTimeoutSettings", EmitDefaultValue=false)]
+        public InactivityTimeoutSettings InactivityTimeoutSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +130,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AutoAnswerAlertToneSeconds: ").Append(AutoAnswerAlertToneSeconds).Append("\n");
             sb.Append("  ManualAnswerAlertToneSeconds: ").Append(ManualAnswerAlertToneSeconds).Append("\n");
             sb.Append("  SubTypeSettings: ").Append(SubTypeSettings).Append("\n");
+            sb.Append("  EnableInactivityTimeout: ").Append(EnableInactivityTimeout).Append("\n");
+            sb.Append("  InactivityTimeoutSettings: ").Append(InactivityTimeoutSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +201,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SubTypeSettings == other.SubTypeSettings ||
                     this.SubTypeSettings != null &&
                     this.SubTypeSettings.SequenceEqual(other.SubTypeSettings)
+                ) &&
+                (
+                    this.EnableInactivityTimeout == other.EnableInactivityTimeout ||
+                    this.EnableInactivityTimeout != null &&
+                    this.EnableInactivityTimeout.Equals(other.EnableInactivityTimeout)
+                ) &&
+                (
+                    this.InactivityTimeoutSettings == other.InactivityTimeoutSettings ||
+                    this.InactivityTimeoutSettings != null &&
+                    this.InactivityTimeoutSettings.Equals(other.InactivityTimeoutSettings)
                 );
         }
 
@@ -208,6 +242,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SubTypeSettings != null)
                     hash = hash * 59 + this.SubTypeSettings.GetHashCode();
+
+                if (this.EnableInactivityTimeout != null)
+                    hash = hash * 59 + this.EnableInactivityTimeout.GetHashCode();
+
+                if (this.InactivityTimeoutSettings != null)
+                    hash = hash * 59 + this.InactivityTimeoutSettings.GetHashCode();
 
                 return hash;
             }

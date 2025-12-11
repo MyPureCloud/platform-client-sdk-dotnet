@@ -76,6 +76,9 @@ Delete annotation
 Requires ANY permissions: 
 
 * recording:annotation:delete
+* recording:recording:view
+* recording:recordingSegment:view
+* recording:snippetRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -513,6 +516,7 @@ Requires ANY permissions:
 
 * recording:recording:view
 * recording:recordingSegment:view
+* recording:snippetRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -593,6 +597,9 @@ Get annotation
 Requires ANY permissions: 
 
 * recording:annotation:view
+* recording:recording:view
+* recording:recordingSegment:view
+* recording:snippetRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -659,6 +666,9 @@ Get annotations for recording
 Requires ANY permissions: 
 
 * recording:annotation:view
+* recording:recording:view
+* recording:recordingSegment:view
+* recording:snippetRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -724,6 +734,7 @@ Requires ANY permissions:
 
 * recording:recording:view
 * recording:recordingSegment:view
+* recording:snippetRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -787,6 +798,7 @@ Requires ANY permissions:
 
 * recording:recording:view
 * recording:recordingSegment:view
+* recording:snippetRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -852,6 +864,7 @@ Requires ANY permissions:
 
 * recording:recording:view
 * recording:recordingSegment:view
+* recording:snippetRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2317,6 +2330,9 @@ Create annotation
 Requires ANY permissions: 
 
 * recording:annotation:add
+* recording:recording:view
+* recording:recordingSegment:view
+* recording:snippetRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2384,6 +2400,7 @@ Requires ANY permissions:
 
 * recording:recording:view
 * recording:recordingSegment:view
+* recording:snippetRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3128,6 +3145,8 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recording:editRetention
 * recording:screenRecording:editRetention
+* recording:snippetRecording:view
+* recording:snippetRecording:editRetention
 
 ### Example
 ```{"language":"csharp"}
@@ -3198,6 +3217,7 @@ Requires ANY permissions:
 * recording:annotation:edit
 * recording:recording:view
 * recording:recordingSegment:view
+* recording:snippetRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3402,6 +3422,7 @@ Requires ALL permissions:
 * recording:job:edit
 * recording:recording:editRetention
 * recording:screenRecording:editRetention
+* recording:snippetRecording:editRetention
 
 ### Example
 ```{"language":"csharp"}
@@ -3776,4 +3797,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

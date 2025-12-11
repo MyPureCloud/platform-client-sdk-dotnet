@@ -61,11 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="State">State.</param>
         /// <param name="TestTopicPhraseResults">TestTopicPhraseResults.</param>
-        public ProgramTopicLinksTopicsDefinitionsJob(string Id = null, StateEnum? State = null, List<ProgramTopicLinksTestTopicPhraseResults> TestTopicPhraseResults = null)
+        /// <param name="GenAIPhrasesResults">GenAIPhrasesResults.</param>
+        public ProgramTopicLinksTopicsDefinitionsJob(string Id = null, StateEnum? State = null, List<ProgramTopicLinksTestTopicPhraseResults> TestTopicPhraseResults = null, List<string> GenAIPhrasesResults = null)
         {
             this.Id = Id;
             this.State = State;
             this.TestTopicPhraseResults = TestTopicPhraseResults;
+            this.GenAIPhrasesResults = GenAIPhrasesResults;
             
         }
         
@@ -88,6 +90,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ProgramTopicLinksTestTopicPhraseResults> TestTopicPhraseResults { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets GenAIPhrasesResults
+        /// </summary>
+        [DataMember(Name="genAIPhrasesResults", EmitDefaultValue=false)]
+        public List<string> GenAIPhrasesResults { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -100,6 +110,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  TestTopicPhraseResults: ").Append(TestTopicPhraseResults).Append("\n");
+            sb.Append("  GenAIPhrasesResults: ").Append(GenAIPhrasesResults).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -154,6 +165,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TestTopicPhraseResults == other.TestTopicPhraseResults ||
                     this.TestTopicPhraseResults != null &&
                     this.TestTopicPhraseResults.SequenceEqual(other.TestTopicPhraseResults)
+                ) &&
+                (
+                    this.GenAIPhrasesResults == other.GenAIPhrasesResults ||
+                    this.GenAIPhrasesResults != null &&
+                    this.GenAIPhrasesResults.SequenceEqual(other.GenAIPhrasesResults)
                 );
         }
 
@@ -176,6 +192,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TestTopicPhraseResults != null)
                     hash = hash * 59 + this.TestTopicPhraseResults.GetHashCode();
+
+                if (this.GenAIPhrasesResults != null)
+                    hash = hash * 59 + this.GenAIPhrasesResults.GetHashCode();
 
                 return hash;
             }

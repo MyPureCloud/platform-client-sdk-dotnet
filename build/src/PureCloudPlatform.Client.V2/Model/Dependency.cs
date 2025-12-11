@@ -309,6 +309,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Knowledgebasedocument,
             
             /// <summary>
+            /// Enum Knowledgesetting for "KNOWLEDGESETTING"
+            /// </summary>
+            [EnumMember(Value = "KNOWLEDGESETTING")]
+            Knowledgesetting,
+            
+            /// <summary>
             /// Enum Language for "LANGUAGE"
             /// </summary>
             [EnumMember(Value = "LANGUAGE")]

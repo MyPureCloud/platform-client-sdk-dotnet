@@ -945,7 +945,7 @@ namespace Example
             var filterValue = filterValue_example;  // string | Value to filter by. Requires 'filterValue' to also be set. (optional) 
             var actionMapIds = new List<string>(); // List<string> | IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional) 
             var queryFields = new List<string>(); // List<string> | Action Map field(s) to query on. Requires 'queryValue' to also be set. (optional) 
-            var queryValue = queryValue_example;  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
+            var queryValue = queryValue_example;  // string | Value to query on using fuzzy matching. Requires 'queryFields' to also be set. (optional) 
 
             try
             { 
@@ -974,7 +974,7 @@ namespace Example
 | **filterValue** | **string**| Value to filter by. Requires &#39;filterValue&#39; to also be set. | [optional]  |
 | **actionMapIds** | [**List<string>**](string)| IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. | [optional]  |
 | **queryFields** | [**List<string>**](string)| Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
-| **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
+| **queryValue** | **string**| Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. | [optional]  |
 
 ### Return type
 
@@ -1332,7 +1332,7 @@ namespace Example
             var mediaType = mediaType_example;  // string | Media type (optional) 
             var state = state_example;  // string | Action template state. (optional) 
             var queryFields = new List<string>(); // List<string> | ActionTemplate field(s) to query on. Requires 'queryValue' to also be set. (optional) 
-            var queryValue = queryValue_example;  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
+            var queryValue = queryValue_example;  // string | Value to query on using fuzzy matching. Requires 'queryFields' to also be set. (optional) 
 
             try
             { 
@@ -1360,7 +1360,7 @@ namespace Example
 | **mediaType** | **string**| Media type | [optional] <br />**Values**: webchat, webMessagingOffer, contentOffer, integrationAction, architectFlow, openAction |
 | **state** | **string**| Action template state. | [optional] <br />**Values**: Active, Inactive, Deleted |
 | **queryFields** | [**List<string>**](string)| ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
-| **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
+| **queryValue** | **string**| Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. | [optional]  |
 
 ### Return type
 
@@ -1534,7 +1534,7 @@ namespace Example
             var sortBy = sortBy_example;  // string | Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with '-' for descending (e.g. sortBy=displayName,-createdDate). (optional) 
             var outcomeIds = new List<string>(); // List<string> | IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional) 
             var queryFields = new List<string>(); // List<string> | Outcome field(s) to query on. Requires 'queryValue' to also be set. (optional) 
-            var queryValue = queryValue_example;  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
+            var queryValue = queryValue_example;  // string | Value to query on using fuzzy matching. Requires 'queryFields' to also be set. (optional) 
 
             try
             { 
@@ -1561,7 +1561,7 @@ namespace Example
 | **sortBy** | **string**| Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). | [optional]  |
 | **outcomeIds** | [**List<string>**](string)| IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. | [optional]  |
 | **queryFields** | [**List<string>**](string)| Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
-| **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
+| **queryValue** | **string**| Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. | [optional]  |
 
 ### Return type
 
@@ -1916,7 +1916,7 @@ namespace Example
             var isActive = true;  // bool? | Determines whether or not to show only active segments. (optional) 
             var segmentIds = new List<string>(); // List<string> | IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional) 
             var queryFields = new List<string>(); // List<string> | Segment field(s) to query on. Requires 'queryValue' to also be set. (optional) 
-            var queryValue = queryValue_example;  // string | Value to query on. Requires 'queryFields' to also be set. (optional) 
+            var queryValue = queryValue_example;  // string | Value to query on using fuzzy matching. Requires 'queryFields' to also be set. (optional) 
 
             try
             { 
@@ -1944,7 +1944,7 @@ namespace Example
 | **isActive** | **bool?**| Determines whether or not to show only active segments. | [optional]  |
 | **segmentIds** | [**List<string>**](string)| IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. | [optional]  |
 | **queryFields** | [**List<string>**](string)| Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. | [optional]  |
-| **queryValue** | **string**| Value to query on. Requires &#39;queryFields&#39; to also be set. | [optional]  |
+| **queryValue** | **string**| Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. | [optional]  |
 
 ### Return type
 
@@ -4879,4 +4879,4 @@ namespace Example
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

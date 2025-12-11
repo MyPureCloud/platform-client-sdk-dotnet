@@ -43,7 +43,181 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Today for "TODAY"
             /// </summary>
             [EnumMember(Value = "TODAY")]
-            Today
+            Today,
+            
+            /// <summary>
+            /// Enum Days2 for "DAYS_2"
+            /// </summary>
+            [EnumMember(Value = "DAYS_2")]
+            Days2,
+            
+            /// <summary>
+            /// Enum Days3 for "DAYS_3"
+            /// </summary>
+            [EnumMember(Value = "DAYS_3")]
+            Days3,
+            
+            /// <summary>
+            /// Enum Days4 for "DAYS_4"
+            /// </summary>
+            [EnumMember(Value = "DAYS_4")]
+            Days4,
+            
+            /// <summary>
+            /// Enum Days5 for "DAYS_5"
+            /// </summary>
+            [EnumMember(Value = "DAYS_5")]
+            Days5,
+            
+            /// <summary>
+            /// Enum Days6 for "DAYS_6"
+            /// </summary>
+            [EnumMember(Value = "DAYS_6")]
+            Days6,
+            
+            /// <summary>
+            /// Enum Days7 for "DAYS_7"
+            /// </summary>
+            [EnumMember(Value = "DAYS_7")]
+            Days7,
+            
+            /// <summary>
+            /// Enum Days8 for "DAYS_8"
+            /// </summary>
+            [EnumMember(Value = "DAYS_8")]
+            Days8,
+            
+            /// <summary>
+            /// Enum Days9 for "DAYS_9"
+            /// </summary>
+            [EnumMember(Value = "DAYS_9")]
+            Days9,
+            
+            /// <summary>
+            /// Enum Days10 for "DAYS_10"
+            /// </summary>
+            [EnumMember(Value = "DAYS_10")]
+            Days10,
+            
+            /// <summary>
+            /// Enum Days11 for "DAYS_11"
+            /// </summary>
+            [EnumMember(Value = "DAYS_11")]
+            Days11,
+            
+            /// <summary>
+            /// Enum Days12 for "DAYS_12"
+            /// </summary>
+            [EnumMember(Value = "DAYS_12")]
+            Days12,
+            
+            /// <summary>
+            /// Enum Days13 for "DAYS_13"
+            /// </summary>
+            [EnumMember(Value = "DAYS_13")]
+            Days13,
+            
+            /// <summary>
+            /// Enum Days14 for "DAYS_14"
+            /// </summary>
+            [EnumMember(Value = "DAYS_14")]
+            Days14,
+            
+            /// <summary>
+            /// Enum Days15 for "DAYS_15"
+            /// </summary>
+            [EnumMember(Value = "DAYS_15")]
+            Days15,
+            
+            /// <summary>
+            /// Enum Days16 for "DAYS_16"
+            /// </summary>
+            [EnumMember(Value = "DAYS_16")]
+            Days16,
+            
+            /// <summary>
+            /// Enum Days17 for "DAYS_17"
+            /// </summary>
+            [EnumMember(Value = "DAYS_17")]
+            Days17,
+            
+            /// <summary>
+            /// Enum Days18 for "DAYS_18"
+            /// </summary>
+            [EnumMember(Value = "DAYS_18")]
+            Days18,
+            
+            /// <summary>
+            /// Enum Days19 for "DAYS_19"
+            /// </summary>
+            [EnumMember(Value = "DAYS_19")]
+            Days19,
+            
+            /// <summary>
+            /// Enum Days20 for "DAYS_20"
+            /// </summary>
+            [EnumMember(Value = "DAYS_20")]
+            Days20,
+            
+            /// <summary>
+            /// Enum Days21 for "DAYS_21"
+            /// </summary>
+            [EnumMember(Value = "DAYS_21")]
+            Days21,
+            
+            /// <summary>
+            /// Enum Days22 for "DAYS_22"
+            /// </summary>
+            [EnumMember(Value = "DAYS_22")]
+            Days22,
+            
+            /// <summary>
+            /// Enum Days23 for "DAYS_23"
+            /// </summary>
+            [EnumMember(Value = "DAYS_23")]
+            Days23,
+            
+            /// <summary>
+            /// Enum Days24 for "DAYS_24"
+            /// </summary>
+            [EnumMember(Value = "DAYS_24")]
+            Days24,
+            
+            /// <summary>
+            /// Enum Days25 for "DAYS_25"
+            /// </summary>
+            [EnumMember(Value = "DAYS_25")]
+            Days25,
+            
+            /// <summary>
+            /// Enum Days26 for "DAYS_26"
+            /// </summary>
+            [EnumMember(Value = "DAYS_26")]
+            Days26,
+            
+            /// <summary>
+            /// Enum Days27 for "DAYS_27"
+            /// </summary>
+            [EnumMember(Value = "DAYS_27")]
+            Days27,
+            
+            /// <summary>
+            /// Enum Days28 for "DAYS_28"
+            /// </summary>
+            [EnumMember(Value = "DAYS_28")]
+            Days28,
+            
+            /// <summary>
+            /// Enum Days29 for "DAYS_29"
+            /// </summary>
+            [EnumMember(Value = "DAYS_29")]
+            Days29,
+            
+            /// <summary>
+            /// Enum Days30 for "DAYS_30"
+            /// </summary>
+            [EnumMember(Value = "DAYS_30")]
+            Days30
         }
         /// <summary>
         /// After how long the number of attempts will be set back to 0. Defaults to NEVER.

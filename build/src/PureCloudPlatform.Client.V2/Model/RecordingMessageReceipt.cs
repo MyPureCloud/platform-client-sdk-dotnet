@@ -79,11 +79,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="RecordingMessageReceipt" /> class.
         /// </summary>
         /// <param name="Id">The id of the message receipt. Message receipts will have the same ID as the message they reference..</param>
+        /// <param name="ReceiptTime">Original time of the event (receipt). Example: delivery receipt time, read receipt time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Status">The message receipt status.</param>
         /// <param name="Reasons">List of reasons for a message receipt that indicates the message has failed. Only used with Failed status..</param>
-        public RecordingMessageReceipt(string Id = null, StatusEnum? Status = null, List<RecordingMessageReceiptReason> Reasons = null)
+        public RecordingMessageReceipt(string Id = null, DateTime? ReceiptTime = null, StatusEnum? Status = null, List<RecordingMessageReceiptReason> Reasons = null)
         {
             this.Id = Id;
+            this.ReceiptTime = ReceiptTime;
             this.Status = Status;
             this.Reasons = Reasons;
             
@@ -97,6 +99,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The id of the message receipt. Message receipts will have the same ID as the message they reference.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// Original time of the event (receipt). Example: delivery receipt time, read receipt time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Original time of the event (receipt). Example: delivery receipt time, read receipt time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="receiptTime", EmitDefaultValue=false)]
+        public DateTime? ReceiptTime { get; set; }
 
 
 
@@ -120,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class RecordingMessageReceipt {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  ReceiptTime: ").Append(ReceiptTime).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Reasons: ").Append(Reasons).Append("\n");
             sb.Append("}\n");
@@ -168,6 +180,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.ReceiptTime == other.ReceiptTime ||
+                    this.ReceiptTime != null &&
+                    this.ReceiptTime.Equals(other.ReceiptTime)
+                ) &&
+                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -192,6 +209,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.ReceiptTime != null)
+                    hash = hash * 59 + this.ReceiptTime.GetHashCode();
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();

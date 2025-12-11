@@ -20,6 +20,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchGuideVersion**](#PatchGuideVersion) | **Patch** /api/v2/guides/{guideId}/versions/{versionId} | Update a guide version. |
 | [**PostConversationsSummariesPreview**](#PostConversationsSummariesPreview) | **Post** /api/v2/conversations/summaries/preview | Trigger summary preview event generation. |
 | [**PostConversationsSummariesSettings**](#PostConversationsSummariesSettings) | **Post** /api/v2/conversations/summaries/settings | Create a summary setting. |
+| [**PostGuideSessionTurns**](#PostGuideSessionTurns) | **Post** /api/v2/guides/{guideId}/sessions/{guideSessionId}/turns | Add a turn to a guide session. |
 | [**PostGuideVersionJobs**](#PostGuideVersionJobs) | **Post** /api/v2/guides/{guideId}/versions/{versionId}/jobs | Start the publishing of a guide version. |
 | [**PostGuideVersions**](#PostGuideVersions) | **Post** /api/v2/guides/{guideId}/versions | Create a guide version. |
 | [**PostGuides**](#PostGuides) | **Post** /api/v2/guides | Create a guide. |
@@ -948,6 +949,74 @@ namespace Example
 [**SummarySetting**](SummarySetting)
 
 
+## PostGuideSessionTurns
+
+> [**GuideSessionTurnResponse**](GuideSessionTurnResponse) PostGuideSessionTurns (string guideId, string guideSessionId, GuideSessionTurnRequest body)
+
+
+Add a turn to a guide session.
+
+Creates a new turn in the specified guide session with the provided request data. If the session ID doesn't exist, a new session will be created automatically.
+
+Requires ALL permissions: 
+
+* aiStudio:guideSessionTurn:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGuideSessionTurnsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var guideId = guideId_example;  // string | Guide ID
+            var guideSessionId = guideSessionId_example;  // string | Guide Session ID
+            var body = new GuideSessionTurnRequest(); // GuideSessionTurnRequest | 
+
+            try
+            { 
+                // Add a turn to a guide session.
+                GuideSessionTurnResponse result = apiInstance.PostGuideSessionTurns(guideId, guideSessionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.PostGuideSessionTurns: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **guideId** | **string**| Guide ID |  |
+| **guideSessionId** | **string**| Guide Session ID |  |
+| **body** | [**GuideSessionTurnRequest**](GuideSessionTurnRequest)|  |  |
+
+### Return type
+
+[**GuideSessionTurnResponse**](GuideSessionTurnResponse)
+
+
 ## PostGuideVersionJobs
 
 > [**GuideVersionPublishJob**](GuideVersionPublishJob) PostGuideVersionJobs (string guideId, string versionId, GuideVersionPublishJobRequest body)
@@ -1274,4 +1343,4 @@ namespace Example
 [**SummarySetting**](SummarySetting)
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

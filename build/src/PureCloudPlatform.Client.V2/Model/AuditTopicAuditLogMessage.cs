@@ -1393,6 +1393,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Survey,
             
             /// <summary>
+            /// Enum Agentscoringrule for "AgentScoringRule"
+            /// </summary>
+            [EnumMember(Value = "AgentScoringRule")]
+            Agentscoringrule,
+            
+            /// <summary>
             /// Enum Evaluationform for "EvaluationForm"
             /// </summary>
             [EnumMember(Value = "EvaluationForm")]

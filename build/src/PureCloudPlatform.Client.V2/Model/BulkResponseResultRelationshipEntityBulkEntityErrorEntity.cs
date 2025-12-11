@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Success">Whether the requested operation completed successfully..</param>
         /// <param name="Entity">The entity which was affected by this Bulk operation. Only returned on success..</param>
         /// <param name="Error">An error describing why this Bulk operation failed. Only returned on failure..</param>
-        public BulkResponseResultRelationshipEntityBulkEntityErrorEntity(string Id = null, bool? Success = null, Relationship Entity = null, BulkEntityErrorEntity Error = null)
+        /// <param name="Status">Status Code for the requested operation..</param>
+        public BulkResponseResultRelationshipEntityBulkEntityErrorEntity(string Id = null, bool? Success = null, Relationship Entity = null, BulkEntityErrorEntity Error = null, int? Status = null)
         {
             this.Id = Id;
             this.Success = Success;
             this.Entity = Entity;
             this.Error = Error;
+            this.Status = Status;
             
         }
         
@@ -71,6 +73,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public BulkEntityErrorEntity Error { get; set; }
 
 
+
+        /// <summary>
+        /// Status Code for the requested operation.
+        /// </summary>
+        /// <value>Status Code for the requested operation.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public int? Status { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Success: ").Append(Success).Append("\n");
             sb.Append("  Entity: ").Append(Entity).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +155,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Error == other.Error ||
                     this.Error != null &&
                     this.Error.Equals(other.Error)
+                ) &&
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 );
         }
 
@@ -168,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
+
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
 
                 return hash;
             }

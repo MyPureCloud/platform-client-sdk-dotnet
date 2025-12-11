@@ -220,16 +220,22 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
-            /// Enum Workforcemanagement for "workforce.management"
+            /// Enum Workforcemanagementforecast for "workforce.management.forecast"
             /// </summary>
-            [EnumMember(Value = "workforce.management")]
-            Workforcemanagement,
+            [EnumMember(Value = "workforce.management.forecast")]
+            Workforcemanagementforecast,
             
             /// <summary>
             /// Enum Agentassistant for "agent.assistant"
             /// </summary>
             [EnumMember(Value = "agent.assistant")]
             Agentassistant,
+            
+            /// <summary>
+            /// Enum Agenticvirtualagents for "agentic.virtual.agents"
+            /// </summary>
+            [EnumMember(Value = "agentic.virtual.agents")]
+            Agenticvirtualagents,
             
             /// <summary>
             /// Enum Analyticsagents for "analytics.agents"
@@ -700,10 +706,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Workforcemanagementagentavailability,
             
             /// <summary>
-            /// Enum Workforcemanagementforecast for "workforce.management.forecast"
+            /// Enum Workforcemanagement for "workforce.management"
             /// </summary>
-            [EnumMember(Value = "workforce.management.forecast")]
-            Workforcemanagementforecast,
+            [EnumMember(Value = "workforce.management")]
+            Workforcemanagement,
+            
+            /// <summary>
+            /// Enum Workforcemanagementshifttrading for "workforce.management.shift.trading"
+            /// </summary>
+            [EnumMember(Value = "workforce.management.shift.trading")]
+            Workforcemanagementshifttrading,
             
             /// <summary>
             /// Enum System for "system"

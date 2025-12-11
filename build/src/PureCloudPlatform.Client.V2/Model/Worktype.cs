@@ -44,7 +44,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RuleSettings">Settings for the worktypes rules..</param>
         /// <param name="Flow">The flow associated with the Worktype..</param>
         /// <param name="DefaultScript">The default script for Workitems created from the Worktype..</param>
-        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, WorkitemFlowReference Flow = null, WorkitemScriptReference DefaultScript = null)
+        /// <param name="UnassignedDivisionContactsEnabled">When set to true, will allow Workitems to be associated with External Contacts that are not assigned to any division. Default value is true..</param>
+        public Worktype(string Name = null, Division Division = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, WorkbinReference DefaultWorkbin = null, WorkitemStatusReference DefaultStatus = null, List<WorkitemStatus> Statuses = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, LanguageReference DefaultLanguage = null, int? DefaultTtlSeconds = null, UserReference ModifiedBy = null, WorkitemQueueReference DefaultQueue = null, List<RoutingSkillReference> DefaultSkills = null, bool? AssignmentEnabled = null, WorkitemSchema Schema = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, WorkitemFlowReference Flow = null, WorkitemScriptReference DefaultScript = null, bool? UnassignedDivisionContactsEnabled = null)
         {
             this.Name = Name;
             this.Division = Division;
@@ -69,6 +70,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RuleSettings = RuleSettings;
             this.Flow = Flow;
             this.DefaultScript = DefaultScript;
+            this.UnassignedDivisionContactsEnabled = UnassignedDivisionContactsEnabled;
             
         }
         
@@ -291,6 +293,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// When set to true, will allow Workitems to be associated with External Contacts that are not assigned to any division. Default value is true.
+        /// </summary>
+        /// <value>When set to true, will allow Workitems to be associated with External Contacts that are not assigned to any division. Default value is true.</value>
+        [DataMember(Name="unassignedDivisionContactsEnabled", EmitDefaultValue=false)]
+        public bool? UnassignedDivisionContactsEnabled { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -331,6 +342,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RuleSettings: ").Append(RuleSettings).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  DefaultScript: ").Append(DefaultScript).Append("\n");
+            sb.Append("  UnassignedDivisionContactsEnabled: ").Append(UnassignedDivisionContactsEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -493,6 +505,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DefaultScript.Equals(other.DefaultScript)
                 ) &&
                 (
+                    this.UnassignedDivisionContactsEnabled == other.UnassignedDivisionContactsEnabled ||
+                    this.UnassignedDivisionContactsEnabled != null &&
+                    this.UnassignedDivisionContactsEnabled.Equals(other.UnassignedDivisionContactsEnabled)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -581,6 +598,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DefaultScript != null)
                     hash = hash * 59 + this.DefaultScript.GetHashCode();
+
+                if (this.UnassignedDivisionContactsEnabled != null)
+                    hash = hash * 59 + this.UnassignedDivisionContactsEnabled.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

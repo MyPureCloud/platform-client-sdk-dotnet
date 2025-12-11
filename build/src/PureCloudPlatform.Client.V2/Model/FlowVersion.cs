@@ -203,9 +203,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PublishResultUri">PublishResultUri.</param>
         /// <param name="InputSchema">InputSchema.</param>
         /// <param name="OutputSchema">OutputSchema.</param>
-        /// <param name="VirtualAgentEnabled">VirtualAgentEnabled.</param>
-        /// <param name="AgenticVirtualAgentEnabled">AgenticVirtualAgentEnabled.</param>
-        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, bool? Debug = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, long? DateCheckedIn = null, long? DateSaved = null, string GenerationId = null, string PublishResultUri = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null, bool? VirtualAgentEnabled = null, bool? AgenticVirtualAgentEnabled = null)
+        /// <param name="VirtualAgentEnabled">Indicates whether virtual agent is enabled for this flow..</param>
+        public FlowVersion(string Id = null, string Name = null, string CommitVersion = null, string ConfigurationVersion = null, TypeEnum? Type = null, bool? Secure = null, bool? Debug = null, User CreatedBy = null, DomainEntityRef CreatedByClient = null, string ConfigurationUri = null, long? DateCreated = null, long? DateCheckedIn = null, long? DateSaved = null, string GenerationId = null, string PublishResultUri = null, JsonSchemaDocument InputSchema = null, JsonSchemaDocument OutputSchema = null, bool? VirtualAgentEnabled = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -225,7 +224,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.InputSchema = InputSchema;
             this.OutputSchema = OutputSchema;
             this.VirtualAgentEnabled = VirtualAgentEnabled;
-            this.AgenticVirtualAgentEnabled = AgenticVirtualAgentEnabled;
             
         }
         
@@ -363,18 +361,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets VirtualAgentEnabled
+        /// Indicates whether virtual agent is enabled for this flow.
         /// </summary>
+        /// <value>Indicates whether virtual agent is enabled for this flow.</value>
         [DataMember(Name="virtualAgentEnabled", EmitDefaultValue=false)]
         public bool? VirtualAgentEnabled { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets AgenticVirtualAgentEnabled
-        /// </summary>
-        [DataMember(Name="agenticVirtualAgentEnabled", EmitDefaultValue=false)]
-        public bool? AgenticVirtualAgentEnabled { get; set; }
 
 
 
@@ -458,7 +449,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  InputSchema: ").Append(InputSchema).Append("\n");
             sb.Append("  OutputSchema: ").Append(OutputSchema).Append("\n");
             sb.Append("  VirtualAgentEnabled: ").Append(VirtualAgentEnabled).Append("\n");
-            sb.Append("  AgenticVirtualAgentEnabled: ").Append(AgenticVirtualAgentEnabled).Append("\n");
             sb.Append("  DatePublished: ").Append(DatePublished).Append("\n");
             sb.Append("  DatePublishedEnd: ").Append(DatePublishedEnd).Append("\n");
             sb.Append("  NluInfo: ").Append(NluInfo).Append("\n");
@@ -596,11 +586,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.VirtualAgentEnabled.Equals(other.VirtualAgentEnabled)
                 ) &&
                 (
-                    this.AgenticVirtualAgentEnabled == other.AgenticVirtualAgentEnabled ||
-                    this.AgenticVirtualAgentEnabled != null &&
-                    this.AgenticVirtualAgentEnabled.Equals(other.AgenticVirtualAgentEnabled)
-                ) &&
-                (
                     this.DatePublished == other.DatePublished ||
                     this.DatePublished != null &&
                     this.DatePublished.Equals(other.DatePublished)
@@ -696,9 +681,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.VirtualAgentEnabled != null)
                     hash = hash * 59 + this.VirtualAgentEnabled.GetHashCode();
-
-                if (this.AgenticVirtualAgentEnabled != null)
-                    hash = hash * 59 + this.AgenticVirtualAgentEnabled.GetHashCode();
 
                 if (this.DatePublished != null)
                     hash = hash * 59 + this.DatePublished.GetHashCode();

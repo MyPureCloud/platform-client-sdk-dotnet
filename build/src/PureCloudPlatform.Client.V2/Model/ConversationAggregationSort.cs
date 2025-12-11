@@ -364,6 +364,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tparkcomplete,
             
             /// <summary>
+            /// Enum Tscreenmonitoring for "tScreenMonitoring"
+            /// </summary>
+            [EnumMember(Value = "tScreenMonitoring")]
+            Tscreenmonitoring,
+            
+            /// <summary>
             /// Enum Ttalk for "tTalk"
             /// </summary>
             [EnumMember(Value = "tTalk")]

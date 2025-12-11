@@ -71,14 +71,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Index">index of the button in the list. (required).</param>
         /// <param name="PhoneNumber">Button phone number..</param>
         /// <param name="Url">Button URL link..</param>
+        /// <param name="Payload">Content of the payload to be included in the quick reply response when the button is pressed..</param>
         /// <param name="Parameters">Template parameters for placeholders in the button..</param>
-        public ConversationNotificationTemplateButton(TypeEnum? Type = null, string Text = null, long? Index = null, string PhoneNumber = null, string Url = null, List<ConversationNotificationTemplateParameter> Parameters = null)
+        public ConversationNotificationTemplateButton(TypeEnum? Type = null, string Text = null, long? Index = null, string PhoneNumber = null, string Url = null, string Payload = null, List<ConversationNotificationTemplateParameter> Parameters = null)
         {
             this.Type = Type;
             this.Text = Text;
             this.Index = Index;
             this.PhoneNumber = PhoneNumber;
             this.Url = Url;
+            this.Payload = Payload;
             this.Parameters = Parameters;
             
         }
@@ -124,6 +126,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Content of the payload to be included in the quick reply response when the button is pressed.
+        /// </summary>
+        /// <value>Content of the payload to be included in the quick reply response when the button is pressed.</value>
+        [DataMember(Name="payload", EmitDefaultValue=false)]
+        public string Payload { get; set; }
+
+
+
+        /// <summary>
         /// Template parameters for placeholders in the button.
         /// </summary>
         /// <value>Template parameters for placeholders in the button.</value>
@@ -145,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  PhoneNumber: ").Append(PhoneNumber).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  Payload: ").Append(Payload).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -212,6 +224,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Url.Equals(other.Url)
                 ) &&
                 (
+                    this.Payload == other.Payload ||
+                    this.Payload != null &&
+                    this.Payload.Equals(other.Payload)
+                ) &&
+                (
                     this.Parameters == other.Parameters ||
                     this.Parameters != null &&
                     this.Parameters.SequenceEqual(other.Parameters)
@@ -243,6 +260,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
+
+                if (this.Payload != null)
+                    hash = hash * 59 + this.Payload.GetHashCode();
 
                 if (this.Parameters != null)
                     hash = hash * 59 + this.Parameters.GetHashCode();

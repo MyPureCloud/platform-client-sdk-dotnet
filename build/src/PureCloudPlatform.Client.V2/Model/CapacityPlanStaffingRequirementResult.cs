@@ -76,7 +76,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Weekly for "Weekly"
             /// </summary>
             [EnumMember(Value = "Weekly")]
-            Weekly
+            Weekly,
+            
+            /// <summary>
+            /// Enum Monthly for "Monthly"
+            /// </summary>
+            [EnumMember(Value = "Monthly")]
+            Monthly
         }
         /// <summary>
         /// The error code when status is 'Failed'

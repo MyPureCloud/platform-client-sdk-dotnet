@@ -361,7 +361,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterValue">Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)</param>
         /// <param name="actionMapIds">IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)</param>
         /// <param name="queryFields">Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ActionMapListing</returns>
         
         ActionMapListing GetJourneyActionmaps (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null);
@@ -380,7 +380,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterValue">Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)</param>
         /// <param name="actionMapIds">IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)</param>
         /// <param name="queryFields">Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of ActionMapListing</returns>
         
         ApiResponse<ActionMapListing> GetJourneyActionmapsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null);
@@ -520,7 +520,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type (optional)</param>
         /// <param name="state">Action template state. (optional)</param>
         /// <param name="queryFields">ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ActionTemplateListing</returns>
         
         ActionTemplateListing GetJourneyActiontemplates (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null);
@@ -538,7 +538,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type (optional)</param>
         /// <param name="state">Action template state. (optional)</param>
         /// <param name="queryFields">ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of ActionTemplateListing</returns>
         
         ApiResponse<ActionTemplateListing> GetJourneyActiontemplatesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null);
@@ -615,7 +615,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
         /// <param name="outcomeIds">IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)</param>
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>OutcomeListing</returns>
         
         OutcomeListing GetJourneyOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
@@ -632,7 +632,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
         /// <param name="outcomeIds">IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)</param>
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of OutcomeListing</returns>
         
         ApiResponse<OutcomeListing> GetJourneyOutcomesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
@@ -772,7 +772,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isActive">Determines whether or not to show only active segments. (optional)</param>
         /// <param name="segmentIds">IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)</param>
         /// <param name="queryFields">Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>SegmentListing</returns>
         
         SegmentListing GetJourneySegments (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null);
@@ -790,7 +790,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isActive">Determines whether or not to show only active segments. (optional)</param>
         /// <param name="segmentIds">IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)</param>
         /// <param name="queryFields">Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of SegmentListing</returns>
         
         ApiResponse<SegmentListing> GetJourneySegmentsWithHttpInfo (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null);
@@ -2341,7 +2341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterValue">Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)</param>
         /// <param name="actionMapIds">IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)</param>
         /// <param name="queryFields">Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ActionMapListing</returns>
         
         System.Threading.Tasks.Task<ActionMapListing> GetJourneyActionmapsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null);
@@ -2360,7 +2360,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterValue">Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)</param>
         /// <param name="actionMapIds">IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)</param>
         /// <param name="queryFields">Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (ActionMapListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActionMapListing>> GetJourneyActionmapsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null);
@@ -2500,7 +2500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type (optional)</param>
         /// <param name="state">Action template state. (optional)</param>
         /// <param name="queryFields">ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ActionTemplateListing</returns>
         
         System.Threading.Tasks.Task<ActionTemplateListing> GetJourneyActiontemplatesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null);
@@ -2518,7 +2518,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type (optional)</param>
         /// <param name="state">Action template state. (optional)</param>
         /// <param name="queryFields">ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (ActionTemplateListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ActionTemplateListing>> GetJourneyActiontemplatesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null);
@@ -2595,7 +2595,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
         /// <param name="outcomeIds">IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)</param>
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of OutcomeListing</returns>
         
         System.Threading.Tasks.Task<OutcomeListing> GetJourneyOutcomesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
@@ -2612,7 +2612,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
         /// <param name="outcomeIds">IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)</param>
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (OutcomeListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<OutcomeListing>> GetJourneyOutcomesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
@@ -2752,7 +2752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isActive">Determines whether or not to show only active segments. (optional)</param>
         /// <param name="segmentIds">IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)</param>
         /// <param name="queryFields">Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of SegmentListing</returns>
         
         System.Threading.Tasks.Task<SegmentListing> GetJourneySegmentsAsync (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null);
@@ -2770,7 +2770,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isActive">Determines whether or not to show only active segments. (optional)</param>
         /// <param name="segmentIds">IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)</param>
         /// <param name="queryFields">Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (SegmentListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<SegmentListing>> GetJourneySegmentsAsyncWithHttpInfo (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null);
@@ -6728,7 +6728,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterValue">Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)</param>
         /// <param name="actionMapIds">IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)</param>
         /// <param name="queryFields">Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ActionMapListing</returns>
         
         public ActionMapListing GetJourneyActionmaps (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
@@ -6749,7 +6749,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterValue">Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)</param>
         /// <param name="actionMapIds">IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)</param>
         /// <param name="queryFields">Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of ActionMapListing</returns>
         
         public ApiResponse< ActionMapListing > GetJourneyActionmapsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
@@ -6845,7 +6845,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterValue">Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)</param>
         /// <param name="actionMapIds">IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)</param>
         /// <param name="queryFields">Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ActionMapListing</returns>
         
         public async System.Threading.Tasks.Task<ActionMapListing> GetJourneyActionmapsAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
@@ -6867,7 +6867,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="filterValue">Value to filter by. Requires &#39;filterValue&#39; to also be set. (optional)</param>
         /// <param name="actionMapIds">IDs of action maps to return. Use of this parameter is not compatible with pagination, filtering, sorting or querying. A maximum of 100 action maps are allowed per request. (optional)</param>
         /// <param name="queryFields">Action Map field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (ActionMapListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionMapListing>> GetJourneyActionmapsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
@@ -7967,7 +7967,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type (optional)</param>
         /// <param name="state">Action template state. (optional)</param>
         /// <param name="queryFields">ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ActionTemplateListing</returns>
         
         public ActionTemplateListing GetJourneyActiontemplates (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
@@ -7987,7 +7987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type (optional)</param>
         /// <param name="state">Action template state. (optional)</param>
         /// <param name="queryFields">ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of ActionTemplateListing</returns>
         
         public ApiResponse< ActionTemplateListing > GetJourneyActiontemplatesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
@@ -8081,7 +8081,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type (optional)</param>
         /// <param name="state">Action template state. (optional)</param>
         /// <param name="queryFields">ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ActionTemplateListing</returns>
         
         public async System.Threading.Tasks.Task<ActionTemplateListing> GetJourneyActiontemplatesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
@@ -8102,7 +8102,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="mediaType">Media type (optional)</param>
         /// <param name="state">Action template state. (optional)</param>
         /// <param name="queryFields">ActionTemplate field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (ActionTemplateListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<ActionTemplateListing>> GetJourneyActiontemplatesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
@@ -8627,7 +8627,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
         /// <param name="outcomeIds">IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)</param>
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>OutcomeListing</returns>
         
         public OutcomeListing GetJourneyOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
@@ -8646,7 +8646,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
         /// <param name="outcomeIds">IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)</param>
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of OutcomeListing</returns>
         
         public ApiResponse< OutcomeListing > GetJourneyOutcomesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
@@ -8738,7 +8738,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
         /// <param name="outcomeIds">IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)</param>
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of OutcomeListing</returns>
         
         public async System.Threading.Tasks.Task<OutcomeListing> GetJourneyOutcomesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
@@ -8758,7 +8758,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortBy">Field(s) to sort by. The response can be sorted by any first level property on the Outcome response. Prefix with &#39;-&#39; for descending (e.g. sortBy&#x3D;displayName,-createdDate). (optional)</param>
         /// <param name="outcomeIds">IDs of outcomes to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 20 outcomes are allowed per request. (optional)</param>
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (OutcomeListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeListing>> GetJourneyOutcomesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
@@ -9852,7 +9852,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isActive">Determines whether or not to show only active segments. (optional)</param>
         /// <param name="segmentIds">IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)</param>
         /// <param name="queryFields">Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>SegmentListing</returns>
         
         public SegmentListing GetJourneySegments (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
@@ -9872,7 +9872,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isActive">Determines whether or not to show only active segments. (optional)</param>
         /// <param name="segmentIds">IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)</param>
         /// <param name="queryFields">Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of SegmentListing</returns>
         
         public ApiResponse< SegmentListing > GetJourneySegmentsWithHttpInfo (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
@@ -9966,7 +9966,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isActive">Determines whether or not to show only active segments. (optional)</param>
         /// <param name="segmentIds">IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)</param>
         /// <param name="queryFields">Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of SegmentListing</returns>
         
         public async System.Threading.Tasks.Task<SegmentListing> GetJourneySegmentsAsync (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
@@ -9987,7 +9987,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="isActive">Determines whether or not to show only active segments. (optional)</param>
         /// <param name="segmentIds">IDs of segments to return. Use of this parameter is not compatible with pagination, sorting or querying. A maximum of 100 segments are allowed per request. (optional)</param>
         /// <param name="queryFields">Segment field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
-        /// <param name="queryValue">Value to query on. Requires &#39;queryFields&#39; to also be set. (optional)</param>
+        /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (SegmentListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<SegmentListing>> GetJourneySegmentsAsyncWithHttpInfo (string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)

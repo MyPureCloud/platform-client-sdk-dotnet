@@ -211,6 +211,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The locations where the results of the request can be retrieved if multiple archive files created
+        /// </summary>
+        /// <value>The locations where the results of the request can be retrieved if multiple archive files created</value>
+        [DataMember(Name="resultsUrls", EmitDefaultValue=false)]
+        public List<string> ResultsUrls { get; private set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -236,6 +245,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Subject: ").Append(Subject).Append("\n");
             sb.Append("  ResultsUrl: ").Append(ResultsUrl).Append("\n");
+            sb.Append("  ResultsUrls: ").Append(ResultsUrls).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -323,6 +333,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ResultsUrl.Equals(other.ResultsUrl)
                 ) &&
                 (
+                    this.ResultsUrls == other.ResultsUrls ||
+                    this.ResultsUrls != null &&
+                    this.ResultsUrls.SequenceEqual(other.ResultsUrls)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -366,6 +381,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ResultsUrl != null)
                     hash = hash * 59 + this.ResultsUrl.GetHashCode();
+
+                if (this.ResultsUrls != null)
+                    hash = hash * 59 + this.ResultsUrls.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

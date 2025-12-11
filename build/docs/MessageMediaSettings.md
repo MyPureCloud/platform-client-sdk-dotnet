@@ -12,7 +12,9 @@
 | **AutoAnswerAlertToneSeconds** | **double?** | How long to play the alerting tone for an auto-answer interaction | [optional] |
 | **ManualAnswerAlertToneSeconds** | **double?** | How long to play the alerting tone for a manual-answer interaction | [optional] |
 | **SubTypeSettings** | [**Dictionary&lt;string, MessageSubtypeSettings&gt;**](MessageSubtypeSettings) | Map of media subtype to media subtype specific settings. | [optional] |
+| **EnableInactivityTimeout** | **bool?** | Indicates if inactivity timeout is enabled for all subtypes. | [optional] |
+| **InactivityTimeoutSettings** | [**InactivityTimeoutSettings**](InactivityTimeoutSettings) | Inactivity timeout settings for messages | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

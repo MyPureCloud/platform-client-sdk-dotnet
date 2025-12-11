@@ -211,6 +211,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Message,
             
             /// <summary>
+            /// Enum Screenmonitoring for "screenmonitoring"
+            /// </summary>
+            [EnumMember(Value = "screenmonitoring")]
+            Screenmonitoring,
+            
+            /// <summary>
             /// Enum Screenshare for "screenshare"
             /// </summary>
             [EnumMember(Value = "screenshare")]

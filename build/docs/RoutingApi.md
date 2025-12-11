@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteRoutingEmailOutboundDomain**](#DeleteRoutingEmailOutboundDomain) | **Delete** /api/v2/routing/email/outbound/domains/{domainId} | Delete an outbound domain |
 | [**DeleteRoutingLanguage**](#DeleteRoutingLanguage) | **Delete** /api/v2/routing/languages/{languageId} | Delete a routing language |
 | [**DeleteRoutingPredictor**](#DeleteRoutingPredictor) | **Delete** /api/v2/routing/predictors/{predictorId} | Delete single predictor. |
+| [**DeleteRoutingPredictorsKeyperformanceindicator**](#DeleteRoutingPredictorsKeyperformanceindicator) | **Delete** /api/v2/routing/predictors/keyperformanceindicators/{kpiId} | Delete a custom Key Performance Indicator. |
 | [**DeleteRoutingQueue**](#DeleteRoutingQueue) | **Delete** /api/v2/routing/queues/{queueId} | Delete a queue |
 | [**DeleteRoutingQueueMember**](#DeleteRoutingQueueMember) | **Delete** /api/v2/routing/queues/{queueId}/members/{memberId} | Delete a queue member. |
 | [**DeleteRoutingQueueUser**](#DeleteRoutingQueueUser) | **Delete** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use DELETE /routing/queues/{queueId}/members/{memberId}.  Delete queue member. |
@@ -56,7 +57,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetRoutingPredictorModelFeatures**](#GetRoutingPredictorModelFeatures) | **Get** /api/v2/routing/predictors/{predictorId}/models/{modelId}/features | Retrieve Predictor Model Features. |
 | [**GetRoutingPredictorModels**](#GetRoutingPredictorModels) | **Get** /api/v2/routing/predictors/{predictorId}/models | Retrieve Predictor Models and Top Features. |
 | [**GetRoutingPredictors**](#GetRoutingPredictors) | **Get** /api/v2/routing/predictors | Retrieve all predictors. |
+| [**GetRoutingPredictorsKeyperformanceindicator**](#GetRoutingPredictorsKeyperformanceindicator) | **Get** /api/v2/routing/predictors/keyperformanceindicators/{kpiId} | Retrieve a single Key Performance Indicator. |
 | [**GetRoutingPredictorsKeyperformanceindicators**](#GetRoutingPredictorsKeyperformanceindicators) | **Get** /api/v2/routing/predictors/keyperformanceindicators | Get a list of Key Performance Indicators |
+| [**GetRoutingPredictorsKeyperformanceindicatortypes**](#GetRoutingPredictorsKeyperformanceindicatortypes) | **Get** /api/v2/routing/predictors/keyperformanceindicatortypes | Get a list of Key Performance Indicators Types available. |
 | [**GetRoutingQueue**](#GetRoutingQueue) | **Get** /api/v2/routing/queues/{queueId} | Get details about this queue. |
 | [**GetRoutingQueueAssistant**](#GetRoutingQueueAssistant) | **Get** /api/v2/routing/queues/{queueId}/assistant | Get an assistant associated with a queue. |
 | [**GetRoutingQueueComparisonperiod**](#GetRoutingQueueComparisonperiod) | **Get** /api/v2/routing/queues/{queueId}/comparisonperiods/{comparisonPeriodId} | Get a Comparison Period. |
@@ -107,6 +110,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingEmailDomain**](#PatchRoutingEmailDomain) | **Patch** /api/v2/routing/email/domains/{domainId} | Update domain settings |
 | [**PatchRoutingEmailDomainValidate**](#PatchRoutingEmailDomainValidate) | **Patch** /api/v2/routing/email/domains/{domainId}/validate | Validate domain settings |
 | [**PatchRoutingPredictor**](#PatchRoutingPredictor) | **Patch** /api/v2/routing/predictors/{predictorId} | Update single predictor. |
+| [**PatchRoutingPredictorsKeyperformanceindicator**](#PatchRoutingPredictorsKeyperformanceindicator) | **Patch** /api/v2/routing/predictors/keyperformanceindicators/{kpiId} | Update a custom Key Performance Indicator. |
 | [**PatchRoutingQueueMember**](#PatchRoutingQueueMember) | **Patch** /api/v2/routing/queues/{queueId}/members/{memberId} | Update the ring number OR joined status for a queue member. |
 | [**PatchRoutingQueueMembers**](#PatchRoutingQueueMembers) | **Patch** /api/v2/routing/queues/{queueId}/members | Join or unjoin a set of up to 100 users for a queue |
 | [**PatchRoutingQueueUser**](#PatchRoutingQueueUser) | **Patch** /api/v2/routing/queues/{queueId}/users/{memberId} | DEPRECATED: use PATCH /routing/queues/{queueId}/members/{memberId}.  Update the ring number OR joined status for a User in a Queue. |
@@ -134,6 +138,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingEmailOutboundDomainsSimulated**](#PostRoutingEmailOutboundDomainsSimulated) | **Post** /api/v2/routing/email/outbound/domains/simulated | Create a simulated domain |
 | [**PostRoutingLanguages**](#PostRoutingLanguages) | **Post** /api/v2/routing/languages | Create Language |
 | [**PostRoutingPredictors**](#PostRoutingPredictors) | **Post** /api/v2/routing/predictors | Create a predictor. |
+| [**PostRoutingPredictorsKeyperformanceindicators**](#PostRoutingPredictorsKeyperformanceindicators) | **Post** /api/v2/routing/predictors/keyperformanceindicators | Create a custom Key Performance Indicator. |
 | [**PostRoutingQueueMembers**](#PostRoutingQueueMembers) | **Post** /api/v2/routing/queues/{queueId}/members | Bulk add or delete up to 100 queue members |
 | [**PostRoutingQueueUsers**](#PostRoutingQueueUsers) | **Post** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use POST /routing/queues/{queueId}/members.  Bulk add or delete up to 100 queue members. |
 | [**PostRoutingQueueWrapupcodes**](#PostRoutingQueueWrapupcodes) | **Post** /api/v2/routing/queues/{queueId}/wrapupcodes | Add up to 100 wrap-up codes to a queue |
@@ -589,6 +594,69 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **predictorId** | **string**| Predictor ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteRoutingPredictorsKeyperformanceindicator
+
+> void DeleteRoutingPredictorsKeyperformanceindicator (string kpiId)
+
+
+Delete a custom Key Performance Indicator.
+
+DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteRoutingPredictorsKeyperformanceindicatorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var kpiId = kpiId_example;  // string | Key Performance Indicator ID
+
+            try
+            { 
+                // Delete a custom Key Performance Indicator.
+                apiInstance.DeleteRoutingPredictorsKeyperformanceindicator(kpiId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.DeleteRoutingPredictorsKeyperformanceindicator: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **kpiId** | **string**| Key Performance Indicator ID |  |
 
 ### Return type
 
@@ -3313,6 +3381,72 @@ namespace Example
 [**PredictorListing**](PredictorListing)
 
 
+## GetRoutingPredictorsKeyperformanceindicator
+
+> [**KeyPerformanceIndicator**](KeyPerformanceIndicator) GetRoutingPredictorsKeyperformanceindicator (string kpiId, List<string> expand = null)
+
+
+Retrieve a single Key Performance Indicator.
+
+GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingPredictorsKeyperformanceindicatorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var kpiId = kpiId_example;  // string | Key Performance Indicator ID
+            var expand = new List<string>(); // List<string> | Parameter to request additional data to return in KPI payload (optional) 
+
+            try
+            { 
+                // Retrieve a single Key Performance Indicator.
+                KeyPerformanceIndicator result = apiInstance.GetRoutingPredictorsKeyperformanceindicator(kpiId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingPredictorsKeyperformanceindicator: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **kpiId** | **string**| Key Performance Indicator ID |  |
+| **expand** | [**List<string>**](string)| Parameter to request additional data to return in KPI payload | [optional] <br />**Values**: queues |
+
+### Return type
+
+[**KeyPerformanceIndicator**](KeyPerformanceIndicator)
+
+
 ## GetRoutingPredictorsKeyperformanceindicators
 
 > [**List&lt;KeyPerformanceIndicator&gt;**](KeyPerformanceIndicator) GetRoutingPredictorsKeyperformanceindicators (string kpiGroup = null, List<string> expand = null)
@@ -3375,6 +3509,65 @@ namespace Example
 ### Return type
 
 [**List<KeyPerformanceIndicator>**](KeyPerformanceIndicator)
+
+
+## GetRoutingPredictorsKeyperformanceindicatortypes
+
+> [**List&lt;KeyPerformanceIndicatorType&gt;**](KeyPerformanceIndicatorType) GetRoutingPredictorsKeyperformanceindicatortypes ()
+
+
+Get a list of Key Performance Indicators Types available.
+
+GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetRoutingPredictorsKeyperformanceindicatortypesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+
+            try
+            { 
+                // Get a list of Key Performance Indicators Types available.
+                List<KeyPerformanceIndicatorType> result = apiInstance.GetRoutingPredictorsKeyperformanceindicatortypes();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.GetRoutingPredictorsKeyperformanceindicatortypes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**List<KeyPerformanceIndicatorType>**](KeyPerformanceIndicatorType)
 
 
 ## GetRoutingQueue
@@ -6708,6 +6901,72 @@ namespace Example
 [**Predictor**](Predictor)
 
 
+## PatchRoutingPredictorsKeyperformanceindicator
+
+> [**KeyPerformanceIndicator**](KeyPerformanceIndicator) PatchRoutingPredictorsKeyperformanceindicator (string kpiId, UpdateKpiRequest body = null)
+
+
+Update a custom Key Performance Indicator.
+
+PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchRoutingPredictorsKeyperformanceindicatorExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var kpiId = kpiId_example;  // string | Key Performance Indicator ID
+            var body = new UpdateKpiRequest(); // UpdateKpiRequest |  (optional) 
+
+            try
+            { 
+                // Update a custom Key Performance Indicator.
+                KeyPerformanceIndicator result = apiInstance.PatchRoutingPredictorsKeyperformanceindicator(kpiId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchRoutingPredictorsKeyperformanceindicator: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **kpiId** | **string**| Key Performance Indicator ID |  |
+| **body** | [**UpdateKpiRequest**](UpdateKpiRequest)|  | [optional]  |
+
+### Return type
+
+[**KeyPerformanceIndicator**](KeyPerformanceIndicator)
+
+
 ## PatchRoutingQueueMember
 
 > void PatchRoutingQueueMember (string queueId, string memberId, QueueMember body)
@@ -8437,6 +8696,70 @@ namespace Example
 ### Return type
 
 [**Predictor**](Predictor)
+
+
+## PostRoutingPredictorsKeyperformanceindicators
+
+> [**KeyPerformanceIndicator**](KeyPerformanceIndicator) PostRoutingPredictorsKeyperformanceindicators (CreateKpiRequest body)
+
+
+Create a custom Key Performance Indicator.
+
+PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* routing:keyPerformanceIndicator:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingPredictorsKeyperformanceindicatorsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var body = new CreateKpiRequest(); // CreateKpiRequest | request
+
+            try
+            { 
+                // Create a custom Key Performance Indicator.
+                KeyPerformanceIndicator result = apiInstance.PostRoutingPredictorsKeyperformanceindicators(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingPredictorsKeyperformanceindicators: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateKpiRequest**](CreateKpiRequest)| request |  |
+
+### Return type
+
+[**KeyPerformanceIndicator**](KeyPerformanceIndicator)
 
 
 ## PostRoutingQueueMembers
@@ -10541,4 +10864,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 250.0.0_
+_PureCloudPlatform.Client.V2 251.0.0_

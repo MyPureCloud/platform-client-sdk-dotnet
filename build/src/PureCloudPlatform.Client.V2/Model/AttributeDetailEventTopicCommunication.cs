@@ -90,7 +90,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Internalmessage for "INTERNALMESSAGE"
             /// </summary>
             [EnumMember(Value = "INTERNALMESSAGE")]
-            Internalmessage
+            Internalmessage,
+            
+            /// <summary>
+            /// Enum Screenmonitoring for "SCREENMONITORING"
+            /// </summary>
+            [EnumMember(Value = "SCREENMONITORING")]
+            Screenmonitoring
         }
         /// <summary>
         /// Gets or Sets MediaType

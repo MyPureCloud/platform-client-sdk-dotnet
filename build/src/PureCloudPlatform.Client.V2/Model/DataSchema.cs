@@ -72,7 +72,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum UserCustomAttributes for "USER_CUSTOM_ATTRIBUTES"
             /// </summary>
             [EnumMember(Value = "USER_CUSTOM_ATTRIBUTES")]
-            UserCustomAttributes
+            UserCustomAttributes,
+            
+            /// <summary>
+            /// Enum ExternalEvents for "EXTERNAL_EVENTS"
+            /// </summary>
+            [EnumMember(Value = "EXTERNAL_EVENTS")]
+            ExternalEvents
         }
 
         /// <summary>

@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="MessageSubtypeSettings" /> class.
         /// </summary>
         /// <param name="EnableAutoAnswer">Indicates if auto-answer is enabled for the given media type or subtype (default is false).  Subtype settings take precedence over media type settings..</param>
-        public MessageSubtypeSettings(bool? EnableAutoAnswer = null)
+        /// <param name="EnableInactivityTimeout">Indicates if inactivity timeout is enabled for the given subtype..</param>
+        public MessageSubtypeSettings(bool? EnableAutoAnswer = null, bool? EnableInactivityTimeout = null)
         {
             this.EnableAutoAnswer = EnableAutoAnswer;
+            this.EnableInactivityTimeout = EnableInactivityTimeout;
             
         }
         
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? EnableAutoAnswer { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates if inactivity timeout is enabled for the given subtype.
+        /// </summary>
+        /// <value>Indicates if inactivity timeout is enabled for the given subtype.</value>
+        [DataMember(Name="enableInactivityTimeout", EmitDefaultValue=false)]
+        public bool? EnableInactivityTimeout { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class MessageSubtypeSettings {\n");
 
             sb.Append("  EnableAutoAnswer: ").Append(EnableAutoAnswer).Append("\n");
+            sb.Append("  EnableInactivityTimeout: ").Append(EnableInactivityTimeout).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EnableAutoAnswer == other.EnableAutoAnswer ||
                     this.EnableAutoAnswer != null &&
                     this.EnableAutoAnswer.Equals(other.EnableAutoAnswer)
+                ) &&
+                (
+                    this.EnableInactivityTimeout == other.EnableInactivityTimeout ||
+                    this.EnableInactivityTimeout != null &&
+                    this.EnableInactivityTimeout.Equals(other.EnableInactivityTimeout)
                 );
         }
 
@@ -108,6 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.EnableAutoAnswer != null)
                     hash = hash * 59 + this.EnableAutoAnswer.GetHashCode();
+
+                if (this.EnableInactivityTimeout != null)
+                    hash = hash * 59 + this.EnableInactivityTimeout.GetHashCode();
 
                 return hash;
             }

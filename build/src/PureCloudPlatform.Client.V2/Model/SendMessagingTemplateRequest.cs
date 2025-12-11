@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HeaderParameters">A list of Response Management header parameter substitutions for the response&#39;s messaging template.</param>
         /// <param name="BodyParameters">A list of Response Management body parameter substitutions for the response&#39;s messaging template.</param>
         /// <param name="ButtonUrlParameters">A list of Response Management button url parameter substitutions for the response&#39;s messaging template.</param>
-        public SendMessagingTemplateRequest(string ResponseId = null, List<TemplateParameter> Parameters = null, List<TemplateParameter> HeaderParameters = null, List<TemplateParameter> BodyParameters = null, List<TemplateParameter> ButtonUrlParameters = null)
+        /// <param name="CarouselParameters">Template parameters for carousel card components.</param>
+        public SendMessagingTemplateRequest(string ResponseId = null, List<TemplateParameter> Parameters = null, List<TemplateParameter> HeaderParameters = null, List<TemplateParameter> BodyParameters = null, List<TemplateParameter> ButtonUrlParameters = null, CarouselParameters CarouselParameters = null)
         {
             this.ResponseId = ResponseId;
             this.Parameters = Parameters;
             this.HeaderParameters = HeaderParameters;
             this.BodyParameters = BodyParameters;
             this.ButtonUrlParameters = ButtonUrlParameters;
+            this.CarouselParameters = CarouselParameters;
             
         }
         
@@ -82,6 +84,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<TemplateParameter> ButtonUrlParameters { get; set; }
 
 
+
+        /// <summary>
+        /// Template parameters for carousel card components
+        /// </summary>
+        /// <value>Template parameters for carousel card components</value>
+        [DataMember(Name="carouselParameters", EmitDefaultValue=false)]
+        public CarouselParameters CarouselParameters { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -96,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  HeaderParameters: ").Append(HeaderParameters).Append("\n");
             sb.Append("  BodyParameters: ").Append(BodyParameters).Append("\n");
             sb.Append("  ButtonUrlParameters: ").Append(ButtonUrlParameters).Append("\n");
+            sb.Append("  CarouselParameters: ").Append(CarouselParameters).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -160,6 +172,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ButtonUrlParameters == other.ButtonUrlParameters ||
                     this.ButtonUrlParameters != null &&
                     this.ButtonUrlParameters.SequenceEqual(other.ButtonUrlParameters)
+                ) &&
+                (
+                    this.CarouselParameters == other.CarouselParameters ||
+                    this.CarouselParameters != null &&
+                    this.CarouselParameters.Equals(other.CarouselParameters)
                 );
         }
 
@@ -188,6 +205,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ButtonUrlParameters != null)
                     hash = hash * 59 + this.ButtonUrlParameters.GetHashCode();
+
+                if (this.CarouselParameters != null)
+                    hash = hash * 59 + this.CarouselParameters.GetHashCode();
 
                 return hash;
             }

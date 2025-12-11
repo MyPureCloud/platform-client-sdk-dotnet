@@ -92,6 +92,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteAssistantQueuesWithHttpInfo (string assistantId, string queueIds = null);
 
         /// <summary>
+        /// Delete an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns></returns>
+        
+        void DeleteAssistantsAgentchecklist (string agentChecklistId);
+
+        /// <summary>
+        /// Delete an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteAssistantsAgentchecklistWithHttpInfo (string agentChecklistId);
+
+        /// <summary>
         /// Get an assistant.
         /// </summary>
         /// <remarks>
@@ -210,6 +234,88 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of AssistantListing</returns>
         
         ApiResponse<AssistantListing> GetAssistantsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null);
+
+        /// <summary>
+        /// Get an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>AgentChecklist</returns>
+        
+        AgentChecklist GetAssistantsAgentchecklist (string agentChecklistId);
+
+        /// <summary>
+        /// Get an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>ApiResponse of AgentChecklist</returns>
+        
+        ApiResponse<AgentChecklist> GetAssistantsAgentchecklistWithHttpInfo (string agentChecklistId);
+
+        /// <summary>
+        /// Get the list of agent checklists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to "25")</param>
+        /// <param name="namePrefix">The agent checklist name prefix filter applied to the listing. (optional)</param>
+        /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional)</param>
+        /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <returns>AgentChecklistListing</returns>
+        
+        AgentChecklistListing GetAssistantsAgentchecklists (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
+        /// Get the list of agent checklists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to "25")</param>
+        /// <param name="namePrefix">The agent checklist name prefix filter applied to the listing. (optional)</param>
+        /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional)</param>
+        /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <returns>ApiResponse of AgentChecklistListing</returns>
+        
+        ApiResponse<AgentChecklistListing> GetAssistantsAgentchecklistsWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
+        /// Get the list of supported languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>EntityListing</returns>
+        
+        EntityListing GetAssistantsAgentchecklistsLanguages ();
+
+        /// <summary>
+        /// Get the list of supported languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of EntityListing</returns>
+        
+        ApiResponse<EntityListing> GetAssistantsAgentchecklistsLanguagesWithHttpInfo ();
 
         /// <summary>
         /// Get all queues assigned to any assistant.
@@ -406,6 +512,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Assistant> PostAssistantsWithHttpInfo (Assistant body);
 
         /// <summary>
+        /// Create an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Request body containing details of checklist to be added</param>
+        /// <returns>AgentChecklist</returns>
+        
+        AgentChecklist PostAssistantsAgentchecklists (AgentChecklist body);
+
+        /// <summary>
+        /// Create an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Request body containing details of checklist to be added</param>
+        /// <returns>ApiResponse of AgentChecklist</returns>
+        
+        ApiResponse<AgentChecklist> PostAssistantsAgentchecklistsWithHttpInfo (AgentChecklist body);
+
+        /// <summary>
         /// Create a queue assistant association.
         /// </summary>
         /// <remarks>
@@ -432,6 +562,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of AssistantQueue</returns>
         
         ApiResponse<AssistantQueue> PutAssistantQueueWithHttpInfo (string assistantId, string queueId, AssistantQueue body);
+
+        /// <summary>
+        /// Update an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <param name="body">Request body containing details of checklist to be updated</param>
+        /// <returns>AgentChecklist</returns>
+        
+        AgentChecklist PutAssistantsAgentchecklist (string agentChecklistId, AgentChecklist body);
+
+        /// <summary>
+        /// Update an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <param name="body">Request body containing details of checklist to be updated</param>
+        /// <returns>ApiResponse of AgentChecklist</returns>
+        
+        ApiResponse<AgentChecklist> PutAssistantsAgentchecklistWithHttpInfo (string agentChecklistId, AgentChecklist body);
 
         #endregion Synchronous Operations
 
@@ -512,6 +668,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAssistantQueuesAsyncWithHttpInfo (string assistantId, string queueIds = null);
+
+        /// <summary>
+        /// Delete an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteAssistantsAgentchecklistAsync (string agentChecklistId);
+
+        /// <summary>
+        /// Delete an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAssistantsAgentchecklistAsyncWithHttpInfo (string agentChecklistId);
 
         /// <summary>
         /// Get an assistant.
@@ -632,6 +812,88 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AssistantListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<AssistantListing>> GetAssistantsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null);
+
+        /// <summary>
+        /// Get an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>Task of AgentChecklist</returns>
+        
+        System.Threading.Tasks.Task<AgentChecklist> GetAssistantsAgentchecklistAsync (string agentChecklistId);
+
+        /// <summary>
+        /// Get an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>Task of ApiResponse (AgentChecklist)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AgentChecklist>> GetAssistantsAgentchecklistAsyncWithHttpInfo (string agentChecklistId);
+
+        /// <summary>
+        /// Get the list of agent checklists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to "25")</param>
+        /// <param name="namePrefix">The agent checklist name prefix filter applied to the listing. (optional)</param>
+        /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional)</param>
+        /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <returns>Task of AgentChecklistListing</returns>
+        
+        System.Threading.Tasks.Task<AgentChecklistListing> GetAssistantsAgentchecklistsAsync (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
+        /// Get the list of agent checklists
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to "25")</param>
+        /// <param name="namePrefix">The agent checklist name prefix filter applied to the listing. (optional)</param>
+        /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional)</param>
+        /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <returns>Task of ApiResponse (AgentChecklistListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AgentChecklistListing>> GetAssistantsAgentchecklistsAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null);
+
+        /// <summary>
+        /// Get the list of supported languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of EntityListing</returns>
+        
+        System.Threading.Tasks.Task<EntityListing> GetAssistantsAgentchecklistsLanguagesAsync ();
+
+        /// <summary>
+        /// Get the list of supported languages
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (EntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetAssistantsAgentchecklistsLanguagesAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get all queues assigned to any assistant.
@@ -828,6 +1090,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Assistant>> PostAssistantsAsyncWithHttpInfo (Assistant body);
 
         /// <summary>
+        /// Create an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Request body containing details of checklist to be added</param>
+        /// <returns>Task of AgentChecklist</returns>
+        
+        System.Threading.Tasks.Task<AgentChecklist> PostAssistantsAgentchecklistsAsync (AgentChecklist body);
+
+        /// <summary>
+        /// Create an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Request body containing details of checklist to be added</param>
+        /// <returns>Task of ApiResponse (AgentChecklist)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AgentChecklist>> PostAssistantsAgentchecklistsAsyncWithHttpInfo (AgentChecklist body);
+
+        /// <summary>
         /// Create a queue assistant association.
         /// </summary>
         /// <remarks>
@@ -854,6 +1140,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (AssistantQueue)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<AssistantQueue>> PutAssistantQueueAsyncWithHttpInfo (string assistantId, string queueId, AssistantQueue body);
+
+        /// <summary>
+        /// Update an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <param name="body">Request body containing details of checklist to be updated</param>
+        /// <returns>Task of AgentChecklist</returns>
+        
+        System.Threading.Tasks.Task<AgentChecklist> PutAssistantsAgentchecklistAsync (string agentChecklistId, AgentChecklist body);
+
+        /// <summary>
+        /// Update an agent checklist
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <param name="body">Request body containing details of checklist to be updated</param>
+        /// <returns>Task of ApiResponse (AgentChecklist)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AgentChecklist>> PutAssistantsAgentchecklistAsyncWithHttpInfo (string agentChecklistId, AgentChecklist body);
 
         #endregion Asynchronous Operations
 
@@ -1553,6 +1865,205 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAssistantQueues: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteAssistantQueues: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns></returns>
+        
+        public void DeleteAssistantsAgentchecklist (string agentChecklistId)
+        {
+             DeleteAssistantsAgentchecklistWithHttpInfo(agentChecklistId);
+        }
+
+        /// <summary>
+        /// Delete an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteAssistantsAgentchecklistWithHttpInfo (string agentChecklistId)
+        { 
+            // verify the required parameter 'agentChecklistId' is set
+            if (agentChecklistId == null)
+                throw new ApiException(400, "Missing required parameter 'agentChecklistId' when calling AgentAssistantsApi->DeleteAssistantsAgentchecklist");
+
+            var localVarPath = "/api/v2/assistants/agentchecklists/{agentChecklistId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentChecklistId != null) localVarPathParams.Add("agentChecklistId", this.Configuration.ApiClient.ParameterToString(agentChecklistId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAssistantsAgentchecklist: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAssistantsAgentchecklist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteAssistantsAgentchecklistAsync (string agentChecklistId)
+        {
+             await DeleteAssistantsAgentchecklistAsyncWithHttpInfo(agentChecklistId);
+
+        }
+
+        /// <summary>
+        /// Delete an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAssistantsAgentchecklistAsyncWithHttpInfo (string agentChecklistId)
+        { 
+            // verify the required parameter 'agentChecklistId' is set
+            if (agentChecklistId == null)
+                throw new ApiException(400, "Missing required parameter 'agentChecklistId' when calling AgentAssistantsApi->DeleteAssistantsAgentchecklist");
+            
+
+            var localVarPath = "/api/v2/assistants/agentchecklists/{agentChecklistId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentChecklistId != null) localVarPathParams.Add("agentChecklistId", this.Configuration.ApiClient.ParameterToString(agentChecklistId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAssistantsAgentchecklist: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteAssistantsAgentchecklist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -2433,6 +2944,625 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AssistantListing>(localVarStatusCode,
                 localVarHeaders,
                 (AssistantListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssistantListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>AgentChecklist</returns>
+        
+        public AgentChecklist GetAssistantsAgentchecklist (string agentChecklistId)
+        {
+             ApiResponse<AgentChecklist> localVarResponse = GetAssistantsAgentchecklistWithHttpInfo(agentChecklistId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>ApiResponse of AgentChecklist</returns>
+        
+        public ApiResponse< AgentChecklist > GetAssistantsAgentchecklistWithHttpInfo (string agentChecklistId)
+        { 
+            // verify the required parameter 'agentChecklistId' is set
+            if (agentChecklistId == null)
+                throw new ApiException(400, "Missing required parameter 'agentChecklistId' when calling AgentAssistantsApi->GetAssistantsAgentchecklist");
+
+            var localVarPath = "/api/v2/assistants/agentchecklists/{agentChecklistId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentChecklistId != null) localVarPathParams.Add("agentChecklistId", this.Configuration.ApiClient.ParameterToString(agentChecklistId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklist: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentChecklist>(localVarStatusCode,
+                localVarHeaders,
+                (AgentChecklist) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentChecklist)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>Task of AgentChecklist</returns>
+        
+        public async System.Threading.Tasks.Task<AgentChecklist> GetAssistantsAgentchecklistAsync (string agentChecklistId)
+        {
+             ApiResponse<AgentChecklist> localVarResponse = await GetAssistantsAgentchecklistAsyncWithHttpInfo(agentChecklistId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <returns>Task of ApiResponse (AgentChecklist)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AgentChecklist>> GetAssistantsAgentchecklistAsyncWithHttpInfo (string agentChecklistId)
+        { 
+            // verify the required parameter 'agentChecklistId' is set
+            if (agentChecklistId == null)
+                throw new ApiException(400, "Missing required parameter 'agentChecklistId' when calling AgentAssistantsApi->GetAssistantsAgentchecklist");
+            
+
+            var localVarPath = "/api/v2/assistants/agentchecklists/{agentChecklistId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentChecklistId != null) localVarPathParams.Add("agentChecklistId", this.Configuration.ApiClient.ParameterToString(agentChecklistId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklist: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentChecklist>(localVarStatusCode,
+                localVarHeaders,
+                (AgentChecklist) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentChecklist)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the list of agent checklists 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to "25")</param>
+        /// <param name="namePrefix">The agent checklist name prefix filter applied to the listing. (optional)</param>
+        /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional)</param>
+        /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <returns>AgentChecklistListing</returns>
+        
+        public AgentChecklistListing GetAssistantsAgentchecklists (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null)
+        {
+             ApiResponse<AgentChecklistListing> localVarResponse = GetAssistantsAgentchecklistsWithHttpInfo(before, after, pageSize, namePrefix, language, sortOrder, sortBy);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of agent checklists 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to "25")</param>
+        /// <param name="namePrefix">The agent checklist name prefix filter applied to the listing. (optional)</param>
+        /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional)</param>
+        /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <returns>ApiResponse of AgentChecklistListing</returns>
+        
+        public ApiResponse< AgentChecklistListing > GetAssistantsAgentchecklistsWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null)
+        { 
+
+            var localVarPath = "/api/v2/assistants/agentchecklists";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (namePrefix != null) localVarQueryParams.Add(new Tuple<string, string>("namePrefix", this.Configuration.ApiClient.ParameterToString(namePrefix)));
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklists: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentChecklistListing>(localVarStatusCode,
+                localVarHeaders,
+                (AgentChecklistListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentChecklistListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the list of agent checklists 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to "25")</param>
+        /// <param name="namePrefix">The agent checklist name prefix filter applied to the listing. (optional)</param>
+        /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional)</param>
+        /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <returns>Task of AgentChecklistListing</returns>
+        
+        public async System.Threading.Tasks.Task<AgentChecklistListing> GetAssistantsAgentchecklistsAsync (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null)
+        {
+             ApiResponse<AgentChecklistListing> localVarResponse = await GetAssistantsAgentchecklistsAsyncWithHttpInfo(before, after, pageSize, namePrefix, language, sortOrder, sortBy);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of agent checklists 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">The page size for the listing. The max that will be returned is 100. (optional, default to "25")</param>
+        /// <param name="namePrefix">The agent checklist name prefix filter applied to the listing. (optional)</param>
+        /// <param name="language">The agent checklist language filter applied to the listing. (optional)</param>
+        /// <param name="sortOrder">The sort order for the listing (optional)</param>
+        /// <param name="sortBy">The field to sort by for the listing. (optional)</param>
+        /// <returns>Task of ApiResponse (AgentChecklistListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AgentChecklistListing>> GetAssistantsAgentchecklistsAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, string namePrefix = null, string language = null, string sortOrder = null, string sortBy = null)
+        { 
+
+            var localVarPath = "/api/v2/assistants/agentchecklists";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (namePrefix != null) localVarQueryParams.Add(new Tuple<string, string>("namePrefix", this.Configuration.ApiClient.ParameterToString(namePrefix)));
+            if (language != null) localVarQueryParams.Add(new Tuple<string, string>("language", this.Configuration.ApiClient.ParameterToString(language)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklists: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentChecklistListing>(localVarStatusCode,
+                localVarHeaders,
+                (AgentChecklistListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentChecklistListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the list of supported languages 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>EntityListing</returns>
+        
+        public EntityListing GetAssistantsAgentchecklistsLanguages ()
+        {
+             ApiResponse<EntityListing> localVarResponse = GetAssistantsAgentchecklistsLanguagesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of supported languages 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of EntityListing</returns>
+        
+        public ApiResponse< EntityListing > GetAssistantsAgentchecklistsLanguagesWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/assistants/agentchecklists/languages";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklistsLanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklistsLanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the list of supported languages 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of EntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<EntityListing> GetAssistantsAgentchecklistsLanguagesAsync ()
+        {
+             ApiResponse<EntityListing> localVarResponse = await GetAssistantsAgentchecklistsLanguagesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of supported languages 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (EntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetAssistantsAgentchecklistsLanguagesAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/assistants/agentchecklists/languages";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklistsLanguages: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantsAgentchecklistsLanguages: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4034,6 +5164,217 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Request body containing details of checklist to be added</param>
+        /// <returns>AgentChecklist</returns>
+        
+        public AgentChecklist PostAssistantsAgentchecklists (AgentChecklist body)
+        {
+             ApiResponse<AgentChecklist> localVarResponse = PostAssistantsAgentchecklistsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Request body containing details of checklist to be added</param>
+        /// <returns>ApiResponse of AgentChecklist</returns>
+        
+        public ApiResponse< AgentChecklist > PostAssistantsAgentchecklistsWithHttpInfo (AgentChecklist body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistantsAgentchecklists");
+
+            var localVarPath = "/api/v2/assistants/agentchecklists";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAssistantsAgentchecklists: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAssistantsAgentchecklists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentChecklist>(localVarStatusCode,
+                localVarHeaders,
+                (AgentChecklist) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentChecklist)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Request body containing details of checklist to be added</param>
+        /// <returns>Task of AgentChecklist</returns>
+        
+        public async System.Threading.Tasks.Task<AgentChecklist> PostAssistantsAgentchecklistsAsync (AgentChecklist body)
+        {
+             ApiResponse<AgentChecklist> localVarResponse = await PostAssistantsAgentchecklistsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Request body containing details of checklist to be added</param>
+        /// <returns>Task of ApiResponse (AgentChecklist)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AgentChecklist>> PostAssistantsAgentchecklistsAsyncWithHttpInfo (AgentChecklist body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistantsAgentchecklists");
+            
+
+            var localVarPath = "/api/v2/assistants/agentchecklists";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAssistantsAgentchecklists: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAssistantsAgentchecklists: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentChecklist>(localVarStatusCode,
+                localVarHeaders,
+                (AgentChecklist) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentChecklist)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create a queue assistant association. 
         /// 
         /// </summary>
@@ -4264,6 +5605,230 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AssistantQueue>(localVarStatusCode,
                 localVarHeaders,
                 (AssistantQueue) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssistantQueue)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <param name="body">Request body containing details of checklist to be updated</param>
+        /// <returns>AgentChecklist</returns>
+        
+        public AgentChecklist PutAssistantsAgentchecklist (string agentChecklistId, AgentChecklist body)
+        {
+             ApiResponse<AgentChecklist> localVarResponse = PutAssistantsAgentchecklistWithHttpInfo(agentChecklistId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <param name="body">Request body containing details of checklist to be updated</param>
+        /// <returns>ApiResponse of AgentChecklist</returns>
+        
+        public ApiResponse< AgentChecklist > PutAssistantsAgentchecklistWithHttpInfo (string agentChecklistId, AgentChecklist body)
+        { 
+            // verify the required parameter 'agentChecklistId' is set
+            if (agentChecklistId == null)
+                throw new ApiException(400, "Missing required parameter 'agentChecklistId' when calling AgentAssistantsApi->PutAssistantsAgentchecklist");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PutAssistantsAgentchecklist");
+
+            var localVarPath = "/api/v2/assistants/agentchecklists/{agentChecklistId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentChecklistId != null) localVarPathParams.Add("agentChecklistId", this.Configuration.ApiClient.ParameterToString(agentChecklistId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAssistantsAgentchecklist: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAssistantsAgentchecklist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentChecklist>(localVarStatusCode,
+                localVarHeaders,
+                (AgentChecklist) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentChecklist)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <param name="body">Request body containing details of checklist to be updated</param>
+        /// <returns>Task of AgentChecklist</returns>
+        
+        public async System.Threading.Tasks.Task<AgentChecklist> PutAssistantsAgentchecklistAsync (string agentChecklistId, AgentChecklist body)
+        {
+             ApiResponse<AgentChecklist> localVarResponse = await PutAssistantsAgentchecklistAsyncWithHttpInfo(agentChecklistId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an agent checklist 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="agentChecklistId">Agent Checklist ID</param>
+        /// <param name="body">Request body containing details of checklist to be updated</param>
+        /// <returns>Task of ApiResponse (AgentChecklist)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AgentChecklist>> PutAssistantsAgentchecklistAsyncWithHttpInfo (string agentChecklistId, AgentChecklist body)
+        { 
+            // verify the required parameter 'agentChecklistId' is set
+            if (agentChecklistId == null)
+                throw new ApiException(400, "Missing required parameter 'agentChecklistId' when calling AgentAssistantsApi->PutAssistantsAgentchecklist");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PutAssistantsAgentchecklist");
+            
+
+            var localVarPath = "/api/v2/assistants/agentchecklists/{agentChecklistId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (agentChecklistId != null) localVarPathParams.Add("agentChecklistId", this.Configuration.ApiClient.ParameterToString(agentChecklistId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutAssistantsAgentchecklist: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutAssistantsAgentchecklist: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentChecklist>(localVarStatusCode,
+                localVarHeaders,
+                (AgentChecklist) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentChecklist)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

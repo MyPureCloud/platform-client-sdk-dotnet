@@ -385,6 +385,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Message,
             
             /// <summary>
+            /// Enum Screenmonitoring for "screenmonitoring"
+            /// </summary>
+            [EnumMember(Value = "screenmonitoring")]
+            Screenmonitoring,
+            
+            /// <summary>
             /// Enum Screenshare for "screenshare"
             /// </summary>
             [EnumMember(Value = "screenshare")]
@@ -688,6 +694,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RoutingRing">Routing ring for bullseye or preferred agent routing.</param>
         /// <param name="RoutingRule">Routing rule for preferred, conditional and predictive routing type.</param>
         /// <param name="RoutingRuleType">Routing rule type.</param>
+        /// <param name="ScreenMonitoredUserId">The user ID for the participant who is being screen monitored..</param>
         /// <param name="ScreenShareAddressSelf">Direct screen share address.</param>
         /// <param name="ScreenShareRoomId">A unique identifier for a Genesys Cloud screen share room.</param>
         /// <param name="ScriptId">A unique identifier for a script.</param>
@@ -708,7 +715,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
         /// <param name="Segments">List of segments for this session.</param>
-        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string BargedParticipantId = null, List<string> Bcc = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, List<string> Cc = null, bool? Cleared = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, bool? DeliveryPushed = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DateTime? DetectedSpeechEnd = null, DateTime? DetectedSpeechStart = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, EngagementSourceEnum? EngagementSource = null, string ExtendedDeliveryStatus = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsAgentGroup> AgentGroups = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string BargedParticipantId = null, List<string> Bcc = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, List<string> Cc = null, bool? Cleared = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, bool? DeliveryPushed = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DateTime? DetectedSpeechEnd = null, DateTime? DetectedSpeechStart = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, EngagementSourceEnum? EngagementSource = null, string ExtendedDeliveryStatus = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string ScreenMonitoredUserId = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsAgentGroup> AgentGroups = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.ActiveSkillIds = ActiveSkillIds;
             this.AcwSkipped = AcwSkipped;
@@ -775,6 +782,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RoutingRing = RoutingRing;
             this.RoutingRule = RoutingRule;
             this.RoutingRuleType = RoutingRuleType;
+            this.ScreenMonitoredUserId = ScreenMonitoredUserId;
             this.ScreenShareAddressSelf = ScreenShareAddressSelf;
             this.ScreenShareRoomId = ScreenShareRoomId;
             this.ScriptId = ScriptId;
@@ -1351,6 +1359,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The user ID for the participant who is being screen monitored.
+        /// </summary>
+        /// <value>The user ID for the participant who is being screen monitored.</value>
+        [DataMember(Name="screenMonitoredUserId", EmitDefaultValue=false)]
+        public string ScreenMonitoredUserId { get; set; }
+
+
+
+        /// <summary>
         /// Direct screen share address
         /// </summary>
         /// <value>Direct screen share address</value>
@@ -1596,6 +1613,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RoutingRing: ").Append(RoutingRing).Append("\n");
             sb.Append("  RoutingRule: ").Append(RoutingRule).Append("\n");
             sb.Append("  RoutingRuleType: ").Append(RoutingRuleType).Append("\n");
+            sb.Append("  ScreenMonitoredUserId: ").Append(ScreenMonitoredUserId).Append("\n");
             sb.Append("  ScreenShareAddressSelf: ").Append(ScreenShareAddressSelf).Append("\n");
             sb.Append("  ScreenShareRoomId: ").Append(ScreenShareRoomId).Append("\n");
             sb.Append("  ScriptId: ").Append(ScriptId).Append("\n");
@@ -1982,6 +2000,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoutingRuleType.Equals(other.RoutingRuleType)
                 ) &&
                 (
+                    this.ScreenMonitoredUserId == other.ScreenMonitoredUserId ||
+                    this.ScreenMonitoredUserId != null &&
+                    this.ScreenMonitoredUserId.Equals(other.ScreenMonitoredUserId)
+                ) &&
+                (
                     this.ScreenShareAddressSelf == other.ScreenShareAddressSelf ||
                     this.ScreenShareAddressSelf != null &&
                     this.ScreenShareAddressSelf.Equals(other.ScreenShareAddressSelf)
@@ -2288,6 +2311,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RoutingRuleType != null)
                     hash = hash * 59 + this.RoutingRuleType.GetHashCode();
+
+                if (this.ScreenMonitoredUserId != null)
+                    hash = hash * 59 + this.ScreenMonitoredUserId.GetHashCode();
 
                 if (this.ScreenShareAddressSelf != null)
                     hash = hash * 59 + this.ScreenShareAddressSelf.GetHashCode();

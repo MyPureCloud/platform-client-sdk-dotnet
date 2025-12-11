@@ -118,6 +118,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Scheduled,
             
             /// <summary>
+            /// Enum Screenmonitoring for "screenmonitoring"
+            /// </summary>
+            [EnumMember(Value = "screenmonitoring")]
+            Screenmonitoring,
+            
+            /// <summary>
             /// Enum Sharing for "sharing"
             /// </summary>
             [EnumMember(Value = "sharing")]

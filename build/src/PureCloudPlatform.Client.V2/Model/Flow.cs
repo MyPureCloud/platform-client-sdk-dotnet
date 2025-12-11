@@ -307,9 +307,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PublishedBy">PublishedBy.</param>
         /// <param name="CurrentOperation">CurrentOperation.</param>
         /// <param name="WorktypeId">WorktypeId.</param>
-        /// <param name="VirtualAgentEnabled">VirtualAgentEnabled.</param>
-        /// <param name="AgenticVirtualAgentEnabled">AgenticVirtualAgentEnabled.</param>
-        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null, string WorktypeId = null, bool? VirtualAgentEnabled = null, bool? AgenticVirtualAgentEnabled = null)
+        /// <param name="VirtualAgentEnabled">Indicates whether virtual agent is enabled for this flow..</param>
+        public Flow(string Id = null, string Name = null, WritableDivision Division = null, string Description = null, TypeEnum? Type = null, User LockedUser = null, DomainEntityRef LockedClient = null, bool? Active = null, bool? System = null, bool? Deleted = null, FlowVersion PublishedVersion = null, FlowVersion SavedVersion = null, Object InputSchema = null, Object OutputSchema = null, FlowVersion CheckedInVersion = null, FlowVersion DebugVersion = null, User PublishedBy = null, Operation CurrentOperation = null, string WorktypeId = null, bool? VirtualAgentEnabled = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -331,7 +330,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CurrentOperation = CurrentOperation;
             this.WorktypeId = WorktypeId;
             this.VirtualAgentEnabled = VirtualAgentEnabled;
-            this.AgenticVirtualAgentEnabled = AgenticVirtualAgentEnabled;
             
         }
         
@@ -518,18 +516,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets VirtualAgentEnabled
+        /// Indicates whether virtual agent is enabled for this flow.
         /// </summary>
+        /// <value>Indicates whether virtual agent is enabled for this flow.</value>
         [DataMember(Name="virtualAgentEnabled", EmitDefaultValue=false)]
         public bool? VirtualAgentEnabled { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets AgenticVirtualAgentEnabled
-        /// </summary>
-        [DataMember(Name="agenticVirtualAgentEnabled", EmitDefaultValue=false)]
-        public bool? AgenticVirtualAgentEnabled { get; set; }
 
 
 
@@ -573,7 +564,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CompatibleFlowTypes: ").Append(CompatibleFlowTypes).Append("\n");
             sb.Append("  WorktypeId: ").Append(WorktypeId).Append("\n");
             sb.Append("  VirtualAgentEnabled: ").Append(VirtualAgentEnabled).Append("\n");
-            sb.Append("  AgenticVirtualAgentEnabled: ").Append(AgenticVirtualAgentEnabled).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -731,11 +721,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.VirtualAgentEnabled.Equals(other.VirtualAgentEnabled)
                 ) &&
                 (
-                    this.AgenticVirtualAgentEnabled == other.AgenticVirtualAgentEnabled ||
-                    this.AgenticVirtualAgentEnabled != null &&
-                    this.AgenticVirtualAgentEnabled.Equals(other.AgenticVirtualAgentEnabled)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -821,9 +806,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.VirtualAgentEnabled != null)
                     hash = hash * 59 + this.VirtualAgentEnabled.GetHashCode();
-
-                if (this.AgenticVirtualAgentEnabled != null)
-                    hash = hash * 59 + this.AgenticVirtualAgentEnabled.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

@@ -406,6 +406,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SummarySetting> PostConversationsSummariesSettingsWithHttpInfo (SummarySetting body);
 
         /// <summary>
+        /// Add a turn to a guide session.
+        /// </summary>
+        /// <remarks>
+        /// Creates a new turn in the specified guide session with the provided request data. If the session ID doesn't exist, a new session will be created automatically.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="guideId">Guide ID</param>
+        /// <param name="guideSessionId">Guide Session ID</param>
+        /// <param name="body"></param>
+        /// <returns>GuideSessionTurnResponse</returns>
+        
+        GuideSessionTurnResponse PostGuideSessionTurns (string guideId, string guideSessionId, GuideSessionTurnRequest body);
+
+        /// <summary>
+        /// Add a turn to a guide session.
+        /// </summary>
+        /// <remarks>
+        /// Creates a new turn in the specified guide session with the provided request data. If the session ID doesn't exist, a new session will be created automatically.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="guideId">Guide ID</param>
+        /// <param name="guideSessionId">Guide Session ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of GuideSessionTurnResponse</returns>
+        
+        ApiResponse<GuideSessionTurnResponse> PostGuideSessionTurnsWithHttpInfo (string guideId, string guideSessionId, GuideSessionTurnRequest body);
+
+        /// <summary>
         /// Start the publishing of a guide version.
         /// </summary>
         /// <remarks>
@@ -934,6 +962,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (SummarySetting)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<SummarySetting>> PostConversationsSummariesSettingsAsyncWithHttpInfo (SummarySetting body);
+
+        /// <summary>
+        /// Add a turn to a guide session.
+        /// </summary>
+        /// <remarks>
+        /// Creates a new turn in the specified guide session with the provided request data. If the session ID doesn't exist, a new session will be created automatically.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="guideId">Guide ID</param>
+        /// <param name="guideSessionId">Guide Session ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of GuideSessionTurnResponse</returns>
+        
+        System.Threading.Tasks.Task<GuideSessionTurnResponse> PostGuideSessionTurnsAsync (string guideId, string guideSessionId, GuideSessionTurnRequest body);
+
+        /// <summary>
+        /// Add a turn to a guide session.
+        /// </summary>
+        /// <remarks>
+        /// Creates a new turn in the specified guide session with the provided request data. If the session ID doesn't exist, a new session will be created automatically.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="guideId">Guide ID</param>
+        /// <param name="guideSessionId">Guide Session ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (GuideSessionTurnResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GuideSessionTurnResponse>> PostGuideSessionTurnsAsyncWithHttpInfo (string guideId, string guideSessionId, GuideSessionTurnRequest body);
 
         /// <summary>
         /// Start the publishing of a guide version.
@@ -4186,6 +4242,243 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<SummarySetting>(localVarStatusCode,
                 localVarHeaders,
                 (SummarySetting) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SummarySetting)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Add a turn to a guide session. 
+        /// Creates a new turn in the specified guide session with the provided request data. If the session ID doesn't exist, a new session will be created automatically.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="guideId">Guide ID</param>
+        /// <param name="guideSessionId">Guide Session ID</param>
+        /// <param name="body"></param>
+        /// <returns>GuideSessionTurnResponse</returns>
+        
+        public GuideSessionTurnResponse PostGuideSessionTurns (string guideId, string guideSessionId, GuideSessionTurnRequest body)
+        {
+             ApiResponse<GuideSessionTurnResponse> localVarResponse = PostGuideSessionTurnsWithHttpInfo(guideId, guideSessionId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Add a turn to a guide session. 
+        /// Creates a new turn in the specified guide session with the provided request data. If the session ID doesn't exist, a new session will be created automatically.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="guideId">Guide ID</param>
+        /// <param name="guideSessionId">Guide Session ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of GuideSessionTurnResponse</returns>
+        
+        public ApiResponse< GuideSessionTurnResponse > PostGuideSessionTurnsWithHttpInfo (string guideId, string guideSessionId, GuideSessionTurnRequest body)
+        { 
+            // verify the required parameter 'guideId' is set
+            if (guideId == null)
+                throw new ApiException(400, "Missing required parameter 'guideId' when calling AIStudioApi->PostGuideSessionTurns");
+            // verify the required parameter 'guideSessionId' is set
+            if (guideSessionId == null)
+                throw new ApiException(400, "Missing required parameter 'guideSessionId' when calling AIStudioApi->PostGuideSessionTurns");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostGuideSessionTurns");
+
+            var localVarPath = "/api/v2/guides/{guideId}/sessions/{guideSessionId}/turns";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (guideId != null) localVarPathParams.Add("guideId", this.Configuration.ApiClient.ParameterToString(guideId));
+            if (guideSessionId != null) localVarPathParams.Add("guideSessionId", this.Configuration.ApiClient.ParameterToString(guideSessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGuideSessionTurns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGuideSessionTurns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GuideSessionTurnResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GuideSessionTurnResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GuideSessionTurnResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Add a turn to a guide session. 
+        /// Creates a new turn in the specified guide session with the provided request data. If the session ID doesn't exist, a new session will be created automatically.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="guideId">Guide ID</param>
+        /// <param name="guideSessionId">Guide Session ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of GuideSessionTurnResponse</returns>
+        
+        public async System.Threading.Tasks.Task<GuideSessionTurnResponse> PostGuideSessionTurnsAsync (string guideId, string guideSessionId, GuideSessionTurnRequest body)
+        {
+             ApiResponse<GuideSessionTurnResponse> localVarResponse = await PostGuideSessionTurnsAsyncWithHttpInfo(guideId, guideSessionId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Add a turn to a guide session. 
+        /// Creates a new turn in the specified guide session with the provided request data. If the session ID doesn't exist, a new session will be created automatically.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="guideId">Guide ID</param>
+        /// <param name="guideSessionId">Guide Session ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (GuideSessionTurnResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GuideSessionTurnResponse>> PostGuideSessionTurnsAsyncWithHttpInfo (string guideId, string guideSessionId, GuideSessionTurnRequest body)
+        { 
+            // verify the required parameter 'guideId' is set
+            if (guideId == null)
+                throw new ApiException(400, "Missing required parameter 'guideId' when calling AIStudioApi->PostGuideSessionTurns");
+            
+            // verify the required parameter 'guideSessionId' is set
+            if (guideSessionId == null)
+                throw new ApiException(400, "Missing required parameter 'guideSessionId' when calling AIStudioApi->PostGuideSessionTurns");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostGuideSessionTurns");
+            
+
+            var localVarPath = "/api/v2/guides/{guideId}/sessions/{guideSessionId}/turns";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (guideId != null) localVarPathParams.Add("guideId", this.Configuration.ApiClient.ParameterToString(guideId));
+            if (guideSessionId != null) localVarPathParams.Add("guideSessionId", this.Configuration.ApiClient.ParameterToString(guideSessionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostGuideSessionTurns: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostGuideSessionTurns: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GuideSessionTurnResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GuideSessionTurnResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GuideSessionTurnResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

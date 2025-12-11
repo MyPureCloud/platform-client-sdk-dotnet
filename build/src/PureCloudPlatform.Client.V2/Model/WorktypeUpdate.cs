@@ -32,6 +32,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SchemaId">The ID of the custom attribute schema for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="ServiceLevelTarget">The target service level for Workitems created from the Worktype. The default value is 100..</param>
         /// <param name="RuleSettings">Settings for the worktypes rules..</param>
+        /// <param name="UnassignedDivisionContactsEnabled">When set to true, will allow Workitems to be associated with External Contacts that are not assigned to any division. Default value is true..</param>
         /// <param name="Description">The description of the Worktype. Maximum length of 512 characters..</param>
         /// <param name="DefaultStatusId">The ID of the default status for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="SchemaVersion">The version of the Worktypes custom attribute schema. The latest schema version will be used if this property is not set..</param>
@@ -39,7 +40,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultSkillIds">The IDs of the default skills for Workitems created from the Worktype. Must be valid UUIDs. Maximum of 20 IDs.</param>
         /// <param name="DefaultQueueId">The ID of the default queue for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="DefaultScriptId">The default script for Workitems created from the Worktype. Must be a valid UUID..</param>
-        public WorktypeUpdate(string Name = null, string DefaultWorkbinId = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, int? DefaultTtlSeconds = null, bool? AssignmentEnabled = null, string SchemaId = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, string Description = null, string DefaultStatusId = null, int? SchemaVersion = null, string DefaultLanguageId = null, List<string> DefaultSkillIds = null, string DefaultQueueId = null, string DefaultScriptId = null)
+        public WorktypeUpdate(string Name = null, string DefaultWorkbinId = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, int? DefaultTtlSeconds = null, bool? AssignmentEnabled = null, string SchemaId = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, bool? UnassignedDivisionContactsEnabled = null, string Description = null, string DefaultStatusId = null, int? SchemaVersion = null, string DefaultLanguageId = null, List<string> DefaultSkillIds = null, string DefaultQueueId = null, string DefaultScriptId = null)
         {
             this.Name = Name;
             this.DefaultWorkbinId = DefaultWorkbinId;
@@ -52,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SchemaId = SchemaId;
             this.ServiceLevelTarget = ServiceLevelTarget;
             this.RuleSettings = RuleSettings;
+            this.UnassignedDivisionContactsEnabled = UnassignedDivisionContactsEnabled;
             this.Description = Description;
             this.DefaultStatusId = DefaultStatusId;
             this.SchemaVersion = SchemaVersion;
@@ -164,6 +166,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// When set to true, will allow Workitems to be associated with External Contacts that are not assigned to any division. Default value is true.
+        /// </summary>
+        /// <value>When set to true, will allow Workitems to be associated with External Contacts that are not assigned to any division. Default value is true.</value>
+        [DataMember(Name="unassignedDivisionContactsEnabled", EmitDefaultValue=false)]
+        public bool? UnassignedDivisionContactsEnabled { get; set; }
+
+
+
+        /// <summary>
         /// The description of the Worktype. Maximum length of 512 characters.
         /// </summary>
         /// <value>The description of the Worktype. Maximum length of 512 characters.</value>
@@ -245,6 +256,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SchemaId: ").Append(SchemaId).Append("\n");
             sb.Append("  ServiceLevelTarget: ").Append(ServiceLevelTarget).Append("\n");
             sb.Append("  RuleSettings: ").Append(RuleSettings).Append("\n");
+            sb.Append("  UnassignedDivisionContactsEnabled: ").Append(UnassignedDivisionContactsEnabled).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DefaultStatusId: ").Append(DefaultStatusId).Append("\n");
             sb.Append("  SchemaVersion: ").Append(SchemaVersion).Append("\n");
@@ -348,6 +360,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RuleSettings.Equals(other.RuleSettings)
                 ) &&
                 (
+                    this.UnassignedDivisionContactsEnabled == other.UnassignedDivisionContactsEnabled ||
+                    this.UnassignedDivisionContactsEnabled != null &&
+                    this.UnassignedDivisionContactsEnabled.Equals(other.UnassignedDivisionContactsEnabled)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -427,6 +444,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RuleSettings != null)
                     hash = hash * 59 + this.RuleSettings.GetHashCode();
+
+                if (this.UnassignedDivisionContactsEnabled != null)
+                    hash = hash * 59 + this.UnassignedDivisionContactsEnabled.GetHashCode();
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();

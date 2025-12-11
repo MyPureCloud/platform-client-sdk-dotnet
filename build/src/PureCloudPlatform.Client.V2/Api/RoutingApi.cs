@@ -184,6 +184,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteRoutingPredictorWithHttpInfo (string predictorId);
 
         /// <summary>
+        /// Delete a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <returns></returns>
+        
+        void DeleteRoutingPredictorsKeyperformanceindicator (string kpiId);
+
+        /// <summary>
+        /// Delete a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteRoutingPredictorsKeyperformanceindicatorWithHttpInfo (string kpiId);
+
+        /// <summary>
         /// Delete a queue
         /// </summary>
         /// <remarks>
@@ -1292,6 +1318,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<PredictorListing> GetRoutingPredictorsWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null);
 
         /// <summary>
+        /// Retrieve a single Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
+        /// <returns>KeyPerformanceIndicator</returns>
+        
+        KeyPerformanceIndicator GetRoutingPredictorsKeyperformanceindicator (string kpiId, List<string> expand = null);
+
+        /// <summary>
+        /// Retrieve a single Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
+        /// <returns>ApiResponse of KeyPerformanceIndicator</returns>
+        
+        ApiResponse<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicatorWithHttpInfo (string kpiId, List<string> expand = null);
+
+        /// <summary>
         /// Get a list of Key Performance Indicators
         /// </summary>
         /// <remarks>
@@ -1316,6 +1370,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of List&lt;KeyPerformanceIndicator&gt;</returns>
         
         ApiResponse<List<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (string kpiGroup = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators Types available.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;KeyPerformanceIndicatorType&gt;</returns>
+        
+        List<KeyPerformanceIndicatorType> GetRoutingPredictorsKeyperformanceindicatortypes ();
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators Types available.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;KeyPerformanceIndicatorType&gt;</returns>
+        
+        ApiResponse<List<KeyPerformanceIndicatorType>> GetRoutingPredictorsKeyperformanceindicatortypesWithHttpInfo ();
 
         /// <summary>
         /// Get details about this queue.
@@ -2748,6 +2826,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Predictor> PatchRoutingPredictorWithHttpInfo (string predictorId, PatchPredictorRequest body = null);
 
         /// <summary>
+        /// Update a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>KeyPerformanceIndicator</returns>
+        
+        KeyPerformanceIndicator PatchRoutingPredictorsKeyperformanceindicator (string kpiId, UpdateKpiRequest body = null);
+
+        /// <summary>
+        /// Update a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of KeyPerformanceIndicator</returns>
+        
+        ApiResponse<KeyPerformanceIndicator> PatchRoutingPredictorsKeyperformanceindicatorWithHttpInfo (string kpiId, UpdateKpiRequest body = null);
+
+        /// <summary>
         /// Update the ring number OR joined status for a queue member.
         /// </summary>
         /// <remarks>
@@ -3436,6 +3542,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Predictor</returns>
         
         ApiResponse<Predictor> PostRoutingPredictorsWithHttpInfo (CreatePredictorRequest body = null);
+
+        /// <summary>
+        /// Create a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>KeyPerformanceIndicator</returns>
+        
+        KeyPerformanceIndicator PostRoutingPredictorsKeyperformanceindicators (CreateKpiRequest body);
+
+        /// <summary>
+        /// Create a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>ApiResponse of KeyPerformanceIndicator</returns>
+        
+        ApiResponse<KeyPerformanceIndicator> PostRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (CreateKpiRequest body);
 
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -4450,6 +4582,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingPredictorAsyncWithHttpInfo (string predictorId);
+
+        /// <summary>
+        /// Delete a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteRoutingPredictorsKeyperformanceindicatorAsync (string kpiId);
+
+        /// <summary>
+        /// Delete a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingPredictorsKeyperformanceindicatorAsyncWithHttpInfo (string kpiId);
 
         /// <summary>
         /// Delete a queue
@@ -5560,6 +5718,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<PredictorListing>> GetRoutingPredictorsAsyncWithHttpInfo (string before = null, string after = null, string limit = null, string pageSize = null, List<string> queueId = null, string kpiId = null, string state = null);
 
         /// <summary>
+        /// Retrieve a single Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
+        /// <returns>Task of KeyPerformanceIndicator</returns>
+        
+        System.Threading.Tasks.Task<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicatorAsync (string kpiId, List<string> expand = null);
+
+        /// <summary>
+        /// Retrieve a single Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
+        /// <returns>Task of ApiResponse (KeyPerformanceIndicator)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorAsyncWithHttpInfo (string kpiId, List<string> expand = null);
+
+        /// <summary>
         /// Get a list of Key Performance Indicators
         /// </summary>
         /// <remarks>
@@ -5584,6 +5770,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicator&gt;)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicator>>> GetRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (string kpiGroup = null, List<string> expand = null);
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators Types available.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;KeyPerformanceIndicatorType&gt;</returns>
+        
+        System.Threading.Tasks.Task<List<KeyPerformanceIndicatorType>> GetRoutingPredictorsKeyperformanceindicatortypesAsync ();
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators Types available.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicatorType&gt;)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicatorType>>> GetRoutingPredictorsKeyperformanceindicatortypesAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get details about this queue.
@@ -7016,6 +7226,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Predictor>> PatchRoutingPredictorAsyncWithHttpInfo (string predictorId, PatchPredictorRequest body = null);
 
         /// <summary>
+        /// Update a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of KeyPerformanceIndicator</returns>
+        
+        System.Threading.Tasks.Task<KeyPerformanceIndicator> PatchRoutingPredictorsKeyperformanceindicatorAsync (string kpiId, UpdateKpiRequest body = null);
+
+        /// <summary>
+        /// Update a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (KeyPerformanceIndicator)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<KeyPerformanceIndicator>> PatchRoutingPredictorsKeyperformanceindicatorAsyncWithHttpInfo (string kpiId, UpdateKpiRequest body = null);
+
+        /// <summary>
         /// Update the ring number OR joined status for a queue member.
         /// </summary>
         /// <remarks>
@@ -7704,6 +7942,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Predictor)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Predictor>> PostRoutingPredictorsAsyncWithHttpInfo (CreatePredictorRequest body = null);
+
+        /// <summary>
+        /// Create a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>Task of KeyPerformanceIndicator</returns>
+        
+        System.Threading.Tasks.Task<KeyPerformanceIndicator> PostRoutingPredictorsKeyperformanceindicatorsAsync (CreateKpiRequest body);
+
+        /// <summary>
+        /// Create a custom Key Performance Indicator.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>Task of ApiResponse (KeyPerformanceIndicator)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<KeyPerformanceIndicator>> PostRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (CreateKpiRequest body);
 
         /// <summary>
         /// Bulk add or delete up to 100 queue members
@@ -10022,6 +10286,209 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingPredictor: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingPredictor: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a custom Key Performance Indicator. 
+        /// 
+        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <returns></returns>
+        
+        public void DeleteRoutingPredictorsKeyperformanceindicator (string kpiId)
+        {
+             DeleteRoutingPredictorsKeyperformanceindicatorWithHttpInfo(kpiId);
+        }
+
+        /// <summary>
+        /// Delete a custom Key Performance Indicator. 
+        /// 
+        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteRoutingPredictorsKeyperformanceindicatorWithHttpInfo (string kpiId)
+        { 
+            // verify the required parameter 'kpiId' is set
+            if (kpiId == null)
+                throw new ApiException(400, "Missing required parameter 'kpiId' when calling RoutingApi->DeleteRoutingPredictorsKeyperformanceindicator");
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators/{kpiId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (kpiId != null) localVarPathParams.Add("kpiId", this.Configuration.ApiClient.ParameterToString(kpiId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingPredictorsKeyperformanceindicator: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingPredictorsKeyperformanceindicator: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a custom Key Performance Indicator. 
+        /// 
+        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteRoutingPredictorsKeyperformanceindicatorAsync (string kpiId)
+        {
+             await DeleteRoutingPredictorsKeyperformanceindicatorAsyncWithHttpInfo(kpiId);
+
+        }
+
+        /// <summary>
+        /// Delete a custom Key Performance Indicator. 
+        /// 
+        /// DeleteRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingPredictorsKeyperformanceindicatorAsyncWithHttpInfo (string kpiId)
+        { 
+            // verify the required parameter 'kpiId' is set
+            if (kpiId == null)
+                throw new ApiException(400, "Missing required parameter 'kpiId' when calling RoutingApi->DeleteRoutingPredictorsKeyperformanceindicator");
+            
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators/{kpiId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (kpiId != null) localVarPathParams.Add("kpiId", this.Configuration.ApiClient.ParameterToString(kpiId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingPredictorsKeyperformanceindicator: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteRoutingPredictorsKeyperformanceindicator: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -18840,6 +19307,217 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Retrieve a single Key Performance Indicator. 
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
+        /// <returns>KeyPerformanceIndicator</returns>
+        
+        public KeyPerformanceIndicator GetRoutingPredictorsKeyperformanceindicator (string kpiId, List<string> expand = null)
+        {
+             ApiResponse<KeyPerformanceIndicator> localVarResponse = GetRoutingPredictorsKeyperformanceindicatorWithHttpInfo(kpiId, expand);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a single Key Performance Indicator. 
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
+        /// <returns>ApiResponse of KeyPerformanceIndicator</returns>
+        
+        public ApiResponse< KeyPerformanceIndicator > GetRoutingPredictorsKeyperformanceindicatorWithHttpInfo (string kpiId, List<string> expand = null)
+        { 
+            // verify the required parameter 'kpiId' is set
+            if (kpiId == null)
+                throw new ApiException(400, "Missing required parameter 'kpiId' when calling RoutingApi->GetRoutingPredictorsKeyperformanceindicator");
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators/{kpiId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (kpiId != null) localVarPathParams.Add("kpiId", this.Configuration.ApiClient.ParameterToString(kpiId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicator: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicator: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyPerformanceIndicator>(localVarStatusCode,
+                localVarHeaders,
+                (KeyPerformanceIndicator) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyPerformanceIndicator)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieve a single Key Performance Indicator. 
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
+        /// <returns>Task of KeyPerformanceIndicator</returns>
+        
+        public async System.Threading.Tasks.Task<KeyPerformanceIndicator> GetRoutingPredictorsKeyperformanceindicatorAsync (string kpiId, List<string> expand = null)
+        {
+             ApiResponse<KeyPerformanceIndicator> localVarResponse = await GetRoutingPredictorsKeyperformanceindicatorAsyncWithHttpInfo(kpiId, expand);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a single Key Performance Indicator. 
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="expand">Parameter to request additional data to return in KPI payload (optional)</param>
+        /// <returns>Task of ApiResponse (KeyPerformanceIndicator)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<KeyPerformanceIndicator>> GetRoutingPredictorsKeyperformanceindicatorAsyncWithHttpInfo (string kpiId, List<string> expand = null)
+        { 
+            // verify the required parameter 'kpiId' is set
+            if (kpiId == null)
+                throw new ApiException(400, "Missing required parameter 'kpiId' when calling RoutingApi->GetRoutingPredictorsKeyperformanceindicator");
+            
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators/{kpiId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (kpiId != null) localVarPathParams.Add("kpiId", this.Configuration.ApiClient.ParameterToString(kpiId));
+
+            // Query params
+            if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicator: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicator: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyPerformanceIndicator>(localVarStatusCode,
+                localVarHeaders,
+                (KeyPerformanceIndicator) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyPerformanceIndicator)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a list of Key Performance Indicators 
         /// 
         /// </summary>
@@ -19033,6 +19711,198 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<KeyPerformanceIndicator>>(localVarStatusCode,
                 localVarHeaders,
                 (List<KeyPerformanceIndicator>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<KeyPerformanceIndicator>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators Types available. 
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>List&lt;KeyPerformanceIndicatorType&gt;</returns>
+        
+        public List<KeyPerformanceIndicatorType> GetRoutingPredictorsKeyperformanceindicatortypes ()
+        {
+             ApiResponse<List<KeyPerformanceIndicatorType>> localVarResponse = GetRoutingPredictorsKeyperformanceindicatortypesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators Types available. 
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of List&lt;KeyPerformanceIndicatorType&gt;</returns>
+        
+        public ApiResponse< List<KeyPerformanceIndicatorType> > GetRoutingPredictorsKeyperformanceindicatortypesWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicatortypes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicatortypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicatortypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<KeyPerformanceIndicatorType>>(localVarStatusCode,
+                localVarHeaders,
+                (List<KeyPerformanceIndicatorType>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<KeyPerformanceIndicatorType>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators Types available. 
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of List&lt;KeyPerformanceIndicatorType&gt;</returns>
+        
+        public async System.Threading.Tasks.Task<List<KeyPerformanceIndicatorType>> GetRoutingPredictorsKeyperformanceindicatortypesAsync ()
+        {
+             ApiResponse<List<KeyPerformanceIndicatorType>> localVarResponse = await GetRoutingPredictorsKeyperformanceindicatortypesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of Key Performance Indicators Types available. 
+        /// 
+        /// GetRoutingPredictorsKeyperformanceindicatortypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (List&lt;KeyPerformanceIndicatorType&gt;)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<List<KeyPerformanceIndicatorType>>> GetRoutingPredictorsKeyperformanceindicatortypesAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicatortypes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicatortypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetRoutingPredictorsKeyperformanceindicatortypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<KeyPerformanceIndicatorType>>(localVarStatusCode,
+                localVarHeaders,
+                (List<KeyPerformanceIndicatorType>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<KeyPerformanceIndicatorType>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -29744,6 +30614,227 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update a custom Key Performance Indicator. 
+        /// 
+        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>KeyPerformanceIndicator</returns>
+        
+        public KeyPerformanceIndicator PatchRoutingPredictorsKeyperformanceindicator (string kpiId, UpdateKpiRequest body = null)
+        {
+             ApiResponse<KeyPerformanceIndicator> localVarResponse = PatchRoutingPredictorsKeyperformanceindicatorWithHttpInfo(kpiId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a custom Key Performance Indicator. 
+        /// 
+        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of KeyPerformanceIndicator</returns>
+        
+        public ApiResponse< KeyPerformanceIndicator > PatchRoutingPredictorsKeyperformanceindicatorWithHttpInfo (string kpiId, UpdateKpiRequest body = null)
+        { 
+            // verify the required parameter 'kpiId' is set
+            if (kpiId == null)
+                throw new ApiException(400, "Missing required parameter 'kpiId' when calling RoutingApi->PatchRoutingPredictorsKeyperformanceindicator");
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators/{kpiId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (kpiId != null) localVarPathParams.Add("kpiId", this.Configuration.ApiClient.ParameterToString(kpiId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingPredictorsKeyperformanceindicator: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingPredictorsKeyperformanceindicator: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyPerformanceIndicator>(localVarStatusCode,
+                localVarHeaders,
+                (KeyPerformanceIndicator) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyPerformanceIndicator)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a custom Key Performance Indicator. 
+        /// 
+        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of KeyPerformanceIndicator</returns>
+        
+        public async System.Threading.Tasks.Task<KeyPerformanceIndicator> PatchRoutingPredictorsKeyperformanceindicatorAsync (string kpiId, UpdateKpiRequest body = null)
+        {
+             ApiResponse<KeyPerformanceIndicator> localVarResponse = await PatchRoutingPredictorsKeyperformanceindicatorAsyncWithHttpInfo(kpiId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a custom Key Performance Indicator. 
+        /// 
+        /// PatchRoutingPredictorsKeyperformanceindicator is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="kpiId">Key Performance Indicator ID</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (KeyPerformanceIndicator)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<KeyPerformanceIndicator>> PatchRoutingPredictorsKeyperformanceindicatorAsyncWithHttpInfo (string kpiId, UpdateKpiRequest body = null)
+        { 
+            // verify the required parameter 'kpiId' is set
+            if (kpiId == null)
+                throw new ApiException(400, "Missing required parameter 'kpiId' when calling RoutingApi->PatchRoutingPredictorsKeyperformanceindicator");
+            
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators/{kpiId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (kpiId != null) localVarPathParams.Add("kpiId", this.Configuration.ApiClient.ParameterToString(kpiId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingPredictorsKeyperformanceindicator: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingPredictorsKeyperformanceindicator: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyPerformanceIndicator>(localVarStatusCode,
+                localVarHeaders,
+                (KeyPerformanceIndicator) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyPerformanceIndicator)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update the ring number OR joined status for a queue member. 
         /// 
         /// </summary>
@@ -35632,6 +36723,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Predictor>(localVarStatusCode,
                 localVarHeaders,
                 (Predictor) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Predictor)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a custom Key Performance Indicator. 
+        /// 
+        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>KeyPerformanceIndicator</returns>
+        
+        public KeyPerformanceIndicator PostRoutingPredictorsKeyperformanceindicators (CreateKpiRequest body)
+        {
+             ApiResponse<KeyPerformanceIndicator> localVarResponse = PostRoutingPredictorsKeyperformanceindicatorsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a custom Key Performance Indicator. 
+        /// 
+        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>ApiResponse of KeyPerformanceIndicator</returns>
+        
+        public ApiResponse< KeyPerformanceIndicator > PostRoutingPredictorsKeyperformanceindicatorsWithHttpInfo (CreateKpiRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingPredictorsKeyperformanceindicators");
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingPredictorsKeyperformanceindicators: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingPredictorsKeyperformanceindicators: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyPerformanceIndicator>(localVarStatusCode,
+                localVarHeaders,
+                (KeyPerformanceIndicator) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyPerformanceIndicator)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a custom Key Performance Indicator. 
+        /// 
+        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>Task of KeyPerformanceIndicator</returns>
+        
+        public async System.Threading.Tasks.Task<KeyPerformanceIndicator> PostRoutingPredictorsKeyperformanceindicatorsAsync (CreateKpiRequest body)
+        {
+             ApiResponse<KeyPerformanceIndicator> localVarResponse = await PostRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a custom Key Performance Indicator. 
+        /// 
+        /// PostRoutingPredictorsKeyperformanceindicators is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">request</param>
+        /// <returns>Task of ApiResponse (KeyPerformanceIndicator)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<KeyPerformanceIndicator>> PostRoutingPredictorsKeyperformanceindicatorsAsyncWithHttpInfo (CreateKpiRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PostRoutingPredictorsKeyperformanceindicators");
+            
+
+            var localVarPath = "/api/v2/routing/predictors/keyperformanceindicators";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingPredictorsKeyperformanceindicators: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingPredictorsKeyperformanceindicators: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KeyPerformanceIndicator>(localVarStatusCode,
+                localVarHeaders,
+                (KeyPerformanceIndicator) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KeyPerformanceIndicator)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

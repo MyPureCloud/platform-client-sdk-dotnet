@@ -46,7 +46,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
@@ -60,7 +59,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
@@ -436,7 +434,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
@@ -450,7 +447,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
@@ -464,7 +460,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">The ID of the subject to which policies are applied</param>
@@ -479,7 +474,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">The ID of the subject to which policies are applied</param>
@@ -494,7 +488,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
@@ -509,7 +502,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
@@ -524,7 +516,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
@@ -538,7 +529,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
@@ -552,7 +542,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>TargetAttributes</returns>
@@ -564,7 +553,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of TargetAttributes</returns>
@@ -576,7 +564,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve</param>
@@ -589,7 +576,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve</param>
@@ -602,7 +588,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve attributes</param>
@@ -615,7 +600,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve attributes</param>
@@ -1082,7 +1066,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -1096,7 +1079,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -1110,7 +1092,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -1124,7 +1105,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -1138,7 +1118,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to test the simulated data against</param>
@@ -1152,7 +1131,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to test the simulated data against</param>
@@ -1408,7 +1386,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -1422,7 +1399,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -1436,7 +1412,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
@@ -1450,7 +1425,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
@@ -1646,7 +1620,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
@@ -1660,7 +1633,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
@@ -2036,7 +2008,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
@@ -2050,7 +2021,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
@@ -2064,7 +2034,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">The ID of the subject to which policies are applied</param>
@@ -2079,7 +2048,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">The ID of the subject to which policies are applied</param>
@@ -2094,7 +2062,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
@@ -2109,7 +2076,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
@@ -2124,7 +2090,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
@@ -2138,7 +2103,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
@@ -2152,7 +2116,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of TargetAttributes</returns>
@@ -2164,7 +2127,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (TargetAttributes)</returns>
@@ -2176,7 +2138,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve</param>
@@ -2189,7 +2150,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve</param>
@@ -2202,7 +2162,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve attributes</param>
@@ -2215,7 +2174,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve attributes</param>
@@ -2682,7 +2640,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -2696,7 +2653,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -2710,7 +2666,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -2724,7 +2679,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -2738,7 +2692,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to test the simulated data against</param>
@@ -2752,7 +2705,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to test the simulated data against</param>
@@ -3008,7 +2960,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -3022,7 +2973,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -3036,7 +2986,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
@@ -3050,7 +2999,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
@@ -3511,7 +3459,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an access control policy 
         /// 
-        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
@@ -3526,7 +3473,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an access control policy 
         /// 
-        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
@@ -3617,7 +3563,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an access control policy 
         /// 
-        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
@@ -3633,7 +3578,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an access control policy 
         /// 
-        /// DeleteAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy is applied</param>
@@ -6465,7 +6409,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for an organization 
         /// 
-        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
@@ -6481,7 +6424,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for an organization 
         /// 
-        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
@@ -6566,7 +6508,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for an organization 
         /// 
-        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
@@ -6583,7 +6524,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for an organization 
         /// 
-        /// GetAuthorizationPolicies is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
@@ -6669,7 +6609,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for a given subject 
         /// 
-        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">The ID of the subject to which policies are applied</param>
@@ -6686,7 +6625,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for a given subject 
         /// 
-        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">The ID of the subject to which policies are applied</param>
@@ -6776,7 +6714,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for a given subject 
         /// 
-        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">The ID of the subject to which policies are applied</param>
@@ -6794,7 +6731,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for a given subject 
         /// 
-        /// GetAuthorizationPoliciesSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="subjectId">The ID of the subject to which policies are applied</param>
@@ -6886,7 +6822,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for a given policy target 
         /// 
-        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
@@ -6903,7 +6838,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for a given policy target 
         /// 
-        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
@@ -6993,7 +6927,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for a given policy target 
         /// 
-        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
@@ -7011,7 +6944,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a page of access policies for a given policy target 
         /// 
-        /// GetAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which policies are applied</param>
@@ -7103,7 +7035,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an access control policy for a specified resource target and subject 
         /// 
-        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
@@ -7119,7 +7050,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an access control policy for a specified resource target and subject 
         /// 
-        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
@@ -7210,7 +7140,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an access control policy for a specified resource target and subject 
         /// 
-        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
@@ -7227,7 +7156,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an access control policy for a specified resource target and subject 
         /// 
-        /// GetAuthorizationPoliciesTargetSubjectSubjectId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action resource target to which the policy is applied</param>
@@ -7321,7 +7249,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a map of policy targets to valid attributes for those targets 
         /// 
-        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>TargetAttributes</returns>
@@ -7335,7 +7262,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a map of policy targets to valid attributes for those targets 
         /// 
-        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of TargetAttributes</returns>
@@ -7416,7 +7342,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a map of policy targets to valid attributes for those targets 
         /// 
-        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of TargetAttributes</returns>
@@ -7431,7 +7356,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a map of policy targets to valid attributes for those targets 
         /// 
-        /// GetAuthorizationPoliciesTargets is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (TargetAttributes)</returns>
@@ -7513,7 +7437,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an access control policy with the specified policy ID 
         /// 
-        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve</param>
@@ -7528,7 +7451,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an access control policy with the specified policy ID 
         /// 
-        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve</param>
@@ -7614,7 +7536,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an access control policy with the specified policy ID 
         /// 
-        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve</param>
@@ -7630,7 +7551,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an access control policy with the specified policy ID 
         /// 
-        /// GetAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve</param>
@@ -7718,7 +7638,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of attributes used to evaluate an access control policy with the specified policy ID 
         /// 
-        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve attributes</param>
@@ -7733,7 +7652,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of attributes used to evaluate an access control policy with the specified policy ID 
         /// 
-        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve attributes</param>
@@ -7819,7 +7737,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of attributes used to evaluate an access control policy with the specified policy ID 
         /// 
-        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve attributes</param>
@@ -7835,7 +7752,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of attributes used to evaluate an access control policy with the specified policy ID 
         /// 
-        /// GetAuthorizationPolicyAttributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to retrieve attributes</param>
@@ -11519,7 +11435,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add an access control policy for a specified resource target and subject 
         /// 
-        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -11535,7 +11450,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add an access control policy for a specified resource target and subject 
         /// 
-        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -11631,7 +11545,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add an access control policy for a specified resource target and subject 
         /// 
-        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -11648,7 +11561,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add an access control policy for a specified resource target and subject 
         /// 
-        /// PostAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -11747,7 +11659,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Validate the conditions and attributes of an access control policy for a specified resource target 
         /// 
-        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -11763,7 +11674,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Validate the conditions and attributes of an access control policy for a specified resource target 
         /// 
-        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -11859,7 +11769,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Validate the conditions and attributes of an access control policy for a specified resource target 
         /// 
-        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -11876,7 +11785,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Validate the conditions and attributes of an access control policy for a specified resource target 
         /// 
-        /// PostAuthorizationPoliciesTargetValidate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -11975,7 +11883,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Simulate a request and evaluate the specified policy ID against the provided values 
         /// 
-        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to test the simulated data against</param>
@@ -11991,7 +11898,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Simulate a request and evaluate the specified policy ID against the provided values 
         /// 
-        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to test the simulated data against</param>
@@ -12087,7 +11993,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Simulate a request and evaluate the specified policy ID against the provided values 
         /// 
-        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to test the simulated data against</param>
@@ -12104,7 +12009,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Simulate a request and evaluate the specified policy ID against the provided values 
         /// 
-        /// PostAuthorizationPolicySimulate is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to test the simulated data against</param>
@@ -14206,7 +14110,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add an access control policy for a specified resource target and subject, overwriting any existing policy 
         /// 
-        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -14222,7 +14125,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add an access control policy for a specified resource target and subject, overwriting any existing policy 
         /// 
-        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -14318,7 +14220,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add an access control policy for a specified resource target and subject, overwriting any existing policy 
         /// 
-        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -14335,7 +14236,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Add an access control policy for a specified resource target and subject, overwriting any existing policy 
         /// 
-        /// PutAuthorizationPoliciesTarget is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
@@ -14434,7 +14334,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an access control policy with a given ID 
         /// 
-        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
@@ -14450,7 +14349,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an access control policy with a given ID 
         /// 
-        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
@@ -14546,7 +14444,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an access control policy with a given ID 
         /// 
-        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
@@ -14563,7 +14460,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an access control policy with a given ID 
         /// 
-        /// PutAuthorizationPolicy is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>

@@ -38,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SchemaId">The ID of the custom attribute schema for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="ServiceLevelTarget">The target service level for Workitems created from the Worktype. The default value is 100..</param>
         /// <param name="RuleSettings">Settings for the worktypes rules..</param>
+        /// <param name="UnassignedDivisionContactsEnabled">When set to true, will allow Workitems to be associated with External Contacts that are not assigned to any division. Default value is true..</param>
         /// <param name="Description">The description of the Worktype. Maximum length of 512 characters..</param>
         /// <param name="DivisionId">The ID of the division the Worktype belongs to. Defaults to the default Workbin division ID. The Worktype must be in the same division as its default Workbin..</param>
         /// <param name="DisableDefaultStatusCreation">Set to true to disable default status creation. Default statuses are created with the Worktype by default.</param>
@@ -46,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DefaultLanguageId">The ID of the default language for Workitems created from the Worktype. Must be a valid UUID..</param>
         /// <param name="DefaultSkillIds">The IDs of the default skills for Workitems created from the Worktype. Must be valid UUIDs. Maximum of 20 IDs.</param>
         /// <param name="DefaultScriptId">The default script for Workitems created from the Worktype. Must be a valid UUID..</param>
-        public WorktypeCreate(string Name = null, string DefaultWorkbinId = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, int? DefaultTtlSeconds = null, bool? AssignmentEnabled = null, string SchemaId = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, string Description = null, string DivisionId = null, bool? DisableDefaultStatusCreation = null, int? SchemaVersion = null, string DefaultQueueId = null, string DefaultLanguageId = null, List<string> DefaultSkillIds = null, string DefaultScriptId = null)
+        public WorktypeCreate(string Name = null, string DefaultWorkbinId = null, int? DefaultDurationSeconds = null, int? DefaultExpirationSeconds = null, int? DefaultDueDurationSeconds = null, int? DefaultPriority = null, int? DefaultTtlSeconds = null, bool? AssignmentEnabled = null, string SchemaId = null, int? ServiceLevelTarget = null, WorkitemRuleSettings RuleSettings = null, bool? UnassignedDivisionContactsEnabled = null, string Description = null, string DivisionId = null, bool? DisableDefaultStatusCreation = null, int? SchemaVersion = null, string DefaultQueueId = null, string DefaultLanguageId = null, List<string> DefaultSkillIds = null, string DefaultScriptId = null)
         {
             this.Name = Name;
             this.DefaultWorkbinId = DefaultWorkbinId;
@@ -59,6 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SchemaId = SchemaId;
             this.ServiceLevelTarget = ServiceLevelTarget;
             this.RuleSettings = RuleSettings;
+            this.UnassignedDivisionContactsEnabled = UnassignedDivisionContactsEnabled;
             this.Description = Description;
             this.DivisionId = DivisionId;
             this.DisableDefaultStatusCreation = DisableDefaultStatusCreation;
@@ -172,6 +174,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// When set to true, will allow Workitems to be associated with External Contacts that are not assigned to any division. Default value is true.
+        /// </summary>
+        /// <value>When set to true, will allow Workitems to be associated with External Contacts that are not assigned to any division. Default value is true.</value>
+        [DataMember(Name="unassignedDivisionContactsEnabled", EmitDefaultValue=false)]
+        public bool? UnassignedDivisionContactsEnabled { get; set; }
+
+
+
+        /// <summary>
         /// The description of the Worktype. Maximum length of 512 characters.
         /// </summary>
         /// <value>The description of the Worktype. Maximum length of 512 characters.</value>
@@ -262,6 +273,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SchemaId: ").Append(SchemaId).Append("\n");
             sb.Append("  ServiceLevelTarget: ").Append(ServiceLevelTarget).Append("\n");
             sb.Append("  RuleSettings: ").Append(RuleSettings).Append("\n");
+            sb.Append("  UnassignedDivisionContactsEnabled: ").Append(UnassignedDivisionContactsEnabled).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("  DisableDefaultStatusCreation: ").Append(DisableDefaultStatusCreation).Append("\n");
@@ -366,6 +378,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RuleSettings.Equals(other.RuleSettings)
                 ) &&
                 (
+                    this.UnassignedDivisionContactsEnabled == other.UnassignedDivisionContactsEnabled ||
+                    this.UnassignedDivisionContactsEnabled != null &&
+                    this.UnassignedDivisionContactsEnabled.Equals(other.UnassignedDivisionContactsEnabled)
+                ) &&
+                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
@@ -450,6 +467,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RuleSettings != null)
                     hash = hash * 59 + this.RuleSettings.GetHashCode();
+
+                if (this.UnassignedDivisionContactsEnabled != null)
+                    hash = hash * 59 + this.UnassignedDivisionContactsEnabled.GetHashCode();
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();

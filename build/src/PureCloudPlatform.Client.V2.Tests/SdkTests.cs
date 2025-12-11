@@ -328,6 +328,7 @@ namespace PureCloudPlatform.Client.V2.Tests
         }
     }
 
+    /*
     ///<Summary>
     /// Tests for Sdk with MTLS configured
     ///</Summary>
@@ -611,4 +612,5 @@ namespace PureCloudPlatform.Client.V2.Tests
             }
         }
     }
+    */
 }

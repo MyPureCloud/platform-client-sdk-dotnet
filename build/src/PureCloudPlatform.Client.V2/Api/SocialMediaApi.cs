@@ -366,9 +366,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>SocialTopicResponse</returns>
+        /// <returns>SocialTopicWithDataIngestionRuleMetadataResponse</returns>
         
-        SocialTopicResponse GetSocialmediaTopic (string topicId, bool? includeDeleted = null);
+        SocialTopicWithDataIngestionRuleMetadataResponse GetSocialmediaTopic (string topicId, bool? includeDeleted = null);
 
         /// <summary>
         /// Get a single social topic.
@@ -379,9 +379,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>ApiResponse of SocialTopicResponse</returns>
+        /// <returns>ApiResponse of SocialTopicWithDataIngestionRuleMetadataResponse</returns>
         
-        ApiResponse<SocialTopicResponse> GetSocialmediaTopicWithHttpInfo (string topicId, bool? includeDeleted = null);
+        ApiResponse<SocialTopicWithDataIngestionRuleMetadataResponse> GetSocialmediaTopicWithHttpInfo (string topicId, bool? includeDeleted = null);
 
         /// <summary>
         /// Retrieve all social topic data ingestion rules with pagination.
@@ -784,9 +784,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="divisionIds">One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <param name="name">Search for topic by name that contains the given search string, search is case insensitive (optional)</param>
         /// <returns>SocialTopicResponseEntityListing</returns>
         
-        SocialTopicResponseEntityListing GetSocialmediaTopics (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null);
+        SocialTopicResponseEntityListing GetSocialmediaTopics (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null);
 
         /// <summary>
         /// Retrieve all social topics.
@@ -799,9 +800,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="divisionIds">One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <param name="name">Search for topic by name that contains the given search string, search is case insensitive (optional)</param>
         /// <returns>ApiResponse of SocialTopicResponseEntityListing</returns>
         
-        ApiResponse<SocialTopicResponseEntityListing> GetSocialmediaTopicsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null);
+        ApiResponse<SocialTopicResponseEntityListing> GetSocialmediaTopicsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null);
 
         /// <summary>
         /// Update a social topic.
@@ -1740,9 +1742,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>Task of SocialTopicResponse</returns>
+        /// <returns>Task of SocialTopicWithDataIngestionRuleMetadataResponse</returns>
         
-        System.Threading.Tasks.Task<SocialTopicResponse> GetSocialmediaTopicAsync (string topicId, bool? includeDeleted = null);
+        System.Threading.Tasks.Task<SocialTopicWithDataIngestionRuleMetadataResponse> GetSocialmediaTopicAsync (string topicId, bool? includeDeleted = null);
 
         /// <summary>
         /// Get a single social topic.
@@ -1753,9 +1755,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>Task of ApiResponse (SocialTopicResponse)</returns>
+        /// <returns>Task of ApiResponse (SocialTopicWithDataIngestionRuleMetadataResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SocialTopicResponse>> GetSocialmediaTopicAsyncWithHttpInfo (string topicId, bool? includeDeleted = null);
+        System.Threading.Tasks.Task<ApiResponse<SocialTopicWithDataIngestionRuleMetadataResponse>> GetSocialmediaTopicAsyncWithHttpInfo (string topicId, bool? includeDeleted = null);
 
         /// <summary>
         /// Retrieve all social topic data ingestion rules with pagination.
@@ -2158,9 +2160,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="divisionIds">One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <param name="name">Search for topic by name that contains the given search string, search is case insensitive (optional)</param>
         /// <returns>Task of SocialTopicResponseEntityListing</returns>
         
-        System.Threading.Tasks.Task<SocialTopicResponseEntityListing> GetSocialmediaTopicsAsync (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null);
+        System.Threading.Tasks.Task<SocialTopicResponseEntityListing> GetSocialmediaTopicsAsync (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null);
 
         /// <summary>
         /// Retrieve all social topics.
@@ -2173,9 +2176,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="divisionIds">One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <param name="name">Search for topic by name that contains the given search string, search is case insensitive (optional)</param>
         /// <returns>Task of ApiResponse (SocialTopicResponseEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<SocialTopicResponseEntityListing>> GetSocialmediaTopicsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null);
+        System.Threading.Tasks.Task<ApiResponse<SocialTopicResponseEntityListing>> GetSocialmediaTopicsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null);
 
         /// <summary>
         /// Update a social topic.
@@ -5573,11 +5577,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>SocialTopicResponse</returns>
+        /// <returns>SocialTopicWithDataIngestionRuleMetadataResponse</returns>
         
-        public SocialTopicResponse GetSocialmediaTopic (string topicId, bool? includeDeleted = null)
+        public SocialTopicWithDataIngestionRuleMetadataResponse GetSocialmediaTopic (string topicId, bool? includeDeleted = null)
         {
-             ApiResponse<SocialTopicResponse> localVarResponse = GetSocialmediaTopicWithHttpInfo(topicId, includeDeleted);
+             ApiResponse<SocialTopicWithDataIngestionRuleMetadataResponse> localVarResponse = GetSocialmediaTopicWithHttpInfo(topicId, includeDeleted);
              return localVarResponse.Data;
         }
 
@@ -5588,9 +5592,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>ApiResponse of SocialTopicResponse</returns>
+        /// <returns>ApiResponse of SocialTopicWithDataIngestionRuleMetadataResponse</returns>
         
-        public ApiResponse< SocialTopicResponse > GetSocialmediaTopicWithHttpInfo (string topicId, bool? includeDeleted = null)
+        public ApiResponse< SocialTopicWithDataIngestionRuleMetadataResponse > GetSocialmediaTopicWithHttpInfo (string topicId, bool? includeDeleted = null)
         { 
             // verify the required parameter 'topicId' is set
             if (topicId == null)
@@ -5660,9 +5664,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SocialTopicResponse>(localVarStatusCode,
+            return new ApiResponse<SocialTopicWithDataIngestionRuleMetadataResponse>(localVarStatusCode,
                 localVarHeaders,
-                (SocialTopicResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SocialTopicResponse)),
+                (SocialTopicWithDataIngestionRuleMetadataResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SocialTopicWithDataIngestionRuleMetadataResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -5675,11 +5679,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>Task of SocialTopicResponse</returns>
+        /// <returns>Task of SocialTopicWithDataIngestionRuleMetadataResponse</returns>
         
-        public async System.Threading.Tasks.Task<SocialTopicResponse> GetSocialmediaTopicAsync (string topicId, bool? includeDeleted = null)
+        public async System.Threading.Tasks.Task<SocialTopicWithDataIngestionRuleMetadataResponse> GetSocialmediaTopicAsync (string topicId, bool? includeDeleted = null)
         {
-             ApiResponse<SocialTopicResponse> localVarResponse = await GetSocialmediaTopicAsyncWithHttpInfo(topicId, includeDeleted);
+             ApiResponse<SocialTopicWithDataIngestionRuleMetadataResponse> localVarResponse = await GetSocialmediaTopicAsyncWithHttpInfo(topicId, includeDeleted);
              return localVarResponse.Data;
 
         }
@@ -5691,9 +5695,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="topicId">topicId</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
-        /// <returns>Task of ApiResponse (SocialTopicResponse)</returns>
+        /// <returns>Task of ApiResponse (SocialTopicWithDataIngestionRuleMetadataResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SocialTopicResponse>> GetSocialmediaTopicAsyncWithHttpInfo (string topicId, bool? includeDeleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SocialTopicWithDataIngestionRuleMetadataResponse>> GetSocialmediaTopicAsyncWithHttpInfo (string topicId, bool? includeDeleted = null)
         { 
             // verify the required parameter 'topicId' is set
             if (topicId == null)
@@ -5764,9 +5768,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopic: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SocialTopicResponse>(localVarStatusCode,
+            return new ApiResponse<SocialTopicWithDataIngestionRuleMetadataResponse>(localVarStatusCode,
                 localVarHeaders,
-                (SocialTopicResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SocialTopicResponse)),
+                (SocialTopicWithDataIngestionRuleMetadataResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SocialTopicWithDataIngestionRuleMetadataResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8741,11 +8745,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="divisionIds">One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <param name="name">Search for topic by name that contains the given search string, search is case insensitive (optional)</param>
         /// <returns>SocialTopicResponseEntityListing</returns>
         
-        public SocialTopicResponseEntityListing GetSocialmediaTopics (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null)
+        public SocialTopicResponseEntityListing GetSocialmediaTopics (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null)
         {
-             ApiResponse<SocialTopicResponseEntityListing> localVarResponse = GetSocialmediaTopicsWithHttpInfo(pageNumber, pageSize, divisionIds, includeDeleted);
+             ApiResponse<SocialTopicResponseEntityListing> localVarResponse = GetSocialmediaTopicsWithHttpInfo(pageNumber, pageSize, divisionIds, includeDeleted, name);
              return localVarResponse.Data;
         }
 
@@ -8758,9 +8763,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="divisionIds">One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <param name="name">Search for topic by name that contains the given search string, search is case insensitive (optional)</param>
         /// <returns>ApiResponse of SocialTopicResponseEntityListing</returns>
         
-        public ApiResponse< SocialTopicResponseEntityListing > GetSocialmediaTopicsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null)
+        public ApiResponse< SocialTopicResponseEntityListing > GetSocialmediaTopicsWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/socialmedia/topics";
@@ -8800,6 +8806,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (includeDeleted != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeleted", this.Configuration.ApiClient.ParameterToString(includeDeleted)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 
@@ -8846,11 +8853,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="divisionIds">One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <param name="name">Search for topic by name that contains the given search string, search is case insensitive (optional)</param>
         /// <returns>Task of SocialTopicResponseEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<SocialTopicResponseEntityListing> GetSocialmediaTopicsAsync (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null)
+        public async System.Threading.Tasks.Task<SocialTopicResponseEntityListing> GetSocialmediaTopicsAsync (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null)
         {
-             ApiResponse<SocialTopicResponseEntityListing> localVarResponse = await GetSocialmediaTopicsAsyncWithHttpInfo(pageNumber, pageSize, divisionIds, includeDeleted);
+             ApiResponse<SocialTopicResponseEntityListing> localVarResponse = await GetSocialmediaTopicsAsyncWithHttpInfo(pageNumber, pageSize, divisionIds, includeDeleted, name);
              return localVarResponse.Data;
 
         }
@@ -8864,9 +8872,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="divisionIds">One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional)</param>
         /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <param name="name">Search for topic by name that contains the given search string, search is case insensitive (optional)</param>
         /// <returns>Task of ApiResponse (SocialTopicResponseEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<SocialTopicResponseEntityListing>> GetSocialmediaTopicsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null)
+        public async System.Threading.Tasks.Task<ApiResponse<SocialTopicResponseEntityListing>> GetSocialmediaTopicsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null)
         { 
 
             var localVarPath = "/api/v2/socialmedia/topics";
@@ -8906,6 +8915,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (divisionIds != null) divisionIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("divisionIds", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (includeDeleted != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeleted", this.Configuration.ApiClient.ParameterToString(includeDeleted)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
 
             // Header params
 

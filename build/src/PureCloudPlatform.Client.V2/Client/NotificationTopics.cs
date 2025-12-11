@@ -201,6 +201,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.users.{id}.wem.learning.assignment", typeof(LearningAssignmentTopicLearningAssignmentNotification)},
               {"v2.users.{id}.workforcemanagement.adherence", typeof(WfmUserScheduleAdherenceUpdatedTopicUserScheduleAdherenceUpdate)},
               {"v2.users.{id}.workforcemanagement.adherence.explanations.jobs", typeof(WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification)},
+              {"v2.users.{id}.workforcemanagement.adherence.historical.agent", typeof(WfmHistoricalAdherenceAgentCalculationsCompleteTopicWfmHistoricalAdherenceAgentCalculationsCompleteNotification)},
               {"v2.users.{id}.workforcemanagement.adherence.historical.bulk", typeof(WfmHistoricalAdherenceBulkCalculationsCompleteTopicWfmHistoricalAdherenceBulkCalculationsCompleteNotification)},
               {"v2.users.{id}.workforcemanagement.alternative.shift.jobs", typeof(WfmAlternativeShiftJobCompleteEventV3AlternativeShiftJobCompleteNotification)},
               {"v2.users.{id}.workforcemanagement.historicaladherencequery", typeof(WfmHistoricalAdherenceCalculationsCompleteTopicWfmHistoricalAdherenceCalculationsCompleteNotice)},
