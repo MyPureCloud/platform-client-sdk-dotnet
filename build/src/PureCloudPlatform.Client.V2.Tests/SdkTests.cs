@@ -58,9 +58,9 @@ namespace PureCloudPlatform.Client.V2.Tests
         {
             postHookCalled = true;
             Console.WriteLine("Running Post-Request Hook");
-            
+
             Console.WriteLine($"Post-Hook: Received status code {response.StatusCode}");
-            
+
             return response;
         }
 
@@ -106,7 +106,7 @@ namespace PureCloudPlatform.Client.V2.Tests
                 PureCloudRegionHosts regionval = region.GetValueOrDefault();
                 PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.setBasePath(regionval);
             }
-           
+
             PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.PostToken(clientId, clientSecret);
 
             Assert.IsNotEmpty(PureCloudPlatform.Client.V2.Client.Configuration.Default.AccessToken);
@@ -203,7 +203,7 @@ namespace PureCloudPlatform.Client.V2.Tests
                     {
                         // Suppress this error that happens occasionally:
                         // An attempt was made to transition a task to a final state when it had already completed.
-                    } 
+                    }
                     catch (Exception ex)
                     {
                         Console.WriteLine(ex);
@@ -224,7 +224,7 @@ namespace PureCloudPlatform.Client.V2.Tests
             // Assert that both worked
             Assert.AreEqual(busyReceived, true);
             Assert.AreEqual(availableReceived, true);
-        } 
+        }
 
         ///<Summary>
         /// GetUser
@@ -262,7 +262,7 @@ namespace PureCloudPlatform.Client.V2.Tests
         public void DeleteUserWithProxy()
         {
             PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.ClientOptions.Proxy = new WebProxy("http://localhost:4001", true);
-        
+
             usersApi.DeleteUser(userId);
         }
 
@@ -289,7 +289,7 @@ namespace PureCloudPlatform.Client.V2.Tests
                 stop = true;
             }
         }
-        
+
         ///<Summary>
         /// getRegion
         ///</Summary>
@@ -366,9 +366,9 @@ namespace PureCloudPlatform.Client.V2.Tests
         {
             postHookCalled = true;
             Console.WriteLine("Running Post-Request Hook");
-            
+
             Console.WriteLine($"Post-Hook: Received status code {response.StatusCode}");
-            
+
             return response;
         }
 
