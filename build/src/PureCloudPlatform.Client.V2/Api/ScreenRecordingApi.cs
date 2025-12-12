@@ -1,368 +1,364 @@
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
 using PureCloudPlatform.Client.V2.Client;
 using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
 
-    /// <summary>
-    /// Represents a collection of functions to interact with the API endpoints
-    /// </summary>
-    public interface IScreenRecordingApi : IApiAccessor
-    {
-        #region Synchronous Operations
+	/// <summary>
+	/// Represents a collection of functions to interact with the API endpoints
+	/// </summary>
+	public interface IScreenRecordingApi : IApiAccessor
+	{
+		#region Synchronous Operations
 
-        /// <summary>
-        /// Sign identifying information for screen recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>SignedData</returns>
-        
-        SignedData PostScreenrecordingToken (ScreenRecordingUserAuthenticatedInfo body = null);
+		/// <summary>
+		/// Sign identifying information for screen recording
+		/// </summary>
+		/// <remarks>
+		/// 
+		/// </remarks>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="body"> (optional)</param>
+		/// <returns>SignedData</returns>
 
-        /// <summary>
-        /// Sign identifying information for screen recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of SignedData</returns>
-        
-        ApiResponse<SignedData> PostScreenrecordingTokenWithHttpInfo (ScreenRecordingUserAuthenticatedInfo body = null);
+		SignedData PostScreenrecordingToken(ScreenRecordingUserAuthenticatedInfo body = null);
 
-        #endregion Synchronous Operations
+		/// <summary>
+		/// Sign identifying information for screen recording
+		/// </summary>
+		/// <remarks>
+		/// 
+		/// </remarks>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="body"> (optional)</param>
+		/// <returns>ApiResponse of SignedData</returns>
 
-        #region Asynchronous Operations
+		ApiResponse<SignedData> PostScreenrecordingTokenWithHttpInfo(ScreenRecordingUserAuthenticatedInfo body = null);
 
-        /// <summary>
-        /// Sign identifying information for screen recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of SignedData</returns>
-        
-        System.Threading.Tasks.Task<SignedData> PostScreenrecordingTokenAsync (ScreenRecordingUserAuthenticatedInfo body = null);
+		#endregion Synchronous Operations
 
-        /// <summary>
-        /// Sign identifying information for screen recording
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (SignedData)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<SignedData>> PostScreenrecordingTokenAsyncWithHttpInfo (ScreenRecordingUserAuthenticatedInfo body = null);
+		#region Asynchronous Operations
 
-        #endregion Asynchronous Operations
+		/// <summary>
+		/// Sign identifying information for screen recording
+		/// </summary>
+		/// <remarks>
+		/// 
+		/// </remarks>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="body"> (optional)</param>
+		/// <returns>Task of SignedData</returns>
 
-    }
+		System.Threading.Tasks.Task<SignedData> PostScreenrecordingTokenAsync(ScreenRecordingUserAuthenticatedInfo body = null);
 
-    /// <summary>
-    /// Represents a collection of functions to interact with the API endpoints
-    /// </summary>
-    public partial class ScreenRecordingApi : IScreenRecordingApi
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScreenRecordingApi"/> class.
-        /// </summary>
-        /// <returns></returns>
-        public ScreenRecordingApi(String basePath)
-        {
-            this.Configuration = new PureCloudPlatform.Client.V2.Client.Configuration(new ApiClient(basePath));
+		/// <summary>
+		/// Sign identifying information for screen recording
+		/// </summary>
+		/// <remarks>
+		/// 
+		/// </remarks>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="body"> (optional)</param>
+		/// <returns>Task of ApiResponse (SignedData)</returns>
 
-            // ensure API client has configuration ready
-            if (this.Configuration.ApiClient.Configuration == null)
-            {
-                this.Configuration.ApiClient.Configuration = this.Configuration;
-            }
-        }
+		System.Threading.Tasks.Task<ApiResponse<SignedData>> PostScreenrecordingTokenAsyncWithHttpInfo(ScreenRecordingUserAuthenticatedInfo body = null);
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScreenRecordingApi"/> class
-        /// using Configuration object
-        /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
-        /// <returns></returns>
-        public ScreenRecordingApi(PureCloudPlatform.Client.V2.Client.Configuration configuration = null)
-        {
-            if (configuration == null) // use the default one in Configuration
-                this.Configuration = PureCloudPlatform.Client.V2.Client.Configuration.Default;
-            else
-                this.Configuration = configuration;
+		#endregion Asynchronous Operations
 
-            // ensure API client has configuration ready
-            if (this.Configuration.ApiClient.Configuration == null)
-            {
-                this.Configuration.ApiClient.Configuration = this.Configuration;
-            }
-        }
+	}
 
-        /// <summary>
-        /// Gets the base path of the API client.
-        /// </summary>
-        /// <value>The base path</value>
-        public String GetBasePath()
-        {
-             return this.Configuration.ApiClient.ClientOptions.BaseUrl.ToString();
-        }
+	/// <summary>
+	/// Represents a collection of functions to interact with the API endpoints
+	/// </summary>
+	public partial class ScreenRecordingApi : IScreenRecordingApi
+	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="ScreenRecordingApi"/> class.
+		/// </summary>
+		/// <returns></returns>
+		public ScreenRecordingApi(String basePath)
+		{
+			this.Configuration = new PureCloudPlatform.Client.V2.Client.Configuration(new ApiClient(basePath));
 
-        /// <summary>
-        /// Sets the base path of the API client.
-        /// </summary>
-        /// <value>The base path</value>
-        [Obsolete("SetBasePath is deprecated, please do 'this.Configuration.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
-        public void SetBasePath(String basePath)
-        {
-            // do nothing
-        }
+			// ensure API client has configuration ready
+			if (this.Configuration.ApiClient.Configuration == null)
+			{
+				this.Configuration.ApiClient.Configuration = this.Configuration;
+			}
+		}
 
-        /// <summary>
-        /// Gets or sets the configuration object
-        /// </summary>
-        /// <value>An instance of the Configuration</value>
-        public PureCloudPlatform.Client.V2.Client.Configuration Configuration {get; set;}
+		/// <summary>
+		/// Initializes a new instance of the <see cref="ScreenRecordingApi"/> class
+		/// using Configuration object
+		/// </summary>
+		/// <param name="configuration">An instance of Configuration</param>
+		/// <returns></returns>
+		public ScreenRecordingApi(PureCloudPlatform.Client.V2.Client.Configuration configuration = null)
+		{
+			if (configuration == null) // use the default one in Configuration
+				this.Configuration = PureCloudPlatform.Client.V2.Client.Configuration.Default;
+			else
+				this.Configuration = configuration;
 
-        /// <summary>
-        /// Gets the default header.
-        /// </summary>
-        /// <returns>Dictionary of HTTP header</returns>
-        [Obsolete("DefaultHeader is deprecated, please use this.Configuration.DefaultHeader instead.")]
-        public Dictionary<String, String> DefaultHeader()
-        {
-            return this.Configuration.DefaultHeader;
-        }
+			// ensure API client has configuration ready
+			if (this.Configuration.ApiClient.Configuration == null)
+			{
+				this.Configuration.ApiClient.Configuration = this.Configuration;
+			}
+		}
 
-        /// <summary>
-        /// Add default header.
-        /// </summary>
-        /// <param name="key">Header field name.</param>
-        /// <param name="value">Header field value.</param>
-        /// <returns></returns>
-        [Obsolete("AddDefaultHeader is deprecated, please use this.Configuration.AddDefaultHeader instead.")]
-        public void AddDefaultHeader(string key, string value)
-        {
-            this.Configuration.AddDefaultHeader(key, value);
-        }
+		/// <summary>
+		/// Gets the base path of the API client.
+		/// </summary>
+		/// <value>The base path</value>
+		public String GetBasePath()
+		{
+			return this.Configuration.ApiClient.ClientOptions.BaseUrl.ToString();
+		}
 
+		/// <summary>
+		/// Sets the base path of the API client.
+		/// </summary>
+		/// <value>The base path</value>
+		[Obsolete("SetBasePath is deprecated, please do 'this.Configuration.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
+		public void SetBasePath(String basePath)
+		{
+			// do nothing
+		}
 
-        /// <summary>
-        /// Sign identifying information for screen recording 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>SignedData</returns>
-        
-        public SignedData PostScreenrecordingToken (ScreenRecordingUserAuthenticatedInfo body = null)
-        {
-             ApiResponse<SignedData> localVarResponse = PostScreenrecordingTokenWithHttpInfo(body);
-             return localVarResponse.Data;
-        }
+		/// <summary>
+		/// Gets or sets the configuration object
+		/// </summary>
+		/// <value>An instance of the Configuration</value>
+		public PureCloudPlatform.Client.V2.Client.Configuration Configuration { get; set; }
 
-        /// <summary>
-        /// Sign identifying information for screen recording 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>ApiResponse of SignedData</returns>
-        
-        public ApiResponse< SignedData > PostScreenrecordingTokenWithHttpInfo (ScreenRecordingUserAuthenticatedInfo body = null)
-        { 
+		/// <summary>
+		/// Gets the default header.
+		/// </summary>
+		/// <returns>Dictionary of HTTP header</returns>
+		[Obsolete("DefaultHeader is deprecated, please use this.Configuration.DefaultHeader instead.")]
+		public Dictionary<String, String> DefaultHeader()
+		{
+			return this.Configuration.DefaultHeader;
+		}
 
-            var localVarPath = "/api/v2/screenrecording/token";
-            var localVarHttpMethod = "Post";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
+		/// <summary>
+		/// Add default header.
+		/// </summary>
+		/// <param name="key">Header field name.</param>
+		/// <param name="value">Header field value.</param>
+		/// <returns></returns>
+		[Obsolete("AddDefaultHeader is deprecated, please use this.Configuration.AddDefaultHeader instead.")]
+		public void AddDefaultHeader(string key, string value)
+		{
+			this.Configuration.AddDefaultHeader(key, value);
+		}
 
 
+		/// <summary>
+		/// Sign identifying information for screen recording 
+		/// 
+		/// </summary>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="body"> (optional)</param>
+		/// <returns>SignedData</returns>
 
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
+		public SignedData PostScreenrecordingToken(ScreenRecordingUserAuthenticatedInfo body = null)
+		{
+			ApiResponse<SignedData> localVarResponse = PostScreenrecordingTokenWithHttpInfo(body);
+			return localVarResponse.Data;
+		}
 
-            // make the HTTP request
-            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+		/// <summary>
+		/// Sign identifying information for screen recording 
+		/// 
+		/// </summary>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="body"> (optional)</param>
+		/// <returns>ApiResponse of SignedData</returns>
 
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
+		public ApiResponse<SignedData> PostScreenrecordingTokenWithHttpInfo(ScreenRecordingUserAuthenticatedInfo body = null)
+		{
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+			var localVarPath = "/api/v2/screenrecording/token";
+			var localVarHttpMethod = "Post";
+			var localVarPathParams = new Dictionary<String, String>();
+			var localVarQueryParams = new List<Tuple<String, String>>();
+			var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+			var localVarFormParams = new Dictionary<String, String>();
+			var localVarFileParams = new Dictionary<String, IFileParameter>();
+			Object localVarPostBody = null;
 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostScreenrecordingToken: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostScreenrecordingToken: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+			// to determine the Content-Type header
+			String[] localVarHttpContentTypes = new String[] {
+				"application/json"
 
-            return new ApiResponse<SignedData>(localVarStatusCode,
-                localVarHeaders,
-                (SignedData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SignedData)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
+			};
+			String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+			// to determine the Accept header
+			String[] localVarHttpHeaderAccepts = new String[] {
+
+				"application/json"
 
 
-        /// <summary>
-        /// Sign identifying information for screen recording 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of SignedData</returns>
-        
-        public async System.Threading.Tasks.Task<SignedData> PostScreenrecordingTokenAsync (ScreenRecordingUserAuthenticatedInfo body = null)
-        {
-             ApiResponse<SignedData> localVarResponse = await PostScreenrecordingTokenAsyncWithHttpInfo(body);
-             return localVarResponse.Data;
+			};
+			String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+			if (localVarHttpHeaderAccept != null)
+				localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-        }
+			// set "format" to json by default
+			// e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+			localVarPathParams.Add("format", "json");
 
-        /// <summary>
-        /// Sign identifying information for screen recording 
-        /// 
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="body"> (optional)</param>
-        /// <returns>Task of ApiResponse (SignedData)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<SignedData>> PostScreenrecordingTokenAsyncWithHttpInfo (ScreenRecordingUserAuthenticatedInfo body = null)
-        { 
+			// Path params
 
-            var localVarPath = "/api/v2/screenrecording/token";
-            var localVarHttpMethod = "Post";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
+			// Query params
 
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-                
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+			// Header params
 
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
+			// Form params
 
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-
-            // Query params
-
-            // Header params
-
-            // Form params
-            
-            // Body param
-            if (body != null && body.GetType() != typeof(byte[]))
-                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
-            else
-                localVarPostBody = body; // byte array
+			// Body param
+			if (body != null && body.GetType() != typeof(byte[]))
+				localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+			else
+				localVarPostBody = body; // byte array
 
 
 
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
+			// authentication (PureCloud OAuth) required
+			// oauth required
+			if (!String.IsNullOrEmpty(Configuration.AccessToken))
+			{
+				localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+			}
 
-            // make the HTTP request
-            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+			// make the HTTP request
+			IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+				localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+				localVarPathParams, localVarHttpContentType) as IHttpResponse;
 
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
+			int localVarStatusCode = (int)localVarResponse.StatusCode;
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+			Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling PostScreenrecordingToken: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling PostScreenrecordingToken: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+			if (localVarStatusCode >= 400)
+				throw new ApiException(localVarStatusCode, "Error calling PostScreenrecordingToken: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+			else if (localVarStatusCode == 0)
+				throw new ApiException(localVarStatusCode, "Error calling PostScreenrecordingToken: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<SignedData>(localVarStatusCode,
-                localVarHeaders,
-                (SignedData) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SignedData)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
+			return new ApiResponse<SignedData>(localVarStatusCode,
+				localVarHeaders,
+				(SignedData)this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SignedData)),
+				localVarResponse.Content,
+				localVarResponse.StatusDescription);
+		}
+
+
+		/// <summary>
+		/// Sign identifying information for screen recording 
+		/// 
+		/// </summary>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="body"> (optional)</param>
+		/// <returns>Task of SignedData</returns>
+
+		public async System.Threading.Tasks.Task<SignedData> PostScreenrecordingTokenAsync(ScreenRecordingUserAuthenticatedInfo body = null)
+		{
+			ApiResponse<SignedData> localVarResponse = await PostScreenrecordingTokenAsyncWithHttpInfo(body);
+			return localVarResponse.Data;
+
+		}
+
+		/// <summary>
+		/// Sign identifying information for screen recording 
+		/// 
+		/// </summary>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="body"> (optional)</param>
+		/// <returns>Task of ApiResponse (SignedData)</returns>
+
+		public async System.Threading.Tasks.Task<ApiResponse<SignedData>> PostScreenrecordingTokenAsyncWithHttpInfo(ScreenRecordingUserAuthenticatedInfo body = null)
+		{
+
+			var localVarPath = "/api/v2/screenrecording/token";
+			var localVarHttpMethod = "Post";
+			var localVarPathParams = new Dictionary<String, String>();
+			var localVarQueryParams = new List<Tuple<String, String>>();
+			var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+			var localVarFormParams = new Dictionary<String, String>();
+			var localVarFileParams = new Dictionary<String, IFileParameter>();
+			Object localVarPostBody = null;
+
+			// to determine the Content-Type header
+			String[] localVarHttpContentTypes = new String[] {
+				"application/json"
+
+			};
+			String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+			// to determine the Accept header
+			String[] localVarHttpHeaderAccepts = new String[] {
+
+				"application/json"
+
+
+			};
+			String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+			if (localVarHttpHeaderAccept != null)
+				localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+			// set "format" to json by default
+			// e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+			localVarPathParams.Add("format", "json");
+
+			// Path params
+
+			// Query params
+
+			// Header params
+
+			// Form params
+
+			// Body param
+			if (body != null && body.GetType() != typeof(byte[]))
+				localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+			else
+				localVarPostBody = body; // byte array
 
 
 
-    }
+			// authentication (PureCloud OAuth) required
+			// oauth required
+			if (!String.IsNullOrEmpty(Configuration.AccessToken))
+			{
+				localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+			}
+
+			// make the HTTP request
+			IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+				localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+				localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+			int localVarStatusCode = (int)localVarResponse.StatusCode;
+
+			Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+			if (localVarStatusCode >= 400)
+				throw new ApiException(localVarStatusCode, "Error calling PostScreenrecordingToken: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+			else if (localVarStatusCode == 0)
+				throw new ApiException(localVarStatusCode, "Error calling PostScreenrecordingToken: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+			return new ApiResponse<SignedData>(localVarStatusCode,
+				localVarHeaders,
+				(SignedData)this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SignedData)),
+				localVarResponse.Content,
+				localVarResponse.StatusDescription);
+		}
+
+
+
+	}
 
 }

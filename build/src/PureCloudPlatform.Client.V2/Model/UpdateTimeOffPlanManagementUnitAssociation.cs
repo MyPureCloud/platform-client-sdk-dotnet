@@ -1,117 +1,110 @@
-using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
+using System.Text;
+
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using PureCloudPlatform.Client.V2.Client;
 
 namespace PureCloudPlatform.Client.V2.Model
 {
-    /// <summary>
-    /// UpdateTimeOffPlanManagementUnitAssociation
-    /// </summary>
-    [DataContract]
-    public partial class UpdateTimeOffPlanManagementUnitAssociation :  IEquatable<UpdateTimeOffPlanManagementUnitAssociation>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateTimeOffPlanManagementUnitAssociation" /> class.
-        /// </summary>
-        /// <param name="StaffingGroupIds">The IDs of staffing groups to which this time-off plan applies. If not defined, the plan is applied to the management unit.</param>
-        public UpdateTimeOffPlanManagementUnitAssociation(SetWrapperString StaffingGroupIds = null)
-        {
-            this.StaffingGroupIds = StaffingGroupIds;
-            
-        }
-        
+	/// <summary>
+	/// UpdateTimeOffPlanManagementUnitAssociation
+	/// </summary>
+	[DataContract]
+	public partial class UpdateTimeOffPlanManagementUnitAssociation : IEquatable<UpdateTimeOffPlanManagementUnitAssociation>
+	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="UpdateTimeOffPlanManagementUnitAssociation" /> class.
+		/// </summary>
+		/// <param name="StaffingGroupIds">The IDs of staffing groups to which this time-off plan applies. If not defined, the plan is applied to the management unit.</param>
+		public UpdateTimeOffPlanManagementUnitAssociation(SetWrapperString StaffingGroupIds = null)
+		{
+			this.StaffingGroupIds = StaffingGroupIds;
+
+		}
 
 
-        /// <summary>
-        /// The IDs of staffing groups to which this time-off plan applies. If not defined, the plan is applied to the management unit
-        /// </summary>
-        /// <value>The IDs of staffing groups to which this time-off plan applies. If not defined, the plan is applied to the management unit</value>
-        [DataMember(Name="staffingGroupIds", EmitDefaultValue=false)]
-        public SetWrapperString StaffingGroupIds { get; set; }
+
+		/// <summary>
+		/// The IDs of staffing groups to which this time-off plan applies. If not defined, the plan is applied to the management unit
+		/// </summary>
+		/// <value>The IDs of staffing groups to which this time-off plan applies. If not defined, the plan is applied to the management unit</value>
+		[DataMember(Name = "staffingGroupIds", EmitDefaultValue = false)]
+		public SetWrapperString StaffingGroupIds { get; set; }
 
 
-        /// <summary>
-        /// Returns the string presentation of the object
-        /// </summary>
-        /// <returns>String presentation of the object</returns>
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.Append("class UpdateTimeOffPlanManagementUnitAssociation {\n");
+		/// <summary>
+		/// Returns the string presentation of the object
+		/// </summary>
+		/// <returns>String presentation of the object</returns>
+		public override string ToString()
+		{
+			var sb = new StringBuilder();
+			sb.Append("class UpdateTimeOffPlanManagementUnitAssociation {\n");
 
-            sb.Append("  StaffingGroupIds: ").Append(StaffingGroupIds).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
-        {
-            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
-            {
-                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-                Formatting = Formatting.Indented
-            });
-        }
+			sb.Append("  StaffingGroupIds: ").Append(StaffingGroupIds).Append("\n");
+			sb.Append("}\n");
+			return sb.ToString();
+		}
 
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="obj">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as UpdateTimeOffPlanManagementUnitAssociation);
-        }
+		/// <summary>
+		/// Returns the JSON string presentation of the object
+		/// </summary>
+		/// <returns>JSON string presentation of the object</returns>
+		public string ToJson()
+		{
+			return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+			{
+				MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+				Formatting = Formatting.Indented
+			});
+		}
 
-        /// <summary>
-        /// Returns true if UpdateTimeOffPlanManagementUnitAssociation instances are equal
-        /// </summary>
-        /// <param name="other">Instance of UpdateTimeOffPlanManagementUnitAssociation to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(UpdateTimeOffPlanManagementUnitAssociation other)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
-                return false;
+		/// <summary>
+		/// Returns true if objects are equal
+		/// </summary>
+		/// <param name="obj">Object to be compared</param>
+		/// <returns>Boolean</returns>
+		public override bool Equals(object obj)
+		{
+			// credit: http://stackoverflow.com/a/10454552/677735
+			return this.Equals(obj as UpdateTimeOffPlanManagementUnitAssociation);
+		}
 
-            return true &&
-                (
-                    this.StaffingGroupIds == other.StaffingGroupIds ||
-                    this.StaffingGroupIds != null &&
-                    this.StaffingGroupIds.Equals(other.StaffingGroupIds)
-                );
-        }
+		/// <summary>
+		/// Returns true if UpdateTimeOffPlanManagementUnitAssociation instances are equal
+		/// </summary>
+		/// <param name="other">Instance of UpdateTimeOffPlanManagementUnitAssociation to be compared</param>
+		/// <returns>Boolean</returns>
+		public bool Equals(UpdateTimeOffPlanManagementUnitAssociation other)
+		{
+			// credit: http://stackoverflow.com/a/10454552/677735
+			if (other == null)
+				return false;
 
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            // credit: http://stackoverflow.com/a/263416/677735
-            unchecked // Overflow is fine, just wrap
-            {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.StaffingGroupIds != null)
-                    hash = hash * 59 + this.StaffingGroupIds.GetHashCode();
+			return true &&
+				(
+					this.StaffingGroupIds == other.StaffingGroupIds ||
+					this.StaffingGroupIds != null &&
+					this.StaffingGroupIds.Equals(other.StaffingGroupIds)
+				);
+		}
 
-                return hash;
-            }
-        }
-    }
+		/// <summary>
+		/// Gets the hash code
+		/// </summary>
+		/// <returns>Hash code</returns>
+		public override int GetHashCode()
+		{
+			// credit: http://stackoverflow.com/a/263416/677735
+			unchecked // Overflow is fine, just wrap
+			{
+				int hash = 41;
+				// Suitable nullity checks etc, of course :)
+				if (this.StaffingGroupIds != null)
+					hash = hash * 59 + this.StaffingGroupIds.GetHashCode();
+
+				return hash;
+			}
+		}
+	}
 
 }

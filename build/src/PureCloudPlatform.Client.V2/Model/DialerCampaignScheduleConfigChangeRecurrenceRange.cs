@@ -1,225 +1,220 @@
-using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
+using System.Text;
+
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+
 using PureCloudPlatform.Client.V2.Client;
 
 namespace PureCloudPlatform.Client.V2.Model
 {
-    /// <summary>
-    /// the schedule range
-    /// </summary>
-    [DataContract]
-    public partial class DialerCampaignScheduleConfigChangeRecurrenceRange :  IEquatable<DialerCampaignScheduleConfigChangeRecurrenceRange>
-    {
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum TypeEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Noend for "NoEnd"
-            /// </summary>
-            [EnumMember(Value = "NoEnd")]
-            Noend,
-            
-            /// <summary>
-            /// Enum Numbered for "Numbered"
-            /// </summary>
-            [EnumMember(Value = "Numbered")]
-            Numbered,
-            
-            /// <summary>
-            /// Enum Enddate for "EndDate"
-            /// </summary>
-            [EnumMember(Value = "EndDate")]
-            Enddate
-        }
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public TypeEnum? Type { get; set; }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DialerCampaignScheduleConfigChangeRecurrenceRange" /> class.
-        /// </summary>
-        /// <param name="Type">Type.</param>
-        /// <param name="End">the range end date.</param>
-        /// <param name="NumberOfOccurrences">the number of occurrences to happen before ending.</param>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        /// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
-        public DialerCampaignScheduleConfigChangeRecurrenceRange(TypeEnum? Type = null, string End = null, long? NumberOfOccurrences = null, Dictionary<string, Object> AdditionalProperties = null, Dictionary<string, Object> GetAdditionalProperties = null)
-        {
-            this.Type = Type;
-            this.End = End;
-            this.NumberOfOccurrences = NumberOfOccurrences;
-            this.AdditionalProperties = AdditionalProperties;
-            this.GetAdditionalProperties = GetAdditionalProperties;
-            
-        }
-        
+	/// <summary>
+	/// the schedule range
+	/// </summary>
+	[DataContract]
+	public partial class DialerCampaignScheduleConfigChangeRecurrenceRange : IEquatable<DialerCampaignScheduleConfigChangeRecurrenceRange>
+	{
+		/// <summary>
+		/// Gets or Sets Type
+		/// </summary>
+		[JsonConverter(typeof(UpgradeSdkEnumConverter))]
+		public enum TypeEnum
+		{
+			/// <summary>
+			/// Your SDK version is out of date and an unknown enum value was encountered. 
+			/// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+			/// in the Package Manager Console
+			/// </summary>
+			[EnumMember(Value = "OUTDATED_SDK_VERSION")]
+			OutdatedSdkVersion,
+
+			/// <summary>
+			/// Enum Noend for "NoEnd"
+			/// </summary>
+			[EnumMember(Value = "NoEnd")]
+			Noend,
+
+			/// <summary>
+			/// Enum Numbered for "Numbered"
+			/// </summary>
+			[EnumMember(Value = "Numbered")]
+			Numbered,
+
+			/// <summary>
+			/// Enum Enddate for "EndDate"
+			/// </summary>
+			[EnumMember(Value = "EndDate")]
+			Enddate
+		}
+		/// <summary>
+		/// Gets or Sets Type
+		/// </summary>
+		[DataMember(Name = "type", EmitDefaultValue = false)]
+		public TypeEnum? Type { get; set; }
+		/// <summary>
+		/// Initializes a new instance of the <see cref="DialerCampaignScheduleConfigChangeRecurrenceRange" /> class.
+		/// </summary>
+		/// <param name="Type">Type.</param>
+		/// <param name="End">the range end date.</param>
+		/// <param name="NumberOfOccurrences">the number of occurrences to happen before ending.</param>
+		/// <param name="AdditionalProperties">AdditionalProperties.</param>
+		/// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
+		public DialerCampaignScheduleConfigChangeRecurrenceRange(TypeEnum? Type = null, string End = null, long? NumberOfOccurrences = null, Dictionary<string, Object> AdditionalProperties = null, Dictionary<string, Object> GetAdditionalProperties = null)
+		{
+			this.Type = Type;
+			this.End = End;
+			this.NumberOfOccurrences = NumberOfOccurrences;
+			this.AdditionalProperties = AdditionalProperties;
+			this.GetAdditionalProperties = GetAdditionalProperties;
+
+		}
 
 
 
 
-        /// <summary>
-        /// the range end date
-        /// </summary>
-        /// <value>the range end date</value>
-        [DataMember(Name="end", EmitDefaultValue=false)]
-        public string End { get; set; }
+
+		/// <summary>
+		/// the range end date
+		/// </summary>
+		/// <value>the range end date</value>
+		[DataMember(Name = "end", EmitDefaultValue = false)]
+		public string End { get; set; }
 
 
 
-        /// <summary>
-        /// the number of occurrences to happen before ending
-        /// </summary>
-        /// <value>the number of occurrences to happen before ending</value>
-        [DataMember(Name="numberOfOccurrences", EmitDefaultValue=false)]
-        public long? NumberOfOccurrences { get; set; }
+		/// <summary>
+		/// the number of occurrences to happen before ending
+		/// </summary>
+		/// <value>the number of occurrences to happen before ending</value>
+		[DataMember(Name = "numberOfOccurrences", EmitDefaultValue = false)]
+		public long? NumberOfOccurrences { get; set; }
 
 
 
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> AdditionalProperties { get; set; }
+		/// <summary>
+		/// Gets or Sets AdditionalProperties
+		/// </summary>
+		[DataMember(Name = "additionalProperties", EmitDefaultValue = false)]
+		public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
 
-        /// <summary>
-        /// Gets or Sets GetAdditionalProperties
-        /// </summary>
-        [DataMember(Name="getAdditionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> GetAdditionalProperties { get; set; }
+		/// <summary>
+		/// Gets or Sets GetAdditionalProperties
+		/// </summary>
+		[DataMember(Name = "getAdditionalProperties", EmitDefaultValue = false)]
+		public Dictionary<string, Object> GetAdditionalProperties { get; set; }
 
 
-        /// <summary>
-        /// Returns the string presentation of the object
-        /// </summary>
-        /// <returns>String presentation of the object</returns>
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.Append("class DialerCampaignScheduleConfigChangeRecurrenceRange {\n");
+		/// <summary>
+		/// Returns the string presentation of the object
+		/// </summary>
+		/// <returns>String presentation of the object</returns>
+		public override string ToString()
+		{
+			var sb = new StringBuilder();
+			sb.Append("class DialerCampaignScheduleConfigChangeRecurrenceRange {\n");
 
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  End: ").Append(End).Append("\n");
-            sb.Append("  NumberOfOccurrences: ").Append(NumberOfOccurrences).Append("\n");
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
-        {
-            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
-            {
-                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-                Formatting = Formatting.Indented
-            });
-        }
+			sb.Append("  Type: ").Append(Type).Append("\n");
+			sb.Append("  End: ").Append(End).Append("\n");
+			sb.Append("  NumberOfOccurrences: ").Append(NumberOfOccurrences).Append("\n");
+			sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
+			sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
+			sb.Append("}\n");
+			return sb.ToString();
+		}
 
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="obj">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as DialerCampaignScheduleConfigChangeRecurrenceRange);
-        }
+		/// <summary>
+		/// Returns the JSON string presentation of the object
+		/// </summary>
+		/// <returns>JSON string presentation of the object</returns>
+		public string ToJson()
+		{
+			return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+			{
+				MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+				Formatting = Formatting.Indented
+			});
+		}
 
-        /// <summary>
-        /// Returns true if DialerCampaignScheduleConfigChangeRecurrenceRange instances are equal
-        /// </summary>
-        /// <param name="other">Instance of DialerCampaignScheduleConfigChangeRecurrenceRange to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(DialerCampaignScheduleConfigChangeRecurrenceRange other)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
-                return false;
+		/// <summary>
+		/// Returns true if objects are equal
+		/// </summary>
+		/// <param name="obj">Object to be compared</param>
+		/// <returns>Boolean</returns>
+		public override bool Equals(object obj)
+		{
+			// credit: http://stackoverflow.com/a/10454552/677735
+			return this.Equals(obj as DialerCampaignScheduleConfigChangeRecurrenceRange);
+		}
 
-            return true &&
-                (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.Equals(other.Type)
-                ) &&
-                (
-                    this.End == other.End ||
-                    this.End != null &&
-                    this.End.Equals(other.End)
-                ) &&
-                (
-                    this.NumberOfOccurrences == other.NumberOfOccurrences ||
-                    this.NumberOfOccurrences != null &&
-                    this.NumberOfOccurrences.Equals(other.NumberOfOccurrences)
-                ) &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
-                ) &&
-                (
-                    this.GetAdditionalProperties == other.GetAdditionalProperties ||
-                    this.GetAdditionalProperties != null &&
-                    this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
-                );
-        }
+		/// <summary>
+		/// Returns true if DialerCampaignScheduleConfigChangeRecurrenceRange instances are equal
+		/// </summary>
+		/// <param name="other">Instance of DialerCampaignScheduleConfigChangeRecurrenceRange to be compared</param>
+		/// <returns>Boolean</returns>
+		public bool Equals(DialerCampaignScheduleConfigChangeRecurrenceRange other)
+		{
+			// credit: http://stackoverflow.com/a/10454552/677735
+			if (other == null)
+				return false;
 
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            // credit: http://stackoverflow.com/a/263416/677735
-            unchecked // Overflow is fine, just wrap
-            {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
+			return true &&
+				(
+					this.Type == other.Type ||
+					this.Type != null &&
+					this.Type.Equals(other.Type)
+				) &&
+				(
+					this.End == other.End ||
+					this.End != null &&
+					this.End.Equals(other.End)
+				) &&
+				(
+					this.NumberOfOccurrences == other.NumberOfOccurrences ||
+					this.NumberOfOccurrences != null &&
+					this.NumberOfOccurrences.Equals(other.NumberOfOccurrences)
+				) &&
+				(
+					this.AdditionalProperties == other.AdditionalProperties ||
+					this.AdditionalProperties != null &&
+					this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
+				) &&
+				(
+					this.GetAdditionalProperties == other.GetAdditionalProperties ||
+					this.GetAdditionalProperties != null &&
+					this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
+				);
+		}
 
-                if (this.End != null)
-                    hash = hash * 59 + this.End.GetHashCode();
+		/// <summary>
+		/// Gets the hash code
+		/// </summary>
+		/// <returns>Hash code</returns>
+		public override int GetHashCode()
+		{
+			// credit: http://stackoverflow.com/a/263416/677735
+			unchecked // Overflow is fine, just wrap
+			{
+				int hash = 41;
+				// Suitable nullity checks etc, of course :)
+				if (this.Type != null)
+					hash = hash * 59 + this.Type.GetHashCode();
 
-                if (this.NumberOfOccurrences != null)
-                    hash = hash * 59 + this.NumberOfOccurrences.GetHashCode();
+				if (this.End != null)
+					hash = hash * 59 + this.End.GetHashCode();
 
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
+				if (this.NumberOfOccurrences != null)
+					hash = hash * 59 + this.NumberOfOccurrences.GetHashCode();
 
-                if (this.GetAdditionalProperties != null)
-                    hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
+				if (this.AdditionalProperties != null)
+					hash = hash * 59 + this.AdditionalProperties.GetHashCode();
 
-                return hash;
-            }
-        }
-    }
+				if (this.GetAdditionalProperties != null)
+					hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
+
+				return hash;
+			}
+		}
+	}
 
 }

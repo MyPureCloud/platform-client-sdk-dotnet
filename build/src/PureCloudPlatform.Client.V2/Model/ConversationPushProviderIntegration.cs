@@ -1,169 +1,164 @@
-using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
+using System.Text;
+
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+
 using PureCloudPlatform.Client.V2.Client;
 
 namespace PureCloudPlatform.Client.V2.Model
 {
-    /// <summary>
-    /// A Push provider integration.
-    /// </summary>
-    [DataContract]
-    public partial class ConversationPushProviderIntegration :  IEquatable<ConversationPushProviderIntegration>
-    {
-        /// <summary>
-        /// Type of the integration
-        /// </summary>
-        /// <value>Type of the integration</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum ProviderEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Fcm for "FCM"
-            /// </summary>
-            [EnumMember(Value = "FCM")]
-            Fcm,
-            
-            /// <summary>
-            /// Enum Apns for "APNS"
-            /// </summary>
-            [EnumMember(Value = "APNS")]
-            Apns
-        }
-        /// <summary>
-        /// Type of the integration
-        /// </summary>
-        /// <value>Type of the integration</value>
-        [DataMember(Name="provider", EmitDefaultValue=false)]
-        public ProviderEnum? Provider { get; set; }
+	/// <summary>
+	/// A Push provider integration.
+	/// </summary>
+	[DataContract]
+	public partial class ConversationPushProviderIntegration : IEquatable<ConversationPushProviderIntegration>
+	{
+		/// <summary>
+		/// Type of the integration
+		/// </summary>
+		/// <value>Type of the integration</value>
+		[JsonConverter(typeof(UpgradeSdkEnumConverter))]
+		public enum ProviderEnum
+		{
+			/// <summary>
+			/// Your SDK version is out of date and an unknown enum value was encountered. 
+			/// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+			/// in the Package Manager Console
+			/// </summary>
+			[EnumMember(Value = "OUTDATED_SDK_VERSION")]
+			OutdatedSdkVersion,
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationPushProviderIntegration" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected ConversationPushProviderIntegration() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationPushProviderIntegration" /> class.
-        /// </summary>
-        /// <param name="Id">Genesys Cloud Integration ID (required).</param>
-        /// <param name="Provider">Type of the integration (required).</param>
-        public ConversationPushProviderIntegration(string Id = null, ProviderEnum? Provider = null)
-        {
-            this.Id = Id;
-            this.Provider = Provider;
-            
-        }
-        
+			/// <summary>
+			/// Enum Fcm for "FCM"
+			/// </summary>
+			[EnumMember(Value = "FCM")]
+			Fcm,
 
+			/// <summary>
+			/// Enum Apns for "APNS"
+			/// </summary>
+			[EnumMember(Value = "APNS")]
+			Apns
+		}
+		/// <summary>
+		/// Type of the integration
+		/// </summary>
+		/// <value>Type of the integration</value>
+		[DataMember(Name = "provider", EmitDefaultValue = false)]
+		public ProviderEnum? Provider { get; set; }
 
-        /// <summary>
-        /// Genesys Cloud Integration ID
-        /// </summary>
-        /// <value>Genesys Cloud Integration ID</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; set; }
+		/// <summary>
+		/// Initializes a new instance of the <see cref="ConversationPushProviderIntegration" /> class.
+		/// </summary>
+		[JsonConstructorAttribute]
+		protected ConversationPushProviderIntegration() { }
+		/// <summary>
+		/// Initializes a new instance of the <see cref="ConversationPushProviderIntegration" /> class.
+		/// </summary>
+		/// <param name="Id">Genesys Cloud Integration ID (required).</param>
+		/// <param name="Provider">Type of the integration (required).</param>
+		public ConversationPushProviderIntegration(string Id = null, ProviderEnum? Provider = null)
+		{
+			this.Id = Id;
+			this.Provider = Provider;
+
+		}
 
 
 
+		/// <summary>
+		/// Genesys Cloud Integration ID
+		/// </summary>
+		/// <value>Genesys Cloud Integration ID</value>
+		[DataMember(Name = "id", EmitDefaultValue = false)]
+		public string Id { get; set; }
 
-        /// <summary>
-        /// Returns the string presentation of the object
-        /// </summary>
-        /// <returns>String presentation of the object</returns>
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.Append("class ConversationPushProviderIntegration {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Provider: ").Append(Provider).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
-        {
-            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
-            {
-                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-                Formatting = Formatting.Indented
-            });
-        }
 
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="obj">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ConversationPushProviderIntegration);
-        }
 
-        /// <summary>
-        /// Returns true if ConversationPushProviderIntegration instances are equal
-        /// </summary>
-        /// <param name="other">Instance of ConversationPushProviderIntegration to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(ConversationPushProviderIntegration other)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
-                return false;
+		/// <summary>
+		/// Returns the string presentation of the object
+		/// </summary>
+		/// <returns>String presentation of the object</returns>
+		public override string ToString()
+		{
+			var sb = new StringBuilder();
+			sb.Append("class ConversationPushProviderIntegration {\n");
 
-            return true &&
-                (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Provider == other.Provider ||
-                    this.Provider != null &&
-                    this.Provider.Equals(other.Provider)
-                );
-        }
+			sb.Append("  Id: ").Append(Id).Append("\n");
+			sb.Append("  Provider: ").Append(Provider).Append("\n");
+			sb.Append("}\n");
+			return sb.ToString();
+		}
 
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            // credit: http://stackoverflow.com/a/263416/677735
-            unchecked // Overflow is fine, just wrap
-            {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
+		/// <summary>
+		/// Returns the JSON string presentation of the object
+		/// </summary>
+		/// <returns>JSON string presentation of the object</returns>
+		public string ToJson()
+		{
+			return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+			{
+				MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+				Formatting = Formatting.Indented
+			});
+		}
 
-                if (this.Provider != null)
-                    hash = hash * 59 + this.Provider.GetHashCode();
+		/// <summary>
+		/// Returns true if objects are equal
+		/// </summary>
+		/// <param name="obj">Object to be compared</param>
+		/// <returns>Boolean</returns>
+		public override bool Equals(object obj)
+		{
+			// credit: http://stackoverflow.com/a/10454552/677735
+			return this.Equals(obj as ConversationPushProviderIntegration);
+		}
 
-                return hash;
-            }
-        }
-    }
+		/// <summary>
+		/// Returns true if ConversationPushProviderIntegration instances are equal
+		/// </summary>
+		/// <param name="other">Instance of ConversationPushProviderIntegration to be compared</param>
+		/// <returns>Boolean</returns>
+		public bool Equals(ConversationPushProviderIntegration other)
+		{
+			// credit: http://stackoverflow.com/a/10454552/677735
+			if (other == null)
+				return false;
+
+			return true &&
+				(
+					this.Id == other.Id ||
+					this.Id != null &&
+					this.Id.Equals(other.Id)
+				) &&
+				(
+					this.Provider == other.Provider ||
+					this.Provider != null &&
+					this.Provider.Equals(other.Provider)
+				);
+		}
+
+		/// <summary>
+		/// Gets the hash code
+		/// </summary>
+		/// <returns>Hash code</returns>
+		public override int GetHashCode()
+		{
+			// credit: http://stackoverflow.com/a/263416/677735
+			unchecked // Overflow is fine, just wrap
+			{
+				int hash = 41;
+				// Suitable nullity checks etc, of course :)
+				if (this.Id != null)
+					hash = hash * 59 + this.Id.GetHashCode();
+
+				if (this.Provider != null)
+					hash = hash * 59 + this.Provider.GetHashCode();
+
+				return hash;
+			}
+		}
+	}
 
 }

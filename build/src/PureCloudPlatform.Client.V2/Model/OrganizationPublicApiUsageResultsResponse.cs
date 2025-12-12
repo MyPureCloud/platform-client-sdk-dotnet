@@ -1,264 +1,259 @@
-using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
+using System.Text;
+
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
+
 using PureCloudPlatform.Client.V2.Client;
 
 namespace PureCloudPlatform.Client.V2.Model
 {
-    /// <summary>
-    /// OrganizationPublicApiUsageResultsResponse
-    /// </summary>
-    [DataContract]
-    public partial class OrganizationPublicApiUsageResultsResponse :  IEquatable<OrganizationPublicApiUsageResultsResponse>
-    {
-        /// <summary>
-        /// The status of the query.
-        /// </summary>
-        /// <value>The status of the query.</value>
-        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum QueryStatusEnum
-        {
-            /// <summary>
-            /// Your SDK version is out of date and an unknown enum value was encountered. 
-            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
-            /// in the Package Manager Console
-            /// </summary>
-            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
-            OutdatedSdkVersion,
-            
-            /// <summary>
-            /// Enum Queued for "Queued"
-            /// </summary>
-            [EnumMember(Value = "Queued")]
-            Queued,
-            
-            /// <summary>
-            /// Enum Running for "Running"
-            /// </summary>
-            [EnumMember(Value = "Running")]
-            Running,
-            
-            /// <summary>
-            /// Enum Succeeded for "Succeeded"
-            /// </summary>
-            [EnumMember(Value = "Succeeded")]
-            Succeeded,
-            
-            /// <summary>
-            /// Enum Failed for "Failed"
-            /// </summary>
-            [EnumMember(Value = "Failed")]
-            Failed,
-            
-            /// <summary>
-            /// Enum Cancelled for "Cancelled"
-            /// </summary>
-            [EnumMember(Value = "Cancelled")]
-            Cancelled
-        }
-        /// <summary>
-        /// The status of the query.
-        /// </summary>
-        /// <value>The status of the query.</value>
-        [DataMember(Name="queryStatus", EmitDefaultValue=false)]
-        public QueryStatusEnum? QueryStatus { get; set; }
+	/// <summary>
+	/// OrganizationPublicApiUsageResultsResponse
+	/// </summary>
+	[DataContract]
+	public partial class OrganizationPublicApiUsageResultsResponse : IEquatable<OrganizationPublicApiUsageResultsResponse>
+	{
+		/// <summary>
+		/// The status of the query.
+		/// </summary>
+		/// <value>The status of the query.</value>
+		[JsonConverter(typeof(UpgradeSdkEnumConverter))]
+		public enum QueryStatusEnum
+		{
+			/// <summary>
+			/// Your SDK version is out of date and an unknown enum value was encountered. 
+			/// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+			/// in the Package Manager Console
+			/// </summary>
+			[EnumMember(Value = "OUTDATED_SDK_VERSION")]
+			OutdatedSdkVersion,
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationPublicApiUsageResultsResponse" /> class.
-        /// </summary>
-        [JsonConstructorAttribute]
-        protected OrganizationPublicApiUsageResultsResponse() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="OrganizationPublicApiUsageResultsResponse" /> class.
-        /// </summary>
-        /// <param name="Name">Name.</param>
-        /// <param name="QueryStatus">The status of the query. (required).</param>
-        /// <param name="ErrorBody">The reason for the failure. This will only be present if the query is in a FAILURE state but may not be included even if the state is FAILURE.</param>
-        /// <param name="NextUri">The uri to get the next set of results. Will only be included if there is another page to retrieve..</param>
-        /// <param name="Entities">The results of the query..</param>
-        public OrganizationPublicApiUsageResultsResponse(string Name = null, QueryStatusEnum? QueryStatus = null, ErrorBody ErrorBody = null, string NextUri = null, List<OrganizationPublicApiUsage> Entities = null)
-        {
-            this.Name = Name;
-            this.QueryStatus = QueryStatus;
-            this.ErrorBody = ErrorBody;
-            this.NextUri = NextUri;
-            this.Entities = Entities;
-            
-        }
-        
+			/// <summary>
+			/// Enum Queued for "Queued"
+			/// </summary>
+			[EnumMember(Value = "Queued")]
+			Queued,
 
+			/// <summary>
+			/// Enum Running for "Running"
+			/// </summary>
+			[EnumMember(Value = "Running")]
+			Running,
 
-        /// <summary>
-        /// Gets or Sets Name
-        /// </summary>
-        [DataMember(Name="name", EmitDefaultValue=false)]
-        public string Name { get; set; }
+			/// <summary>
+			/// Enum Succeeded for "Succeeded"
+			/// </summary>
+			[EnumMember(Value = "Succeeded")]
+			Succeeded,
+
+			/// <summary>
+			/// Enum Failed for "Failed"
+			/// </summary>
+			[EnumMember(Value = "Failed")]
+			Failed,
+
+			/// <summary>
+			/// Enum Cancelled for "Cancelled"
+			/// </summary>
+			[EnumMember(Value = "Cancelled")]
+			Cancelled
+		}
+		/// <summary>
+		/// The status of the query.
+		/// </summary>
+		/// <value>The status of the query.</value>
+		[DataMember(Name = "queryStatus", EmitDefaultValue = false)]
+		public QueryStatusEnum? QueryStatus { get; set; }
+
+		/// <summary>
+		/// Initializes a new instance of the <see cref="OrganizationPublicApiUsageResultsResponse" /> class.
+		/// </summary>
+		[JsonConstructorAttribute]
+		protected OrganizationPublicApiUsageResultsResponse() { }
+		/// <summary>
+		/// Initializes a new instance of the <see cref="OrganizationPublicApiUsageResultsResponse" /> class.
+		/// </summary>
+		/// <param name="Name">Name.</param>
+		/// <param name="QueryStatus">The status of the query. (required).</param>
+		/// <param name="ErrorBody">The reason for the failure. This will only be present if the query is in a FAILURE state but may not be included even if the state is FAILURE.</param>
+		/// <param name="NextUri">The uri to get the next set of results. Will only be included if there is another page to retrieve..</param>
+		/// <param name="Entities">The results of the query..</param>
+		public OrganizationPublicApiUsageResultsResponse(string Name = null, QueryStatusEnum? QueryStatus = null, ErrorBody ErrorBody = null, string NextUri = null, List<OrganizationPublicApiUsage> Entities = null)
+		{
+			this.Name = Name;
+			this.QueryStatus = QueryStatus;
+			this.ErrorBody = ErrorBody;
+			this.NextUri = NextUri;
+			this.Entities = Entities;
+
+		}
 
 
 
-
-
-        /// <summary>
-        /// The reason for the failure. This will only be present if the query is in a FAILURE state but may not be included even if the state is FAILURE
-        /// </summary>
-        /// <value>The reason for the failure. This will only be present if the query is in a FAILURE state but may not be included even if the state is FAILURE</value>
-        [DataMember(Name="errorBody", EmitDefaultValue=false)]
-        public ErrorBody ErrorBody { get; set; }
+		/// <summary>
+		/// Gets or Sets Name
+		/// </summary>
+		[DataMember(Name = "name", EmitDefaultValue = false)]
+		public string Name { get; set; }
 
 
 
-        /// <summary>
-        /// The uri to get the next set of results. Will only be included if there is another page to retrieve.
-        /// </summary>
-        /// <value>The uri to get the next set of results. Will only be included if there is another page to retrieve.</value>
-        [DataMember(Name="nextUri", EmitDefaultValue=false)]
-        public string NextUri { get; set; }
+
+
+		/// <summary>
+		/// The reason for the failure. This will only be present if the query is in a FAILURE state but may not be included even if the state is FAILURE
+		/// </summary>
+		/// <value>The reason for the failure. This will only be present if the query is in a FAILURE state but may not be included even if the state is FAILURE</value>
+		[DataMember(Name = "errorBody", EmitDefaultValue = false)]
+		public ErrorBody ErrorBody { get; set; }
 
 
 
-        /// <summary>
-        /// The results of the query.
-        /// </summary>
-        /// <value>The results of the query.</value>
-        [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<OrganizationPublicApiUsage> Entities { get; set; }
+		/// <summary>
+		/// The uri to get the next set of results. Will only be included if there is another page to retrieve.
+		/// </summary>
+		/// <value>The uri to get the next set of results. Will only be included if there is another page to retrieve.</value>
+		[DataMember(Name = "nextUri", EmitDefaultValue = false)]
+		public string NextUri { get; set; }
 
 
 
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
+		/// <summary>
+		/// The results of the query.
+		/// </summary>
+		/// <value>The results of the query.</value>
+		[DataMember(Name = "entities", EmitDefaultValue = false)]
+		public List<OrganizationPublicApiUsage> Entities { get; set; }
 
 
-        /// <summary>
-        /// Returns the string presentation of the object
-        /// </summary>
-        /// <returns>String presentation of the object</returns>
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.Append("class OrganizationPublicApiUsageResultsResponse {\n");
 
-            sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  QueryStatus: ").Append(QueryStatus).Append("\n");
-            sb.Append("  ErrorBody: ").Append(ErrorBody).Append("\n");
-            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
-            sb.Append("  Entities: ").Append(Entities).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
-        {
-            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
-            {
-                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-                Formatting = Formatting.Indented
-            });
-        }
+		/// <summary>
+		/// The URI for this object
+		/// </summary>
+		/// <value>The URI for this object</value>
+		[DataMember(Name = "selfUri", EmitDefaultValue = false)]
+		public string SelfUri { get; private set; }
 
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="obj">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as OrganizationPublicApiUsageResultsResponse);
-        }
 
-        /// <summary>
-        /// Returns true if OrganizationPublicApiUsageResultsResponse instances are equal
-        /// </summary>
-        /// <param name="other">Instance of OrganizationPublicApiUsageResultsResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(OrganizationPublicApiUsageResultsResponse other)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
-                return false;
+		/// <summary>
+		/// Returns the string presentation of the object
+		/// </summary>
+		/// <returns>String presentation of the object</returns>
+		public override string ToString()
+		{
+			var sb = new StringBuilder();
+			sb.Append("class OrganizationPublicApiUsageResultsResponse {\n");
 
-            return true &&
-                (
-                    this.Name == other.Name ||
-                    this.Name != null &&
-                    this.Name.Equals(other.Name)
-                ) &&
-                (
-                    this.QueryStatus == other.QueryStatus ||
-                    this.QueryStatus != null &&
-                    this.QueryStatus.Equals(other.QueryStatus)
-                ) &&
-                (
-                    this.ErrorBody == other.ErrorBody ||
-                    this.ErrorBody != null &&
-                    this.ErrorBody.Equals(other.ErrorBody)
-                ) &&
-                (
-                    this.NextUri == other.NextUri ||
-                    this.NextUri != null &&
-                    this.NextUri.Equals(other.NextUri)
-                ) &&
-                (
-                    this.Entities == other.Entities ||
-                    this.Entities != null &&
-                    this.Entities.SequenceEqual(other.Entities)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
-                );
-        }
+			sb.Append("  Name: ").Append(Name).Append("\n");
+			sb.Append("  QueryStatus: ").Append(QueryStatus).Append("\n");
+			sb.Append("  ErrorBody: ").Append(ErrorBody).Append("\n");
+			sb.Append("  NextUri: ").Append(NextUri).Append("\n");
+			sb.Append("  Entities: ").Append(Entities).Append("\n");
+			sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+			sb.Append("}\n");
+			return sb.ToString();
+		}
 
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            // credit: http://stackoverflow.com/a/263416/677735
-            unchecked // Overflow is fine, just wrap
-            {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.Name != null)
-                    hash = hash * 59 + this.Name.GetHashCode();
+		/// <summary>
+		/// Returns the JSON string presentation of the object
+		/// </summary>
+		/// <returns>JSON string presentation of the object</returns>
+		public string ToJson()
+		{
+			return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+			{
+				MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+				Formatting = Formatting.Indented
+			});
+		}
 
-                if (this.QueryStatus != null)
-                    hash = hash * 59 + this.QueryStatus.GetHashCode();
+		/// <summary>
+		/// Returns true if objects are equal
+		/// </summary>
+		/// <param name="obj">Object to be compared</param>
+		/// <returns>Boolean</returns>
+		public override bool Equals(object obj)
+		{
+			// credit: http://stackoverflow.com/a/10454552/677735
+			return this.Equals(obj as OrganizationPublicApiUsageResultsResponse);
+		}
 
-                if (this.ErrorBody != null)
-                    hash = hash * 59 + this.ErrorBody.GetHashCode();
+		/// <summary>
+		/// Returns true if OrganizationPublicApiUsageResultsResponse instances are equal
+		/// </summary>
+		/// <param name="other">Instance of OrganizationPublicApiUsageResultsResponse to be compared</param>
+		/// <returns>Boolean</returns>
+		public bool Equals(OrganizationPublicApiUsageResultsResponse other)
+		{
+			// credit: http://stackoverflow.com/a/10454552/677735
+			if (other == null)
+				return false;
 
-                if (this.NextUri != null)
-                    hash = hash * 59 + this.NextUri.GetHashCode();
+			return true &&
+				(
+					this.Name == other.Name ||
+					this.Name != null &&
+					this.Name.Equals(other.Name)
+				) &&
+				(
+					this.QueryStatus == other.QueryStatus ||
+					this.QueryStatus != null &&
+					this.QueryStatus.Equals(other.QueryStatus)
+				) &&
+				(
+					this.ErrorBody == other.ErrorBody ||
+					this.ErrorBody != null &&
+					this.ErrorBody.Equals(other.ErrorBody)
+				) &&
+				(
+					this.NextUri == other.NextUri ||
+					this.NextUri != null &&
+					this.NextUri.Equals(other.NextUri)
+				) &&
+				(
+					this.Entities == other.Entities ||
+					this.Entities != null &&
+					this.Entities.SequenceEqual(other.Entities)
+				) &&
+				(
+					this.SelfUri == other.SelfUri ||
+					this.SelfUri != null &&
+					this.SelfUri.Equals(other.SelfUri)
+				);
+		}
 
-                if (this.Entities != null)
-                    hash = hash * 59 + this.Entities.GetHashCode();
+		/// <summary>
+		/// Gets the hash code
+		/// </summary>
+		/// <returns>Hash code</returns>
+		public override int GetHashCode()
+		{
+			// credit: http://stackoverflow.com/a/263416/677735
+			unchecked // Overflow is fine, just wrap
+			{
+				int hash = 41;
+				// Suitable nullity checks etc, of course :)
+				if (this.Name != null)
+					hash = hash * 59 + this.Name.GetHashCode();
 
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
+				if (this.QueryStatus != null)
+					hash = hash * 59 + this.QueryStatus.GetHashCode();
 
-                return hash;
-            }
-        }
-    }
+				if (this.ErrorBody != null)
+					hash = hash * 59 + this.ErrorBody.GetHashCode();
+
+				if (this.NextUri != null)
+					hash = hash * 59 + this.NextUri.GetHashCode();
+
+				if (this.Entities != null)
+					hash = hash * 59 + this.Entities.GetHashCode();
+
+				if (this.SelfUri != null)
+					hash = hash * 59 + this.SelfUri.GetHashCode();
+
+				return hash;
+			}
+		}
+	}
 
 }

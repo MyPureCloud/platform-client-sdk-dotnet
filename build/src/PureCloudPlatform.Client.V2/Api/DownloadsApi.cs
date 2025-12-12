@@ -1,395 +1,391 @@
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
 using PureCloudPlatform.Client.V2.Client;
 using PureCloudPlatform.Client.V2.Model;
 
 namespace PureCloudPlatform.Client.V2.Api
 {
 
-    /// <summary>
-    /// Represents a collection of functions to interact with the API endpoints
-    /// </summary>
-    public interface IDownloadsApi : IApiAccessor
-    {
-        #region Synchronous Operations
+	/// <summary>
+	/// Represents a collection of functions to interact with the API endpoints
+	/// </summary>
+	public interface IDownloadsApi : IApiAccessor
+	{
+		#region Synchronous Operations
 
-        /// <summary>
-        /// Issues a redirect to a signed secure download URL for specified download
-        /// </summary>
-        /// <remarks>
-        /// this method will issue a redirect to the url to the content
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"> (optional)</param>
-        /// <param name="issueRedirect"> (optional, default to true)</param>
-        /// <param name="redirectToAuth"> (optional, default to true)</param>
-        /// <returns>UrlResponse</returns>
-        
-        UrlResponse GetDownload (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
+		/// <summary>
+		/// Issues a redirect to a signed secure download URL for specified download
+		/// </summary>
+		/// <remarks>
+		/// this method will issue a redirect to the url to the content
+		/// </remarks>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="downloadId">Download ID</param>
+		/// <param name="contentDisposition"> (optional)</param>
+		/// <param name="issueRedirect"> (optional, default to true)</param>
+		/// <param name="redirectToAuth"> (optional, default to true)</param>
+		/// <returns>UrlResponse</returns>
 
-        /// <summary>
-        /// Issues a redirect to a signed secure download URL for specified download
-        /// </summary>
-        /// <remarks>
-        /// this method will issue a redirect to the url to the content
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"> (optional)</param>
-        /// <param name="issueRedirect"> (optional, default to true)</param>
-        /// <param name="redirectToAuth"> (optional, default to true)</param>
-        /// <returns>ApiResponse of UrlResponse</returns>
-        
-        ApiResponse<UrlResponse> GetDownloadWithHttpInfo (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
+		UrlResponse GetDownload(string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
 
-        #endregion Synchronous Operations
+		/// <summary>
+		/// Issues a redirect to a signed secure download URL for specified download
+		/// </summary>
+		/// <remarks>
+		/// this method will issue a redirect to the url to the content
+		/// </remarks>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="downloadId">Download ID</param>
+		/// <param name="contentDisposition"> (optional)</param>
+		/// <param name="issueRedirect"> (optional, default to true)</param>
+		/// <param name="redirectToAuth"> (optional, default to true)</param>
+		/// <returns>ApiResponse of UrlResponse</returns>
 
-        #region Asynchronous Operations
+		ApiResponse<UrlResponse> GetDownloadWithHttpInfo(string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
 
-        /// <summary>
-        /// Issues a redirect to a signed secure download URL for specified download
-        /// </summary>
-        /// <remarks>
-        /// this method will issue a redirect to the url to the content
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"> (optional)</param>
-        /// <param name="issueRedirect"> (optional, default to true)</param>
-        /// <param name="redirectToAuth"> (optional, default to true)</param>
-        /// <returns>Task of UrlResponse</returns>
-        
-        System.Threading.Tasks.Task<UrlResponse> GetDownloadAsync (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
+		#endregion Synchronous Operations
 
-        /// <summary>
-        /// Issues a redirect to a signed secure download URL for specified download
-        /// </summary>
-        /// <remarks>
-        /// this method will issue a redirect to the url to the content
-        /// </remarks>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"> (optional)</param>
-        /// <param name="issueRedirect"> (optional, default to true)</param>
-        /// <param name="redirectToAuth"> (optional, default to true)</param>
-        /// <returns>Task of ApiResponse (UrlResponse)</returns>
-        
-        System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetDownloadAsyncWithHttpInfo (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
+		#region Asynchronous Operations
 
-        #endregion Asynchronous Operations
+		/// <summary>
+		/// Issues a redirect to a signed secure download URL for specified download
+		/// </summary>
+		/// <remarks>
+		/// this method will issue a redirect to the url to the content
+		/// </remarks>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="downloadId">Download ID</param>
+		/// <param name="contentDisposition"> (optional)</param>
+		/// <param name="issueRedirect"> (optional, default to true)</param>
+		/// <param name="redirectToAuth"> (optional, default to true)</param>
+		/// <returns>Task of UrlResponse</returns>
 
-    }
+		System.Threading.Tasks.Task<UrlResponse> GetDownloadAsync(string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
 
-    /// <summary>
-    /// Represents a collection of functions to interact with the API endpoints
-    /// </summary>
-    public partial class DownloadsApi : IDownloadsApi
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DownloadsApi"/> class.
-        /// </summary>
-        /// <returns></returns>
-        public DownloadsApi(String basePath)
-        {
-            this.Configuration = new PureCloudPlatform.Client.V2.Client.Configuration(new ApiClient(basePath));
+		/// <summary>
+		/// Issues a redirect to a signed secure download URL for specified download
+		/// </summary>
+		/// <remarks>
+		/// this method will issue a redirect to the url to the content
+		/// </remarks>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="downloadId">Download ID</param>
+		/// <param name="contentDisposition"> (optional)</param>
+		/// <param name="issueRedirect"> (optional, default to true)</param>
+		/// <param name="redirectToAuth"> (optional, default to true)</param>
+		/// <returns>Task of ApiResponse (UrlResponse)</returns>
 
-            // ensure API client has configuration ready
-            if (this.Configuration.ApiClient.Configuration == null)
-            {
-                this.Configuration.ApiClient.Configuration = this.Configuration;
-            }
-        }
+		System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetDownloadAsyncWithHttpInfo(string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null);
 
-        /// <summary>
-        /// Initializes a new instance of the <see cref="DownloadsApi"/> class
-        /// using Configuration object
-        /// </summary>
-        /// <param name="configuration">An instance of Configuration</param>
-        /// <returns></returns>
-        public DownloadsApi(PureCloudPlatform.Client.V2.Client.Configuration configuration = null)
-        {
-            if (configuration == null) // use the default one in Configuration
-                this.Configuration = PureCloudPlatform.Client.V2.Client.Configuration.Default;
-            else
-                this.Configuration = configuration;
+		#endregion Asynchronous Operations
 
-            // ensure API client has configuration ready
-            if (this.Configuration.ApiClient.Configuration == null)
-            {
-                this.Configuration.ApiClient.Configuration = this.Configuration;
-            }
-        }
+	}
 
-        /// <summary>
-        /// Gets the base path of the API client.
-        /// </summary>
-        /// <value>The base path</value>
-        public String GetBasePath()
-        {
-             return this.Configuration.ApiClient.ClientOptions.BaseUrl.ToString();
-        }
+	/// <summary>
+	/// Represents a collection of functions to interact with the API endpoints
+	/// </summary>
+	public partial class DownloadsApi : IDownloadsApi
+	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="DownloadsApi"/> class.
+		/// </summary>
+		/// <returns></returns>
+		public DownloadsApi(String basePath)
+		{
+			this.Configuration = new PureCloudPlatform.Client.V2.Client.Configuration(new ApiClient(basePath));
 
-        /// <summary>
-        /// Sets the base path of the API client.
-        /// </summary>
-        /// <value>The base path</value>
-        [Obsolete("SetBasePath is deprecated, please do 'this.Configuration.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
-        public void SetBasePath(String basePath)
-        {
-            // do nothing
-        }
+			// ensure API client has configuration ready
+			if (this.Configuration.ApiClient.Configuration == null)
+			{
+				this.Configuration.ApiClient.Configuration = this.Configuration;
+			}
+		}
 
-        /// <summary>
-        /// Gets or sets the configuration object
-        /// </summary>
-        /// <value>An instance of the Configuration</value>
-        public PureCloudPlatform.Client.V2.Client.Configuration Configuration {get; set;}
+		/// <summary>
+		/// Initializes a new instance of the <see cref="DownloadsApi"/> class
+		/// using Configuration object
+		/// </summary>
+		/// <param name="configuration">An instance of Configuration</param>
+		/// <returns></returns>
+		public DownloadsApi(PureCloudPlatform.Client.V2.Client.Configuration configuration = null)
+		{
+			if (configuration == null) // use the default one in Configuration
+				this.Configuration = PureCloudPlatform.Client.V2.Client.Configuration.Default;
+			else
+				this.Configuration = configuration;
 
-        /// <summary>
-        /// Gets the default header.
-        /// </summary>
-        /// <returns>Dictionary of HTTP header</returns>
-        [Obsolete("DefaultHeader is deprecated, please use this.Configuration.DefaultHeader instead.")]
-        public Dictionary<String, String> DefaultHeader()
-        {
-            return this.Configuration.DefaultHeader;
-        }
+			// ensure API client has configuration ready
+			if (this.Configuration.ApiClient.Configuration == null)
+			{
+				this.Configuration.ApiClient.Configuration = this.Configuration;
+			}
+		}
 
-        /// <summary>
-        /// Add default header.
-        /// </summary>
-        /// <param name="key">Header field name.</param>
-        /// <param name="value">Header field value.</param>
-        /// <returns></returns>
-        [Obsolete("AddDefaultHeader is deprecated, please use this.Configuration.AddDefaultHeader instead.")]
-        public void AddDefaultHeader(string key, string value)
-        {
-            this.Configuration.AddDefaultHeader(key, value);
-        }
+		/// <summary>
+		/// Gets the base path of the API client.
+		/// </summary>
+		/// <value>The base path</value>
+		public String GetBasePath()
+		{
+			return this.Configuration.ApiClient.ClientOptions.BaseUrl.ToString();
+		}
 
+		/// <summary>
+		/// Sets the base path of the API client.
+		/// </summary>
+		/// <value>The base path</value>
+		[Obsolete("SetBasePath is deprecated, please do 'this.Configuration.ApiClient = new ApiClient(\"http://new-path\")' instead.")]
+		public void SetBasePath(String basePath)
+		{
+			// do nothing
+		}
 
-        /// <summary>
-        /// Issues a redirect to a signed secure download URL for specified download 
-        /// this method will issue a redirect to the url to the content
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"> (optional)</param>
-        /// <param name="issueRedirect"> (optional, default to true)</param>
-        /// <param name="redirectToAuth"> (optional, default to true)</param>
-        /// <returns>UrlResponse</returns>
-        
-        public UrlResponse GetDownload (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
-        {
-             ApiResponse<UrlResponse> localVarResponse = GetDownloadWithHttpInfo(downloadId, contentDisposition, issueRedirect, redirectToAuth);
-             return localVarResponse.Data;
-        }
+		/// <summary>
+		/// Gets or sets the configuration object
+		/// </summary>
+		/// <value>An instance of the Configuration</value>
+		public PureCloudPlatform.Client.V2.Client.Configuration Configuration { get; set; }
 
-        /// <summary>
-        /// Issues a redirect to a signed secure download URL for specified download 
-        /// this method will issue a redirect to the url to the content
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"> (optional)</param>
-        /// <param name="issueRedirect"> (optional, default to true)</param>
-        /// <param name="redirectToAuth"> (optional, default to true)</param>
-        /// <returns>ApiResponse of UrlResponse</returns>
-        
-        public ApiResponse< UrlResponse > GetDownloadWithHttpInfo (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
-        { 
-            // verify the required parameter 'downloadId' is set
-            if (downloadId == null)
-                throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->GetDownload");
+		/// <summary>
+		/// Gets the default header.
+		/// </summary>
+		/// <returns>Dictionary of HTTP header</returns>
+		[Obsolete("DefaultHeader is deprecated, please use this.Configuration.DefaultHeader instead.")]
+		public Dictionary<String, String> DefaultHeader()
+		{
+			return this.Configuration.DefaultHeader;
+		}
 
-            var localVarPath = "/api/v2/downloads/{downloadId}";
-            var localVarHttpMethod = "Get";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-                
-
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (downloadId != null) localVarPathParams.Add("downloadId", this.Configuration.ApiClient.ParameterToString(downloadId));
-
-            // Query params
-            if (contentDisposition != null) localVarQueryParams.Add(new Tuple<string, string>("contentDisposition", this.Configuration.ApiClient.ParameterToString(contentDisposition)));
-            if (issueRedirect != null) localVarQueryParams.Add(new Tuple<string, string>("issueRedirect", this.Configuration.ApiClient.ParameterToString(issueRedirect)));
-            if (redirectToAuth != null) localVarQueryParams.Add(new Tuple<string, string>("redirectToAuth", this.Configuration.ApiClient.ParameterToString(redirectToAuth)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
+		/// <summary>
+		/// Add default header.
+		/// </summary>
+		/// <param name="key">Header field name.</param>
+		/// <param name="value">Header field value.</param>
+		/// <returns></returns>
+		[Obsolete("AddDefaultHeader is deprecated, please use this.Configuration.AddDefaultHeader instead.")]
+		public void AddDefaultHeader(string key, string value)
+		{
+			this.Configuration.AddDefaultHeader(key, value);
+		}
 
 
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
+		/// <summary>
+		/// Issues a redirect to a signed secure download URL for specified download 
+		/// this method will issue a redirect to the url to the content
+		/// </summary>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="downloadId">Download ID</param>
+		/// <param name="contentDisposition"> (optional)</param>
+		/// <param name="issueRedirect"> (optional, default to true)</param>
+		/// <param name="redirectToAuth"> (optional, default to true)</param>
+		/// <returns>UrlResponse</returns>
 
-            // make the HTTP request
-            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+		public UrlResponse GetDownload(string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
+		{
+			ApiResponse<UrlResponse> localVarResponse = GetDownloadWithHttpInfo(downloadId, contentDisposition, issueRedirect, redirectToAuth);
+			return localVarResponse.Data;
+		}
 
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
+		/// <summary>
+		/// Issues a redirect to a signed secure download URL for specified download 
+		/// this method will issue a redirect to the url to the content
+		/// </summary>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="downloadId">Download ID</param>
+		/// <param name="contentDisposition"> (optional)</param>
+		/// <param name="issueRedirect"> (optional, default to true)</param>
+		/// <param name="redirectToAuth"> (optional, default to true)</param>
+		/// <returns>ApiResponse of UrlResponse</returns>
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+		public ApiResponse<UrlResponse> GetDownloadWithHttpInfo(string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
+		{
+			// verify the required parameter 'downloadId' is set
+			if (downloadId == null)
+				throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->GetDownload");
 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetDownload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetDownload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+			var localVarPath = "/api/v2/downloads/{downloadId}";
+			var localVarHttpMethod = "Get";
+			var localVarPathParams = new Dictionary<String, String>();
+			var localVarQueryParams = new List<Tuple<String, String>>();
+			var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+			var localVarFormParams = new Dictionary<String, String>();
+			var localVarFileParams = new Dictionary<String, IFileParameter>();
+			Object localVarPostBody = null;
 
-            return new ApiResponse<UrlResponse>(localVarStatusCode,
-                localVarHeaders,
-                (UrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlResponse)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
+			// to determine the Content-Type header
+			String[] localVarHttpContentTypes = new String[] {
+				"application/json"
+			};
+			String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
+			// to determine the Accept header
+			String[] localVarHttpHeaderAccepts = new String[] {
 
-        /// <summary>
-        /// Issues a redirect to a signed secure download URL for specified download 
-        /// this method will issue a redirect to the url to the content
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"> (optional)</param>
-        /// <param name="issueRedirect"> (optional, default to true)</param>
-        /// <param name="redirectToAuth"> (optional, default to true)</param>
-        /// <returns>Task of UrlResponse</returns>
-        
-        public async System.Threading.Tasks.Task<UrlResponse> GetDownloadAsync (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
-        {
-             ApiResponse<UrlResponse> localVarResponse = await GetDownloadAsyncWithHttpInfo(downloadId, contentDisposition, issueRedirect, redirectToAuth);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Issues a redirect to a signed secure download URL for specified download 
-        /// this method will issue a redirect to the url to the content
-        /// </summary>
-        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="downloadId">Download ID</param>
-        /// <param name="contentDisposition"> (optional)</param>
-        /// <param name="issueRedirect"> (optional, default to true)</param>
-        /// <param name="redirectToAuth"> (optional, default to true)</param>
-        /// <returns>Task of ApiResponse (UrlResponse)</returns>
-        
-        public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetDownloadAsyncWithHttpInfo (string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
-        { 
-            // verify the required parameter 'downloadId' is set
-            if (downloadId == null)
-                throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->GetDownload");
-            
-
-            var localVarPath = "/api/v2/downloads/{downloadId}";
-            var localVarHttpMethod = "Get";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<Tuple<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, IFileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-
-                "application/json"
-
-                
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            // set "format" to json by default
-            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
-            localVarPathParams.Add("format", "json");
-
-            // Path params
-            if (downloadId != null) localVarPathParams.Add("downloadId", this.Configuration.ApiClient.ParameterToString(downloadId));
-
-            // Query params
-            if (contentDisposition != null) localVarQueryParams.Add(new Tuple<string, string>("contentDisposition", this.Configuration.ApiClient.ParameterToString(contentDisposition)));
-            if (issueRedirect != null) localVarQueryParams.Add(new Tuple<string, string>("issueRedirect", this.Configuration.ApiClient.ParameterToString(issueRedirect)));
-            if (redirectToAuth != null) localVarQueryParams.Add(new Tuple<string, string>("redirectToAuth", this.Configuration.ApiClient.ParameterToString(redirectToAuth)));
-
-            // Header params
-
-            // Form params
-            
-            // Body param
+				"application/json"
 
 
-            // authentication (PureCloud OAuth) required
-            // oauth required
-            if (!String.IsNullOrEmpty(Configuration.AccessToken))
-            {
-                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
-            }
+			};
+			String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+			if (localVarHttpHeaderAccept != null)
+				localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            // make the HTTP request
-            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+			// set "format" to json by default
+			// e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+			localVarPathParams.Add("format", "json");
 
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
+			// Path params
+			if (downloadId != null) localVarPathParams.Add("downloadId", this.Configuration.ApiClient.ParameterToString(downloadId));
 
-            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+			// Query params
+			if (contentDisposition != null) localVarQueryParams.Add(new Tuple<string, string>("contentDisposition", this.Configuration.ApiClient.ParameterToString(contentDisposition)));
+			if (issueRedirect != null) localVarQueryParams.Add(new Tuple<string, string>("issueRedirect", this.Configuration.ApiClient.ParameterToString(issueRedirect)));
+			if (redirectToAuth != null) localVarQueryParams.Add(new Tuple<string, string>("redirectToAuth", this.Configuration.ApiClient.ParameterToString(redirectToAuth)));
 
-            if (localVarStatusCode >= 400)
-                throw new ApiException (localVarStatusCode, "Error calling GetDownload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
-            else if (localVarStatusCode == 0)
-                throw new ApiException (localVarStatusCode, "Error calling GetDownload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+			// Header params
 
-            return new ApiResponse<UrlResponse>(localVarStatusCode,
-                localVarHeaders,
-                (UrlResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlResponse)),
-                localVarResponse.Content,
-                localVarResponse.StatusDescription);
-        }
+			// Form params
+
+			// Body param
 
 
+			// authentication (PureCloud OAuth) required
+			// oauth required
+			if (!String.IsNullOrEmpty(Configuration.AccessToken))
+			{
+				localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+			}
 
-    }
+			// make the HTTP request
+			IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+				localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+				localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+			int localVarStatusCode = (int)localVarResponse.StatusCode;
+
+			Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+			if (localVarStatusCode >= 400)
+				throw new ApiException(localVarStatusCode, "Error calling GetDownload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+			else if (localVarStatusCode == 0)
+				throw new ApiException(localVarStatusCode, "Error calling GetDownload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+			return new ApiResponse<UrlResponse>(localVarStatusCode,
+				localVarHeaders,
+				(UrlResponse)this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlResponse)),
+				localVarResponse.Content,
+				localVarResponse.StatusDescription);
+		}
+
+
+		/// <summary>
+		/// Issues a redirect to a signed secure download URL for specified download 
+		/// this method will issue a redirect to the url to the content
+		/// </summary>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="downloadId">Download ID</param>
+		/// <param name="contentDisposition"> (optional)</param>
+		/// <param name="issueRedirect"> (optional, default to true)</param>
+		/// <param name="redirectToAuth"> (optional, default to true)</param>
+		/// <returns>Task of UrlResponse</returns>
+
+		public async System.Threading.Tasks.Task<UrlResponse> GetDownloadAsync(string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
+		{
+			ApiResponse<UrlResponse> localVarResponse = await GetDownloadAsyncWithHttpInfo(downloadId, contentDisposition, issueRedirect, redirectToAuth);
+			return localVarResponse.Data;
+
+		}
+
+		/// <summary>
+		/// Issues a redirect to a signed secure download URL for specified download 
+		/// this method will issue a redirect to the url to the content
+		/// </summary>
+		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+		/// <param name="downloadId">Download ID</param>
+		/// <param name="contentDisposition"> (optional)</param>
+		/// <param name="issueRedirect"> (optional, default to true)</param>
+		/// <param name="redirectToAuth"> (optional, default to true)</param>
+		/// <returns>Task of ApiResponse (UrlResponse)</returns>
+
+		public async System.Threading.Tasks.Task<ApiResponse<UrlResponse>> GetDownloadAsyncWithHttpInfo(string downloadId, string contentDisposition = null, bool? issueRedirect = null, bool? redirectToAuth = null)
+		{
+			// verify the required parameter 'downloadId' is set
+			if (downloadId == null)
+				throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->GetDownload");
+
+
+			var localVarPath = "/api/v2/downloads/{downloadId}";
+			var localVarHttpMethod = "Get";
+			var localVarPathParams = new Dictionary<String, String>();
+			var localVarQueryParams = new List<Tuple<String, String>>();
+			var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+			var localVarFormParams = new Dictionary<String, String>();
+			var localVarFileParams = new Dictionary<String, IFileParameter>();
+			Object localVarPostBody = null;
+
+			// to determine the Content-Type header
+			String[] localVarHttpContentTypes = new String[] {
+				"application/json"
+			};
+			String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+			// to determine the Accept header
+			String[] localVarHttpHeaderAccepts = new String[] {
+
+				"application/json"
+
+
+			};
+			String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+			if (localVarHttpHeaderAccept != null)
+				localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+			// set "format" to json by default
+			// e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+			localVarPathParams.Add("format", "json");
+
+			// Path params
+			if (downloadId != null) localVarPathParams.Add("downloadId", this.Configuration.ApiClient.ParameterToString(downloadId));
+
+			// Query params
+			if (contentDisposition != null) localVarQueryParams.Add(new Tuple<string, string>("contentDisposition", this.Configuration.ApiClient.ParameterToString(contentDisposition)));
+			if (issueRedirect != null) localVarQueryParams.Add(new Tuple<string, string>("issueRedirect", this.Configuration.ApiClient.ParameterToString(issueRedirect)));
+			if (redirectToAuth != null) localVarQueryParams.Add(new Tuple<string, string>("redirectToAuth", this.Configuration.ApiClient.ParameterToString(redirectToAuth)));
+
+			// Header params
+
+			// Form params
+
+			// Body param
+
+
+			// authentication (PureCloud OAuth) required
+			// oauth required
+			if (!String.IsNullOrEmpty(Configuration.AccessToken))
+			{
+				localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+			}
+
+			// make the HTTP request
+			IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+				localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+				localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+			int localVarStatusCode = (int)localVarResponse.StatusCode;
+
+			Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+			if (localVarStatusCode >= 400)
+				throw new ApiException(localVarStatusCode, "Error calling GetDownload: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+			else if (localVarStatusCode == 0)
+				throw new ApiException(localVarStatusCode, "Error calling GetDownload: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+			return new ApiResponse<UrlResponse>(localVarStatusCode,
+				localVarHeaders,
+				(UrlResponse)this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UrlResponse)),
+				localVarResponse.Content,
+				localVarResponse.StatusDescription);
+		}
+
+
+
+	}
 
 }

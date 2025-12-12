@@ -1,137 +1,130 @@
-using System;
-using System.Linq;
-using System.IO;
-using System.Text;
-using System.Collections;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Runtime.Serialization;
+using System.Text;
+
 using Newtonsoft.Json;
-using Newtonsoft.Json.Converters;
-using PureCloudPlatform.Client.V2.Client;
 
 namespace PureCloudPlatform.Client.V2.Model
 {
-    /// <summary>
-    /// HrisTimeOffTypesResponse
-    /// </summary>
-    [DataContract]
-    public partial class HrisTimeOffTypesResponse :  IEquatable<HrisTimeOffTypesResponse>
-    {
-        /// <summary>
-        /// Initializes a new instance of the <see cref="HrisTimeOffTypesResponse" /> class.
-        /// </summary>
-        /// <param name="Job">The asynchronous job handling the query.</param>
-        /// <param name="Entities">List of time off types. It is available only via notification.</param>
-        public HrisTimeOffTypesResponse(HrisTimeOffTypesJobReference Job = null, List<HrisTimeOffTypeResponse> Entities = null)
-        {
-            this.Job = Job;
-            this.Entities = Entities;
-            
-        }
-        
+	/// <summary>
+	/// HrisTimeOffTypesResponse
+	/// </summary>
+	[DataContract]
+	public partial class HrisTimeOffTypesResponse : IEquatable<HrisTimeOffTypesResponse>
+	{
+		/// <summary>
+		/// Initializes a new instance of the <see cref="HrisTimeOffTypesResponse" /> class.
+		/// </summary>
+		/// <param name="Job">The asynchronous job handling the query.</param>
+		/// <param name="Entities">List of time off types. It is available only via notification.</param>
+		public HrisTimeOffTypesResponse(HrisTimeOffTypesJobReference Job = null, List<HrisTimeOffTypeResponse> Entities = null)
+		{
+			this.Job = Job;
+			this.Entities = Entities;
 
-
-        /// <summary>
-        /// The asynchronous job handling the query
-        /// </summary>
-        /// <value>The asynchronous job handling the query</value>
-        [DataMember(Name="job", EmitDefaultValue=false)]
-        public HrisTimeOffTypesJobReference Job { get; set; }
+		}
 
 
 
-        /// <summary>
-        /// List of time off types. It is available only via notification
-        /// </summary>
-        /// <value>List of time off types. It is available only via notification</value>
-        [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<HrisTimeOffTypeResponse> Entities { get; set; }
+		/// <summary>
+		/// The asynchronous job handling the query
+		/// </summary>
+		/// <value>The asynchronous job handling the query</value>
+		[DataMember(Name = "job", EmitDefaultValue = false)]
+		public HrisTimeOffTypesJobReference Job { get; set; }
 
 
-        /// <summary>
-        /// Returns the string presentation of the object
-        /// </summary>
-        /// <returns>String presentation of the object</returns>
-        public override string ToString()
-        {
-            var sb = new StringBuilder();
-            sb.Append("class HrisTimeOffTypesResponse {\n");
 
-            sb.Append("  Job: ").Append(Job).Append("\n");
-            sb.Append("  Entities: ").Append(Entities).Append("\n");
-            sb.Append("}\n");
-            return sb.ToString();
-        }
-  
-        /// <summary>
-        /// Returns the JSON string presentation of the object
-        /// </summary>
-        /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
-        {
-            return JsonConvert.SerializeObject(this, new JsonSerializerSettings
-            {
-                MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
-                Formatting = Formatting.Indented
-            });
-        }
+		/// <summary>
+		/// List of time off types. It is available only via notification
+		/// </summary>
+		/// <value>List of time off types. It is available only via notification</value>
+		[DataMember(Name = "entities", EmitDefaultValue = false)]
+		public List<HrisTimeOffTypeResponse> Entities { get; set; }
 
-        /// <summary>
-        /// Returns true if objects are equal
-        /// </summary>
-        /// <param name="obj">Object to be compared</param>
-        /// <returns>Boolean</returns>
-        public override bool Equals(object obj)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as HrisTimeOffTypesResponse);
-        }
 
-        /// <summary>
-        /// Returns true if HrisTimeOffTypesResponse instances are equal
-        /// </summary>
-        /// <param name="other">Instance of HrisTimeOffTypesResponse to be compared</param>
-        /// <returns>Boolean</returns>
-        public bool Equals(HrisTimeOffTypesResponse other)
-        {
-            // credit: http://stackoverflow.com/a/10454552/677735
-            if (other == null)
-                return false;
+		/// <summary>
+		/// Returns the string presentation of the object
+		/// </summary>
+		/// <returns>String presentation of the object</returns>
+		public override string ToString()
+		{
+			var sb = new StringBuilder();
+			sb.Append("class HrisTimeOffTypesResponse {\n");
 
-            return true &&
-                (
-                    this.Job == other.Job ||
-                    this.Job != null &&
-                    this.Job.Equals(other.Job)
-                ) &&
-                (
-                    this.Entities == other.Entities ||
-                    this.Entities != null &&
-                    this.Entities.SequenceEqual(other.Entities)
-                );
-        }
+			sb.Append("  Job: ").Append(Job).Append("\n");
+			sb.Append("  Entities: ").Append(Entities).Append("\n");
+			sb.Append("}\n");
+			return sb.ToString();
+		}
 
-        /// <summary>
-        /// Gets the hash code
-        /// </summary>
-        /// <returns>Hash code</returns>
-        public override int GetHashCode()
-        {
-            // credit: http://stackoverflow.com/a/263416/677735
-            unchecked // Overflow is fine, just wrap
-            {
-                int hash = 41;
-                // Suitable nullity checks etc, of course :)
-                if (this.Job != null)
-                    hash = hash * 59 + this.Job.GetHashCode();
+		/// <summary>
+		/// Returns the JSON string presentation of the object
+		/// </summary>
+		/// <returns>JSON string presentation of the object</returns>
+		public string ToJson()
+		{
+			return JsonConvert.SerializeObject(this, new JsonSerializerSettings
+			{
+				MetadataPropertyHandling = MetadataPropertyHandling.Ignore,
+				Formatting = Formatting.Indented
+			});
+		}
 
-                if (this.Entities != null)
-                    hash = hash * 59 + this.Entities.GetHashCode();
+		/// <summary>
+		/// Returns true if objects are equal
+		/// </summary>
+		/// <param name="obj">Object to be compared</param>
+		/// <returns>Boolean</returns>
+		public override bool Equals(object obj)
+		{
+			// credit: http://stackoverflow.com/a/10454552/677735
+			return this.Equals(obj as HrisTimeOffTypesResponse);
+		}
 
-                return hash;
-            }
-        }
-    }
+		/// <summary>
+		/// Returns true if HrisTimeOffTypesResponse instances are equal
+		/// </summary>
+		/// <param name="other">Instance of HrisTimeOffTypesResponse to be compared</param>
+		/// <returns>Boolean</returns>
+		public bool Equals(HrisTimeOffTypesResponse other)
+		{
+			// credit: http://stackoverflow.com/a/10454552/677735
+			if (other == null)
+				return false;
+
+			return true &&
+				(
+					this.Job == other.Job ||
+					this.Job != null &&
+					this.Job.Equals(other.Job)
+				) &&
+				(
+					this.Entities == other.Entities ||
+					this.Entities != null &&
+					this.Entities.SequenceEqual(other.Entities)
+				);
+		}
+
+		/// <summary>
+		/// Gets the hash code
+		/// </summary>
+		/// <returns>Hash code</returns>
+		public override int GetHashCode()
+		{
+			// credit: http://stackoverflow.com/a/263416/677735
+			unchecked // Overflow is fine, just wrap
+			{
+				int hash = 41;
+				// Suitable nullity checks etc, of course :)
+				if (this.Job != null)
+					hash = hash * 59 + this.Job.GetHashCode();
+
+				if (this.Entities != null)
+					hash = hash * 59 + this.Entities.GetHashCode();
+
+				return hash;
+			}
+		}
+	}
 
 }
