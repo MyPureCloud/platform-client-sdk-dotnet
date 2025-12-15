@@ -6557,7 +6557,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send an inbound Open Message
 		/// </summary>
 		/// <remarks>
-		/// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+		/// [This API is deprecated. Instead, use 1. POST /conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">NormalizedMessage</param>
@@ -6569,7 +6569,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send an inbound Open Message
 		/// </summary>
 		/// <remarks>
-		/// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+		/// [This API is deprecated. Instead, use 1. POST /conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">NormalizedMessage</param>
@@ -6698,10 +6698,10 @@ namespace PureCloudPlatform.Client.V2.Api
 		ApiResponse<TwitterIntegration> PostConversationsMessagingIntegrationsTwitterWithHttpInfo(TwitterIntegrationRequest body);
 
 		/// <summary>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
 		/// </summary>
 		/// <remarks>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">WhatsAppIntegrationRequest</param>
@@ -6710,10 +6710,10 @@ namespace PureCloudPlatform.Client.V2.Api
 		WhatsAppIntegration PostConversationsMessagingIntegrationsWhatsapp(WhatsAppIntegrationRequest body);
 
 		/// <summary>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
 		/// </summary>
 		/// <remarks>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">WhatsAppIntegrationRequest</param>
@@ -14131,7 +14131,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send an inbound Open Message
 		/// </summary>
 		/// <remarks>
-		/// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+		/// [This API is deprecated. Instead, use 1. POST /conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">NormalizedMessage</param>
@@ -14143,7 +14143,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send an inbound Open Message
 		/// </summary>
 		/// <remarks>
-		/// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+		/// [This API is deprecated. Instead, use 1. POST /conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">NormalizedMessage</param>
@@ -14272,10 +14272,10 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<ApiResponse<TwitterIntegration>> PostConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo(TwitterIntegrationRequest body);
 
 		/// <summary>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
 		/// </summary>
 		/// <remarks>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">WhatsAppIntegrationRequest</param>
@@ -14284,10 +14284,10 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<WhatsAppIntegration> PostConversationsMessagingIntegrationsWhatsappAsync(WhatsAppIntegrationRequest body);
 
 		/// <summary>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration
 		/// </summary>
 		/// <remarks>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">WhatsAppIntegrationRequest</param>
@@ -15276,7 +15276,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->DeleteAnalyticsConversationsAggregatesJob");
 
-			var localVarPath = "/api/v2/analytics/conversations/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/conversations/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15378,7 +15378,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->DeleteAnalyticsConversationsAggregatesJob");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/conversations/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15477,7 +15477,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->DeleteAnalyticsConversationsDetailsJob");
 
-			var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}";
+			var localVarPath = "/analytics/conversations/details/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15577,7 +15577,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->DeleteAnalyticsConversationsDetailsJob");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}";
+			var localVarPath = "/analytics/conversations/details/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15676,7 +15676,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->DeleteConversation");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}";
+			var localVarPath = "/conversations/{conversationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15776,7 +15776,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->DeleteConversation");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}";
+			var localVarPath = "/conversations/{conversationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15885,7 +15885,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (addCommunicationCode == null)
 				throw new ApiException(400, "Missing required parameter 'addCommunicationCode' when calling ConversationsApi->DeleteConversationParticipantCode");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode}";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15999,7 +15999,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'addCommunicationCode' when calling ConversationsApi->DeleteConversationParticipantCode");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode}";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/codes/{addCommunicationCode}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16105,7 +16105,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->DeleteConversationParticipantFlaggedreason");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/flaggedreason";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16212,7 +16212,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->DeleteConversationParticipantFlaggedreason");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/flaggedreason";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16317,7 +16317,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->DeleteConversationsCallParticipantConsult");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16424,7 +16424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->DeleteConversationsCallParticipantConsult");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16529,7 +16529,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (attachmentId == null)
 				throw new ApiException(400, "Missing required parameter 'attachmentId' when calling ConversationsApi->DeleteConversationsEmailMessagesDraftAttachment");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId}";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16636,7 +16636,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'attachmentId' when calling ConversationsApi->DeleteConversationsEmailMessagesDraftAttachment");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId}";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/draft/attachments/{attachmentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16736,7 +16736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (cachedMediaItemId == null)
 				throw new ApiException(400, "Missing required parameter 'cachedMediaItemId' when calling ConversationsApi->DeleteConversationsMessagesCachedmediaCachedMediaItemId");
 
-			var localVarPath = "/api/v2/conversations/messages/cachedmedia/{cachedMediaItemId}";
+			var localVarPath = "/conversations/messages/cachedmedia/{cachedMediaItemId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16836,7 +16836,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'cachedMediaItemId' when calling ConversationsApi->DeleteConversationsMessagesCachedmediaCachedMediaItemId");
 
 
-			var localVarPath = "/api/v2/conversations/messages/cachedmedia/{cachedMediaItemId}";
+			var localVarPath = "/conversations/messages/cachedmedia/{cachedMediaItemId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16935,7 +16935,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsAppleIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/apple/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17035,7 +17035,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsAppleIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/apple/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17134,7 +17134,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsFacebookIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/facebook/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/facebook/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17234,7 +17234,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsFacebookIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/facebook/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/facebook/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17333,7 +17333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsInstagramIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/instagram/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/instagram/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17433,7 +17433,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsInstagramIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/instagram/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/instagram/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17532,7 +17532,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsOpenIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/open/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17632,7 +17632,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsOpenIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/open/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17731,7 +17731,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsTwitterIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/twitter/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17831,7 +17831,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsTwitterIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/twitter/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17931,7 +17931,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsWhatsappIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18032,7 +18032,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->DeleteConversationsMessagingIntegrationsWhatsappIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18131,7 +18131,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageSettingId == null)
 				throw new ApiException(400, "Missing required parameter 'messageSettingId' when calling ConversationsApi->DeleteConversationsMessagingSetting");
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/{messageSettingId}";
+			var localVarPath = "/conversations/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18231,7 +18231,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageSettingId' when calling ConversationsApi->DeleteConversationsMessagingSetting");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/{messageSettingId}";
+			var localVarPath = "/conversations/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18325,7 +18325,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteConversationsMessagingSettingsDefaultWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/default";
+			var localVarPath = "/conversations/messaging/settings/default";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18418,7 +18418,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteConversationsMessagingSettingsDefaultAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/default";
+			var localVarPath = "/conversations/messaging/settings/default";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18516,7 +18516,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (supportedContentId == null)
 				throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling ConversationsApi->DeleteConversationsMessagingSupportedcontentSupportedContentId");
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/conversations/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18616,7 +18616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling ConversationsApi->DeleteConversationsMessagingSupportedcontentSupportedContentId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/conversations/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18716,7 +18716,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetAnalyticsConversationDetails");
 
-			var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details";
+			var localVarPath = "/analytics/conversations/{conversationId}/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18817,7 +18817,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetAnalyticsConversationDetails");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details";
+			var localVarPath = "/analytics/conversations/{conversationId}/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18919,7 +18919,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->GetAnalyticsConversationsAggregatesJob");
 
-			var localVarPath = "/api/v2/analytics/conversations/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/conversations/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19022,7 +19022,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->GetAnalyticsConversationsAggregatesJob");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/conversations/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19126,7 +19126,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->GetAnalyticsConversationsAggregatesJobResults");
 
-			var localVarPath = "/api/v2/analytics/conversations/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/analytics/conversations/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19232,7 +19232,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->GetAnalyticsConversationsAggregatesJobResults");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/analytics/conversations/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19330,7 +19330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AnalyticsConversationWithoutAttributesMultiGetResponse> GetAnalyticsConversationsDetailsWithHttpInfo(List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/analytics/conversations/details";
+			var localVarPath = "/analytics/conversations/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19427,7 +19427,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AnalyticsConversationWithoutAttributesMultiGetResponse>> GetAnalyticsConversationsDetailsAsyncWithHttpInfo(List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/analytics/conversations/details";
+			var localVarPath = "/analytics/conversations/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19527,7 +19527,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->GetAnalyticsConversationsDetailsJob");
 
-			var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}";
+			var localVarPath = "/analytics/conversations/details/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19628,7 +19628,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->GetAnalyticsConversationsDetailsJob");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}";
+			var localVarPath = "/analytics/conversations/details/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19732,7 +19732,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->GetAnalyticsConversationsDetailsJobResults");
 
-			var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}/results";
+			var localVarPath = "/analytics/conversations/details/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19839,7 +19839,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ConversationsApi->GetAnalyticsConversationsDetailsJobResults");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/details/jobs/{jobId}/results";
+			var localVarPath = "/analytics/conversations/details/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19936,7 +19936,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DataAvailabilityResponse> GetAnalyticsConversationsDetailsJobsAvailabilityWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/analytics/conversations/details/jobs/availability";
+			var localVarPath = "/analytics/conversations/details/jobs/availability";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20030,7 +20030,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DataAvailabilityResponse>> GetAnalyticsConversationsDetailsJobsAvailabilityAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/analytics/conversations/details/jobs/availability";
+			var localVarPath = "/analytics/conversations/details/jobs/availability";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20129,7 +20129,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversation");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}";
+			var localVarPath = "/conversations/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20230,7 +20230,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversation");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}";
+			var localVarPath = "/conversations/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20340,7 +20340,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationCommunicationInternalmessage");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages/{messageId}";
+			var localVarPath = "/conversations/{conversationId}/communications/{communicationId}/internalmessages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20455,7 +20455,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationCommunicationInternalmessage");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages/{messageId}";
+			var localVarPath = "/conversations/{conversationId}/communications/{communicationId}/internalmessages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20566,7 +20566,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationCommunicationInternalmessages");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages";
+			var localVarPath = "/conversations/{conversationId}/communications/{communicationId}/internalmessages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20680,7 +20680,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationCommunicationInternalmessages");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages";
+			var localVarPath = "/conversations/{conversationId}/communications/{communicationId}/internalmessages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20793,7 +20793,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (secureSessionId == null)
 				throw new ApiException(400, "Missing required parameter 'secureSessionId' when calling ConversationsApi->GetConversationParticipantSecureivrsession");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId}";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20908,7 +20908,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'secureSessionId' when calling ConversationsApi->GetConversationParticipantSecureivrsession");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId}";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/secureivrsessions/{secureSessionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21015,7 +21015,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationParticipantSecureivrsessions");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21123,7 +21123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationParticipantSecureivrsessions");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21231,7 +21231,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationParticipantWrapup");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21342,7 +21342,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationParticipantWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21449,7 +21449,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationParticipantWrapupcodes");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21557,7 +21557,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationParticipantWrapupcodes");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21658,7 +21658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationSecureattributes");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+			var localVarPath = "/conversations/{conversationId}/secureattributes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21759,7 +21759,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationSecureattributes");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+			var localVarPath = "/conversations/{conversationId}/secureattributes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21864,7 +21864,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (suggestionId == null)
 				throw new ApiException(400, "Missing required parameter 'suggestionId' when calling ConversationsApi->GetConversationSuggestion");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/suggestions/{suggestionId}";
+			var localVarPath = "/conversations/{conversationId}/suggestions/{suggestionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21972,7 +21972,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'suggestionId' when calling ConversationsApi->GetConversationSuggestion");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/suggestions/{suggestionId}";
+			var localVarPath = "/conversations/{conversationId}/suggestions/{suggestionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22083,7 +22083,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationSuggestions");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/suggestions";
+			var localVarPath = "/conversations/{conversationId}/suggestions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22199,7 +22199,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationSuggestions");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/suggestions";
+			var localVarPath = "/conversations/{conversationId}/suggestions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22304,7 +22304,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationSummaries");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/summaries";
+			var localVarPath = "/conversations/{conversationId}/summaries";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22405,7 +22405,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationSummaries");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/summaries";
+			var localVarPath = "/conversations/{conversationId}/summaries";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22502,7 +22502,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ConversationEntityListing> GetConversationsWithHttpInfo(string communicationType = null)
 		{
 
-			var localVarPath = "/api/v2/conversations";
+			var localVarPath = "/conversations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22599,7 +22599,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ConversationEntityListing>> GetConversationsAsyncWithHttpInfo(string communicationType = null)
 		{
 
-			var localVarPath = "/api/v2/conversations";
+			var localVarPath = "/conversations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22699,7 +22699,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsCall");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}";
+			var localVarPath = "/conversations/calls/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22800,7 +22800,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsCall");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}";
+			var localVarPath = "/conversations/calls/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22912,7 +22912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsCallParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23030,7 +23030,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsCallParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23140,7 +23140,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCallParticipantWrapup");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23251,7 +23251,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCallParticipantWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23358,7 +23358,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCallParticipantWrapupcodes");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23466,7 +23466,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCallParticipantWrapupcodes");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23567,7 +23567,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsCallback");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}";
+			var localVarPath = "/conversations/callbacks/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23668,7 +23668,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsCallback");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}";
+			var localVarPath = "/conversations/callbacks/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23780,7 +23780,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsCallbackParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23898,7 +23898,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsCallbackParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24008,7 +24008,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCallbackParticipantWrapup");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24119,7 +24119,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCallbackParticipantWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24226,7 +24226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCallbackParticipantWrapupcodes");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24334,7 +24334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCallbackParticipantWrapupcodes");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24430,7 +24430,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CallbackConversationEntityListing> GetConversationsCallbacksWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/callbacks";
+			var localVarPath = "/conversations/callbacks";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24524,7 +24524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CallbackConversationEntityListing>> GetConversationsCallbacksAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/callbacks";
+			var localVarPath = "/conversations/callbacks";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24618,7 +24618,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CallConversationEntityListing> GetConversationsCallsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/calls";
+			var localVarPath = "/conversations/calls";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24712,7 +24712,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CallConversationEntityListing>> GetConversationsCallsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/calls";
+			var localVarPath = "/conversations/calls";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24814,7 +24814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CallHistoryConversationEntityListing> GetConversationsCallsHistoryWithHttpInfo(int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/calls/history";
+			var localVarPath = "/conversations/calls/history";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24920,7 +24920,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CallHistoryConversationEntityListing>> GetConversationsCallsHistoryAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string interval = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/calls/history";
+			var localVarPath = "/conversations/calls/history";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25018,7 +25018,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MaxParticipants> GetConversationsCallsMaximumconferencepartiesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/calls/maximumconferenceparties";
+			var localVarPath = "/conversations/calls/maximumconferenceparties";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25112,7 +25112,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MaxParticipants>> GetConversationsCallsMaximumconferencepartiesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/calls/maximumconferenceparties";
+			var localVarPath = "/conversations/calls/maximumconferenceparties";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25211,7 +25211,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsChat");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}";
+			var localVarPath = "/conversations/chats/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25312,7 +25312,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsChat");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}";
+			var localVarPath = "/conversations/chats/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25417,7 +25417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationsChatMessage");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/messages/{messageId}";
+			var localVarPath = "/conversations/chats/{conversationId}/messages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25525,7 +25525,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationsChatMessage");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/messages/{messageId}";
+			var localVarPath = "/conversations/chats/{conversationId}/messages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25634,7 +25634,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsChatMessages");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/messages";
+			var localVarPath = "/conversations/chats/{conversationId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25747,7 +25747,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsChatMessages");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/messages";
+			var localVarPath = "/conversations/chats/{conversationId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25863,7 +25863,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsChatParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25981,7 +25981,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsChatParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26091,7 +26091,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsChatParticipantWrapup");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26202,7 +26202,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsChatParticipantWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26309,7 +26309,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsChatParticipantWrapupcodes");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26417,7 +26417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsChatParticipantWrapupcodes");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26513,7 +26513,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ChatConversationEntityListing> GetConversationsChatsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/chats";
+			var localVarPath = "/conversations/chats";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26607,7 +26607,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ChatConversationEntityListing>> GetConversationsChatsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/chats";
+			var localVarPath = "/conversations/chats";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26706,7 +26706,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsCobrowsesession");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26807,7 +26807,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsCobrowsesession");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26919,7 +26919,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsCobrowsesessionParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27037,7 +27037,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsCobrowsesessionParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27147,7 +27147,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCobrowsesessionParticipantWrapup");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27258,7 +27258,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCobrowsesessionParticipantWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27365,7 +27365,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCobrowsesessionParticipantWrapupcodes");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27473,7 +27473,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsCobrowsesessionParticipantWrapupcodes");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27569,7 +27569,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CobrowseConversationEntityListing> GetConversationsCobrowsesessionsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions";
+			var localVarPath = "/conversations/cobrowsesessions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27663,7 +27663,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CobrowseConversationEntityListing>> GetConversationsCobrowsesessionsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions";
+			var localVarPath = "/conversations/cobrowsesessions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27762,7 +27762,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsEmail");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}";
+			var localVarPath = "/conversations/emails/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27863,7 +27863,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsEmail");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}";
+			var localVarPath = "/conversations/emails/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27968,7 +27968,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationsEmailMessage");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/{messageId}";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28076,7 +28076,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationsEmailMessage");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/{messageId}";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28177,7 +28177,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsEmailMessages");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages";
+			var localVarPath = "/conversations/emails/{conversationId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28278,7 +28278,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsEmailMessages");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages";
+			var localVarPath = "/conversations/emails/{conversationId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28378,7 +28378,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsEmailMessagesDraft");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/draft";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28479,7 +28479,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsEmailMessagesDraft");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/draft";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28591,7 +28591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsEmailParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28709,7 +28709,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsEmailParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28819,7 +28819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsEmailParticipantWrapup");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28930,7 +28930,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsEmailParticipantWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29037,7 +29037,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsEmailParticipantWrapupcodes");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29145,7 +29145,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsEmailParticipantWrapupcodes");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29246,7 +29246,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsEmailSettings");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/settings";
+			var localVarPath = "/conversations/emails/{conversationId}/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29347,7 +29347,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsEmailSettings");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/settings";
+			var localVarPath = "/conversations/emails/{conversationId}/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29442,7 +29442,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmailConversationEntityListing> GetConversationsEmailsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/emails";
+			var localVarPath = "/conversations/emails";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29536,7 +29536,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmailConversationEntityListing>> GetConversationsEmailsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/emails";
+			var localVarPath = "/conversations/emails";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29635,7 +29635,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsInternalmessage");
 
-			var localVarPath = "/api/v2/conversations/internalmessages/{conversationId}";
+			var localVarPath = "/conversations/internalmessages/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29736,7 +29736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsInternalmessage");
 
 
-			var localVarPath = "/api/v2/conversations/internalmessages/{conversationId}";
+			var localVarPath = "/conversations/internalmessages/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29831,7 +29831,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<InternalMessageConversationEntityListing> GetConversationsInternalmessagesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/internalmessages";
+			var localVarPath = "/conversations/internalmessages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29925,7 +29925,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<InternalMessageConversationEntityListing>> GetConversationsInternalmessagesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/internalmessages";
+			var localVarPath = "/conversations/internalmessages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30024,7 +30024,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (keyconfigurationsId == null)
 				throw new ApiException(400, "Missing required parameter 'keyconfigurationsId' when calling ConversationsApi->GetConversationsKeyconfiguration");
 
-			var localVarPath = "/api/v2/conversations/keyconfigurations/{keyconfigurationsId}";
+			var localVarPath = "/conversations/keyconfigurations/{keyconfigurationsId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30125,7 +30125,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'keyconfigurationsId' when calling ConversationsApi->GetConversationsKeyconfiguration");
 
 
-			var localVarPath = "/api/v2/conversations/keyconfigurations/{keyconfigurationsId}";
+			var localVarPath = "/conversations/keyconfigurations/{keyconfigurationsId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30220,7 +30220,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ConversationEncryptionConfigurationListing> GetConversationsKeyconfigurationsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/keyconfigurations";
+			var localVarPath = "/conversations/keyconfigurations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30314,7 +30314,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ConversationEncryptionConfigurationListing>> GetConversationsKeyconfigurationsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/keyconfigurations";
+			var localVarPath = "/conversations/keyconfigurations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30413,7 +30413,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsMessage");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}";
+			var localVarPath = "/conversations/messages/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30514,7 +30514,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->GetConversationsMessage");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}";
+			var localVarPath = "/conversations/messages/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30625,7 +30625,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsMessageCommunicationMessagesMedia");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/messages/media";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30742,7 +30742,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsMessageCommunicationMessagesMedia");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/messages/media";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30856,7 +30856,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (mediaId == null)
 				throw new ApiException(400, "Missing required parameter 'mediaId' when calling ConversationsApi->GetConversationsMessageCommunicationMessagesMediaMediaId");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId}";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30971,7 +30971,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'mediaId' when calling ConversationsApi->GetConversationsMessageCommunicationMessagesMediaMediaId");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId}";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/{mediaId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31075,7 +31075,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationsMessageDetails");
 
-			var localVarPath = "/api/v2/conversations/messages/{messageId}/details";
+			var localVarPath = "/conversations/messages/{messageId}/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31179,7 +31179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationsMessageDetails");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{messageId}/details";
+			var localVarPath = "/conversations/messages/{messageId}/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31287,7 +31287,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationsMessageMessage");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/messages/{messageId}";
+			var localVarPath = "/conversations/messages/{conversationId}/messages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31398,7 +31398,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ConversationsApi->GetConversationsMessageMessage");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/messages/{messageId}";
+			var localVarPath = "/conversations/messages/{conversationId}/messages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31512,7 +31512,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsMessageParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31630,7 +31630,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsMessageParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31740,7 +31740,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsMessageParticipantWrapup");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31851,7 +31851,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsMessageParticipantWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapup";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31958,7 +31958,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsMessageParticipantWrapupcodes");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32066,7 +32066,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->GetConversationsMessageParticipantWrapupcodes");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/wrapupcodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32162,7 +32162,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MessageConversationEntityListing> GetConversationsMessagesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messages";
+			var localVarPath = "/conversations/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32256,7 +32256,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MessageConversationEntityListing>> GetConversationsMessagesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messages";
+			var localVarPath = "/conversations/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32356,7 +32356,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CachedMediaItemEntityListing> GetConversationsMessagesCachedmediaWithHttpInfo(int? pageSize = null, int? pageNumber = null, string url = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messages/cachedmedia";
+			var localVarPath = "/conversations/messages/cachedmedia";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32459,7 +32459,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CachedMediaItemEntityListing>> GetConversationsMessagesCachedmediaAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string url = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messages/cachedmedia";
+			var localVarPath = "/conversations/messages/cachedmedia";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32561,7 +32561,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (cachedMediaItemId == null)
 				throw new ApiException(400, "Missing required parameter 'cachedMediaItemId' when calling ConversationsApi->GetConversationsMessagesCachedmediaCachedMediaItemId");
 
-			var localVarPath = "/api/v2/conversations/messages/cachedmedia/{cachedMediaItemId}";
+			var localVarPath = "/conversations/messages/cachedmedia/{cachedMediaItemId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32662,7 +32662,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'cachedMediaItemId' when calling ConversationsApi->GetConversationsMessagesCachedmediaCachedMediaItemId");
 
 
-			var localVarPath = "/api/v2/conversations/messages/cachedmedia/{cachedMediaItemId}";
+			var localVarPath = "/conversations/messages/cachedmedia/{cachedMediaItemId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32757,7 +32757,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FacebookAppCredentials> GetConversationsMessagingFacebookAppWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/facebook/app";
+			var localVarPath = "/conversations/messaging/facebook/app";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32851,7 +32851,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FacebookAppCredentials>> GetConversationsMessagingFacebookAppAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/facebook/app";
+			var localVarPath = "/conversations/messaging/facebook/app";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32945,7 +32945,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FacebookPermissionEntityListing> GetConversationsMessagingFacebookPermissionsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/facebook/permissions";
+			var localVarPath = "/conversations/messaging/facebook/permissions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33039,7 +33039,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FacebookPermissionEntityListing>> GetConversationsMessagingFacebookPermissionsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/facebook/permissions";
+			var localVarPath = "/conversations/messaging/facebook/permissions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33138,7 +33138,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/apple/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/apple/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33239,7 +33239,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/apple/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/apple/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33339,7 +33339,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/facebook/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/facebook/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33440,7 +33440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/facebook/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/facebook/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33540,7 +33540,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/instagram/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/instagram/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33641,7 +33641,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/instagram/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/instagram/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33741,7 +33741,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/open/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/open/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33842,7 +33842,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/open/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/open/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33942,7 +33942,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/twitter/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/twitter/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34043,7 +34043,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/twitter/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/twitter/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34143,7 +34143,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34244,7 +34244,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34344,7 +34344,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationTwitterOauthSettings");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/{integrationId}/twitter/oauth/settings";
+			var localVarPath = "/conversations/messaging/integrations/{integrationId}/twitter/oauth/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34445,7 +34445,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationTwitterOauthSettings");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/{integrationId}/twitter/oauth/settings";
+			var localVarPath = "/conversations/messaging/integrations/{integrationId}/twitter/oauth/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34550,7 +34550,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MessagingIntegrationEntityListing> GetConversationsMessagingIntegrationsWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations";
+			var localVarPath = "/conversations/messaging/integrations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34659,7 +34659,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MessagingIntegrationEntityListing>> GetConversationsMessagingIntegrationsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations";
+			var localVarPath = "/conversations/messaging/integrations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34768,7 +34768,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AppleIntegrationEntityListing> GetConversationsMessagingIntegrationsAppleWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/apple";
+			var localVarPath = "/conversations/messaging/integrations/apple";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34877,7 +34877,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AppleIntegrationEntityListing>> GetConversationsMessagingIntegrationsAppleAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/apple";
+			var localVarPath = "/conversations/messaging/integrations/apple";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34983,7 +34983,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsAppleIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/apple/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35087,7 +35087,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsAppleIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/apple/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35193,7 +35193,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FacebookIntegrationEntityListing> GetConversationsMessagingIntegrationsFacebookWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/facebook";
+			var localVarPath = "/conversations/messaging/integrations/facebook";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35302,7 +35302,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FacebookIntegrationEntityListing>> GetConversationsMessagingIntegrationsFacebookAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/facebook";
+			var localVarPath = "/conversations/messaging/integrations/facebook";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35408,7 +35408,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsFacebookIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/facebook/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/facebook/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35512,7 +35512,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsFacebookIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/facebook/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/facebook/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35618,7 +35618,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<InstagramIntegrationEntityListing> GetConversationsMessagingIntegrationsInstagramWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/instagram";
+			var localVarPath = "/conversations/messaging/integrations/instagram";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35727,7 +35727,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<InstagramIntegrationEntityListing>> GetConversationsMessagingIntegrationsInstagramAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/instagram";
+			var localVarPath = "/conversations/messaging/integrations/instagram";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35833,7 +35833,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsInstagramIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/instagram/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/instagram/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35937,7 +35937,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsInstagramIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/instagram/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/instagram/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36043,7 +36043,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OpenIntegrationEntityListing> GetConversationsMessagingIntegrationsOpenWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/open";
+			var localVarPath = "/conversations/messaging/integrations/open";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36152,7 +36152,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OpenIntegrationEntityListing>> GetConversationsMessagingIntegrationsOpenAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/open";
+			var localVarPath = "/conversations/messaging/integrations/open";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36258,7 +36258,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsOpenIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/open/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36362,7 +36362,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsOpenIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/open/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36468,7 +36468,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TwitterIntegrationEntityListing> GetConversationsMessagingIntegrationsTwitterWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter";
+			var localVarPath = "/conversations/messaging/integrations/twitter";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36577,7 +36577,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TwitterIntegrationEntityListing>> GetConversationsMessagingIntegrationsTwitterAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter";
+			var localVarPath = "/conversations/messaging/integrations/twitter";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36683,7 +36683,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsTwitterIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/twitter/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36787,7 +36787,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsTwitterIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/twitter/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36883,7 +36883,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TwitterSignupOAuthSettings> GetConversationsMessagingIntegrationsTwitterOauthSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/oauth/settings";
+			var localVarPath = "/conversations/messaging/integrations/twitter/oauth/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36977,7 +36977,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TwitterSignupOAuthSettings>> GetConversationsMessagingIntegrationsTwitterOauthSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/oauth/settings";
+			var localVarPath = "/conversations/messaging/integrations/twitter/oauth/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37081,7 +37081,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<WhatsAppIntegrationEntityListing> GetConversationsMessagingIntegrationsWhatsappWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37190,7 +37190,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<WhatsAppIntegrationEntityListing>> GetConversationsMessagingIntegrationsWhatsappAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string supportedContentId = null, string messagingSettingId = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37296,7 +37296,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsWhatsappIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37400,7 +37400,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling ConversationsApi->GetConversationsMessagingIntegrationsWhatsappIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37508,7 +37508,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (state == null)
 				throw new ApiException(400, "Missing required parameter 'state' when calling ConversationsApi->GetConversationsMessagingOauthAppleCallback");
 
-			var localVarPath = "/api/v2/conversations/messaging/oauth/apple/callback";
+			var localVarPath = "/conversations/messaging/oauth/apple/callback";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37612,7 +37612,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'state' when calling ConversationsApi->GetConversationsMessagingOauthAppleCallback");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/oauth/apple/callback";
+			var localVarPath = "/conversations/messaging/oauth/apple/callback";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37707,7 +37707,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageSettingId == null)
 				throw new ApiException(400, "Missing required parameter 'messageSettingId' when calling ConversationsApi->GetConversationsMessagingSetting");
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/{messageSettingId}";
+			var localVarPath = "/conversations/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37808,7 +37808,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageSettingId' when calling ConversationsApi->GetConversationsMessagingSetting");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/{messageSettingId}";
+			var localVarPath = "/conversations/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37907,7 +37907,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MessagingConfigListing> GetConversationsMessagingSettingsWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/settings";
+			var localVarPath = "/conversations/messaging/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38007,7 +38007,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MessagingConfigListing>> GetConversationsMessagingSettingsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/settings";
+			var localVarPath = "/conversations/messaging/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38103,7 +38103,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MessagingSetting> GetConversationsMessagingSettingsDefaultWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/default";
+			var localVarPath = "/conversations/messaging/settings/default";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38197,7 +38197,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MessagingSetting>> GetConversationsMessagingSettingsDefaultAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/default";
+			var localVarPath = "/conversations/messaging/settings/default";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38295,7 +38295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SupportedContentListing> GetConversationsMessagingSupportedcontentWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent";
+			var localVarPath = "/conversations/messaging/supportedcontent";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38395,7 +38395,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SupportedContentListing>> GetConversationsMessagingSupportedcontentAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent";
+			var localVarPath = "/conversations/messaging/supportedcontent";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38491,7 +38491,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SupportedContent> GetConversationsMessagingSupportedcontentDefaultWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent/default";
+			var localVarPath = "/conversations/messaging/supportedcontent/default";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38585,7 +38585,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SupportedContent>> GetConversationsMessagingSupportedcontentDefaultAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent/default";
+			var localVarPath = "/conversations/messaging/supportedcontent/default";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38684,7 +38684,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (supportedContentId == null)
 				throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling ConversationsApi->GetConversationsMessagingSupportedcontentSupportedContentId");
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/conversations/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38785,7 +38785,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling ConversationsApi->GetConversationsMessagingSupportedcontentSupportedContentId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/conversations/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38880,7 +38880,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ConversationThreadingWindow> GetConversationsMessagingThreadingtimelineWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/threadingtimeline";
+			var localVarPath = "/conversations/messaging/threadingtimeline";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38974,7 +38974,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ConversationThreadingWindow>> GetConversationsMessagingThreadingtimelineAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/messaging/threadingtimeline";
+			var localVarPath = "/conversations/messaging/threadingtimeline";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39085,7 +39085,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsScreenshareParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39203,7 +39203,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsScreenshareParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39301,7 +39301,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Settings> GetConversationsSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/settings";
+			var localVarPath = "/conversations/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39395,7 +39395,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Settings>> GetConversationsSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/conversations/settings";
+			var localVarPath = "/conversations/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39506,7 +39506,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsSocialParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39624,7 +39624,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsSocialParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39729,7 +39729,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conferenceId == null)
 				throw new ApiException(400, "Missing required parameter 'conferenceId' when calling ConversationsApi->GetConversationsVideoDetails");
 
-			var localVarPath = "/api/v2/conversations/videos/{conferenceId}/details";
+			var localVarPath = "/conversations/videos/{conferenceId}/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39832,7 +39832,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conferenceId' when calling ConversationsApi->GetConversationsVideoDetails");
 
 
-			var localVarPath = "/api/v2/conversations/videos/{conferenceId}/details";
+			var localVarPath = "/conversations/videos/{conferenceId}/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39944,7 +39944,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsVideoParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40062,7 +40062,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->GetConversationsVideoParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40165,7 +40165,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (meetingId == null)
 				throw new ApiException(400, "Missing required parameter 'meetingId' when calling ConversationsApi->GetConversationsVideosMeeting");
 
-			var localVarPath = "/api/v2/conversations/videos/meetings/{meetingId}";
+			var localVarPath = "/conversations/videos/meetings/{meetingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40266,7 +40266,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'meetingId' when calling ConversationsApi->GetConversationsVideosMeeting");
 
 
-			var localVarPath = "/api/v2/conversations/videos/meetings/{meetingId}";
+			var localVarPath = "/conversations/videos/meetings/{meetingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40375,7 +40375,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationParticipant");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40494,7 +40494,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationParticipant");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40610,7 +40610,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationParticipantAttributes");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40729,7 +40729,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationParticipantAttributes");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40840,7 +40840,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationRecordingstate");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40952,7 +40952,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationRecordingstate");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41063,7 +41063,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationSecureattributes");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+			var localVarPath = "/conversations/{conversationId}/secureattributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41176,7 +41176,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationSecureattributes");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+			var localVarPath = "/conversations/{conversationId}/secureattributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41288,7 +41288,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (summaryId == null)
 				throw new ApiException(400, "Missing required parameter 'summaryId' when calling ConversationsApi->PatchConversationSummaryEngagements");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/summaries/{summaryId}/engagements";
+			var localVarPath = "/conversations/{conversationId}/summaries/{summaryId}/engagements";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41403,7 +41403,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'summaryId' when calling ConversationsApi->PatchConversationSummaryEngagements");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/summaries/{summaryId}/engagements";
+			var localVarPath = "/conversations/{conversationId}/summaries/{summaryId}/engagements";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41516,7 +41516,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (summaryId == null)
 				throw new ApiException(400, "Missing required parameter 'summaryId' when calling ConversationsApi->PatchConversationSummaryFeedback");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback";
+			var localVarPath = "/conversations/{conversationId}/summaries/{summaryId}/feedback";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41631,7 +41631,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'summaryId' when calling ConversationsApi->PatchConversationSummaryFeedback");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback";
+			var localVarPath = "/conversations/{conversationId}/summaries/{summaryId}/feedback";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41743,7 +41743,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationUtilizationlabel");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/utilizationlabel";
+			var localVarPath = "/conversations/{conversationId}/utilizationlabel";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41856,7 +41856,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationUtilizationlabel");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/utilizationlabel";
+			var localVarPath = "/conversations/{conversationId}/utilizationlabel";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41977,7 +41977,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsAftercallworkConversationIdParticipantCommunication");
 
-			var localVarPath = "/api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42104,7 +42104,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsAftercallworkConversationIdParticipantCommunication");
 
 
-			var localVarPath = "/api/v2/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/aftercallwork/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42217,7 +42217,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCall");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}";
+			var localVarPath = "/conversations/calls/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42330,7 +42330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCall");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}";
+			var localVarPath = "/conversations/calls/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42440,7 +42440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallConference");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/conference";
+			var localVarPath = "/conversations/calls/{conversationId}/conference";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42552,7 +42552,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallConference");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/conference";
+			var localVarPath = "/conversations/calls/{conversationId}/conference";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42667,7 +42667,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipant");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42786,7 +42786,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipant");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42903,7 +42903,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipantAttributes");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43023,7 +43023,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipantAttributes");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43145,7 +43145,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipantCommunication");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43272,7 +43272,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipantCommunication");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43390,7 +43390,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipantConsult");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43510,7 +43510,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipantConsult");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43631,7 +43631,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipantUserUserId");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/user/{userId}";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/user/{userId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43757,7 +43757,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallParticipantUserUserId");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/user/{userId}";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/user/{userId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43870,7 +43870,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallback");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}";
+			var localVarPath = "/conversations/callbacks/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43983,7 +43983,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallback");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}";
+			var localVarPath = "/conversations/callbacks/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44098,7 +44098,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallbackParticipant");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44217,7 +44217,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallbackParticipant");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44334,7 +44334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallbackParticipantAttributes");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44454,7 +44454,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallbackParticipantAttributes");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44576,7 +44576,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallbackParticipantCommunication");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44703,7 +44703,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallbackParticipantCommunication");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44811,7 +44811,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallbacks");
 
-			var localVarPath = "/api/v2/conversations/callbacks";
+			var localVarPath = "/conversations/callbacks";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44917,7 +44917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCallbacks");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks";
+			var localVarPath = "/conversations/callbacks";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45027,7 +45027,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsChat");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}";
+			var localVarPath = "/conversations/chats/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45140,7 +45140,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsChat");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}";
+			var localVarPath = "/conversations/chats/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45255,7 +45255,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsChatParticipant");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45374,7 +45374,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsChatParticipant");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45491,7 +45491,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsChatParticipantAttributes");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45611,7 +45611,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsChatParticipantAttributes");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45733,7 +45733,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsChatParticipantCommunication");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45860,7 +45860,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsChatParticipantCommunication");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45973,7 +45973,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCobrowsesession");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46086,7 +46086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCobrowsesession");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46198,7 +46198,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsCobrowsesessionParticipant");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46313,7 +46313,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsCobrowsesessionParticipant");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46427,7 +46427,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsCobrowsesessionParticipantAttributes");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46543,7 +46543,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsCobrowsesessionParticipantAttributes");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46665,7 +46665,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCobrowsesessionParticipantCommunication");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46792,7 +46792,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsCobrowsesessionParticipantCommunication");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46905,7 +46905,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsEmail");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}";
+			var localVarPath = "/conversations/emails/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47018,7 +47018,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsEmail");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}";
+			var localVarPath = "/conversations/emails/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47130,7 +47130,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationsEmailMessagesDraft");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/draft";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47245,7 +47245,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PatchConversationsEmailMessagesDraft");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/draft";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47362,7 +47362,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsEmailParticipant");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47481,7 +47481,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsEmailParticipant");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47598,7 +47598,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsEmailParticipantAttributes");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47718,7 +47718,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsEmailParticipantAttributes");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47840,7 +47840,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsEmailParticipantCommunication");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47967,7 +47967,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsEmailParticipantCommunication");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48084,7 +48084,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsEmailParticipantParkingstate");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/parkingstate";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/parkingstate";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48203,7 +48203,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsEmailParticipantParkingstate");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/parkingstate";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/parkingstate";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48315,7 +48315,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessage");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}";
+			var localVarPath = "/conversations/messages/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48428,7 +48428,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessage");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}";
+			var localVarPath = "/conversations/messages/{conversationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48540,7 +48540,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsMessageParticipant");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48655,7 +48655,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsMessageParticipant");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48769,7 +48769,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsMessageParticipantAttributes");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48885,7 +48885,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PatchConversationsMessageParticipantAttributes");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/attributes";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49007,7 +49007,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessageParticipantCommunication");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49134,7 +49134,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessageParticipantCommunication");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49247,7 +49247,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsAppleIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/apple/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49360,7 +49360,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsAppleIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/apple/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/apple/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49471,7 +49471,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsFacebookIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/facebook/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/facebook/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49584,7 +49584,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsFacebookIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/facebook/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/facebook/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49695,7 +49695,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsInstagramIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/instagram/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/instagram/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49808,7 +49808,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsInstagramIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/instagram/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/instagram/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49919,7 +49919,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsOpenIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/open/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50032,7 +50032,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsOpenIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/open/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/open/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50143,7 +50143,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsTwitterIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/twitter/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50256,7 +50256,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsTwitterIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/twitter/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50367,7 +50367,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp/embeddedsignup/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50480,7 +50480,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp/embeddedsignup/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50591,7 +50591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsWhatsappIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50704,7 +50704,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingIntegrationsWhatsappIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/{integrationId}";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50815,7 +50815,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingSetting");
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/{messageSettingId}";
+			var localVarPath = "/conversations/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50928,7 +50928,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingSetting");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/{messageSettingId}";
+			var localVarPath = "/conversations/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51039,7 +51039,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingSupportedcontentSupportedContentId");
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/conversations/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51152,7 +51152,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsMessagingSupportedcontentSupportedContentId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/conversations/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51257,7 +51257,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsSettings");
 
-			var localVarPath = "/api/v2/conversations/settings";
+			var localVarPath = "/conversations/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51362,7 +51362,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PatchConversationsSettings");
 
 
-			var localVarPath = "/api/v2/conversations/settings";
+			var localVarPath = "/conversations/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51472,7 +51472,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationDetailsProperties");
 
-			var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details/properties";
+			var localVarPath = "/analytics/conversations/{conversationId}/details/properties";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51585,7 +51585,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationDetailsProperties");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/{conversationId}/details/properties";
+			var localVarPath = "/analytics/conversations/{conversationId}/details/properties";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51695,7 +51695,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationsActivityQuery");
 
-			var localVarPath = "/api/v2/analytics/conversations/activity/query";
+			var localVarPath = "/analytics/conversations/activity/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51807,7 +51807,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationsActivityQuery");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/activity/query";
+			var localVarPath = "/analytics/conversations/activity/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51916,7 +51916,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationsAggregatesJobs");
 
-			var localVarPath = "/api/v2/analytics/conversations/aggregates/jobs";
+			var localVarPath = "/analytics/conversations/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52024,7 +52024,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationsAggregatesJobs");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/aggregates/jobs";
+			var localVarPath = "/analytics/conversations/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52129,7 +52129,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationsAggregatesQuery");
 
-			var localVarPath = "/api/v2/analytics/conversations/aggregates/query";
+			var localVarPath = "/analytics/conversations/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52235,7 +52235,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationsAggregatesQuery");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/aggregates/query";
+			var localVarPath = "/analytics/conversations/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52340,7 +52340,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationsDetailsJobs");
 
-			var localVarPath = "/api/v2/analytics/conversations/details/jobs";
+			var localVarPath = "/analytics/conversations/details/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52446,7 +52446,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationsDetailsJobs");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/details/jobs";
+			var localVarPath = "/analytics/conversations/details/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52551,7 +52551,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationsDetailsQuery");
 
-			var localVarPath = "/api/v2/analytics/conversations/details/query";
+			var localVarPath = "/analytics/conversations/details/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52657,7 +52657,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostAnalyticsConversationsDetailsQuery");
 
 
-			var localVarPath = "/api/v2/analytics/conversations/details/query";
+			var localVarPath = "/analytics/conversations/details/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52767,7 +52767,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationAssign");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/assign";
+			var localVarPath = "/conversations/{conversationId}/assign";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52880,7 +52880,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationAssign");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/assign";
+			var localVarPath = "/conversations/{conversationId}/assign";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52985,7 +52985,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationBarge");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/barge";
+			var localVarPath = "/conversations/{conversationId}/barge";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53085,7 +53085,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationBarge");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/barge";
+			var localVarPath = "/conversations/{conversationId}/barge";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53185,7 +53185,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationCobrowse");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/cobrowse";
+			var localVarPath = "/conversations/{conversationId}/cobrowse";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53286,7 +53286,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationCobrowse");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/cobrowse";
+			var localVarPath = "/conversations/{conversationId}/cobrowse";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53396,7 +53396,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationCommunicationInternalmessages");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages";
+			var localVarPath = "/conversations/{conversationId}/communications/{communicationId}/internalmessages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53516,7 +53516,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationCommunicationInternalmessages");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/communications/{communicationId}/internalmessages";
+			var localVarPath = "/conversations/{conversationId}/communications/{communicationId}/internalmessages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53623,7 +53623,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationDisconnect");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/disconnect";
+			var localVarPath = "/conversations/{conversationId}/disconnect";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53724,7 +53724,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationDisconnect");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/disconnect";
+			var localVarPath = "/conversations/{conversationId}/disconnect";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53830,7 +53830,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationParticipantCallbacks");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/callbacks";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/callbacks";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53945,7 +53945,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationParticipantCallbacks");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/callbacks";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/callbacks";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54058,7 +54058,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationParticipantDigits");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/digits";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/digits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54173,7 +54173,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationParticipantDigits");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/digits";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/digits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54290,7 +54290,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantInternalmessagesUsersCommunications");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/internalmessages/users/communications";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/internalmessages/users/communications";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54410,7 +54410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantInternalmessagesUsersCommunications");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/internalmessages/users/communications";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/internalmessages/users/communications";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54526,7 +54526,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantReplace");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54645,7 +54645,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantReplace");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54761,7 +54761,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantReplaceAgent");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/replace/agent";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54880,7 +54880,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantReplaceAgent");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace/agent";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/replace/agent";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54998,7 +54998,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantReplaceContactExternal");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace/contact/external";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/replace/contact/external";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55119,7 +55119,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantReplaceContactExternal");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace/contact/external";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/replace/contact/external";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55235,7 +55235,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantReplaceExternal");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace/external";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/replace/external";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55354,7 +55354,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantReplaceExternal");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace/external";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/replace/external";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55470,7 +55470,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantReplaceQueue");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/replace/queue";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55589,7 +55589,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantReplaceQueue");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/replace/queue";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/replace/queue";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55703,7 +55703,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationParticipantSecureivrsessions");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55819,7 +55819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationParticipantSecureivrsessions");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/secureivrsessions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55937,7 +55937,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantTransfer");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/transfer";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/transfer";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56058,7 +56058,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationParticipantTransfer");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/transfer";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/transfer";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56175,7 +56175,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationSuggestionEngagement");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/suggestions/{suggestionId}/engagement";
+			var localVarPath = "/conversations/{conversationId}/suggestions/{suggestionId}/engagement";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56295,7 +56295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationSuggestionEngagement");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/suggestions/{suggestionId}/engagement";
+			var localVarPath = "/conversations/{conversationId}/suggestions/{suggestionId}/engagement";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56406,7 +56406,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationSuggestionsFeedback");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/suggestions/feedback";
+			var localVarPath = "/conversations/{conversationId}/suggestions/feedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56518,7 +56518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationSuggestionsFeedback");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/suggestions/feedback";
+			var localVarPath = "/conversations/{conversationId}/suggestions/feedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56630,7 +56630,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (summaryId == null)
 				throw new ApiException(400, "Missing required parameter 'summaryId' when calling ConversationsApi->PostConversationSummaryFeedback");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback";
+			var localVarPath = "/conversations/{conversationId}/summaries/{summaryId}/feedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56745,7 +56745,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'summaryId' when calling ConversationsApi->PostConversationSummaryFeedback");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/summaries/{summaryId}/feedback";
+			var localVarPath = "/conversations/{conversationId}/summaries/{summaryId}/feedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56857,7 +56857,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCall");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}";
+			var localVarPath = "/conversations/calls/{conversationId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56970,7 +56970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCall");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}";
+			var localVarPath = "/conversations/calls/{conversationId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57080,7 +57080,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsCallParticipantBarge");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/barge";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/barge";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57187,7 +57187,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsCallParticipantBarge");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/barge";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/barge";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57292,7 +57292,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsCallParticipantCoach");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/coach";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57399,7 +57399,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsCallParticipantCoach");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/coach";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/coach";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57511,7 +57511,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsCallParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57633,7 +57633,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsCallParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57751,7 +57751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantConsult");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57871,7 +57871,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantConsult");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57988,7 +57988,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantConsultAgent");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult/agent";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58108,7 +58108,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantConsultAgent");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/agent";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult/agent";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58227,7 +58227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantConsultContactExternal");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/contact/external";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult/contact/external";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58349,7 +58349,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantConsultContactExternal");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/contact/external";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult/contact/external";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58466,7 +58466,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantConsultExternal");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult/external";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58586,7 +58586,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantConsultExternal");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/external";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult/external";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58703,7 +58703,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantConsultQueue");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult/queue";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58823,7 +58823,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantConsultQueue");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/consult/queue";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58934,7 +58934,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsCallParticipantMonitor");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/monitor";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59041,7 +59041,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsCallParticipantMonitor");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/monitor";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59151,7 +59151,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantReplace");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59270,7 +59270,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantReplace");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59389,7 +59389,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantVoiceConsult");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/voice/consult";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/voice/consult";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59511,7 +59511,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantVoiceConsult");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/voice/consult";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/voice/consult";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59623,7 +59623,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipants");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants";
+			var localVarPath = "/conversations/calls/{conversationId}/participants";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59736,7 +59736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipants");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants";
+			var localVarPath = "/conversations/calls/{conversationId}/participants";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59852,7 +59852,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantsUserUserId");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/user/{userId}";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/user/{userId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59972,7 +59972,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallParticipantsUserUserId");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/user/{userId}";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/user/{userId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60090,7 +60090,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsCallbackParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60212,7 +60212,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsCallbackParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60329,7 +60329,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallbackParticipantReplace");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60448,7 +60448,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallbackParticipantReplace");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/callbacks/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60555,7 +60555,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallbacks");
 
-			var localVarPath = "/api/v2/conversations/callbacks";
+			var localVarPath = "/conversations/callbacks";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60661,7 +60661,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallbacks");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks";
+			var localVarPath = "/conversations/callbacks";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60765,7 +60765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallbacksBulkDisconnect");
 
-			var localVarPath = "/api/v2/conversations/callbacks/bulk/disconnect";
+			var localVarPath = "/conversations/callbacks/bulk/disconnect";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60870,7 +60870,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallbacksBulkDisconnect");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/bulk/disconnect";
+			var localVarPath = "/conversations/callbacks/bulk/disconnect";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60975,7 +60975,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallbacksBulkUpdate");
 
-			var localVarPath = "/api/v2/conversations/callbacks/bulk/update";
+			var localVarPath = "/conversations/callbacks/bulk/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61081,7 +61081,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallbacksBulkUpdate");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/bulk/update";
+			var localVarPath = "/conversations/callbacks/bulk/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61186,7 +61186,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCalls");
 
-			var localVarPath = "/api/v2/conversations/calls";
+			var localVarPath = "/conversations/calls";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61292,7 +61292,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCalls");
 
 
-			var localVarPath = "/api/v2/conversations/calls";
+			var localVarPath = "/conversations/calls";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61402,7 +61402,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallsUserUserId");
 
-			var localVarPath = "/api/v2/conversations/calls/user/{userId}";
+			var localVarPath = "/conversations/calls/user/{userId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61515,7 +61515,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsCallsUserUserId");
 
 
-			var localVarPath = "/api/v2/conversations/calls/user/{userId}";
+			var localVarPath = "/conversations/calls/user/{userId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61631,7 +61631,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsChatCommunicationMessages");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages";
+			var localVarPath = "/conversations/chats/{conversationId}/communications/{communicationId}/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61751,7 +61751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsChatCommunicationMessages");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/messages";
+			var localVarPath = "/conversations/chats/{conversationId}/communications/{communicationId}/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61863,7 +61863,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsChatCommunicationTyping");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing";
+			var localVarPath = "/conversations/chats/{conversationId}/communications/{communicationId}/typing";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61971,7 +61971,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsChatCommunicationTyping");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/communications/{communicationId}/typing";
+			var localVarPath = "/conversations/chats/{conversationId}/communications/{communicationId}/typing";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62083,7 +62083,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsChatParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62205,7 +62205,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsChatParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62322,7 +62322,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsChatParticipantReplace");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62441,7 +62441,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsChatParticipantReplace");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/chats/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62548,7 +62548,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsChats");
 
-			var localVarPath = "/api/v2/conversations/chats";
+			var localVarPath = "/conversations/chats";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62654,7 +62654,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsChats");
 
 
-			var localVarPath = "/api/v2/conversations/chats";
+			var localVarPath = "/conversations/chats";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62770,7 +62770,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsCobrowsesessionParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62892,7 +62892,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsCobrowsesessionParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63006,7 +63006,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsCobrowsesessionParticipantReplace");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63121,7 +63121,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsCobrowsesessionParticipantReplace");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63233,7 +63233,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailInboundmessages");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/inboundmessages";
+			var localVarPath = "/conversations/emails/{conversationId}/inboundmessages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63346,7 +63346,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailInboundmessages");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/inboundmessages";
+			var localVarPath = "/conversations/emails/{conversationId}/inboundmessages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63457,7 +63457,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailMessages");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages";
+			var localVarPath = "/conversations/emails/{conversationId}/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63570,7 +63570,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailMessages");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages";
+			var localVarPath = "/conversations/emails/{conversationId}/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63681,7 +63681,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailMessagesDraftAttachmentsCopy");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/draft/attachments/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63794,7 +63794,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailMessagesDraftAttachmentsCopy");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft/attachments/copy";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/draft/attachments/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63911,7 +63911,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsEmailParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64033,7 +64033,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsEmailParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64150,7 +64150,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailParticipantReplace");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64269,7 +64269,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailParticipantReplace");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/emails/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64375,7 +64375,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsEmailReconnect");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/reconnect";
+			var localVarPath = "/conversations/emails/{conversationId}/reconnect";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64475,7 +64475,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsEmailReconnect");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/reconnect";
+			var localVarPath = "/conversations/emails/{conversationId}/reconnect";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64575,7 +64575,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmails");
 
-			var localVarPath = "/api/v2/conversations/emails";
+			var localVarPath = "/conversations/emails";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64681,7 +64681,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmails");
 
 
-			var localVarPath = "/api/v2/conversations/emails";
+			var localVarPath = "/conversations/emails";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64786,7 +64786,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailsAgentless");
 
-			var localVarPath = "/api/v2/conversations/emails/agentless";
+			var localVarPath = "/conversations/emails/agentless";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64892,7 +64892,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsEmailsAgentless");
 
 
-			var localVarPath = "/api/v2/conversations/emails/agentless";
+			var localVarPath = "/conversations/emails/agentless";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64997,7 +64997,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsFaxes");
 
-			var localVarPath = "/api/v2/conversations/faxes";
+			var localVarPath = "/conversations/faxes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65103,7 +65103,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsFaxes");
 
 
-			var localVarPath = "/api/v2/conversations/faxes";
+			var localVarPath = "/conversations/faxes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65208,7 +65208,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsKeyconfigurations");
 
-			var localVarPath = "/api/v2/conversations/keyconfigurations";
+			var localVarPath = "/conversations/keyconfigurations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65314,7 +65314,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsKeyconfigurations");
 
 
-			var localVarPath = "/api/v2/conversations/keyconfigurations";
+			var localVarPath = "/conversations/keyconfigurations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65419,7 +65419,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsKeyconfigurationsValidate");
 
-			var localVarPath = "/api/v2/conversations/keyconfigurations/validate";
+			var localVarPath = "/conversations/keyconfigurations/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65525,7 +65525,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsKeyconfigurationsValidate");
 
 
-			var localVarPath = "/api/v2/conversations/keyconfigurations/validate";
+			var localVarPath = "/conversations/keyconfigurations/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65642,7 +65642,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageCommunicationMessages");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65765,7 +65765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageCommunicationMessages");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65878,7 +65878,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsMessageCommunicationMessagesMedia");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/messages/media";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65986,7 +65986,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsMessageCommunicationMessagesMedia");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/messages/media";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66097,7 +66097,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageCommunicationMessagesMediaUploads");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/uploads";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66217,7 +66217,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageCommunicationMessagesMediaUploads");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/uploads";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/messages/media/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66334,7 +66334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageCommunicationSocialmediaMessages");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/socialmedia/messages";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/socialmedia/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66454,7 +66454,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageCommunicationSocialmediaMessages");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/socialmedia/messages";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/socialmedia/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66570,7 +66570,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageCommunicationTyping");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/typing";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66689,7 +66689,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageCommunicationTyping");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/communications/{communicationId}/typing";
+			var localVarPath = "/conversations/messages/{conversationId}/communications/{communicationId}/typing";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66801,7 +66801,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageInboundOpenEvent");
 
-			var localVarPath = "/api/v2/conversations/messages/{integrationId}/inbound/open/event";
+			var localVarPath = "/conversations/messages/{integrationId}/inbound/open/event";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66914,7 +66914,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageInboundOpenEvent");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{integrationId}/inbound/open/event";
+			var localVarPath = "/conversations/messages/{integrationId}/inbound/open/event";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67027,7 +67027,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageInboundOpenMessage");
 
-			var localVarPath = "/api/v2/conversations/messages/{integrationId}/inbound/open/message";
+			var localVarPath = "/conversations/messages/{integrationId}/inbound/open/message";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67143,7 +67143,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageInboundOpenMessage");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{integrationId}/inbound/open/message";
+			var localVarPath = "/conversations/messages/{integrationId}/inbound/open/message";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67255,7 +67255,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageInboundOpenReceipt");
 
-			var localVarPath = "/api/v2/conversations/messages/{integrationId}/inbound/open/receipt";
+			var localVarPath = "/conversations/messages/{integrationId}/inbound/open/receipt";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67368,7 +67368,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageInboundOpenReceipt");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{integrationId}/inbound/open/receipt";
+			var localVarPath = "/conversations/messages/{integrationId}/inbound/open/receipt";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67479,7 +67479,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageInboundOpenStructuredResponse");
 
-			var localVarPath = "/api/v2/conversations/messages/{integrationId}/inbound/open/structured/response";
+			var localVarPath = "/conversations/messages/{integrationId}/inbound/open/structured/response";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67592,7 +67592,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageInboundOpenStructuredResponse");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{integrationId}/inbound/open/structured/response";
+			var localVarPath = "/conversations/messages/{integrationId}/inbound/open/structured/response";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67702,7 +67702,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsMessageMessagesBulk");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/messages/bulk";
+			var localVarPath = "/conversations/messages/{conversationId}/messages/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67814,7 +67814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling ConversationsApi->PostConversationsMessageMessagesBulk");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/messages/bulk";
+			var localVarPath = "/conversations/messages/{conversationId}/messages/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67932,7 +67932,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsMessageParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68054,7 +68054,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsMessageParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68166,7 +68166,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsMessageParticipantMonitor");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/monitor";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/monitor";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68273,7 +68273,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PostConversationsMessageParticipantMonitor");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/monitor";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/monitor";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68383,7 +68383,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageParticipantReplace");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68502,7 +68502,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessageParticipantReplace");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/participants/{participantId}/replace";
+			var localVarPath = "/conversations/messages/{conversationId}/participants/{participantId}/replace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68609,7 +68609,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessages");
 
-			var localVarPath = "/api/v2/conversations/messages";
+			var localVarPath = "/conversations/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68715,7 +68715,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessages");
 
 
-			var localVarPath = "/api/v2/conversations/messages";
+			var localVarPath = "/conversations/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68822,7 +68822,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagesAgentless");
 
-			var localVarPath = "/api/v2/conversations/messages/agentless";
+			var localVarPath = "/conversations/messages/agentless";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68931,7 +68931,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagesAgentless");
 
 
-			var localVarPath = "/api/v2/conversations/messages/agentless";
+			var localVarPath = "/conversations/messages/agentless";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69011,7 +69011,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Send an inbound Open Message 
-		/// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+		/// [This API is deprecated. Instead, use 1. POST /conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">NormalizedMessage</param>
@@ -69025,7 +69025,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Send an inbound Open Message 
-		/// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+		/// [This API is deprecated. Instead, use 1. POST /conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">NormalizedMessage</param>
@@ -69037,7 +69037,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagesInboundOpen");
 
-			var localVarPath = "/api/v2/conversations/messages/inbound/open";
+			var localVarPath = "/conversations/messages/inbound/open";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69115,7 +69115,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Send an inbound Open Message 
-		/// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+		/// [This API is deprecated. Instead, use 1. POST /conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">NormalizedMessage</param>
@@ -69130,7 +69130,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Send an inbound Open Message 
-		/// [This API is deprecated. Instead, use 1. POST /api/v2/conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /api/v2/conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /api/v2/conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
+		/// [This API is deprecated. Instead, use 1. POST /conversations/messages/{integrationId}/inbound/open/event, if you want to send an inbound Open Event Message 2. POST /conversations/messages/{integrationId}/inbound/open/message, if you want to send an inbound Open Message 3. POST /conversations/messages/{integrationId}/inbound/open/receipt, to send an inbound Open Receipt Message]  In order to call this endpoint you will need OAuth token generated using OAuth client credentials authorized with at least messaging scope. This will either generate a new Conversation, or be a part of an existing conversation. See https://developer.genesys.cloud/api/digital/openmessaging/ for example usage.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">NormalizedMessage</param>
@@ -69143,7 +69143,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagesInboundOpen");
 
 
-			var localVarPath = "/api/v2/conversations/messages/inbound/open";
+			var localVarPath = "/conversations/messages/inbound/open";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69248,7 +69248,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsApple");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/apple";
+			var localVarPath = "/conversations/messaging/integrations/apple";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69354,7 +69354,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsApple");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/apple";
+			var localVarPath = "/conversations/messaging/integrations/apple";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69459,7 +69459,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsFacebook");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/facebook";
+			var localVarPath = "/conversations/messaging/integrations/facebook";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69565,7 +69565,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsFacebook");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/facebook";
+			var localVarPath = "/conversations/messaging/integrations/facebook";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69670,7 +69670,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsInstagram");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/instagram";
+			var localVarPath = "/conversations/messaging/integrations/instagram";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69776,7 +69776,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsInstagram");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/instagram";
+			var localVarPath = "/conversations/messaging/integrations/instagram";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69881,7 +69881,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsOpen");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/open";
+			var localVarPath = "/conversations/messaging/integrations/open";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69987,7 +69987,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsOpen");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/open";
+			var localVarPath = "/conversations/messaging/integrations/open";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70092,7 +70092,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsTwitter");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter";
+			var localVarPath = "/conversations/messaging/integrations/twitter";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70198,7 +70198,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsTwitter");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/twitter";
+			var localVarPath = "/conversations/messaging/integrations/twitter";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70276,8 +70276,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration 
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration 
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">WhatsAppIntegrationRequest</param>
@@ -70290,8 +70290,8 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration 
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration 
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">WhatsAppIntegrationRequest</param>
@@ -70303,7 +70303,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsWhatsapp");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70380,8 +70380,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration 
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration 
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">WhatsAppIntegrationRequest</param>
@@ -70395,8 +70395,8 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration 
-		/// [This API is deprecated. Use POST /api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] Create a WhatsApp Integration 
+		/// [This API is deprecated. Use POST /conversations/messaging/integrations/whatsapp/embeddedsignup instead] You must be approved by WhatsApp to use this feature. Your approved e164-formatted phone number and valid WhatsApp certificate for your number are required. Your WhatsApp certificate must have valid base64 encoding. Please paste carefully and do not add any leading or trailing spaces. Do not alter any characters. An integration must be activated within 7 days of certificate generation. If you cannot complete the addition and activation of the number within 7 days, please obtain a new certificate before creating the integration. Integrations created with an invalid number or certificate may immediately incur additional integration fees. Please carefully enter your number and certificate as described.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">WhatsAppIntegrationRequest</param>
@@ -70409,7 +70409,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsWhatsapp");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70514,7 +70514,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup");
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp/embeddedsignup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70620,7 +70620,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/integrations/whatsapp/embeddedsignup";
+			var localVarPath = "/conversations/messaging/integrations/whatsapp/embeddedsignup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70725,7 +70725,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingSettings");
 
-			var localVarPath = "/api/v2/conversations/messaging/settings";
+			var localVarPath = "/conversations/messaging/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70831,7 +70831,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingSettings");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/settings";
+			var localVarPath = "/conversations/messaging/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70936,7 +70936,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingSupportedcontent");
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent";
+			var localVarPath = "/conversations/messaging/supportedcontent";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71042,7 +71042,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsMessagingSupportedcontent");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent";
+			var localVarPath = "/conversations/messaging/supportedcontent";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71147,7 +71147,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsParticipantsAttributesSearch");
 
-			var localVarPath = "/api/v2/conversations/participants/attributes/search";
+			var localVarPath = "/conversations/participants/attributes/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71253,7 +71253,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsParticipantsAttributesSearch");
 
 
-			var localVarPath = "/api/v2/conversations/participants/attributes/search";
+			var localVarPath = "/conversations/participants/attributes/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71369,7 +71369,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsScreenshareParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71491,7 +71491,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsScreenshareParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/screenshares/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71610,7 +71610,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsSocialParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71732,7 +71732,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsSocialParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/socials/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71847,7 +71847,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsVideoAgentconferenceCommunication");
 
-			var localVarPath = "/api/v2/conversations/videos/{conversationId}/agentconference/communications/{communicationId}";
+			var localVarPath = "/conversations/videos/{conversationId}/agentconference/communications/{communicationId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71957,7 +71957,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsVideoAgentconferenceCommunication");
 
 
-			var localVarPath = "/api/v2/conversations/videos/{conversationId}/agentconference/communications/{communicationId}";
+			var localVarPath = "/conversations/videos/{conversationId}/agentconference/communications/{communicationId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -72069,7 +72069,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsVideoParticipantCommunicationWrapup");
 
-			var localVarPath = "/api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -72191,7 +72191,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling ConversationsApi->PostConversationsVideoParticipantCommunicationWrapup");
 
 
-			var localVarPath = "/api/v2/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
+			var localVarPath = "/conversations/videos/{conversationId}/participants/{participantId}/communications/{communicationId}/wrapup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -72299,7 +72299,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsVideosMeetings");
 
-			var localVarPath = "/api/v2/conversations/videos/meetings";
+			var localVarPath = "/conversations/videos/meetings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -72405,7 +72405,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PostConversationsVideosMeetings");
 
 
-			var localVarPath = "/api/v2/conversations/videos/meetings";
+			var localVarPath = "/conversations/videos/meetings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -72514,7 +72514,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantId == null)
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PutConversationParticipantFlaggedreason");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/flaggedreason";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -72621,7 +72621,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantId' when calling ConversationsApi->PutConversationParticipantFlaggedreason");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/participants/{participantId}/flaggedreason";
+			var localVarPath = "/conversations/{conversationId}/participants/{participantId}/flaggedreason";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -72727,7 +72727,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationSecureattributes");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+			var localVarPath = "/conversations/{conversationId}/secureattributes";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -72840,7 +72840,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationSecureattributes");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/secureattributes";
+			var localVarPath = "/conversations/{conversationId}/secureattributes";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -72951,7 +72951,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationTags");
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/tags";
+			var localVarPath = "/conversations/{conversationId}/tags";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -73064,7 +73064,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationTags");
 
 
-			var localVarPath = "/api/v2/conversations/{conversationId}/tags";
+			var localVarPath = "/conversations/{conversationId}/tags";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -73185,7 +73185,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsCallParticipantCommunicationUuidata");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -73312,7 +73312,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsCallParticipantCommunicationUuidata");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata";
+			var localVarPath = "/conversations/calls/{conversationId}/participants/{participantId}/communications/{communicationId}/uuidata";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -73425,7 +73425,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsCallRecordingstate");
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/calls/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -73538,7 +73538,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsCallRecordingstate");
 
 
-			var localVarPath = "/api/v2/conversations/calls/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/calls/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -73649,7 +73649,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsCallbackRecordingstate");
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/callbacks/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -73762,7 +73762,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsCallbackRecordingstate");
 
 
-			var localVarPath = "/api/v2/conversations/callbacks/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/callbacks/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -73873,7 +73873,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsChatRecordingstate");
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/chats/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -73986,7 +73986,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsChatRecordingstate");
 
 
-			var localVarPath = "/api/v2/conversations/chats/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/chats/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -74097,7 +74097,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsCobrowsesessionRecordingstate");
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -74210,7 +74210,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsCobrowsesessionRecordingstate");
 
 
-			var localVarPath = "/api/v2/conversations/cobrowsesessions/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/cobrowsesessions/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -74321,7 +74321,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsEmailMessagesDraft");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/draft";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -74434,7 +74434,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsEmailMessagesDraft");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/messages/draft";
+			var localVarPath = "/conversations/emails/{conversationId}/messages/draft";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -74545,7 +74545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsEmailRecordingstate");
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/emails/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -74658,7 +74658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsEmailRecordingstate");
 
 
-			var localVarPath = "/api/v2/conversations/emails/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/emails/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -74769,7 +74769,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsKeyconfiguration");
 
-			var localVarPath = "/api/v2/conversations/keyconfigurations/{keyconfigurationsId}";
+			var localVarPath = "/conversations/keyconfigurations/{keyconfigurationsId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -74882,7 +74882,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsKeyconfiguration");
 
 
-			var localVarPath = "/api/v2/conversations/keyconfigurations/{keyconfigurationsId}";
+			var localVarPath = "/conversations/keyconfigurations/{keyconfigurationsId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -74993,7 +74993,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessageRecordingstate");
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/messages/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -75106,7 +75106,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessageRecordingstate");
 
 
-			var localVarPath = "/api/v2/conversations/messages/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/messages/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -75217,7 +75217,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/apple/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/apple/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -75330,7 +75330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsAppleIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/apple/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/apple/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -75441,7 +75441,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/facebook/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/facebook/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -75554,7 +75554,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsFacebookIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/facebook/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/facebook/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -75665,7 +75665,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/instagram/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/instagram/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -75778,7 +75778,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsInstagramIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/instagram/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/instagram/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -75889,7 +75889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/open/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/open/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -76002,7 +76002,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsOpenIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/open/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/open/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -76113,7 +76113,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/twitter/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/twitter/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -76226,7 +76226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsTwitterIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/twitter/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/twitter/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -76337,7 +76337,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId");
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -76450,7 +76450,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingIdentityresolutionIntegrationsWhatsappIntegrationId");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId}";
+			var localVarPath = "/conversations/messaging/identityresolution/integrations/whatsapp/{integrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -76556,7 +76556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingSettingsDefault");
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/default";
+			var localVarPath = "/conversations/messaging/settings/default";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -76662,7 +76662,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingSettingsDefault");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/settings/default";
+			var localVarPath = "/conversations/messaging/settings/default";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -76767,7 +76767,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingSupportedcontentDefault");
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent/default";
+			var localVarPath = "/conversations/messaging/supportedcontent/default";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -76873,7 +76873,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingSupportedcontentDefault");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/supportedcontent/default";
+			var localVarPath = "/conversations/messaging/supportedcontent/default";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -76978,7 +76978,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingThreadingtimeline");
 
-			var localVarPath = "/api/v2/conversations/messaging/threadingtimeline";
+			var localVarPath = "/conversations/messaging/threadingtimeline";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -77084,7 +77084,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsMessagingThreadingtimeline");
 
 
-			var localVarPath = "/api/v2/conversations/messaging/threadingtimeline";
+			var localVarPath = "/conversations/messaging/threadingtimeline";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -77194,7 +77194,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsScreenshareRecordingstate");
 
-			var localVarPath = "/api/v2/conversations/screenshares/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/screenshares/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -77307,7 +77307,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsScreenshareRecordingstate");
 
 
-			var localVarPath = "/api/v2/conversations/screenshares/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/screenshares/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -77418,7 +77418,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsSocialRecordingstate");
 
-			var localVarPath = "/api/v2/conversations/socials/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/socials/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -77531,7 +77531,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsSocialRecordingstate");
 
 
-			var localVarPath = "/api/v2/conversations/socials/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/socials/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -77642,7 +77642,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsVideoRecordingstate");
 
-			var localVarPath = "/api/v2/conversations/videos/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/videos/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -77755,7 +77755,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ConversationsApi->PutConversationsVideoRecordingstate");
 
 
-			var localVarPath = "/api/v2/conversations/videos/{conversationId}/recordingstate";
+			var localVarPath = "/conversations/videos/{conversationId}/recordingstate";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -534,7 +534,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (channelId == null)
 				throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteNotificationsChannelSubscriptions");
 
-			var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
+			var localVarPath = "/notifications/channels/{channelId}/subscriptions";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -634,7 +634,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->DeleteNotificationsChannelSubscriptions");
 
 
-			var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
+			var localVarPath = "/notifications/channels/{channelId}/subscriptions";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -733,7 +733,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AvailableTopicEntityListing> GetNotificationsAvailabletopicsWithHttpInfo(List<string> expand = null, bool? includePreview = null)
 		{
 
-			var localVarPath = "/api/v2/notifications/availabletopics";
+			var localVarPath = "/notifications/availabletopics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -833,7 +833,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AvailableTopicEntityListing>> GetNotificationsAvailabletopicsAsyncWithHttpInfo(List<string> expand = null, bool? includePreview = null)
 		{
 
-			var localVarPath = "/api/v2/notifications/availabletopics";
+			var localVarPath = "/notifications/availabletopics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -934,7 +934,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (channelId == null)
 				throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetNotificationsChannelSubscriptions");
 
-			var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
+			var localVarPath = "/notifications/channels/{channelId}/subscriptions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1035,7 +1035,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->GetNotificationsChannelSubscriptions");
 
 
-			var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
+			var localVarPath = "/notifications/channels/{channelId}/subscriptions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1132,7 +1132,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ChannelEntityListing> GetNotificationsChannelsWithHttpInfo(string includechannels = null)
 		{
 
-			var localVarPath = "/api/v2/notifications/channels";
+			var localVarPath = "/notifications/channels";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1229,7 +1229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ChannelEntityListing>> GetNotificationsChannelsAsyncWithHttpInfo(string includechannels = null)
 		{
 
-			var localVarPath = "/api/v2/notifications/channels";
+			var localVarPath = "/notifications/channels";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1328,7 +1328,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (channelId == null)
 				throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->HeadNotificationsChannel");
 
-			var localVarPath = "/api/v2/notifications/channels/{channelId}";
+			var localVarPath = "/notifications/channels/{channelId}";
 			var localVarHttpMethod = "Head";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1428,7 +1428,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'channelId' when calling NotificationsApi->HeadNotificationsChannel");
 
 
-			var localVarPath = "/api/v2/notifications/channels/{channelId}";
+			var localVarPath = "/notifications/channels/{channelId}";
 			var localVarHttpMethod = "Head";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1535,7 +1535,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PostNotificationsChannelSubscriptions");
 
-			var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
+			var localVarPath = "/notifications/channels/{channelId}/subscriptions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1651,7 +1651,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PostNotificationsChannelSubscriptions");
 
 
-			var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
+			var localVarPath = "/notifications/channels/{channelId}/subscriptions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1753,7 +1753,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Channel> PostNotificationsChannelsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/notifications/channels";
+			var localVarPath = "/notifications/channels";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1847,7 +1847,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Channel>> PostNotificationsChannelsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/notifications/channels";
+			var localVarPath = "/notifications/channels";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1953,7 +1953,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PutNotificationsChannelSubscriptions");
 
-			var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
+			var localVarPath = "/notifications/channels/{channelId}/subscriptions";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2069,7 +2069,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling NotificationsApi->PutNotificationsChannelSubscriptions");
 
 
-			var localVarPath = "/api/v2/notifications/channels/{channelId}/subscriptions";
+			var localVarPath = "/notifications/channels/{channelId}/subscriptions";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

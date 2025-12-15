@@ -2298,7 +2298,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (domainId == null)
 				throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingDomain");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2398,7 +2398,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingDomain");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2502,7 +2502,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (feedbackId == null)
 				throw new ApiException(400, "Missing required parameter 'feedbackId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingDomainFeedbackFeedbackId");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/feedback/{feedbackId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2609,7 +2609,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'feedbackId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingDomainFeedbackFeedbackId");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/feedback/{feedbackId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2714,7 +2714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (domainVersionId == null)
 				throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingDomainVersion");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2821,7 +2821,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingDomainVersion");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2921,7 +2921,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (minerId == null)
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingMiner");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3021,7 +3021,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingMiner");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3125,7 +3125,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (draftId == null)
 				throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingMinerDraft");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/drafts/{draftId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3232,7 +3232,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->DeleteLanguageunderstandingMinerDraft");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/drafts/{draftId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3333,7 +3333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (domainId == null)
 				throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomain");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3434,7 +3434,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomain");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3558,7 +3558,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (domainId == null)
 				throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomainFeedback");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/feedback";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/feedback";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3695,7 +3695,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomainFeedback");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/feedback";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/feedback";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3814,7 +3814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (feedbackId == null)
 				throw new ApiException(400, "Missing required parameter 'feedbackId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomainFeedbackFeedbackId");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/feedback/{feedbackId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3925,7 +3925,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'feedbackId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomainFeedbackFeedbackId");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/feedback/{feedbackId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/feedback/{feedbackId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4034,7 +4034,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (domainVersionId == null)
 				throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomainVersion");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4145,7 +4145,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomainVersion");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4252,7 +4252,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (domainVersionId == null)
 				throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomainVersionReport");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/report";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/report";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4360,7 +4360,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomainVersionReport");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/report";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/report";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4467,7 +4467,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (domainId == null)
 				throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomainVersions");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4577,7 +4577,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'domainId' when calling LanguageUnderstandingApi->GetLanguageunderstandingDomainVersions");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4679,7 +4679,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<NluDomainListing> GetLanguageunderstandingDomainsWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/languageunderstanding/domains";
+			var localVarPath = "/languageunderstanding/domains";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4779,7 +4779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<NluDomainListing>> GetLanguageunderstandingDomainsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/languageunderstanding/domains";
+			var localVarPath = "/languageunderstanding/domains";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4890,7 +4890,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->GetLanguageunderstandingIgnorephrase");
 
-			var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}";
+			var localVarPath = "/languageunderstanding/ignorephrases/{languageCode}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5006,7 +5006,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->GetLanguageunderstandingIgnorephrase");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}";
+			var localVarPath = "/languageunderstanding/ignorephrases/{languageCode}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5121,7 +5121,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->GetLanguageunderstandingIgnoretopic");
 
-			var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}";
+			var localVarPath = "/languageunderstanding/ignoretopics/{languageCode}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5237,7 +5237,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling LanguageUnderstandingApi->GetLanguageunderstandingIgnoretopic");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}";
+			var localVarPath = "/languageunderstanding/ignoretopics/{languageCode}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5342,7 +5342,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (minerId == null)
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMiner");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5443,7 +5443,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMiner");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5552,7 +5552,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (draftId == null)
 				throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerDraft");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/drafts/{draftId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5666,7 +5666,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerDraft");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/drafts/{draftId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5769,7 +5769,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (minerId == null)
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerDrafts");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/drafts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5870,7 +5870,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerDrafts");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/drafts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5977,7 +5977,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (intentId == null)
 				throw new ApiException(400, "Missing required parameter 'intentId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerIntent");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/intents/{intentId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/intents/{intentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6088,7 +6088,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'intentId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerIntent");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/intents/{intentId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/intents/{intentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6192,7 +6192,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (minerId == null)
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerIntents");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/intents";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/intents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6296,7 +6296,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerIntents");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/intents";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/intents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6404,7 +6404,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerTopic");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/topics/{topicId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6515,7 +6515,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerTopic");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/topics/{topicId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6627,7 +6627,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (phraseId == null)
 				throw new ApiException(400, "Missing required parameter 'phraseId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerTopicPhrase");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}/phrases/{phraseId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/topics/{topicId}/phrases/{phraseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6742,7 +6742,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'phraseId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerTopicPhrase");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/topics/{topicId}/phrases/{phraseId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/topics/{topicId}/phrases/{phraseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6844,7 +6844,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (minerId == null)
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerTopics");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/topics";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/topics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6945,7 +6945,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->GetLanguageunderstandingMinerTopics");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/topics";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/topics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7042,7 +7042,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MinerListing> GetLanguageunderstandingMinersWithHttpInfo(string minerType = null)
 		{
 
-			var localVarPath = "/api/v2/languageunderstanding/miners";
+			var localVarPath = "/languageunderstanding/miners";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7139,7 +7139,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MinerListing>> GetLanguageunderstandingMinersAsyncWithHttpInfo(string minerType = null)
 		{
 
-			var localVarPath = "/api/v2/languageunderstanding/miners";
+			var localVarPath = "/languageunderstanding/miners";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7234,7 +7234,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<NluOrganization> GetLanguageunderstandingSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/languageunderstanding/settings";
+			var localVarPath = "/languageunderstanding/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7328,7 +7328,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<NluOrganization>> GetLanguageunderstandingSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/languageunderstanding/settings";
+			var localVarPath = "/languageunderstanding/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7432,7 +7432,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PatchLanguageunderstandingDomain");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7545,7 +7545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PatchLanguageunderstandingDomain");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7658,7 +7658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (draftId == null)
 				throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->PatchLanguageunderstandingMinerDraft");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/drafts/{draftId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7774,7 +7774,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'draftId' when calling LanguageUnderstandingApi->PatchLanguageunderstandingMinerDraft");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts/{draftId}";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/drafts/{draftId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7886,7 +7886,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainFeedback");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/feedback";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/feedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7999,7 +7999,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainFeedback");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/feedback";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/feedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8115,7 +8115,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersionDetect");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8235,7 +8235,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersionDetect");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/detect";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8347,7 +8347,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (domainVersionId == null)
 				throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersionPublish");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/publish";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/publish";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8455,7 +8455,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersionPublish");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/publish";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/publish";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8561,7 +8561,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (domainVersionId == null)
 				throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersionTrain");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/train";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/train";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8669,7 +8669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'domainVersionId' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersionTrain");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/train";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}/train";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8777,7 +8777,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersions");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8893,7 +8893,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomainVersions");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9000,7 +9000,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomains");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains";
+			var localVarPath = "/languageunderstanding/domains";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9106,7 +9106,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingDomains");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains";
+			var localVarPath = "/languageunderstanding/domains";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9216,7 +9216,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephrase");
 
-			var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}";
+			var localVarPath = "/languageunderstanding/ignorephrases/{languageCode}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9329,7 +9329,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephrase");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}";
+			var localVarPath = "/languageunderstanding/ignorephrases/{languageCode}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9439,7 +9439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephraseRemove");
 
-			var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}/remove";
+			var localVarPath = "/languageunderstanding/ignorephrases/{languageCode}/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9551,7 +9551,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnorephraseRemove");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/ignorephrases/{languageCode}/remove";
+			var localVarPath = "/languageunderstanding/ignorephrases/{languageCode}/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9662,7 +9662,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopic");
 
-			var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}";
+			var localVarPath = "/languageunderstanding/ignoretopics/{languageCode}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9775,7 +9775,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopic");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}";
+			var localVarPath = "/languageunderstanding/ignoretopics/{languageCode}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9885,7 +9885,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopicRemove");
 
-			var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}/remove";
+			var localVarPath = "/languageunderstanding/ignoretopics/{languageCode}/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9997,7 +9997,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingIgnoretopicRemove");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/ignoretopics/{languageCode}/remove";
+			var localVarPath = "/languageunderstanding/ignoretopics/{languageCode}/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10108,7 +10108,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingMinerDrafts");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/drafts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10221,7 +10221,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingMinerDrafts");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/drafts";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/drafts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10329,7 +10329,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (minerId == null)
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->PostLanguageunderstandingMinerExecute");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/execute";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/execute";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10438,7 +10438,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'minerId' when calling LanguageUnderstandingApi->PostLanguageunderstandingMinerExecute");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/execute";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/execute";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10544,7 +10544,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingMiners");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners";
+			var localVarPath = "/languageunderstanding/miners";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10650,7 +10650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PostLanguageunderstandingMiners");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners";
+			var localVarPath = "/languageunderstanding/miners";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10765,7 +10765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PutLanguageunderstandingDomainVersion");
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10885,7 +10885,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguageUnderstandingApi->PutLanguageunderstandingDomainVersion");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
+			var localVarPath = "/languageunderstanding/domains/{domainId}/versions/{domainVersionId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

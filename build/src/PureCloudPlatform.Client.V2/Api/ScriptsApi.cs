@@ -1055,7 +1055,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scriptId == null)
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScript");
 
-			var localVarPath = "/api/v2/scripts/{scriptId}";
+			var localVarPath = "/scripts/{scriptId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1156,7 +1156,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScript");
 
 
-			var localVarPath = "/api/v2/scripts/{scriptId}";
+			var localVarPath = "/scripts/{scriptId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1263,7 +1263,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (pageId == null)
 				throw new ApiException(400, "Missing required parameter 'pageId' when calling ScriptsApi->GetScriptPage");
 
-			var localVarPath = "/api/v2/scripts/{scriptId}/pages/{pageId}";
+			var localVarPath = "/scripts/{scriptId}/pages/{pageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1374,7 +1374,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'pageId' when calling ScriptsApi->GetScriptPage");
 
 
-			var localVarPath = "/api/v2/scripts/{scriptId}/pages/{pageId}";
+			var localVarPath = "/scripts/{scriptId}/pages/{pageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1478,7 +1478,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scriptId == null)
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptPages");
 
-			var localVarPath = "/api/v2/scripts/{scriptId}/pages";
+			var localVarPath = "/scripts/{scriptId}/pages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1582,7 +1582,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptPages");
 
 
-			var localVarPath = "/api/v2/scripts/{scriptId}/pages";
+			var localVarPath = "/scripts/{scriptId}/pages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1698,7 +1698,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ScriptEntityListing> GetScriptsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/scripts";
+			var localVarPath = "/scripts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1822,7 +1822,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/scripts";
+			var localVarPath = "/scripts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1946,7 +1946,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ScriptEntityListing> GetScriptsDivisionviewsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/scripts/divisionviews";
+			var localVarPath = "/scripts/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2070,7 +2070,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsDivisionviewsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string sortBy = null, string sortOrder = null, string scriptDataVersion = null, string divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/scripts/divisionviews";
+			var localVarPath = "/scripts/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2190,7 +2190,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ScriptEntityListing> GetScriptsPublishedWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/scripts/published";
+			var localVarPath = "/scripts/published";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2308,7 +2308,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/scripts/published";
+			var localVarPath = "/scripts/published";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2423,7 +2423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scriptId == null)
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedDivisionviewVariables");
 
-			var localVarPath = "/api/v2/scripts/published/divisionviews/{scriptId}/variables";
+			var localVarPath = "/scripts/published/divisionviews/{scriptId}/variables";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2536,7 +2536,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedDivisionviewVariables");
 
 
-			var localVarPath = "/api/v2/scripts/published/divisionviews/{scriptId}/variables";
+			var localVarPath = "/scripts/published/divisionviews/{scriptId}/variables";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2651,7 +2651,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ScriptEntityListing> GetScriptsPublishedDivisionviewsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/scripts/published/divisionviews";
+			var localVarPath = "/scripts/published/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2769,7 +2769,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ScriptEntityListing>> GetScriptsPublishedDivisionviewsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string name = null, string feature = null, string flowId = null, string scriptDataVersion = null, string divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/scripts/published/divisionviews";
+			var localVarPath = "/scripts/published/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2878,7 +2878,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scriptId == null)
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptId");
 
-			var localVarPath = "/api/v2/scripts/published/{scriptId}";
+			var localVarPath = "/scripts/published/{scriptId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2982,7 +2982,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptId");
 
 
-			var localVarPath = "/api/v2/scripts/published/{scriptId}";
+			var localVarPath = "/scripts/published/{scriptId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3090,7 +3090,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (pageId == null)
 				throw new ApiException(400, "Missing required parameter 'pageId' when calling ScriptsApi->GetScriptsPublishedScriptIdPage");
 
-			var localVarPath = "/api/v2/scripts/published/{scriptId}/pages/{pageId}";
+			var localVarPath = "/scripts/published/{scriptId}/pages/{pageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3201,7 +3201,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'pageId' when calling ScriptsApi->GetScriptsPublishedScriptIdPage");
 
 
-			var localVarPath = "/api/v2/scripts/published/{scriptId}/pages/{pageId}";
+			var localVarPath = "/scripts/published/{scriptId}/pages/{pageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3305,7 +3305,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scriptId == null)
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptIdPages");
 
-			var localVarPath = "/api/v2/scripts/published/{scriptId}/pages";
+			var localVarPath = "/scripts/published/{scriptId}/pages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3409,7 +3409,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptIdPages");
 
 
-			var localVarPath = "/api/v2/scripts/published/{scriptId}/pages";
+			var localVarPath = "/scripts/published/{scriptId}/pages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3518,7 +3518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scriptId == null)
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptIdVariables");
 
-			var localVarPath = "/api/v2/scripts/published/{scriptId}/variables";
+			var localVarPath = "/scripts/published/{scriptId}/variables";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3631,7 +3631,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->GetScriptsPublishedScriptIdVariables");
 
 
-			var localVarPath = "/api/v2/scripts/published/{scriptId}/variables";
+			var localVarPath = "/scripts/published/{scriptId}/variables";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3737,7 +3737,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (uploadId == null)
 				throw new ApiException(400, "Missing required parameter 'uploadId' when calling ScriptsApi->GetScriptsUploadStatus");
 
-			var localVarPath = "/api/v2/scripts/uploads/{uploadId}/status";
+			var localVarPath = "/scripts/uploads/{uploadId}/status";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3841,7 +3841,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'uploadId' when calling ScriptsApi->GetScriptsUploadStatus");
 
 
-			var localVarPath = "/api/v2/scripts/uploads/{uploadId}/status";
+			var localVarPath = "/scripts/uploads/{uploadId}/status";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3944,7 +3944,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scriptId == null)
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->PostScriptExport");
 
-			var localVarPath = "/api/v2/scripts/{scriptId}/export";
+			var localVarPath = "/scripts/{scriptId}/export";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4053,7 +4053,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scriptId' when calling ScriptsApi->PostScriptExport");
 
 
-			var localVarPath = "/api/v2/scripts/{scriptId}/export";
+			var localVarPath = "/scripts/{scriptId}/export";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4158,7 +4158,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Script> PostScriptsPublishedWithHttpInfo(string scriptDataVersion = null, PublishScriptRequestData body = null)
 		{
 
-			var localVarPath = "/api/v2/scripts/published";
+			var localVarPath = "/scripts/published";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4263,7 +4263,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Script>> PostScriptsPublishedAsyncWithHttpInfo(string scriptDataVersion = null, PublishScriptRequestData body = null)
 		{
 
-			var localVarPath = "/api/v2/scripts/published";
+			var localVarPath = "/scripts/published";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

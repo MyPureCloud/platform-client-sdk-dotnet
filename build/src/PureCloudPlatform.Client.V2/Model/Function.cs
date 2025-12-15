@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
 		/// </summary>
 		/// <param name="Description">Description of the function. Limit 255 characters. (required).</param>
 		/// <param name="Handler">Handler entry point into zip file to execute function. Should be path within upload function package to the invocation module without language extension, followed by a period and then exported invocation method name. e.g. &#39;src/index.handler&#39; (required).</param>
-		/// <param name="Runtime">Runtime required for execution. Valid runtimes change over time as versions are deprecated. Use /api/v2/integrations/actions/functions/runtimes for current list. (required).</param>
+		/// <param name="Runtime">Runtime required for execution. Valid runtimes change over time as versions are deprecated. Use /integrations/actions/functions/runtimes for current list. (required).</param>
 		/// <param name="TimeoutSeconds">Execution timeout to apply to function. Value is in seconds. Range allowed 1 to 15. Default value 15 seconds..</param>
 		public Function(string Description = null, string Handler = null, string Runtime = null, int? TimeoutSeconds = null)
 		{
@@ -90,9 +90,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 		/// <summary>
-		/// Runtime required for execution. Valid runtimes change over time as versions are deprecated. Use /api/v2/integrations/actions/functions/runtimes for current list.
+		/// Runtime required for execution. Valid runtimes change over time as versions are deprecated. Use /integrations/actions/functions/runtimes for current list.
 		/// </summary>
-		/// <value>Runtime required for execution. Valid runtimes change over time as versions are deprecated. Use /api/v2/integrations/actions/functions/runtimes for current list.</value>
+		/// <value>Runtime required for execution. Valid runtimes change over time as versions are deprecated. Use /integrations/actions/functions/runtimes for current list.</value>
 		[DataMember(Name = "runtime", EmitDefaultValue = false)]
 		public string Runtime { get; set; }
 

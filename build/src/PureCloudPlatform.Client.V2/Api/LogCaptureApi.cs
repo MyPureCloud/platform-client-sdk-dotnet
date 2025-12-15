@@ -482,7 +482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling LogCaptureApi->DeleteDiagnosticsLogcaptureBrowserUser");
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/users/{userId}";
+			var localVarPath = "/diagnostics/logcapture/browser/users/{userId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -582,7 +582,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling LogCaptureApi->DeleteDiagnosticsLogcaptureBrowserUser");
 
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/users/{userId}";
+			var localVarPath = "/diagnostics/logcapture/browser/users/{userId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -682,7 +682,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling LogCaptureApi->GetDiagnosticsLogcaptureBrowserEntriesDownloadJob");
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/entries/download/jobs/{jobId}";
+			var localVarPath = "/diagnostics/logcapture/browser/entries/download/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -783,7 +783,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling LogCaptureApi->GetDiagnosticsLogcaptureBrowserEntriesDownloadJob");
 
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/entries/download/jobs/{jobId}";
+			var localVarPath = "/diagnostics/logcapture/browser/entries/download/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -883,7 +883,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling LogCaptureApi->GetDiagnosticsLogcaptureBrowserUser");
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/users/{userId}";
+			var localVarPath = "/diagnostics/logcapture/browser/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -984,7 +984,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling LogCaptureApi->GetDiagnosticsLogcaptureBrowserUser");
 
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/users/{userId}";
+			var localVarPath = "/diagnostics/logcapture/browser/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1081,7 +1081,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LogCaptureUserConfigurationListing> GetDiagnosticsLogcaptureBrowserUsersWithHttpInfo(bool? includeExpired = null)
 		{
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/users";
+			var localVarPath = "/diagnostics/logcapture/browser/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1178,7 +1178,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LogCaptureUserConfigurationListing>> GetDiagnosticsLogcaptureBrowserUsersAsyncWithHttpInfo(bool? includeExpired = null)
 		{
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/users";
+			var localVarPath = "/diagnostics/logcapture/browser/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1275,7 +1275,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LogCaptureDownloadExecutionResponse> PostDiagnosticsLogcaptureBrowserEntriesDownloadJobsWithHttpInfo(LogCaptureQueryRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/entries/download/jobs";
+			var localVarPath = "/diagnostics/logcapture/browser/entries/download/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1377,7 +1377,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LogCaptureDownloadExecutionResponse>> PostDiagnosticsLogcaptureBrowserEntriesDownloadJobsAsyncWithHttpInfo(LogCaptureQueryRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/entries/download/jobs";
+			var localVarPath = "/diagnostics/logcapture/browser/entries/download/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1483,7 +1483,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LogCaptureQueryResponse> PostDiagnosticsLogcaptureBrowserEntriesQueryWithHttpInfo(string after = null, string pageSize = null, LogCaptureQueryRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/entries/query";
+			var localVarPath = "/diagnostics/logcapture/browser/entries/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1591,7 +1591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LogCaptureQueryResponse>> PostDiagnosticsLogcaptureBrowserEntriesQueryAsyncWithHttpInfo(string after = null, string pageSize = null, LogCaptureQueryRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/entries/query";
+			var localVarPath = "/diagnostics/logcapture/browser/entries/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1700,7 +1700,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling LogCaptureApi->PostDiagnosticsLogcaptureBrowserUser");
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/users/{userId}";
+			var localVarPath = "/diagnostics/logcapture/browser/users/{userId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1809,7 +1809,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling LogCaptureApi->PostDiagnosticsLogcaptureBrowserUser");
 
 
-			var localVarPath = "/api/v2/diagnostics/logcapture/browser/users/{userId}";
+			var localVarPath = "/diagnostics/logcapture/browser/users/{userId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -334,7 +334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling AgentUIApi->DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -434,7 +434,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling AgentUIApi->DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -534,7 +534,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling AgentUIApi->GetUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -635,7 +635,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling AgentUIApi->GetUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -740,7 +740,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentUIApi->PatchUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -853,7 +853,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentUIApi->PatchUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -964,7 +964,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentUIApi->PutUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1077,7 +1077,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentUIApi->PutUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

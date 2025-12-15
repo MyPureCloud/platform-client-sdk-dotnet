@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Delete a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use DELETE /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Delete a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use DELETE /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -157,7 +157,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a list of Supported Content profiles
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -170,7 +170,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a list of Supported Content profiles
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -183,7 +183,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -195,7 +195,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -233,7 +233,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use PATCH /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -246,7 +246,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use PATCH /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -283,7 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create a Supported Content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use POST /conversations/messaging/supportedcontent as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">SupportedContent</param>
@@ -295,7 +295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create a Supported Content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use POST /conversations/messaging/supportedcontent as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">SupportedContent</param>
@@ -381,7 +381,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Delete a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use DELETE /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -393,7 +393,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Delete a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use DELETE /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -477,7 +477,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a list of Supported Content profiles
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -490,7 +490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a list of Supported Content profiles
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -503,7 +503,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -515,7 +515,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -553,7 +553,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use PATCH /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -566,7 +566,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update a supported content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use PATCH /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -603,7 +603,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create a Supported Content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use POST /conversations/messaging/supportedcontent as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">SupportedContent</param>
@@ -615,7 +615,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create a Supported Content profile
 		/// </summary>
 		/// <remarks>
-		/// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use POST /conversations/messaging/supportedcontent as replacement
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">SupportedContent</param>
@@ -766,7 +766,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageSettingId == null)
 				throw new ApiException(400, "Missing required parameter 'messageSettingId' when calling MessagingApi->DeleteMessagingSetting");
 
-			var localVarPath = "/api/v2/messaging/settings/{messageSettingId}";
+			var localVarPath = "/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -866,7 +866,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageSettingId' when calling MessagingApi->DeleteMessagingSetting");
 
 
-			var localVarPath = "/api/v2/messaging/settings/{messageSettingId}";
+			var localVarPath = "/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -960,7 +960,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteMessagingSettingsDefaultWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/messaging/settings/default";
+			var localVarPath = "/messaging/settings/default";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1053,7 +1053,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteMessagingSettingsDefaultAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/messaging/settings/default";
+			var localVarPath = "/messaging/settings/default";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1126,7 +1126,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Delete a supported content profile 
-		/// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use DELETE /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -1139,7 +1139,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Delete a supported content profile 
-		/// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use DELETE /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -1151,7 +1151,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (supportedContentId == null)
 				throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling MessagingApi->DeleteMessagingSupportedcontentSupportedContentId");
 
-			var localVarPath = "/api/v2/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1224,7 +1224,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Delete a supported content profile 
-		/// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use DELETE /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -1238,7 +1238,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Delete a supported content profile 
-		/// Deprecated - use DELETE /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use DELETE /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -1251,7 +1251,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling MessagingApi->DeleteMessagingSupportedcontentSupportedContentId");
 
 
-			var localVarPath = "/api/v2/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1351,7 +1351,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageSettingId == null)
 				throw new ApiException(400, "Missing required parameter 'messageSettingId' when calling MessagingApi->GetMessagingSetting");
 
-			var localVarPath = "/api/v2/messaging/settings/{messageSettingId}";
+			var localVarPath = "/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1452,7 +1452,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageSettingId' when calling MessagingApi->GetMessagingSetting");
 
 
-			var localVarPath = "/api/v2/messaging/settings/{messageSettingId}";
+			var localVarPath = "/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1551,7 +1551,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MessagingConfigListing> GetMessagingSettingsWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/messaging/settings";
+			var localVarPath = "/messaging/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1651,7 +1651,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MessagingConfigListing>> GetMessagingSettingsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/messaging/settings";
+			var localVarPath = "/messaging/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1747,7 +1747,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MessagingSetting> GetMessagingSettingsDefaultWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/messaging/settings/default";
+			var localVarPath = "/messaging/settings/default";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1841,7 +1841,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MessagingSetting>> GetMessagingSettingsDefaultAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/messaging/settings/default";
+			var localVarPath = "/messaging/settings/default";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1914,7 +1914,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a list of Supported Content profiles 
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1929,7 +1929,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a list of Supported Content profiles 
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1939,7 +1939,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SupportedContentListing> GetMessagingSupportedcontentWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/messaging/supportedcontent";
+			var localVarPath = "/messaging/supportedcontent";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2013,7 +2013,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a list of Supported Content profiles 
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2029,7 +2029,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a list of Supported Content profiles 
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -2039,7 +2039,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SupportedContentListing>> GetMessagingSupportedcontentAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/messaging/supportedcontent";
+			var localVarPath = "/messaging/supportedcontent";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2114,7 +2114,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a supported content profile 
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -2128,7 +2128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a supported content profile 
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -2140,7 +2140,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (supportedContentId == null)
 				throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling MessagingApi->GetMessagingSupportedcontentSupportedContentId");
 
-			var localVarPath = "/api/v2/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2213,7 +2213,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a supported content profile 
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -2228,7 +2228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a supported content profile 
-		/// Deprecated - use GET /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use GET /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -2241,7 +2241,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'supportedContentId' when calling MessagingApi->GetMessagingSupportedcontentSupportedContentId");
 
 
-			var localVarPath = "/api/v2/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2346,7 +2346,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling MessagingApi->PatchMessagingSetting");
 
-			var localVarPath = "/api/v2/messaging/settings/{messageSettingId}";
+			var localVarPath = "/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2459,7 +2459,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling MessagingApi->PatchMessagingSetting");
 
 
-			var localVarPath = "/api/v2/messaging/settings/{messageSettingId}";
+			var localVarPath = "/messaging/settings/{messageSettingId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2539,7 +2539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update a supported content profile 
-		/// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use PATCH /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -2554,7 +2554,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update a supported content profile 
-		/// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use PATCH /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -2570,7 +2570,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling MessagingApi->PatchMessagingSupportedcontentSupportedContentId");
 
-			var localVarPath = "/api/v2/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2649,7 +2649,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update a supported content profile 
-		/// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use PATCH /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -2665,7 +2665,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update a supported content profile 
-		/// Deprecated - use PATCH /api/v2/conversations/messaging/supportedcontent/{supportedContentId} as replacement
+		/// Deprecated - use PATCH /conversations/messaging/supportedcontent/{supportedContentId} as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="supportedContentId">Supported Content ID</param>
@@ -2683,7 +2683,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling MessagingApi->PatchMessagingSupportedcontentSupportedContentId");
 
 
-			var localVarPath = "/api/v2/messaging/supportedcontent/{supportedContentId}";
+			var localVarPath = "/messaging/supportedcontent/{supportedContentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2789,7 +2789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling MessagingApi->PostMessagingSettings");
 
-			var localVarPath = "/api/v2/messaging/settings";
+			var localVarPath = "/messaging/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2895,7 +2895,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling MessagingApi->PostMessagingSettings");
 
 
-			var localVarPath = "/api/v2/messaging/settings";
+			var localVarPath = "/messaging/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2974,7 +2974,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create a Supported Content profile 
-		/// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use POST /conversations/messaging/supportedcontent as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">SupportedContent</param>
@@ -2988,7 +2988,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create a Supported Content profile 
-		/// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use POST /conversations/messaging/supportedcontent as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">SupportedContent</param>
@@ -3000,7 +3000,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling MessagingApi->PostMessagingSupportedcontent");
 
-			var localVarPath = "/api/v2/messaging/supportedcontent";
+			var localVarPath = "/messaging/supportedcontent";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3078,7 +3078,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create a Supported Content profile 
-		/// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use POST /conversations/messaging/supportedcontent as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">SupportedContent</param>
@@ -3093,7 +3093,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create a Supported Content profile 
-		/// Deprecated - use POST /api/v2/conversations/messaging/supportedcontent as replacement
+		/// Deprecated - use POST /conversations/messaging/supportedcontent as replacement
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">SupportedContent</param>
@@ -3106,7 +3106,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling MessagingApi->PostMessagingSupportedcontent");
 
 
-			var localVarPath = "/api/v2/messaging/supportedcontent";
+			var localVarPath = "/messaging/supportedcontent";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3211,7 +3211,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling MessagingApi->PutMessagingSettingsDefault");
 
-			var localVarPath = "/api/v2/messaging/settings/default";
+			var localVarPath = "/messaging/settings/default";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3317,7 +3317,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling MessagingApi->PutMessagingSettingsDefault");
 
 
-			var localVarPath = "/api/v2/messaging/settings/default";
+			var localVarPath = "/messaging/settings/default";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

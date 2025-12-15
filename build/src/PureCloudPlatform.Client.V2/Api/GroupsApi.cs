@@ -221,11 +221,11 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get group profile
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. Use /api/v2/groups instead
+		/// This api is deprecated. Use /groups instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="groupId">groupId</param>
-		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
+		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
 		/// <returns>GroupProfile</returns>
 		[Obsolete]
 		GroupProfile GetGroupProfile(string groupId, string fields = null);
@@ -234,11 +234,11 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get group profile
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. Use /api/v2/groups instead
+		/// This api is deprecated. Use /groups instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="groupId">groupId</param>
-		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
+		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
 		/// <returns>ApiResponse of GroupProfile</returns>
 		[Obsolete]
 		ApiResponse<GroupProfile> GetGroupProfileWithHttpInfo(string groupId, string fields = null);
@@ -305,7 +305,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get group profile listing
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. Use /api/v2/groups instead.
+		/// This api is deprecated. Use /groups instead.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -321,7 +321,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get group profile listing
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. Use /api/v2/groups instead.
+		/// This api is deprecated. Use /groups instead.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -701,11 +701,11 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get group profile
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. Use /api/v2/groups instead
+		/// This api is deprecated. Use /groups instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="groupId">groupId</param>
-		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
+		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
 		/// <returns>Task of GroupProfile</returns>
 		[Obsolete]
 		System.Threading.Tasks.Task<GroupProfile> GetGroupProfileAsync(string groupId, string fields = null);
@@ -714,11 +714,11 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get group profile
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. Use /api/v2/groups instead
+		/// This api is deprecated. Use /groups instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="groupId">groupId</param>
-		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
+		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
 		/// <returns>Task of ApiResponse (GroupProfile)</returns>
 		[Obsolete]
 		System.Threading.Tasks.Task<ApiResponse<GroupProfile>> GetGroupProfileAsyncWithHttpInfo(string groupId, string fields = null);
@@ -785,7 +785,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get group profile listing
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. Use /api/v2/groups instead.
+		/// This api is deprecated. Use /groups instead.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -801,7 +801,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get group profile listing
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. Use /api/v2/groups instead.
+		/// This api is deprecated. Use /groups instead.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1086,7 +1086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroup");
 
-			var localVarPath = "/api/v2/groups/{groupId}";
+			var localVarPath = "/groups/{groupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1186,7 +1186,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroup");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}";
+			var localVarPath = "/groups/{groupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1287,7 +1287,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupDynamicsettings");
 
-			var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+			var localVarPath = "/groups/{groupId}/dynamicsettings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1389,7 +1389,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->DeleteGroupDynamicsettings");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+			var localVarPath = "/groups/{groupId}/dynamicsettings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1494,7 +1494,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ids == null)
 				throw new ApiException(400, "Missing required parameter 'ids' when calling GroupsApi->DeleteGroupMembers");
 
-			var localVarPath = "/api/v2/groups/{groupId}/members";
+			var localVarPath = "/groups/{groupId}/members";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1602,7 +1602,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ids' when calling GroupsApi->DeleteGroupMembers");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/members";
+			var localVarPath = "/groups/{groupId}/members";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1703,7 +1703,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (type == null)
 				throw new ApiException(400, "Missing required parameter 'type' when calling GroupsApi->GetFieldconfig");
 
-			var localVarPath = "/api/v2/fieldconfig";
+			var localVarPath = "/fieldconfig";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1804,7 +1804,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'type' when calling GroupsApi->GetFieldconfig");
 
 
-			var localVarPath = "/api/v2/fieldconfig";
+			var localVarPath = "/fieldconfig";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1904,7 +1904,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroup");
 
-			var localVarPath = "/api/v2/groups/{groupId}";
+			var localVarPath = "/groups/{groupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2005,7 +2005,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroup");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}";
+			var localVarPath = "/groups/{groupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2107,7 +2107,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupDynamicsettings");
 
-			var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+			var localVarPath = "/groups/{groupId}/dynamicsettings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2210,7 +2210,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupDynamicsettings");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+			var localVarPath = "/groups/{groupId}/dynamicsettings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2310,7 +2310,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupIndividuals");
 
-			var localVarPath = "/api/v2/groups/{groupId}/individuals";
+			var localVarPath = "/groups/{groupId}/individuals";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2411,7 +2411,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupIndividuals");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/individuals";
+			var localVarPath = "/groups/{groupId}/individuals";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2519,7 +2519,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupMembers");
 
-			var localVarPath = "/api/v2/groups/{groupId}/members";
+			var localVarPath = "/groups/{groupId}/members";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2632,7 +2632,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupMembers");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/members";
+			var localVarPath = "/groups/{groupId}/members";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2710,11 +2710,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get group profile 
-		/// This api is deprecated. Use /api/v2/groups instead
+		/// This api is deprecated. Use /groups instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="groupId">groupId</param>
-		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
+		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
 		/// <returns>GroupProfile</returns>
 		[Obsolete]
 		public GroupProfile GetGroupProfile(string groupId, string fields = null)
@@ -2725,11 +2725,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get group profile 
-		/// This api is deprecated. Use /api/v2/groups instead
+		/// This api is deprecated. Use /groups instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="groupId">groupId</param>
-		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
+		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
 		/// <returns>ApiResponse of GroupProfile</returns>
 		[Obsolete]
 		public ApiResponse<GroupProfile> GetGroupProfileWithHttpInfo(string groupId, string fields = null)
@@ -2738,7 +2738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupProfile");
 
-			var localVarPath = "/api/v2/groups/{groupId}/profile";
+			var localVarPath = "/groups/{groupId}/profile";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2812,11 +2812,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get group profile 
-		/// This api is deprecated. Use /api/v2/groups instead
+		/// This api is deprecated. Use /groups instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="groupId">groupId</param>
-		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
+		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
 		/// <returns>Task of GroupProfile</returns>
 		[Obsolete]
 		public async System.Threading.Tasks.Task<GroupProfile> GetGroupProfileAsync(string groupId, string fields = null)
@@ -2828,11 +2828,11 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get group profile 
-		/// This api is deprecated. Use /api/v2/groups instead
+		/// This api is deprecated. Use /groups instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="groupId">groupId</param>
-		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /api/v2/fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
+		/// <param name="fields">Comma separated fields to return.  Allowable values can be found by querying /fieldconfig?type&#x3D;group and using the key for the elements returned by the fieldList (optional)</param>
 		/// <returns>Task of ApiResponse (GroupProfile)</returns>
 		[Obsolete]
 		public async System.Threading.Tasks.Task<ApiResponse<GroupProfile>> GetGroupProfileAsyncWithHttpInfo(string groupId, string fields = null)
@@ -2842,7 +2842,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->GetGroupProfile");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/profile";
+			var localVarPath = "/groups/{groupId}/profile";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2948,7 +2948,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GroupEntityListing> GetGroupsWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/groups";
+			var localVarPath = "/groups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3057,7 +3057,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GroupEntityListing>> GetGroupsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/groups";
+			var localVarPath = "/groups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3163,7 +3163,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (q64 == null)
 				throw new ApiException(400, "Missing required parameter 'q64' when calling GroupsApi->GetGroupsSearch");
 
-			var localVarPath = "/api/v2/groups/search";
+			var localVarPath = "/groups/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3267,7 +3267,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'q64' when calling GroupsApi->GetGroupsSearch");
 
 
-			var localVarPath = "/api/v2/groups/search";
+			var localVarPath = "/groups/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3342,7 +3342,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get group profile listing 
-		/// This api is deprecated. Use /api/v2/groups instead.
+		/// This api is deprecated. Use /groups instead.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -3360,7 +3360,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get group profile listing 
-		/// This api is deprecated. Use /api/v2/groups instead.
+		/// This api is deprecated. Use /groups instead.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -3373,7 +3373,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GroupProfileEntityListing> GetProfilesGroupsWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/profiles/groups";
+			var localVarPath = "/profiles/groups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3450,7 +3450,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get group profile listing 
-		/// This api is deprecated. Use /api/v2/groups instead.
+		/// This api is deprecated. Use /groups instead.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -3469,7 +3469,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get group profile listing 
-		/// This api is deprecated. Use /api/v2/groups instead.
+		/// This api is deprecated. Use /groups instead.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -3482,7 +3482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GroupProfileEntityListing>> GetProfilesGroupsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/profiles/groups";
+			var localVarPath = "/profiles/groups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3591,7 +3591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupMembers");
 
-			var localVarPath = "/api/v2/groups/{groupId}/members";
+			var localVarPath = "/groups/{groupId}/members";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3704,7 +3704,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupMembers");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/members";
+			var localVarPath = "/groups/{groupId}/members";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3810,7 +3810,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroups");
 
-			var localVarPath = "/api/v2/groups";
+			var localVarPath = "/groups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3916,7 +3916,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroups");
 
 
-			var localVarPath = "/api/v2/groups";
+			var localVarPath = "/groups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4023,7 +4023,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupsDynamicsettingsPreview");
 
-			var localVarPath = "/api/v2/groups/dynamicsettings/preview";
+			var localVarPath = "/groups/dynamicsettings/preview";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4131,7 +4131,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupsDynamicsettingsPreview");
 
 
-			var localVarPath = "/api/v2/groups/dynamicsettings/preview";
+			var localVarPath = "/groups/dynamicsettings/preview";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4236,7 +4236,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupsSearch");
 
-			var localVarPath = "/api/v2/groups/search";
+			var localVarPath = "/groups/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4342,7 +4342,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PostGroupsSearch");
 
 
-			var localVarPath = "/api/v2/groups/search";
+			var localVarPath = "/groups/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4449,7 +4449,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PutGroup");
 
-			var localVarPath = "/api/v2/groups/{groupId}";
+			var localVarPath = "/groups/{groupId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4558,7 +4558,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GroupsApi->PutGroup");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}";
+			var localVarPath = "/groups/{groupId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4670,7 +4670,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PutGroupDynamicsettings");
 
-			var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+			var localVarPath = "/groups/{groupId}/dynamicsettings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4784,7 +4784,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GroupsApi->PutGroupDynamicsettings");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/dynamicsettings";
+			var localVarPath = "/groups/{groupId}/dynamicsettings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

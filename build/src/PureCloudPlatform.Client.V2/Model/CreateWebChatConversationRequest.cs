@@ -24,7 +24,7 @@ namespace PureCloudPlatform.Client.V2.Model
 		/// <param name="DeploymentId">The web chat Deployment ID which contains the appropriate settings for this chat conversation. (required).</param>
 		/// <param name="RoutingTarget">The routing information to use for the new chat conversation. (required).</param>
 		/// <param name="MemberInfo">The guest member info to use for the new chat conversation. (required).</param>
-		/// <param name="MemberAuthToken">If the guest member is an authenticated member (ie, not anonymous) his JWT is provided here. The token will have been previously generated with the \&quot;POST /api/v2/signeddata\&quot; resource..</param>
+		/// <param name="MemberAuthToken">If the guest member is an authenticated member (ie, not anonymous) his JWT is provided here. The token will have been previously generated with the \&quot;POST /signeddata\&quot; resource..</param>
 		/// <param name="JourneyContext">A subset of the Journey System&#39;s data relevant to this conversation/session request (for external linkage and internal usage/context)..</param>
 		public CreateWebChatConversationRequest(string OrganizationId = null, string DeploymentId = null, WebChatRoutingTarget RoutingTarget = null, GuestMemberInfo MemberInfo = null, string MemberAuthToken = null, JourneyContext JourneyContext = null)
 		{
@@ -76,9 +76,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 		/// <summary>
-		/// If the guest member is an authenticated member (ie, not anonymous) his JWT is provided here. The token will have been previously generated with the \&quot;POST /api/v2/signeddata\&quot; resource.
+		/// If the guest member is an authenticated member (ie, not anonymous) his JWT is provided here. The token will have been previously generated with the \&quot;POST /signeddata\&quot; resource.
 		/// </summary>
-		/// <value>If the guest member is an authenticated member (ie, not anonymous) his JWT is provided here. The token will have been previously generated with the \&quot;POST /api/v2/signeddata\&quot; resource.</value>
+		/// <value>If the guest member is an authenticated member (ie, not anonymous) his JWT is provided here. The token will have been previously generated with the \&quot;POST /signeddata\&quot; resource.</value>
 		[DataMember(Name = "memberAuthToken", EmitDefaultValue = false)]
 		public string MemberAuthToken { get; set; }
 

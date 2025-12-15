@@ -374,7 +374,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deploymentId == null)
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WidgetsApi->DeleteWidgetsDeployment");
 
-			var localVarPath = "/api/v2/widgets/deployments/{deploymentId}";
+			var localVarPath = "/widgets/deployments/{deploymentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -474,7 +474,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WidgetsApi->DeleteWidgetsDeployment");
 
 
-			var localVarPath = "/api/v2/widgets/deployments/{deploymentId}";
+			var localVarPath = "/widgets/deployments/{deploymentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -574,7 +574,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deploymentId == null)
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WidgetsApi->GetWidgetsDeployment");
 
-			var localVarPath = "/api/v2/widgets/deployments/{deploymentId}";
+			var localVarPath = "/widgets/deployments/{deploymentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -675,7 +675,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WidgetsApi->GetWidgetsDeployment");
 
 
-			var localVarPath = "/api/v2/widgets/deployments/{deploymentId}";
+			var localVarPath = "/widgets/deployments/{deploymentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -770,7 +770,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<WidgetDeploymentEntityListing> GetWidgetsDeploymentsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/widgets/deployments";
+			var localVarPath = "/widgets/deployments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -864,7 +864,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<WidgetDeploymentEntityListing>> GetWidgetsDeploymentsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/widgets/deployments";
+			var localVarPath = "/widgets/deployments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -963,7 +963,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WidgetsApi->PostWidgetsDeployments");
 
-			var localVarPath = "/api/v2/widgets/deployments";
+			var localVarPath = "/widgets/deployments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1069,7 +1069,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WidgetsApi->PostWidgetsDeployments");
 
 
-			var localVarPath = "/api/v2/widgets/deployments";
+			var localVarPath = "/widgets/deployments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1179,7 +1179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WidgetsApi->PutWidgetsDeployment");
 
-			var localVarPath = "/api/v2/widgets/deployments/{deploymentId}";
+			var localVarPath = "/widgets/deployments/{deploymentId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1292,7 +1292,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WidgetsApi->PutWidgetsDeployment");
 
 
-			var localVarPath = "/api/v2/widgets/deployments/{deploymentId}";
+			var localVarPath = "/widgets/deployments/{deploymentId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

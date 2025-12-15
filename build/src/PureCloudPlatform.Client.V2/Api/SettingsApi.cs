@@ -785,7 +785,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteEmailsSettingsThreadingWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -878,7 +878,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEmailsSettingsThreadingAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -972,7 +972,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UpdatedSettingsResponse> DeleteExternalcontactsSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/settings";
+			var localVarPath = "/externalcontacts/settings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1066,7 +1066,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UpdatedSettingsResponse>> DeleteExternalcontactsSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/settings";
+			var localVarPath = "/externalcontacts/settings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1164,7 +1164,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling SettingsApi->DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1264,7 +1264,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling SettingsApi->DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1359,7 +1359,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmailSettings> GetEmailsSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings";
+			var localVarPath = "/emails/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1453,7 +1453,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmailSettings>> GetEmailsSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings";
+			var localVarPath = "/emails/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1547,7 +1547,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmailThreadingSettings> GetEmailsSettingsThreadingWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1641,7 +1641,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmailThreadingSettings>> GetEmailsSettingsThreadingAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1735,7 +1735,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExternalContactsSettings> GetExternalcontactsSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/settings";
+			var localVarPath = "/externalcontacts/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1829,7 +1829,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExternalContactsSettings>> GetExternalcontactsSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/settings";
+			var localVarPath = "/externalcontacts/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1923,7 +1923,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExecutionDataGlobalSettingsResponse> GetSettingsExecutiondataWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/settings/executiondata";
+			var localVarPath = "/settings/executiondata";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2017,7 +2017,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExecutionDataGlobalSettingsResponse>> GetSettingsExecutiondataAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/settings/executiondata";
+			var localVarPath = "/settings/executiondata";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2116,7 +2116,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling SettingsApi->GetUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2217,7 +2217,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling SettingsApi->GetUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2314,7 +2314,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmailSettings> PatchEmailsSettingsWithHttpInfo(EmailSettings body = null)
 		{
 
-			var localVarPath = "/api/v2/emails/settings";
+			var localVarPath = "/emails/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2416,7 +2416,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmailSettings>> PatchEmailsSettingsAsyncWithHttpInfo(EmailSettings body = null)
 		{
 
-			var localVarPath = "/api/v2/emails/settings";
+			var localVarPath = "/emails/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2518,7 +2518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmailThreadingSettings> PatchEmailsSettingsThreadingWithHttpInfo(EmailThreadingSettings body = null)
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2620,7 +2620,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmailThreadingSettings>> PatchEmailsSettingsThreadingAsyncWithHttpInfo(EmailThreadingSettings body = null)
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2725,7 +2725,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SettingsApi->PatchSettingsExecutiondata");
 
-			var localVarPath = "/api/v2/settings/executiondata";
+			var localVarPath = "/settings/executiondata";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2831,7 +2831,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SettingsApi->PatchSettingsExecutiondata");
 
 
-			var localVarPath = "/api/v2/settings/executiondata";
+			var localVarPath = "/settings/executiondata";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2941,7 +2941,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SettingsApi->PatchUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3054,7 +3054,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SettingsApi->PatchUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3157,7 +3157,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UpdatedSettingsResponse> PutExternalcontactsSettingsWithHttpInfo(ExternalContactsSettings body = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/settings";
+			var localVarPath = "/externalcontacts/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3259,7 +3259,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UpdatedSettingsResponse>> PutExternalcontactsSettingsAsyncWithHttpInfo(ExternalContactsSettings body = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/settings";
+			var localVarPath = "/externalcontacts/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3369,7 +3369,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SettingsApi->PutUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3482,7 +3482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SettingsApi->PutUsersAgentuiAgentsAutoanswerAgentIdSettings");
 
 
-			var localVarPath = "/api/v2/users/agentui/agents/autoanswer/{agentId}/settings";
+			var localVarPath = "/users/agentui/agents/autoanswer/{agentId}/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -1684,7 +1684,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tableId == null)
 				throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontable");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1787,7 +1787,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontable");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1892,7 +1892,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tableVersion == null)
 				throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableVersion");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1999,7 +1999,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableVersion");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2109,7 +2109,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (rowId == null)
 				throw new ApiException(400, "Missing required parameter 'rowId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableVersionRow");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2223,7 +2223,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'rowId' when calling BusinessRulesApi->DeleteBusinessrulesDecisiontableVersionRow");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2324,7 +2324,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (schemaId == null)
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling BusinessRulesApi->DeleteBusinessrulesSchema");
 
-			var localVarPath = "/api/v2/businessrules/schemas/{schemaId}";
+			var localVarPath = "/businessrules/schemas/{schemaId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2424,7 +2424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling BusinessRulesApi->DeleteBusinessrulesSchema");
 
 
-			var localVarPath = "/api/v2/businessrules/schemas/{schemaId}";
+			var localVarPath = "/businessrules/schemas/{schemaId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2524,7 +2524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tableId == null)
 				throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontable");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2625,7 +2625,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontable");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2730,7 +2730,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tableVersion == null)
 				throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->GetBusinessrulesDecisiontableVersion");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2838,7 +2838,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->GetBusinessrulesDecisiontableVersion");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2949,7 +2949,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (rowId == null)
 				throw new ApiException(400, "Missing required parameter 'rowId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableVersionRow");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3064,7 +3064,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'rowId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableVersionRow");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3175,7 +3175,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tableVersion == null)
 				throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->GetBusinessrulesDecisiontableVersionRows");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3289,7 +3289,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->GetBusinessrulesDecisiontableVersionRows");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3396,7 +3396,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tableId == null)
 				throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableVersions");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3503,7 +3503,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->GetBusinessrulesDecisiontableVersions");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3608,7 +3608,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DecisionTableListing> GetBusinessrulesDecisiontablesWithHttpInfo(string after = null, string pageSize = null, List<string> divisionIds = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/businessrules/decisiontables";
+			var localVarPath = "/businessrules/decisiontables";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3714,7 +3714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DecisionTableListing>> GetBusinessrulesDecisiontablesAsyncWithHttpInfo(string after = null, string pageSize = null, List<string> divisionIds = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/businessrules/decisiontables";
+			var localVarPath = "/businessrules/decisiontables";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3826,7 +3826,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DecisionTableListing> GetBusinessrulesDecisiontablesSearchWithHttpInfo(string after = null, string pageSize = null, string schemaId = null, string name = null, bool? withPublishedVersion = null, List<string> expand = null, List<string> ids = null)
 		{
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/search";
+			var localVarPath = "/businessrules/decisiontables/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3941,7 +3941,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DecisionTableListing>> GetBusinessrulesDecisiontablesSearchAsyncWithHttpInfo(string after = null, string pageSize = null, string schemaId = null, string name = null, bool? withPublishedVersion = null, List<string> expand = null, List<string> ids = null)
 		{
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/search";
+			var localVarPath = "/businessrules/decisiontables/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4047,7 +4047,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (schemaId == null)
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling BusinessRulesApi->GetBusinessrulesSchema");
 
-			var localVarPath = "/api/v2/businessrules/schemas/{schemaId}";
+			var localVarPath = "/businessrules/schemas/{schemaId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4148,7 +4148,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling BusinessRulesApi->GetBusinessrulesSchema");
 
 
-			var localVarPath = "/api/v2/businessrules/schemas/{schemaId}";
+			var localVarPath = "/businessrules/schemas/{schemaId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4243,7 +4243,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<BusinessRulesDataSchemaListing> GetBusinessrulesSchemasWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/businessrules/schemas";
+			var localVarPath = "/businessrules/schemas";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4337,7 +4337,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<BusinessRulesDataSchemaListing>> GetBusinessrulesSchemasAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/businessrules/schemas";
+			var localVarPath = "/businessrules/schemas";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4436,7 +4436,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (coreTypeName == null)
 				throw new ApiException(400, "Missing required parameter 'coreTypeName' when calling BusinessRulesApi->GetBusinessrulesSchemasCoretype");
 
-			var localVarPath = "/api/v2/businessrules/schemas/coretypes/{coreTypeName}";
+			var localVarPath = "/businessrules/schemas/coretypes/{coreTypeName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4537,7 +4537,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'coreTypeName' when calling BusinessRulesApi->GetBusinessrulesSchemasCoretype");
 
 
-			var localVarPath = "/api/v2/businessrules/schemas/coretypes/{coreTypeName}";
+			var localVarPath = "/businessrules/schemas/coretypes/{coreTypeName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4632,7 +4632,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CoretypeListing> GetBusinessrulesSchemasCoretypesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/businessrules/schemas/coretypes";
+			var localVarPath = "/businessrules/schemas/coretypes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4726,7 +4726,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetBusinessrulesSchemasCoretypesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/businessrules/schemas/coretypes";
+			var localVarPath = "/businessrules/schemas/coretypes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4830,7 +4830,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PatchBusinessrulesDecisiontable");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4943,7 +4943,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PatchBusinessrulesDecisiontable");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5059,7 +5059,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableVersion");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5179,7 +5179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PatchBusinessrulesDecisiontableVersion");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5291,7 +5291,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableExecute");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/execute";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/execute";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5404,7 +5404,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableExecute");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/execute";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/execute";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5520,7 +5520,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionCopy");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/copy";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5640,7 +5640,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionCopy");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/copy";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5757,7 +5757,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionExecute");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/execute";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/execute";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5877,7 +5877,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionExecute");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/execute";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/execute";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5994,7 +5994,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRows");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6114,7 +6114,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRows");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6235,7 +6235,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsSearch");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/search";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6361,7 +6361,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionRowsSearch");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/search";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6475,7 +6475,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tableVersion == null)
 				throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionSync");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/sync";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/sync";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6583,7 +6583,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersionSync");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/sync";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/sync";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6684,7 +6684,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tableId == null)
 				throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersions");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6785,7 +6785,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tableId' when calling BusinessRulesApi->PostBusinessrulesDecisiontableVersions");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6885,7 +6885,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontables");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables";
+			var localVarPath = "/businessrules/decisiontables";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6991,7 +6991,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesDecisiontables");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables";
+			var localVarPath = "/businessrules/decisiontables";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7096,7 +7096,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesSchemas");
 
-			var localVarPath = "/api/v2/businessrules/schemas";
+			var localVarPath = "/businessrules/schemas";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7202,7 +7202,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PostBusinessrulesSchemas");
 
 
-			var localVarPath = "/api/v2/businessrules/schemas";
+			var localVarPath = "/businessrules/schemas";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7312,7 +7312,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tableVersion == null)
 				throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PutBusinessrulesDecisiontableVersionPublish");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/publish";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/publish";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7420,7 +7420,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tableVersion' when calling BusinessRulesApi->PutBusinessrulesDecisiontableVersionPublish");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/publish";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/publish";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7536,7 +7536,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PutBusinessrulesDecisiontableVersionRow");
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7663,7 +7663,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PutBusinessrulesDecisiontableVersionRow");
 
 
-			var localVarPath = "/api/v2/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
+			var localVarPath = "/businessrules/decisiontables/{tableId}/versions/{tableVersion}/rows/{rowId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7776,7 +7776,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PutBusinessrulesSchema");
 
-			var localVarPath = "/api/v2/businessrules/schemas/{schemaId}";
+			var localVarPath = "/businessrules/schemas/{schemaId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7889,7 +7889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling BusinessRulesApi->PutBusinessrulesSchema");
 
 
-			var localVarPath = "/api/v2/businessrules/schemas/{schemaId}";
+			var localVarPath = "/businessrules/schemas/{schemaId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

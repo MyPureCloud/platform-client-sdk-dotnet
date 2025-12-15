@@ -656,7 +656,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleId == null)
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling UsersRulesApi->DeleteUsersRule");
 
-			var localVarPath = "/api/v2/users/rules/{ruleId}";
+			var localVarPath = "/users/rules/{ruleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -758,7 +758,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling UsersRulesApi->DeleteUsersRule");
 
 
-			var localVarPath = "/api/v2/users/rules/{ruleId}";
+			var localVarPath = "/users/rules/{ruleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -860,7 +860,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleId == null)
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling UsersRulesApi->GetUsersRule");
 
-			var localVarPath = "/api/v2/users/rules/{ruleId}";
+			var localVarPath = "/users/rules/{ruleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -963,7 +963,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling UsersRulesApi->GetUsersRule");
 
 
-			var localVarPath = "/api/v2/users/rules/{ruleId}";
+			var localVarPath = "/users/rules/{ruleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1075,7 +1075,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (typeId == null)
 				throw new ApiException(400, "Missing required parameter 'typeId' when calling UsersRulesApi->GetUsersRuleDependentTypeId");
 
-			var localVarPath = "/api/v2/users/rules/{ruleId}/dependents/{ruleType}/{typeId}";
+			var localVarPath = "/users/rules/{ruleId}/dependents/{ruleType}/{typeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1192,7 +1192,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'typeId' when calling UsersRulesApi->GetUsersRuleDependentTypeId");
 
 
-			var localVarPath = "/api/v2/users/rules/{ruleId}/dependents/{ruleType}/{typeId}";
+			var localVarPath = "/users/rules/{ruleId}/dependents/{ruleType}/{typeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1302,7 +1302,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleId == null)
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling UsersRulesApi->GetUsersRuleDependents");
 
-			var localVarPath = "/api/v2/users/rules/{ruleId}/dependents";
+			var localVarPath = "/users/rules/{ruleId}/dependents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1414,7 +1414,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling UsersRulesApi->GetUsersRuleDependents");
 
 
-			var localVarPath = "/api/v2/users/rules/{ruleId}/dependents";
+			var localVarPath = "/users/rules/{ruleId}/dependents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1529,7 +1529,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (types == null)
 				throw new ApiException(400, "Missing required parameter 'types' when calling UsersRulesApi->GetUsersRules");
 
-			var localVarPath = "/api/v2/users/rules";
+			var localVarPath = "/users/rules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1647,7 +1647,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'types' when calling UsersRulesApi->GetUsersRules");
 
 
-			var localVarPath = "/api/v2/users/rules";
+			var localVarPath = "/users/rules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1754,7 +1754,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleType == null)
 				throw new ApiException(400, "Missing required parameter 'ruleType' when calling UsersRulesApi->GetUsersRulesSetting");
 
-			var localVarPath = "/api/v2/users/rules/settings/{ruleType}";
+			var localVarPath = "/users/rules/settings/{ruleType}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1857,7 +1857,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleType' when calling UsersRulesApi->GetUsersRulesSetting");
 
 
-			var localVarPath = "/api/v2/users/rules/settings/{ruleType}";
+			var localVarPath = "/users/rules/settings/{ruleType}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1964,7 +1964,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersRulesApi->PatchUsersRule");
 
-			var localVarPath = "/api/v2/users/rules/{ruleId}";
+			var localVarPath = "/users/rules/{ruleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2079,7 +2079,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersRulesApi->PatchUsersRule");
 
 
-			var localVarPath = "/api/v2/users/rules/{ruleId}";
+			var localVarPath = "/users/rules/{ruleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2187,7 +2187,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersRulesApi->PostUsersRules");
 
-			var localVarPath = "/api/v2/users/rules";
+			var localVarPath = "/users/rules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2295,7 +2295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersRulesApi->PostUsersRules");
 
 
-			var localVarPath = "/api/v2/users/rules";
+			var localVarPath = "/users/rules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2406,7 +2406,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersRulesApi->PostUsersRulesQuery");
 
-			var localVarPath = "/api/v2/users/rules/query";
+			var localVarPath = "/users/rules/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2520,7 +2520,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersRulesApi->PostUsersRulesQuery");
 
 
-			var localVarPath = "/api/v2/users/rules/query";
+			var localVarPath = "/users/rules/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

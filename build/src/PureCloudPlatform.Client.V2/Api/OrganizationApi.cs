@@ -61,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get the list of domains that will be allowed to embed PureCloud applications
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>EmbeddedIntegration</returns>
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get the list of domains that will be allowed to embed PureCloud applications
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>ApiResponse of EmbeddedIntegration</returns>
@@ -83,7 +83,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get organization IP address whitelist settings
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>IpAddressAuthentication</returns>
@@ -94,7 +94,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get organization IP address whitelist settings
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>ApiResponse of IpAddressAuthentication</returns>
@@ -298,7 +298,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		ApiResponse<Organization> GetOrganizationsMeWithHttpInfo();
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -309,7 +309,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		OrgWhitelistSettings GetOrganizationsWhitelist();
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -373,7 +373,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update the list of domains that will be allowed to embed PureCloud applications
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Whitelist settings</param>
@@ -385,7 +385,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update the list of domains that will be allowed to embed PureCloud applications
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Whitelist settings</param>
@@ -397,7 +397,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update organization IP address whitelist settings
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">IP address Whitelist settings</param>
@@ -409,7 +409,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update organization IP address whitelist settings
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">IP address Whitelist settings</param>
@@ -442,7 +442,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		ApiResponse<Organization> PutOrganizationsMeWithHttpInfo(Organization body = null);
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -454,7 +454,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		OrgWhitelistSettings PutOrganizationsWhitelist(OrgWhitelistSettings body);
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -519,7 +519,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get the list of domains that will be allowed to embed PureCloud applications
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>Task of EmbeddedIntegration</returns>
@@ -530,7 +530,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get the list of domains that will be allowed to embed PureCloud applications
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
@@ -541,7 +541,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get organization IP address whitelist settings
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>Task of IpAddressAuthentication</returns>
@@ -552,7 +552,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get organization IP address whitelist settings
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
@@ -756,7 +756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<ApiResponse<Organization>> GetOrganizationsMeAsyncWithHttpInfo();
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -767,7 +767,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<OrgWhitelistSettings> GetOrganizationsWhitelistAsync();
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -831,7 +831,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update the list of domains that will be allowed to embed PureCloud applications
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Whitelist settings</param>
@@ -843,7 +843,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update the list of domains that will be allowed to embed PureCloud applications
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Whitelist settings</param>
@@ -855,7 +855,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update organization IP address whitelist settings
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">IP address Whitelist settings</param>
@@ -867,7 +867,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Update organization IP address whitelist settings
 		/// </summary>
 		/// <remarks>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">IP address Whitelist settings</param>
@@ -900,7 +900,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<ApiResponse<Organization>> PutOrganizationsMeAsyncWithHttpInfo(Organization body = null);
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -912,7 +912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<OrgWhitelistSettings> PutOrganizationsWhitelistAsync(OrgWhitelistSettings body);
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -1043,7 +1043,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (type == null)
 				throw new ApiException(400, "Missing required parameter 'type' when calling OrganizationApi->GetFieldconfig");
 
-			var localVarPath = "/api/v2/fieldconfig";
+			var localVarPath = "/fieldconfig";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1144,7 +1144,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'type' when calling OrganizationApi->GetFieldconfig");
 
 
-			var localVarPath = "/api/v2/fieldconfig";
+			var localVarPath = "/fieldconfig";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1239,7 +1239,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OrgAuthSettings> GetOrganizationsAuthenticationSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/authentication/settings";
+			var localVarPath = "/organizations/authentication/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1333,7 +1333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OrgAuthSettings>> GetOrganizationsAuthenticationSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/authentication/settings";
+			var localVarPath = "/organizations/authentication/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1406,7 +1406,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get the list of domains that will be allowed to embed PureCloud applications 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>EmbeddedIntegration</returns>
@@ -1419,7 +1419,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get the list of domains that will be allowed to embed PureCloud applications 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>ApiResponse of EmbeddedIntegration</returns>
@@ -1427,7 +1427,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmbeddedIntegration> GetOrganizationsEmbeddedintegrationWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/embeddedintegration";
+			var localVarPath = "/organizations/embeddedintegration";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1499,7 +1499,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get the list of domains that will be allowed to embed PureCloud applications 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>Task of EmbeddedIntegration</returns>
@@ -1513,7 +1513,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get the list of domains that will be allowed to embed PureCloud applications 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>Task of ApiResponse (EmbeddedIntegration)</returns>
@@ -1521,7 +1521,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmbeddedIntegration>> GetOrganizationsEmbeddedintegrationAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/embeddedintegration";
+			var localVarPath = "/organizations/embeddedintegration";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1594,7 +1594,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get organization IP address whitelist settings 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>IpAddressAuthentication</returns>
@@ -1607,7 +1607,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get organization IP address whitelist settings 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>ApiResponse of IpAddressAuthentication</returns>
@@ -1615,7 +1615,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<IpAddressAuthentication> GetOrganizationsIpaddressauthenticationWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/ipaddressauthentication";
+			var localVarPath = "/organizations/ipaddressauthentication";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1687,7 +1687,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get organization IP address whitelist settings 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>Task of IpAddressAuthentication</returns>
@@ -1701,7 +1701,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get organization IP address whitelist settings 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <returns>Task of ApiResponse (IpAddressAuthentication)</returns>
@@ -1709,7 +1709,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<IpAddressAuthentication>> GetOrganizationsIpaddressauthenticationAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/ipaddressauthentication";
+			var localVarPath = "/organizations/ipaddressauthentication";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1808,7 +1808,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (requestId == null)
 				throw new ApiException(400, "Missing required parameter 'requestId' when calling OrganizationApi->GetOrganizationsLimitsChangerequest");
 
-			var localVarPath = "/api/v2/organizations/limits/changerequests/{requestId}";
+			var localVarPath = "/organizations/limits/changerequests/{requestId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1909,7 +1909,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'requestId' when calling OrganizationApi->GetOrganizationsLimitsChangerequest");
 
 
-			var localVarPath = "/api/v2/organizations/limits/changerequests/{requestId}";
+			var localVarPath = "/organizations/limits/changerequests/{requestId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2014,7 +2014,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LimitChangeRequestsEntityListing> GetOrganizationsLimitsChangerequestsWithHttpInfo(long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/organizations/limits/changerequests";
+			var localVarPath = "/organizations/limits/changerequests";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2123,7 +2123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LimitChangeRequestsEntityListing>> GetOrganizationsLimitsChangerequestsAsyncWithHttpInfo(long? after = null, long? before = null, string status = null, int? pageSize = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/organizations/limits/changerequests";
+			var localVarPath = "/organizations/limits/changerequests";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2222,7 +2222,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LimitDocumentation> GetOrganizationsLimitsDocsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/limits/docs";
+			var localVarPath = "/organizations/limits/docs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2316,7 +2316,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LimitDocumentation>> GetOrganizationsLimitsDocsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/limits/docs";
+			var localVarPath = "/organizations/limits/docs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2410,7 +2410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FreeTrialLimitDocs> GetOrganizationsLimitsDocsFreetrialWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/limits/docs/freetrial";
+			var localVarPath = "/organizations/limits/docs/freetrial";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2504,7 +2504,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FreeTrialLimitDocs>> GetOrganizationsLimitsDocsFreetrialAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/limits/docs/freetrial";
+			var localVarPath = "/organizations/limits/docs/freetrial";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2603,7 +2603,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (namespaceName == null)
 				throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespace");
 
-			var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}";
+			var localVarPath = "/organizations/limits/namespaces/{namespaceName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2704,7 +2704,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespace");
 
 
-			var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}";
+			var localVarPath = "/organizations/limits/namespaces/{namespaceName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2804,7 +2804,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (namespaceName == null)
 				throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespaceDefaults");
 
-			var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}/defaults";
+			var localVarPath = "/organizations/limits/namespaces/{namespaceName}/defaults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2905,7 +2905,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'namespaceName' when calling OrganizationApi->GetOrganizationsLimitsNamespaceDefaults");
 
 
-			var localVarPath = "/api/v2/organizations/limits/namespaces/{namespaceName}/defaults";
+			var localVarPath = "/organizations/limits/namespaces/{namespaceName}/defaults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3004,7 +3004,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> GetOrganizationsLimitsNamespacesWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/organizations/limits/namespaces";
+			var localVarPath = "/organizations/limits/namespaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3104,7 +3104,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> GetOrganizationsLimitsNamespacesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/organizations/limits/namespaces";
+			var localVarPath = "/organizations/limits/namespaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3200,7 +3200,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Organization> GetOrganizationsMeWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/me";
+			var localVarPath = "/organizations/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3294,7 +3294,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Organization>> GetOrganizationsMeAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/me";
+			var localVarPath = "/organizations/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3366,7 +3366,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead 
+		/// This route is deprecated, please use /organizations/authentication/settings instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3379,7 +3379,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead 
+		/// This route is deprecated, please use /organizations/authentication/settings instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3388,7 +3388,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OrgWhitelistSettings> GetOrganizationsWhitelistWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/whitelist";
+			var localVarPath = "/organizations/whitelist";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3459,7 +3459,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead 
+		/// This route is deprecated, please use /organizations/authentication/settings instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3473,7 +3473,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead 
+		/// This route is deprecated, please use /organizations/authentication/settings instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3482,7 +3482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OrgWhitelistSettings>> GetOrganizationsWhitelistAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/organizations/whitelist";
+			var localVarPath = "/organizations/whitelist";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3581,7 +3581,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PatchOrganizationsAuthenticationSettings");
 
-			var localVarPath = "/api/v2/organizations/authentication/settings";
+			var localVarPath = "/organizations/authentication/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3687,7 +3687,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PatchOrganizationsAuthenticationSettings");
 
 
-			var localVarPath = "/api/v2/organizations/authentication/settings";
+			var localVarPath = "/organizations/authentication/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3797,7 +3797,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (enabled == null)
 				throw new ApiException(400, "Missing required parameter 'enabled' when calling OrganizationApi->PatchOrganizationsFeature");
 
-			var localVarPath = "/api/v2/organizations/features/{featureName}";
+			var localVarPath = "/organizations/features/{featureName}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3910,7 +3910,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'enabled' when calling OrganizationApi->PatchOrganizationsFeature");
 
 
-			var localVarPath = "/api/v2/organizations/features/{featureName}";
+			var localVarPath = "/organizations/features/{featureName}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3990,7 +3990,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update the list of domains that will be allowed to embed PureCloud applications 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Whitelist settings</param>
@@ -4004,7 +4004,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update the list of domains that will be allowed to embed PureCloud applications 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Whitelist settings</param>
@@ -4016,7 +4016,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PutOrganizationsEmbeddedintegration");
 
-			var localVarPath = "/api/v2/organizations/embeddedintegration";
+			var localVarPath = "/organizations/embeddedintegration";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4094,7 +4094,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update the list of domains that will be allowed to embed PureCloud applications 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Whitelist settings</param>
@@ -4109,7 +4109,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update the list of domains that will be allowed to embed PureCloud applications 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Whitelist settings</param>
@@ -4122,7 +4122,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PutOrganizationsEmbeddedintegration");
 
 
-			var localVarPath = "/api/v2/organizations/embeddedintegration";
+			var localVarPath = "/organizations/embeddedintegration";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4201,7 +4201,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update organization IP address whitelist settings 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">IP address Whitelist settings</param>
@@ -4215,7 +4215,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update organization IP address whitelist settings 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">IP address Whitelist settings</param>
@@ -4227,7 +4227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PutOrganizationsIpaddressauthentication");
 
-			var localVarPath = "/api/v2/organizations/ipaddressauthentication";
+			var localVarPath = "/organizations/ipaddressauthentication";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4305,7 +4305,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update organization IP address whitelist settings 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">IP address Whitelist settings</param>
@@ -4320,7 +4320,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Update organization IP address whitelist settings 
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead
+		/// This route is deprecated, please use /organizations/authentication/settings instead
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">IP address Whitelist settings</param>
@@ -4333,7 +4333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PutOrganizationsIpaddressauthentication");
 
 
-			var localVarPath = "/api/v2/organizations/ipaddressauthentication";
+			var localVarPath = "/organizations/ipaddressauthentication";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4435,7 +4435,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Organization> PutOrganizationsMeWithHttpInfo(Organization body = null)
 		{
 
-			var localVarPath = "/api/v2/organizations/me";
+			var localVarPath = "/organizations/me";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4537,7 +4537,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Organization>> PutOrganizationsMeAsyncWithHttpInfo(Organization body = null)
 		{
 
-			var localVarPath = "/api/v2/organizations/me";
+			var localVarPath = "/organizations/me";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4615,7 +4615,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead 
+		/// This route is deprecated, please use /organizations/authentication/settings instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4629,7 +4629,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead 
+		/// This route is deprecated, please use /organizations/authentication/settings instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4642,7 +4642,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PutOrganizationsWhitelist");
 
-			var localVarPath = "/api/v2/organizations/whitelist";
+			var localVarPath = "/organizations/whitelist";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4719,7 +4719,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead 
+		/// This route is deprecated, please use /organizations/authentication/settings instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4734,7 +4734,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// This route is deprecated, please use /api/v2/organizations/authentication/settings instead 
+		/// This route is deprecated, please use /organizations/authentication/settings instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -4748,7 +4748,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationApi->PutOrganizationsWhitelist");
 
 
-			var localVarPath = "/api/v2/organizations/whitelist";
+			var localVarPath = "/organizations/whitelist";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -1186,7 +1186,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (summarySettingId == null)
 				throw new ApiException(400, "Missing required parameter 'summarySettingId' when calling AIStudioApi->DeleteConversationsSummariesSetting");
 
-			var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+			var localVarPath = "/conversations/summaries/settings/{summarySettingId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1286,7 +1286,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'summarySettingId' when calling AIStudioApi->DeleteConversationsSummariesSetting");
 
 
-			var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+			var localVarPath = "/conversations/summaries/settings/{summarySettingId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1388,7 +1388,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (guideId == null)
 				throw new ApiException(400, "Missing required parameter 'guideId' when calling AIStudioApi->DeleteGuideJobs");
 
-			var localVarPath = "/api/v2/guides/{guideId}/jobs";
+			var localVarPath = "/guides/{guideId}/jobs";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1491,7 +1491,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'guideId' when calling AIStudioApi->DeleteGuideJobs");
 
 
-			var localVarPath = "/api/v2/guides/{guideId}/jobs";
+			var localVarPath = "/guides/{guideId}/jobs";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1591,7 +1591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (summarySettingId == null)
 				throw new ApiException(400, "Missing required parameter 'summarySettingId' when calling AIStudioApi->GetConversationsSummariesSetting");
 
-			var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+			var localVarPath = "/conversations/summaries/settings/{summarySettingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1692,7 +1692,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'summarySettingId' when calling AIStudioApi->GetConversationsSummariesSetting");
 
 
-			var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+			var localVarPath = "/conversations/summaries/settings/{summarySettingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1799,7 +1799,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SummarySettingEntityListing> GetConversationsSummariesSettingsWithHttpInfo(string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/summaries/settings";
+			var localVarPath = "/conversations/summaries/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1911,7 +1911,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SummarySettingEntityListing>> GetConversationsSummariesSettingsAsyncWithHttpInfo(string language = null, string name = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/conversations/summaries/settings";
+			var localVarPath = "/conversations/summaries/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2018,7 +2018,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (guideId == null)
 				throw new ApiException(400, "Missing required parameter 'guideId' when calling AIStudioApi->GetGuide");
 
-			var localVarPath = "/api/v2/guides/{guideId}";
+			var localVarPath = "/guides/{guideId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2121,7 +2121,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'guideId' when calling AIStudioApi->GetGuide");
 
 
-			var localVarPath = "/api/v2/guides/{guideId}";
+			var localVarPath = "/guides/{guideId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2228,7 +2228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling AIStudioApi->GetGuideJob");
 
-			var localVarPath = "/api/v2/guides/{guideId}/jobs/{jobId}";
+			var localVarPath = "/guides/{guideId}/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2338,7 +2338,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling AIStudioApi->GetGuideJob");
 
 
-			var localVarPath = "/api/v2/guides/{guideId}/jobs/{jobId}";
+			var localVarPath = "/guides/{guideId}/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2446,7 +2446,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling AIStudioApi->GetGuideVersion");
 
-			var localVarPath = "/api/v2/guides/{guideId}/versions/{versionId}";
+			var localVarPath = "/guides/{guideId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2556,7 +2556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling AIStudioApi->GetGuideVersion");
 
 
-			var localVarPath = "/api/v2/guides/{guideId}/versions/{versionId}";
+			var localVarPath = "/guides/{guideId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2669,7 +2669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling AIStudioApi->GetGuideVersionJob");
 
-			var localVarPath = "/api/v2/guides/{guideId}/versions/{versionId}/jobs/{jobId}";
+			var localVarPath = "/guides/{guideId}/versions/{versionId}/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2786,7 +2786,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling AIStudioApi->GetGuideVersionJob");
 
 
-			var localVarPath = "/api/v2/guides/{guideId}/versions/{versionId}/jobs/{jobId}";
+			var localVarPath = "/guides/{guideId}/versions/{versionId}/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2899,7 +2899,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GuideEntityListing> GetGuidesWithHttpInfo(string name = null, string nameContains = null, string status = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/guides";
+			var localVarPath = "/guides";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3016,7 +3016,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GuideEntityListing>> GetGuidesAsyncWithHttpInfo(string name = null, string nameContains = null, string status = null, string sortBy = null, string sortOrder = null, int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/guides";
+			var localVarPath = "/guides";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3124,7 +3124,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling AIStudioApi->GetGuidesJob");
 
-			var localVarPath = "/api/v2/guides/jobs/{jobId}";
+			var localVarPath = "/guides/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3227,7 +3227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling AIStudioApi->GetGuidesJob");
 
 
-			var localVarPath = "/api/v2/guides/jobs/{jobId}";
+			var localVarPath = "/guides/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3334,7 +3334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PatchGuide");
 
-			var localVarPath = "/api/v2/guides/{guideId}";
+			var localVarPath = "/guides/{guideId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3449,7 +3449,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PatchGuide");
 
 
-			var localVarPath = "/api/v2/guides/{guideId}";
+			var localVarPath = "/guides/{guideId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3567,7 +3567,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PatchGuideVersion");
 
-			var localVarPath = "/api/v2/guides/{guideId}/versions/{versionId}";
+			var localVarPath = "/guides/{guideId}/versions/{versionId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3689,7 +3689,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PatchGuideVersion");
 
 
-			var localVarPath = "/api/v2/guides/{guideId}/versions/{versionId}";
+			var localVarPath = "/guides/{guideId}/versions/{versionId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3795,7 +3795,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostConversationsSummariesPreview");
 
-			var localVarPath = "/api/v2/conversations/summaries/preview";
+			var localVarPath = "/conversations/summaries/preview";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3900,7 +3900,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostConversationsSummariesPreview");
 
 
-			var localVarPath = "/api/v2/conversations/summaries/preview";
+			var localVarPath = "/conversations/summaries/preview";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4005,7 +4005,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostConversationsSummariesSettings");
 
-			var localVarPath = "/api/v2/conversations/summaries/settings";
+			var localVarPath = "/conversations/summaries/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4111,7 +4111,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostConversationsSummariesSettings");
 
 
-			var localVarPath = "/api/v2/conversations/summaries/settings";
+			var localVarPath = "/conversations/summaries/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4228,7 +4228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostGuideVersionJobs");
 
-			var localVarPath = "/api/v2/guides/{guideId}/versions/{versionId}/jobs";
+			var localVarPath = "/guides/{guideId}/versions/{versionId}/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4350,7 +4350,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostGuideVersionJobs");
 
 
-			var localVarPath = "/api/v2/guides/{guideId}/versions/{versionId}/jobs";
+			var localVarPath = "/guides/{guideId}/versions/{versionId}/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4461,7 +4461,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (guideId == null)
 				throw new ApiException(400, "Missing required parameter 'guideId' when calling AIStudioApi->PostGuideVersions");
 
-			var localVarPath = "/api/v2/guides/{guideId}/versions";
+			var localVarPath = "/guides/{guideId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4572,7 +4572,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'guideId' when calling AIStudioApi->PostGuideVersions");
 
 
-			var localVarPath = "/api/v2/guides/{guideId}/versions";
+			var localVarPath = "/guides/{guideId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4680,7 +4680,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostGuides");
 
-			var localVarPath = "/api/v2/guides";
+			var localVarPath = "/guides";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4788,7 +4788,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostGuides");
 
 
-			var localVarPath = "/api/v2/guides";
+			var localVarPath = "/guides";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4895,7 +4895,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostGuidesJobs");
 
-			var localVarPath = "/api/v2/guides/jobs";
+			var localVarPath = "/guides/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5003,7 +5003,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PostGuidesJobs");
 
 
-			var localVarPath = "/api/v2/guides/jobs";
+			var localVarPath = "/guides/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5113,7 +5113,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PutConversationsSummariesSetting");
 
-			var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+			var localVarPath = "/conversations/summaries/settings/{summarySettingId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5226,7 +5226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AIStudioApi->PutConversationsSummariesSetting");
 
 
-			var localVarPath = "/api/v2/conversations/summaries/settings/{summarySettingId}";
+			var localVarPath = "/conversations/summaries/settings/{summarySettingId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

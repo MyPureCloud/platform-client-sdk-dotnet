@@ -778,7 +778,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (clientId == null)
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->DeleteOauthClient");
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}";
+			var localVarPath = "/oauth/clients/{clientId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -878,7 +878,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->DeleteOauthClient");
 
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}";
+			var localVarPath = "/oauth/clients/{clientId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -980,7 +980,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (clientId == null)
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetOauthAuthorization");
 
-			var localVarPath = "/api/v2/oauth/authorizations/{clientId}";
+			var localVarPath = "/oauth/authorizations/{clientId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1084,7 +1084,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetOauthAuthorization");
 
 
-			var localVarPath = "/api/v2/oauth/authorizations/{clientId}";
+			var localVarPath = "/oauth/authorizations/{clientId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1182,7 +1182,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OAuthAuthorizationListing> GetOauthAuthorizationsWithHttpInfo(string acceptLanguage = null)
 		{
 
-			var localVarPath = "/api/v2/oauth/authorizations";
+			var localVarPath = "/oauth/authorizations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1279,7 +1279,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OAuthAuthorizationListing>> GetOauthAuthorizationsAsyncWithHttpInfo(string acceptLanguage = null)
 		{
 
-			var localVarPath = "/api/v2/oauth/authorizations";
+			var localVarPath = "/oauth/authorizations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1379,7 +1379,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (clientId == null)
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetOauthClient");
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}";
+			var localVarPath = "/oauth/clients/{clientId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1480,7 +1480,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetOauthClient");
 
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}";
+			var localVarPath = "/oauth/clients/{clientId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1585,7 +1585,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (clientId == null)
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetOauthClientUsageQueryResult");
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}/usage/query/results/{executionId}";
+			var localVarPath = "/oauth/clients/{clientId}/usage/query/results/{executionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1693,7 +1693,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetOauthClientUsageQueryResult");
 
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}/usage/query/results/{executionId}";
+			var localVarPath = "/oauth/clients/{clientId}/usage/query/results/{executionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1796,7 +1796,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (clientId == null)
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetOauthClientUsageSummary");
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}/usage/summary";
+			var localVarPath = "/oauth/clients/{clientId}/usage/summary";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1900,7 +1900,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->GetOauthClientUsageSummary");
 
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}/usage/summary";
+			var localVarPath = "/oauth/clients/{clientId}/usage/summary";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1996,7 +1996,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OAuthClientEntityListing> GetOauthClientsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/oauth/clients";
+			var localVarPath = "/oauth/clients";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2090,7 +2090,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OAuthClientEntityListing>> GetOauthClientsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/oauth/clients";
+			var localVarPath = "/oauth/clients";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2191,7 +2191,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scopeId == null)
 				throw new ApiException(400, "Missing required parameter 'scopeId' when calling OAuthApi->GetOauthScope");
 
-			var localVarPath = "/api/v2/oauth/scopes/{scopeId}";
+			var localVarPath = "/oauth/scopes/{scopeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2295,7 +2295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scopeId' when calling OAuthApi->GetOauthScope");
 
 
-			var localVarPath = "/api/v2/oauth/scopes/{scopeId}";
+			var localVarPath = "/oauth/scopes/{scopeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2393,7 +2393,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OAuthScopeListing> GetOauthScopesWithHttpInfo(string acceptLanguage = null)
 		{
 
-			var localVarPath = "/api/v2/oauth/scopes";
+			var localVarPath = "/oauth/scopes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2490,7 +2490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OAuthScopeListing>> GetOauthScopesAsyncWithHttpInfo(string acceptLanguage = null)
 		{
 
-			var localVarPath = "/api/v2/oauth/scopes";
+			var localVarPath = "/oauth/scopes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2590,7 +2590,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (clientId == null)
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PostOauthClientSecret");
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}/secret";
+			var localVarPath = "/oauth/clients/{clientId}/secret";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2691,7 +2691,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling OAuthApi->PostOauthClientSecret");
 
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}/secret";
+			var localVarPath = "/oauth/clients/{clientId}/secret";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2796,7 +2796,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PostOauthClientUsageQuery");
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}/usage/query";
+			var localVarPath = "/oauth/clients/{clientId}/usage/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2909,7 +2909,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PostOauthClientUsageQuery");
 
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}/usage/query";
+			var localVarPath = "/oauth/clients/{clientId}/usage/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3015,7 +3015,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PostOauthClients");
 
-			var localVarPath = "/api/v2/oauth/clients";
+			var localVarPath = "/oauth/clients";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3121,7 +3121,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PostOauthClients");
 
 
-			var localVarPath = "/api/v2/oauth/clients";
+			var localVarPath = "/oauth/clients";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3231,7 +3231,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PutOauthClient");
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}";
+			var localVarPath = "/oauth/clients/{clientId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3344,7 +3344,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OAuthApi->PutOauthClient");
 
 
-			var localVarPath = "/api/v2/oauth/clients/{clientId}";
+			var localVarPath = "/oauth/clients/{clientId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

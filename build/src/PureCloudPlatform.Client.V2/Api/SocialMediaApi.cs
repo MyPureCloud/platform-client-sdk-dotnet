@@ -2874,7 +2874,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (escalationRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'escalationRuleId' when calling SocialMediaApi->DeleteSocialmediaEscalationrule");
 
-			var localVarPath = "/api/v2/socialmedia/escalationrules/{escalationRuleId}";
+			var localVarPath = "/socialmedia/escalationrules/{escalationRuleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2974,7 +2974,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'escalationRuleId' when calling SocialMediaApi->DeleteSocialmediaEscalationrule");
 
 
-			var localVarPath = "/api/v2/socialmedia/escalationrules/{escalationRuleId}";
+			var localVarPath = "/socialmedia/escalationrules/{escalationRuleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3075,7 +3075,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling SocialMediaApi->DeleteSocialmediaMessage");
 
-			var localVarPath = "/api/v2/socialmedia/messages/{messageId}";
+			var localVarPath = "/socialmedia/messages/{messageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3177,7 +3177,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling SocialMediaApi->DeleteSocialmediaMessage");
 
 
-			var localVarPath = "/api/v2/socialmedia/messages/{messageId}";
+			var localVarPath = "/socialmedia/messages/{messageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3278,7 +3278,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->DeleteSocialmediaTopic");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}";
+			var localVarPath = "/socialmedia/topics/{topicId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3381,7 +3381,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->DeleteSocialmediaTopic");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}";
+			var localVarPath = "/socialmedia/topics/{topicId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3488,7 +3488,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (facebookIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'facebookIngestionRuleId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3598,7 +3598,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'facebookIngestionRuleId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3706,7 +3706,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (instagramIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'instagramIngestionRuleId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3816,7 +3816,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'instagramIngestionRuleId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3924,7 +3924,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (openId == null)
 				throw new ApiException(400, "Missing required parameter 'openId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesOpenOpenId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4034,7 +4034,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'openId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesOpenOpenId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4142,7 +4142,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (twitterIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'twitterIngestionRuleId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4252,7 +4252,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'twitterIngestionRuleId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4354,7 +4354,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SocialMediaApi->GetSocialmediaAnalyticsAggregatesJob");
 
-			var localVarPath = "/api/v2/socialmedia/analytics/aggregates/jobs/{jobId}";
+			var localVarPath = "/socialmedia/analytics/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4455,7 +4455,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SocialMediaApi->GetSocialmediaAnalyticsAggregatesJob");
 
 
-			var localVarPath = "/api/v2/socialmedia/analytics/aggregates/jobs/{jobId}";
+			var localVarPath = "/socialmedia/analytics/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4557,7 +4557,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SocialMediaApi->GetSocialmediaAnalyticsAggregatesJobResults");
 
-			var localVarPath = "/api/v2/socialmedia/analytics/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/socialmedia/analytics/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4661,7 +4661,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SocialMediaApi->GetSocialmediaAnalyticsAggregatesJobResults");
 
 
-			var localVarPath = "/api/v2/socialmedia/analytics/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/socialmedia/analytics/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4762,7 +4762,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SocialMediaApi->GetSocialmediaAnalyticsMessagesJob");
 
-			var localVarPath = "/api/v2/socialmedia/analytics/messages/jobs/{jobId}";
+			var localVarPath = "/socialmedia/analytics/messages/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4863,7 +4863,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SocialMediaApi->GetSocialmediaAnalyticsMessagesJob");
 
 
-			var localVarPath = "/api/v2/socialmedia/analytics/messages/jobs/{jobId}";
+			var localVarPath = "/socialmedia/analytics/messages/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4965,7 +4965,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SocialMediaApi->GetSocialmediaAnalyticsMessagesJobResults");
 
-			var localVarPath = "/api/v2/socialmedia/analytics/messages/jobs/{jobId}/results";
+			var localVarPath = "/socialmedia/analytics/messages/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5069,7 +5069,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SocialMediaApi->GetSocialmediaAnalyticsMessagesJobResults");
 
 
-			var localVarPath = "/api/v2/socialmedia/analytics/messages/jobs/{jobId}/results";
+			var localVarPath = "/socialmedia/analytics/messages/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5172,7 +5172,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (escalationRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'escalationRuleId' when calling SocialMediaApi->GetSocialmediaEscalationrule");
 
-			var localVarPath = "/api/v2/socialmedia/escalationrules/{escalationRuleId}";
+			var localVarPath = "/socialmedia/escalationrules/{escalationRuleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5276,7 +5276,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'escalationRuleId' when calling SocialMediaApi->GetSocialmediaEscalationrule");
 
 
-			var localVarPath = "/api/v2/socialmedia/escalationrules/{escalationRuleId}";
+			var localVarPath = "/socialmedia/escalationrules/{escalationRuleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5381,7 +5381,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (divisionId == null)
 				throw new ApiException(400, "Missing required parameter 'divisionId' when calling SocialMediaApi->GetSocialmediaEscalationrules");
 
-			var localVarPath = "/api/v2/socialmedia/escalationrules";
+			var localVarPath = "/socialmedia/escalationrules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5488,7 +5488,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'divisionId' when calling SocialMediaApi->GetSocialmediaEscalationrules");
 
 
-			var localVarPath = "/api/v2/socialmedia/escalationrules";
+			var localVarPath = "/socialmedia/escalationrules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5592,7 +5592,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->GetSocialmediaTopic");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}";
+			var localVarPath = "/socialmedia/topics/{topicId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5696,7 +5696,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->GetSocialmediaTopic");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}";
+			var localVarPath = "/socialmedia/topics/{topicId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5803,7 +5803,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrules");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5913,7 +5913,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrules");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6023,7 +6023,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (facebookIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'facebookIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6134,7 +6134,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'facebookIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6248,7 +6248,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dataIngestionRuleVersion == null)
 				throw new ApiException(400, "Missing required parameter 'dataIngestionRuleVersion' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}/versions/{dataIngestionRuleVersion}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}/versions/{dataIngestionRuleVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6366,7 +6366,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dataIngestionRuleVersion' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}/versions/{dataIngestionRuleVersion}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}/versions/{dataIngestionRuleVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6480,7 +6480,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (facebookIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'facebookIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}/versions";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6597,7 +6597,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'facebookIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}/versions";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6708,7 +6708,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (instagramIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'instagramIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6819,7 +6819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'instagramIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6933,7 +6933,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dataIngestionRuleVersion == null)
 				throw new ApiException(400, "Missing required parameter 'dataIngestionRuleVersion' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersion");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions/{dataIngestionRuleVersion}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions/{dataIngestionRuleVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7051,7 +7051,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dataIngestionRuleVersion' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersion");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions/{dataIngestionRuleVersion}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions/{dataIngestionRuleVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7165,7 +7165,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (instagramIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'instagramIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersions");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7282,7 +7282,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'instagramIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersions");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7393,7 +7393,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (openId == null)
 				throw new ApiException(400, "Missing required parameter 'openId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesOpenOpenId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7504,7 +7504,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'openId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesOpenOpenId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7618,7 +7618,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dataIngestionRuleVersion == null)
 				throw new ApiException(400, "Missing required parameter 'dataIngestionRuleVersion' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesOpenOpenIdVersion");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions/{dataIngestionRuleVersion}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions/{dataIngestionRuleVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7736,7 +7736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dataIngestionRuleVersion' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesOpenOpenIdVersion");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions/{dataIngestionRuleVersion}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions/{dataIngestionRuleVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7850,7 +7850,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (openId == null)
 				throw new ApiException(400, "Missing required parameter 'openId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesOpenOpenIdVersions");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7967,7 +7967,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'openId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesOpenOpenIdVersions");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8078,7 +8078,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (twitterIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'twitterIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8189,7 +8189,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'twitterIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8303,7 +8303,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dataIngestionRuleVersion == null)
 				throw new ApiException(400, "Missing required parameter 'dataIngestionRuleVersion' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersion");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}/versions/{dataIngestionRuleVersion}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}/versions/{dataIngestionRuleVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8421,7 +8421,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dataIngestionRuleVersion' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersion");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}/versions/{dataIngestionRuleVersion}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}/versions/{dataIngestionRuleVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8535,7 +8535,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (twitterIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'twitterIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersions");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}/versions";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8652,7 +8652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'twitterIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleIdVersions");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}/versions";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8759,7 +8759,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SocialTopicResponseEntityListing> GetSocialmediaTopicsWithHttpInfo(int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null)
 		{
 
-			var localVarPath = "/api/v2/socialmedia/topics";
+			var localVarPath = "/socialmedia/topics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8865,7 +8865,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SocialTopicResponseEntityListing>> GetSocialmediaTopicsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null)
 		{
 
-			var localVarPath = "/api/v2/socialmedia/topics";
+			var localVarPath = "/socialmedia/topics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8970,7 +8970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PatchSocialmediaTopic");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}";
+			var localVarPath = "/socialmedia/topics/{topicId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9079,7 +9079,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PatchSocialmediaTopic");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}";
+			var localVarPath = "/socialmedia/topics/{topicId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9192,7 +9192,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (facebookIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'facebookIngestionRuleId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9308,7 +9308,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'facebookIngestionRuleId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9422,7 +9422,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (instagramIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'instagramIngestionRuleId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9538,7 +9538,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'instagramIngestionRuleId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9652,7 +9652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (openId == null)
 				throw new ApiException(400, "Missing required parameter 'openId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesOpenOpenId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9768,7 +9768,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'openId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesOpenOpenId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9882,7 +9882,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (twitterIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'twitterIngestionRuleId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9998,7 +9998,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'twitterIngestionRuleId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10105,7 +10105,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaAnalyticsAggregatesJobs");
 
-			var localVarPath = "/api/v2/socialmedia/analytics/aggregates/jobs";
+			var localVarPath = "/socialmedia/analytics/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10211,7 +10211,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaAnalyticsAggregatesJobs");
 
 
-			var localVarPath = "/api/v2/socialmedia/analytics/aggregates/jobs";
+			var localVarPath = "/socialmedia/analytics/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10316,7 +10316,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaAnalyticsMessagesJobs");
 
-			var localVarPath = "/api/v2/socialmedia/analytics/messages/jobs";
+			var localVarPath = "/socialmedia/analytics/messages/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10422,7 +10422,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaAnalyticsMessagesJobs");
 
 
-			var localVarPath = "/api/v2/socialmedia/analytics/messages/jobs";
+			var localVarPath = "/socialmedia/analytics/messages/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10524,7 +10524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EscalationRuleResponse> PostSocialmediaEscalationrulesWithHttpInfo(EscalationRuleRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/socialmedia/escalationrules";
+			var localVarPath = "/socialmedia/escalationrules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10626,7 +10626,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EscalationRuleResponse>> PostSocialmediaEscalationrulesAsyncWithHttpInfo(EscalationRuleRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/socialmedia/escalationrules";
+			var localVarPath = "/socialmedia/escalationrules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10733,7 +10733,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (divisionId == null)
 				throw new ApiException(400, "Missing required parameter 'divisionId' when calling SocialMediaApi->PostSocialmediaEscalationsMessages");
 
-			var localVarPath = "/api/v2/socialmedia/escalations/messages";
+			var localVarPath = "/socialmedia/escalations/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10842,7 +10842,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'divisionId' when calling SocialMediaApi->PostSocialmediaEscalationsMessages");
 
 
-			var localVarPath = "/api/v2/socialmedia/escalations/messages";
+			var localVarPath = "/socialmedia/escalations/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10950,7 +10950,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesFacebook");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11059,7 +11059,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesFacebook");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11167,7 +11167,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesInstagram");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11276,7 +11276,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesInstagram");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11384,7 +11384,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpen");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11493,7 +11493,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpen");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11609,7 +11609,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/messages/bulk";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/messages/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11729,7 +11729,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/messages/bulk";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/messages/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11846,7 +11846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/reactions/bulk";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/reactions/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11966,7 +11966,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesOpenRuleIdReactionsBulk");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/reactions/bulk";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{ruleId}/reactions/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12075,7 +12075,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesTwitter");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12184,7 +12184,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesTwitter");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12287,7 +12287,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SocialTopicResponse> PostSocialmediaTopicsWithHttpInfo(SocialTopicRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/socialmedia/topics";
+			var localVarPath = "/socialmedia/topics";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12389,7 +12389,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SocialTopicResponse>> PostSocialmediaTopicsAsyncWithHttpInfo(SocialTopicRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/socialmedia/topics";
+			var localVarPath = "/socialmedia/topics";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12494,7 +12494,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaTwitterHistoricalTweets");
 
-			var localVarPath = "/api/v2/socialmedia/twitter/historical/tweets";
+			var localVarPath = "/socialmedia/twitter/historical/tweets";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12600,7 +12600,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SocialMediaApi->PostSocialmediaTwitterHistoricalTweets");
 
 
-			var localVarPath = "/api/v2/socialmedia/twitter/historical/tweets";
+			var localVarPath = "/socialmedia/twitter/historical/tweets";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12707,7 +12707,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (escalationRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'escalationRuleId' when calling SocialMediaApi->PutSocialmediaEscalationrule");
 
-			var localVarPath = "/api/v2/socialmedia/escalationrules/{escalationRuleId}";
+			var localVarPath = "/socialmedia/escalationrules/{escalationRuleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12816,7 +12816,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'escalationRuleId' when calling SocialMediaApi->PutSocialmediaEscalationrule");
 
 
-			var localVarPath = "/api/v2/socialmedia/escalationrules/{escalationRuleId}";
+			var localVarPath = "/socialmedia/escalationrules/{escalationRuleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12929,7 +12929,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (facebookIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'facebookIngestionRuleId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13045,7 +13045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'facebookIngestionRuleId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/facebook/{facebookIngestionRuleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13159,7 +13159,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (instagramIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'instagramIngestionRuleId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13275,7 +13275,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'instagramIngestionRuleId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/instagram/{instagramIngestionRuleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13389,7 +13389,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (openId == null)
 				throw new ApiException(400, "Missing required parameter 'openId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesOpenOpenId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13505,7 +13505,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'openId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesOpenOpenId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/open/{openId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13619,7 +13619,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (twitterIngestionRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'twitterIngestionRuleId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId");
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13735,7 +13735,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'twitterIngestionRuleId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId");
 
 
-			var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
+			var localVarPath = "/socialmedia/topics/{topicId}/dataingestionrules/twitter/{twitterIngestionRuleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

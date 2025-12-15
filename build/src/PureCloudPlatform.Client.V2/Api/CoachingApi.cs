@@ -1283,7 +1283,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (appointmentId == null)
 				throw new ApiException(400, "Missing required parameter 'appointmentId' when calling CoachingApi->DeleteCoachingAppointment");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1384,7 +1384,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'appointmentId' when calling CoachingApi->DeleteCoachingAppointment");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1488,7 +1488,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (annotationId == null)
 				throw new ApiException(400, "Missing required parameter 'annotationId' when calling CoachingApi->DeleteCoachingAppointmentAnnotation");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}/annotations/{annotationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1595,7 +1595,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'annotationId' when calling CoachingApi->DeleteCoachingAppointmentAnnotation");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}/annotations/{annotationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1696,7 +1696,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (appointmentId == null)
 				throw new ApiException(400, "Missing required parameter 'appointmentId' when calling CoachingApi->GetCoachingAppointment");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1797,7 +1797,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'appointmentId' when calling CoachingApi->GetCoachingAppointment");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1902,7 +1902,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (annotationId == null)
 				throw new ApiException(400, "Missing required parameter 'annotationId' when calling CoachingApi->GetCoachingAppointmentAnnotation");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}/annotations/{annotationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2010,7 +2010,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'annotationId' when calling CoachingApi->GetCoachingAppointmentAnnotation");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}/annotations/{annotationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2115,7 +2115,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (appointmentId == null)
 				throw new ApiException(400, "Missing required parameter 'appointmentId' when calling CoachingApi->GetCoachingAppointmentAnnotations");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/annotations";
+			var localVarPath = "/coaching/appointments/{appointmentId}/annotations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2222,7 +2222,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'appointmentId' when calling CoachingApi->GetCoachingAppointmentAnnotations");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/annotations";
+			var localVarPath = "/coaching/appointments/{appointmentId}/annotations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2328,7 +2328,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (appointmentId == null)
 				throw new ApiException(400, "Missing required parameter 'appointmentId' when calling CoachingApi->GetCoachingAppointmentStatuses");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/statuses";
+			var localVarPath = "/coaching/appointments/{appointmentId}/statuses";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2435,7 +2435,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'appointmentId' when calling CoachingApi->GetCoachingAppointmentStatuses");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/statuses";
+			var localVarPath = "/coaching/appointments/{appointmentId}/statuses";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2557,7 +2557,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userIds == null)
 				throw new ApiException(400, "Missing required parameter 'userIds' when calling CoachingApi->GetCoachingAppointments");
 
-			var localVarPath = "/api/v2/coaching/appointments";
+			var localVarPath = "/coaching/appointments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2688,7 +2688,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userIds' when calling CoachingApi->GetCoachingAppointments");
 
 
-			var localVarPath = "/api/v2/coaching/appointments";
+			var localVarPath = "/coaching/appointments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2813,7 +2813,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CoachingAppointmentResponseList> GetCoachingAppointmentsMeWithHttpInfo(string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
 		{
 
-			var localVarPath = "/api/v2/coaching/appointments/me";
+			var localVarPath = "/coaching/appointments/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2937,7 +2937,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CoachingAppointmentResponseList>> GetCoachingAppointmentsMeAsyncWithHttpInfo(string interval = null, int? pageNumber = null, int? pageSize = null, List<string> statuses = null, List<string> facilitatorIds = null, string sortOrder = null, List<string> relationships = null, string completionInterval = null, string overdue = null, string intervalCondition = null)
 		{
 
-			var localVarPath = "/api/v2/coaching/appointments/me";
+			var localVarPath = "/coaching/appointments/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3048,7 +3048,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (notificationId == null)
 				throw new ApiException(400, "Missing required parameter 'notificationId' when calling CoachingApi->GetCoachingNotification");
 
-			var localVarPath = "/api/v2/coaching/notifications/{notificationId}";
+			var localVarPath = "/coaching/notifications/{notificationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3152,7 +3152,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'notificationId' when calling CoachingApi->GetCoachingNotification");
 
 
-			var localVarPath = "/api/v2/coaching/notifications/{notificationId}";
+			var localVarPath = "/coaching/notifications/{notificationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3254,7 +3254,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CoachingNotificationList> GetCoachingNotificationsWithHttpInfo(int? pageNumber = null, int? pageSize = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/coaching/notifications";
+			var localVarPath = "/coaching/notifications";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3357,7 +3357,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CoachingNotificationList>> GetCoachingNotificationsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/coaching/notifications";
+			var localVarPath = "/coaching/notifications";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3459,7 +3459,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling CoachingApi->GetCoachingScheduleslotsJob");
 
-			var localVarPath = "/api/v2/coaching/scheduleslots/jobs/{jobId}";
+			var localVarPath = "/coaching/scheduleslots/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3560,7 +3560,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling CoachingApi->GetCoachingScheduleslotsJob");
 
 
-			var localVarPath = "/api/v2/coaching/scheduleslots/jobs/{jobId}";
+			var localVarPath = "/coaching/scheduleslots/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3665,7 +3665,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PatchCoachingAppointment");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3778,7 +3778,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PatchCoachingAppointment");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3894,7 +3894,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PatchCoachingAppointmentAnnotation");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}/annotations/{annotationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4014,7 +4014,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PatchCoachingAppointmentAnnotation");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/annotations/{annotationId}";
+			var localVarPath = "/coaching/appointments/{appointmentId}/annotations/{annotationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4126,7 +4126,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PatchCoachingAppointmentStatus");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/status";
+			var localVarPath = "/coaching/appointments/{appointmentId}/status";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4239,7 +4239,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PatchCoachingAppointmentStatus");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/status";
+			var localVarPath = "/coaching/appointments/{appointmentId}/status";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4350,7 +4350,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PatchCoachingNotification");
 
-			var localVarPath = "/api/v2/coaching/notifications/{notificationId}";
+			var localVarPath = "/coaching/notifications/{notificationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4463,7 +4463,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PatchCoachingNotification");
 
 
-			var localVarPath = "/api/v2/coaching/notifications/{notificationId}";
+			var localVarPath = "/coaching/notifications/{notificationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4574,7 +4574,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingAppointmentAnnotations");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/annotations";
+			var localVarPath = "/coaching/appointments/{appointmentId}/annotations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4687,7 +4687,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingAppointmentAnnotations");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/annotations";
+			var localVarPath = "/coaching/appointments/{appointmentId}/annotations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4798,7 +4798,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingAppointmentConversations");
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/conversations";
+			var localVarPath = "/coaching/appointments/{appointmentId}/conversations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4911,7 +4911,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingAppointmentConversations");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/{appointmentId}/conversations";
+			var localVarPath = "/coaching/appointments/{appointmentId}/conversations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5017,7 +5017,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingAppointments");
 
-			var localVarPath = "/api/v2/coaching/appointments";
+			var localVarPath = "/coaching/appointments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5123,7 +5123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingAppointments");
 
 
-			var localVarPath = "/api/v2/coaching/appointments";
+			var localVarPath = "/coaching/appointments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5228,7 +5228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingAppointmentsAggregatesQuery");
 
-			var localVarPath = "/api/v2/coaching/appointments/aggregates/query";
+			var localVarPath = "/coaching/appointments/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5334,7 +5334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingAppointmentsAggregatesQuery");
 
 
-			var localVarPath = "/api/v2/coaching/appointments/aggregates/query";
+			var localVarPath = "/coaching/appointments/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5439,7 +5439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingScheduleslotsJobs");
 
-			var localVarPath = "/api/v2/coaching/scheduleslots/jobs";
+			var localVarPath = "/coaching/scheduleslots/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5545,7 +5545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingScheduleslotsJobs");
 
 
-			var localVarPath = "/api/v2/coaching/scheduleslots/jobs";
+			var localVarPath = "/coaching/scheduleslots/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5650,7 +5650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingScheduleslotsQuery");
 
-			var localVarPath = "/api/v2/coaching/scheduleslots/query";
+			var localVarPath = "/coaching/scheduleslots/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5756,7 +5756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling CoachingApi->PostCoachingScheduleslotsQuery");
 
 
-			var localVarPath = "/api/v2/coaching/scheduleslots/query";
+			var localVarPath = "/coaching/scheduleslots/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

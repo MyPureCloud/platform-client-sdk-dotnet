@@ -653,7 +653,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling TelephonyApi->GetTelephonyAgentGreetings");
 
-			var localVarPath = "/api/v2/telephony/agents/{agentId}/greetings";
+			var localVarPath = "/telephony/agents/{agentId}/greetings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -756,7 +756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling TelephonyApi->GetTelephonyAgentGreetings");
 
 
-			var localVarPath = "/api/v2/telephony/agents/{agentId}/greetings";
+			var localVarPath = "/telephony/agents/{agentId}/greetings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -853,7 +853,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SelfAgentGreeting> GetTelephonyAgentsGreetingsMeWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/agents/greetings/me";
+			var localVarPath = "/telephony/agents/greetings/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -949,7 +949,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SelfAgentGreeting>> GetTelephonyAgentsGreetingsMeAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/agents/greetings/me";
+			var localVarPath = "/telephony/agents/greetings/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1043,7 +1043,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MediaRegions> GetTelephonyMediaregionsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/mediaregions";
+			var localVarPath = "/telephony/mediaregions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1137,7 +1137,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MediaRegions>> GetTelephonyMediaregionsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/mediaregions";
+			var localVarPath = "/telephony/mediaregions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1236,7 +1236,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyApi->GetTelephonySipmessagesConversation");
 
-			var localVarPath = "/api/v2/telephony/sipmessages/conversations/{conversationId}";
+			var localVarPath = "/telephony/sipmessages/conversations/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1337,7 +1337,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyApi->GetTelephonySipmessagesConversation");
 
 
-			var localVarPath = "/api/v2/telephony/sipmessages/conversations/{conversationId}";
+			var localVarPath = "/telephony/sipmessages/conversations/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1439,7 +1439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyApi->GetTelephonySipmessagesConversationHeaders");
 
-			var localVarPath = "/api/v2/telephony/sipmessages/conversations/{conversationId}/headers";
+			var localVarPath = "/telephony/sipmessages/conversations/{conversationId}/headers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1543,7 +1543,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyApi->GetTelephonySipmessagesConversationHeaders");
 
 
-			var localVarPath = "/api/v2/telephony/sipmessages/conversations/{conversationId}/headers";
+			var localVarPath = "/telephony/sipmessages/conversations/{conversationId}/headers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1657,7 +1657,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dateEnd == null)
 				throw new ApiException(400, "Missing required parameter 'dateEnd' when calling TelephonyApi->GetTelephonySiptraces");
 
-			var localVarPath = "/api/v2/telephony/siptraces";
+			var localVarPath = "/telephony/siptraces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1777,7 +1777,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dateEnd' when calling TelephonyApi->GetTelephonySiptraces");
 
 
-			var localVarPath = "/api/v2/telephony/siptraces";
+			var localVarPath = "/telephony/siptraces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1882,7 +1882,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (downloadId == null)
 				throw new ApiException(400, "Missing required parameter 'downloadId' when calling TelephonyApi->GetTelephonySiptracesDownloadDownloadId");
 
-			var localVarPath = "/api/v2/telephony/siptraces/download/{downloadId}";
+			var localVarPath = "/telephony/siptraces/download/{downloadId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1983,7 +1983,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'downloadId' when calling TelephonyApi->GetTelephonySiptracesDownloadDownloadId");
 
 
-			var localVarPath = "/api/v2/telephony/siptraces/download/{downloadId}";
+			var localVarPath = "/telephony/siptraces/download/{downloadId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2083,7 +2083,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sIPSearchPublicRequest == null)
 				throw new ApiException(400, "Missing required parameter 'sIPSearchPublicRequest' when calling TelephonyApi->PostTelephonySiptracesDownload");
 
-			var localVarPath = "/api/v2/telephony/siptraces/download";
+			var localVarPath = "/telephony/siptraces/download";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2189,7 +2189,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sIPSearchPublicRequest' when calling TelephonyApi->PostTelephonySiptracesDownload");
 
 
-			var localVarPath = "/api/v2/telephony/siptraces/download";
+			var localVarPath = "/telephony/siptraces/download";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2301,7 +2301,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyApi->PutTelephonyAgentGreetings");
 
-			var localVarPath = "/api/v2/telephony/agents/{agentId}/greetings";
+			var localVarPath = "/telephony/agents/{agentId}/greetings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2416,7 +2416,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyApi->PutTelephonyAgentGreetings");
 
 
-			var localVarPath = "/api/v2/telephony/agents/{agentId}/greetings";
+			var localVarPath = "/telephony/agents/{agentId}/greetings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2524,7 +2524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyApi->PutTelephonyAgentsGreetingsMe");
 
-			var localVarPath = "/api/v2/telephony/agents/greetings/me";
+			var localVarPath = "/telephony/agents/greetings/me";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2632,7 +2632,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyApi->PutTelephonyAgentsGreetingsMe");
 
 
-			var localVarPath = "/api/v2/telephony/agents/greetings/me";
+			var localVarPath = "/telephony/agents/greetings/me";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

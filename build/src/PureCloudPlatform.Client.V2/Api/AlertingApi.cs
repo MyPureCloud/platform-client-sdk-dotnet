@@ -862,7 +862,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (alertId == null)
 				throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->DeleteAlertingAlert");
 
-			var localVarPath = "/api/v2/alerting/alerts/{alertId}";
+			var localVarPath = "/alerting/alerts/{alertId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -962,7 +962,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->DeleteAlertingAlert");
 
 
-			var localVarPath = "/api/v2/alerting/alerts/{alertId}";
+			var localVarPath = "/alerting/alerts/{alertId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1057,7 +1057,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteAlertingAlertsAllWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/alerting/alerts/all";
+			var localVarPath = "/alerting/alerts/all";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1151,7 +1151,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteAlertingAlertsAllAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/alerting/alerts/all";
+			var localVarPath = "/alerting/alerts/all";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1249,7 +1249,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleId == null)
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->DeleteAlertingRule");
 
-			var localVarPath = "/api/v2/alerting/rules/{ruleId}";
+			var localVarPath = "/alerting/rules/{ruleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1349,7 +1349,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->DeleteAlertingRule");
 
 
-			var localVarPath = "/api/v2/alerting/rules/{ruleId}";
+			var localVarPath = "/alerting/rules/{ruleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1449,7 +1449,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (alertId == null)
 				throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->GetAlertingAlert");
 
-			var localVarPath = "/api/v2/alerting/alerts/{alertId}";
+			var localVarPath = "/alerting/alerts/{alertId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1550,7 +1550,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->GetAlertingAlert");
 
 
-			var localVarPath = "/api/v2/alerting/alerts/{alertId}";
+			var localVarPath = "/alerting/alerts/{alertId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1650,7 +1650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleId == null)
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->GetAlertingRule");
 
-			var localVarPath = "/api/v2/alerting/rules/{ruleId}";
+			var localVarPath = "/alerting/rules/{ruleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1751,7 +1751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling AlertingApi->GetAlertingRule");
 
 
-			var localVarPath = "/api/v2/alerting/rules/{ruleId}";
+			var localVarPath = "/alerting/rules/{ruleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1853,7 +1853,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (alertId == null)
 				throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->PatchAlertingAlert");
 
-			var localVarPath = "/api/v2/alerting/alerts/{alertId}";
+			var localVarPath = "/alerting/alerts/{alertId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1962,7 +1962,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->PatchAlertingAlert");
 
 
-			var localVarPath = "/api/v2/alerting/alerts/{alertId}";
+			var localVarPath = "/alerting/alerts/{alertId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2065,7 +2065,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> PatchAlertingAlertsAllWithHttpInfo(CommonAllAlertUpdateRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/alerting/alerts/all";
+			var localVarPath = "/alerting/alerts/all";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2167,7 +2167,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchAlertingAlertsAllAsyncWithHttpInfo(CommonAllAlertUpdateRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/alerting/alerts/all";
+			var localVarPath = "/alerting/alerts/all";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2272,7 +2272,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PatchAlertingAlertsBulk");
 
-			var localVarPath = "/api/v2/alerting/alerts/bulk";
+			var localVarPath = "/alerting/alerts/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2378,7 +2378,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PatchAlertingAlertsBulk");
 
 
-			var localVarPath = "/api/v2/alerting/alerts/bulk";
+			var localVarPath = "/alerting/alerts/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2483,7 +2483,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PatchAlertingRulesBulk");
 
-			var localVarPath = "/api/v2/alerting/rules/bulk";
+			var localVarPath = "/alerting/rules/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2589,7 +2589,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PatchAlertingRulesBulk");
 
 
-			var localVarPath = "/api/v2/alerting/rules/bulk";
+			var localVarPath = "/alerting/rules/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2691,7 +2691,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AlertListing> PostAlertingAlertsQueryWithHttpInfo(GetAlertQuery body = null)
 		{
 
-			var localVarPath = "/api/v2/alerting/alerts/query";
+			var localVarPath = "/alerting/alerts/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2793,7 +2793,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AlertListing>> PostAlertingAlertsQueryAsyncWithHttpInfo(GetAlertQuery body = null)
 		{
 
-			var localVarPath = "/api/v2/alerting/alerts/query";
+			var localVarPath = "/alerting/alerts/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2898,7 +2898,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PostAlertingRules");
 
-			var localVarPath = "/api/v2/alerting/rules";
+			var localVarPath = "/alerting/rules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3004,7 +3004,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PostAlertingRules");
 
 
-			var localVarPath = "/api/v2/alerting/rules";
+			var localVarPath = "/alerting/rules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3109,7 +3109,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PostAlertingRulesBulkRemove");
 
-			var localVarPath = "/api/v2/alerting/rules/bulk/remove";
+			var localVarPath = "/alerting/rules/bulk/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3215,7 +3215,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PostAlertingRulesBulkRemove");
 
 
-			var localVarPath = "/api/v2/alerting/rules/bulk/remove";
+			var localVarPath = "/alerting/rules/bulk/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3317,7 +3317,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CommonRuleContainer> PostAlertingRulesQueryWithHttpInfo(GetRulesQuery body = null)
 		{
 
-			var localVarPath = "/api/v2/alerting/rules/query";
+			var localVarPath = "/alerting/rules/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3419,7 +3419,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CommonRuleContainer>> PostAlertingRulesQueryAsyncWithHttpInfo(GetRulesQuery body = null)
 		{
 
-			var localVarPath = "/api/v2/alerting/rules/query";
+			var localVarPath = "/alerting/rules/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3526,7 +3526,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (alertId == null)
 				throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->PutAlertingAlert");
 
-			var localVarPath = "/api/v2/alerting/alerts/{alertId}";
+			var localVarPath = "/alerting/alerts/{alertId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3635,7 +3635,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'alertId' when calling AlertingApi->PutAlertingAlert");
 
 
-			var localVarPath = "/api/v2/alerting/alerts/{alertId}";
+			var localVarPath = "/alerting/alerts/{alertId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3746,7 +3746,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutAlertingRule");
 
-			var localVarPath = "/api/v2/alerting/rules/{ruleId}";
+			var localVarPath = "/alerting/rules/{ruleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3859,7 +3859,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AlertingApi->PutAlertingRule");
 
 
-			var localVarPath = "/api/v2/alerting/rules/{ruleId}";
+			var localVarPath = "/alerting/rules/{ruleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

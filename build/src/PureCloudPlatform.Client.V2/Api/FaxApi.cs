@@ -518,7 +518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->DeleteFaxDocument");
 
-			var localVarPath = "/api/v2/fax/documents/{documentId}";
+			var localVarPath = "/fax/documents/{documentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -618,7 +618,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->DeleteFaxDocument");
 
 
-			var localVarPath = "/api/v2/fax/documents/{documentId}";
+			var localVarPath = "/fax/documents/{documentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -718,7 +718,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetFaxDocument");
 
-			var localVarPath = "/api/v2/fax/documents/{documentId}";
+			var localVarPath = "/fax/documents/{documentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -819,7 +819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetFaxDocument");
 
 
-			var localVarPath = "/api/v2/fax/documents/{documentId}";
+			var localVarPath = "/fax/documents/{documentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -919,7 +919,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetFaxDocumentContent");
 
-			var localVarPath = "/api/v2/fax/documents/{documentId}/content";
+			var localVarPath = "/fax/documents/{documentId}/content";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1020,7 +1020,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling FaxApi->GetFaxDocumentContent");
 
 
-			var localVarPath = "/api/v2/fax/documents/{documentId}/content";
+			var localVarPath = "/fax/documents/{documentId}/content";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1119,7 +1119,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FaxDocumentEntityListing> GetFaxDocumentsWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/fax/documents";
+			var localVarPath = "/fax/documents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1219,7 +1219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FaxDocumentEntityListing>> GetFaxDocumentsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/fax/documents";
+			var localVarPath = "/fax/documents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1315,7 +1315,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FaxConfig> GetFaxSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/fax/settings";
+			var localVarPath = "/fax/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1409,7 +1409,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FaxConfig>> GetFaxSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/fax/settings";
+			var localVarPath = "/fax/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1503,7 +1503,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FaxSummary> GetFaxSummaryWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/fax/summary";
+			var localVarPath = "/fax/summary";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1597,7 +1597,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetFaxSummaryAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/fax/summary";
+			var localVarPath = "/fax/summary";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1701,7 +1701,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling FaxApi->PutFaxDocument");
 
-			var localVarPath = "/api/v2/fax/documents/{documentId}";
+			var localVarPath = "/fax/documents/{documentId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1814,7 +1814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling FaxApi->PutFaxDocument");
 
 
-			var localVarPath = "/api/v2/fax/documents/{documentId}";
+			var localVarPath = "/fax/documents/{documentId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1917,7 +1917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FaxConfig> PutFaxSettingsWithHttpInfo(FaxConfig body = null)
 		{
 
-			var localVarPath = "/api/v2/fax/settings";
+			var localVarPath = "/fax/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2019,7 +2019,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FaxConfig>> PutFaxSettingsAsyncWithHttpInfo(FaxConfig body = null)
 		{
 
-			var localVarPath = "/api/v2/fax/settings";
+			var localVarPath = "/fax/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

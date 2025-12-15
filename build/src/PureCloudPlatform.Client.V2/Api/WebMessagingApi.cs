@@ -355,7 +355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tokenId == null)
 				throw new ApiException(400, "Missing required parameter 'tokenId' when calling WebMessagingApi->DeleteWebmessagingDeploymentPushdevice");
 
-			var localVarPath = "/api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
+			var localVarPath = "/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -455,7 +455,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tokenId' when calling WebMessagingApi->DeleteWebmessagingDeploymentPushdevice");
 
 
-			var localVarPath = "/api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
+			var localVarPath = "/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -548,7 +548,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<WebMessagingMessageEntityList> GetWebmessagingMessagesWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/webmessaging/messages";
+			var localVarPath = "/webmessaging/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -641,7 +641,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<WebMessagingMessageEntityList>> GetWebmessagingMessagesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/webmessaging/messages";
+			var localVarPath = "/webmessaging/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -744,7 +744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WebMessagingApi->PatchWebmessagingDeploymentPushdevice");
 
-			var localVarPath = "/api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
+			var localVarPath = "/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -856,7 +856,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WebMessagingApi->PatchWebmessagingDeploymentPushdevice");
 
 
-			var localVarPath = "/api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
+			var localVarPath = "/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -965,7 +965,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WebMessagingApi->PostWebmessagingDeploymentPushdevice");
 
-			var localVarPath = "/api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
+			var localVarPath = "/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1077,7 +1077,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WebMessagingApi->PostWebmessagingDeploymentPushdevice");
 
 
-			var localVarPath = "/api/v2/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
+			var localVarPath = "/webmessaging/deployments/{deploymentId}/pushdevices/{tokenId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -558,7 +558,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (triggerId == null)
 				throw new ApiException(400, "Missing required parameter 'triggerId' when calling ProcessAutomationApi->DeleteProcessautomationTrigger");
 
-			var localVarPath = "/api/v2/processautomation/triggers/{triggerId}";
+			var localVarPath = "/processautomation/triggers/{triggerId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -658,7 +658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'triggerId' when calling ProcessAutomationApi->DeleteProcessautomationTrigger");
 
 
-			var localVarPath = "/api/v2/processautomation/triggers/{triggerId}";
+			var localVarPath = "/processautomation/triggers/{triggerId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -758,7 +758,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (triggerId == null)
 				throw new ApiException(400, "Missing required parameter 'triggerId' when calling ProcessAutomationApi->GetProcessautomationTrigger");
 
-			var localVarPath = "/api/v2/processautomation/triggers/{triggerId}";
+			var localVarPath = "/processautomation/triggers/{triggerId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -859,7 +859,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'triggerId' when calling ProcessAutomationApi->GetProcessautomationTrigger");
 
 
-			var localVarPath = "/api/v2/processautomation/triggers/{triggerId}";
+			var localVarPath = "/processautomation/triggers/{triggerId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -966,7 +966,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TriggerEntityListing> GetProcessautomationTriggersWithHttpInfo(string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
 		{
 
-			var localVarPath = "/api/v2/processautomation/triggers";
+			var localVarPath = "/processautomation/triggers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1078,7 +1078,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TriggerEntityListing>> GetProcessautomationTriggersAsyncWithHttpInfo(string before = null, string after = null, string pageSize = null, string topicName = null, bool? enabled = null, bool? hasDelayBy = null)
 		{
 
-			var localVarPath = "/api/v2/processautomation/triggers";
+			var localVarPath = "/processautomation/triggers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1184,7 +1184,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TopicCursorEntityListing> GetProcessautomationTriggersTopicsWithHttpInfo(string before = null, string after = null, string pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/processautomation/triggers/topics";
+			var localVarPath = "/processautomation/triggers/topics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1287,7 +1287,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TopicCursorEntityListing>> GetProcessautomationTriggersTopicsAsyncWithHttpInfo(string before = null, string after = null, string pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/processautomation/triggers/topics";
+			var localVarPath = "/processautomation/triggers/topics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1391,7 +1391,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (triggerId == null)
 				throw new ApiException(400, "Missing required parameter 'triggerId' when calling ProcessAutomationApi->PostProcessautomationTriggerTest");
 
-			var localVarPath = "/api/v2/processautomation/triggers/{triggerId}/test";
+			var localVarPath = "/processautomation/triggers/{triggerId}/test";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1500,7 +1500,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'triggerId' when calling ProcessAutomationApi->PostProcessautomationTriggerTest");
 
 
-			var localVarPath = "/api/v2/processautomation/triggers/{triggerId}/test";
+			var localVarPath = "/processautomation/triggers/{triggerId}/test";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1606,7 +1606,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ProcessAutomationApi->PostProcessautomationTriggers");
 
-			var localVarPath = "/api/v2/processautomation/triggers";
+			var localVarPath = "/processautomation/triggers";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1712,7 +1712,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ProcessAutomationApi->PostProcessautomationTriggers");
 
 
-			var localVarPath = "/api/v2/processautomation/triggers";
+			var localVarPath = "/processautomation/triggers";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1819,7 +1819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicName == null)
 				throw new ApiException(400, "Missing required parameter 'topicName' when calling ProcessAutomationApi->PostProcessautomationTriggersTopicTest");
 
-			var localVarPath = "/api/v2/processautomation/triggers/topics/{topicName}/test";
+			var localVarPath = "/processautomation/triggers/topics/{topicName}/test";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1928,7 +1928,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicName' when calling ProcessAutomationApi->PostProcessautomationTriggersTopicTest");
 
 
-			var localVarPath = "/api/v2/processautomation/triggers/topics/{topicName}/test";
+			var localVarPath = "/processautomation/triggers/topics/{topicName}/test";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2039,7 +2039,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ProcessAutomationApi->PutProcessautomationTrigger");
 
-			var localVarPath = "/api/v2/processautomation/triggers/{triggerId}";
+			var localVarPath = "/processautomation/triggers/{triggerId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2152,7 +2152,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ProcessAutomationApi->PutProcessautomationTrigger");
 
 
-			var localVarPath = "/api/v2/processautomation/triggers/{triggerId}";
+			var localVarPath = "/processautomation/triggers/{triggerId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

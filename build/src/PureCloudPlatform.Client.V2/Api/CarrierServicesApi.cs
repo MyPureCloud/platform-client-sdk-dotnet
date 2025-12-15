@@ -231,7 +231,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (phoneNumber == null)
 				throw new ApiException(400, "Missing required parameter 'phoneNumber' when calling CarrierServicesApi->GetCarrierservicesIntegrationsEmergencylocationsMe");
 
-			var localVarPath = "/api/v2/carrierservices/integrations/emergencylocations/me";
+			var localVarPath = "/carrierservices/integrations/emergencylocations/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -332,7 +332,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'phoneNumber' when calling CarrierServicesApi->GetCarrierservicesIntegrationsEmergencylocationsMe");
 
 
-			var localVarPath = "/api/v2/carrierservices/integrations/emergencylocations/me";
+			var localVarPath = "/carrierservices/integrations/emergencylocations/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -429,7 +429,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmergencyLocation> PostCarrierservicesIntegrationsEmergencylocationsMeWithHttpInfo(EmergencyLocation body = null)
 		{
 
-			var localVarPath = "/api/v2/carrierservices/integrations/emergencylocations/me";
+			var localVarPath = "/carrierservices/integrations/emergencylocations/me";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -531,7 +531,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmergencyLocation>> PostCarrierservicesIntegrationsEmergencylocationsMeAsyncWithHttpInfo(EmergencyLocation body = null)
 		{
 
-			var localVarPath = "/api/v2/carrierservices/integrations/emergencylocations/me";
+			var localVarPath = "/carrierservices/integrations/emergencylocations/me";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

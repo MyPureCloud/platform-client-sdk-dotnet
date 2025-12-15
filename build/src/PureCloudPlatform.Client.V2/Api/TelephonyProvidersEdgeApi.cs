@@ -6818,7 +6818,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdge");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6918,7 +6918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdge");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7022,7 +7022,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (interfaceId == null)
 				throw new ApiException(400, "Missing required parameter 'interfaceId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgeLogicalinterface");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7129,7 +7129,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'interfaceId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgeLogicalinterface");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7229,7 +7229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgeSoftwareupdate");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/softwareupdate";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7329,7 +7329,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgeSoftwareupdate");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/softwareupdate";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7423,7 +7423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteTelephonyProvidersEdgesAlertablepresencesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+			var localVarPath = "/telephony/providers/edges/alertablepresences";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7516,7 +7516,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+			var localVarPath = "/telephony/providers/edges/alertablepresences";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7614,7 +7614,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (certificateId == null)
 				throw new ApiException(400, "Missing required parameter 'certificateId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesCertificateauthority");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}";
+			var localVarPath = "/telephony/providers/edges/certificateauthorities/{certificateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7714,7 +7714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'certificateId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesCertificateauthority");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}";
+			var localVarPath = "/telephony/providers/edges/certificateauthorities/{certificateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7813,7 +7813,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (didPoolId == null)
 				throw new ApiException(400, "Missing required parameter 'didPoolId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesDidpool");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools/{didPoolId}";
+			var localVarPath = "/telephony/providers/edges/didpools/{didPoolId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7913,7 +7913,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'didPoolId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesDidpool");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools/{didPoolId}";
+			var localVarPath = "/telephony/providers/edges/didpools/{didPoolId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8012,7 +8012,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesEdgegroup");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}";
+			var localVarPath = "/telephony/providers/edges/edgegroups/{edgeGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8112,7 +8112,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesEdgegroup");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}";
+			var localVarPath = "/telephony/providers/edges/edgegroups/{edgeGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8211,7 +8211,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (extensionPoolId == null)
 				throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesExtensionpool");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}";
+			var localVarPath = "/telephony/providers/edges/extensionpools/{extensionPoolId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8311,7 +8311,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesExtensionpool");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}";
+			var localVarPath = "/telephony/providers/edges/extensionpools/{extensionPoolId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8410,7 +8410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (phoneId == null)
 				throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesPhone");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/{phoneId}";
+			var localVarPath = "/telephony/providers/edges/phones/{phoneId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8510,7 +8510,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesPhone");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/{phoneId}";
+			var localVarPath = "/telephony/providers/edges/phones/{phoneId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8609,7 +8609,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (phoneBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesPhonebasesetting");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8709,7 +8709,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesPhonebasesetting");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8808,7 +8808,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (siteId == null)
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesSite");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8908,7 +8908,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesSite");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9012,7 +9012,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (outboundRouteId == null)
 				throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesSiteOutboundroute");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9119,7 +9119,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesSiteOutboundroute");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9219,7 +9219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trunkBaseSettingsId == null)
 				throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesTrunkbasesetting");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9319,7 +9319,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->DeleteTelephonyProvidersEdgesTrunkbasesetting");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9421,7 +9421,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdge");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9525,7 +9525,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdge");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9626,7 +9626,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticNslookup");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9727,7 +9727,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticNslookup");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9827,7 +9827,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticPing");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/ping";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9928,7 +9928,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticPing");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/ping";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10028,7 +10028,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticRoute");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/route";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10129,7 +10129,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticRoute");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/route";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10229,7 +10229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticTracepath");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10330,7 +10330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeDiagnosticTracepath");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10437,7 +10437,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (interfaceId == null)
 				throw new ApiException(400, "Missing required parameter 'interfaceId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLogicalinterface");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10548,7 +10548,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'interfaceId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLogicalinterface");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10652,7 +10652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLogicalinterfaces");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logicalinterfaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10756,7 +10756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLogicalinterfaces");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logicalinterfaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10862,7 +10862,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLogsJob");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10970,7 +10970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeLogsJob");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11071,7 +11071,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeMetrics");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/metrics";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/metrics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11172,7 +11172,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeMetrics");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/metrics";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/metrics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11277,7 +11277,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (interfaceId == null)
 				throw new ApiException(400, "Missing required parameter 'interfaceId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgePhysicalinterface");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11385,7 +11385,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'interfaceId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgePhysicalinterface");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/physicalinterfaces/{interfaceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11486,7 +11486,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgePhysicalinterfaces");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/physicalinterfaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11587,7 +11587,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgePhysicalinterfaces");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/physicalinterfaces";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/physicalinterfaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11687,7 +11687,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeSetuppackage");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/setuppackage";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/setuppackage";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11788,7 +11788,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeSetuppackage");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/setuppackage";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/setuppackage";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11888,7 +11888,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeSoftwareupdate");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/softwareupdate";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11989,7 +11989,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeSoftwareupdate");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/softwareupdate";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12089,7 +12089,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeSoftwareversions");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/softwareversions";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/softwareversions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12190,7 +12190,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeSoftwareversions");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/softwareversions";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/softwareversions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12302,7 +12302,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeTrunks");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/trunks";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/trunks";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12421,7 +12421,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgeTrunks");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/trunks";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/trunks";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12538,7 +12538,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EdgeEntityListing> GetTelephonyProvidersEdgesWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges";
+			var localVarPath = "/telephony/providers/edges";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12656,7 +12656,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EdgeEntityListing>> GetTelephonyProvidersEdgesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string edgeGroupId = null, string sortBy = null, bool? managed = null, bool? showCloudMedia = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges";
+			var localVarPath = "/telephony/providers/edges";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12760,7 +12760,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AlertablePresences> GetTelephonyProvidersEdgesAlertablepresencesWithHttpInfo(string type = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+			var localVarPath = "/telephony/providers/edges/alertablepresences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12857,7 +12857,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AlertablePresences>> GetTelephonyProvidersEdgesAlertablepresencesAsyncWithHttpInfo(string type = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+			var localVarPath = "/telephony/providers/edges/alertablepresences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12952,7 +12952,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CertificateAuthorityEntityListing> GetTelephonyProvidersEdgesCertificateauthoritiesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities";
+			var localVarPath = "/telephony/providers/edges/certificateauthorities";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13046,7 +13046,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CertificateAuthorityEntityListing>> GetTelephonyProvidersEdgesCertificateauthoritiesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities";
+			var localVarPath = "/telephony/providers/edges/certificateauthorities";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13145,7 +13145,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (certificateId == null)
 				throw new ApiException(400, "Missing required parameter 'certificateId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesCertificateauthority");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}";
+			var localVarPath = "/telephony/providers/edges/certificateauthorities/{certificateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13246,7 +13246,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'certificateId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesCertificateauthority");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}";
+			var localVarPath = "/telephony/providers/edges/certificateauthorities/{certificateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13346,7 +13346,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (didId == null)
 				throw new ApiException(400, "Missing required parameter 'didId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesDid");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/dids/{didId}";
+			var localVarPath = "/telephony/providers/edges/dids/{didId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13447,7 +13447,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'didId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesDid");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/dids/{didId}";
+			var localVarPath = "/telephony/providers/edges/dids/{didId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13547,7 +13547,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (didPoolId == null)
 				throw new ApiException(400, "Missing required parameter 'didPoolId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesDidpool");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools/{didPoolId}";
+			var localVarPath = "/telephony/providers/edges/didpools/{didPoolId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13648,7 +13648,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'didPoolId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesDidpool");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools/{didPoolId}";
+			var localVarPath = "/telephony/providers/edges/didpools/{didPoolId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13751,7 +13751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DIDPoolEntityListing> GetTelephonyProvidersEdgesDidpoolsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools";
+			var localVarPath = "/telephony/providers/edges/didpools";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13857,7 +13857,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DIDPoolEntityListing>> GetTelephonyProvidersEdgesDidpoolsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools";
+			var localVarPath = "/telephony/providers/edges/didpools";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13970,7 +13970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (type == null)
 				throw new ApiException(400, "Missing required parameter 'type' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesDidpoolsDids");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools/dids";
+			var localVarPath = "/telephony/providers/edges/didpools/dids";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14086,7 +14086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'type' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesDidpoolsDids");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools/dids";
+			var localVarPath = "/telephony/providers/edges/didpools/dids";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14202,7 +14202,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DIDEntityListing> GetTelephonyProvidersEdgesDidsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/dids";
+			var localVarPath = "/telephony/providers/edges/dids";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14320,7 +14320,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DIDEntityListing>> GetTelephonyProvidersEdgesDidsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string phoneNumber = null, string ownerId = null, string didPoolId = null, List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/dids";
+			var localVarPath = "/telephony/providers/edges/dids";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14429,7 +14429,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroup");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}";
+			var localVarPath = "/telephony/providers/edges/edgegroups/{edgeGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14533,7 +14533,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeGroupId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroup");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}";
+			var localVarPath = "/telephony/providers/edges/edgegroups/{edgeGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14639,7 +14639,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgetrunkbaseId == null)
 				throw new ApiException(400, "Missing required parameter 'edgetrunkbaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
+			var localVarPath = "/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14747,7 +14747,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgetrunkbaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
+			var localVarPath = "/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14853,7 +14853,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EdgeGroupEntityListing> GetTelephonyProvidersEdgesEdgegroupsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups";
+			var localVarPath = "/telephony/providers/edges/edgegroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14962,7 +14962,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EdgeGroupEntityListing>> GetTelephonyProvidersEdgesEdgegroupsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, bool? managed = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups";
+			var localVarPath = "/telephony/providers/edges/edgegroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15061,7 +15061,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EdgeVersionReport> GetTelephonyProvidersEdgesEdgeversionreportWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgeversionreport";
+			var localVarPath = "/telephony/providers/edges/edgeversionreport";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15155,7 +15155,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EdgeVersionReport>> GetTelephonyProvidersEdgesEdgeversionreportAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgeversionreport";
+			var localVarPath = "/telephony/providers/edges/edgeversionreport";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15249,7 +15249,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExpiredEdgeListing> GetTelephonyProvidersEdgesExpiredWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/expired";
+			var localVarPath = "/telephony/providers/edges/expired";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15343,7 +15343,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExpiredEdgeListing>> GetTelephonyProvidersEdgesExpiredAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/expired";
+			var localVarPath = "/telephony/providers/edges/expired";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15442,7 +15442,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (extensionId == null)
 				throw new ApiException(400, "Missing required parameter 'extensionId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesExtension");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensions/{extensionId}";
+			var localVarPath = "/telephony/providers/edges/extensions/{extensionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15543,7 +15543,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'extensionId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesExtension");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensions/{extensionId}";
+			var localVarPath = "/telephony/providers/edges/extensions/{extensionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15643,7 +15643,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (extensionPoolId == null)
 				throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesExtensionpool");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}";
+			var localVarPath = "/telephony/providers/edges/extensionpools/{extensionPoolId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15744,7 +15744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'extensionPoolId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesExtensionpool");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}";
+			var localVarPath = "/telephony/providers/edges/extensionpools/{extensionPoolId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15849,7 +15849,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExtensionPoolEntityListing> GetTelephonyProvidersEdgesExtensionpoolsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools";
+			var localVarPath = "/telephony/providers/edges/extensionpools";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15958,7 +15958,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExtensionPoolEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string number = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools";
+			var localVarPath = "/telephony/providers/edges/extensionpools";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16071,7 +16071,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExtensionPoolDivisionViewEntityListing> GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/divisionviews";
+			var localVarPath = "/telephony/providers/edges/extensionpools/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16186,7 +16186,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExtensionPoolDivisionViewEntityListing>> GetTelephonyProvidersEdgesExtensionpoolsDivisionviewsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/divisionviews";
+			var localVarPath = "/telephony/providers/edges/extensionpools/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16297,7 +16297,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExtensionEntityListing> GetTelephonyProvidersEdgesExtensionsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensions";
+			var localVarPath = "/telephony/providers/edges/extensions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16406,7 +16406,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExtensionEntityListing>> GetTelephonyProvidersEdgesExtensionsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string number = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensions";
+			var localVarPath = "/telephony/providers/edges/extensions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16510,7 +16510,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (lineId == null)
 				throw new ApiException(400, "Missing required parameter 'lineId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesLine");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/lines/{lineId}";
+			var localVarPath = "/telephony/providers/edges/lines/{lineId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16611,7 +16611,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'lineId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesLine");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/lines/{lineId}";
+			var localVarPath = "/telephony/providers/edges/lines/{lineId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16711,7 +16711,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (lineBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'lineBaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesLinebasesetting");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/linebasesettings/{lineBaseId}";
+			var localVarPath = "/telephony/providers/edges/linebasesettings/{lineBaseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16812,7 +16812,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'lineBaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesLinebasesetting");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/linebasesettings/{lineBaseId}";
+			var localVarPath = "/telephony/providers/edges/linebasesettings/{lineBaseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16917,7 +16917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LineBaseEntityListing> GetTelephonyProvidersEdgesLinebasesettingsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/linebasesettings";
+			var localVarPath = "/telephony/providers/edges/linebasesettings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17026,7 +17026,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LineBaseEntityListing>> GetTelephonyProvidersEdgesLinebasesettingsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/linebasesettings";
+			var localVarPath = "/telephony/providers/edges/linebasesettings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17135,7 +17135,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LineEntityListing> GetTelephonyProvidersEdgesLinesWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/lines";
+			var localVarPath = "/telephony/providers/edges/lines";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17244,7 +17244,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LineEntityListing>> GetTelephonyProvidersEdgesLinesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, string sortBy = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/lines";
+			var localVarPath = "/telephony/providers/edges/lines";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17348,7 +17348,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (lineBaseSettingsId == null)
 				throw new ApiException(400, "Missing required parameter 'lineBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesLinesTemplate");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/lines/template";
+			var localVarPath = "/telephony/providers/edges/lines/template";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17449,7 +17449,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'lineBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesLinesTemplate");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/lines/template";
+			var localVarPath = "/telephony/providers/edges/lines/template";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17551,7 +17551,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeIds == null)
 				throw new ApiException(400, "Missing required parameter 'edgeIds' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesLogicalinterfaces");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/logicalinterfaces";
+			var localVarPath = "/telephony/providers/edges/logicalinterfaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17655,7 +17655,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeIds' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesLogicalinterfaces");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/logicalinterfaces";
+			var localVarPath = "/telephony/providers/edges/logicalinterfaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17758,7 +17758,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMediastatisticsConversation");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}";
+			var localVarPath = "/telephony/providers/edges/mediastatistics/conversations/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17861,7 +17861,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMediastatisticsConversation");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}";
+			var localVarPath = "/telephony/providers/edges/mediastatistics/conversations/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17968,7 +17968,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMediastatisticsConversationCommunication");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}";
+			var localVarPath = "/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18078,7 +18078,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMediastatisticsConversationCommunication");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}";
+			var localVarPath = "/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18179,7 +18179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeIds == null)
 				throw new ApiException(400, "Missing required parameter 'edgeIds' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMetrics");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/metrics";
+			var localVarPath = "/telephony/providers/edges/metrics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18280,7 +18280,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeIds' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesMetrics");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/metrics";
+			var localVarPath = "/telephony/providers/edges/metrics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18387,7 +18387,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OutboundRouteEntityListing> GetTelephonyProvidersEdgesOutboundroutesWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/outboundroutes";
+			var localVarPath = "/telephony/providers/edges/outboundroutes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18499,7 +18499,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OutboundRouteEntityListing>> GetTelephonyProvidersEdgesOutboundroutesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, string siteId = null, string externalTrunkBasesIds = null, string sortBy = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/outboundroutes";
+			var localVarPath = "/telephony/providers/edges/outboundroutes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18604,7 +18604,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (phoneId == null)
 				throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhone");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/{phoneId}";
+			var localVarPath = "/telephony/providers/edges/phones/{phoneId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18705,7 +18705,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhone");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/{phoneId}";
+			var localVarPath = "/telephony/providers/edges/phones/{phoneId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18805,7 +18805,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (phoneBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhonebasesetting");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18906,7 +18906,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'phoneBaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhonebasesetting");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19013,7 +19013,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<PhoneBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19125,7 +19125,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<PhoneBaseEntityListing>> GetTelephonyProvidersEdgesPhonebasesettingsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, List<string> expand = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19229,7 +19229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<PhoneMetaBaseEntityListing> GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/availablemetabases";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings/availablemetabases";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19329,7 +19329,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<PhoneMetaBaseEntityListing>> GetTelephonyProvidersEdgesPhonebasesettingsAvailablemetabasesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/availablemetabases";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings/availablemetabases";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19430,7 +19430,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (phoneMetabaseId == null)
 				throw new ApiException(400, "Missing required parameter 'phoneMetabaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhonebasesettingsTemplate");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/template";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings/template";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19531,7 +19531,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'phoneMetabaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhonebasesettingsTemplate");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/template";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings/template";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19660,7 +19660,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<PhoneEntityListing> GetTelephonyProvidersEdgesPhonesWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones";
+			var localVarPath = "/telephony/providers/edges/phones";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19805,7 +19805,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<PhoneEntityListing>> GetTelephonyProvidersEdgesPhonesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string siteId = null, string webRtcUserId = null, string phoneBaseSettingsId = null, string linesLoggedInUserId = null, string linesDefaultForUserId = null, string phoneHardwareId = null, string linesId = null, string linesName = null, string name = null, string statusOperationalStatus = null, string secondaryStatusOperationalStatus = null, List<string> expand = null, List<string> fields = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones";
+			var localVarPath = "/telephony/providers/edges/phones";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19921,7 +19921,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (phoneBaseSettingsId == null)
 				throw new ApiException(400, "Missing required parameter 'phoneBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhonesTemplate");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/template";
+			var localVarPath = "/telephony/providers/edges/phones/template";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20022,7 +20022,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'phoneBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhonesTemplate");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/template";
+			var localVarPath = "/telephony/providers/edges/phones/template";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20122,7 +20122,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeIds == null)
 				throw new ApiException(400, "Missing required parameter 'edgeIds' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhysicalinterfaces");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/physicalinterfaces";
+			var localVarPath = "/telephony/providers/edges/physicalinterfaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20223,7 +20223,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeIds' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesPhysicalinterfaces");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/physicalinterfaces";
+			var localVarPath = "/telephony/providers/edges/physicalinterfaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20323,7 +20323,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (siteId == null)
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSite");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20424,7 +20424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSite");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20529,7 +20529,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (numberPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'numberPlanId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteNumberplan");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20637,7 +20637,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'numberPlanId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteNumberplan");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/numberplans/{numberPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20738,7 +20738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (siteId == null)
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteNumberplans");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/numberplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20839,7 +20839,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteNumberplans");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/numberplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20941,7 +20941,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (siteId == null)
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteNumberplansClassifications");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/numberplans/classifications";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21045,7 +21045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteNumberplansClassifications");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans/classifications";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/numberplans/classifications";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21151,7 +21151,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (outboundRouteId == null)
 				throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteOutboundroute");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21259,7 +21259,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'outboundRouteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteOutboundroute");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21370,7 +21370,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (siteId == null)
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteOutboundroutes");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/outboundroutes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21486,7 +21486,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteOutboundroutes");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/outboundroutes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21591,7 +21591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (siteId == null)
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteSiteconnections");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/siteconnections";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21692,7 +21692,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'siteId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSiteSiteconnections");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/siteconnections";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21803,7 +21803,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SiteEntityListing> GetTelephonyProvidersEdgesSitesWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites";
+			var localVarPath = "/telephony/providers/edges/sites";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21921,7 +21921,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SiteEntityListing>> GetTelephonyProvidersEdgesSitesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string locationId = null, bool? managed = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites";
+			var localVarPath = "/telephony/providers/edges/sites";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22030,7 +22030,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (q64 == null)
 				throw new ApiException(400, "Missing required parameter 'q64' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSitesSearch");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/search";
+			var localVarPath = "/telephony/providers/edges/sites/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22134,7 +22134,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'q64' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesSitesSearch");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/search";
+			var localVarPath = "/telephony/providers/edges/sites/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22234,7 +22234,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TimeZoneEntityListing> GetTelephonyProvidersEdgesTimezonesWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/timezones";
+			var localVarPath = "/telephony/providers/edges/timezones";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22334,7 +22334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTelephonyProvidersEdgesTimezonesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/timezones";
+			var localVarPath = "/telephony/providers/edges/timezones";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22435,7 +22435,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trunkId == null)
 				throw new ApiException(400, "Missing required parameter 'trunkId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunk");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunks/{trunkId}";
+			var localVarPath = "/telephony/providers/edges/trunks/{trunkId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22536,7 +22536,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trunkId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunk");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunks/{trunkId}";
+			var localVarPath = "/telephony/providers/edges/trunks/{trunkId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22636,7 +22636,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trunkId == null)
 				throw new ApiException(400, "Missing required parameter 'trunkId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunkMetrics");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunks/{trunkId}/metrics";
+			var localVarPath = "/telephony/providers/edges/trunks/{trunkId}/metrics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22737,7 +22737,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trunkId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunkMetrics");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunks/{trunkId}/metrics";
+			var localVarPath = "/telephony/providers/edges/trunks/{trunkId}/metrics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22839,7 +22839,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trunkBaseSettingsId == null)
 				throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunkbasesetting");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22943,7 +22943,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trunkBaseSettingsId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunkbasesetting");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23057,7 +23057,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TrunkBaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23178,7 +23178,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TrunkBaseEntityListing>> GetTelephonyProvidersEdgesTrunkbasesettingsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, bool? recordingEnabled = null, bool? ignoreHidden = null, bool? managed = null, List<string> expand = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23287,7 +23287,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TrunkMetabaseEntityListing> GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesWithHttpInfo(string type = null, int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/availablemetabases";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings/availablemetabases";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23390,7 +23390,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TrunkMetabaseEntityListing>> GetTelephonyProvidersEdgesTrunkbasesettingsAvailablemetabasesAsyncWithHttpInfo(string type = null, int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/availablemetabases";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings/availablemetabases";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23492,7 +23492,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trunkMetabaseId == null)
 				throw new ApiException(400, "Missing required parameter 'trunkMetabaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunkbasesettingsTemplate");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/template";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings/template";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23593,7 +23593,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trunkMetabaseId' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunkbasesettingsTemplate");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/template";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings/template";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23702,7 +23702,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TrunkEntityListing> GetTelephonyProvidersEdgesTrunksWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunks";
+			var localVarPath = "/telephony/providers/edges/trunks";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23817,7 +23817,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TrunkEntityListing>> GetTelephonyProvidersEdgesTrunksAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string edgeId = null, string trunkBaseId = null, string trunkType = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunks";
+			var localVarPath = "/telephony/providers/edges/trunks";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23923,7 +23923,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trunkIds == null)
 				throw new ApiException(400, "Missing required parameter 'trunkIds' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunksMetrics");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunks/metrics";
+			var localVarPath = "/telephony/providers/edges/trunks/metrics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24024,7 +24024,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trunkIds' when calling TelephonyProvidersEdgeApi->GetTelephonyProvidersEdgesTrunksMetrics");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunks/metrics";
+			var localVarPath = "/telephony/providers/edges/trunks/metrics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24121,7 +24121,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TrunkRecordingEnabledCount> GetTelephonyProvidersEdgesTrunkswithrecordingWithHttpInfo(string trunkType = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkswithrecording";
+			var localVarPath = "/telephony/providers/edges/trunkswithrecording";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24218,7 +24218,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TrunkRecordingEnabledCount>> GetTelephonyProvidersEdgesTrunkswithrecordingAsyncWithHttpInfo(string trunkType = null)
 		{
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkswithrecording";
+			var localVarPath = "/telephony/providers/edges/trunkswithrecording";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24323,7 +24323,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PatchTelephonyProvidersEdgesSiteSiteconnections");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/siteconnections";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24436,7 +24436,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PatchTelephonyProvidersEdgesSiteSiteconnections");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/siteconnections";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24547,7 +24547,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticNslookup");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24660,7 +24660,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticNslookup");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/nslookup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24771,7 +24771,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticPing");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/ping";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24884,7 +24884,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticPing");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/ping";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/ping";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24995,7 +24995,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticRoute");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/route";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25108,7 +25108,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticRoute");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/route";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/route";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25219,7 +25219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticTracepath");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25332,7 +25332,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeDiagnosticTracepath");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/diagnostic/tracepath";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25443,7 +25443,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeLogicalinterfaces");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logicalinterfaces";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25556,7 +25556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeLogicalinterfaces");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logicalinterfaces";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25671,7 +25671,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeLogsJobUpload");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25790,7 +25790,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeLogsJobUpload");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logs/jobs/{jobId}/upload";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25902,7 +25902,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeLogsJobs");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logs/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26015,7 +26015,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeLogsJobs");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logs/jobs";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logs/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26123,7 +26123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeReboot");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/reboot";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/reboot";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26232,7 +26232,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeReboot");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/reboot";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/reboot";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26343,7 +26343,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeSoftwareupdate");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/softwareupdate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26456,7 +26456,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeSoftwareupdate");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/softwareupdate";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/softwareupdate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26564,7 +26564,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeStatuscode");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/statuscode";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/statuscode";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26673,7 +26673,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeStatuscode");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/statuscode";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/statuscode";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26779,7 +26779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (edgeId == null)
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeUnpair");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/unpair";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/unpair";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26880,7 +26880,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'edgeId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgeUnpair");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/unpair";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/unpair";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26980,7 +26980,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdges");
 
-			var localVarPath = "/api/v2/telephony/providers/edges";
+			var localVarPath = "/telephony/providers/edges";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27086,7 +27086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdges");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges";
+			var localVarPath = "/telephony/providers/edges";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27191,7 +27191,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesAddressvalidation");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/addressvalidation";
+			var localVarPath = "/telephony/providers/edges/addressvalidation";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27297,7 +27297,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesAddressvalidation");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/addressvalidation";
+			var localVarPath = "/telephony/providers/edges/addressvalidation";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27402,7 +27402,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesCertificateauthorities");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities";
+			var localVarPath = "/telephony/providers/edges/certificateauthorities";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27508,7 +27508,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesCertificateauthorities");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities";
+			var localVarPath = "/telephony/providers/edges/certificateauthorities";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27613,7 +27613,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesDidpools");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools";
+			var localVarPath = "/telephony/providers/edges/didpools";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27719,7 +27719,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesDidpools");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools";
+			var localVarPath = "/telephony/providers/edges/didpools";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27824,7 +27824,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesEdgegroups");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups";
+			var localVarPath = "/telephony/providers/edges/edgegroups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27930,7 +27930,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesEdgegroups");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups";
+			var localVarPath = "/telephony/providers/edges/edgegroups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28035,7 +28035,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesExtensionpools");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools";
+			var localVarPath = "/telephony/providers/edges/extensionpools";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28141,7 +28141,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesExtensionpools");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools";
+			var localVarPath = "/telephony/providers/edges/extensionpools";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28263,7 +28263,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}/mediaresources/{mediaResourceId}";
+			var localVarPath = "/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}/mediaresources/{mediaResourceId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28392,7 +28392,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesMediastatisticsConversationCommunicationMediaresource");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}/mediaresources/{mediaResourceId}";
+			var localVarPath = "/telephony/providers/edges/mediastatistics/conversations/{conversationId}/communications/{communicationId}/mediaresources/{mediaResourceId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28499,7 +28499,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (phoneId == null)
 				throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesPhoneReboot");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/{phoneId}/reboot";
+			var localVarPath = "/telephony/providers/edges/phones/{phoneId}/reboot";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28599,7 +28599,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'phoneId' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesPhoneReboot");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/{phoneId}/reboot";
+			var localVarPath = "/telephony/providers/edges/phones/{phoneId}/reboot";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28699,7 +28699,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesPhonebasesettings");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28805,7 +28805,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesPhonebasesettings");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28910,7 +28910,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesPhones");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones";
+			var localVarPath = "/telephony/providers/edges/phones";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29016,7 +29016,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesPhones");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones";
+			var localVarPath = "/telephony/providers/edges/phones";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29120,7 +29120,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesPhonesReboot");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/reboot";
+			var localVarPath = "/telephony/providers/edges/phones/reboot";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29225,7 +29225,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesPhonesReboot");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/reboot";
+			var localVarPath = "/telephony/providers/edges/phones/reboot";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29335,7 +29335,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesSiteOutboundroutes");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/outboundroutes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29448,7 +29448,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesSiteOutboundroutes");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/outboundroutes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29554,7 +29554,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesSites");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites";
+			var localVarPath = "/telephony/providers/edges/sites";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29660,7 +29660,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesSites");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites";
+			var localVarPath = "/telephony/providers/edges/sites";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29765,7 +29765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesSitesSearch");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/search";
+			var localVarPath = "/telephony/providers/edges/sites/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29871,7 +29871,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesSitesSearch");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/search";
+			var localVarPath = "/telephony/providers/edges/sites/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29976,7 +29976,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesTrunkbasesettings");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30082,7 +30082,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PostTelephonyProvidersEdgesTrunkbasesettings");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30192,7 +30192,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdge");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30305,7 +30305,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdge");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30421,7 +30421,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeLogicalinterface");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30541,7 +30541,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgeLogicalinterface");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
+			var localVarPath = "/telephony/providers/edges/{edgeId}/logicalinterfaces/{interfaceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30647,7 +30647,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesAlertablepresences");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+			var localVarPath = "/telephony/providers/edges/alertablepresences";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30752,7 +30752,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesAlertablepresences");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/alertablepresences";
+			var localVarPath = "/telephony/providers/edges/alertablepresences";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30862,7 +30862,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesCertificateauthority");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}";
+			var localVarPath = "/telephony/providers/edges/certificateauthorities/{certificateId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30975,7 +30975,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesCertificateauthority");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/certificateauthorities/{certificateId}";
+			var localVarPath = "/telephony/providers/edges/certificateauthorities/{certificateId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31086,7 +31086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesDidpool");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools/{didPoolId}";
+			var localVarPath = "/telephony/providers/edges/didpools/{didPoolId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31199,7 +31199,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesDidpool");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/didpools/{didPoolId}";
+			var localVarPath = "/telephony/providers/edges/didpools/{didPoolId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31310,7 +31310,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroup");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}";
+			var localVarPath = "/telephony/providers/edges/edgegroups/{edgeGroupId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31423,7 +31423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroup");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgeGroupId}";
+			var localVarPath = "/telephony/providers/edges/edgegroups/{edgeGroupId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31539,7 +31539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
+			var localVarPath = "/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31659,7 +31659,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesEdgegroupEdgetrunkbase");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
+			var localVarPath = "/telephony/providers/edges/edgegroups/{edgegroupId}/edgetrunkbases/{edgetrunkbaseId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31771,7 +31771,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesExtensionpool");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}";
+			var localVarPath = "/telephony/providers/edges/extensionpools/{extensionPoolId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31884,7 +31884,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesExtensionpool");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/extensionpools/{extensionPoolId}";
+			var localVarPath = "/telephony/providers/edges/extensionpools/{extensionPoolId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31995,7 +31995,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesPhone");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/{phoneId}";
+			var localVarPath = "/telephony/providers/edges/phones/{phoneId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32108,7 +32108,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesPhone");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phones/{phoneId}";
+			var localVarPath = "/telephony/providers/edges/phones/{phoneId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32219,7 +32219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesPhonebasesetting");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32332,7 +32332,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesPhonebasesetting");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
+			var localVarPath = "/telephony/providers/edges/phonebasesettings/{phoneBaseId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32443,7 +32443,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSite");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32556,7 +32556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSite");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32667,7 +32667,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSiteNumberplans");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/numberplans";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32780,7 +32780,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSiteNumberplans");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/numberplans";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/numberplans";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32896,7 +32896,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSiteOutboundroute");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33016,7 +33016,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSiteOutboundroute");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/outboundroutes/{outboundRouteId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33128,7 +33128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSiteSiteconnections");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/siteconnections";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33241,7 +33241,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesSiteSiteconnections");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/sites/{siteId}/siteconnections";
+			var localVarPath = "/telephony/providers/edges/sites/{siteId}/siteconnections";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33352,7 +33352,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesTrunkbasesetting");
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33465,7 +33465,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TelephonyProvidersEdgeApi->PutTelephonyProvidersEdgesTrunkbasesetting");
 
 
-			var localVarPath = "/api/v2/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
+			var localVarPath = "/telephony/providers/edges/trunkbasesettings/{trunkBaseSettingsId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

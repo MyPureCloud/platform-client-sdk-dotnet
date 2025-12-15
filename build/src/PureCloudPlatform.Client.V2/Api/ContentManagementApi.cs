@@ -2108,7 +2108,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->DeleteContentmanagementDocument");
 
-			var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
+			var localVarPath = "/contentmanagement/documents/{documentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2211,7 +2211,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->DeleteContentmanagementDocument");
 
 
-			var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
+			var localVarPath = "/contentmanagement/documents/{documentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2311,7 +2311,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (shareId == null)
 				throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->DeleteContentmanagementShare");
 
-			var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
+			var localVarPath = "/contentmanagement/shares/{shareId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2411,7 +2411,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->DeleteContentmanagementShare");
 
 
-			var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
+			var localVarPath = "/contentmanagement/shares/{shareId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2510,7 +2510,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (statusId == null)
 				throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->DeleteContentmanagementStatusStatusId");
 
-			var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
+			var localVarPath = "/contentmanagement/status/{statusId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2610,7 +2610,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->DeleteContentmanagementStatusStatusId");
 
 
-			var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
+			var localVarPath = "/contentmanagement/status/{statusId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2711,7 +2711,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workspaceId == null)
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteContentmanagementWorkspace");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2814,7 +2814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->DeleteContentmanagementWorkspace");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2919,7 +2919,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (memberId == null)
 				throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceMember");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3026,7 +3026,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceMember");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3131,7 +3131,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tagId == null)
 				throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceTagvalue");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3238,7 +3238,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->DeleteContentmanagementWorkspaceTagvalue");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3341,7 +3341,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetContentmanagementDocument");
 
-			var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
+			var localVarPath = "/contentmanagement/documents/{documentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3445,7 +3445,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetContentmanagementDocument");
 
 
-			var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
+			var localVarPath = "/contentmanagement/documents/{documentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3550,7 +3550,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetContentmanagementDocumentContent");
 
-			var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
+			var localVarPath = "/contentmanagement/documents/{documentId}/content";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3657,7 +3657,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling ContentManagementApi->GetContentmanagementDocumentContent");
 
 
-			var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
+			var localVarPath = "/contentmanagement/documents/{documentId}/content";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3771,7 +3771,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workspaceId == null)
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementDocuments");
 
-			var localVarPath = "/api/v2/contentmanagement/documents";
+			var localVarPath = "/contentmanagement/documents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3890,7 +3890,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementDocuments");
 
 
-			var localVarPath = "/api/v2/contentmanagement/documents";
+			var localVarPath = "/contentmanagement/documents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4006,7 +4006,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (queryPhrase == null)
 				throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling ContentManagementApi->GetContentmanagementQuery");
 
-			var localVarPath = "/api/v2/contentmanagement/query";
+			var localVarPath = "/contentmanagement/query";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4122,7 +4122,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'queryPhrase' when calling ContentManagementApi->GetContentmanagementQuery");
 
 
-			var localVarPath = "/api/v2/contentmanagement/query";
+			var localVarPath = "/contentmanagement/query";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4227,7 +4227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (securityProfileId == null)
 				throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling ContentManagementApi->GetContentmanagementSecurityprofile");
 
-			var localVarPath = "/api/v2/contentmanagement/securityprofiles/{securityProfileId}";
+			var localVarPath = "/contentmanagement/securityprofiles/{securityProfileId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4328,7 +4328,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'securityProfileId' when calling ContentManagementApi->GetContentmanagementSecurityprofile");
 
 
-			var localVarPath = "/api/v2/contentmanagement/securityprofiles/{securityProfileId}";
+			var localVarPath = "/contentmanagement/securityprofiles/{securityProfileId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4423,7 +4423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SecurityProfileEntityListing> GetContentmanagementSecurityprofilesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/contentmanagement/securityprofiles";
+			var localVarPath = "/contentmanagement/securityprofiles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4517,7 +4517,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SecurityProfileEntityListing>> GetContentmanagementSecurityprofilesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/contentmanagement/securityprofiles";
+			var localVarPath = "/contentmanagement/securityprofiles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4618,7 +4618,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (shareId == null)
 				throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->GetContentmanagementShare");
 
-			var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
+			var localVarPath = "/contentmanagement/shares/{shareId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4722,7 +4722,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'shareId' when calling ContentManagementApi->GetContentmanagementShare");
 
 
-			var localVarPath = "/api/v2/contentmanagement/shares/{shareId}";
+			var localVarPath = "/contentmanagement/shares/{shareId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4829,7 +4829,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sharedId == null)
 				throw new ApiException(400, "Missing required parameter 'sharedId' when calling ContentManagementApi->GetContentmanagementSharedSharedId");
 
-			var localVarPath = "/api/v2/contentmanagement/shared/{sharedId}";
+			var localVarPath = "/contentmanagement/shared/{sharedId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4939,7 +4939,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sharedId' when calling ContentManagementApi->GetContentmanagementSharedSharedId");
 
 
-			var localVarPath = "/api/v2/contentmanagement/shared/{sharedId}";
+			var localVarPath = "/contentmanagement/shared/{sharedId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5045,7 +5045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ShareEntityListing> GetContentmanagementSharesWithHttpInfo(string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/contentmanagement/shares";
+			var localVarPath = "/contentmanagement/shares";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5151,7 +5151,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ShareEntityListing>> GetContentmanagementSharesAsyncWithHttpInfo(string entityId = null, List<string> expand = null, int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/contentmanagement/shares";
+			var localVarPath = "/contentmanagement/shares";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5253,7 +5253,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CommandStatusEntityListing> GetContentmanagementStatusWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/contentmanagement/status";
+			var localVarPath = "/contentmanagement/status";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5353,7 +5353,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CommandStatusEntityListing>> GetContentmanagementStatusAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/contentmanagement/status";
+			var localVarPath = "/contentmanagement/status";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5454,7 +5454,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (statusId == null)
 				throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->GetContentmanagementStatusStatusId");
 
-			var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
+			var localVarPath = "/contentmanagement/status/{statusId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5555,7 +5555,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'statusId' when calling ContentManagementApi->GetContentmanagementStatusStatusId");
 
 
-			var localVarPath = "/api/v2/contentmanagement/status/{statusId}";
+			var localVarPath = "/contentmanagement/status/{statusId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5650,7 +5650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Usage> GetContentmanagementUsageWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/contentmanagement/usage";
+			var localVarPath = "/contentmanagement/usage";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5744,7 +5744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Usage>> GetContentmanagementUsageAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/contentmanagement/usage";
+			var localVarPath = "/contentmanagement/usage";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5845,7 +5845,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workspaceId == null)
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspace");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5949,7 +5949,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspace");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6060,7 +6060,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workspaceId == null)
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceDocuments");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/documents";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/documents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6176,7 +6176,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceDocuments");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/documents";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/documents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6288,7 +6288,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (memberId == null)
 				throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->GetContentmanagementWorkspaceMember");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6399,7 +6399,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'memberId' when calling ContentManagementApi->GetContentmanagementWorkspaceMember");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6507,7 +6507,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workspaceId == null)
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceMembers");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/members";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6617,7 +6617,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceMembers");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/members";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6727,7 +6727,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tagId == null)
 				throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->GetContentmanagementWorkspaceTagvalue");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6838,7 +6838,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tagId' when calling ContentManagementApi->GetContentmanagementWorkspaceTagvalue");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6948,7 +6948,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workspaceId == null)
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceTagvalues");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7061,7 +7061,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workspaceId' when calling ContentManagementApi->GetContentmanagementWorkspaceTagvalues");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7168,7 +7168,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<WorkspaceEntityListing> GetContentmanagementWorkspacesWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces";
+			var localVarPath = "/contentmanagement/workspaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7274,7 +7274,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<WorkspaceEntityListing>> GetContentmanagementWorkspacesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> access = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces";
+			var localVarPath = "/contentmanagement/workspaces";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7386,7 +7386,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementDocument");
 
-			var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
+			var localVarPath = "/contentmanagement/documents/{documentId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7505,7 +7505,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementDocument");
 
 
-			var localVarPath = "/api/v2/contentmanagement/documents/{documentId}";
+			var localVarPath = "/contentmanagement/documents/{documentId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7620,7 +7620,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementDocumentContent");
 
-			var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
+			var localVarPath = "/contentmanagement/documents/{documentId}/content";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7736,7 +7736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementDocumentContent");
 
 
-			var localVarPath = "/api/v2/contentmanagement/documents/{documentId}/content";
+			var localVarPath = "/contentmanagement/documents/{documentId}/content";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7849,7 +7849,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementDocuments");
 
-			var localVarPath = "/api/v2/contentmanagement/documents";
+			var localVarPath = "/contentmanagement/documents";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7964,7 +7964,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementDocuments");
 
 
-			var localVarPath = "/api/v2/contentmanagement/documents";
+			var localVarPath = "/contentmanagement/documents";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8074,7 +8074,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementQuery");
 
-			var localVarPath = "/api/v2/contentmanagement/query";
+			var localVarPath = "/contentmanagement/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8183,7 +8183,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementQuery");
 
 
-			var localVarPath = "/api/v2/contentmanagement/query";
+			var localVarPath = "/contentmanagement/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8289,7 +8289,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementShares");
 
-			var localVarPath = "/api/v2/contentmanagement/shares";
+			var localVarPath = "/contentmanagement/shares";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8395,7 +8395,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementShares");
 
 
-			var localVarPath = "/api/v2/contentmanagement/shares";
+			var localVarPath = "/contentmanagement/shares";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8505,7 +8505,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementWorkspaceTagvalues");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8618,7 +8618,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementWorkspaceTagvalues");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8731,7 +8731,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementWorkspaceTagvaluesQuery");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8847,7 +8847,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementWorkspaceTagvaluesQuery");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8954,7 +8954,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementWorkspaces");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces";
+			var localVarPath = "/contentmanagement/workspaces";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9060,7 +9060,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PostContentmanagementWorkspaces");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces";
+			var localVarPath = "/contentmanagement/workspaces";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9170,7 +9170,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutContentmanagementWorkspace");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9283,7 +9283,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutContentmanagementWorkspace");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9399,7 +9399,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutContentmanagementWorkspaceMember");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9519,7 +9519,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutContentmanagementWorkspaceMember");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/members/{memberId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9636,7 +9636,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutContentmanagementWorkspaceTagvalue");
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9756,7 +9756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ContentManagementApi->PutContentmanagementWorkspaceTagvalue");
 
 
-			var localVarPath = "/api/v2/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
+			var localVarPath = "/contentmanagement/workspaces/{workspaceId}/tagvalues/{tagId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -15,7 +15,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Delete Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (DELETE /routing/languages/{languageId})
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Delete Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (DELETE /routing/languages/{languageId})
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -39,7 +39,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages/{languageId})
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -51,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages/{languageId})
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get the list of supported languages. (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages)
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -78,7 +78,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get the list of supported languages. (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages)
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -187,7 +187,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
+		/// This endpoint is deprecated. Please see the Routing API. (POST /routing/languages
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Language</param>
@@ -199,7 +199,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
+		/// This endpoint is deprecated. Please see the Routing API. (POST /routing/languages
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Language</param>
@@ -215,7 +215,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Delete Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (DELETE /routing/languages/{languageId})
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -227,7 +227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Delete Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (DELETE /routing/languages/{languageId})
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -239,7 +239,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages/{languageId})
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -251,7 +251,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages/{languageId})
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -263,7 +263,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get the list of supported languages. (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages)
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -278,7 +278,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get the list of supported languages. (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages)
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -387,7 +387,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
+		/// This endpoint is deprecated. Please see the Routing API. (POST /routing/languages
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Language</param>
@@ -399,7 +399,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create Language (Deprecated)
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
+		/// This endpoint is deprecated. Please see the Routing API. (POST /routing/languages
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Language</param>
@@ -501,7 +501,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Delete Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (DELETE /routing/languages/{languageId})
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -514,7 +514,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Delete Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (DELETE /routing/languages/{languageId})
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -526,7 +526,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageId == null)
 				throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->DeleteLanguage");
 
-			var localVarPath = "/api/v2/languages/{languageId}";
+			var localVarPath = "/languages/{languageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -599,7 +599,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Delete Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (DELETE /routing/languages/{languageId})
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -613,7 +613,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Delete Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (DELETE /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (DELETE /routing/languages/{languageId})
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -626,7 +626,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->DeleteLanguage");
 
 
-			var localVarPath = "/api/v2/languages/{languageId}";
+			var localVarPath = "/languages/{languageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -700,7 +700,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages/{languageId})
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -714,7 +714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages/{languageId})
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -726,7 +726,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageId == null)
 				throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->GetLanguage");
 
-			var localVarPath = "/api/v2/languages/{languageId}";
+			var localVarPath = "/languages/{languageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -799,7 +799,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages/{languageId})
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -814,7 +814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages/{languageId})
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages/{languageId})
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="languageId">Language ID</param>
@@ -827,7 +827,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageId' when calling LanguagesApi->GetLanguage");
 
 
-			var localVarPath = "/api/v2/languages/{languageId}";
+			var localVarPath = "/languages/{languageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -901,7 +901,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get the list of supported languages. (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages)
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -918,7 +918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get the list of supported languages. (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages)
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -930,7 +930,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LanguageEntityListing> GetLanguagesWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/languages";
+			var localVarPath = "/languages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1006,7 +1006,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get the list of supported languages. (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages)
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1024,7 +1024,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get the list of supported languages. (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API (GET /api/v2/routing/languages)
+		/// This endpoint is deprecated. Please see the Routing API (GET /routing/languages)
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -1036,7 +1036,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LanguageEntityListing>> GetLanguagesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/languages";
+			var localVarPath = "/languages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1134,7 +1134,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AvailableTranslations> GetLanguagesTranslationsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/languages/translations";
+			var localVarPath = "/languages/translations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1228,7 +1228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AvailableTranslations>> GetLanguagesTranslationsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/languages/translations";
+			var localVarPath = "/languages/translations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1327,7 +1327,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (language == null)
 				throw new ApiException(400, "Missing required parameter 'language' when calling LanguagesApi->GetLanguagesTranslationsBuiltin");
 
-			var localVarPath = "/api/v2/languages/translations/builtin";
+			var localVarPath = "/languages/translations/builtin";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1428,7 +1428,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'language' when calling LanguagesApi->GetLanguagesTranslationsBuiltin");
 
 
-			var localVarPath = "/api/v2/languages/translations/builtin";
+			var localVarPath = "/languages/translations/builtin";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1528,7 +1528,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (language == null)
 				throw new ApiException(400, "Missing required parameter 'language' when calling LanguagesApi->GetLanguagesTranslationsOrganization");
 
-			var localVarPath = "/api/v2/languages/translations/organization";
+			var localVarPath = "/languages/translations/organization";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1629,7 +1629,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'language' when calling LanguagesApi->GetLanguagesTranslationsOrganization");
 
 
-			var localVarPath = "/api/v2/languages/translations/organization";
+			var localVarPath = "/languages/translations/organization";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1729,7 +1729,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling LanguagesApi->GetLanguagesTranslationsUser");
 
-			var localVarPath = "/api/v2/languages/translations/users/{userId}";
+			var localVarPath = "/languages/translations/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1830,7 +1830,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling LanguagesApi->GetLanguagesTranslationsUser");
 
 
-			var localVarPath = "/api/v2/languages/translations/users/{userId}";
+			var localVarPath = "/languages/translations/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1904,7 +1904,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
+		/// This endpoint is deprecated. Please see the Routing API. (POST /routing/languages
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Language</param>
@@ -1918,7 +1918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
+		/// This endpoint is deprecated. Please see the Routing API. (POST /routing/languages
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Language</param>
@@ -1930,7 +1930,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguagesApi->PostLanguages");
 
-			var localVarPath = "/api/v2/languages";
+			var localVarPath = "/languages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2008,7 +2008,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
+		/// This endpoint is deprecated. Please see the Routing API. (POST /routing/languages
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Language</param>
@@ -2023,7 +2023,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create Language (Deprecated) 
-		/// This endpoint is deprecated. Please see the Routing API. (POST /api/v2/routing/languages
+		/// This endpoint is deprecated. Please see the Routing API. (POST /routing/languages
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">Language</param>
@@ -2036,7 +2036,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LanguagesApi->PostLanguages");
 
 
-			var localVarPath = "/api/v2/languages";
+			var localVarPath = "/languages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

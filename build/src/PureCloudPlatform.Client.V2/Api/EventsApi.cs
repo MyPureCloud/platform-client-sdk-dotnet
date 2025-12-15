@@ -279,7 +279,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling EventsApi->PostEventsConversations");
 
-			var localVarPath = "/api/v2/events/conversations";
+			var localVarPath = "/events/conversations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -385,7 +385,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling EventsApi->PostEventsConversations");
 
 
-			var localVarPath = "/api/v2/events/conversations";
+			var localVarPath = "/events/conversations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -490,7 +490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling EventsApi->PostEventsUsersPresence");
 
-			var localVarPath = "/api/v2/events/users/presence";
+			var localVarPath = "/events/users/presence";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -596,7 +596,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling EventsApi->PostEventsUsersPresence");
 
 
-			var localVarPath = "/api/v2/events/users/presence";
+			var localVarPath = "/events/users/presence";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -701,7 +701,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling EventsApi->PostEventsUsersRoutingstatus");
 
-			var localVarPath = "/api/v2/events/users/routingstatus";
+			var localVarPath = "/events/users/routingstatus";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -807,7 +807,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling EventsApi->PostEventsUsersRoutingstatus");
 
 
-			var localVarPath = "/api/v2/events/users/routingstatus";
+			var localVarPath = "/events/users/routingstatus";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

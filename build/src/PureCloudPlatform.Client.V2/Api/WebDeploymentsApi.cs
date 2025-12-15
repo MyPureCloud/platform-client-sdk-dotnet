@@ -1182,7 +1182,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (configurationId == null)
 				throw new ApiException(400, "Missing required parameter 'configurationId' when calling WebDeploymentsApi->DeleteWebdeploymentsConfiguration");
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}";
+			var localVarPath = "/webdeployments/configurations/{configurationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1282,7 +1282,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'configurationId' when calling WebDeploymentsApi->DeleteWebdeploymentsConfiguration");
 
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}";
+			var localVarPath = "/webdeployments/configurations/{configurationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1381,7 +1381,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deploymentId == null)
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->DeleteWebdeploymentsDeployment");
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1481,7 +1481,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->DeleteWebdeploymentsDeployment");
 
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1586,7 +1586,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling WebDeploymentsApi->DeleteWebdeploymentsDeploymentCobrowseSessionId");
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1687,7 +1687,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling WebDeploymentsApi->DeleteWebdeploymentsDeploymentCobrowseSessionId");
 
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1779,7 +1779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteWebdeploymentsTokenRevokeWithHttpInfo(string xJourneySessionId = null, string xJourneySessionType = null)
 		{
 
-			var localVarPath = "/api/v2/webdeployments/token/revoke";
+			var localVarPath = "/webdeployments/token/revoke";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1871,7 +1871,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWebdeploymentsTokenRevokeAsyncWithHttpInfo(string xJourneySessionId = null, string xJourneySessionType = null)
 		{
 
-			var localVarPath = "/api/v2/webdeployments/token/revoke";
+			var localVarPath = "/webdeployments/token/revoke";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1970,7 +1970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling WebDeploymentsApi->GetWebdeploymentsConfigurationVersion");
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}/versions/{versionId}";
+			var localVarPath = "/webdeployments/configurations/{configurationId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2078,7 +2078,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling WebDeploymentsApi->GetWebdeploymentsConfigurationVersion");
 
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}/versions/{versionId}";
+			var localVarPath = "/webdeployments/configurations/{configurationId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2179,7 +2179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (configurationId == null)
 				throw new ApiException(400, "Missing required parameter 'configurationId' when calling WebDeploymentsApi->GetWebdeploymentsConfigurationVersions");
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}/versions";
+			var localVarPath = "/webdeployments/configurations/{configurationId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2280,7 +2280,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'configurationId' when calling WebDeploymentsApi->GetWebdeploymentsConfigurationVersions");
 
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}/versions";
+			var localVarPath = "/webdeployments/configurations/{configurationId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2380,7 +2380,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (configurationId == null)
 				throw new ApiException(400, "Missing required parameter 'configurationId' when calling WebDeploymentsApi->GetWebdeploymentsConfigurationVersionsDraft");
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}/versions/draft";
+			var localVarPath = "/webdeployments/configurations/{configurationId}/versions/draft";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2481,7 +2481,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'configurationId' when calling WebDeploymentsApi->GetWebdeploymentsConfigurationVersionsDraft");
 
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}/versions/draft";
+			var localVarPath = "/webdeployments/configurations/{configurationId}/versions/draft";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2578,7 +2578,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsWithHttpInfo(bool? showOnlyPublished = null)
 		{
 
-			var localVarPath = "/api/v2/webdeployments/configurations";
+			var localVarPath = "/webdeployments/configurations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2675,7 +2675,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationsAsyncWithHttpInfo(bool? showOnlyPublished = null)
 		{
 
-			var localVarPath = "/api/v2/webdeployments/configurations";
+			var localVarPath = "/webdeployments/configurations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2777,7 +2777,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deploymentId == null)
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->GetWebdeploymentsDeployment");
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2881,7 +2881,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->GetWebdeploymentsDeployment");
 
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2987,7 +2987,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling WebDeploymentsApi->GetWebdeploymentsDeploymentCobrowseSessionId");
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3088,7 +3088,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling WebDeploymentsApi->GetWebdeploymentsDeploymentCobrowseSessionId");
 
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}/cobrowse/{sessionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3186,7 +3186,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deploymentId == null)
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->GetWebdeploymentsDeploymentConfigurations");
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/configurations";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}/configurations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3293,7 +3293,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->GetWebdeploymentsDeploymentConfigurations");
 
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/configurations";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}/configurations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3395,7 +3395,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deploymentId == null)
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->GetWebdeploymentsDeploymentIdentityresolution");
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/identityresolution";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}/identityresolution";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3496,7 +3496,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling WebDeploymentsApi->GetWebdeploymentsDeploymentIdentityresolution");
 
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/identityresolution";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}/identityresolution";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3593,7 +3593,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsWithHttpInfo(List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/webdeployments/deployments";
+			var localVarPath = "/webdeployments/deployments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3690,7 +3690,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo(List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/webdeployments/deployments";
+			var localVarPath = "/webdeployments/deployments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3790,7 +3790,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (configurationId == null)
 				throw new ApiException(400, "Missing required parameter 'configurationId' when calling WebDeploymentsApi->PostWebdeploymentsConfigurationVersionsDraftPublish");
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish";
+			var localVarPath = "/webdeployments/configurations/{configurationId}/versions/draft/publish";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3891,7 +3891,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'configurationId' when calling WebDeploymentsApi->PostWebdeploymentsConfigurationVersionsDraftPublish");
 
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}/versions/draft/publish";
+			var localVarPath = "/webdeployments/configurations/{configurationId}/versions/draft/publish";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3991,7 +3991,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (configurationVersion == null)
 				throw new ApiException(400, "Missing required parameter 'configurationVersion' when calling WebDeploymentsApi->PostWebdeploymentsConfigurations");
 
-			var localVarPath = "/api/v2/webdeployments/configurations";
+			var localVarPath = "/webdeployments/configurations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4097,7 +4097,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'configurationVersion' when calling WebDeploymentsApi->PostWebdeploymentsConfigurations");
 
 
-			var localVarPath = "/api/v2/webdeployments/configurations";
+			var localVarPath = "/webdeployments/configurations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4202,7 +4202,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deployment == null)
 				throw new ApiException(400, "Missing required parameter 'deployment' when calling WebDeploymentsApi->PostWebdeploymentsDeployments");
 
-			var localVarPath = "/api/v2/webdeployments/deployments";
+			var localVarPath = "/webdeployments/deployments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4308,7 +4308,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deployment' when calling WebDeploymentsApi->PostWebdeploymentsDeployments");
 
 
-			var localVarPath = "/api/v2/webdeployments/deployments";
+			var localVarPath = "/webdeployments/deployments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4413,7 +4413,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WebDeploymentsApi->PostWebdeploymentsTokenOauthcodegrantjwtexchange");
 
-			var localVarPath = "/api/v2/webdeployments/token/oauthcodegrantjwtexchange";
+			var localVarPath = "/webdeployments/token/oauthcodegrantjwtexchange";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4512,7 +4512,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WebDeploymentsApi->PostWebdeploymentsTokenOauthcodegrantjwtexchange");
 
 
-			var localVarPath = "/api/v2/webdeployments/token/oauthcodegrantjwtexchange";
+			var localVarPath = "/webdeployments/token/oauthcodegrantjwtexchange";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4607,7 +4607,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SignedData> PostWebdeploymentsTokenRefreshWithHttpInfo(WebDeploymentsRefreshJWTRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/webdeployments/token/refresh";
+			var localVarPath = "/webdeployments/token/refresh";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4702,7 +4702,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SignedData>> PostWebdeploymentsTokenRefreshAsyncWithHttpInfo(WebDeploymentsRefreshJWTRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/webdeployments/token/refresh";
+			var localVarPath = "/webdeployments/token/refresh";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4805,7 +4805,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (configurationVersion == null)
 				throw new ApiException(400, "Missing required parameter 'configurationVersion' when calling WebDeploymentsApi->PutWebdeploymentsConfigurationVersionsDraft");
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}/versions/draft";
+			var localVarPath = "/webdeployments/configurations/{configurationId}/versions/draft";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4918,7 +4918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'configurationVersion' when calling WebDeploymentsApi->PutWebdeploymentsConfigurationVersionsDraft");
 
 
-			var localVarPath = "/api/v2/webdeployments/configurations/{configurationId}/versions/draft";
+			var localVarPath = "/webdeployments/configurations/{configurationId}/versions/draft";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5029,7 +5029,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deployment == null)
 				throw new ApiException(400, "Missing required parameter 'deployment' when calling WebDeploymentsApi->PutWebdeploymentsDeployment");
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5142,7 +5142,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deployment' when calling WebDeploymentsApi->PutWebdeploymentsDeployment");
 
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5253,7 +5253,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WebDeploymentsApi->PutWebdeploymentsDeploymentIdentityresolution");
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/identityresolution";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}/identityresolution";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5366,7 +5366,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WebDeploymentsApi->PutWebdeploymentsDeploymentIdentityresolution");
 
 
-			var localVarPath = "/api/v2/webdeployments/deployments/{deploymentId}/identityresolution";
+			var localVarPath = "/webdeployments/deployments/{deploymentId}/identityresolution";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -627,7 +627,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a user profile listing
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. User /api/v2/users
+		/// This api is deprecated. User /users
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -645,7 +645,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a user profile listing
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. User /api/v2/users
+		/// This api is deprecated. User /users
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -3405,7 +3405,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a user profile listing
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. User /api/v2/users
+		/// This api is deprecated. User /users
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -3423,7 +3423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Get a user profile listing
 		/// </summary>
 		/// <remarks>
-		/// This api is deprecated. User /api/v2/users
+		/// This api is deprecated. User /users
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -5684,7 +5684,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->DeleteAnalyticsUsersAggregatesJob");
 
-			var localVarPath = "/api/v2/analytics/users/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/users/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5786,7 +5786,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->DeleteAnalyticsUsersAggregatesJob");
 
 
-			var localVarPath = "/api/v2/analytics/users/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/users/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5885,7 +5885,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->DeleteAnalyticsUsersDetailsJob");
 
-			var localVarPath = "/api/v2/analytics/users/details/jobs/{jobId}";
+			var localVarPath = "/analytics/users/details/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5985,7 +5985,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->DeleteAnalyticsUsersDetailsJob");
 
 
-			var localVarPath = "/api/v2/analytics/users/details/jobs/{jobId}";
+			var localVarPath = "/analytics/users/details/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6094,7 +6094,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roleId == null)
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling UsersApi->DeleteAuthorizationSubjectDivisionRole");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+			var localVarPath = "/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6208,7 +6208,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling UsersApi->DeleteAuthorizationSubjectDivisionRole");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+			var localVarPath = "/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6304,7 +6304,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteRoutingDirectroutingbackupSettingsMeWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/routing/directroutingbackup/settings/me";
+			var localVarPath = "/routing/directroutingbackup/settings/me";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6397,7 +6397,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteRoutingDirectroutingbackupSettingsMeAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/routing/directroutingbackup/settings/me";
+			var localVarPath = "/routing/directroutingbackup/settings/me";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6495,7 +6495,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteRoutingUserDirectroutingbackupSettings");
 
-			var localVarPath = "/api/v2/routing/users/{userId}/directroutingbackup/settings";
+			var localVarPath = "/routing/users/{userId}/directroutingbackup/settings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6595,7 +6595,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteRoutingUserDirectroutingbackupSettings");
 
 
-			var localVarPath = "/api/v2/routing/users/{userId}/directroutingbackup/settings";
+			var localVarPath = "/routing/users/{userId}/directroutingbackup/settings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6694,7 +6694,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteRoutingUserUtilization");
 
-			var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+			var localVarPath = "/routing/users/{userId}/utilization";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6794,7 +6794,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteRoutingUserUtilization");
 
 
-			var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+			var localVarPath = "/routing/users/{userId}/utilization";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6894,7 +6894,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUser");
 
-			var localVarPath = "/api/v2/users/{userId}";
+			var localVarPath = "/users/{userId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6995,7 +6995,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUser");
 
 
-			var localVarPath = "/api/v2/users/{userId}";
+			var localVarPath = "/users/{userId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7104,7 +7104,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalKey == null)
 				throw new ApiException(400, "Missing required parameter 'externalKey' when calling UsersApi->DeleteUserExternalidAuthorityNameExternalKey");
 
-			var localVarPath = "/api/v2/users/{userId}/externalid/{authorityName}/{externalKey}";
+			var localVarPath = "/users/{userId}/externalid/{authorityName}/{externalKey}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7218,7 +7218,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalKey' when calling UsersApi->DeleteUserExternalidAuthorityNameExternalKey");
 
 
-			var localVarPath = "/api/v2/users/{userId}/externalid/{authorityName}/{externalKey}";
+			var localVarPath = "/users/{userId}/externalid/{authorityName}/{externalKey}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7324,7 +7324,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageId == null)
 				throw new ApiException(400, "Missing required parameter 'languageId' when calling UsersApi->DeleteUserRoutinglanguage");
 
-			var localVarPath = "/api/v2/users/{userId}/routinglanguages/{languageId}";
+			var localVarPath = "/users/{userId}/routinglanguages/{languageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7431,7 +7431,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageId' when calling UsersApi->DeleteUserRoutinglanguage");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routinglanguages/{languageId}";
+			var localVarPath = "/users/{userId}/routinglanguages/{languageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7536,7 +7536,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (skillId == null)
 				throw new ApiException(400, "Missing required parameter 'skillId' when calling UsersApi->DeleteUserRoutingskill");
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
+			var localVarPath = "/users/{userId}/routingskills/{skillId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7643,7 +7643,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'skillId' when calling UsersApi->DeleteUserRoutingskill");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
+			var localVarPath = "/users/{userId}/routingskills/{skillId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7743,7 +7743,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUserStationAssociatedstation");
 
-			var localVarPath = "/api/v2/users/{userId}/station/associatedstation";
+			var localVarPath = "/users/{userId}/station/associatedstation";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7843,7 +7843,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUserStationAssociatedstation");
 
 
-			var localVarPath = "/api/v2/users/{userId}/station/associatedstation";
+			var localVarPath = "/users/{userId}/station/associatedstation";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7942,7 +7942,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUserStationDefaultstation");
 
-			var localVarPath = "/api/v2/users/{userId}/station/defaultstation";
+			var localVarPath = "/users/{userId}/station/defaultstation";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8042,7 +8042,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUserStationDefaultstation");
 
 
-			var localVarPath = "/api/v2/users/{userId}/station/defaultstation";
+			var localVarPath = "/users/{userId}/station/defaultstation";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8146,7 +8146,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (verifierId == null)
 				throw new ApiException(400, "Missing required parameter 'verifierId' when calling UsersApi->DeleteUserVerifier");
 
-			var localVarPath = "/api/v2/users/{userId}/verifiers/{verifierId}";
+			var localVarPath = "/users/{userId}/verifiers/{verifierId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8253,7 +8253,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'verifierId' when calling UsersApi->DeleteUserVerifier");
 
 
-			var localVarPath = "/api/v2/users/{userId}/verifiers/{verifierId}";
+			var localVarPath = "/users/{userId}/verifiers/{verifierId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8356,7 +8356,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersAggregatesJob");
 
-			var localVarPath = "/api/v2/analytics/users/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/users/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8459,7 +8459,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersAggregatesJob");
 
 
-			var localVarPath = "/api/v2/analytics/users/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/users/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8563,7 +8563,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersAggregatesJobResults");
 
-			var localVarPath = "/api/v2/analytics/users/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/analytics/users/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8669,7 +8669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersAggregatesJobResults");
 
 
-			var localVarPath = "/api/v2/analytics/users/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/analytics/users/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8770,7 +8770,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersDetailsJob");
 
-			var localVarPath = "/api/v2/analytics/users/details/jobs/{jobId}";
+			var localVarPath = "/analytics/users/details/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8871,7 +8871,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersDetailsJob");
 
 
-			var localVarPath = "/api/v2/analytics/users/details/jobs/{jobId}";
+			var localVarPath = "/analytics/users/details/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8975,7 +8975,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersDetailsJobResults");
 
-			var localVarPath = "/api/v2/analytics/users/details/jobs/{jobId}/results";
+			var localVarPath = "/analytics/users/details/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9082,7 +9082,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UsersApi->GetAnalyticsUsersDetailsJobResults");
 
 
-			var localVarPath = "/api/v2/analytics/users/details/jobs/{jobId}/results";
+			var localVarPath = "/analytics/users/details/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9179,7 +9179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DataAvailabilityResponse> GetAnalyticsUsersDetailsJobsAvailabilityWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/analytics/users/details/jobs/availability";
+			var localVarPath = "/analytics/users/details/jobs/availability";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9273,7 +9273,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DataAvailabilityResponse>> GetAnalyticsUsersDetailsJobsAvailabilityAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/analytics/users/details/jobs/availability";
+			var localVarPath = "/analytics/users/details/jobs/availability";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9374,7 +9374,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (permission == null)
 				throw new ApiException(400, "Missing required parameter 'permission' when calling UsersApi->GetAuthorizationDivisionspermittedMe");
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/me";
+			var localVarPath = "/authorization/divisionspermitted/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9478,7 +9478,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'permission' when calling UsersApi->GetAuthorizationDivisionspermittedMe");
 
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/me";
+			var localVarPath = "/authorization/divisionspermitted/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9583,7 +9583,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (permission == null)
 				throw new ApiException(400, "Missing required parameter 'permission' when calling UsersApi->GetAuthorizationDivisionspermittedPagedMe");
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/paged/me";
+			var localVarPath = "/authorization/divisionspermitted/paged/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9690,7 +9690,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'permission' when calling UsersApi->GetAuthorizationDivisionspermittedPagedMe");
 
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/paged/me";
+			var localVarPath = "/authorization/divisionspermitted/paged/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9801,7 +9801,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (permission == null)
 				throw new ApiException(400, "Missing required parameter 'permission' when calling UsersApi->GetAuthorizationDivisionspermittedPagedSubjectId");
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/paged/{subjectId}";
+			var localVarPath = "/authorization/divisionspermitted/paged/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9915,7 +9915,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'permission' when calling UsersApi->GetAuthorizationDivisionspermittedPagedSubjectId");
 
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/paged/{subjectId}";
+			var localVarPath = "/authorization/divisionspermitted/paged/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10020,7 +10020,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (subjectId == null)
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling UsersApi->GetAuthorizationSubject");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}";
+			var localVarPath = "/authorization/subjects/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10124,7 +10124,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling UsersApi->GetAuthorizationSubject");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}";
+			var localVarPath = "/authorization/subjects/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10222,7 +10222,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AuthzSubject> GetAuthorizationSubjectsMeWithHttpInfo(bool? includeDuplicates = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/subjects/me";
+			var localVarPath = "/authorization/subjects/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10319,7 +10319,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo(bool? includeDuplicates = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/subjects/me";
+			var localVarPath = "/authorization/subjects/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10419,7 +10419,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (type == null)
 				throw new ApiException(400, "Missing required parameter 'type' when calling UsersApi->GetFieldconfig");
 
-			var localVarPath = "/api/v2/fieldconfig";
+			var localVarPath = "/fieldconfig";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10520,7 +10520,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'type' when calling UsersApi->GetFieldconfig");
 
 
-			var localVarPath = "/api/v2/fieldconfig";
+			var localVarPath = "/fieldconfig";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10594,7 +10594,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a user profile listing 
-		/// This api is deprecated. User /api/v2/users
+		/// This api is deprecated. User /users
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -10614,7 +10614,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a user profile listing 
-		/// This api is deprecated. User /api/v2/users
+		/// This api is deprecated. User /users
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -10629,7 +10629,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UserProfileEntityListing> GetProfilesUsersWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
 		{
 
-			var localVarPath = "/api/v2/profiles/users";
+			var localVarPath = "/profiles/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10708,7 +10708,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a user profile listing 
-		/// This api is deprecated. User /api/v2/users
+		/// This api is deprecated. User /users
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -10729,7 +10729,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Get a user profile listing 
-		/// This api is deprecated. User /api/v2/users
+		/// This api is deprecated. User /users
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageSize">Page size (optional, default to 25)</param>
@@ -10744,7 +10744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UserProfileEntityListing>> GetProfilesUsersAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jid = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null)
 		{
 
-			var localVarPath = "/api/v2/profiles/users";
+			var localVarPath = "/profiles/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10845,7 +10845,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AgentDirectRoutingBackupSettings> GetRoutingDirectroutingbackupSettingsMeWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/routing/directroutingbackup/settings/me";
+			var localVarPath = "/routing/directroutingbackup/settings/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10939,7 +10939,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AgentDirectRoutingBackupSettings>> GetRoutingDirectroutingbackupSettingsMeAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/routing/directroutingbackup/settings/me";
+			var localVarPath = "/routing/directroutingbackup/settings/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11038,7 +11038,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetRoutingUserDirectroutingbackupSettings");
 
-			var localVarPath = "/api/v2/routing/users/{userId}/directroutingbackup/settings";
+			var localVarPath = "/routing/users/{userId}/directroutingbackup/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11139,7 +11139,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetRoutingUserDirectroutingbackupSettings");
 
 
-			var localVarPath = "/api/v2/routing/users/{userId}/directroutingbackup/settings";
+			var localVarPath = "/routing/users/{userId}/directroutingbackup/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11239,7 +11239,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetRoutingUserUtilization");
 
-			var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+			var localVarPath = "/routing/users/{userId}/utilization";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11340,7 +11340,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetRoutingUserUtilization");
 
 
-			var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+			var localVarPath = "/routing/users/{userId}/utilization";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11446,7 +11446,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUser");
 
-			var localVarPath = "/api/v2/users/{userId}";
+			var localVarPath = "/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11556,7 +11556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUser");
 
 
-			var localVarPath = "/api/v2/users/{userId}";
+			var localVarPath = "/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11661,7 +11661,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserAdjacents");
 
-			var localVarPath = "/api/v2/users/{userId}/adjacents";
+			var localVarPath = "/users/{userId}/adjacents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11765,7 +11765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserAdjacents");
 
 
-			var localVarPath = "/api/v2/users/{userId}/adjacents";
+			var localVarPath = "/users/{userId}/adjacents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11866,7 +11866,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserCallforwarding");
 
-			var localVarPath = "/api/v2/users/{userId}/callforwarding";
+			var localVarPath = "/users/{userId}/callforwarding";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11967,7 +11967,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserCallforwarding");
 
 
-			var localVarPath = "/api/v2/users/{userId}/callforwarding";
+			var localVarPath = "/users/{userId}/callforwarding";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12069,7 +12069,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserDirectreports");
 
-			var localVarPath = "/api/v2/users/{userId}/directreports";
+			var localVarPath = "/users/{userId}/directreports";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12173,7 +12173,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserDirectreports");
 
 
-			var localVarPath = "/api/v2/users/{userId}/directreports";
+			var localVarPath = "/users/{userId}/directreports";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12274,7 +12274,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserExternalid");
 
-			var localVarPath = "/api/v2/users/{userId}/externalid";
+			var localVarPath = "/users/{userId}/externalid";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12375,7 +12375,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserExternalid");
 
 
-			var localVarPath = "/api/v2/users/{userId}/externalid";
+			var localVarPath = "/users/{userId}/externalid";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12480,7 +12480,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (authorityName == null)
 				throw new ApiException(400, "Missing required parameter 'authorityName' when calling UsersApi->GetUserExternalidAuthorityName");
 
-			var localVarPath = "/api/v2/users/{userId}/externalid/{authorityName}";
+			var localVarPath = "/users/{userId}/externalid/{authorityName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12588,7 +12588,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'authorityName' when calling UsersApi->GetUserExternalidAuthorityName");
 
 
-			var localVarPath = "/api/v2/users/{userId}/externalid/{authorityName}";
+			var localVarPath = "/users/{userId}/externalid/{authorityName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12697,7 +12697,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserFavorites");
 
-			var localVarPath = "/api/v2/users/{userId}/favorites";
+			var localVarPath = "/users/{userId}/favorites";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12810,7 +12810,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserFavorites");
 
 
-			var localVarPath = "/api/v2/users/{userId}/favorites";
+			var localVarPath = "/users/{userId}/favorites";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12919,7 +12919,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (clientId == null)
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling UsersApi->GetUserGeolocation");
 
-			var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
+			var localVarPath = "/users/{userId}/geolocations/{clientId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13027,7 +13027,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling UsersApi->GetUserGeolocation");
 
 
-			var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
+			var localVarPath = "/users/{userId}/geolocations/{clientId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13128,7 +13128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserOutofoffice");
 
-			var localVarPath = "/api/v2/users/{userId}/outofoffice";
+			var localVarPath = "/users/{userId}/outofoffice";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13229,7 +13229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserOutofoffice");
 
 
-			var localVarPath = "/api/v2/users/{userId}/outofoffice";
+			var localVarPath = "/users/{userId}/outofoffice";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13333,7 +13333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserProfile");
 
-			var localVarPath = "/api/v2/users/{userId}/profile";
+			var localVarPath = "/users/{userId}/profile";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13440,7 +13440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserProfile");
 
 
-			var localVarPath = "/api/v2/users/{userId}/profile";
+			var localVarPath = "/users/{userId}/profile";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13542,7 +13542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserProfileskills");
 
-			var localVarPath = "/api/v2/users/{userId}/profileskills";
+			var localVarPath = "/users/{userId}/profileskills";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13643,7 +13643,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserProfileskills");
 
 
-			var localVarPath = "/api/v2/users/{userId}/profileskills";
+			var localVarPath = "/users/{userId}/profileskills";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13751,7 +13751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserQueues");
 
-			var localVarPath = "/api/v2/users/{userId}/queues";
+			var localVarPath = "/users/{userId}/queues";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13864,7 +13864,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserQueues");
 
 
-			var localVarPath = "/api/v2/users/{userId}/queues";
+			var localVarPath = "/users/{userId}/queues";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13968,7 +13968,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (subjectId == null)
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling UsersApi->GetUserRoles");
 
-			var localVarPath = "/api/v2/users/{subjectId}/roles";
+			var localVarPath = "/users/{subjectId}/roles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14069,7 +14069,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling UsersApi->GetUserRoles");
 
 
-			var localVarPath = "/api/v2/users/{subjectId}/roles";
+			var localVarPath = "/users/{subjectId}/roles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14175,7 +14175,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserRoutinglanguages");
 
-			var localVarPath = "/api/v2/users/{userId}/routinglanguages";
+			var localVarPath = "/users/{userId}/routinglanguages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14285,7 +14285,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserRoutinglanguages");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routinglanguages";
+			var localVarPath = "/users/{userId}/routinglanguages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14394,7 +14394,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserRoutingskills");
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills";
+			var localVarPath = "/users/{userId}/routingskills";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14504,7 +14504,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserRoutingskills");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills";
+			var localVarPath = "/users/{userId}/routingskills";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14607,7 +14607,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserRoutingstatus");
 
-			var localVarPath = "/api/v2/users/{userId}/routingstatus";
+			var localVarPath = "/users/{userId}/routingstatus";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14708,7 +14708,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserRoutingstatus");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routingstatus";
+			var localVarPath = "/users/{userId}/routingstatus";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14814,7 +14814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSkillgroups");
 
-			var localVarPath = "/api/v2/users/{userId}/skillgroups";
+			var localVarPath = "/users/{userId}/skillgroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14924,7 +14924,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSkillgroups");
 
 
-			var localVarPath = "/api/v2/users/{userId}/skillgroups";
+			var localVarPath = "/users/{userId}/skillgroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15027,7 +15027,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserState");
 
-			var localVarPath = "/api/v2/users/{userId}/state";
+			var localVarPath = "/users/{userId}/state";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15128,7 +15128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserState");
 
 
-			var localVarPath = "/api/v2/users/{userId}/state";
+			var localVarPath = "/users/{userId}/state";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15228,7 +15228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserStation");
 
-			var localVarPath = "/api/v2/users/{userId}/station";
+			var localVarPath = "/users/{userId}/station";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15329,7 +15329,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserStation");
 
 
-			var localVarPath = "/api/v2/users/{userId}/station";
+			var localVarPath = "/users/{userId}/station";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15431,7 +15431,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSuperiors");
 
-			var localVarPath = "/api/v2/users/{userId}/superiors";
+			var localVarPath = "/users/{userId}/superiors";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15535,7 +15535,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserSuperiors");
 
 
-			var localVarPath = "/api/v2/users/{userId}/superiors";
+			var localVarPath = "/users/{userId}/superiors";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15640,7 +15640,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserTrustors");
 
-			var localVarPath = "/api/v2/users/{userId}/trustors";
+			var localVarPath = "/users/{userId}/trustors";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15747,7 +15747,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserTrustors");
 
 
-			var localVarPath = "/api/v2/users/{userId}/trustors";
+			var localVarPath = "/users/{userId}/trustors";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15849,7 +15849,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserVerifiers");
 
-			var localVarPath = "/api/v2/users/{userId}/verifiers";
+			var localVarPath = "/users/{userId}/verifiers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15950,7 +15950,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserVerifiers");
 
 
-			var localVarPath = "/api/v2/users/{userId}/verifiers";
+			var localVarPath = "/users/{userId}/verifiers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16061,7 +16061,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UserEntityListing> GetUsersWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
 		{
 
-			var localVarPath = "/api/v2/users";
+			var localVarPath = "/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16179,7 +16179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
 		{
 
-			var localVarPath = "/api/v2/users";
+			var localVarPath = "/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16287,7 +16287,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ChatItemCursorListing> GetUsersChatsMeWithHttpInfo(bool? excludeClosed = null, bool? includePresence = null, string after = null)
 		{
 
-			var localVarPath = "/api/v2/users/chats/me";
+			var localVarPath = "/users/chats/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16390,7 +16390,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ChatItemCursorListing>> GetUsersChatsMeAsyncWithHttpInfo(bool? excludeClosed = null, bool? includePresence = null, string after = null)
 		{
 
-			var localVarPath = "/api/v2/users/chats/me";
+			var localVarPath = "/users/chats/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16511,7 +16511,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DevelopmentActivityListing> GetUsersDevelopmentActivitiesWithHttpInfo(List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
 		{
 
-			var localVarPath = "/api/v2/users/development/activities";
+			var localVarPath = "/users/development/activities";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16641,7 +16641,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesAsyncWithHttpInfo(List<string> userId = null, string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
 		{
 
-			var localVarPath = "/api/v2/users/development/activities";
+			var localVarPath = "/users/development/activities";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16769,7 +16769,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DevelopmentActivityListing> GetUsersDevelopmentActivitiesMeWithHttpInfo(string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
 		{
 
-			var localVarPath = "/api/v2/users/development/activities/me";
+			var localVarPath = "/users/development/activities/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16896,7 +16896,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DevelopmentActivityListing>> GetUsersDevelopmentActivitiesMeAsyncWithHttpInfo(string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, string pass = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> types = null, List<string> statuses = null, List<string> relationship = null)
 		{
 
-			var localVarPath = "/api/v2/users/development/activities/me";
+			var localVarPath = "/users/development/activities/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17011,7 +17011,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (type == null)
 				throw new ApiException(400, "Missing required parameter 'type' when calling UsersApi->GetUsersDevelopmentActivity");
 
-			var localVarPath = "/api/v2/users/development/activities/{activityId}";
+			var localVarPath = "/users/development/activities/{activityId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17119,7 +17119,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'type' when calling UsersApi->GetUsersDevelopmentActivity");
 
 
-			var localVarPath = "/api/v2/users/development/activities/{activityId}";
+			var localVarPath = "/users/development/activities/{activityId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17227,7 +17227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalKey == null)
 				throw new ApiException(400, "Missing required parameter 'externalKey' when calling UsersApi->GetUsersExternalidAuthorityNameExternalKey");
 
-			var localVarPath = "/api/v2/users/externalid/{authorityName}/{externalKey}";
+			var localVarPath = "/users/externalid/{authorityName}/{externalKey}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17338,7 +17338,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalKey' when calling UsersApi->GetUsersExternalidAuthorityNameExternalKey");
 
 
-			var localVarPath = "/api/v2/users/externalid/{authorityName}/{externalKey}";
+			var localVarPath = "/users/externalid/{authorityName}/{externalKey}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17439,7 +17439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UserMe> GetUsersMeWithHttpInfo(List<string> expand = null, string integrationPresenceSource = null)
 		{
 
-			var localVarPath = "/api/v2/users/me";
+			var localVarPath = "/users/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17539,7 +17539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo(List<string> expand = null, string integrationPresenceSource = null)
 		{
 
-			var localVarPath = "/api/v2/users/me";
+			var localVarPath = "/users/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17649,7 +17649,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UserCursorEntityListing> GetUsersQueryWithHttpInfo(string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
 		{
 
-			var localVarPath = "/api/v2/users/query";
+			var localVarPath = "/users/query";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17763,7 +17763,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UserCursorEntityListing>> GetUsersQueryAsyncWithHttpInfo(string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
 		{
 
-			var localVarPath = "/api/v2/users/query";
+			var localVarPath = "/users/query";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17872,7 +17872,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (q64 == null)
 				throw new ApiException(400, "Missing required parameter 'q64' when calling UsersApi->GetUsersSearch");
 
-			var localVarPath = "/api/v2/users/search";
+			var localVarPath = "/users/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17979,7 +17979,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'q64' when calling UsersApi->GetUsersSearch");
 
 
-			var localVarPath = "/api/v2/users/search";
+			var localVarPath = "/users/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18086,7 +18086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUser");
 
-			var localVarPath = "/api/v2/users/{userId}";
+			var localVarPath = "/users/{userId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18199,7 +18199,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUser");
 
 
-			var localVarPath = "/api/v2/users/{userId}";
+			var localVarPath = "/users/{userId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18310,7 +18310,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserCallforwarding");
 
-			var localVarPath = "/api/v2/users/{userId}/callforwarding";
+			var localVarPath = "/users/{userId}/callforwarding";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18423,7 +18423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserCallforwarding");
 
 
-			var localVarPath = "/api/v2/users/{userId}/callforwarding";
+			var localVarPath = "/users/{userId}/callforwarding";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18539,7 +18539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserGeolocation");
 
-			var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
+			var localVarPath = "/users/{userId}/geolocations/{clientId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18659,7 +18659,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserGeolocation");
 
 
-			var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
+			var localVarPath = "/users/{userId}/geolocations/{clientId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18776,7 +18776,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserQueue");
 
-			var localVarPath = "/api/v2/users/{userId}/queues/{queueId}";
+			var localVarPath = "/users/{userId}/queues/{queueId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18896,7 +18896,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserQueue");
 
 
-			var localVarPath = "/api/v2/users/{userId}/queues/{queueId}";
+			var localVarPath = "/users/{userId}/queues/{queueId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19010,7 +19010,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserQueues");
 
-			var localVarPath = "/api/v2/users/{userId}/queues";
+			var localVarPath = "/users/{userId}/queues";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19126,7 +19126,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserQueues");
 
 
-			var localVarPath = "/api/v2/users/{userId}/queues";
+			var localVarPath = "/users/{userId}/queues";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19243,7 +19243,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserRoutinglanguage");
 
-			var localVarPath = "/api/v2/users/{userId}/routinglanguages/{languageId}";
+			var localVarPath = "/users/{userId}/routinglanguages/{languageId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19363,7 +19363,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserRoutinglanguage");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routinglanguages/{languageId}";
+			var localVarPath = "/users/{userId}/routinglanguages/{languageId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19475,7 +19475,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserRoutinglanguagesBulk");
 
-			var localVarPath = "/api/v2/users/{userId}/routinglanguages/bulk";
+			var localVarPath = "/users/{userId}/routinglanguages/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19588,7 +19588,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserRoutinglanguagesBulk");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routinglanguages/bulk";
+			var localVarPath = "/users/{userId}/routinglanguages/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19699,7 +19699,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserRoutingskillsBulk");
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills/bulk";
+			var localVarPath = "/users/{userId}/routingskills/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19812,7 +19812,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUserRoutingskillsBulk");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills/bulk";
+			var localVarPath = "/users/{userId}/routingskills/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19918,7 +19918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUsersBulk");
 
-			var localVarPath = "/api/v2/users/bulk";
+			var localVarPath = "/users/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20024,7 +20024,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PatchUsersBulk");
 
 
-			var localVarPath = "/api/v2/users/bulk";
+			var localVarPath = "/users/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20133,7 +20133,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersActivityQuery");
 
-			var localVarPath = "/api/v2/analytics/users/activity/query";
+			var localVarPath = "/analytics/users/activity/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20245,7 +20245,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersActivityQuery");
 
 
-			var localVarPath = "/api/v2/analytics/users/activity/query";
+			var localVarPath = "/analytics/users/activity/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20354,7 +20354,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersAggregatesJobs");
 
-			var localVarPath = "/api/v2/analytics/users/aggregates/jobs";
+			var localVarPath = "/analytics/users/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20462,7 +20462,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersAggregatesJobs");
 
 
-			var localVarPath = "/api/v2/analytics/users/aggregates/jobs";
+			var localVarPath = "/analytics/users/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20567,7 +20567,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersAggregatesQuery");
 
-			var localVarPath = "/api/v2/analytics/users/aggregates/query";
+			var localVarPath = "/analytics/users/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20673,7 +20673,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersAggregatesQuery");
 
 
-			var localVarPath = "/api/v2/analytics/users/aggregates/query";
+			var localVarPath = "/analytics/users/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20778,7 +20778,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersDetailsJobs");
 
-			var localVarPath = "/api/v2/analytics/users/details/jobs";
+			var localVarPath = "/analytics/users/details/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20884,7 +20884,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersDetailsJobs");
 
 
-			var localVarPath = "/api/v2/analytics/users/details/jobs";
+			var localVarPath = "/analytics/users/details/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20989,7 +20989,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersDetailsQuery");
 
-			var localVarPath = "/api/v2/analytics/users/details/query";
+			var localVarPath = "/analytics/users/details/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21095,7 +21095,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersDetailsQuery");
 
 
-			var localVarPath = "/api/v2/analytics/users/details/query";
+			var localVarPath = "/analytics/users/details/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21200,7 +21200,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersObservationsQuery");
 
-			var localVarPath = "/api/v2/analytics/users/observations/query";
+			var localVarPath = "/analytics/users/observations/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21306,7 +21306,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAnalyticsUsersObservationsQuery");
 
 
-			var localVarPath = "/api/v2/analytics/users/observations/query";
+			var localVarPath = "/analytics/users/observations/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21417,7 +21417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAuthorizationSubjectBulkadd");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkadd";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkadd";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21532,7 +21532,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAuthorizationSubjectBulkadd");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkadd";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkadd";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21643,7 +21643,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAuthorizationSubjectBulkremove");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkremove";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkremove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21755,7 +21755,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAuthorizationSubjectBulkremove");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkremove";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkremove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21867,7 +21867,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAuthorizationSubjectBulkreplace");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkreplace";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkreplace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21982,7 +21982,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostAuthorizationSubjectBulkreplace");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkreplace";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkreplace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22100,7 +22100,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roleId == null)
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling UsersApi->PostAuthorizationSubjectDivisionRole");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+			var localVarPath = "/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22217,7 +22217,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling UsersApi->PostAuthorizationSubjectDivisionRole");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+			var localVarPath = "/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22325,7 +22325,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserExternalid");
 
-			var localVarPath = "/api/v2/users/{userId}/externalid";
+			var localVarPath = "/users/{userId}/externalid";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22438,7 +22438,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserExternalid");
 
 
-			var localVarPath = "/api/v2/users/{userId}/externalid";
+			var localVarPath = "/users/{userId}/externalid";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22545,7 +22545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PostUserInvite");
 
-			var localVarPath = "/api/v2/users/{userId}/invite";
+			var localVarPath = "/users/{userId}/invite";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22648,7 +22648,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PostUserInvite");
 
 
-			var localVarPath = "/api/v2/users/{userId}/invite";
+			var localVarPath = "/users/{userId}/invite";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22753,7 +22753,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserPassword");
 
-			var localVarPath = "/api/v2/users/{userId}/password";
+			var localVarPath = "/users/{userId}/password";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22865,7 +22865,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserPassword");
 
 
-			var localVarPath = "/api/v2/users/{userId}/password";
+			var localVarPath = "/users/{userId}/password";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22976,7 +22976,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserRoutinglanguages");
 
-			var localVarPath = "/api/v2/users/{userId}/routinglanguages";
+			var localVarPath = "/users/{userId}/routinglanguages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23089,7 +23089,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserRoutinglanguages");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routinglanguages";
+			var localVarPath = "/users/{userId}/routinglanguages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23200,7 +23200,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserRoutingskills");
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills";
+			var localVarPath = "/users/{userId}/routingskills";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23313,7 +23313,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUserRoutingskills");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills";
+			var localVarPath = "/users/{userId}/routingskills";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23419,7 +23419,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsers");
 
-			var localVarPath = "/api/v2/users";
+			var localVarPath = "/users";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23525,7 +23525,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsers");
 
 
-			var localVarPath = "/api/v2/users";
+			var localVarPath = "/users";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23630,7 +23630,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersDevelopmentActivitiesAggregatesQuery");
 
-			var localVarPath = "/api/v2/users/development/activities/aggregates/query";
+			var localVarPath = "/users/development/activities/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23736,7 +23736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersDevelopmentActivitiesAggregatesQuery");
 
 
-			var localVarPath = "/api/v2/users/development/activities/aggregates/query";
+			var localVarPath = "/users/development/activities/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23840,7 +23840,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersMePassword");
 
-			var localVarPath = "/api/v2/users/me/password";
+			var localVarPath = "/users/me/password";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23945,7 +23945,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersMePassword");
 
 
-			var localVarPath = "/api/v2/users/me/password";
+			var localVarPath = "/users/me/password";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24050,7 +24050,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearch");
 
-			var localVarPath = "/api/v2/users/search";
+			var localVarPath = "/users/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24156,7 +24156,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearch");
 
 
-			var localVarPath = "/api/v2/users/search";
+			var localVarPath = "/users/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24263,7 +24263,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearchConversationTarget");
 
-			var localVarPath = "/api/v2/users/search/conversation/target";
+			var localVarPath = "/users/search/conversation/target";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24371,7 +24371,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearchConversationTarget");
 
 
-			var localVarPath = "/api/v2/users/search/conversation/target";
+			var localVarPath = "/users/search/conversation/target";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24478,7 +24478,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearchQueuemembersManage");
 
-			var localVarPath = "/api/v2/users/search/queuemembers/manage";
+			var localVarPath = "/users/search/queuemembers/manage";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24586,7 +24586,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearchQueuemembersManage");
 
 
-			var localVarPath = "/api/v2/users/search/queuemembers/manage";
+			var localVarPath = "/users/search/queuemembers/manage";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24691,7 +24691,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearchTeamsAssign");
 
-			var localVarPath = "/api/v2/users/search/teams/assign";
+			var localVarPath = "/users/search/teams/assign";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24797,7 +24797,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersSearchTeamsAssign");
 
 
-			var localVarPath = "/api/v2/users/search/teams/assign";
+			var localVarPath = "/users/search/teams/assign";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24902,7 +24902,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutRoutingDirectroutingbackupSettingsMe");
 
-			var localVarPath = "/api/v2/routing/directroutingbackup/settings/me";
+			var localVarPath = "/routing/directroutingbackup/settings/me";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25008,7 +25008,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutRoutingDirectroutingbackupSettingsMe");
 
 
-			var localVarPath = "/api/v2/routing/directroutingbackup/settings/me";
+			var localVarPath = "/routing/directroutingbackup/settings/me";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25118,7 +25118,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutRoutingUserDirectroutingbackupSettings");
 
-			var localVarPath = "/api/v2/routing/users/{userId}/directroutingbackup/settings";
+			var localVarPath = "/routing/users/{userId}/directroutingbackup/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25231,7 +25231,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutRoutingUserDirectroutingbackupSettings");
 
 
-			var localVarPath = "/api/v2/routing/users/{userId}/directroutingbackup/settings";
+			var localVarPath = "/routing/users/{userId}/directroutingbackup/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25342,7 +25342,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutRoutingUserUtilization");
 
-			var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+			var localVarPath = "/routing/users/{userId}/utilization";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25455,7 +25455,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutRoutingUserUtilization");
 
 
-			var localVarPath = "/api/v2/routing/users/{userId}/utilization";
+			var localVarPath = "/routing/users/{userId}/utilization";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25566,7 +25566,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserCallforwarding");
 
-			var localVarPath = "/api/v2/users/{userId}/callforwarding";
+			var localVarPath = "/users/{userId}/callforwarding";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25679,7 +25679,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserCallforwarding");
 
 
-			var localVarPath = "/api/v2/users/{userId}/callforwarding";
+			var localVarPath = "/users/{userId}/callforwarding";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25790,7 +25790,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserOutofoffice");
 
-			var localVarPath = "/api/v2/users/{userId}/outofoffice";
+			var localVarPath = "/users/{userId}/outofoffice";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25903,7 +25903,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserOutofoffice");
 
 
-			var localVarPath = "/api/v2/users/{userId}/outofoffice";
+			var localVarPath = "/users/{userId}/outofoffice";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26014,7 +26014,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserProfileskills");
 
-			var localVarPath = "/api/v2/users/{userId}/profileskills";
+			var localVarPath = "/users/{userId}/profileskills";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26127,7 +26127,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserProfileskills");
 
 
-			var localVarPath = "/api/v2/users/{userId}/profileskills";
+			var localVarPath = "/users/{userId}/profileskills";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26238,7 +26238,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserRoles");
 
-			var localVarPath = "/api/v2/users/{subjectId}/roles";
+			var localVarPath = "/users/{subjectId}/roles";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26351,7 +26351,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserRoles");
 
 
-			var localVarPath = "/api/v2/users/{subjectId}/roles";
+			var localVarPath = "/users/{subjectId}/roles";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26467,7 +26467,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserRoutingskill");
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
+			var localVarPath = "/users/{userId}/routingskills/{skillId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26587,7 +26587,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserRoutingskill");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills/{skillId}";
+			var localVarPath = "/users/{userId}/routingskills/{skillId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26699,7 +26699,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserRoutingskillsBulk");
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills/bulk";
+			var localVarPath = "/users/{userId}/routingskills/bulk";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26812,7 +26812,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserRoutingskillsBulk");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routingskills/bulk";
+			var localVarPath = "/users/{userId}/routingskills/bulk";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26923,7 +26923,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserRoutingstatus");
 
-			var localVarPath = "/api/v2/users/{userId}/routingstatus";
+			var localVarPath = "/users/{userId}/routingstatus";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27036,7 +27036,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserRoutingstatus");
 
 
-			var localVarPath = "/api/v2/users/{userId}/routingstatus";
+			var localVarPath = "/users/{userId}/routingstatus";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27147,7 +27147,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserState");
 
-			var localVarPath = "/api/v2/users/{userId}/state";
+			var localVarPath = "/users/{userId}/state";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27260,7 +27260,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserState");
 
 
-			var localVarPath = "/api/v2/users/{userId}/state";
+			var localVarPath = "/users/{userId}/state";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27370,7 +27370,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (stationId == null)
 				throw new ApiException(400, "Missing required parameter 'stationId' when calling UsersApi->PutUserStationAssociatedstationStationId");
 
-			var localVarPath = "/api/v2/users/{userId}/station/associatedstation/{stationId}";
+			var localVarPath = "/users/{userId}/station/associatedstation/{stationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27477,7 +27477,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'stationId' when calling UsersApi->PutUserStationAssociatedstationStationId");
 
 
-			var localVarPath = "/api/v2/users/{userId}/station/associatedstation/{stationId}";
+			var localVarPath = "/users/{userId}/station/associatedstation/{stationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27582,7 +27582,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (stationId == null)
 				throw new ApiException(400, "Missing required parameter 'stationId' when calling UsersApi->PutUserStationDefaultstationStationId");
 
-			var localVarPath = "/api/v2/users/{userId}/station/defaultstation/{stationId}";
+			var localVarPath = "/users/{userId}/station/defaultstation/{stationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27689,7 +27689,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'stationId' when calling UsersApi->PutUserStationDefaultstationStationId");
 
 
-			var localVarPath = "/api/v2/users/{userId}/station/defaultstation/{stationId}";
+			var localVarPath = "/users/{userId}/station/defaultstation/{stationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27800,7 +27800,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserVerifier");
 
-			var localVarPath = "/api/v2/users/{userId}/verifiers/{verifierId}";
+			var localVarPath = "/users/{userId}/verifiers/{verifierId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27920,7 +27920,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUserVerifier");
 
 
-			var localVarPath = "/api/v2/users/{userId}/verifiers/{verifierId}";
+			var localVarPath = "/users/{userId}/verifiers/{verifierId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

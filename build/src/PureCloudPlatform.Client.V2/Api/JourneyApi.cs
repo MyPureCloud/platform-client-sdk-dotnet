@@ -4088,7 +4088,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->DeleteAnalyticsJourneysAggregatesJob");
 
-			var localVarPath = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/journeys/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4190,7 +4190,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->DeleteAnalyticsJourneysAggregatesJob");
 
 
-			var localVarPath = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/journeys/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4289,7 +4289,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionMapId == null)
 				throw new ApiException(400, "Missing required parameter 'actionMapId' when calling JourneyApi->DeleteJourneyActionmap");
 
-			var localVarPath = "/api/v2/journey/actionmaps/{actionMapId}";
+			var localVarPath = "/journey/actionmaps/{actionMapId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4389,7 +4389,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionMapId' when calling JourneyApi->DeleteJourneyActionmap");
 
 
-			var localVarPath = "/api/v2/journey/actionmaps/{actionMapId}";
+			var localVarPath = "/journey/actionmaps/{actionMapId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4490,7 +4490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'actionTemplateId' when calling JourneyApi->DeleteJourneyActiontemplate");
 
-			var localVarPath = "/api/v2/journey/actiontemplates/{actionTemplateId}";
+			var localVarPath = "/journey/actiontemplates/{actionTemplateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4593,7 +4593,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionTemplateId' when calling JourneyApi->DeleteJourneyActiontemplate");
 
 
-			var localVarPath = "/api/v2/journey/actiontemplates/{actionTemplateId}";
+			var localVarPath = "/journey/actiontemplates/{actionTemplateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4693,7 +4693,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (outcomeId == null)
 				throw new ApiException(400, "Missing required parameter 'outcomeId' when calling JourneyApi->DeleteJourneyOutcome");
 
-			var localVarPath = "/api/v2/journey/outcomes/{outcomeId}";
+			var localVarPath = "/journey/outcomes/{outcomeId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4793,7 +4793,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'outcomeId' when calling JourneyApi->DeleteJourneyOutcome");
 
 
-			var localVarPath = "/api/v2/journey/outcomes/{outcomeId}";
+			var localVarPath = "/journey/outcomes/{outcomeId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4892,7 +4892,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (predictorId == null)
 				throw new ApiException(400, "Missing required parameter 'predictorId' when calling JourneyApi->DeleteJourneyOutcomesPredictor");
 
-			var localVarPath = "/api/v2/journey/outcomes/predictors/{predictorId}";
+			var localVarPath = "/journey/outcomes/predictors/{predictorId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4992,7 +4992,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'predictorId' when calling JourneyApi->DeleteJourneyOutcomesPredictor");
 
 
-			var localVarPath = "/api/v2/journey/outcomes/predictors/{predictorId}";
+			var localVarPath = "/journey/outcomes/predictors/{predictorId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5091,7 +5091,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (segmentId == null)
 				throw new ApiException(400, "Missing required parameter 'segmentId' when calling JourneyApi->DeleteJourneySegment");
 
-			var localVarPath = "/api/v2/journey/segments/{segmentId}";
+			var localVarPath = "/journey/segments/{segmentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5191,7 +5191,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'segmentId' when calling JourneyApi->DeleteJourneySegment");
 
 
-			var localVarPath = "/api/v2/journey/segments/{segmentId}";
+			var localVarPath = "/journey/segments/{segmentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5290,7 +5290,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (viewId == null)
 				throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->DeleteJourneyView");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}";
+			var localVarPath = "/journey/views/{viewId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5390,7 +5390,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->DeleteJourneyView");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}";
+			var localVarPath = "/journey/views/{viewId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5490,7 +5490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (viewId == null)
 				throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->DeleteJourneyViewSchedules");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/schedules";
+			var localVarPath = "/journey/views/{viewId}/schedules";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5591,7 +5591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->DeleteJourneyViewSchedules");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/schedules";
+			var localVarPath = "/journey/views/{viewId}/schedules";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5693,7 +5693,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetAnalyticsJourneysAggregatesJob");
 
-			var localVarPath = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/journeys/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5796,7 +5796,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetAnalyticsJourneysAggregatesJob");
 
 
-			var localVarPath = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/journeys/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5900,7 +5900,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetAnalyticsJourneysAggregatesJobResults");
 
-			var localVarPath = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/analytics/journeys/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6006,7 +6006,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetAnalyticsJourneysAggregatesJobResults");
 
 
-			var localVarPath = "/api/v2/analytics/journeys/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/analytics/journeys/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6111,7 +6111,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling JourneyApi->GetExternalcontactsContactJourneySegments");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/segments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6218,7 +6218,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling JourneyApi->GetExternalcontactsContactJourneySegments");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/segments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6326,7 +6326,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling JourneyApi->GetExternalcontactsContactJourneySessions");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/sessions";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/sessions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6436,7 +6436,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling JourneyApi->GetExternalcontactsContactJourneySessions");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/sessions";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/sessions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6539,7 +6539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionMapId == null)
 				throw new ApiException(400, "Missing required parameter 'actionMapId' when calling JourneyApi->GetJourneyActionmap");
 
-			var localVarPath = "/api/v2/journey/actionmaps/{actionMapId}";
+			var localVarPath = "/journey/actionmaps/{actionMapId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6640,7 +6640,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionMapId' when calling JourneyApi->GetJourneyActionmap");
 
 
-			var localVarPath = "/api/v2/journey/actionmaps/{actionMapId}";
+			var localVarPath = "/journey/actionmaps/{actionMapId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6751,7 +6751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ActionMapListing> GetJourneyActionmapsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
 		{
 
-			var localVarPath = "/api/v2/journey/actionmaps";
+			var localVarPath = "/journey/actionmaps";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6869,7 +6869,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ActionMapListing>> GetJourneyActionmapsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null)
 		{
 
-			var localVarPath = "/api/v2/journey/actionmaps";
+			var localVarPath = "/journey/actionmaps";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6976,7 +6976,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyActionmapsEstimatesJob");
 
-			var localVarPath = "/api/v2/journey/actionmaps/estimates/jobs/{jobId}";
+			var localVarPath = "/journey/actionmaps/estimates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7077,7 +7077,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyActionmapsEstimatesJob");
 
 
-			var localVarPath = "/api/v2/journey/actionmaps/estimates/jobs/{jobId}";
+			var localVarPath = "/journey/actionmaps/estimates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7177,7 +7177,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyActionmapsEstimatesJobResults");
 
-			var localVarPath = "/api/v2/journey/actionmaps/estimates/jobs/{jobId}/results";
+			var localVarPath = "/journey/actionmaps/estimates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7278,7 +7278,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyActionmapsEstimatesJobResults");
 
 
-			var localVarPath = "/api/v2/journey/actionmaps/estimates/jobs/{jobId}/results";
+			var localVarPath = "/journey/actionmaps/estimates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7378,7 +7378,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionTargetId == null)
 				throw new ApiException(400, "Missing required parameter 'actionTargetId' when calling JourneyApi->GetJourneyActiontarget");
 
-			var localVarPath = "/api/v2/journey/actiontargets/{actionTargetId}";
+			var localVarPath = "/journey/actiontargets/{actionTargetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7479,7 +7479,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionTargetId' when calling JourneyApi->GetJourneyActiontarget");
 
 
-			var localVarPath = "/api/v2/journey/actiontargets/{actionTargetId}";
+			var localVarPath = "/journey/actiontargets/{actionTargetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7578,7 +7578,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ActionTargetListing> GetJourneyActiontargetsWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/journey/actiontargets";
+			var localVarPath = "/journey/actiontargets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7678,7 +7678,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ActionTargetListing>> GetJourneyActiontargetsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/journey/actiontargets";
+			var localVarPath = "/journey/actiontargets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7779,7 +7779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'actionTemplateId' when calling JourneyApi->GetJourneyActiontemplate");
 
-			var localVarPath = "/api/v2/journey/actiontemplates/{actionTemplateId}";
+			var localVarPath = "/journey/actiontemplates/{actionTemplateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7880,7 +7880,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionTemplateId' when calling JourneyApi->GetJourneyActiontemplate");
 
 
-			var localVarPath = "/api/v2/journey/actiontemplates/{actionTemplateId}";
+			var localVarPath = "/journey/actiontemplates/{actionTemplateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7989,7 +7989,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ActionTemplateListing> GetJourneyActiontemplatesWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
 		{
 
-			var localVarPath = "/api/v2/journey/actiontemplates";
+			var localVarPath = "/journey/actiontemplates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8104,7 +8104,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ActionTemplateListing>> GetJourneyActiontemplatesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string mediaType = null, string state = null, List<string> queryFields = null, string queryValue = null)
 		{
 
-			var localVarPath = "/api/v2/journey/actiontemplates";
+			var localVarPath = "/journey/actiontemplates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8225,7 +8225,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (customerCookieId == null)
 				throw new ApiException(400, "Missing required parameter 'customerCookieId' when calling JourneyApi->GetJourneyDeploymentCustomerPing");
 
-			var localVarPath = "/api/v2/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping";
+			var localVarPath = "/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8341,7 +8341,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'customerCookieId' when calling JourneyApi->GetJourneyDeploymentCustomerPing");
 
 
-			var localVarPath = "/api/v2/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping";
+			var localVarPath = "/journey/deployments/{deploymentId}/customers/{customerCookieId}/ping";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8440,7 +8440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (outcomeId == null)
 				throw new ApiException(400, "Missing required parameter 'outcomeId' when calling JourneyApi->GetJourneyOutcome");
 
-			var localVarPath = "/api/v2/journey/outcomes/{outcomeId}";
+			var localVarPath = "/journey/outcomes/{outcomeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8541,7 +8541,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'outcomeId' when calling JourneyApi->GetJourneyOutcome");
 
 
-			var localVarPath = "/api/v2/journey/outcomes/{outcomeId}";
+			var localVarPath = "/journey/outcomes/{outcomeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8648,7 +8648,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OutcomeListing> GetJourneyOutcomesWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
 		{
 
-			var localVarPath = "/api/v2/journey/outcomes";
+			var localVarPath = "/journey/outcomes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8760,7 +8760,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OutcomeListing>> GetJourneyOutcomesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
 		{
 
-			var localVarPath = "/api/v2/journey/outcomes";
+			var localVarPath = "/journey/outcomes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8867,7 +8867,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyOutcomesAttributionsJob");
 
-			var localVarPath = "/api/v2/journey/outcomes/attributions/jobs/{jobId}";
+			var localVarPath = "/journey/outcomes/attributions/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8970,7 +8970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyOutcomesAttributionsJob");
 
 
-			var localVarPath = "/api/v2/journey/outcomes/attributions/jobs/{jobId}";
+			var localVarPath = "/journey/outcomes/attributions/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9072,7 +9072,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyOutcomesAttributionsJobResults");
 
-			var localVarPath = "/api/v2/journey/outcomes/attributions/jobs/{jobId}/results";
+			var localVarPath = "/journey/outcomes/attributions/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9175,7 +9175,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyOutcomesAttributionsJobResults");
 
 
-			var localVarPath = "/api/v2/journey/outcomes/attributions/jobs/{jobId}/results";
+			var localVarPath = "/journey/outcomes/attributions/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9275,7 +9275,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (predictorId == null)
 				throw new ApiException(400, "Missing required parameter 'predictorId' when calling JourneyApi->GetJourneyOutcomesPredictor");
 
-			var localVarPath = "/api/v2/journey/outcomes/predictors/{predictorId}";
+			var localVarPath = "/journey/outcomes/predictors/{predictorId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9376,7 +9376,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'predictorId' when calling JourneyApi->GetJourneyOutcomesPredictor");
 
 
-			var localVarPath = "/api/v2/journey/outcomes/predictors/{predictorId}";
+			var localVarPath = "/journey/outcomes/predictors/{predictorId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9471,7 +9471,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OutcomePredictorListing> GetJourneyOutcomesPredictorsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/journey/outcomes/predictors";
+			var localVarPath = "/journey/outcomes/predictors";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9565,7 +9565,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OutcomePredictorListing>> GetJourneyOutcomesPredictorsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/journey/outcomes/predictors";
+			var localVarPath = "/journey/outcomes/predictors";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9664,7 +9664,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (segmentId == null)
 				throw new ApiException(400, "Missing required parameter 'segmentId' when calling JourneyApi->GetJourneySegment");
 
-			var localVarPath = "/api/v2/journey/segments/{segmentId}";
+			var localVarPath = "/journey/segments/{segmentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9765,7 +9765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'segmentId' when calling JourneyApi->GetJourneySegment");
 
 
-			var localVarPath = "/api/v2/journey/segments/{segmentId}";
+			var localVarPath = "/journey/segments/{segmentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9874,7 +9874,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SegmentListing> GetJourneySegmentsWithHttpInfo(string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
 		{
 
-			var localVarPath = "/api/v2/journey/segments";
+			var localVarPath = "/journey/segments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9989,7 +9989,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SegmentListing>> GetJourneySegmentsAsyncWithHttpInfo(string sortBy = null, int? pageSize = null, int? pageNumber = null, bool? isActive = null, List<string> segmentIds = null, List<string> queryFields = null, string queryValue = null)
 		{
 
-			var localVarPath = "/api/v2/journey/segments";
+			var localVarPath = "/journey/segments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10095,7 +10095,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneySession");
 
-			var localVarPath = "/api/v2/journey/sessions/{sessionId}";
+			var localVarPath = "/journey/sessions/{sessionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10196,7 +10196,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneySession");
 
 
-			var localVarPath = "/api/v2/journey/sessions/{sessionId}";
+			var localVarPath = "/journey/sessions/{sessionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10302,7 +10302,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneySessionEvents");
 
-			var localVarPath = "/api/v2/journey/sessions/{sessionId}/events";
+			var localVarPath = "/journey/sessions/{sessionId}/events";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10412,7 +10412,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneySessionEvents");
 
 
-			var localVarPath = "/api/v2/journey/sessions/{sessionId}/events";
+			var localVarPath = "/journey/sessions/{sessionId}/events";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10515,7 +10515,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneySessionOutcomescores");
 
-			var localVarPath = "/api/v2/journey/sessions/{sessionId}/outcomescores";
+			var localVarPath = "/journey/sessions/{sessionId}/outcomescores";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10616,7 +10616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling JourneyApi->GetJourneySessionOutcomescores");
 
 
-			var localVarPath = "/api/v2/journey/sessions/{sessionId}/outcomescores";
+			var localVarPath = "/journey/sessions/{sessionId}/outcomescores";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10716,7 +10716,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (viewId == null)
 				throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->GetJourneyView");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}";
+			var localVarPath = "/journey/views/{viewId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10817,7 +10817,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->GetJourneyView");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}";
+			var localVarPath = "/journey/views/{viewId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10917,7 +10917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (viewId == null)
 				throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->GetJourneyViewSchedules");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/schedules";
+			var localVarPath = "/journey/views/{viewId}/schedules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11018,7 +11018,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'viewId' when calling JourneyApi->GetJourneyViewSchedules");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/schedules";
+			var localVarPath = "/journey/views/{viewId}/schedules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11123,7 +11123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling JourneyApi->GetJourneyViewVersion");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{versionId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11231,7 +11231,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling JourneyApi->GetJourneyViewVersion");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{versionId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11342,7 +11342,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (chartId == null)
 				throw new ApiException(400, "Missing required parameter 'chartId' when calling JourneyApi->GetJourneyViewVersionChart");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11457,7 +11457,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'chartId' when calling JourneyApi->GetJourneyViewVersionChart");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11574,7 +11574,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (chartVersion == null)
 				throw new ApiException(400, "Missing required parameter 'chartVersion' when calling JourneyApi->GetJourneyViewVersionChartVersion");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}/versions/{chartVersion}";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}/versions/{chartVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11696,7 +11696,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'chartVersion' when calling JourneyApi->GetJourneyViewVersionChartVersion");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}/versions/{chartVersion}";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyViewVersion}/charts/{chartId}/versions/{chartVersion}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11809,7 +11809,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyViewVersionJob");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11924,7 +11924,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyViewVersionJob");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12036,7 +12036,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyViewVersionJobResults");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12151,7 +12151,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling JourneyApi->GetJourneyViewVersionJobResults");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyViewVersion}/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12268,7 +12268,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (chartId == null)
 				throw new ApiException(400, "Missing required parameter 'chartId' when calling JourneyApi->GetJourneyViewVersionJobResultsChart");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}/results/charts/{chartId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}/results/charts/{chartId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12390,7 +12390,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'chartId' when calling JourneyApi->GetJourneyViewVersionJobResultsChart");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}/results/charts/{chartId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}/results/charts/{chartId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12498,7 +12498,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (journeyVersionId == null)
 				throw new ApiException(400, "Missing required parameter 'journeyVersionId' when calling JourneyApi->GetJourneyViewVersionJobsLatest");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12606,7 +12606,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'journeyVersionId' when calling JourneyApi->GetJourneyViewVersionJobsLatest");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyVersionId}/jobs/latest";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12712,7 +12712,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<JourneyViewListing> GetJourneyViewsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null)
 		{
 
-			var localVarPath = "/api/v2/journey/views";
+			var localVarPath = "/journey/views";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12821,7 +12821,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<JourneyViewListing>> GetJourneyViewsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string nameOrCreatedBy = null, string expand = null, string id = null)
 		{
 
-			var localVarPath = "/api/v2/journey/views";
+			var localVarPath = "/journey/views";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12920,7 +12920,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DataRange> GetJourneyViewsDataDetailsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/journey/views/data/details";
+			var localVarPath = "/journey/views/data/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13014,7 +13014,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DataRange>> GetJourneyViewsDataDetailsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/journey/views/data/details";
+			var localVarPath = "/journey/views/data/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13113,7 +13113,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (eventDefinitionId == null)
 				throw new ApiException(400, "Missing required parameter 'eventDefinitionId' when calling JourneyApi->GetJourneyViewsEventdefinition");
 
-			var localVarPath = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}";
+			var localVarPath = "/journey/views/eventdefinitions/{eventDefinitionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13214,7 +13214,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'eventDefinitionId' when calling JourneyApi->GetJourneyViewsEventdefinition");
 
 
-			var localVarPath = "/api/v2/journey/views/eventdefinitions/{eventDefinitionId}";
+			var localVarPath = "/journey/views/eventdefinitions/{eventDefinitionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13309,7 +13309,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<JourneyEventDefinitionListing> GetJourneyViewsEventdefinitionsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/journey/views/eventdefinitions";
+			var localVarPath = "/journey/views/eventdefinitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13403,7 +13403,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<JourneyEventDefinitionListing>> GetJourneyViewsEventdefinitionsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/journey/views/eventdefinitions";
+			var localVarPath = "/journey/views/eventdefinitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13505,7 +13505,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<JourneyViewJobListing> GetJourneyViewsJobsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string interval = null, string statuses = null)
 		{
 
-			var localVarPath = "/api/v2/journey/views/jobs";
+			var localVarPath = "/journey/views/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13611,7 +13611,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<JourneyViewJobListing>> GetJourneyViewsJobsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string interval = null, string statuses = null)
 		{
 
-			var localVarPath = "/api/v2/journey/views/jobs";
+			var localVarPath = "/journey/views/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13717,7 +13717,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<JourneyViewJobListing> GetJourneyViewsJobsMeWithHttpInfo(int? pageNumber = null, int? pageSize = null, string interval = null, string statuses = null)
 		{
 
-			var localVarPath = "/api/v2/journey/views/jobs/me";
+			var localVarPath = "/journey/views/jobs/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13823,7 +13823,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<JourneyViewJobListing>> GetJourneyViewsJobsMeAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string interval = null, string statuses = null)
 		{
 
-			var localVarPath = "/api/v2/journey/views/jobs/me";
+			var localVarPath = "/journey/views/jobs/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13925,7 +13925,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<JourneyViewScheduleListing> GetJourneyViewsSchedulesWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/journey/views/schedules";
+			var localVarPath = "/journey/views/schedules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14025,7 +14025,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<JourneyViewScheduleListing>> GetJourneyViewsSchedulesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/journey/views/schedules";
+			var localVarPath = "/journey/views/schedules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14128,7 +14128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionMapId == null)
 				throw new ApiException(400, "Missing required parameter 'actionMapId' when calling JourneyApi->PatchJourneyActionmap");
 
-			var localVarPath = "/api/v2/journey/actionmaps/{actionMapId}";
+			var localVarPath = "/journey/actionmaps/{actionMapId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14237,7 +14237,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionMapId' when calling JourneyApi->PatchJourneyActionmap");
 
 
-			var localVarPath = "/api/v2/journey/actionmaps/{actionMapId}";
+			var localVarPath = "/journey/actionmaps/{actionMapId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14345,7 +14345,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionTargetId == null)
 				throw new ApiException(400, "Missing required parameter 'actionTargetId' when calling JourneyApi->PatchJourneyActiontarget");
 
-			var localVarPath = "/api/v2/journey/actiontargets/{actionTargetId}";
+			var localVarPath = "/journey/actiontargets/{actionTargetId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14454,7 +14454,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionTargetId' when calling JourneyApi->PatchJourneyActiontarget");
 
 
-			var localVarPath = "/api/v2/journey/actiontargets/{actionTargetId}";
+			var localVarPath = "/journey/actiontargets/{actionTargetId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14562,7 +14562,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'actionTemplateId' when calling JourneyApi->PatchJourneyActiontemplate");
 
-			var localVarPath = "/api/v2/journey/actiontemplates/{actionTemplateId}";
+			var localVarPath = "/journey/actiontemplates/{actionTemplateId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14671,7 +14671,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionTemplateId' when calling JourneyApi->PatchJourneyActiontemplate");
 
 
-			var localVarPath = "/api/v2/journey/actiontemplates/{actionTemplateId}";
+			var localVarPath = "/journey/actiontemplates/{actionTemplateId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14779,7 +14779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (outcomeId == null)
 				throw new ApiException(400, "Missing required parameter 'outcomeId' when calling JourneyApi->PatchJourneyOutcome");
 
-			var localVarPath = "/api/v2/journey/outcomes/{outcomeId}";
+			var localVarPath = "/journey/outcomes/{outcomeId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14888,7 +14888,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'outcomeId' when calling JourneyApi->PatchJourneyOutcome");
 
 
-			var localVarPath = "/api/v2/journey/outcomes/{outcomeId}";
+			var localVarPath = "/journey/outcomes/{outcomeId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14996,7 +14996,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (segmentId == null)
 				throw new ApiException(400, "Missing required parameter 'segmentId' when calling JourneyApi->PatchJourneySegment");
 
-			var localVarPath = "/api/v2/journey/segments/{segmentId}";
+			var localVarPath = "/journey/segments/{segmentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15105,7 +15105,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'segmentId' when calling JourneyApi->PatchJourneySegment");
 
 
-			var localVarPath = "/api/v2/journey/segments/{segmentId}";
+			var localVarPath = "/journey/segments/{segmentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15226,7 +15226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PatchJourneyViewVersionJob");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15353,7 +15353,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PatchJourneyViewVersionJob");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15463,7 +15463,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostAnalyticsJourneysAggregatesJobs");
 
-			var localVarPath = "/api/v2/analytics/journeys/aggregates/jobs";
+			var localVarPath = "/analytics/journeys/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15571,7 +15571,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostAnalyticsJourneysAggregatesJobs");
 
 
-			var localVarPath = "/api/v2/analytics/journeys/aggregates/jobs";
+			var localVarPath = "/analytics/journeys/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15676,7 +15676,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostAnalyticsJourneysAggregatesQuery");
 
-			var localVarPath = "/api/v2/analytics/journeys/aggregates/query";
+			var localVarPath = "/analytics/journeys/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15782,7 +15782,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostAnalyticsJourneysAggregatesQuery");
 
 
-			var localVarPath = "/api/v2/analytics/journeys/aggregates/query";
+			var localVarPath = "/analytics/journeys/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15889,7 +15889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling JourneyApi->PostExternalcontactsContactJourneySegments");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/segments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15998,7 +15998,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling JourneyApi->PostExternalcontactsContactJourneySegments");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/segments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16101,7 +16101,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ActionMap> PostJourneyActionmapsWithHttpInfo(ActionMap body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/actionmaps";
+			var localVarPath = "/journey/actionmaps";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16203,7 +16203,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ActionMap>> PostJourneyActionmapsAsyncWithHttpInfo(ActionMap body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/actionmaps";
+			var localVarPath = "/journey/actionmaps";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16308,7 +16308,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyActionmapsEstimatesJobs");
 
-			var localVarPath = "/api/v2/journey/actionmaps/estimates/jobs";
+			var localVarPath = "/journey/actionmaps/estimates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16414,7 +16414,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyActionmapsEstimatesJobs");
 
 
-			var localVarPath = "/api/v2/journey/actionmaps/estimates/jobs";
+			var localVarPath = "/journey/actionmaps/estimates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16516,7 +16516,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ActionTemplate> PostJourneyActiontemplatesWithHttpInfo(ActionTemplate body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/actiontemplates";
+			var localVarPath = "/journey/actiontemplates";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16618,7 +16618,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ActionTemplate>> PostJourneyActiontemplatesAsyncWithHttpInfo(ActionTemplate body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/actiontemplates";
+			var localVarPath = "/journey/actiontemplates";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16727,7 +16727,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyDeploymentActionevent");
 
-			var localVarPath = "/api/v2/journey/deployments/{deploymentId}/actionevent";
+			var localVarPath = "/journey/deployments/{deploymentId}/actionevent";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16832,7 +16832,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyDeploymentActionevent");
 
 
-			var localVarPath = "/api/v2/journey/deployments/{deploymentId}/actionevent";
+			var localVarPath = "/journey/deployments/{deploymentId}/actionevent";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16933,7 +16933,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deploymentId == null)
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling JourneyApi->PostJourneyDeploymentAppevents");
 
-			var localVarPath = "/api/v2/journey/deployments/{deploymentId}/appevents";
+			var localVarPath = "/journey/deployments/{deploymentId}/appevents";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17035,7 +17035,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling JourneyApi->PostJourneyDeploymentAppevents");
 
 
-			var localVarPath = "/api/v2/journey/deployments/{deploymentId}/appevents";
+			var localVarPath = "/journey/deployments/{deploymentId}/appevents";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17136,7 +17136,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deploymentId == null)
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling JourneyApi->PostJourneyDeploymentWebevents");
 
-			var localVarPath = "/api/v2/journey/deployments/{deploymentId}/webevents";
+			var localVarPath = "/journey/deployments/{deploymentId}/webevents";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17238,7 +17238,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deploymentId' when calling JourneyApi->PostJourneyDeploymentWebevents");
 
 
-			var localVarPath = "/api/v2/journey/deployments/{deploymentId}/webevents";
+			var localVarPath = "/journey/deployments/{deploymentId}/webevents";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17334,7 +17334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowPaths> PostJourneyFlowsPathsQueryWithHttpInfo(FlowPathsQuery body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/flows/paths/query";
+			var localVarPath = "/journey/flows/paths/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17436,7 +17436,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowPaths>> PostJourneyFlowsPathsQueryAsyncWithHttpInfo(FlowPathsQuery body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/flows/paths/query";
+			var localVarPath = "/journey/flows/paths/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17538,7 +17538,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Outcome> PostJourneyOutcomesWithHttpInfo(OutcomeRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/outcomes";
+			var localVarPath = "/journey/outcomes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17640,7 +17640,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Outcome>> PostJourneyOutcomesAsyncWithHttpInfo(OutcomeRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/outcomes";
+			var localVarPath = "/journey/outcomes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17744,7 +17744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OutcomeAttributionAsyncResponse> PostJourneyOutcomesAttributionsJobsWithHttpInfo(OutcomeAttributionListing body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/outcomes/attributions/jobs";
+			var localVarPath = "/journey/outcomes/attributions/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17848,7 +17848,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionAsyncResponse>> PostJourneyOutcomesAttributionsJobsAsyncWithHttpInfo(OutcomeAttributionListing body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/outcomes/attributions/jobs";
+			var localVarPath = "/journey/outcomes/attributions/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17950,7 +17950,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OutcomePredictor> PostJourneyOutcomesPredictorsWithHttpInfo(OutcomePredictorRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/outcomes/predictors";
+			var localVarPath = "/journey/outcomes/predictors";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18052,7 +18052,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OutcomePredictor>> PostJourneyOutcomesPredictorsAsyncWithHttpInfo(OutcomePredictorRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/outcomes/predictors";
+			var localVarPath = "/journey/outcomes/predictors";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18154,7 +18154,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<JourneySegment> PostJourneySegmentsWithHttpInfo(JourneySegmentRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/segments";
+			var localVarPath = "/journey/segments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18256,7 +18256,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<JourneySegment>> PostJourneySegmentsAsyncWithHttpInfo(JourneySegmentRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/segments";
+			var localVarPath = "/journey/segments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18366,7 +18366,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyViewSchedules");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/schedules";
+			var localVarPath = "/journey/views/{viewId}/schedules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18479,7 +18479,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyViewSchedules");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/schedules";
+			var localVarPath = "/journey/views/{viewId}/schedules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18590,7 +18590,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (journeyVersionId == null)
 				throw new ApiException(400, "Missing required parameter 'journeyVersionId' when calling JourneyApi->PostJourneyViewVersionJobs");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyVersionId}/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18698,7 +18698,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'journeyVersionId' when calling JourneyApi->PostJourneyViewVersionJobs");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs";
+			var localVarPath = "/journey/views/{viewId}/versions/{journeyVersionId}/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18804,7 +18804,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyViewVersions");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions";
+			var localVarPath = "/journey/views/{viewId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18917,7 +18917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyViewVersions");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions";
+			var localVarPath = "/journey/views/{viewId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19023,7 +19023,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyViews");
 
-			var localVarPath = "/api/v2/journey/views";
+			var localVarPath = "/journey/views";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19129,7 +19129,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyViews");
 
 
-			var localVarPath = "/api/v2/journey/views";
+			var localVarPath = "/journey/views";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19231,7 +19231,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EntityListing> PostJourneyViewsEncodingsValidateWithHttpInfo(List<Label> body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/views/encodings/validate";
+			var localVarPath = "/journey/views/encodings/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19333,7 +19333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EntityListing>> PostJourneyViewsEncodingsValidateAsyncWithHttpInfo(List<Label> body = null)
 		{
 
-			var localVarPath = "/api/v2/journey/views/encodings/validate";
+			var localVarPath = "/journey/views/encodings/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19443,7 +19443,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PutJourneyViewSchedules");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/schedules";
+			var localVarPath = "/journey/views/{viewId}/schedules";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19556,7 +19556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PutJourneyViewSchedules");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/schedules";
+			var localVarPath = "/journey/views/{viewId}/schedules";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19672,7 +19672,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PutJourneyViewVersion");
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{versionId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{versionId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19792,7 +19792,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PutJourneyViewVersion");
 
 
-			var localVarPath = "/api/v2/journey/views/{viewId}/versions/{versionId}";
+			var localVarPath = "/journey/views/{viewId}/versions/{versionId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

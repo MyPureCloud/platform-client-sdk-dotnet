@@ -670,7 +670,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (teamId == null)
 				throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->DeleteTeam");
 
-			var localVarPath = "/api/v2/teams/{teamId}";
+			var localVarPath = "/teams/{teamId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -770,7 +770,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->DeleteTeam");
 
 
-			var localVarPath = "/api/v2/teams/{teamId}";
+			var localVarPath = "/teams/{teamId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -874,7 +874,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling TeamsApi->DeleteTeamMembers");
 
-			var localVarPath = "/api/v2/teams/{teamId}/members";
+			var localVarPath = "/teams/{teamId}/members";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -981,7 +981,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling TeamsApi->DeleteTeamMembers");
 
 
-			var localVarPath = "/api/v2/teams/{teamId}/members";
+			var localVarPath = "/teams/{teamId}/members";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1084,7 +1084,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (teamId == null)
 				throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->GetTeam");
 
-			var localVarPath = "/api/v2/teams/{teamId}";
+			var localVarPath = "/teams/{teamId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1188,7 +1188,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->GetTeam");
 
 
-			var localVarPath = "/api/v2/teams/{teamId}";
+			var localVarPath = "/teams/{teamId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1297,7 +1297,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (teamId == null)
 				throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->GetTeamMembers");
 
-			var localVarPath = "/api/v2/teams/{teamId}/members";
+			var localVarPath = "/teams/{teamId}/members";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1410,7 +1410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'teamId' when calling TeamsApi->GetTeamMembers");
 
 
-			var localVarPath = "/api/v2/teams/{teamId}/members";
+			var localVarPath = "/teams/{teamId}/members";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1519,7 +1519,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TeamEntityListing> GetTeamsWithHttpInfo(int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
 		{
 
-			var localVarPath = "/api/v2/teams";
+			var localVarPath = "/teams";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1628,7 +1628,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TeamEntityListing>> GetTeamsAsyncWithHttpInfo(int? pageSize = null, string name = null, string after = null, string before = null, string expand = null)
 		{
 
-			var localVarPath = "/api/v2/teams";
+			var localVarPath = "/teams";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1737,7 +1737,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PatchTeam");
 
-			var localVarPath = "/api/v2/teams/{teamId}";
+			var localVarPath = "/teams/{teamId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1850,7 +1850,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PatchTeam");
 
 
-			var localVarPath = "/api/v2/teams/{teamId}";
+			var localVarPath = "/teams/{teamId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1960,7 +1960,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PostAnalyticsTeamsActivityQuery");
 
-			var localVarPath = "/api/v2/analytics/teams/activity/query";
+			var localVarPath = "/analytics/teams/activity/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2072,7 +2072,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PostAnalyticsTeamsActivityQuery");
 
 
-			var localVarPath = "/api/v2/analytics/teams/activity/query";
+			var localVarPath = "/analytics/teams/activity/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2184,7 +2184,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PostTeamMembers");
 
-			var localVarPath = "/api/v2/teams/{teamId}/members";
+			var localVarPath = "/teams/{teamId}/members";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2297,7 +2297,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PostTeamMembers");
 
 
-			var localVarPath = "/api/v2/teams/{teamId}/members";
+			var localVarPath = "/teams/{teamId}/members";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2403,7 +2403,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PostTeams");
 
-			var localVarPath = "/api/v2/teams";
+			var localVarPath = "/teams";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2509,7 +2509,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PostTeams");
 
 
-			var localVarPath = "/api/v2/teams";
+			var localVarPath = "/teams";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2614,7 +2614,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PostTeamsSearch");
 
-			var localVarPath = "/api/v2/teams/search";
+			var localVarPath = "/teams/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2720,7 +2720,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling TeamsApi->PostTeamsSearch");
 
 
-			var localVarPath = "/api/v2/teams/search";
+			var localVarPath = "/teams/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

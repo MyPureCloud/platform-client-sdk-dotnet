@@ -60,7 +60,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		ApiResponse<Object> DeletePresenceSourceWithHttpInfo(string sourceId);
 
 		/// <summary>
-		/// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
+		/// Delete a Presence Definition. Apps should migrate to use DELETE /presence/definitions/{definitionId} instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -72,7 +72,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		void DeletePresencedefinition(string presenceId);
 
 		/// <summary>
-		/// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
+		/// Delete a Presence Definition. Apps should migrate to use DELETE /presence/definitions/{definitionId} instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -232,7 +232,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		ApiResponse<UserPrimarySource> GetPresenceUserPrimarysourceWithHttpInfo(string userId);
 
 		/// <summary>
-		/// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
+		/// Get a Presence Definition. Apps should migrate to use GET /presence/definitions/{definitionId} instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -245,7 +245,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		OrganizationPresence GetPresencedefinition(string presenceId, string localeCode = null);
 
 		/// <summary>
-		/// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
+		/// Get a Presence Definition. Apps should migrate to use GET /presence/definitions/{definitionId} instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -258,7 +258,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		ApiResponse<OrganizationPresence> GetPresencedefinitionWithHttpInfo(string presenceId, string localeCode = null);
 
 		/// <summary>
-		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
+		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /presence/definitions instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -273,7 +273,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		OrganizationPresenceEntityListing GetPresencedefinitions(int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
 		/// <summary>
-		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
+		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /presence/definitions instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -512,7 +512,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		ApiResponse<Source> PostPresenceSourcesWithHttpInfo(Source body);
 
 		/// <summary>
-		/// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
+		/// Create a Presence Definition. Apps should migrate to use POST /presence/definitions instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -524,7 +524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		OrganizationPresence PostPresencedefinitions(OrganizationPresence body);
 
 		/// <summary>
-		/// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
+		/// Create a Presence Definition. Apps should migrate to use POST /presence/definitions instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -638,7 +638,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		ApiResponse<UserPrimarySource> PutPresenceUserPrimarysourceWithHttpInfo(string userId, UserPrimarySource body);
 
 		/// <summary>
-		/// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
+		/// Update a Presence Definition. Apps should migrate to use PUT /presence/definitions/{definitionId} instead)
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -651,7 +651,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		OrganizationPresence PutPresencedefinition(string presenceId, OrganizationPresence body);
 
 		/// <summary>
-		/// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
+		/// Update a Presence Definition. Apps should migrate to use PUT /presence/definitions/{definitionId} instead)
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -740,7 +740,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<ApiResponse<Object>> DeletePresenceSourceAsyncWithHttpInfo(string sourceId);
 
 		/// <summary>
-		/// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
+		/// Delete a Presence Definition. Apps should migrate to use DELETE /presence/definitions/{definitionId} instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -752,7 +752,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task DeletePresencedefinitionAsync(string presenceId);
 
 		/// <summary>
-		/// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead
+		/// Delete a Presence Definition. Apps should migrate to use DELETE /presence/definitions/{definitionId} instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -912,7 +912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<ApiResponse<UserPrimarySource>> GetPresenceUserPrimarysourceAsyncWithHttpInfo(string userId);
 
 		/// <summary>
-		/// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
+		/// Get a Presence Definition. Apps should migrate to use GET /presence/definitions/{definitionId} instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -925,7 +925,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<OrganizationPresence> GetPresencedefinitionAsync(string presenceId, string localeCode = null);
 
 		/// <summary>
-		/// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead
+		/// Get a Presence Definition. Apps should migrate to use GET /presence/definitions/{definitionId} instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -938,7 +938,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<ApiResponse<OrganizationPresence>> GetPresencedefinitionAsyncWithHttpInfo(string presenceId, string localeCode = null);
 
 		/// <summary>
-		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
+		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /presence/definitions instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -953,7 +953,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<OrganizationPresenceEntityListing> GetPresencedefinitionsAsync(int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null);
 
 		/// <summary>
-		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead
+		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /presence/definitions instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -1192,7 +1192,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<ApiResponse<Source>> PostPresenceSourcesAsyncWithHttpInfo(Source body);
 
 		/// <summary>
-		/// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
+		/// Create a Presence Definition. Apps should migrate to use POST /presence/definitions instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -1204,7 +1204,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<OrganizationPresence> PostPresencedefinitionsAsync(OrganizationPresence body);
 
 		/// <summary>
-		/// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead
+		/// Create a Presence Definition. Apps should migrate to use POST /presence/definitions instead
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -1318,7 +1318,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<ApiResponse<UserPrimarySource>> PutPresenceUserPrimarysourceAsyncWithHttpInfo(string userId, UserPrimarySource body);
 
 		/// <summary>
-		/// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
+		/// Update a Presence Definition. Apps should migrate to use PUT /presence/definitions/{definitionId} instead)
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -1331,7 +1331,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<OrganizationPresence> PutPresencedefinitionAsync(string presenceId, OrganizationPresence body);
 
 		/// <summary>
-		/// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead)
+		/// Update a Presence Definition. Apps should migrate to use PUT /presence/definitions/{definitionId} instead)
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -1486,7 +1486,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (definitionId == null)
 				throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->DeletePresenceDefinition0");
 
-			var localVarPath = "/api/v2/presence/definitions/{definitionId}";
+			var localVarPath = "/presence/definitions/{definitionId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1586,7 +1586,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->DeletePresenceDefinition0");
 
 
-			var localVarPath = "/api/v2/presence/definitions/{definitionId}";
+			var localVarPath = "/presence/definitions/{definitionId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1685,7 +1685,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sourceId == null)
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->DeletePresenceSource");
 
-			var localVarPath = "/api/v2/presence/sources/{sourceId}";
+			var localVarPath = "/presence/sources/{sourceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1785,7 +1785,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->DeletePresenceSource");
 
 
-			var localVarPath = "/api/v2/presence/sources/{sourceId}";
+			var localVarPath = "/presence/sources/{sourceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1858,7 +1858,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead 
+		/// Delete a Presence Definition. Apps should migrate to use DELETE /presence/definitions/{definitionId} instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1871,7 +1871,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead 
+		/// Delete a Presence Definition. Apps should migrate to use DELETE /presence/definitions/{definitionId} instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1884,7 +1884,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (presenceId == null)
 				throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->DeletePresencedefinition");
 
-			var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
+			var localVarPath = "/presencedefinitions/{presenceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1956,7 +1956,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead 
+		/// Delete a Presence Definition. Apps should migrate to use DELETE /presence/definitions/{definitionId} instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1970,7 +1970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Delete a Presence Definition. Apps should migrate to use DELETE /api/v2/presence/definitions/{definitionId} instead 
+		/// Delete a Presence Definition. Apps should migrate to use DELETE /presence/definitions/{definitionId} instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1984,7 +1984,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->DeletePresencedefinition");
 
 
-			var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
+			var localVarPath = "/presencedefinitions/{presenceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2086,7 +2086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (definitionId == null)
 				throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->GetPresenceDefinition0");
 
-			var localVarPath = "/api/v2/presence/definitions/{definitionId}";
+			var localVarPath = "/presence/definitions/{definitionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2190,7 +2190,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'definitionId' when calling PresenceApi->GetPresenceDefinition0");
 
 
-			var localVarPath = "/api/v2/presence/definitions/{definitionId}";
+			var localVarPath = "/presence/definitions/{definitionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2292,7 +2292,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OrganizationPresenceDefinitionEntityListing> GetPresenceDefinitions0WithHttpInfo(string deactivated = null, List<string> divisionId = null, string localeCode = null)
 		{
 
-			var localVarPath = "/api/v2/presence/definitions";
+			var localVarPath = "/presence/definitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2395,7 +2395,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceDefinitionEntityListing>> GetPresenceDefinitions0AsyncWithHttpInfo(string deactivated = null, List<string> divisionId = null, string localeCode = null)
 		{
 
-			var localVarPath = "/api/v2/presence/definitions";
+			var localVarPath = "/presence/definitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2492,7 +2492,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<PresenceSettings> GetPresenceSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/presence/settings";
+			var localVarPath = "/presence/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2586,7 +2586,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<PresenceSettings>> GetPresenceSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/presence/settings";
+			var localVarPath = "/presence/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2685,7 +2685,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sourceId == null)
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetPresenceSource");
 
-			var localVarPath = "/api/v2/presence/sources/{sourceId}";
+			var localVarPath = "/presence/sources/{sourceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2786,7 +2786,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetPresenceSource");
 
 
-			var localVarPath = "/api/v2/presence/sources/{sourceId}";
+			var localVarPath = "/presence/sources/{sourceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2883,7 +2883,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SourceEntityListing> GetPresenceSourcesWithHttpInfo(string deactivated = null)
 		{
 
-			var localVarPath = "/api/v2/presence/sources";
+			var localVarPath = "/presence/sources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2980,7 +2980,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SourceEntityListing>> GetPresenceSourcesAsyncWithHttpInfo(string deactivated = null)
 		{
 
-			var localVarPath = "/api/v2/presence/sources";
+			var localVarPath = "/presence/sources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3080,7 +3080,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetPresenceUserPrimarysource");
 
-			var localVarPath = "/api/v2/presence/users/{userId}/primarysource";
+			var localVarPath = "/presence/users/{userId}/primarysource";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3181,7 +3181,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetPresenceUserPrimarysource");
 
 
-			var localVarPath = "/api/v2/presence/users/{userId}/primarysource";
+			var localVarPath = "/presence/users/{userId}/primarysource";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3254,7 +3254,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead 
+		/// Get a Presence Definition. Apps should migrate to use GET /presence/definitions/{definitionId} instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3269,7 +3269,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead 
+		/// Get a Presence Definition. Apps should migrate to use GET /presence/definitions/{definitionId} instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3283,7 +3283,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (presenceId == null)
 				throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->GetPresencedefinition");
 
-			var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
+			var localVarPath = "/presencedefinitions/{presenceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3356,7 +3356,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead 
+		/// Get a Presence Definition. Apps should migrate to use GET /presence/definitions/{definitionId} instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3372,7 +3372,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Get a Presence Definition. Apps should migrate to use GET /api/v2/presence/definitions/{definitionId} instead 
+		/// Get a Presence Definition. Apps should migrate to use GET /presence/definitions/{definitionId} instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3387,7 +3387,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'presenceId' when calling PresenceApi->GetPresencedefinition");
 
 
-			var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
+			var localVarPath = "/presencedefinitions/{presenceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3461,7 +3461,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead 
+		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /presence/definitions instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3478,7 +3478,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead 
+		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /presence/definitions instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3491,7 +3491,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OrganizationPresenceEntityListing> GetPresencedefinitionsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
 		{
 
-			var localVarPath = "/api/v2/presencedefinitions";
+			var localVarPath = "/presencedefinitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3566,7 +3566,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead 
+		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /presence/definitions instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3584,7 +3584,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /api/v2/presence/definitions instead 
+		/// Get an Organization&#39;s list of Presence Definitions. Apps should migrate to use GET /presence/definitions instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -3597,7 +3597,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OrganizationPresenceEntityListing>> GetPresencedefinitionsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string deleted = null, string localeCode = null)
 		{
 
-			var localVarPath = "/api/v2/presencedefinitions";
+			var localVarPath = "/presencedefinitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3695,7 +3695,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<List<SystemPresence>> GetSystempresencesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/systempresences";
+			var localVarPath = "/systempresences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3789,7 +3789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<List<SystemPresence>>> GetSystempresencesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/systempresences";
+			var localVarPath = "/systempresences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3893,7 +3893,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sourceId == null)
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUserPresence");
 
-			var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
+			var localVarPath = "/users/{userId}/presences/{sourceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4001,7 +4001,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUserPresence");
 
 
-			var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
+			var localVarPath = "/users/{userId}/presences/{sourceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4102,7 +4102,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresencesPurecloud");
 
-			var localVarPath = "/api/v2/users/{userId}/presences/purecloud";
+			var localVarPath = "/users/{userId}/presences/purecloud";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4203,7 +4203,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling PresenceApi->GetUserPresencesPurecloud");
 
 
-			var localVarPath = "/api/v2/users/{userId}/presences/purecloud";
+			var localVarPath = "/users/{userId}/presences/purecloud";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4305,7 +4305,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sourceId == null)
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUsersPresenceBulk");
 
-			var localVarPath = "/api/v2/users/presences/{sourceId}/bulk";
+			var localVarPath = "/users/presences/{sourceId}/bulk";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4409,7 +4409,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling PresenceApi->GetUsersPresenceBulk");
 
 
-			var localVarPath = "/api/v2/users/presences/{sourceId}/bulk";
+			var localVarPath = "/users/presences/{sourceId}/bulk";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4507,7 +4507,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<List<UcUserPresence>> GetUsersPresencesPurecloudBulkWithHttpInfo(List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/users/presences/purecloud/bulk";
+			var localVarPath = "/users/presences/purecloud/bulk";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4604,7 +4604,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<List<UcUserPresence>>> GetUsersPresencesPurecloudBulkAsyncWithHttpInfo(List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/users/presences/purecloud/bulk";
+			var localVarPath = "/users/presences/purecloud/bulk";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4714,7 +4714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresence");
 
-			var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
+			var localVarPath = "/users/{userId}/presences/{sourceId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4834,7 +4834,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresence");
 
 
-			var localVarPath = "/api/v2/users/{userId}/presences/{sourceId}";
+			var localVarPath = "/users/{userId}/presences/{sourceId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4946,7 +4946,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresencesPurecloud");
 
-			var localVarPath = "/api/v2/users/{userId}/presences/purecloud";
+			var localVarPath = "/users/{userId}/presences/purecloud";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5059,7 +5059,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PatchUserPresencesPurecloud");
 
 
-			var localVarPath = "/api/v2/users/{userId}/presences/purecloud";
+			var localVarPath = "/users/{userId}/presences/purecloud";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5165,7 +5165,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresenceDefinitions0");
 
-			var localVarPath = "/api/v2/presence/definitions";
+			var localVarPath = "/presence/definitions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5271,7 +5271,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresenceDefinitions0");
 
 
-			var localVarPath = "/api/v2/presence/definitions";
+			var localVarPath = "/presence/definitions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5376,7 +5376,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresenceSources");
 
-			var localVarPath = "/api/v2/presence/sources";
+			var localVarPath = "/presence/sources";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5482,7 +5482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresenceSources");
 
 
-			var localVarPath = "/api/v2/presence/sources";
+			var localVarPath = "/presence/sources";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5560,7 +5560,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead 
+		/// Create a Presence Definition. Apps should migrate to use POST /presence/definitions instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5574,7 +5574,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead 
+		/// Create a Presence Definition. Apps should migrate to use POST /presence/definitions instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5587,7 +5587,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresencedefinitions");
 
-			var localVarPath = "/api/v2/presencedefinitions";
+			var localVarPath = "/presencedefinitions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5664,7 +5664,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead 
+		/// Create a Presence Definition. Apps should migrate to use POST /presence/definitions instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5679,7 +5679,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Create a Presence Definition. Apps should migrate to use POST /api/v2/presence/definitions instead 
+		/// Create a Presence Definition. Apps should migrate to use POST /presence/definitions instead 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5693,7 +5693,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PostPresencedefinitions");
 
 
-			var localVarPath = "/api/v2/presencedefinitions";
+			var localVarPath = "/presencedefinitions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5803,7 +5803,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceDefinition0");
 
-			var localVarPath = "/api/v2/presence/definitions/{definitionId}";
+			var localVarPath = "/presence/definitions/{definitionId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5916,7 +5916,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceDefinition0");
 
 
-			var localVarPath = "/api/v2/presence/definitions/{definitionId}";
+			var localVarPath = "/presence/definitions/{definitionId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6022,7 +6022,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceSettings");
 
-			var localVarPath = "/api/v2/presence/settings";
+			var localVarPath = "/presence/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6128,7 +6128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceSettings");
 
 
-			var localVarPath = "/api/v2/presence/settings";
+			var localVarPath = "/presence/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6238,7 +6238,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceSource");
 
-			var localVarPath = "/api/v2/presence/sources/{sourceId}";
+			var localVarPath = "/presence/sources/{sourceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6351,7 +6351,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceSource");
 
 
-			var localVarPath = "/api/v2/presence/sources/{sourceId}";
+			var localVarPath = "/presence/sources/{sourceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6462,7 +6462,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceUserPrimarysource");
 
-			var localVarPath = "/api/v2/presence/users/{userId}/primarysource";
+			var localVarPath = "/presence/users/{userId}/primarysource";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6575,7 +6575,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresenceUserPrimarysource");
 
 
-			var localVarPath = "/api/v2/presence/users/{userId}/primarysource";
+			var localVarPath = "/presence/users/{userId}/primarysource";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6654,7 +6654,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) 
+		/// Update a Presence Definition. Apps should migrate to use PUT /presence/definitions/{definitionId} instead) 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6669,7 +6669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) 
+		/// Update a Presence Definition. Apps should migrate to use PUT /presence/definitions/{definitionId} instead) 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6686,7 +6686,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresencedefinition");
 
-			var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
+			var localVarPath = "/presencedefinitions/{presenceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6764,7 +6764,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) 
+		/// Update a Presence Definition. Apps should migrate to use PUT /presence/definitions/{definitionId} instead) 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6780,7 +6780,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Update a Presence Definition. Apps should migrate to use PUT /api/v2/presence/definitions/{definitionId} instead) 
+		/// Update a Presence Definition. Apps should migrate to use PUT /presence/definitions/{definitionId} instead) 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -6799,7 +6799,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutPresencedefinition");
 
 
-			var localVarPath = "/api/v2/presencedefinitions/{presenceId}";
+			var localVarPath = "/presencedefinitions/{presenceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6905,7 +6905,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutUsersPresencesBulk");
 
-			var localVarPath = "/api/v2/users/presences/bulk";
+			var localVarPath = "/users/presences/bulk";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7011,7 +7011,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling PresenceApi->PutUsersPresencesBulk");
 
 
-			var localVarPath = "/api/v2/users/presences/bulk";
+			var localVarPath = "/users/presences/bulk";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

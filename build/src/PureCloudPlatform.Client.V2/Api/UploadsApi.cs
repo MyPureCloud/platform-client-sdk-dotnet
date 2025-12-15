@@ -636,7 +636,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UploadsApi->GetKnowledgeKnowledgebaseUploadsUrlsJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -744,7 +744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling UploadsApi->GetKnowledgeKnowledgebaseUploadsUrlsJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -845,7 +845,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostGamificationContestsUploadsPrizeimages");
 
-			var localVarPath = "/api/v2/gamification/contests/uploads/prizeimages";
+			var localVarPath = "/gamification/contests/uploads/prizeimages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -951,7 +951,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostGamificationContestsUploadsPrizeimages");
 
 
-			var localVarPath = "/api/v2/gamification/contests/uploads/prizeimages";
+			var localVarPath = "/gamification/contests/uploads/prizeimages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1061,7 +1061,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostIntegrationsActionDraftFunctionUpload");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function/upload";
+			var localVarPath = "/integrations/actions/{actionId}/draft/function/upload";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1174,7 +1174,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostIntegrationsActionDraftFunctionUpload");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function/upload";
+			var localVarPath = "/integrations/actions/{actionId}/draft/function/upload";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1280,7 +1280,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostKnowledgeDocumentuploads");
 
-			var localVarPath = "/api/v2/knowledge/documentuploads";
+			var localVarPath = "/knowledge/documentuploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1386,7 +1386,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostKnowledgeDocumentuploads");
 
 
-			var localVarPath = "/api/v2/knowledge/documentuploads";
+			var localVarPath = "/knowledge/documentuploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1496,7 +1496,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostKnowledgeKnowledgebaseUploadsUrlsJobs");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1609,7 +1609,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostKnowledgeKnowledgebaseUploadsUrlsJobs");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1720,7 +1720,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostLanguageunderstandingMinerUploads");
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/uploads";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1833,7 +1833,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostLanguageunderstandingMinerUploads");
 
 
-			var localVarPath = "/api/v2/languageunderstanding/miners/{minerId}/uploads";
+			var localVarPath = "/languageunderstanding/miners/{minerId}/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1939,7 +1939,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostUploadsLearningCoverart");
 
-			var localVarPath = "/api/v2/uploads/learning/coverart";
+			var localVarPath = "/uploads/learning/coverart";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2045,7 +2045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostUploadsLearningCoverart");
 
 
-			var localVarPath = "/api/v2/uploads/learning/coverart";
+			var localVarPath = "/uploads/learning/coverart";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2150,7 +2150,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostUploadsPublicassetsImages");
 
-			var localVarPath = "/api/v2/uploads/publicassets/images";
+			var localVarPath = "/uploads/publicassets/images";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2256,7 +2256,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostUploadsPublicassetsImages");
 
 
-			var localVarPath = "/api/v2/uploads/publicassets/images";
+			var localVarPath = "/uploads/publicassets/images";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2361,7 +2361,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostUploadsRecordings");
 
-			var localVarPath = "/api/v2/uploads/recordings";
+			var localVarPath = "/uploads/recordings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2467,7 +2467,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostUploadsRecordings");
 
 
-			var localVarPath = "/api/v2/uploads/recordings";
+			var localVarPath = "/uploads/recordings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2572,7 +2572,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostUploadsWorkforcemanagementHistoricaldataCsv");
 
-			var localVarPath = "/api/v2/uploads/workforcemanagement/historicaldata/csv";
+			var localVarPath = "/uploads/workforcemanagement/historicaldata/csv";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2678,7 +2678,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UploadsApi->PostUploadsWorkforcemanagementHistoricaldataCsv");
 
 
-			var localVarPath = "/api/v2/uploads/workforcemanagement/historicaldata/csv";
+			var localVarPath = "/uploads/workforcemanagement/historicaldata/csv";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

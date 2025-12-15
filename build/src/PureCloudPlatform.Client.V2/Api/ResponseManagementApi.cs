@@ -1050,7 +1050,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (libraryId == null)
 				throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->DeleteResponsemanagementLibrary");
 
-			var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
+			var localVarPath = "/responsemanagement/libraries/{libraryId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1150,7 +1150,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->DeleteResponsemanagementLibrary");
 
 
-			var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
+			var localVarPath = "/responsemanagement/libraries/{libraryId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1249,7 +1249,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (responseId == null)
 				throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->DeleteResponsemanagementResponse");
 
-			var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
+			var localVarPath = "/responsemanagement/responses/{responseId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1349,7 +1349,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->DeleteResponsemanagementResponse");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
+			var localVarPath = "/responsemanagement/responses/{responseId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1448,7 +1448,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (responseAssetId == null)
 				throw new ApiException(400, "Missing required parameter 'responseAssetId' when calling ResponseManagementApi->DeleteResponsemanagementResponseasset");
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+			var localVarPath = "/responsemanagement/responseassets/{responseAssetId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1548,7 +1548,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'responseAssetId' when calling ResponseManagementApi->DeleteResponsemanagementResponseasset");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+			var localVarPath = "/responsemanagement/responseassets/{responseAssetId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1651,7 +1651,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LibraryEntityListing> GetResponsemanagementLibrariesWithHttpInfo(int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
 		{
 
-			var localVarPath = "/api/v2/responsemanagement/libraries";
+			var localVarPath = "/responsemanagement/libraries";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1757,7 +1757,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LibraryEntityListing>> GetResponsemanagementLibrariesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string messagingTemplateFilter = null, string libraryPrefix = null)
 		{
 
-			var localVarPath = "/api/v2/responsemanagement/libraries";
+			var localVarPath = "/responsemanagement/libraries";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1860,7 +1860,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (libraryId == null)
 				throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->GetResponsemanagementLibrary");
 
-			var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
+			var localVarPath = "/responsemanagement/libraries/{libraryId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1961,7 +1961,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->GetResponsemanagementLibrary");
 
 
-			var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
+			var localVarPath = "/responsemanagement/libraries/{libraryId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2063,7 +2063,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (responseId == null)
 				throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->GetResponsemanagementResponse");
 
-			var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
+			var localVarPath = "/responsemanagement/responses/{responseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2167,7 +2167,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'responseId' when calling ResponseManagementApi->GetResponsemanagementResponse");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
+			var localVarPath = "/responsemanagement/responses/{responseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2268,7 +2268,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (responseAssetId == null)
 				throw new ApiException(400, "Missing required parameter 'responseAssetId' when calling ResponseManagementApi->GetResponsemanagementResponseasset");
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+			var localVarPath = "/responsemanagement/responseassets/{responseAssetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2369,7 +2369,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'responseAssetId' when calling ResponseManagementApi->GetResponsemanagementResponseasset");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+			var localVarPath = "/responsemanagement/responseassets/{responseAssetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2469,7 +2469,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (statusId == null)
 				throw new ApiException(400, "Missing required parameter 'statusId' when calling ResponseManagementApi->GetResponsemanagementResponseassetsStatusStatusId");
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/status/{statusId}";
+			var localVarPath = "/responsemanagement/responseassets/status/{statusId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2570,7 +2570,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'statusId' when calling ResponseManagementApi->GetResponsemanagementResponseassetsStatusStatusId");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/status/{statusId}";
+			var localVarPath = "/responsemanagement/responseassets/status/{statusId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2676,7 +2676,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (libraryId == null)
 				throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->GetResponsemanagementResponses");
 
-			var localVarPath = "/api/v2/responsemanagement/responses";
+			var localVarPath = "/responsemanagement/responses";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2786,7 +2786,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'libraryId' when calling ResponseManagementApi->GetResponsemanagementResponses");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responses";
+			var localVarPath = "/responsemanagement/responses";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2889,7 +2889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementLibraries");
 
-			var localVarPath = "/api/v2/responsemanagement/libraries";
+			var localVarPath = "/responsemanagement/libraries";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2995,7 +2995,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementLibraries");
 
 
-			var localVarPath = "/api/v2/responsemanagement/libraries";
+			var localVarPath = "/responsemanagement/libraries";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3100,7 +3100,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementLibrariesBulk");
 
-			var localVarPath = "/api/v2/responsemanagement/libraries/bulk";
+			var localVarPath = "/responsemanagement/libraries/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3206,7 +3206,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementLibrariesBulk");
 
 
-			var localVarPath = "/api/v2/responsemanagement/libraries/bulk";
+			var localVarPath = "/responsemanagement/libraries/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3313,7 +3313,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponseassetsSearch");
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/search";
+			var localVarPath = "/responsemanagement/responseassets/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3422,7 +3422,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponseassetsSearch");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/search";
+			var localVarPath = "/responsemanagement/responseassets/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3528,7 +3528,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponseassetsUploads");
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/uploads";
+			var localVarPath = "/responsemanagement/responseassets/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3634,7 +3634,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponseassetsUploads");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/uploads";
+			var localVarPath = "/responsemanagement/responseassets/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3741,7 +3741,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponses");
 
-			var localVarPath = "/api/v2/responsemanagement/responses";
+			var localVarPath = "/responsemanagement/responses";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3850,7 +3850,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponses");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responses";
+			var localVarPath = "/responsemanagement/responses";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3956,7 +3956,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponsesQuery");
 
-			var localVarPath = "/api/v2/responsemanagement/responses/query";
+			var localVarPath = "/responsemanagement/responses/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4062,7 +4062,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PostResponsemanagementResponsesQuery");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responses/query";
+			var localVarPath = "/responsemanagement/responses/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4172,7 +4172,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutResponsemanagementLibrary");
 
-			var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
+			var localVarPath = "/responsemanagement/libraries/{libraryId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4285,7 +4285,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutResponsemanagementLibrary");
 
 
-			var localVarPath = "/api/v2/responsemanagement/libraries/{libraryId}";
+			var localVarPath = "/responsemanagement/libraries/{libraryId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4398,7 +4398,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutResponsemanagementResponse");
 
-			var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
+			var localVarPath = "/responsemanagement/responses/{responseId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4514,7 +4514,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutResponsemanagementResponse");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responses/{responseId}";
+			var localVarPath = "/responsemanagement/responses/{responseId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4626,7 +4626,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutResponsemanagementResponseasset");
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+			var localVarPath = "/responsemanagement/responseassets/{responseAssetId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4739,7 +4739,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ResponseManagementApi->PutResponsemanagementResponseasset");
 
 
-			var localVarPath = "/api/v2/responsemanagement/responseassets/{responseAssetId}";
+			var localVarPath = "/responsemanagement/responseassets/{responseAssetId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -330,7 +330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GeolocationSettings> GetGeolocationsSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/geolocations/settings";
+			var localVarPath = "/geolocations/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -424,7 +424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GeolocationSettings>> GetGeolocationsSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/geolocations/settings";
+			var localVarPath = "/geolocations/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -528,7 +528,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (clientId == null)
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->GetUserGeolocation");
 
-			var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
+			var localVarPath = "/users/{userId}/geolocations/{clientId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -636,7 +636,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'clientId' when calling GeolocationApi->GetUserGeolocation");
 
 
-			var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
+			var localVarPath = "/users/{userId}/geolocations/{clientId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -737,7 +737,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchGeolocationsSettings");
 
-			var localVarPath = "/api/v2/geolocations/settings";
+			var localVarPath = "/geolocations/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -843,7 +843,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchGeolocationsSettings");
 
 
-			var localVarPath = "/api/v2/geolocations/settings";
+			var localVarPath = "/geolocations/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -958,7 +958,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchUserGeolocation");
 
-			var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
+			var localVarPath = "/users/{userId}/geolocations/{clientId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1078,7 +1078,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GeolocationApi->PatchUserGeolocation");
 
 
-			var localVarPath = "/api/v2/users/{userId}/geolocations/{clientId}";
+			var localVarPath = "/users/{userId}/geolocations/{clientId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

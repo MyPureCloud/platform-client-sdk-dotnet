@@ -422,7 +422,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleId == null)
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling DataPrivacyApi->DeleteDataprivacyMaskingrule");
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules/{ruleId}";
+			var localVarPath = "/dataprivacy/maskingrules/{ruleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -522,7 +522,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling DataPrivacyApi->DeleteDataprivacyMaskingrule");
 
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules/{ruleId}";
+			var localVarPath = "/dataprivacy/maskingrules/{ruleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -622,7 +622,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleId == null)
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling DataPrivacyApi->GetDataprivacyMaskingrule");
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules/{ruleId}";
+			var localVarPath = "/dataprivacy/maskingrules/{ruleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -723,7 +723,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling DataPrivacyApi->GetDataprivacyMaskingrule");
 
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules/{ruleId}";
+			var localVarPath = "/dataprivacy/maskingrules/{ruleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -818,7 +818,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MaskingRuleListing> GetDataprivacyMaskingrulesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules";
+			var localVarPath = "/dataprivacy/maskingrules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -912,7 +912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MaskingRuleListing>> GetDataprivacyMaskingrulesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules";
+			var localVarPath = "/dataprivacy/maskingrules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1013,7 +1013,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleId == null)
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling DataPrivacyApi->PatchDataprivacyMaskingrule");
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules/{ruleId}";
+			var localVarPath = "/dataprivacy/maskingrules/{ruleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1122,7 +1122,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleId' when calling DataPrivacyApi->PatchDataprivacyMaskingrule");
 
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules/{ruleId}";
+			var localVarPath = "/dataprivacy/maskingrules/{ruleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1228,7 +1228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling DataPrivacyApi->PostDataprivacyMaskingrules");
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules";
+			var localVarPath = "/dataprivacy/maskingrules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1334,7 +1334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling DataPrivacyApi->PostDataprivacyMaskingrules");
 
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules";
+			var localVarPath = "/dataprivacy/maskingrules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1439,7 +1439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling DataPrivacyApi->PostDataprivacyMaskingrulesValidate");
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules/validate";
+			var localVarPath = "/dataprivacy/maskingrules/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1545,7 +1545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling DataPrivacyApi->PostDataprivacyMaskingrulesValidate");
 
 
-			var localVarPath = "/api/v2/dataprivacy/maskingrules/validate";
+			var localVarPath = "/dataprivacy/maskingrules/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

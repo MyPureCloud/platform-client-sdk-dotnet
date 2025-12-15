@@ -30,7 +30,7 @@ public class ApiClientTests
     string environment = Environment.GetEnvironmentVariable("PURECLOUD_ENVIRONMENT");
 
     private Stopwatch stopwatch;
-    private static String path = "/api/v2/users";
+    private static String path = "/users";
     private static String method = "GET";
     private static Dictionary<String, String> pathParams = new Dictionary<String, String>();
     private static List<Tuple<String, String>> queryParams = new List<Tuple<String, String>>();

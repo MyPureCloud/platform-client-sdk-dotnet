@@ -410,7 +410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling TokensApi->DeleteToken");
 
-			var localVarPath = "/api/v2/tokens/{userId}";
+			var localVarPath = "/tokens/{userId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -510,7 +510,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling TokensApi->DeleteToken");
 
 
-			var localVarPath = "/api/v2/tokens/{userId}";
+			var localVarPath = "/tokens/{userId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -604,7 +604,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteTokensMeWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/tokens/me";
+			var localVarPath = "/tokens/me";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -697,7 +697,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteTokensMeAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/tokens/me";
+			var localVarPath = "/tokens/me";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -793,7 +793,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TokenInfo> GetTokensMeWithHttpInfo(bool? preserveIdleTTL = null)
 		{
 
-			var localVarPath = "/api/v2/tokens/me";
+			var localVarPath = "/tokens/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -890,7 +890,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TokenInfo>> GetTokensMeAsyncWithHttpInfo(bool? preserveIdleTTL = null)
 		{
 
-			var localVarPath = "/api/v2/tokens/me";
+			var localVarPath = "/tokens/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -985,7 +985,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<IdleTokenTimeout> GetTokensTimeoutWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/tokens/timeout";
+			var localVarPath = "/tokens/timeout";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1079,7 +1079,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<IdleTokenTimeout>> GetTokensTimeoutAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/tokens/timeout";
+			var localVarPath = "/tokens/timeout";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1172,7 +1172,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> HeadTokensMeWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/tokens/me";
+			var localVarPath = "/tokens/me";
 			var localVarHttpMethod = "Head";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1265,7 +1265,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> HeadTokensMeAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/tokens/me";
+			var localVarPath = "/tokens/me";
 			var localVarHttpMethod = "Head";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1361,7 +1361,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<IdleTokenTimeout> PutTokensTimeoutWithHttpInfo(IdleTokenTimeout body = null)
 		{
 
-			var localVarPath = "/api/v2/tokens/timeout";
+			var localVarPath = "/tokens/timeout";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1463,7 +1463,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<IdleTokenTimeout>> PutTokensTimeoutAsyncWithHttpInfo(IdleTokenTimeout body = null)
 		{
 
-			var localVarPath = "/api/v2/tokens/timeout";
+			var localVarPath = "/tokens/timeout";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -271,7 +271,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (coretypeName == null)
 				throw new ApiException(400, "Missing required parameter 'coretypeName' when calling DataExtensionsApi->GetDataextensionsCoretype");
 
-			var localVarPath = "/api/v2/dataextensions/coretypes/{coretypeName}";
+			var localVarPath = "/dataextensions/coretypes/{coretypeName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -372,7 +372,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'coretypeName' when calling DataExtensionsApi->GetDataextensionsCoretype");
 
 
-			var localVarPath = "/api/v2/dataextensions/coretypes/{coretypeName}";
+			var localVarPath = "/dataextensions/coretypes/{coretypeName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -467,7 +467,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CoretypeListing> GetDataextensionsCoretypesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/dataextensions/coretypes";
+			var localVarPath = "/dataextensions/coretypes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -561,7 +561,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetDataextensionsCoretypesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/dataextensions/coretypes";
+			var localVarPath = "/dataextensions/coretypes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -655,7 +655,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SchemaQuantityLimits> GetDataextensionsLimitsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/dataextensions/limits";
+			var localVarPath = "/dataextensions/limits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -749,7 +749,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SchemaQuantityLimits>> GetDataextensionsLimitsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/dataextensions/limits";
+			var localVarPath = "/dataextensions/limits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -1870,7 +1870,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (providerId == null)
 				throw new ApiException(400, "Missing required parameter 'providerId' when calling IdentityProviderApi->DeleteIdentityprovider");
 
-			var localVarPath = "/api/v2/identityproviders/{providerId}";
+			var localVarPath = "/identityproviders/{providerId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1970,7 +1970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'providerId' when calling IdentityProviderApi->DeleteIdentityprovider");
 
 
-			var localVarPath = "/api/v2/identityproviders/{providerId}";
+			var localVarPath = "/identityproviders/{providerId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2065,7 +2065,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersAdfsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/adfs";
+			var localVarPath = "/identityproviders/adfs";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2159,7 +2159,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersAdfsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/adfs";
+			var localVarPath = "/identityproviders/adfs";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2253,7 +2253,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersCicWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/cic";
+			var localVarPath = "/identityproviders/cic";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2347,7 +2347,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersCicAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/cic";
+			var localVarPath = "/identityproviders/cic";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2441,7 +2441,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersGenericWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/generic";
+			var localVarPath = "/identityproviders/generic";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2535,7 +2535,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersGenericAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/generic";
+			var localVarPath = "/identityproviders/generic";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2629,7 +2629,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersGsuiteWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/gsuite";
+			var localVarPath = "/identityproviders/gsuite";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2723,7 +2723,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersGsuiteAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/gsuite";
+			var localVarPath = "/identityproviders/gsuite";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2817,7 +2817,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersIdentitynowWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/identitynow";
+			var localVarPath = "/identityproviders/identitynow";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2911,7 +2911,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersIdentitynowAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/identitynow";
+			var localVarPath = "/identityproviders/identitynow";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3005,7 +3005,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersOktaWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/okta";
+			var localVarPath = "/identityproviders/okta";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3099,7 +3099,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersOktaAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/okta";
+			var localVarPath = "/identityproviders/okta";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3193,7 +3193,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersOneloginWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/onelogin";
+			var localVarPath = "/identityproviders/onelogin";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3287,7 +3287,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersOneloginAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/onelogin";
+			var localVarPath = "/identityproviders/onelogin";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3381,7 +3381,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersPingWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/ping";
+			var localVarPath = "/identityproviders/ping";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3475,7 +3475,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersPingAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/ping";
+			var localVarPath = "/identityproviders/ping";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3569,7 +3569,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersPurecloudWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/purecloud";
+			var localVarPath = "/identityproviders/purecloud";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3663,7 +3663,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersPurecloudAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/purecloud";
+			var localVarPath = "/identityproviders/purecloud";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3757,7 +3757,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersPureengageWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/pureengage";
+			var localVarPath = "/identityproviders/pureengage";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3851,7 +3851,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersPureengageAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/pureengage";
+			var localVarPath = "/identityproviders/pureengage";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3945,7 +3945,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteIdentityprovidersSalesforceWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/salesforce";
+			var localVarPath = "/identityproviders/salesforce";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4039,7 +4039,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteIdentityprovidersSalesforceAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/salesforce";
+			var localVarPath = "/identityproviders/salesforce";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4138,7 +4138,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (providerId == null)
 				throw new ApiException(400, "Missing required parameter 'providerId' when calling IdentityProviderApi->GetIdentityprovider");
 
-			var localVarPath = "/api/v2/identityproviders/{providerId}";
+			var localVarPath = "/identityproviders/{providerId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4239,7 +4239,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'providerId' when calling IdentityProviderApi->GetIdentityprovider");
 
 
-			var localVarPath = "/api/v2/identityproviders/{providerId}";
+			var localVarPath = "/identityproviders/{providerId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4334,7 +4334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<IdentityProviderEntityListing> GetIdentityprovidersWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders";
+			var localVarPath = "/identityproviders";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4428,7 +4428,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<IdentityProviderEntityListing>> GetIdentityprovidersAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders";
+			var localVarPath = "/identityproviders";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4522,7 +4522,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ADFS> GetIdentityprovidersAdfsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/adfs";
+			var localVarPath = "/identityproviders/adfs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4616,7 +4616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ADFS>> GetIdentityprovidersAdfsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/adfs";
+			var localVarPath = "/identityproviders/adfs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4710,7 +4710,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CustomerInteractionCenter> GetIdentityprovidersCicWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/cic";
+			var localVarPath = "/identityproviders/cic";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4804,7 +4804,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CustomerInteractionCenter>> GetIdentityprovidersCicAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/cic";
+			var localVarPath = "/identityproviders/cic";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4898,7 +4898,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GenericSAML> GetIdentityprovidersGenericWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/generic";
+			var localVarPath = "/identityproviders/generic";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4992,7 +4992,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GenericSAML>> GetIdentityprovidersGenericAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/generic";
+			var localVarPath = "/identityproviders/generic";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5086,7 +5086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GSuite> GetIdentityprovidersGsuiteWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/gsuite";
+			var localVarPath = "/identityproviders/gsuite";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5180,7 +5180,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GSuite>> GetIdentityprovidersGsuiteAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/gsuite";
+			var localVarPath = "/identityproviders/gsuite";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5274,7 +5274,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<IdentityNow> GetIdentityprovidersIdentitynowWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/identitynow";
+			var localVarPath = "/identityproviders/identitynow";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5368,7 +5368,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<IdentityNow>> GetIdentityprovidersIdentitynowAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/identitynow";
+			var localVarPath = "/identityproviders/identitynow";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5462,7 +5462,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Okta> GetIdentityprovidersOktaWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/okta";
+			var localVarPath = "/identityproviders/okta";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5556,7 +5556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Okta>> GetIdentityprovidersOktaAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/okta";
+			var localVarPath = "/identityproviders/okta";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5650,7 +5650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OneLogin> GetIdentityprovidersOneloginWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/onelogin";
+			var localVarPath = "/identityproviders/onelogin";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5744,7 +5744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OneLogin>> GetIdentityprovidersOneloginAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/onelogin";
+			var localVarPath = "/identityproviders/onelogin";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5838,7 +5838,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<PingIdentity> GetIdentityprovidersPingWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/ping";
+			var localVarPath = "/identityproviders/ping";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5932,7 +5932,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<PingIdentity>> GetIdentityprovidersPingAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/ping";
+			var localVarPath = "/identityproviders/ping";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6026,7 +6026,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<PureCloudPlatform.Client.V2.Model.PureCloud> GetIdentityprovidersPurecloudWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/purecloud";
+			var localVarPath = "/identityproviders/purecloud";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6120,7 +6120,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<PureCloudPlatform.Client.V2.Model.PureCloud>> GetIdentityprovidersPurecloudAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/purecloud";
+			var localVarPath = "/identityproviders/purecloud";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6214,7 +6214,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<PureEngage> GetIdentityprovidersPureengageWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/pureengage";
+			var localVarPath = "/identityproviders/pureengage";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6308,7 +6308,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<PureEngage>> GetIdentityprovidersPureengageAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/pureengage";
+			var localVarPath = "/identityproviders/pureengage";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6402,7 +6402,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Salesforce> GetIdentityprovidersSalesforceWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/salesforce";
+			var localVarPath = "/identityproviders/salesforce";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6496,7 +6496,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Salesforce>> GetIdentityprovidersSalesforceAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/identityproviders/salesforce";
+			var localVarPath = "/identityproviders/salesforce";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6595,7 +6595,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PostIdentityproviders");
 
-			var localVarPath = "/api/v2/identityproviders";
+			var localVarPath = "/identityproviders";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6701,7 +6701,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PostIdentityproviders");
 
 
-			var localVarPath = "/api/v2/identityproviders";
+			var localVarPath = "/identityproviders";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6811,7 +6811,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovider");
 
-			var localVarPath = "/api/v2/identityproviders/{providerId}";
+			var localVarPath = "/identityproviders/{providerId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6924,7 +6924,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovider");
 
 
-			var localVarPath = "/api/v2/identityproviders/{providerId}";
+			var localVarPath = "/identityproviders/{providerId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7030,7 +7030,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersAdfs");
 
-			var localVarPath = "/api/v2/identityproviders/adfs";
+			var localVarPath = "/identityproviders/adfs";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7136,7 +7136,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersAdfs");
 
 
-			var localVarPath = "/api/v2/identityproviders/adfs";
+			var localVarPath = "/identityproviders/adfs";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7241,7 +7241,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersCic");
 
-			var localVarPath = "/api/v2/identityproviders/cic";
+			var localVarPath = "/identityproviders/cic";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7347,7 +7347,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersCic");
 
 
-			var localVarPath = "/api/v2/identityproviders/cic";
+			var localVarPath = "/identityproviders/cic";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7452,7 +7452,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersGeneric");
 
-			var localVarPath = "/api/v2/identityproviders/generic";
+			var localVarPath = "/identityproviders/generic";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7558,7 +7558,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersGeneric");
 
 
-			var localVarPath = "/api/v2/identityproviders/generic";
+			var localVarPath = "/identityproviders/generic";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7663,7 +7663,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersGsuite");
 
-			var localVarPath = "/api/v2/identityproviders/gsuite";
+			var localVarPath = "/identityproviders/gsuite";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7769,7 +7769,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersGsuite");
 
 
-			var localVarPath = "/api/v2/identityproviders/gsuite";
+			var localVarPath = "/identityproviders/gsuite";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7874,7 +7874,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersIdentitynow");
 
-			var localVarPath = "/api/v2/identityproviders/identitynow";
+			var localVarPath = "/identityproviders/identitynow";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7980,7 +7980,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersIdentitynow");
 
 
-			var localVarPath = "/api/v2/identityproviders/identitynow";
+			var localVarPath = "/identityproviders/identitynow";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8085,7 +8085,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersOkta");
 
-			var localVarPath = "/api/v2/identityproviders/okta";
+			var localVarPath = "/identityproviders/okta";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8191,7 +8191,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersOkta");
 
 
-			var localVarPath = "/api/v2/identityproviders/okta";
+			var localVarPath = "/identityproviders/okta";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8296,7 +8296,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersOnelogin");
 
-			var localVarPath = "/api/v2/identityproviders/onelogin";
+			var localVarPath = "/identityproviders/onelogin";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8402,7 +8402,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersOnelogin");
 
 
-			var localVarPath = "/api/v2/identityproviders/onelogin";
+			var localVarPath = "/identityproviders/onelogin";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8507,7 +8507,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersPing");
 
-			var localVarPath = "/api/v2/identityproviders/ping";
+			var localVarPath = "/identityproviders/ping";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8613,7 +8613,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersPing");
 
 
-			var localVarPath = "/api/v2/identityproviders/ping";
+			var localVarPath = "/identityproviders/ping";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8718,7 +8718,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersPurecloud");
 
-			var localVarPath = "/api/v2/identityproviders/purecloud";
+			var localVarPath = "/identityproviders/purecloud";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8824,7 +8824,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersPurecloud");
 
 
-			var localVarPath = "/api/v2/identityproviders/purecloud";
+			var localVarPath = "/identityproviders/purecloud";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8929,7 +8929,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersPureengage");
 
-			var localVarPath = "/api/v2/identityproviders/pureengage";
+			var localVarPath = "/identityproviders/pureengage";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9035,7 +9035,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersPureengage");
 
 
-			var localVarPath = "/api/v2/identityproviders/pureengage";
+			var localVarPath = "/identityproviders/pureengage";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9140,7 +9140,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersSalesforce");
 
-			var localVarPath = "/api/v2/identityproviders/salesforce";
+			var localVarPath = "/identityproviders/salesforce";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9246,7 +9246,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IdentityProviderApi->PutIdentityprovidersSalesforce");
 
 
-			var localVarPath = "/api/v2/identityproviders/salesforce";
+			var localVarPath = "/identityproviders/salesforce";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

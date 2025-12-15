@@ -1474,7 +1474,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->DeleteVoicemailMessage");
 
-			var localVarPath = "/api/v2/voicemail/messages/{messageId}";
+			var localVarPath = "/voicemail/messages/{messageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1574,7 +1574,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->DeleteVoicemailMessage");
 
 
-			var localVarPath = "/api/v2/voicemail/messages/{messageId}";
+			var localVarPath = "/voicemail/messages/{messageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1668,7 +1668,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteVoicemailMessagesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/voicemail/messages";
+			var localVarPath = "/voicemail/messages";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1761,7 +1761,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteVoicemailMessagesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/voicemail/messages";
+			var localVarPath = "/voicemail/messages";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1860,7 +1860,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupMailbox");
 
-			var localVarPath = "/api/v2/voicemail/groups/{groupId}/mailbox";
+			var localVarPath = "/voicemail/groups/{groupId}/mailbox";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1961,7 +1961,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupMailbox");
 
 
-			var localVarPath = "/api/v2/voicemail/groups/{groupId}/mailbox";
+			var localVarPath = "/voicemail/groups/{groupId}/mailbox";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2065,7 +2065,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupMessages");
 
-			var localVarPath = "/api/v2/voicemail/groups/{groupId}/messages";
+			var localVarPath = "/voicemail/groups/{groupId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2172,7 +2172,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupMessages");
 
 
-			var localVarPath = "/api/v2/voicemail/groups/{groupId}/messages";
+			var localVarPath = "/voicemail/groups/{groupId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2274,7 +2274,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupPolicy");
 
-			var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
+			var localVarPath = "/voicemail/groups/{groupId}/policy";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2375,7 +2375,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling VoicemailApi->GetVoicemailGroupPolicy");
 
 
-			var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
+			var localVarPath = "/voicemail/groups/{groupId}/policy";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2470,7 +2470,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<VoicemailMailboxInfo> GetVoicemailMailboxWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/voicemail/mailbox";
+			var localVarPath = "/voicemail/mailbox";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2564,7 +2564,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailMailboxAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/voicemail/mailbox";
+			var localVarPath = "/voicemail/mailbox";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2658,7 +2658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<VoicemailMailboxInfo> GetVoicemailMeMailboxWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/voicemail/me/mailbox";
+			var localVarPath = "/voicemail/me/mailbox";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2752,7 +2752,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<VoicemailMailboxInfo>> GetVoicemailMeMailboxAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/voicemail/me/mailbox";
+			var localVarPath = "/voicemail/me/mailbox";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2850,7 +2850,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<VoicemailMessageEntityListing> GetVoicemailMeMessagesWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/voicemail/me/messages";
+			var localVarPath = "/voicemail/me/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2950,7 +2950,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailMeMessagesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/voicemail/me/messages";
+			var localVarPath = "/voicemail/me/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3046,7 +3046,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<VoicemailUserPolicy> GetVoicemailMePolicyWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/voicemail/me/policy";
+			var localVarPath = "/voicemail/me/policy";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3140,7 +3140,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<VoicemailUserPolicy>> GetVoicemailMePolicyAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/voicemail/me/policy";
+			var localVarPath = "/voicemail/me/policy";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3241,7 +3241,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetVoicemailMessage");
 
-			var localVarPath = "/api/v2/voicemail/messages/{messageId}";
+			var localVarPath = "/voicemail/messages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3345,7 +3345,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetVoicemailMessage");
 
 
-			var localVarPath = "/api/v2/voicemail/messages/{messageId}";
+			var localVarPath = "/voicemail/messages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3448,7 +3448,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetVoicemailMessageMedia");
 
-			var localVarPath = "/api/v2/voicemail/messages/{messageId}/media";
+			var localVarPath = "/voicemail/messages/{messageId}/media";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3552,7 +3552,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling VoicemailApi->GetVoicemailMessageMedia");
 
 
-			var localVarPath = "/api/v2/voicemail/messages/{messageId}/media";
+			var localVarPath = "/voicemail/messages/{messageId}/media";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3652,7 +3652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<VoicemailMessageEntityListing> GetVoicemailMessagesWithHttpInfo(string ids = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/voicemail/messages";
+			var localVarPath = "/voicemail/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3752,7 +3752,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessageEntityListing>> GetVoicemailMessagesAsyncWithHttpInfo(string ids = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/voicemail/messages";
+			var localVarPath = "/voicemail/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3848,7 +3848,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<VoicemailOrganizationPolicy> GetVoicemailPolicyWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/voicemail/policy";
+			var localVarPath = "/voicemail/policy";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3942,7 +3942,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<VoicemailOrganizationPolicy>> GetVoicemailPolicyAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/voicemail/policy";
+			var localVarPath = "/voicemail/policy";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4045,7 +4045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (queueId == null)
 				throw new ApiException(400, "Missing required parameter 'queueId' when calling VoicemailApi->GetVoicemailQueueMessages");
 
-			var localVarPath = "/api/v2/voicemail/queues/{queueId}/messages";
+			var localVarPath = "/voicemail/queues/{queueId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4152,7 +4152,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'queueId' when calling VoicemailApi->GetVoicemailQueueMessages");
 
 
-			var localVarPath = "/api/v2/voicemail/queues/{queueId}/messages";
+			var localVarPath = "/voicemail/queues/{queueId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4256,7 +4256,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (q64 == null)
 				throw new ApiException(400, "Missing required parameter 'q64' when calling VoicemailApi->GetVoicemailSearch");
 
-			var localVarPath = "/api/v2/voicemail/search";
+			var localVarPath = "/voicemail/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4360,7 +4360,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'q64' when calling VoicemailApi->GetVoicemailSearch");
 
 
-			var localVarPath = "/api/v2/voicemail/search";
+			var localVarPath = "/voicemail/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4461,7 +4461,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetVoicemailUserMailbox");
 
-			var localVarPath = "/api/v2/voicemail/users/{userId}/mailbox";
+			var localVarPath = "/voicemail/users/{userId}/mailbox";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4562,7 +4562,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetVoicemailUserMailbox");
 
 
-			var localVarPath = "/api/v2/voicemail/users/{userId}/mailbox";
+			var localVarPath = "/voicemail/users/{userId}/mailbox";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4666,7 +4666,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetVoicemailUserMessages");
 
-			var localVarPath = "/api/v2/voicemail/users/{userId}/messages";
+			var localVarPath = "/voicemail/users/{userId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4773,7 +4773,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetVoicemailUserMessages");
 
 
-			var localVarPath = "/api/v2/voicemail/users/{userId}/messages";
+			var localVarPath = "/voicemail/users/{userId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4875,7 +4875,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetVoicemailUserpolicy");
 
-			var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
+			var localVarPath = "/voicemail/userpolicies/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4976,7 +4976,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling VoicemailApi->GetVoicemailUserpolicy");
 
 
-			var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
+			var localVarPath = "/voicemail/userpolicies/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5081,7 +5081,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailGroupPolicy");
 
-			var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
+			var localVarPath = "/voicemail/groups/{groupId}/policy";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5194,7 +5194,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailGroupPolicy");
 
 
-			var localVarPath = "/api/v2/voicemail/groups/{groupId}/policy";
+			var localVarPath = "/voicemail/groups/{groupId}/policy";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5300,7 +5300,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailMePolicy");
 
-			var localVarPath = "/api/v2/voicemail/me/policy";
+			var localVarPath = "/voicemail/me/policy";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5406,7 +5406,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailMePolicy");
 
 
-			var localVarPath = "/api/v2/voicemail/me/policy";
+			var localVarPath = "/voicemail/me/policy";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5516,7 +5516,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailMessage");
 
-			var localVarPath = "/api/v2/voicemail/messages/{messageId}";
+			var localVarPath = "/voicemail/messages/{messageId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5629,7 +5629,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailMessage");
 
 
-			var localVarPath = "/api/v2/voicemail/messages/{messageId}";
+			var localVarPath = "/voicemail/messages/{messageId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5740,7 +5740,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailUserpolicy");
 
-			var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
+			var localVarPath = "/voicemail/userpolicies/{userId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5853,7 +5853,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PatchVoicemailUserpolicy");
 
 
-			var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
+			var localVarPath = "/voicemail/userpolicies/{userId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5956,7 +5956,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<VoicemailMessage> PostVoicemailMessagesWithHttpInfo(CopyVoicemailMessage body = null)
 		{
 
-			var localVarPath = "/api/v2/voicemail/messages";
+			var localVarPath = "/voicemail/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6058,7 +6058,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<VoicemailMessage>> PostVoicemailMessagesAsyncWithHttpInfo(CopyVoicemailMessage body = null)
 		{
 
-			var localVarPath = "/api/v2/voicemail/messages";
+			var localVarPath = "/voicemail/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6163,7 +6163,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PostVoicemailSearch");
 
-			var localVarPath = "/api/v2/voicemail/search";
+			var localVarPath = "/voicemail/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6269,7 +6269,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PostVoicemailSearch");
 
 
-			var localVarPath = "/api/v2/voicemail/search";
+			var localVarPath = "/voicemail/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6379,7 +6379,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutVoicemailMessage");
 
-			var localVarPath = "/api/v2/voicemail/messages/{messageId}";
+			var localVarPath = "/voicemail/messages/{messageId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6492,7 +6492,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutVoicemailMessage");
 
 
-			var localVarPath = "/api/v2/voicemail/messages/{messageId}";
+			var localVarPath = "/voicemail/messages/{messageId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6598,7 +6598,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutVoicemailPolicy");
 
-			var localVarPath = "/api/v2/voicemail/policy";
+			var localVarPath = "/voicemail/policy";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6704,7 +6704,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutVoicemailPolicy");
 
 
-			var localVarPath = "/api/v2/voicemail/policy";
+			var localVarPath = "/voicemail/policy";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6814,7 +6814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutVoicemailUserpolicy");
 
-			var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
+			var localVarPath = "/voicemail/userpolicies/{userId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6927,7 +6927,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling VoicemailApi->PutVoicemailUserpolicy");
 
 
-			var localVarPath = "/api/v2/voicemail/userpolicies/{userId}";
+			var localVarPath = "/voicemail/userpolicies/{userId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

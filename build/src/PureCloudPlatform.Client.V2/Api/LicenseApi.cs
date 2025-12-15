@@ -567,7 +567,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (licenseId == null)
 				throw new ApiException(400, "Missing required parameter 'licenseId' when calling LicenseApi->GetLicenseDefinition");
 
-			var localVarPath = "/api/v2/license/definitions/{licenseId}";
+			var localVarPath = "/license/definitions/{licenseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -668,7 +668,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'licenseId' when calling LicenseApi->GetLicenseDefinition");
 
 
-			var localVarPath = "/api/v2/license/definitions/{licenseId}";
+			var localVarPath = "/license/definitions/{licenseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -763,7 +763,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<List<LicenseDefinition>> GetLicenseDefinitionsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/license/definitions";
+			var localVarPath = "/license/definitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -857,7 +857,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<List<LicenseDefinition>>> GetLicenseDefinitionsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/license/definitions";
+			var localVarPath = "/license/definitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -956,7 +956,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (featureName == null)
 				throw new ApiException(400, "Missing required parameter 'featureName' when calling LicenseApi->GetLicenseToggle");
 
-			var localVarPath = "/api/v2/license/toggles/{featureName}";
+			var localVarPath = "/license/toggles/{featureName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1057,7 +1057,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'featureName' when calling LicenseApi->GetLicenseToggle");
 
 
-			var localVarPath = "/api/v2/license/toggles/{featureName}";
+			var localVarPath = "/license/toggles/{featureName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1157,7 +1157,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling LicenseApi->GetLicenseUser");
 
-			var localVarPath = "/api/v2/license/users/{userId}";
+			var localVarPath = "/license/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1258,7 +1258,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling LicenseApi->GetLicenseUser");
 
 
-			var localVarPath = "/api/v2/license/users/{userId}";
+			var localVarPath = "/license/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1357,7 +1357,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UserLicensesEntityListing> GetLicenseUsersWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/license/users";
+			var localVarPath = "/license/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1457,7 +1457,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UserLicensesEntityListing>> GetLicenseUsersAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/license/users";
+			var localVarPath = "/license/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1555,7 +1555,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<List<string>> PostLicenseInferWithHttpInfo(List<string> body = null)
 		{
 
-			var localVarPath = "/api/v2/license/infer";
+			var localVarPath = "/license/infer";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1657,7 +1657,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PostLicenseInferAsyncWithHttpInfo(List<string> body = null)
 		{
 
-			var localVarPath = "/api/v2/license/infer";
+			var localVarPath = "/license/infer";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1759,7 +1759,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<List<LicenseUpdateStatus>> PostLicenseOrganizationWithHttpInfo(LicenseBatchAssignmentRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/license/organization";
+			var localVarPath = "/license/organization";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1861,7 +1861,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<List<LicenseUpdateStatus>>> PostLicenseOrganizationAsyncWithHttpInfo(LicenseBatchAssignmentRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/license/organization";
+			var localVarPath = "/license/organization";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1966,7 +1966,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (featureName == null)
 				throw new ApiException(400, "Missing required parameter 'featureName' when calling LicenseApi->PostLicenseToggle");
 
-			var localVarPath = "/api/v2/license/toggles/{featureName}";
+			var localVarPath = "/license/toggles/{featureName}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2067,7 +2067,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'featureName' when calling LicenseApi->PostLicenseToggle");
 
 
-			var localVarPath = "/api/v2/license/toggles/{featureName}";
+			var localVarPath = "/license/toggles/{featureName}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2164,7 +2164,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Dictionary<string, Object>> PostLicenseUsersWithHttpInfo(List<string> body = null)
 		{
 
-			var localVarPath = "/api/v2/license/users";
+			var localVarPath = "/license/users";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2266,7 +2266,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> PostLicenseUsersAsyncWithHttpInfo(List<string> body = null)
 		{
 
-			var localVarPath = "/api/v2/license/users";
+			var localVarPath = "/license/users";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

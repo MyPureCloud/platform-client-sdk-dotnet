@@ -970,7 +970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assistantId == null)
 				throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->DeleteAssistant");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}";
+			var localVarPath = "/assistants/{assistantId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1070,7 +1070,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->DeleteAssistant");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}";
+			var localVarPath = "/assistants/{assistantId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1174,7 +1174,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (queueId == null)
 				throw new ApiException(400, "Missing required parameter 'queueId' when calling AgentAssistantsApi->DeleteAssistantQueue");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1281,7 +1281,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'queueId' when calling AgentAssistantsApi->DeleteAssistantQueue");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1383,7 +1383,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assistantId == null)
 				throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->DeleteAssistantQueues");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues";
+			var localVarPath = "/assistants/{assistantId}/queues";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1486,7 +1486,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->DeleteAssistantQueues");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues";
+			var localVarPath = "/assistants/{assistantId}/queues";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1589,7 +1589,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assistantId == null)
 				throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->GetAssistant");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}";
+			var localVarPath = "/assistants/{assistantId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1693,7 +1693,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->GetAssistant");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}";
+			var localVarPath = "/assistants/{assistantId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1801,7 +1801,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (queueId == null)
 				throw new ApiException(400, "Missing required parameter 'queueId' when calling AgentAssistantsApi->GetAssistantQueue");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1912,7 +1912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'queueId' when calling AgentAssistantsApi->GetAssistantQueue");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2022,7 +2022,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assistantId == null)
 				throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->GetAssistantQueues");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues";
+			var localVarPath = "/assistants/{assistantId}/queues";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2135,7 +2135,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->GetAssistantQueues");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues";
+			var localVarPath = "/assistants/{assistantId}/queues";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2246,7 +2246,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AssistantListing> GetAssistantsWithHttpInfo(string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null)
 		{
 
-			var localVarPath = "/api/v2/assistants";
+			var localVarPath = "/assistants";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2358,7 +2358,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AssistantListing>> GetAssistantsAsyncWithHttpInfo(string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string expand = null)
 		{
 
-			var localVarPath = "/api/v2/assistants";
+			var localVarPath = "/assistants";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2468,7 +2468,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AssistantQueueListing> GetAssistantsQueuesWithHttpInfo(string before = null, string after = null, string pageSize = null, string queueIds = null, string expand = null)
 		{
 
-			var localVarPath = "/api/v2/assistants/queues";
+			var localVarPath = "/assistants/queues";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2577,7 +2577,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AssistantQueueListing>> GetAssistantsQueuesAsyncWithHttpInfo(string before = null, string after = null, string pageSize = null, string queueIds = null, string expand = null)
 		{
 
-			var localVarPath = "/api/v2/assistants/queues";
+			var localVarPath = "/assistants/queues";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2686,7 +2686,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PatchAssistant");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}";
+			var localVarPath = "/assistants/{assistantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2799,7 +2799,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PatchAssistant");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}";
+			var localVarPath = "/assistants/{assistantId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2910,7 +2910,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PatchAssistantQueues");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues";
+			var localVarPath = "/assistants/{assistantId}/queues";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3023,7 +3023,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PatchAssistantQueues");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues";
+			var localVarPath = "/assistants/{assistantId}/queues";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3139,7 +3139,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistantQueueUsersBulkAdd");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/add";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}/users/bulk/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3259,7 +3259,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistantQueueUsersBulkAdd");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/add";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}/users/bulk/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3376,7 +3376,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistantQueueUsersBulkRemove");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/remove";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}/users/bulk/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3496,7 +3496,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistantQueueUsersBulkRemove");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/remove";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}/users/bulk/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3615,7 +3615,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistantQueueUsersQuery");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/query";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}/users/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3738,7 +3738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistantQueueUsersQuery");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/query";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}/users/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3846,7 +3846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistants");
 
-			var localVarPath = "/api/v2/assistants";
+			var localVarPath = "/assistants";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3952,7 +3952,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistants");
 
 
-			var localVarPath = "/api/v2/assistants";
+			var localVarPath = "/assistants";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4067,7 +4067,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PutAssistantQueue");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4187,7 +4187,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PutAssistantQueue");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}";
+			var localVarPath = "/assistants/{assistantId}/queues/{queueId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

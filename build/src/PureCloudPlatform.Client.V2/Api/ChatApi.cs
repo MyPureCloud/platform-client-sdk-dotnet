@@ -1891,7 +1891,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ChatApi->DeleteChatsRoomMessage");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/{messageId}";
+			var localVarPath = "/chats/rooms/{roomJid}/messages/{messageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1998,7 +1998,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ChatApi->DeleteChatsRoomMessage");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/{messageId}";
+			var localVarPath = "/chats/rooms/{roomJid}/messages/{messageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2103,7 +2103,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (pinnedMessageId == null)
 				throw new ApiException(400, "Missing required parameter 'pinnedMessageId' when calling ChatApi->DeleteChatsRoomMessagesPin");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId}";
+			var localVarPath = "/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2210,7 +2210,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'pinnedMessageId' when calling ChatApi->DeleteChatsRoomMessagesPin");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId}";
+			var localVarPath = "/chats/rooms/{roomJid}/messages/pins/{pinnedMessageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2315,7 +2315,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->DeleteChatsRoomParticipant");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants/{userId}";
+			var localVarPath = "/chats/rooms/{roomJid}/participants/{userId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2422,7 +2422,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->DeleteChatsRoomParticipant");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants/{userId}";
+			var localVarPath = "/chats/rooms/{roomJid}/participants/{userId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2527,7 +2527,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ChatApi->DeleteChatsUserMessage");
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages/{messageId}";
+			var localVarPath = "/chats/users/{userId}/messages/{messageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2634,7 +2634,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ChatApi->DeleteChatsUserMessage");
 
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages/{messageId}";
+			var localVarPath = "/chats/users/{userId}/messages/{messageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2739,7 +2739,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (pinnedMessageId == null)
 				throw new ApiException(400, "Missing required parameter 'pinnedMessageId' when calling ChatApi->DeleteChatsUserMessagesPin");
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages/pins/{pinnedMessageId}";
+			var localVarPath = "/chats/users/{userId}/messages/pins/{pinnedMessageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2846,7 +2846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'pinnedMessageId' when calling ChatApi->DeleteChatsUserMessagesPin");
 
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages/pins/{pinnedMessageId}";
+			var localVarPath = "/chats/users/{userId}/messages/pins/{pinnedMessageId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2941,7 +2941,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteChatsUsersMeSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/chats/users/me/settings";
+			var localVarPath = "/chats/users/me/settings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3034,7 +3034,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteChatsUsersMeSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/chats/users/me/settings";
+			var localVarPath = "/chats/users/me/settings";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3133,7 +3133,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageId == null)
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ChatApi->GetChatsMessage");
 
-			var localVarPath = "/api/v2/chats/messages/{messageId}";
+			var localVarPath = "/chats/messages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3234,7 +3234,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageId' when calling ChatApi->GetChatsMessage");
 
 
-			var localVarPath = "/api/v2/chats/messages/{messageId}";
+			var localVarPath = "/chats/messages/{messageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3334,7 +3334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roomJid == null)
 				throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->GetChatsRoom");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}";
+			var localVarPath = "/chats/rooms/{roomJid}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3435,7 +3435,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->GetChatsRoom");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}";
+			var localVarPath = "/chats/rooms/{roomJid}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3540,7 +3540,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageIds == null)
 				throw new ApiException(400, "Missing required parameter 'messageIds' when calling ChatApi->GetChatsRoomMessage");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/{messageIds}";
+			var localVarPath = "/chats/rooms/{roomJid}/messages/{messageIds}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3648,7 +3648,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageIds' when calling ChatApi->GetChatsRoomMessage");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/{messageIds}";
+			var localVarPath = "/chats/rooms/{roomJid}/messages/{messageIds}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3757,7 +3757,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roomJid == null)
 				throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->GetChatsRoomMessages");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages";
+			var localVarPath = "/chats/rooms/{roomJid}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3870,7 +3870,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->GetChatsRoomMessages");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages";
+			var localVarPath = "/chats/rooms/{roomJid}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3979,7 +3979,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (participantJid == null)
 				throw new ApiException(400, "Missing required parameter 'participantJid' when calling ChatApi->GetChatsRoomParticipant");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants/{participantJid}";
+			var localVarPath = "/chats/rooms/{roomJid}/participants/{participantJid}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4087,7 +4087,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'participantJid' when calling ChatApi->GetChatsRoomParticipant");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants/{participantJid}";
+			var localVarPath = "/chats/rooms/{roomJid}/participants/{participantJid}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4190,7 +4190,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roomJid == null)
 				throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->GetChatsRoomParticipants");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants";
+			var localVarPath = "/chats/rooms/{roomJid}/participants";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4294,7 +4294,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roomJid' when calling ChatApi->GetChatsRoomParticipants");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants";
+			var localVarPath = "/chats/rooms/{roomJid}/participants";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4390,7 +4390,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ChatSettings> GetChatsSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/chats/settings";
+			var localVarPath = "/chats/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4484,7 +4484,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ChatSettings>> GetChatsSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/chats/settings";
+			var localVarPath = "/chats/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4591,7 +4591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (threadId == null)
 				throw new ApiException(400, "Missing required parameter 'threadId' when calling ChatApi->GetChatsThreadMessages");
 
-			var localVarPath = "/api/v2/chats/threads/{threadId}/messages";
+			var localVarPath = "/chats/threads/{threadId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4704,7 +4704,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'threadId' when calling ChatApi->GetChatsThreadMessages");
 
 
-			var localVarPath = "/api/v2/chats/threads/{threadId}/messages";
+			var localVarPath = "/chats/threads/{threadId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4808,7 +4808,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->GetChatsUser");
 
-			var localVarPath = "/api/v2/chats/users/{userId}";
+			var localVarPath = "/chats/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4909,7 +4909,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->GetChatsUser");
 
 
-			var localVarPath = "/api/v2/chats/users/{userId}";
+			var localVarPath = "/chats/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5014,7 +5014,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messageIds == null)
 				throw new ApiException(400, "Missing required parameter 'messageIds' when calling ChatApi->GetChatsUserMessage");
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages/{messageIds}";
+			var localVarPath = "/chats/users/{userId}/messages/{messageIds}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5122,7 +5122,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messageIds' when calling ChatApi->GetChatsUserMessage");
 
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages/{messageIds}";
+			var localVarPath = "/chats/users/{userId}/messages/{messageIds}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5231,7 +5231,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->GetChatsUserMessages");
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages";
+			var localVarPath = "/chats/users/{userId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5344,7 +5344,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->GetChatsUserMessages");
 
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages";
+			var localVarPath = "/chats/users/{userId}/messages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5448,7 +5448,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->GetChatsUserSettings");
 
-			var localVarPath = "/api/v2/chats/users/{userId}/settings";
+			var localVarPath = "/chats/users/{userId}/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5549,7 +5549,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->GetChatsUserSettings");
 
 
-			var localVarPath = "/api/v2/chats/users/{userId}/settings";
+			var localVarPath = "/chats/users/{userId}/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5644,7 +5644,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UserSettingsForChat> GetChatsUsersMeSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/chats/users/me/settings";
+			var localVarPath = "/chats/users/me/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5738,7 +5738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UserSettingsForChat>> GetChatsUsersMeSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/chats/users/me/settings";
+			var localVarPath = "/chats/users/me/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5841,7 +5841,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsRoom");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}";
+			var localVarPath = "/chats/rooms/{roomJid}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5953,7 +5953,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsRoom");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}";
+			var localVarPath = "/chats/rooms/{roomJid}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6069,7 +6069,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsRoomMessage");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/{messageId}";
+			var localVarPath = "/chats/rooms/{roomJid}/messages/{messageId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6189,7 +6189,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsRoomMessage");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/{messageId}";
+			var localVarPath = "/chats/rooms/{roomJid}/messages/{messageId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6296,7 +6296,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsSettings");
 
-			var localVarPath = "/api/v2/chats/settings";
+			var localVarPath = "/chats/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6402,7 +6402,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsSettings");
 
 
-			var localVarPath = "/api/v2/chats/settings";
+			var localVarPath = "/chats/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6517,7 +6517,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsUserMessage");
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages/{messageId}";
+			var localVarPath = "/chats/users/{userId}/messages/{messageId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6637,7 +6637,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsUserMessage");
 
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages/{messageId}";
+			var localVarPath = "/chats/users/{userId}/messages/{messageId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6749,7 +6749,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsUserSettings");
 
-			var localVarPath = "/api/v2/chats/users/{userId}/settings";
+			var localVarPath = "/chats/users/{userId}/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6862,7 +6862,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsUserSettings");
 
 
-			var localVarPath = "/api/v2/chats/users/{userId}/settings";
+			var localVarPath = "/chats/users/{userId}/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6968,7 +6968,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsUsersMeSettings");
 
-			var localVarPath = "/api/v2/chats/users/me/settings";
+			var localVarPath = "/chats/users/me/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7074,7 +7074,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PatchChatsUsersMeSettings");
 
 
-			var localVarPath = "/api/v2/chats/users/me/settings";
+			var localVarPath = "/chats/users/me/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7184,7 +7184,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRoomMessages");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages";
+			var localVarPath = "/chats/rooms/{roomJid}/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7297,7 +7297,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRoomMessages");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages";
+			var localVarPath = "/chats/rooms/{roomJid}/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7407,7 +7407,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRoomMessagesPins");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/pins";
+			var localVarPath = "/chats/rooms/{roomJid}/messages/pins";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7519,7 +7519,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRoomMessagesPins");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/messages/pins";
+			var localVarPath = "/chats/rooms/{roomJid}/messages/pins";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7629,7 +7629,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->PostChatsRoomParticipant");
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants/{userId}";
+			var localVarPath = "/chats/rooms/{roomJid}/participants/{userId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7736,7 +7736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling ChatApi->PostChatsRoomParticipant");
 
 
-			var localVarPath = "/api/v2/chats/rooms/{roomJid}/participants/{userId}";
+			var localVarPath = "/chats/rooms/{roomJid}/participants/{userId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7837,7 +7837,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRooms");
 
-			var localVarPath = "/api/v2/chats/rooms";
+			var localVarPath = "/chats/rooms";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7943,7 +7943,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsRooms");
 
 
-			var localVarPath = "/api/v2/chats/rooms";
+			var localVarPath = "/chats/rooms";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8053,7 +8053,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsUserMessages");
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages";
+			var localVarPath = "/chats/users/{userId}/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8166,7 +8166,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsUserMessages");
 
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages";
+			var localVarPath = "/chats/users/{userId}/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8276,7 +8276,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsUserMessagesPins");
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages/pins";
+			var localVarPath = "/chats/users/{userId}/messages/pins";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8388,7 +8388,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsUserMessagesPins");
 
 
-			var localVarPath = "/api/v2/chats/users/{userId}/messages/pins";
+			var localVarPath = "/chats/users/{userId}/messages/pins";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8493,7 +8493,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsUsersMeSettings");
 
-			var localVarPath = "/api/v2/chats/users/me/settings";
+			var localVarPath = "/chats/users/me/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8598,7 +8598,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PostChatsUsersMeSettings");
 
 
-			var localVarPath = "/api/v2/chats/users/me/settings";
+			var localVarPath = "/chats/users/me/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8707,7 +8707,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PutChatsMessageReactions");
 
-			var localVarPath = "/api/v2/chats/messages/{messageId}/reactions";
+			var localVarPath = "/chats/messages/{messageId}/reactions";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8819,7 +8819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PutChatsMessageReactions");
 
 
-			var localVarPath = "/api/v2/chats/messages/{messageId}/reactions";
+			var localVarPath = "/chats/messages/{messageId}/reactions";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8925,7 +8925,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PutChatsSettings");
 
-			var localVarPath = "/api/v2/chats/settings";
+			var localVarPath = "/chats/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9031,7 +9031,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ChatApi->PutChatsSettings");
 
 
-			var localVarPath = "/api/v2/chats/settings";
+			var localVarPath = "/chats/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

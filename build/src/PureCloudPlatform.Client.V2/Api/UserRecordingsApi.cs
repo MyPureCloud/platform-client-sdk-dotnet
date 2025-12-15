@@ -442,7 +442,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (recordingId == null)
 				throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->DeleteUserrecording");
 
-			var localVarPath = "/api/v2/userrecordings/{recordingId}";
+			var localVarPath = "/userrecordings/{recordingId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -542,7 +542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->DeleteUserrecording");
 
 
-			var localVarPath = "/api/v2/userrecordings/{recordingId}";
+			var localVarPath = "/userrecordings/{recordingId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -644,7 +644,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (recordingId == null)
 				throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetUserrecording");
 
-			var localVarPath = "/api/v2/userrecordings/{recordingId}";
+			var localVarPath = "/userrecordings/{recordingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -748,7 +748,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetUserrecording");
 
 
-			var localVarPath = "/api/v2/userrecordings/{recordingId}";
+			var localVarPath = "/userrecordings/{recordingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -851,7 +851,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (recordingId == null)
 				throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetUserrecordingTranscoding");
 
-			var localVarPath = "/api/v2/userrecordings/{recordingId}/transcoding";
+			var localVarPath = "/userrecordings/{recordingId}/transcoding";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -955,7 +955,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'recordingId' when calling UserRecordingsApi->GetUserrecordingTranscoding");
 
 
-			var localVarPath = "/api/v2/userrecordings/{recordingId}/transcoding";
+			var localVarPath = "/userrecordings/{recordingId}/transcoding";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1057,7 +1057,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UserRecordingEntityListing> GetUserrecordingsWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/userrecordings";
+			var localVarPath = "/userrecordings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1160,7 +1160,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UserRecordingEntityListing>> GetUserrecordingsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/userrecordings";
+			var localVarPath = "/userrecordings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1257,7 +1257,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FaxSummary> GetUserrecordingsSummaryWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/userrecordings/summary";
+			var localVarPath = "/userrecordings/summary";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1351,7 +1351,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FaxSummary>> GetUserrecordingsSummaryAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/userrecordings/summary";
+			var localVarPath = "/userrecordings/summary";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1457,7 +1457,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UserRecordingsApi->PutUserrecording");
 
-			var localVarPath = "/api/v2/userrecordings/{recordingId}";
+			var localVarPath = "/userrecordings/{recordingId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1573,7 +1573,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UserRecordingsApi->PutUserrecording");
 
 
-			var localVarPath = "/api/v2/userrecordings/{recordingId}";
+			var localVarPath = "/userrecordings/{recordingId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

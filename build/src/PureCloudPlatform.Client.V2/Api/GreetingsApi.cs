@@ -1098,7 +1098,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (greetingId == null)
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->DeleteGreeting");
 
-			var localVarPath = "/api/v2/greetings/{greetingId}";
+			var localVarPath = "/greetings/{greetingId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1198,7 +1198,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->DeleteGreeting");
 
 
-			var localVarPath = "/api/v2/greetings/{greetingId}";
+			var localVarPath = "/greetings/{greetingId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1298,7 +1298,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (greetingId == null)
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreeting");
 
-			var localVarPath = "/api/v2/greetings/{greetingId}";
+			var localVarPath = "/greetings/{greetingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1399,7 +1399,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreeting");
 
 
-			var localVarPath = "/api/v2/greetings/{greetingId}";
+			var localVarPath = "/greetings/{greetingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1501,7 +1501,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (greetingId == null)
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingDownloads");
 
-			var localVarPath = "/api/v2/greetings/{greetingId}/downloads";
+			var localVarPath = "/greetings/{greetingId}/downloads";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1605,7 +1605,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingDownloads");
 
 
-			var localVarPath = "/api/v2/greetings/{greetingId}/downloads";
+			var localVarPath = "/greetings/{greetingId}/downloads";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1708,7 +1708,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (greetingId == null)
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingGroupsDownloads");
 
-			var localVarPath = "/api/v2/greetings/{greetingId}/groups/downloads";
+			var localVarPath = "/greetings/{greetingId}/groups/downloads";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1812,7 +1812,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingGroupsDownloads");
 
 
-			var localVarPath = "/api/v2/greetings/{greetingId}/groups/downloads";
+			var localVarPath = "/greetings/{greetingId}/groups/downloads";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1915,7 +1915,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (greetingId == null)
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingMedia");
 
-			var localVarPath = "/api/v2/greetings/{greetingId}/media";
+			var localVarPath = "/greetings/{greetingId}/media";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2019,7 +2019,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingMedia");
 
 
-			var localVarPath = "/api/v2/greetings/{greetingId}/media";
+			var localVarPath = "/greetings/{greetingId}/media";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2122,7 +2122,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (greetingId == null)
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingUsersDownloads");
 
-			var localVarPath = "/api/v2/greetings/{greetingId}/users/downloads";
+			var localVarPath = "/greetings/{greetingId}/users/downloads";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2226,7 +2226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'greetingId' when calling GreetingsApi->GetGreetingUsersDownloads");
 
 
-			var localVarPath = "/api/v2/greetings/{greetingId}/users/downloads";
+			var localVarPath = "/greetings/{greetingId}/users/downloads";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2326,7 +2326,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DomainEntityListing> GetGreetingsWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/greetings";
+			var localVarPath = "/greetings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2426,7 +2426,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DomainEntityListing>> GetGreetingsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/greetings";
+			var localVarPath = "/greetings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2522,7 +2522,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DefaultGreetingList> GetGreetingsDefaultsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/greetings/defaults";
+			var localVarPath = "/greetings/defaults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2616,7 +2616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DefaultGreetingList>> GetGreetingsDefaultsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/greetings/defaults";
+			var localVarPath = "/greetings/defaults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2719,7 +2719,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupGreetings");
 
-			var localVarPath = "/api/v2/groups/{groupId}/greetings";
+			var localVarPath = "/groups/{groupId}/greetings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2826,7 +2826,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupGreetings");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/greetings";
+			var localVarPath = "/groups/{groupId}/greetings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2928,7 +2928,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupGreetingsDefaults");
 
-			var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
+			var localVarPath = "/groups/{groupId}/greetings/defaults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3029,7 +3029,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling GreetingsApi->GetGroupGreetingsDefaults");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
+			var localVarPath = "/groups/{groupId}/greetings/defaults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3133,7 +3133,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetings");
 
-			var localVarPath = "/api/v2/users/{userId}/greetings";
+			var localVarPath = "/users/{userId}/greetings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3240,7 +3240,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetings");
 
 
-			var localVarPath = "/api/v2/users/{userId}/greetings";
+			var localVarPath = "/users/{userId}/greetings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3342,7 +3342,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetingsDefaults");
 
-			var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
+			var localVarPath = "/users/{userId}/greetings/defaults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3443,7 +3443,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling GreetingsApi->GetUserGreetingsDefaults");
 
 
-			var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
+			var localVarPath = "/users/{userId}/greetings/defaults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3543,7 +3543,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGreetings");
 
-			var localVarPath = "/api/v2/greetings";
+			var localVarPath = "/greetings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3649,7 +3649,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGreetings");
 
 
-			var localVarPath = "/api/v2/greetings";
+			var localVarPath = "/greetings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3759,7 +3759,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGroupGreetings");
 
-			var localVarPath = "/api/v2/groups/{groupId}/greetings";
+			var localVarPath = "/groups/{groupId}/greetings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3872,7 +3872,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostGroupGreetings");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/greetings";
+			var localVarPath = "/groups/{groupId}/greetings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3983,7 +3983,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostUserGreetings");
 
-			var localVarPath = "/api/v2/users/{userId}/greetings";
+			var localVarPath = "/users/{userId}/greetings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4096,7 +4096,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PostUserGreetings");
 
 
-			var localVarPath = "/api/v2/users/{userId}/greetings";
+			var localVarPath = "/users/{userId}/greetings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4207,7 +4207,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreeting");
 
-			var localVarPath = "/api/v2/greetings/{greetingId}";
+			var localVarPath = "/greetings/{greetingId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4320,7 +4320,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreeting");
 
 
-			var localVarPath = "/api/v2/greetings/{greetingId}";
+			var localVarPath = "/greetings/{greetingId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4426,7 +4426,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreetingsDefaults");
 
-			var localVarPath = "/api/v2/greetings/defaults";
+			var localVarPath = "/greetings/defaults";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4532,7 +4532,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGreetingsDefaults");
 
 
-			var localVarPath = "/api/v2/greetings/defaults";
+			var localVarPath = "/greetings/defaults";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4642,7 +4642,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGroupGreetingsDefaults");
 
-			var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
+			var localVarPath = "/groups/{groupId}/greetings/defaults";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4755,7 +4755,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutGroupGreetingsDefaults");
 
 
-			var localVarPath = "/api/v2/groups/{groupId}/greetings/defaults";
+			var localVarPath = "/groups/{groupId}/greetings/defaults";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4866,7 +4866,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutUserGreetingsDefaults");
 
-			var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
+			var localVarPath = "/users/{userId}/greetings/defaults";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4979,7 +4979,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GreetingsApi->PutUserGreetingsDefaults");
 
 
-			var localVarPath = "/api/v2/users/{userId}/greetings/defaults";
+			var localVarPath = "/users/{userId}/greetings/defaults";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -3310,7 +3310,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (categoryId == null)
 				throw new ApiException(400, "Missing required parameter 'categoryId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsCategory");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/categories/{categoryId}";
+			var localVarPath = "/speechandtextanalytics/categories/{categoryId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3410,7 +3410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'categoryId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsCategory");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/categories/{categoryId}";
+			var localVarPath = "/speechandtextanalytics/categories/{categoryId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3509,7 +3509,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dictionaryFeedbackId == null)
 				throw new ApiException(400, "Missing required parameter 'dictionaryFeedbackId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
+			var localVarPath = "/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3609,7 +3609,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dictionaryFeedbackId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
+			var localVarPath = "/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3711,7 +3711,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (programId == null)
 				throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsProgram");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3815,7 +3815,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsProgram");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3917,7 +3917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsReprocessingJob");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/reprocessing/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4019,7 +4019,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsReprocessingJob");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/reprocessing/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4113,7 +4113,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteSpeechandtextanalyticsSentimentfeedbackWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/sentimentfeedback";
+			var localVarPath = "/speechandtextanalytics/sentimentfeedback";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4206,7 +4206,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/sentimentfeedback";
+			var localVarPath = "/speechandtextanalytics/sentimentfeedback";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4304,7 +4304,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sentimentFeedbackId == null)
 				throw new ApiException(400, "Missing required parameter 'sentimentFeedbackId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId}";
+			var localVarPath = "/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4404,7 +4404,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sentimentFeedbackId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsSentimentfeedbackSentimentFeedbackId");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId}";
+			var localVarPath = "/speechandtextanalytics/sentimentfeedback/{sentimentFeedbackId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4503,7 +4503,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsTopic");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/{topicId}";
+			var localVarPath = "/speechandtextanalytics/topics/{topicId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4603,7 +4603,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SpeechTextAnalyticsApi->DeleteSpeechandtextanalyticsTopic");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/{topicId}";
+			var localVarPath = "/speechandtextanalytics/topics/{topicId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4710,7 +4710,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CategoriesEntityListing> GetSpeechandtextanalyticsCategoriesWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/categories";
+			var localVarPath = "/speechandtextanalytics/categories";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4822,7 +4822,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CategoriesEntityListing>> GetSpeechandtextanalyticsCategoriesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, string sortOrder = null, string sortBy = null, List<string> ids = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/categories";
+			var localVarPath = "/speechandtextanalytics/categories";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4927,7 +4927,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (categoryId == null)
 				throw new ApiException(400, "Missing required parameter 'categoryId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsCategory");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/categories/{categoryId}";
+			var localVarPath = "/speechandtextanalytics/categories/{categoryId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5028,7 +5028,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'categoryId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsCategory");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/categories/{categoryId}";
+			var localVarPath = "/speechandtextanalytics/categories/{categoryId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5128,7 +5128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversation");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5229,7 +5229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversation");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5333,7 +5333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationCategories");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/categories";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}/categories";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5440,7 +5440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationCategories");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/categories";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}/categories";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5547,7 +5547,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationCommunicationTranscripturl");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5655,7 +5655,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationCommunicationTranscripturl");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturl";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5761,7 +5761,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (communicationId == null)
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationCommunicationTranscripturls");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5869,7 +5869,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'communicationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationCommunicationTranscripturls");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}/communications/{communicationId}/transcripturls";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5970,7 +5970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationSentiments");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/sentiments";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}/sentiments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6071,7 +6071,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationSentiments");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/sentiments";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}/sentiments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6171,7 +6171,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationSummaries");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/summaries";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}/summaries";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6272,7 +6272,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsConversationSummaries");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/conversations/{conversationId}/summaries";
+			var localVarPath = "/speechandtextanalytics/conversations/{conversationId}/summaries";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6373,7 +6373,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo(string dialect = null, string nextPage = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback";
+			var localVarPath = "/speechandtextanalytics/dictionaryfeedback";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6476,7 +6476,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DictionaryFeedbackEntityListing>> GetSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo(string dialect = null, string nextPage = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback";
+			var localVarPath = "/speechandtextanalytics/dictionaryfeedback";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6578,7 +6578,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dictionaryFeedbackId == null)
 				throw new ApiException(400, "Missing required parameter 'dictionaryFeedbackId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
+			var localVarPath = "/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6679,7 +6679,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dictionaryFeedbackId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
+			var localVarPath = "/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6779,7 +6779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (programId == null)
 				throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgram");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6880,7 +6880,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgram");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6980,7 +6980,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (programId == null)
 				throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramMappings");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/mappings";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/mappings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7081,7 +7081,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramMappings");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/mappings";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/mappings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7181,7 +7181,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (programId == null)
 				throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramSettingsInsights");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/settings/insights";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/settings/insights";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7282,7 +7282,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramSettingsInsights");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/settings/insights";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/settings/insights";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7382,7 +7382,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (programId == null)
 				throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramTranscriptionengines");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/transcriptionengines";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7483,7 +7483,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'programId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramTranscriptionengines");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/transcriptionengines";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7584,7 +7584,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsWithHttpInfo(string nextPage = null, int? pageSize = null, string state = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs";
+			var localVarPath = "/speechandtextanalytics/programs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7687,7 +7687,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo(string nextPage = null, int? pageSize = null, string state = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs";
+			var localVarPath = "/speechandtextanalytics/programs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7789,7 +7789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramsGeneralJob");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/general/jobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/programs/general/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7890,7 +7890,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramsGeneralJob");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/general/jobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/programs/general/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7989,7 +7989,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo(string nextPage = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/mappings";
+			var localVarPath = "/speechandtextanalytics/programs/mappings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8089,7 +8089,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ProgramsMappingsEntityListing>> GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo(string nextPage = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/mappings";
+			var localVarPath = "/speechandtextanalytics/programs/mappings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8190,7 +8190,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramsPublishjob");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/publishjobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/programs/publishjobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8291,7 +8291,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramsPublishjob");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/publishjobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/programs/publishjobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8392,7 +8392,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ProgramInsightsSettingsEntityListing> GetSpeechandtextanalyticsProgramsSettingsInsightsWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> programIds = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/settings/insights";
+			var localVarPath = "/speechandtextanalytics/programs/settings/insights";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8495,7 +8495,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ProgramInsightsSettingsEntityListing>> GetSpeechandtextanalyticsProgramsSettingsInsightsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> programIds = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/settings/insights";
+			var localVarPath = "/speechandtextanalytics/programs/settings/insights";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8592,7 +8592,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SupportedDialectsEntityListing> GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/transcriptionengines/dialects";
+			var localVarPath = "/speechandtextanalytics/programs/transcriptionengines/dialects";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8686,7 +8686,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SupportedDialectsEntityListing>> GetSpeechandtextanalyticsProgramsTranscriptionenginesDialectsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/transcriptionengines/dialects";
+			var localVarPath = "/speechandtextanalytics/programs/transcriptionengines/dialects";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8784,7 +8784,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UnpublishedProgramsEntityListing> GetSpeechandtextanalyticsProgramsUnpublishedWithHttpInfo(string nextPage = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/unpublished";
+			var localVarPath = "/speechandtextanalytics/programs/unpublished";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8884,7 +8884,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UnpublishedProgramsEntityListing>> GetSpeechandtextanalyticsProgramsUnpublishedAsyncWithHttpInfo(string nextPage = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/unpublished";
+			var localVarPath = "/speechandtextanalytics/programs/unpublished";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8987,7 +8987,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsReprocessingJob");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/reprocessing/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9090,7 +9090,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsReprocessingJob");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/reprocessing/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9192,7 +9192,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsReprocessingJobInteractions");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}/interactions";
+			var localVarPath = "/speechandtextanalytics/reprocessing/jobs/{jobId}/interactions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9295,7 +9295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsReprocessingJobInteractions");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs/{jobId}/interactions";
+			var localVarPath = "/speechandtextanalytics/reprocessing/jobs/{jobId}/interactions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9400,7 +9400,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ReprocessJobEntityListingResponse> GetSpeechandtextanalyticsReprocessingJobsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs";
+			var localVarPath = "/speechandtextanalytics/reprocessing/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9508,7 +9508,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ReprocessJobEntityListingResponse>> GetSpeechandtextanalyticsReprocessingJobsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs";
+			var localVarPath = "/speechandtextanalytics/reprocessing/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9606,7 +9606,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EntityListing> GetSpeechandtextanalyticsSentimentDialectsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/sentiment/dialects";
+			var localVarPath = "/speechandtextanalytics/sentiment/dialects";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9700,7 +9700,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetSpeechandtextanalyticsSentimentDialectsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/sentiment/dialects";
+			var localVarPath = "/speechandtextanalytics/sentiment/dialects";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9796,7 +9796,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SentimentFeedbackEntityListing> GetSpeechandtextanalyticsSentimentfeedbackWithHttpInfo(string dialect = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/sentimentfeedback";
+			var localVarPath = "/speechandtextanalytics/sentimentfeedback";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9893,7 +9893,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SentimentFeedbackEntityListing>> GetSpeechandtextanalyticsSentimentfeedbackAsyncWithHttpInfo(string dialect = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/sentimentfeedback";
+			var localVarPath = "/speechandtextanalytics/sentimentfeedback";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9988,7 +9988,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SpeechTextAnalyticsSettingsResponse> GetSpeechandtextanalyticsSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/settings";
+			var localVarPath = "/speechandtextanalytics/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10082,7 +10082,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SpeechTextAnalyticsSettingsResponse>> GetSpeechandtextanalyticsSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/settings";
+			var localVarPath = "/speechandtextanalytics/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10181,7 +10181,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (topicId == null)
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTopic");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/{topicId}";
+			var localVarPath = "/speechandtextanalytics/topics/{topicId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10282,7 +10282,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'topicId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTopic");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/{topicId}";
+			var localVarPath = "/speechandtextanalytics/topics/{topicId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10395,7 +10395,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TopicsEntityListing> GetSpeechandtextanalyticsTopicsWithHttpInfo(string nextPage = null, int? pageSize = null, int? pageNumber = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics";
+			var localVarPath = "/speechandtextanalytics/topics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10516,7 +10516,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TopicsEntityListing>> GetSpeechandtextanalyticsTopicsAsyncWithHttpInfo(string nextPage = null, int? pageSize = null, int? pageNumber = null, string state = null, string name = null, List<string> ids = null, List<string> dialects = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics";
+			var localVarPath = "/speechandtextanalytics/topics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10619,7 +10619,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EntityListing> GetSpeechandtextanalyticsTopicsDialectsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/dialects";
+			var localVarPath = "/speechandtextanalytics/topics/dialects";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10713,7 +10713,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EntityListing>> GetSpeechandtextanalyticsTopicsDialectsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/dialects";
+			var localVarPath = "/speechandtextanalytics/topics/dialects";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10809,7 +10809,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GeneralTopicsEntityListing> GetSpeechandtextanalyticsTopicsGeneralWithHttpInfo(string dialect = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/general";
+			var localVarPath = "/speechandtextanalytics/topics/general";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10906,7 +10906,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GeneralTopicsEntityListing>> GetSpeechandtextanalyticsTopicsGeneralAsyncWithHttpInfo(string dialect = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/general";
+			var localVarPath = "/speechandtextanalytics/topics/general";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11003,7 +11003,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UnifiedGeneralTopicEntityListing> GetSpeechandtextanalyticsTopicsGeneralStatusWithHttpInfo(string dialect = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/general/status";
+			var localVarPath = "/speechandtextanalytics/topics/general/status";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11100,7 +11100,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UnifiedGeneralTopicEntityListing>> GetSpeechandtextanalyticsTopicsGeneralStatusAsyncWithHttpInfo(string dialect = null)
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/general/status";
+			var localVarPath = "/speechandtextanalytics/topics/general/status";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11200,7 +11200,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTopicsPublishjob");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/publishjobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/topics/publishjobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11301,7 +11301,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTopicsPublishjob");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/publishjobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/topics/publishjobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11401,7 +11401,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTopicsTestphraseJob");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/testphrase/jobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/topics/testphrase/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11502,7 +11502,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTopicsTestphraseJob");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/testphrase/jobs/{jobId}";
+			var localVarPath = "/speechandtextanalytics/topics/testphrase/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11611,7 +11611,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTranslationsLanguageConversation");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}";
+			var localVarPath = "/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11725,7 +11725,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsTranslationsLanguageConversation");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}";
+			var localVarPath = "/speechandtextanalytics/translations/languages/{languageId}/conversations/{conversationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11823,7 +11823,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TranslateSupportedLanguageList> GetSpeechandtextanalyticsTranslationsLanguagesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/translations/languages";
+			var localVarPath = "/speechandtextanalytics/translations/languages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11917,7 +11917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TranslateSupportedLanguageList>> GetSpeechandtextanalyticsTranslationsLanguagesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/speechandtextanalytics/translations/languages";
+			var localVarPath = "/speechandtextanalytics/translations/languages";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12016,7 +12016,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PatchSpeechandtextanalyticsSettings");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/settings";
+			var localVarPath = "/speechandtextanalytics/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12122,7 +12122,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PatchSpeechandtextanalyticsSettings");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/settings";
+			var localVarPath = "/speechandtextanalytics/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12227,7 +12227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsCategories");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/categories";
+			var localVarPath = "/speechandtextanalytics/categories";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12333,7 +12333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsCategories");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/categories";
+			var localVarPath = "/speechandtextanalytics/categories";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12438,7 +12438,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsDictionaryfeedback");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback";
+			var localVarPath = "/speechandtextanalytics/dictionaryfeedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12544,7 +12544,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsDictionaryfeedback");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback";
+			var localVarPath = "/speechandtextanalytics/dictionaryfeedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12649,7 +12649,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsPrograms");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs";
+			var localVarPath = "/speechandtextanalytics/programs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12755,7 +12755,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsPrograms");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs";
+			var localVarPath = "/speechandtextanalytics/programs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12860,7 +12860,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsProgramsGeneralJobs");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/general/jobs";
+			var localVarPath = "/speechandtextanalytics/programs/general/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12966,7 +12966,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsProgramsGeneralJobs");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/general/jobs";
+			var localVarPath = "/speechandtextanalytics/programs/general/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13071,7 +13071,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsProgramsPublishjobs");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/publishjobs";
+			var localVarPath = "/speechandtextanalytics/programs/publishjobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13177,7 +13177,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsProgramsPublishjobs");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/publishjobs";
+			var localVarPath = "/speechandtextanalytics/programs/publishjobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13284,7 +13284,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsReprocessingJobs");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs";
+			var localVarPath = "/speechandtextanalytics/reprocessing/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13392,7 +13392,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsReprocessingJobs");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/reprocessing/jobs";
+			var localVarPath = "/speechandtextanalytics/reprocessing/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13497,7 +13497,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsSentimentfeedback");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/sentimentfeedback";
+			var localVarPath = "/speechandtextanalytics/sentimentfeedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13603,7 +13603,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsSentimentfeedback");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/sentimentfeedback";
+			var localVarPath = "/speechandtextanalytics/sentimentfeedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13708,7 +13708,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTopics");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics";
+			var localVarPath = "/speechandtextanalytics/topics";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13814,7 +13814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTopics");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics";
+			var localVarPath = "/speechandtextanalytics/topics";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13919,7 +13919,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTopicsPublishjobs");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/publishjobs";
+			var localVarPath = "/speechandtextanalytics/topics/publishjobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14025,7 +14025,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTopicsPublishjobs");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/publishjobs";
+			var localVarPath = "/speechandtextanalytics/topics/publishjobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14130,7 +14130,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTopicsTestphraseJobs");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/testphrase/jobs";
+			var localVarPath = "/speechandtextanalytics/topics/testphrase/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14236,7 +14236,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTopicsTestphraseJobs");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/testphrase/jobs";
+			var localVarPath = "/speechandtextanalytics/topics/testphrase/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14341,7 +14341,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTranscriptsSearch");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/transcripts/search";
+			var localVarPath = "/speechandtextanalytics/transcripts/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14447,7 +14447,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PostSpeechandtextanalyticsTranscriptsSearch");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/transcripts/search";
+			var localVarPath = "/speechandtextanalytics/transcripts/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14557,7 +14557,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsCategory");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/categories/{categoryId}";
+			var localVarPath = "/speechandtextanalytics/categories/{categoryId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14670,7 +14670,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsCategory");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/categories/{categoryId}";
+			var localVarPath = "/speechandtextanalytics/categories/{categoryId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14778,7 +14778,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dictionaryFeedbackId == null)
 				throw new ApiException(400, "Missing required parameter 'dictionaryFeedbackId' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
+			var localVarPath = "/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14887,7 +14887,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dictionaryFeedbackId' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsDictionaryfeedbackDictionaryFeedbackId");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
+			var localVarPath = "/speechandtextanalytics/dictionaryfeedback/{dictionaryFeedbackId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14998,7 +14998,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsProgram");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15111,7 +15111,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsProgram");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15222,7 +15222,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsProgramMappings");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/mappings";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/mappings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15335,7 +15335,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsProgramMappings");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/mappings";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/mappings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15446,7 +15446,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsProgramSettingsInsights");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/settings/insights";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/settings/insights";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15559,7 +15559,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsProgramSettingsInsights");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/settings/insights";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/settings/insights";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15670,7 +15670,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsProgramTranscriptionengines");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/transcriptionengines";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15783,7 +15783,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsProgramTranscriptionengines");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/programs/{programId}/transcriptionengines";
+			var localVarPath = "/speechandtextanalytics/programs/{programId}/transcriptionengines";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15889,7 +15889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsSettings");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/settings";
+			var localVarPath = "/speechandtextanalytics/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15995,7 +15995,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsSettings");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/settings";
+			var localVarPath = "/speechandtextanalytics/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16105,7 +16105,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsTopic");
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/{topicId}";
+			var localVarPath = "/speechandtextanalytics/topics/{topicId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16218,7 +16218,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SpeechTextAnalyticsApi->PutSpeechandtextanalyticsTopic");
 
 
-			var localVarPath = "/api/v2/speechandtextanalytics/topics/{topicId}";
+			var localVarPath = "/speechandtextanalytics/topics/{topicId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -3704,7 +3704,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->DeleteAnalyticsEvaluationsAggregatesJob");
 
-			var localVarPath = "/api/v2/analytics/evaluations/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/evaluations/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3806,7 +3806,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->DeleteAnalyticsEvaluationsAggregatesJob");
 
 
-			var localVarPath = "/api/v2/analytics/evaluations/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/evaluations/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3907,7 +3907,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->DeleteAnalyticsSurveysAggregatesJob");
 
-			var localVarPath = "/api/v2/analytics/surveys/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/surveys/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4009,7 +4009,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->DeleteAnalyticsSurveysAggregatesJob");
 
 
-			var localVarPath = "/api/v2/analytics/surveys/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/surveys/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4114,7 +4114,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (calibratorId == null)
 				throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->DeleteQualityCalibration");
 
-			var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
+			var localVarPath = "/quality/calibrations/{calibrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4222,7 +4222,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->DeleteQualityCalibration");
 
 
-			var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
+			var localVarPath = "/quality/calibrations/{calibrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4330,7 +4330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (evaluationId == null)
 				throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->DeleteQualityConversationEvaluation");
 
-			var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
+			var localVarPath = "/quality/conversations/{conversationId}/evaluations/{evaluationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4441,7 +4441,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->DeleteQualityConversationEvaluation");
 
 
-			var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
+			var localVarPath = "/quality/conversations/{conversationId}/evaluations/{evaluationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4542,7 +4542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->DeleteQualityForm");
 
-			var localVarPath = "/api/v2/quality/forms/{formId}";
+			var localVarPath = "/quality/forms/{formId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4642,7 +4642,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->DeleteQualityForm");
 
 
-			var localVarPath = "/api/v2/quality/forms/{formId}";
+			var localVarPath = "/quality/forms/{formId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4741,7 +4741,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->DeleteQualityFormsEvaluation");
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/{formId}";
+			var localVarPath = "/quality/forms/evaluations/{formId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4841,7 +4841,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->DeleteQualityFormsEvaluation");
 
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/{formId}";
+			var localVarPath = "/quality/forms/evaluations/{formId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4940,7 +4940,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->DeleteQualityFormsSurvey");
 
-			var localVarPath = "/api/v2/quality/forms/surveys/{formId}";
+			var localVarPath = "/quality/forms/surveys/{formId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5040,7 +5040,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->DeleteQualityFormsSurvey");
 
 
-			var localVarPath = "/api/v2/quality/forms/surveys/{formId}";
+			var localVarPath = "/quality/forms/surveys/{formId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5142,7 +5142,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->GetAnalyticsEvaluationsAggregatesJob");
 
-			var localVarPath = "/api/v2/analytics/evaluations/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/evaluations/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5245,7 +5245,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->GetAnalyticsEvaluationsAggregatesJob");
 
 
-			var localVarPath = "/api/v2/analytics/evaluations/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/evaluations/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5349,7 +5349,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->GetAnalyticsEvaluationsAggregatesJobResults");
 
-			var localVarPath = "/api/v2/analytics/evaluations/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/analytics/evaluations/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5455,7 +5455,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->GetAnalyticsEvaluationsAggregatesJobResults");
 
 
-			var localVarPath = "/api/v2/analytics/evaluations/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/analytics/evaluations/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5558,7 +5558,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->GetAnalyticsSurveysAggregatesJob");
 
-			var localVarPath = "/api/v2/analytics/surveys/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/surveys/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5661,7 +5661,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->GetAnalyticsSurveysAggregatesJob");
 
 
-			var localVarPath = "/api/v2/analytics/surveys/aggregates/jobs/{jobId}";
+			var localVarPath = "/analytics/surveys/aggregates/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5765,7 +5765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->GetAnalyticsSurveysAggregatesJobResults");
 
-			var localVarPath = "/api/v2/analytics/surveys/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/analytics/surveys/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5871,7 +5871,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling QualityApi->GetAnalyticsSurveysAggregatesJobResults");
 
 
-			var localVarPath = "/api/v2/analytics/surveys/aggregates/jobs/{jobId}/results";
+			var localVarPath = "/analytics/surveys/aggregates/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5997,7 +5997,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AgentActivityEntityListing> GetQualityAgentsActivityWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null)
 		{
 
-			var localVarPath = "/api/v2/quality/agents/activity";
+			var localVarPath = "/quality/agents/activity";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6136,7 +6136,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AgentActivityEntityListing>> GetQualityAgentsActivityAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, List<string> agentUserId = null, string evaluatorUserId = null, string name = null, string group = null, string agentTeamId = null, string formContextId = null, string userState = null)
 		{
 
-			var localVarPath = "/api/v2/quality/agents/activity";
+			var localVarPath = "/quality/agents/activity";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6254,7 +6254,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (calibrationId == null)
 				throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->GetQualityCalibration");
 
-			var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
+			var localVarPath = "/quality/calibrations/{calibrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6361,7 +6361,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'calibrationId' when calling QualityApi->GetQualityCalibration");
 
 
-			var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
+			var localVarPath = "/quality/calibrations/{calibrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6481,7 +6481,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (calibratorId == null)
 				throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->GetQualityCalibrations");
 
-			var localVarPath = "/api/v2/quality/calibrations";
+			var localVarPath = "/quality/calibrations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6609,7 +6609,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'calibratorId' when calling QualityApi->GetQualityCalibrations");
 
 
-			var localVarPath = "/api/v2/quality/calibrations";
+			var localVarPath = "/quality/calibrations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6725,7 +6725,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (evaluationId == null)
 				throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->GetQualityConversationEvaluation");
 
-			var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
+			var localVarPath = "/quality/conversations/{conversationId}/evaluations/{evaluationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6836,7 +6836,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'evaluationId' when calling QualityApi->GetQualityConversationEvaluation");
 
 
-			var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
+			var localVarPath = "/quality/conversations/{conversationId}/evaluations/{evaluationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6938,7 +6938,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetQualityConversationSurveys");
 
-			var localVarPath = "/api/v2/quality/conversations/{conversationId}/surveys";
+			var localVarPath = "/quality/conversations/{conversationId}/surveys";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7039,7 +7039,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling QualityApi->GetQualityConversationSurveys");
 
 
-			var localVarPath = "/api/v2/quality/conversations/{conversationId}/surveys";
+			var localVarPath = "/quality/conversations/{conversationId}/surveys";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7139,7 +7139,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (transactionId == null)
 				throw new ApiException(400, "Missing required parameter 'transactionId' when calling QualityApi->GetQualityConversationsAuditsQueryTransactionId");
 
-			var localVarPath = "/api/v2/quality/conversations/audits/query/{transactionId}";
+			var localVarPath = "/quality/conversations/audits/query/{transactionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7240,7 +7240,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'transactionId' when calling QualityApi->GetQualityConversationsAuditsQueryTransactionId");
 
 
-			var localVarPath = "/api/v2/quality/conversations/audits/query/{transactionId}";
+			var localVarPath = "/quality/conversations/audits/query/{transactionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7346,7 +7346,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (transactionId == null)
 				throw new ApiException(400, "Missing required parameter 'transactionId' when calling QualityApi->GetQualityConversationsAuditsQueryTransactionIdResults");
 
-			var localVarPath = "/api/v2/quality/conversations/audits/query/{transactionId}/results";
+			var localVarPath = "/quality/conversations/audits/query/{transactionId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7456,7 +7456,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'transactionId' when calling QualityApi->GetQualityConversationsAuditsQueryTransactionIdResults");
 
 
-			var localVarPath = "/api/v2/quality/conversations/audits/query/{transactionId}/results";
+			var localVarPath = "/quality/conversations/audits/query/{transactionId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7594,7 +7594,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EvaluationEntityListing> GetQualityEvaluationsQueryWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null)
 		{
 
-			var localVarPath = "/api/v2/quality/evaluations/query";
+			var localVarPath = "/quality/evaluations/query";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7748,7 +7748,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EvaluationEntityListing>> GetQualityEvaluationsQueryAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> expand = null, string previousPage = null, string conversationId = null, string agentUserId = null, string agentTeamId = null, string evaluatorUserId = null, string assigneeUserId = null, string queueId = null, string startTime = null, string endTime = null, string formContextId = null, List<string> evaluationState = null, bool? isReleased = null, bool? agentHasRead = null, bool? expandAnswerTotalScores = null, int? maximum = null, string sortOrder = null, bool? includeDeletedUsers = null)
 		{
 
-			var localVarPath = "/api/v2/quality/evaluations/query";
+			var localVarPath = "/quality/evaluations/query";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7886,7 +7886,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EvaluatorActivityEntityListing> GetQualityEvaluatorsActivityWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null, string agentTeamId = null)
 		{
 
-			var localVarPath = "/api/v2/quality/evaluators/activity";
+			var localVarPath = "/quality/evaluators/activity";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8016,7 +8016,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EvaluatorActivityEntityListing>> GetQualityEvaluatorsActivityAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, DateTime? startTime = null, DateTime? endTime = null, string name = null, List<string> permission = null, string group = null, string agentTeamId = null)
 		{
 
-			var localVarPath = "/api/v2/quality/evaluators/activity";
+			var localVarPath = "/quality/evaluators/activity";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8127,7 +8127,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityForm");
 
-			var localVarPath = "/api/v2/quality/forms/{formId}";
+			var localVarPath = "/quality/forms/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8228,7 +8228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityForm");
 
 
-			var localVarPath = "/api/v2/quality/forms/{formId}";
+			var localVarPath = "/quality/forms/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8332,7 +8332,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityFormVersions");
 
-			var localVarPath = "/api/v2/quality/forms/{formId}/versions";
+			var localVarPath = "/quality/forms/{formId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8439,7 +8439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityFormVersions");
 
 
-			var localVarPath = "/api/v2/quality/forms/{formId}/versions";
+			var localVarPath = "/quality/forms/{formId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8552,7 +8552,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/quality/forms";
+			var localVarPath = "/quality/forms";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8670,7 +8670,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/quality/forms";
+			var localVarPath = "/quality/forms";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8777,7 +8777,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityFormsEvaluation");
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/{formId}";
+			var localVarPath = "/quality/forms/evaluations/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8878,7 +8878,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityFormsEvaluation");
 
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/{formId}";
+			var localVarPath = "/quality/forms/evaluations/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8984,7 +8984,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityFormsEvaluationVersions");
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/{formId}/versions";
+			var localVarPath = "/quality/forms/evaluations/{formId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9094,7 +9094,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityFormsEvaluationVersions");
 
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/{formId}/versions";
+			var localVarPath = "/quality/forms/evaluations/{formId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9208,7 +9208,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/quality/forms/evaluations";
+			var localVarPath = "/quality/forms/evaluations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9326,7 +9326,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/quality/forms/evaluations";
+			var localVarPath = "/quality/forms/evaluations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9433,7 +9433,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contextId == null)
 				throw new ApiException(400, "Missing required parameter 'contextId' when calling QualityApi->GetQualityFormsEvaluationsBulkContexts");
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/bulk/contexts";
+			var localVarPath = "/quality/forms/evaluations/bulk/contexts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9534,7 +9534,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contextId' when calling QualityApi->GetQualityFormsEvaluationsBulkContexts");
 
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/bulk/contexts";
+			var localVarPath = "/quality/forms/evaluations/bulk/contexts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9634,7 +9634,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityFormsSurvey");
 
-			var localVarPath = "/api/v2/quality/forms/surveys/{formId}";
+			var localVarPath = "/quality/forms/surveys/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9735,7 +9735,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityFormsSurvey");
 
 
-			var localVarPath = "/api/v2/quality/forms/surveys/{formId}";
+			var localVarPath = "/quality/forms/surveys/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9839,7 +9839,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityFormsSurveyVersions");
 
-			var localVarPath = "/api/v2/quality/forms/surveys/{formId}/versions";
+			var localVarPath = "/quality/forms/surveys/{formId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9946,7 +9946,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityFormsSurveyVersions");
 
 
-			var localVarPath = "/api/v2/quality/forms/surveys/{formId}/versions";
+			var localVarPath = "/quality/forms/surveys/{formId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10059,7 +10059,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SurveyFormEntityListing> GetQualityFormsSurveysWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/quality/forms/surveys";
+			var localVarPath = "/quality/forms/surveys";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10177,7 +10177,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityFormsSurveysAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/quality/forms/surveys";
+			var localVarPath = "/quality/forms/surveys";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10284,7 +10284,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling QualityApi->GetQualityFormsSurveysBulk");
 
-			var localVarPath = "/api/v2/quality/forms/surveys/bulk";
+			var localVarPath = "/quality/forms/surveys/bulk";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10385,7 +10385,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling QualityApi->GetQualityFormsSurveysBulk");
 
 
-			var localVarPath = "/api/v2/quality/forms/surveys/bulk";
+			var localVarPath = "/quality/forms/surveys/bulk";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10487,7 +10487,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contextId == null)
 				throw new ApiException(400, "Missing required parameter 'contextId' when calling QualityApi->GetQualityFormsSurveysBulkContexts");
 
-			var localVarPath = "/api/v2/quality/forms/surveys/bulk/contexts";
+			var localVarPath = "/quality/forms/surveys/bulk/contexts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10591,7 +10591,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contextId' when calling QualityApi->GetQualityFormsSurveysBulkContexts");
 
 
-			var localVarPath = "/api/v2/quality/forms/surveys/bulk/contexts";
+			var localVarPath = "/quality/forms/surveys/bulk/contexts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10692,7 +10692,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityPublishedform");
 
-			var localVarPath = "/api/v2/quality/publishedforms/{formId}";
+			var localVarPath = "/quality/publishedforms/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10793,7 +10793,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityPublishedform");
 
 
-			var localVarPath = "/api/v2/quality/publishedforms/{formId}";
+			var localVarPath = "/quality/publishedforms/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10896,7 +10896,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EvaluationFormResponseEntityListing> GetQualityPublishedformsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
 		{
 
-			var localVarPath = "/api/v2/quality/publishedforms";
+			var localVarPath = "/quality/publishedforms";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11002,7 +11002,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityPublishedformsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
 		{
 
-			var localVarPath = "/api/v2/quality/publishedforms";
+			var localVarPath = "/quality/publishedforms";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11105,7 +11105,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityPublishedformsEvaluation");
 
-			var localVarPath = "/api/v2/quality/publishedforms/evaluations/{formId}";
+			var localVarPath = "/quality/publishedforms/evaluations/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11206,7 +11206,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityPublishedformsEvaluation");
 
 
-			var localVarPath = "/api/v2/quality/publishedforms/evaluations/{formId}";
+			var localVarPath = "/quality/publishedforms/evaluations/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11309,7 +11309,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EvaluationFormResponseEntityListing> GetQualityPublishedformsEvaluationsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
 		{
 
-			var localVarPath = "/api/v2/quality/publishedforms/evaluations";
+			var localVarPath = "/quality/publishedforms/evaluations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11415,7 +11415,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityPublishedformsEvaluationsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestPerContext = null)
 		{
 
-			var localVarPath = "/api/v2/quality/publishedforms/evaluations";
+			var localVarPath = "/quality/publishedforms/evaluations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11518,7 +11518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (formId == null)
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityPublishedformsSurvey");
 
-			var localVarPath = "/api/v2/quality/publishedforms/surveys/{formId}";
+			var localVarPath = "/quality/publishedforms/surveys/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11619,7 +11619,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'formId' when calling QualityApi->GetQualityPublishedformsSurvey");
 
 
-			var localVarPath = "/api/v2/quality/publishedforms/surveys/{formId}";
+			var localVarPath = "/quality/publishedforms/surveys/{formId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11722,7 +11722,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SurveyFormEntityListing> GetQualityPublishedformsSurveysWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null)
 		{
 
-			var localVarPath = "/api/v2/quality/publishedforms/surveys";
+			var localVarPath = "/quality/publishedforms/surveys";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11828,7 +11828,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SurveyFormEntityListing>> GetQualityPublishedformsSurveysAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string name = null, bool? onlyLatestEnabledPerContext = null)
 		{
 
-			var localVarPath = "/api/v2/quality/publishedforms/surveys";
+			var localVarPath = "/quality/publishedforms/surveys";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11931,7 +11931,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (surveyId == null)
 				throw new ApiException(400, "Missing required parameter 'surveyId' when calling QualityApi->GetQualitySurvey");
 
-			var localVarPath = "/api/v2/quality/surveys/{surveyId}";
+			var localVarPath = "/quality/surveys/{surveyId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12032,7 +12032,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'surveyId' when calling QualityApi->GetQualitySurvey");
 
 
-			var localVarPath = "/api/v2/quality/surveys/{surveyId}";
+			var localVarPath = "/quality/surveys/{surveyId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12132,7 +12132,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (customerSurveyUrl == null)
 				throw new ApiException(400, "Missing required parameter 'customerSurveyUrl' when calling QualityApi->GetQualitySurveysScorable");
 
-			var localVarPath = "/api/v2/quality/surveys/scorable";
+			var localVarPath = "/quality/surveys/scorable";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12226,7 +12226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'customerSurveyUrl' when calling QualityApi->GetQualitySurveysScorable");
 
 
-			var localVarPath = "/api/v2/quality/surveys/scorable";
+			var localVarPath = "/quality/surveys/scorable";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12324,7 +12324,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PatchQualityFormsSurvey");
 
-			var localVarPath = "/api/v2/quality/forms/surveys/{formId}";
+			var localVarPath = "/quality/forms/surveys/{formId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12437,7 +12437,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PatchQualityFormsSurvey");
 
 
-			var localVarPath = "/api/v2/quality/forms/surveys/{formId}";
+			var localVarPath = "/quality/forms/surveys/{formId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12545,7 +12545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostAnalyticsEvaluationsAggregatesJobs");
 
-			var localVarPath = "/api/v2/analytics/evaluations/aggregates/jobs";
+			var localVarPath = "/analytics/evaluations/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12653,7 +12653,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostAnalyticsEvaluationsAggregatesJobs");
 
 
-			var localVarPath = "/api/v2/analytics/evaluations/aggregates/jobs";
+			var localVarPath = "/analytics/evaluations/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12758,7 +12758,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostAnalyticsEvaluationsAggregatesQuery");
 
-			var localVarPath = "/api/v2/analytics/evaluations/aggregates/query";
+			var localVarPath = "/analytics/evaluations/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12864,7 +12864,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostAnalyticsEvaluationsAggregatesQuery");
 
 
-			var localVarPath = "/api/v2/analytics/evaluations/aggregates/query";
+			var localVarPath = "/analytics/evaluations/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12971,7 +12971,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostAnalyticsSurveysAggregatesJobs");
 
-			var localVarPath = "/api/v2/analytics/surveys/aggregates/jobs";
+			var localVarPath = "/analytics/surveys/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13079,7 +13079,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostAnalyticsSurveysAggregatesJobs");
 
 
-			var localVarPath = "/api/v2/analytics/surveys/aggregates/jobs";
+			var localVarPath = "/analytics/surveys/aggregates/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13184,7 +13184,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostAnalyticsSurveysAggregatesQuery");
 
-			var localVarPath = "/api/v2/analytics/surveys/aggregates/query";
+			var localVarPath = "/analytics/surveys/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13290,7 +13290,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostAnalyticsSurveysAggregatesQuery");
 
 
-			var localVarPath = "/api/v2/analytics/surveys/aggregates/query";
+			var localVarPath = "/analytics/surveys/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13397,7 +13397,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityCalibrations");
 
-			var localVarPath = "/api/v2/quality/calibrations";
+			var localVarPath = "/quality/calibrations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13506,7 +13506,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityCalibrations");
 
 
-			var localVarPath = "/api/v2/quality/calibrations";
+			var localVarPath = "/quality/calibrations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13619,7 +13619,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityConversationEvaluations");
 
-			var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations";
+			var localVarPath = "/quality/conversations/{conversationId}/evaluations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13735,7 +13735,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityConversationEvaluations");
 
 
-			var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations";
+			var localVarPath = "/quality/conversations/{conversationId}/evaluations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13842,7 +13842,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityConversationsAuditsQuery");
 
-			var localVarPath = "/api/v2/quality/conversations/audits/query";
+			var localVarPath = "/quality/conversations/audits/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13948,7 +13948,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityConversationsAuditsQuery");
 
 
-			var localVarPath = "/api/v2/quality/conversations/audits/query";
+			var localVarPath = "/quality/conversations/audits/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14053,7 +14053,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityEvaluationsAggregatesQueryMe");
 
-			var localVarPath = "/api/v2/quality/evaluations/aggregates/query/me";
+			var localVarPath = "/quality/evaluations/aggregates/query/me";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14159,7 +14159,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityEvaluationsAggregatesQueryMe");
 
 
-			var localVarPath = "/api/v2/quality/evaluations/aggregates/query/me";
+			var localVarPath = "/quality/evaluations/aggregates/query/me";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14264,7 +14264,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityEvaluationsScoring");
 
-			var localVarPath = "/api/v2/quality/evaluations/scoring";
+			var localVarPath = "/quality/evaluations/scoring";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14370,7 +14370,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityEvaluationsScoring");
 
 
-			var localVarPath = "/api/v2/quality/evaluations/scoring";
+			var localVarPath = "/quality/evaluations/scoring";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14475,7 +14475,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityForms");
 
-			var localVarPath = "/api/v2/quality/forms";
+			var localVarPath = "/quality/forms";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14581,7 +14581,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityForms");
 
 
-			var localVarPath = "/api/v2/quality/forms";
+			var localVarPath = "/quality/forms";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14686,7 +14686,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityFormsEvaluations");
 
-			var localVarPath = "/api/v2/quality/forms/evaluations";
+			var localVarPath = "/quality/forms/evaluations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14792,7 +14792,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityFormsEvaluations");
 
 
-			var localVarPath = "/api/v2/quality/forms/evaluations";
+			var localVarPath = "/quality/forms/evaluations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14897,7 +14897,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityFormsSurveys");
 
-			var localVarPath = "/api/v2/quality/forms/surveys";
+			var localVarPath = "/quality/forms/surveys";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15003,7 +15003,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityFormsSurveys");
 
 
-			var localVarPath = "/api/v2/quality/forms/surveys";
+			var localVarPath = "/quality/forms/surveys";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15108,7 +15108,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityPublishedforms");
 
-			var localVarPath = "/api/v2/quality/publishedforms";
+			var localVarPath = "/quality/publishedforms";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15214,7 +15214,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityPublishedforms");
 
 
-			var localVarPath = "/api/v2/quality/publishedforms";
+			var localVarPath = "/quality/publishedforms";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15319,7 +15319,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityPublishedformsEvaluations");
 
-			var localVarPath = "/api/v2/quality/publishedforms/evaluations";
+			var localVarPath = "/quality/publishedforms/evaluations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15425,7 +15425,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityPublishedformsEvaluations");
 
 
-			var localVarPath = "/api/v2/quality/publishedforms/evaluations";
+			var localVarPath = "/quality/publishedforms/evaluations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15530,7 +15530,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityPublishedformsSurveys");
 
-			var localVarPath = "/api/v2/quality/publishedforms/surveys";
+			var localVarPath = "/quality/publishedforms/surveys";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15636,7 +15636,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityPublishedformsSurveys");
 
 
-			var localVarPath = "/api/v2/quality/publishedforms/surveys";
+			var localVarPath = "/quality/publishedforms/surveys";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15741,7 +15741,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualitySurveysScoring");
 
-			var localVarPath = "/api/v2/quality/surveys/scoring";
+			var localVarPath = "/quality/surveys/scoring";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15847,7 +15847,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualitySurveysScoring");
 
 
-			var localVarPath = "/api/v2/quality/surveys/scoring";
+			var localVarPath = "/quality/surveys/scoring";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15957,7 +15957,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityCalibration");
 
-			var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
+			var localVarPath = "/quality/calibrations/{calibrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16070,7 +16070,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityCalibration");
 
 
-			var localVarPath = "/api/v2/quality/calibrations/{calibrationId}";
+			var localVarPath = "/quality/calibrations/{calibrationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16188,7 +16188,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityConversationEvaluation");
 
-			var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
+			var localVarPath = "/quality/conversations/{conversationId}/evaluations/{evaluationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16311,7 +16311,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityConversationEvaluation");
 
 
-			var localVarPath = "/api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId}";
+			var localVarPath = "/quality/conversations/{conversationId}/evaluations/{evaluationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16424,7 +16424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityForm");
 
-			var localVarPath = "/api/v2/quality/forms/{formId}";
+			var localVarPath = "/quality/forms/{formId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16537,7 +16537,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityForm");
 
 
-			var localVarPath = "/api/v2/quality/forms/{formId}";
+			var localVarPath = "/quality/forms/{formId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16648,7 +16648,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityFormsEvaluation");
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/{formId}";
+			var localVarPath = "/quality/forms/evaluations/{formId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16761,7 +16761,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityFormsEvaluation");
 
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/{formId}";
+			var localVarPath = "/quality/forms/evaluations/{formId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16872,7 +16872,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityFormsEvaluationAiscoringSettings");
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/{formId}/aiscoring/settings";
+			var localVarPath = "/quality/forms/evaluations/{formId}/aiscoring/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16985,7 +16985,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityFormsEvaluationAiscoringSettings");
 
 
-			var localVarPath = "/api/v2/quality/forms/evaluations/{formId}/aiscoring/settings";
+			var localVarPath = "/quality/forms/evaluations/{formId}/aiscoring/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17096,7 +17096,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityFormsSurvey");
 
-			var localVarPath = "/api/v2/quality/forms/surveys/{formId}";
+			var localVarPath = "/quality/forms/surveys/{formId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17209,7 +17209,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityFormsSurvey");
 
 
-			var localVarPath = "/api/v2/quality/forms/surveys/{formId}";
+			var localVarPath = "/quality/forms/surveys/{formId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17320,7 +17320,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualitySurveysScorable");
 
-			var localVarPath = "/api/v2/quality/surveys/scorable";
+			var localVarPath = "/quality/surveys/scorable";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17426,7 +17426,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualitySurveysScorable");
 
 
-			var localVarPath = "/api/v2/quality/surveys/scorable";
+			var localVarPath = "/quality/surveys/scorable";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

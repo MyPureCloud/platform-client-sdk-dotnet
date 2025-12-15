@@ -129,7 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
 		/// <param name="MessageStatus">Indicates the delivery status of the message..</param>
 		/// <param name="MessageSegmentCount">The message segment count, greater than 1 if the message content was split into multiple parts for this message type, e.g. SMS character limits..</param>
 		/// <param name="MessageTime">The time when the message was sent or received. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-		/// <param name="Media">Deprecated: Use the API /api/v2/conversations/messages/{conversationId}/messages/{messageId} to get the associated media..</param>
+		/// <param name="Media">Deprecated: Use the API /conversations/messages/{conversationId}/messages/{messageId} to get the associated media..</param>
 		/// <param name="Stickers">Deprecated: This attribute is no longer used. Messages have not included associated stickers for a long time..</param>
 		/// <param name="MessageMetadata">Information that describes the content of the message, if any.</param>
 		/// <param name="SocialVisibility">For social media messages, the visibility of the message in the originating social platform.</param>
@@ -190,9 +190,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 		/// <summary>
-		/// Deprecated: Use the API /api/v2/conversations/messages/{conversationId}/messages/{messageId} to get the associated media.
+		/// Deprecated: Use the API /conversations/messages/{conversationId}/messages/{messageId} to get the associated media.
 		/// </summary>
-		/// <value>Deprecated: Use the API /api/v2/conversations/messages/{conversationId}/messages/{messageId} to get the associated media.</value>
+		/// <value>Deprecated: Use the API /conversations/messages/{conversationId}/messages/{messageId} to get the associated media.</value>
 		[DataMember(Name = "media", EmitDefaultValue = false)]
 		public List<MessageMedia> Media { get; set; }
 

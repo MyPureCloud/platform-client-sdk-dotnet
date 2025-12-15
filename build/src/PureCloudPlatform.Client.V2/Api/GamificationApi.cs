@@ -4498,7 +4498,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (metricId == null)
 				throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->DeleteEmployeeperformanceExternalmetricsDefinition");
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+			var localVarPath = "/employeeperformance/externalmetrics/definitions/{metricId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4598,7 +4598,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->DeleteEmployeeperformanceExternalmetricsDefinition");
 
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+			var localVarPath = "/employeeperformance/externalmetrics/definitions/{metricId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4697,7 +4697,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contestId == null)
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->DeleteGamificationContest");
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}";
+			var localVarPath = "/gamification/contests/{contestId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4797,7 +4797,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->DeleteGamificationContest");
 
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}";
+			var localVarPath = "/gamification/contests/{contestId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4897,7 +4897,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (metricId == null)
 				throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetEmployeeperformanceExternalmetricsDefinition");
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+			var localVarPath = "/employeeperformance/externalmetrics/definitions/{metricId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4998,7 +4998,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetEmployeeperformanceExternalmetricsDefinition");
 
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+			var localVarPath = "/employeeperformance/externalmetrics/definitions/{metricId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5097,7 +5097,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExternalMetricDefinitionListing> GetEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions";
+			var localVarPath = "/employeeperformance/externalmetrics/definitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5197,7 +5197,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinitionListing>> GetEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions";
+			var localVarPath = "/employeeperformance/externalmetrics/definitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5298,7 +5298,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contestId == null)
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContest");
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}";
+			var localVarPath = "/gamification/contests/{contestId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5399,7 +5399,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContest");
 
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}";
+			var localVarPath = "/gamification/contests/{contestId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5507,7 +5507,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contestId == null)
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScores");
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores";
+			var localVarPath = "/gamification/contests/{contestId}/agents/scores";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5620,7 +5620,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScores");
 
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores";
+			var localVarPath = "/gamification/contests/{contestId}/agents/scores";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5732,7 +5732,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contestId == null)
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresMe");
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/me";
+			var localVarPath = "/gamification/contests/{contestId}/agents/scores/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5845,7 +5845,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresMe");
 
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/me";
+			var localVarPath = "/gamification/contests/{contestId}/agents/scores/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5949,7 +5949,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contestId == null)
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresTrends");
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/trends";
+			var localVarPath = "/gamification/contests/{contestId}/agents/scores/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6050,7 +6050,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresTrends");
 
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/trends";
+			var localVarPath = "/gamification/contests/{contestId}/agents/scores/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6150,7 +6150,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contestId == null)
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresTrendsMe");
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/trends/me";
+			var localVarPath = "/gamification/contests/{contestId}/agents/scores/trends/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6251,7 +6251,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contestId' when calling GamificationApi->GetGamificationContestAgentsScoresTrendsMe");
 
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}/agents/scores/trends/me";
+			var localVarPath = "/gamification/contests/{contestId}/agents/scores/trends/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6356,7 +6356,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (prizeImageId == null)
 				throw new ApiException(400, "Missing required parameter 'prizeImageId' when calling GamificationApi->GetGamificationContestPrizeimage");
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}/prizeimages/{prizeImageId}";
+			var localVarPath = "/gamification/contests/{contestId}/prizeimages/{prizeImageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6464,7 +6464,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'prizeImageId' when calling GamificationApi->GetGamificationContestPrizeimage");
 
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}/prizeimages/{prizeImageId}";
+			var localVarPath = "/gamification/contests/{contestId}/prizeimages/{prizeImageId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6574,7 +6574,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GetContestsEssentialsListing> GetGamificationContestsWithHttpInfo(int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/gamification/contests";
+			var localVarPath = "/gamification/contests";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6689,7 +6689,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GetContestsEssentialsListing>> GetGamificationContestsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/gamification/contests";
+			var localVarPath = "/gamification/contests";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6806,7 +6806,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GetContestsEssentialsListing> GetGamificationContestsMeWithHttpInfo(int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null)
 		{
 
-			var localVarPath = "/api/v2/gamification/contests/me";
+			var localVarPath = "/gamification/contests/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6924,7 +6924,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GetContestsEssentialsListing>> GetGamificationContestsMeAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, String dateStart = null, String dateEnd = null, List<string> status = null, string sortBy = null, string sortOrder = null, string view = null)
 		{
 
-			var localVarPath = "/api/v2/gamification/contests/me";
+			var localVarPath = "/gamification/contests/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7065,7 +7065,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (primaryPeriodStartWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodStartWorkday' when calling GamificationApi->GetGamificationInsights");
 
-			var localVarPath = "/api/v2/gamification/insights";
+			var localVarPath = "/gamification/insights";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7215,7 +7215,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodStartWorkday' when calling GamificationApi->GetGamificationInsights");
 
 
-			var localVarPath = "/api/v2/gamification/insights";
+			var localVarPath = "/gamification/insights";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7346,7 +7346,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (primaryPeriodStartWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodStartWorkday' when calling GamificationApi->GetGamificationInsightsDetails");
 
-			var localVarPath = "/api/v2/gamification/insights/details";
+			var localVarPath = "/gamification/insights/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7475,7 +7475,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodStartWorkday' when calling GamificationApi->GetGamificationInsightsDetails");
 
 
-			var localVarPath = "/api/v2/gamification/insights/details";
+			var localVarPath = "/gamification/insights/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7609,7 +7609,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (primaryPeriodEndWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodEndWorkday' when calling GamificationApi->GetGamificationInsightsGroupsTrends");
 
-			var localVarPath = "/api/v2/gamification/insights/groups/trends";
+			var localVarPath = "/gamification/insights/groups/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7752,7 +7752,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodEndWorkday' when calling GamificationApi->GetGamificationInsightsGroupsTrends");
 
 
-			var localVarPath = "/api/v2/gamification/insights/groups/trends";
+			var localVarPath = "/gamification/insights/groups/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7888,7 +7888,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (primaryPeriodEndWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodEndWorkday' when calling GamificationApi->GetGamificationInsightsGroupsTrendsAll");
 
-			var localVarPath = "/api/v2/gamification/insights/groups/trends/all";
+			var localVarPath = "/gamification/insights/groups/trends/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8031,7 +8031,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodEndWorkday' when calling GamificationApi->GetGamificationInsightsGroupsTrendsAll");
 
 
-			var localVarPath = "/api/v2/gamification/insights/groups/trends/all";
+			var localVarPath = "/gamification/insights/groups/trends/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8156,7 +8156,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (startWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationInsightsManagers");
 
-			var localVarPath = "/api/v2/gamification/insights/managers";
+			var localVarPath = "/gamification/insights/managers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8284,7 +8284,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationInsightsManagers");
 
 
-			var localVarPath = "/api/v2/gamification/insights/managers";
+			var localVarPath = "/gamification/insights/managers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8406,7 +8406,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (startWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationInsightsMembers");
 
-			var localVarPath = "/api/v2/gamification/insights/members";
+			var localVarPath = "/gamification/insights/members";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8531,7 +8531,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'startWorkday' when calling GamificationApi->GetGamificationInsightsMembers");
 
 
-			var localVarPath = "/api/v2/gamification/insights/members";
+			var localVarPath = "/gamification/insights/members";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8668,7 +8668,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sortKey == null)
 				throw new ApiException(400, "Missing required parameter 'sortKey' when calling GamificationApi->GetGamificationInsightsRankings");
 
-			var localVarPath = "/api/v2/gamification/insights/rankings";
+			var localVarPath = "/gamification/insights/rankings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8816,7 +8816,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sortKey' when calling GamificationApi->GetGamificationInsightsRankings");
 
 
-			var localVarPath = "/api/v2/gamification/insights/rankings";
+			var localVarPath = "/gamification/insights/rankings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8955,7 +8955,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (primaryPeriodEndWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodEndWorkday' when calling GamificationApi->GetGamificationInsightsTrends");
 
-			var localVarPath = "/api/v2/gamification/insights/trends";
+			var localVarPath = "/gamification/insights/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9098,7 +9098,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodEndWorkday' when calling GamificationApi->GetGamificationInsightsTrends");
 
 
-			var localVarPath = "/api/v2/gamification/insights/trends";
+			var localVarPath = "/gamification/insights/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9229,7 +9229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (primaryPeriodStartWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodStartWorkday' when calling GamificationApi->GetGamificationInsightsUserDetails");
 
-			var localVarPath = "/api/v2/gamification/insights/users/{userId}/details";
+			var localVarPath = "/gamification/insights/users/{userId}/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9365,7 +9365,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodStartWorkday' when calling GamificationApi->GetGamificationInsightsUserDetails");
 
 
-			var localVarPath = "/api/v2/gamification/insights/users/{userId}/details";
+			var localVarPath = "/gamification/insights/users/{userId}/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9505,7 +9505,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (primaryPeriodEndWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodEndWorkday' when calling GamificationApi->GetGamificationInsightsUserTrends");
 
-			var localVarPath = "/api/v2/gamification/insights/users/{userId}/trends";
+			var localVarPath = "/gamification/insights/users/{userId}/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9655,7 +9655,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'primaryPeriodEndWorkday' when calling GamificationApi->GetGamificationInsightsUserTrends");
 
 
-			var localVarPath = "/api/v2/gamification/insights/users/{userId}/trends";
+			var localVarPath = "/gamification/insights/users/{userId}/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9769,7 +9769,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationLeaderboard");
 
-			var localVarPath = "/api/v2/gamification/leaderboard";
+			var localVarPath = "/gamification/leaderboard";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9880,7 +9880,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationLeaderboard");
 
 
-			var localVarPath = "/api/v2/gamification/leaderboard";
+			var localVarPath = "/gamification/leaderboard";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9999,7 +9999,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationLeaderboardAll");
 
-			var localVarPath = "/api/v2/gamification/leaderboard/all";
+			var localVarPath = "/gamification/leaderboard/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10124,7 +10124,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationLeaderboardAll");
 
 
-			var localVarPath = "/api/v2/gamification/leaderboard/all";
+			var localVarPath = "/gamification/leaderboard/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10233,7 +10233,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (filterId == null)
 				throw new ApiException(400, "Missing required parameter 'filterId' when calling GamificationApi->GetGamificationLeaderboardAllBestpoints");
 
-			var localVarPath = "/api/v2/gamification/leaderboard/all/bestpoints";
+			var localVarPath = "/gamification/leaderboard/all/bestpoints";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10341,7 +10341,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'filterId' when calling GamificationApi->GetGamificationLeaderboardAllBestpoints");
 
 
-			var localVarPath = "/api/v2/gamification/leaderboard/all/bestpoints";
+			var localVarPath = "/gamification/leaderboard/all/bestpoints";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10437,7 +10437,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OverallBestPoints> GetGamificationLeaderboardBestpointsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/leaderboard/bestpoints";
+			var localVarPath = "/gamification/leaderboard/bestpoints";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10531,7 +10531,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OverallBestPoints>> GetGamificationLeaderboardBestpointsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/leaderboard/bestpoints";
+			var localVarPath = "/gamification/leaderboard/bestpoints";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10630,7 +10630,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (metricDefinitionId == null)
 				throw new ApiException(400, "Missing required parameter 'metricDefinitionId' when calling GamificationApi->GetGamificationMetricdefinition");
 
-			var localVarPath = "/api/v2/gamification/metricdefinitions/{metricDefinitionId}";
+			var localVarPath = "/gamification/metricdefinitions/{metricDefinitionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10731,7 +10731,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'metricDefinitionId' when calling GamificationApi->GetGamificationMetricdefinition");
 
 
-			var localVarPath = "/api/v2/gamification/metricdefinitions/{metricDefinitionId}";
+			var localVarPath = "/gamification/metricdefinitions/{metricDefinitionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10826,7 +10826,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GetMetricDefinitionsResponse> GetGamificationMetricdefinitionsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/metricdefinitions";
+			var localVarPath = "/gamification/metricdefinitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10920,7 +10920,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GetMetricDefinitionsResponse>> GetGamificationMetricdefinitionsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/metricdefinitions";
+			var localVarPath = "/gamification/metricdefinitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11019,7 +11019,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (profileId == null)
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfile");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}";
+			var localVarPath = "/gamification/profiles/{profileId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11120,7 +11120,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfile");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}";
+			var localVarPath = "/gamification/profiles/{profileId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11220,7 +11220,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (profileId == null)
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMembers");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/members";
+			var localVarPath = "/gamification/profiles/{profileId}/members";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11321,7 +11321,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMembers");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/members";
+			var localVarPath = "/gamification/profiles/{profileId}/members";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11428,7 +11428,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (metricId == null)
 				throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetGamificationProfileMetric");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}";
+			var localVarPath = "/gamification/profiles/{profileId}/metrics/{metricId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11539,7 +11539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'metricId' when calling GamificationApi->GetGamificationProfileMetric");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}";
+			var localVarPath = "/gamification/profiles/{profileId}/metrics/{metricId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11647,7 +11647,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (profileId == null)
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMetrics");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics";
+			var localVarPath = "/gamification/profiles/{profileId}/metrics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11757,7 +11757,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMetrics");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics";
+			var localVarPath = "/gamification/profiles/{profileId}/metrics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11862,7 +11862,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (profileId == null)
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMetricsObjectivedetails");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/objectivedetails";
+			var localVarPath = "/gamification/profiles/{profileId}/metrics/objectivedetails";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11966,7 +11966,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->GetGamificationProfileMetricsObjectivedetails");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/objectivedetails";
+			var localVarPath = "/gamification/profiles/{profileId}/metrics/objectivedetails";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12062,7 +12062,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GetProfilesResponse> GetGamificationProfilesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/profiles";
+			var localVarPath = "/gamification/profiles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12156,7 +12156,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GetProfilesResponse>> GetGamificationProfilesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/profiles";
+			var localVarPath = "/gamification/profiles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12257,7 +12257,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling GamificationApi->GetGamificationProfilesUser");
 
-			var localVarPath = "/api/v2/gamification/profiles/users/{userId}";
+			var localVarPath = "/gamification/profiles/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12361,7 +12361,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling GamificationApi->GetGamificationProfilesUser");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/users/{userId}";
+			var localVarPath = "/gamification/profiles/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12459,7 +12459,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<PerformanceProfile> GetGamificationProfilesUsersMeWithHttpInfo(String workday = null)
 		{
 
-			var localVarPath = "/api/v2/gamification/profiles/users/me";
+			var localVarPath = "/gamification/profiles/users/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12556,7 +12556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<PerformanceProfile>> GetGamificationProfilesUsersMeAsyncWithHttpInfo(String workday = null)
 		{
 
-			var localVarPath = "/api/v2/gamification/profiles/users/me";
+			var localVarPath = "/gamification/profiles/users/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12658,7 +12658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workday == null)
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecards");
 
-			var localVarPath = "/api/v2/gamification/scorecards";
+			var localVarPath = "/gamification/scorecards";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12762,7 +12762,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecards");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards";
+			var localVarPath = "/gamification/scorecards";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12868,7 +12868,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsAttendance");
 
-			var localVarPath = "/api/v2/gamification/scorecards/attendance";
+			var localVarPath = "/gamification/scorecards/attendance";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12976,7 +12976,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsAttendance");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/attendance";
+			var localVarPath = "/gamification/scorecards/attendance";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13072,7 +13072,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UserBestPoints> GetGamificationScorecardsBestpointsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/scorecards/bestpoints";
+			var localVarPath = "/gamification/scorecards/bestpoints";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13166,7 +13166,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UserBestPoints>> GetGamificationScorecardsBestpointsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/scorecards/bestpoints";
+			var localVarPath = "/gamification/scorecards/bestpoints";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13265,7 +13265,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsPointsAlltime");
 
-			var localVarPath = "/api/v2/gamification/scorecards/points/alltime";
+			var localVarPath = "/gamification/scorecards/points/alltime";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13366,7 +13366,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsPointsAlltime");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/points/alltime";
+			var localVarPath = "/gamification/scorecards/points/alltime";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13466,7 +13466,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workday == null)
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecardsPointsAverage");
 
-			var localVarPath = "/api/v2/gamification/scorecards/points/average";
+			var localVarPath = "/gamification/scorecards/points/average";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13567,7 +13567,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecardsPointsAverage");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/points/average";
+			var localVarPath = "/gamification/scorecards/points/average";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13674,7 +13674,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsPointsTrends");
 
-			var localVarPath = "/api/v2/gamification/scorecards/points/trends";
+			var localVarPath = "/gamification/scorecards/points/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13785,7 +13785,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsPointsTrends");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/points/trends";
+			var localVarPath = "/gamification/scorecards/points/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13911,7 +13911,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
 
-			var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/{userId}/values/trends";
+			var localVarPath = "/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/{userId}/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14046,7 +14046,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUserValuesTrends");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/{userId}/values/trends";
+			var localVarPath = "/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/{userId}/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14178,7 +14178,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
 
-			var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/values/trends";
+			var localVarPath = "/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14316,7 +14316,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricUsersValuesTrends");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/values/trends";
+			var localVarPath = "/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/users/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14444,7 +14444,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricValuesTrends");
 
-			var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/values/trends";
+			var localVarPath = "/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14575,7 +14575,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsProfileMetricValuesTrends");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/values/trends";
+			var localVarPath = "/gamification/scorecards/profiles/{profileId}/metrics/{metricId}/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14688,7 +14688,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workday == null)
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecardsUser");
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}";
+			var localVarPath = "/gamification/scorecards/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14799,7 +14799,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecardsUser");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}";
+			var localVarPath = "/gamification/scorecards/users/{userId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14911,7 +14911,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsUserAttendance");
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}/attendance";
+			var localVarPath = "/gamification/scorecards/users/{userId}/attendance";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15026,7 +15026,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsUserAttendance");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}/attendance";
+			var localVarPath = "/gamification/scorecards/users/{userId}/attendance";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15128,7 +15128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling GamificationApi->GetGamificationScorecardsUserBestpoints");
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}/bestpoints";
+			var localVarPath = "/gamification/scorecards/users/{userId}/bestpoints";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15229,7 +15229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling GamificationApi->GetGamificationScorecardsUserBestpoints");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}/bestpoints";
+			var localVarPath = "/gamification/scorecards/users/{userId}/bestpoints";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15334,7 +15334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsUserPointsAlltime");
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}/points/alltime";
+			var localVarPath = "/gamification/scorecards/users/{userId}/points/alltime";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15442,7 +15442,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsUserPointsAlltime");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}/points/alltime";
+			var localVarPath = "/gamification/scorecards/users/{userId}/points/alltime";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15555,7 +15555,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsUserPointsTrends");
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}/points/trends";
+			var localVarPath = "/gamification/scorecards/users/{userId}/points/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15673,7 +15673,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsUserPointsTrends");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}/points/trends";
+			var localVarPath = "/gamification/scorecards/users/{userId}/points/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15788,7 +15788,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsUserValuesTrends");
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}/values/trends";
+			var localVarPath = "/gamification/scorecards/users/{userId}/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15906,7 +15906,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsUserValuesTrends");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/{userId}/values/trends";
+			var localVarPath = "/gamification/scorecards/users/{userId}/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16019,7 +16019,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workday == null)
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecardsUsersPointsAverage");
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/points/average";
+			var localVarPath = "/gamification/scorecards/users/points/average";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16134,7 +16134,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecardsUsersPointsAverage");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/points/average";
+			var localVarPath = "/gamification/scorecards/users/points/average";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16248,7 +16248,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workday == null)
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecardsUsersValuesAverage");
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/values/average";
+			var localVarPath = "/gamification/scorecards/users/values/average";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16366,7 +16366,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecardsUsersValuesAverage");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/values/average";
+			var localVarPath = "/gamification/scorecards/users/values/average";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16486,7 +16486,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsUsersValuesTrends");
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/values/trends";
+			var localVarPath = "/gamification/scorecards/users/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16611,7 +16611,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsUsersValuesTrends");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/users/values/trends";
+			var localVarPath = "/gamification/scorecards/users/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16717,7 +16717,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workday == null)
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecardsValuesAverage");
 
-			var localVarPath = "/api/v2/gamification/scorecards/values/average";
+			var localVarPath = "/gamification/scorecards/values/average";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16821,7 +16821,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workday' when calling GamificationApi->GetGamificationScorecardsValuesAverage");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/values/average";
+			var localVarPath = "/gamification/scorecards/values/average";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16933,7 +16933,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endWorkday == null)
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsValuesTrends");
 
-			var localVarPath = "/api/v2/gamification/scorecards/values/trends";
+			var localVarPath = "/gamification/scorecards/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17050,7 +17050,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endWorkday' when calling GamificationApi->GetGamificationScorecardsValuesTrends");
 
 
-			var localVarPath = "/api/v2/gamification/scorecards/values/trends";
+			var localVarPath = "/gamification/scorecards/values/trends";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17149,7 +17149,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GamificationStatus> GetGamificationStatusWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/status";
+			var localVarPath = "/gamification/status";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17243,7 +17243,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GamificationStatus>> GetGamificationStatusAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/status";
+			var localVarPath = "/gamification/status";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17342,7 +17342,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (templateId == null)
 				throw new ApiException(400, "Missing required parameter 'templateId' when calling GamificationApi->GetGamificationTemplate");
 
-			var localVarPath = "/api/v2/gamification/templates/{templateId}";
+			var localVarPath = "/gamification/templates/{templateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17443,7 +17443,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'templateId' when calling GamificationApi->GetGamificationTemplate");
 
 
-			var localVarPath = "/api/v2/gamification/templates/{templateId}";
+			var localVarPath = "/gamification/templates/{templateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17538,7 +17538,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GetTemplatesResponse> GetGamificationTemplatesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/templates";
+			var localVarPath = "/gamification/templates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17632,7 +17632,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GetTemplatesResponse>> GetGamificationTemplatesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/gamification/templates";
+			var localVarPath = "/gamification/templates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17736,7 +17736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PatchEmployeeperformanceExternalmetricsDefinition");
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+			var localVarPath = "/employeeperformance/externalmetrics/definitions/{metricId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17849,7 +17849,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PatchEmployeeperformanceExternalmetricsDefinition");
 
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions/{metricId}";
+			var localVarPath = "/employeeperformance/externalmetrics/definitions/{metricId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17960,7 +17960,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PatchGamificationContest");
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}";
+			var localVarPath = "/gamification/contests/{contestId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18073,7 +18073,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PatchGamificationContest");
 
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}";
+			var localVarPath = "/gamification/contests/{contestId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18176,7 +18176,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExternalMetricDataWriteResponse> PostEmployeeperformanceExternalmetricsDataWithHttpInfo(ExternalMetricDataWriteRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/data";
+			var localVarPath = "/employeeperformance/externalmetrics/data";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18278,7 +18278,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDataWriteResponse>> PostEmployeeperformanceExternalmetricsDataAsyncWithHttpInfo(ExternalMetricDataWriteRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/data";
+			var localVarPath = "/employeeperformance/externalmetrics/data";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18380,7 +18380,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExternalMetricDefinition> PostEmployeeperformanceExternalmetricsDefinitionsWithHttpInfo(ExternalMetricDefinitionCreateRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions";
+			var localVarPath = "/employeeperformance/externalmetrics/definitions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18482,7 +18482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExternalMetricDefinition>> PostEmployeeperformanceExternalmetricsDefinitionsAsyncWithHttpInfo(ExternalMetricDefinitionCreateRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/employeeperformance/externalmetrics/definitions";
+			var localVarPath = "/employeeperformance/externalmetrics/definitions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18587,7 +18587,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationContests");
 
-			var localVarPath = "/api/v2/gamification/contests";
+			var localVarPath = "/gamification/contests";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18693,7 +18693,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationContests");
 
 
-			var localVarPath = "/api/v2/gamification/contests";
+			var localVarPath = "/gamification/contests";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18798,7 +18798,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationContestsUploadsPrizeimages");
 
-			var localVarPath = "/api/v2/gamification/contests/uploads/prizeimages";
+			var localVarPath = "/gamification/contests/uploads/prizeimages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18904,7 +18904,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationContestsUploadsPrizeimages");
 
 
-			var localVarPath = "/api/v2/gamification/contests/uploads/prizeimages";
+			var localVarPath = "/gamification/contests/uploads/prizeimages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19009,7 +19009,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (profileId == null)
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PostGamificationProfileActivate");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/activate";
+			var localVarPath = "/gamification/profiles/{profileId}/activate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19110,7 +19110,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PostGamificationProfileActivate");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/activate";
+			var localVarPath = "/gamification/profiles/{profileId}/activate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19210,7 +19210,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (profileId == null)
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PostGamificationProfileDeactivate");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/deactivate";
+			var localVarPath = "/gamification/profiles/{profileId}/deactivate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19311,7 +19311,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PostGamificationProfileDeactivate");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/deactivate";
+			var localVarPath = "/gamification/profiles/{profileId}/deactivate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19416,7 +19416,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfileMembers");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/members";
+			var localVarPath = "/gamification/profiles/{profileId}/members";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19529,7 +19529,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfileMembers");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/members";
+			var localVarPath = "/gamification/profiles/{profileId}/members";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19640,7 +19640,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfileMembersValidate");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/members/validate";
+			var localVarPath = "/gamification/profiles/{profileId}/members/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19753,7 +19753,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfileMembersValidate");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/members/validate";
+			var localVarPath = "/gamification/profiles/{profileId}/members/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19869,7 +19869,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfileMetricLink");
 
-			var localVarPath = "/api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link";
+			var localVarPath = "/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19989,7 +19989,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfileMetricLink");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link";
+			var localVarPath = "/gamification/profiles/{sourceProfileId}/metrics/{sourceMetricId}/link";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20101,7 +20101,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfileMetrics");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics";
+			var localVarPath = "/gamification/profiles/{profileId}/metrics";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20214,7 +20214,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfileMetrics");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics";
+			var localVarPath = "/gamification/profiles/{profileId}/metrics";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20322,7 +20322,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfiles");
 
-			var localVarPath = "/api/v2/gamification/profiles";
+			var localVarPath = "/gamification/profiles";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20431,7 +20431,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfiles");
 
 
-			var localVarPath = "/api/v2/gamification/profiles";
+			var localVarPath = "/gamification/profiles";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20542,7 +20542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfilesUserQuery");
 
-			var localVarPath = "/api/v2/gamification/profiles/users/{userId}/query";
+			var localVarPath = "/gamification/profiles/users/{userId}/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20655,7 +20655,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfilesUserQuery");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/users/{userId}/query";
+			var localVarPath = "/gamification/profiles/users/{userId}/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20761,7 +20761,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfilesUsersMeQuery");
 
-			var localVarPath = "/api/v2/gamification/profiles/users/me/query";
+			var localVarPath = "/gamification/profiles/users/me/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20867,7 +20867,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PostGamificationProfilesUsersMeQuery");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/users/me/query";
+			var localVarPath = "/gamification/profiles/users/me/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20977,7 +20977,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PutGamificationContest");
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}";
+			var localVarPath = "/gamification/contests/{contestId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21090,7 +21090,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PutGamificationContest");
 
 
-			var localVarPath = "/api/v2/gamification/contests/{contestId}";
+			var localVarPath = "/gamification/contests/{contestId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21198,7 +21198,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (profileId == null)
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PutGamificationProfile");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}";
+			var localVarPath = "/gamification/profiles/{profileId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21307,7 +21307,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'profileId' when calling GamificationApi->PutGamificationProfile");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}";
+			var localVarPath = "/gamification/profiles/{profileId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21423,7 +21423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PutGamificationProfileMetric");
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}";
+			var localVarPath = "/gamification/profiles/{profileId}/metrics/{metricId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21543,7 +21543,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GamificationApi->PutGamificationProfileMetric");
 
 
-			var localVarPath = "/api/v2/gamification/profiles/{profileId}/metrics/{metricId}";
+			var localVarPath = "/gamification/profiles/{profileId}/metrics/{metricId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21650,7 +21650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (status == null)
 				throw new ApiException(400, "Missing required parameter 'status' when calling GamificationApi->PutGamificationStatus");
 
-			var localVarPath = "/api/v2/gamification/status";
+			var localVarPath = "/gamification/status";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21756,7 +21756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'status' when calling GamificationApi->PutGamificationStatus");
 
 
-			var localVarPath = "/api/v2/gamification/status";
+			var localVarPath = "/gamification/status";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

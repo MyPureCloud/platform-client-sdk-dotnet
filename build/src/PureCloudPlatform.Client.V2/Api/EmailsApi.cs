@@ -357,7 +357,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteEmailsSettingsThreadingWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -450,7 +450,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteEmailsSettingsThreadingAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -544,7 +544,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmailSettings> GetEmailsSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings";
+			var localVarPath = "/emails/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -638,7 +638,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmailSettings>> GetEmailsSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings";
+			var localVarPath = "/emails/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -732,7 +732,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmailThreadingSettings> GetEmailsSettingsThreadingWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -826,7 +826,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmailThreadingSettings>> GetEmailsSettingsThreadingAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -922,7 +922,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmailSettings> PatchEmailsSettingsWithHttpInfo(EmailSettings body = null)
 		{
 
-			var localVarPath = "/api/v2/emails/settings";
+			var localVarPath = "/emails/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1024,7 +1024,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmailSettings>> PatchEmailsSettingsAsyncWithHttpInfo(EmailSettings body = null)
 		{
 
-			var localVarPath = "/api/v2/emails/settings";
+			var localVarPath = "/emails/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1126,7 +1126,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmailThreadingSettings> PatchEmailsSettingsThreadingWithHttpInfo(EmailThreadingSettings body = null)
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1228,7 +1228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmailThreadingSettings>> PatchEmailsSettingsThreadingAsyncWithHttpInfo(EmailThreadingSettings body = null)
 		{
 
-			var localVarPath = "/api/v2/emails/settings/threading";
+			var localVarPath = "/emails/settings/threading";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

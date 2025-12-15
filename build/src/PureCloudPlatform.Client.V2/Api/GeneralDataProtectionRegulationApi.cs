@@ -339,7 +339,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (requestId == null)
 				throw new ApiException(400, "Missing required parameter 'requestId' when calling GeneralDataProtectionRegulationApi->GetGdprRequest");
 
-			var localVarPath = "/api/v2/gdpr/requests/{requestId}";
+			var localVarPath = "/gdpr/requests/{requestId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -440,7 +440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'requestId' when calling GeneralDataProtectionRegulationApi->GetGdprRequest");
 
 
-			var localVarPath = "/api/v2/gdpr/requests/{requestId}";
+			var localVarPath = "/gdpr/requests/{requestId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -539,7 +539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GDPRRequestEntityListing> GetGdprRequestsWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/gdpr/requests";
+			var localVarPath = "/gdpr/requests";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -639,7 +639,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GDPRRequestEntityListing>> GetGdprRequestsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/gdpr/requests";
+			var localVarPath = "/gdpr/requests";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -745,7 +745,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (searchValue == null)
 				throw new ApiException(400, "Missing required parameter 'searchValue' when calling GeneralDataProtectionRegulationApi->GetGdprSubjects");
 
-			var localVarPath = "/api/v2/gdpr/subjects";
+			var localVarPath = "/gdpr/subjects";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -853,7 +853,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'searchValue' when calling GeneralDataProtectionRegulationApi->GetGdprSubjects");
 
 
-			var localVarPath = "/api/v2/gdpr/subjects";
+			var localVarPath = "/gdpr/subjects";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -956,7 +956,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling GeneralDataProtectionRegulationApi->PostGdprRequests");
 
-			var localVarPath = "/api/v2/gdpr/requests";
+			var localVarPath = "/gdpr/requests";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1065,7 +1065,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling GeneralDataProtectionRegulationApi->PostGdprRequests");
 
 
-			var localVarPath = "/api/v2/gdpr/requests";
+			var localVarPath = "/gdpr/requests";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

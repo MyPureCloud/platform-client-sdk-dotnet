@@ -2401,7 +2401,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Fetch a contact using an identifier type and value.
 		/// </summary>
 		/// <remarks>
-		/// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+		/// NOTE: Deprecated. Please use /externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="identifier"></param>
@@ -2414,7 +2414,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Fetch a contact using an identifier type and value.
 		/// </summary>
 		/// <remarks>
-		/// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+		/// NOTE: Deprecated. Please use /externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="identifier"></param>
@@ -2599,7 +2599,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Merge two contacts into a new contact record
 		/// </summary>
 		/// <remarks>
-		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /api/v2/externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
+		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">MergeRequest</param>
@@ -2611,7 +2611,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Merge two contacts into a new contact record
 		/// </summary>
 		/// <remarks>
-		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /api/v2/externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
+		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">MergeRequest</param>
@@ -5479,7 +5479,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Fetch a contact using an identifier type and value.
 		/// </summary>
 		/// <remarks>
-		/// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+		/// NOTE: Deprecated. Please use /externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="identifier"></param>
@@ -5492,7 +5492,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Fetch a contact using an identifier type and value.
 		/// </summary>
 		/// <remarks>
-		/// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+		/// NOTE: Deprecated. Please use /externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="identifier"></param>
@@ -5677,7 +5677,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Merge two contacts into a new contact record
 		/// </summary>
 		/// <remarks>
-		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /api/v2/externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
+		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">MergeRequest</param>
@@ -5689,7 +5689,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Merge two contacts into a new contact record
 		/// </summary>
 		/// <remarks>
-		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /api/v2/externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
+		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">MergeRequest</param>
@@ -6283,7 +6283,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteExternalcontactsContact");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6384,7 +6384,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->DeleteExternalcontactsContact");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6489,7 +6489,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (noteId == null)
 				throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteExternalcontactsContactNote");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/notes/{noteId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6597,7 +6597,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteExternalcontactsContactNote");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/notes/{noteId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6697,7 +6697,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (schemaId == null)
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->DeleteExternalcontactsContactsSchema");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+			var localVarPath = "/externalcontacts/contacts/schemas/{schemaId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6797,7 +6797,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->DeleteExternalcontactsContactsSchema");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+			var localVarPath = "/externalcontacts/contacts/schemas/{schemaId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6897,7 +6897,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalSourceId == null)
 				throw new ApiException(400, "Missing required parameter 'externalSourceId' when calling ExternalContactsApi->DeleteExternalcontactsExternalsource");
 
-			var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+			var localVarPath = "/externalcontacts/externalsources/{externalSourceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6998,7 +6998,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalSourceId' when calling ExternalContactsApi->DeleteExternalcontactsExternalsource");
 
 
-			var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+			var localVarPath = "/externalcontacts/externalsources/{externalSourceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7097,7 +7097,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (settingsId == null)
 				throw new ApiException(400, "Missing required parameter 'settingsId' when calling ExternalContactsApi->DeleteExternalcontactsImportCsvSetting");
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/csv/settings/{settingsId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7197,7 +7197,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'settingsId' when calling ExternalContactsApi->DeleteExternalcontactsImportCsvSetting");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/csv/settings/{settingsId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7296,7 +7296,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (settingsId == null)
 				throw new ApiException(400, "Missing required parameter 'settingsId' when calling ExternalContactsApi->DeleteExternalcontactsImportSetting");
 
-			var localVarPath = "/api/v2/externalcontacts/import/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/settings/{settingsId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7396,7 +7396,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'settingsId' when calling ExternalContactsApi->DeleteExternalcontactsImportSetting");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/settings/{settingsId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7496,7 +7496,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalOrganizationId == null)
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteExternalcontactsOrganization");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7597,7 +7597,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteExternalcontactsOrganization");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7702,7 +7702,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (noteId == null)
 				throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationNote");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7810,7 +7810,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationNote");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7910,7 +7910,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalOrganizationId == null)
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationTrustor");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/trustor";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8010,7 +8010,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->DeleteExternalcontactsOrganizationTrustor");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/trustor";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8110,7 +8110,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (relationshipId == null)
 				throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->DeleteExternalcontactsRelationship");
 
-			var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
+			var localVarPath = "/externalcontacts/relationships/{relationshipId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8211,7 +8211,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->DeleteExternalcontactsRelationship");
 
 
-			var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
+			var localVarPath = "/externalcontacts/relationships/{relationshipId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8313,7 +8313,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContact");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8417,7 +8417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContact");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8518,7 +8518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactIdentifiers");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/identifiers";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/identifiers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8619,7 +8619,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactIdentifiers");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/identifiers";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/identifiers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8723,7 +8723,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactJourneySegments");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/segments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8830,7 +8830,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactJourneySegments");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/segments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8938,7 +8938,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactJourneySessions");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/sessions";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/sessions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9048,7 +9048,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactJourneySessions");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/sessions";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/sessions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9158,7 +9158,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (noteId == null)
 				throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetExternalcontactsContactNote");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/notes/{noteId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9269,7 +9269,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetExternalcontactsContactNote");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/notes/{noteId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9379,7 +9379,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactNotes");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/notes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9492,7 +9492,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactNotes");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/notes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9598,7 +9598,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactUnresolved");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/unresolved";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/unresolved";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9702,7 +9702,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->GetExternalcontactsContactUnresolved");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/unresolved";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/unresolved";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9810,7 +9810,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ContactListing> GetExternalcontactsContactsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, List<string> divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/contacts";
+			var localVarPath = "/externalcontacts/contacts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9922,7 +9922,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ContactListing>> GetExternalcontactsContactsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string q = null, string sortOrder = null, List<string> expand = null, List<string> divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/contacts";
+			var localVarPath = "/externalcontacts/contacts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10027,7 +10027,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (exportId == null)
 				throw new ApiException(400, "Missing required parameter 'exportId' when calling ExternalContactsApi->GetExternalcontactsContactsExport");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/exports/{exportId}";
+			var localVarPath = "/externalcontacts/contacts/exports/{exportId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10128,7 +10128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'exportId' when calling ExternalContactsApi->GetExternalcontactsContactsExport");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/exports/{exportId}";
+			var localVarPath = "/externalcontacts/contacts/exports/{exportId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10229,7 +10229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExportListing> GetExternalcontactsContactsExportsWithHttpInfo(List<string> divisionIds = null, string after = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/exports";
+			var localVarPath = "/externalcontacts/contacts/exports";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10332,7 +10332,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExportListing>> GetExternalcontactsContactsExportsAsyncWithHttpInfo(List<string> divisionIds = null, string after = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/exports";
+			var localVarPath = "/externalcontacts/contacts/exports";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10434,7 +10434,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (schemaId == null)
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsContactsSchema");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+			var localVarPath = "/externalcontacts/contacts/schemas/{schemaId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10535,7 +10535,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsContactsSchema");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+			var localVarPath = "/externalcontacts/contacts/schemas/{schemaId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10640,7 +10640,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling ExternalContactsApi->GetExternalcontactsContactsSchemaVersion");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId}";
+			var localVarPath = "/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10748,7 +10748,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling ExternalContactsApi->GetExternalcontactsContactsSchemaVersion");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId}";
+			var localVarPath = "/externalcontacts/contacts/schemas/{schemaId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10849,7 +10849,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (schemaId == null)
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsContactsSchemaVersions");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions";
+			var localVarPath = "/externalcontacts/contacts/schemas/{schemaId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10950,7 +10950,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsContactsSchemaVersions");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}/versions";
+			var localVarPath = "/externalcontacts/contacts/schemas/{schemaId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11045,7 +11045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DataSchemaListing> GetExternalcontactsContactsSchemasWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas";
+			var localVarPath = "/externalcontacts/contacts/schemas";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11139,7 +11139,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsContactsSchemasAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas";
+			var localVarPath = "/externalcontacts/contacts/schemas";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11238,7 +11238,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (coreTypeName == null)
 				throw new ApiException(400, "Missing required parameter 'coreTypeName' when calling ExternalContactsApi->GetExternalcontactsContactsSchemasCoretype");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/coretypes/{coreTypeName}";
+			var localVarPath = "/externalcontacts/contacts/schemas/coretypes/{coreTypeName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11339,7 +11339,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'coreTypeName' when calling ExternalContactsApi->GetExternalcontactsContactsSchemasCoretype");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/coretypes/{coreTypeName}";
+			var localVarPath = "/externalcontacts/contacts/schemas/coretypes/{coreTypeName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11434,7 +11434,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CoretypeListing> GetExternalcontactsContactsSchemasCoretypesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/coretypes";
+			var localVarPath = "/externalcontacts/contacts/schemas/coretypes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11528,7 +11528,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetExternalcontactsContactsSchemasCoretypesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/coretypes";
+			var localVarPath = "/externalcontacts/contacts/schemas/coretypes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11622,7 +11622,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SchemaQuantityLimits> GetExternalcontactsContactsSchemasLimitsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/limits";
+			var localVarPath = "/externalcontacts/contacts/schemas/limits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11716,7 +11716,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SchemaQuantityLimits>> GetExternalcontactsContactsSchemasLimitsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/limits";
+			var localVarPath = "/externalcontacts/contacts/schemas/limits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11815,7 +11815,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalSourceId == null)
 				throw new ApiException(400, "Missing required parameter 'externalSourceId' when calling ExternalContactsApi->GetExternalcontactsExternalsource");
 
-			var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+			var localVarPath = "/externalcontacts/externalsources/{externalSourceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11916,7 +11916,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalSourceId' when calling ExternalContactsApi->GetExternalcontactsExternalsource");
 
 
-			var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+			var localVarPath = "/externalcontacts/externalsources/{externalSourceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12019,7 +12019,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CursorExternalSourceListing> GetExternalcontactsExternalsourcesWithHttpInfo(string cursor = null, int? limit = null, string name = null, bool? active = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/externalsources";
+			var localVarPath = "/externalcontacts/externalsources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12125,7 +12125,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CursorExternalSourceListing>> GetExternalcontactsExternalsourcesAsyncWithHttpInfo(string cursor = null, int? limit = null, string name = null, bool? active = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/externalsources";
+			var localVarPath = "/externalcontacts/externalsources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12228,7 +12228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (settingsId == null)
 				throw new ApiException(400, "Missing required parameter 'settingsId' when calling ExternalContactsApi->GetExternalcontactsImportCsvSetting");
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/csv/settings/{settingsId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12329,7 +12329,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'settingsId' when calling ExternalContactsApi->GetExternalcontactsImportCsvSetting");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/csv/settings/{settingsId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12430,7 +12430,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Listing> GetExternalcontactsImportCsvSettingsWithHttpInfo(string after = null, string pageSize = null, string externalSettingsId = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/settings";
+			var localVarPath = "/externalcontacts/import/csv/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12533,7 +12533,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Listing>> GetExternalcontactsImportCsvSettingsAsyncWithHttpInfo(string after = null, string pageSize = null, string externalSettingsId = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/settings";
+			var localVarPath = "/externalcontacts/import/csv/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12635,7 +12635,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (uploadId == null)
 				throw new ApiException(400, "Missing required parameter 'uploadId' when calling ExternalContactsApi->GetExternalcontactsImportCsvUploadDetails");
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/uploads/{uploadId}/details";
+			var localVarPath = "/externalcontacts/import/csv/uploads/{uploadId}/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12736,7 +12736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'uploadId' when calling ExternalContactsApi->GetExternalcontactsImportCsvUploadDetails");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/uploads/{uploadId}/details";
+			var localVarPath = "/externalcontacts/import/csv/uploads/{uploadId}/details";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12836,7 +12836,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (uploadId == null)
 				throw new ApiException(400, "Missing required parameter 'uploadId' when calling ExternalContactsApi->GetExternalcontactsImportCsvUploadPreview");
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/uploads/{uploadId}/preview";
+			var localVarPath = "/externalcontacts/import/csv/uploads/{uploadId}/preview";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12937,7 +12937,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'uploadId' when calling ExternalContactsApi->GetExternalcontactsImportCsvUploadPreview");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/uploads/{uploadId}/preview";
+			var localVarPath = "/externalcontacts/import/csv/uploads/{uploadId}/preview";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13039,7 +13039,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ExternalContactsApi->GetExternalcontactsImportJob");
 
-			var localVarPath = "/api/v2/externalcontacts/import/jobs/{jobId}";
+			var localVarPath = "/externalcontacts/import/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13143,7 +13143,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ExternalContactsApi->GetExternalcontactsImportJob");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/jobs/{jobId}";
+			var localVarPath = "/externalcontacts/import/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13249,7 +13249,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ContactImportJobEntityListing> GetExternalcontactsImportJobsWithHttpInfo(List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/import/jobs";
+			var localVarPath = "/externalcontacts/import/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13358,7 +13358,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ContactImportJobEntityListing>> GetExternalcontactsImportJobsAsyncWithHttpInfo(List<string> expand = null, string after = null, string pageSize = null, string sortOrder = null, string jobStatus = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/import/jobs";
+			var localVarPath = "/externalcontacts/import/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13462,7 +13462,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (settingsId == null)
 				throw new ApiException(400, "Missing required parameter 'settingsId' when calling ExternalContactsApi->GetExternalcontactsImportSetting");
 
-			var localVarPath = "/api/v2/externalcontacts/import/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/settings/{settingsId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13563,7 +13563,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'settingsId' when calling ExternalContactsApi->GetExternalcontactsImportSetting");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/settings/{settingsId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13666,7 +13666,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ContactImportSettingsEntityListing> GetExternalcontactsImportSettingsWithHttpInfo(string after = null, string pageSize = null, string sortOrder = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/import/settings";
+			var localVarPath = "/externalcontacts/import/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13772,7 +13772,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ContactImportSettingsEntityListing>> GetExternalcontactsImportSettingsAsyncWithHttpInfo(string after = null, string pageSize = null, string sortOrder = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/import/settings";
+			var localVarPath = "/externalcontacts/import/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13879,7 +13879,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalOrganizationId == null)
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganization");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13986,7 +13986,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganization");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14098,7 +14098,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalOrganizationId == null)
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationContacts");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/contacts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14214,7 +14214,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationContacts");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/contacts";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/contacts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14319,7 +14319,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalOrganizationId == null)
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationIdentifiers");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/identifiers";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/identifiers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14420,7 +14420,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationIdentifiers");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/identifiers";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/identifiers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14527,7 +14527,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (noteId == null)
 				throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetExternalcontactsOrganizationNote");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14638,7 +14638,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'noteId' when calling ExternalContactsApi->GetExternalcontactsOrganizationNote");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14748,7 +14748,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalOrganizationId == null)
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationNotes");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/notes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14861,7 +14861,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationNotes");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/notes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14973,7 +14973,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (externalOrganizationId == null)
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationRelationships");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/relationships";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/relationships";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15086,7 +15086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'externalOrganizationId' when calling ExternalContactsApi->GetExternalcontactsOrganizationRelationships");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/relationships";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/relationships";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15201,7 +15201,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExternalOrganizationListing> GetExternalcontactsOrganizationsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/organizations";
+			var localVarPath = "/externalcontacts/organizations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15319,7 +15319,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExternalOrganizationListing>> GetExternalcontactsOrganizationsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string q = null, List<string> trustorId = null, string sortOrder = null, List<string> expand = null, bool? includeTrustors = null, List<string> divisionIds = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/organizations";
+			var localVarPath = "/externalcontacts/organizations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15426,7 +15426,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (schemaId == null)
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchema");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}";
+			var localVarPath = "/externalcontacts/organizations/schemas/{schemaId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15527,7 +15527,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchema");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}";
+			var localVarPath = "/externalcontacts/organizations/schemas/{schemaId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15632,7 +15632,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemaVersion");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId}";
+			var localVarPath = "/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15740,7 +15740,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemaVersion");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId}";
+			var localVarPath = "/externalcontacts/organizations/schemas/{schemaId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15841,7 +15841,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (schemaId == null)
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemaVersions");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions";
+			var localVarPath = "/externalcontacts/organizations/schemas/{schemaId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15942,7 +15942,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'schemaId' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemaVersions");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}/versions";
+			var localVarPath = "/externalcontacts/organizations/schemas/{schemaId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16037,7 +16037,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DataSchemaListing> GetExternalcontactsOrganizationsSchemasWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas";
+			var localVarPath = "/externalcontacts/organizations/schemas";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16131,7 +16131,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetExternalcontactsOrganizationsSchemasAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas";
+			var localVarPath = "/externalcontacts/organizations/schemas";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16230,7 +16230,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (coreTypeName == null)
 				throw new ApiException(400, "Missing required parameter 'coreTypeName' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemasCoretype");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/coretypes/{coreTypeName}";
+			var localVarPath = "/externalcontacts/organizations/schemas/coretypes/{coreTypeName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16331,7 +16331,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'coreTypeName' when calling ExternalContactsApi->GetExternalcontactsOrganizationsSchemasCoretype");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/coretypes/{coreTypeName}";
+			var localVarPath = "/externalcontacts/organizations/schemas/coretypes/{coreTypeName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16426,7 +16426,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CoretypeListing> GetExternalcontactsOrganizationsSchemasCoretypesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/coretypes";
+			var localVarPath = "/externalcontacts/organizations/schemas/coretypes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16520,7 +16520,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetExternalcontactsOrganizationsSchemasCoretypesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/coretypes";
+			var localVarPath = "/externalcontacts/organizations/schemas/coretypes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16614,7 +16614,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SchemaQuantityLimits> GetExternalcontactsOrganizationsSchemasLimitsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/limits";
+			var localVarPath = "/externalcontacts/organizations/schemas/limits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16708,7 +16708,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SchemaQuantityLimits>> GetExternalcontactsOrganizationsSchemasLimitsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/limits";
+			var localVarPath = "/externalcontacts/organizations/schemas/limits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16809,7 +16809,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (relationshipId == null)
 				throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->GetExternalcontactsRelationship");
 
-			var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
+			var localVarPath = "/externalcontacts/relationships/{relationshipId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16913,7 +16913,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'relationshipId' when calling ExternalContactsApi->GetExternalcontactsRelationship");
 
 
-			var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
+			var localVarPath = "/externalcontacts/relationships/{relationshipId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17018,7 +17018,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (lookupVal == null)
 				throw new ApiException(400, "Missing required parameter 'lookupVal' when calling ExternalContactsApi->GetExternalcontactsReversewhitepageslookup");
 
-			var localVarPath = "/api/v2/externalcontacts/reversewhitepageslookup";
+			var localVarPath = "/externalcontacts/reversewhitepageslookup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17125,7 +17125,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'lookupVal' when calling ExternalContactsApi->GetExternalcontactsReversewhitepageslookup");
 
 
-			var localVarPath = "/api/v2/externalcontacts/reversewhitepageslookup";
+			var localVarPath = "/externalcontacts/reversewhitepageslookup";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17228,7 +17228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CursorContactListing> GetExternalcontactsScanContactsWithHttpInfo(int? limit = null, string cursor = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/contacts";
+			var localVarPath = "/externalcontacts/scan/contacts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17331,7 +17331,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsAsyncWithHttpInfo(int? limit = null, string cursor = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/contacts";
+			var localVarPath = "/externalcontacts/scan/contacts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17432,7 +17432,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CursorContactListing> GetExternalcontactsScanContactsDivisionviewsAllWithHttpInfo(int? limit = null, string cursor = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/contacts/divisionviews/all";
+			var localVarPath = "/externalcontacts/scan/contacts/divisionviews/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17532,7 +17532,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CursorContactListing>> GetExternalcontactsScanContactsDivisionviewsAllAsyncWithHttpInfo(int? limit = null, string cursor = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/contacts/divisionviews/all";
+			var localVarPath = "/externalcontacts/scan/contacts/divisionviews/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17634,7 +17634,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CursorNoteListing> GetExternalcontactsScanNotesWithHttpInfo(int? limit = null, string cursor = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/notes";
+			var localVarPath = "/externalcontacts/scan/notes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17737,7 +17737,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesAsyncWithHttpInfo(int? limit = null, string cursor = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/notes";
+			var localVarPath = "/externalcontacts/scan/notes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17838,7 +17838,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CursorNoteListing> GetExternalcontactsScanNotesDivisionviewsAllWithHttpInfo(int? limit = null, string cursor = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/notes/divisionviews/all";
+			var localVarPath = "/externalcontacts/scan/notes/divisionviews/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17938,7 +17938,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CursorNoteListing>> GetExternalcontactsScanNotesDivisionviewsAllAsyncWithHttpInfo(int? limit = null, string cursor = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/notes/divisionviews/all";
+			var localVarPath = "/externalcontacts/scan/notes/divisionviews/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18040,7 +18040,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CursorOrganizationListing> GetExternalcontactsScanOrganizationsWithHttpInfo(int? limit = null, string cursor = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/organizations";
+			var localVarPath = "/externalcontacts/scan/organizations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18143,7 +18143,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsAsyncWithHttpInfo(int? limit = null, string cursor = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/organizations";
+			var localVarPath = "/externalcontacts/scan/organizations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18244,7 +18244,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CursorOrganizationListing> GetExternalcontactsScanOrganizationsDivisionviewsAllWithHttpInfo(int? limit = null, string cursor = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/organizations/divisionviews/all";
+			var localVarPath = "/externalcontacts/scan/organizations/divisionviews/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18344,7 +18344,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CursorOrganizationListing>> GetExternalcontactsScanOrganizationsDivisionviewsAllAsyncWithHttpInfo(int? limit = null, string cursor = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/organizations/divisionviews/all";
+			var localVarPath = "/externalcontacts/scan/organizations/divisionviews/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18446,7 +18446,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CursorRelationshipListing> GetExternalcontactsScanRelationshipsWithHttpInfo(int? limit = null, string cursor = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/relationships";
+			var localVarPath = "/externalcontacts/scan/relationships";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18549,7 +18549,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsAsyncWithHttpInfo(int? limit = null, string cursor = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/relationships";
+			var localVarPath = "/externalcontacts/scan/relationships";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18650,7 +18650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CursorRelationshipListing> GetExternalcontactsScanRelationshipsDivisionviewsAllWithHttpInfo(int? limit = null, string cursor = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/relationships/divisionviews/all";
+			var localVarPath = "/externalcontacts/scan/relationships/divisionviews/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18750,7 +18750,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CursorRelationshipListing>> GetExternalcontactsScanRelationshipsDivisionviewsAllAsyncWithHttpInfo(int? limit = null, string cursor = null)
 		{
 
-			var localVarPath = "/api/v2/externalcontacts/scan/relationships/divisionviews/all";
+			var localVarPath = "/externalcontacts/scan/relationships/divisionviews/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18856,7 +18856,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PatchExternalcontactsContactIdentifiers");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/identifiers";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/identifiers";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18969,7 +18969,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PatchExternalcontactsContactIdentifiers");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/identifiers";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/identifiers";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19080,7 +19080,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PatchExternalcontactsOrganizationIdentifiers");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/identifiers";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/identifiers";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19193,7 +19193,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PatchExternalcontactsOrganizationIdentifiers");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/identifiers";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/identifiers";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19299,7 +19299,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContacts");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts";
+			var localVarPath = "/externalcontacts/bulk/contacts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19405,7 +19405,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContacts");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts";
+			var localVarPath = "/externalcontacts/bulk/contacts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19510,7 +19510,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsAdd");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/add";
+			var localVarPath = "/externalcontacts/bulk/contacts/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19616,7 +19616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsAdd");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/add";
+			var localVarPath = "/externalcontacts/bulk/contacts/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19721,7 +19721,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsDivisionviews");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/divisionviews";
+			var localVarPath = "/externalcontacts/bulk/contacts/divisionviews";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19827,7 +19827,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsDivisionviews");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/divisionviews";
+			var localVarPath = "/externalcontacts/bulk/contacts/divisionviews";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19934,7 +19934,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsEnrich");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/enrich";
+			var localVarPath = "/externalcontacts/bulk/contacts/enrich";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20043,7 +20043,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsEnrich");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/enrich";
+			var localVarPath = "/externalcontacts/bulk/contacts/enrich";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20149,7 +20149,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsRemove");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/remove";
+			var localVarPath = "/externalcontacts/bulk/contacts/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20255,7 +20255,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsRemove");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/remove";
+			var localVarPath = "/externalcontacts/bulk/contacts/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20360,7 +20360,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsUnresolved");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/unresolved";
+			var localVarPath = "/externalcontacts/bulk/contacts/unresolved";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20466,7 +20466,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsUnresolved");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/unresolved";
+			var localVarPath = "/externalcontacts/bulk/contacts/unresolved";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20571,7 +20571,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsUpdate");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/update";
+			var localVarPath = "/externalcontacts/bulk/contacts/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20677,7 +20677,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkContactsUpdate");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/contacts/update";
+			var localVarPath = "/externalcontacts/bulk/contacts/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20782,7 +20782,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkNotes");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/notes";
+			var localVarPath = "/externalcontacts/bulk/notes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20888,7 +20888,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkNotes");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/notes";
+			var localVarPath = "/externalcontacts/bulk/notes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20993,7 +20993,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkNotesAdd");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/notes/add";
+			var localVarPath = "/externalcontacts/bulk/notes/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21099,7 +21099,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkNotesAdd");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/notes/add";
+			var localVarPath = "/externalcontacts/bulk/notes/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21204,7 +21204,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkNotesRemove");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/notes/remove";
+			var localVarPath = "/externalcontacts/bulk/notes/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21310,7 +21310,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkNotesRemove");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/notes/remove";
+			var localVarPath = "/externalcontacts/bulk/notes/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21415,7 +21415,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkNotesUpdate");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/notes/update";
+			var localVarPath = "/externalcontacts/bulk/notes/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21521,7 +21521,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkNotesUpdate");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/notes/update";
+			var localVarPath = "/externalcontacts/bulk/notes/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21626,7 +21626,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizations");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations";
+			var localVarPath = "/externalcontacts/bulk/organizations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21732,7 +21732,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizations");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations";
+			var localVarPath = "/externalcontacts/bulk/organizations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21837,7 +21837,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsAdd");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations/add";
+			var localVarPath = "/externalcontacts/bulk/organizations/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21943,7 +21943,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsAdd");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations/add";
+			var localVarPath = "/externalcontacts/bulk/organizations/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22048,7 +22048,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsDivisionviews");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations/divisionviews";
+			var localVarPath = "/externalcontacts/bulk/organizations/divisionviews";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22154,7 +22154,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsDivisionviews");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations/divisionviews";
+			var localVarPath = "/externalcontacts/bulk/organizations/divisionviews";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22261,7 +22261,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsEnrich");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations/enrich";
+			var localVarPath = "/externalcontacts/bulk/organizations/enrich";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22370,7 +22370,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsEnrich");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations/enrich";
+			var localVarPath = "/externalcontacts/bulk/organizations/enrich";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22476,7 +22476,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsRemove");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations/remove";
+			var localVarPath = "/externalcontacts/bulk/organizations/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22582,7 +22582,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsRemove");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations/remove";
+			var localVarPath = "/externalcontacts/bulk/organizations/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22687,7 +22687,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsUpdate");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations/update";
+			var localVarPath = "/externalcontacts/bulk/organizations/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22793,7 +22793,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkOrganizationsUpdate");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/organizations/update";
+			var localVarPath = "/externalcontacts/bulk/organizations/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22898,7 +22898,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkRelationships");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/relationships";
+			var localVarPath = "/externalcontacts/bulk/relationships";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23004,7 +23004,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkRelationships");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/relationships";
+			var localVarPath = "/externalcontacts/bulk/relationships";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23109,7 +23109,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkRelationshipsAdd");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/relationships/add";
+			var localVarPath = "/externalcontacts/bulk/relationships/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23215,7 +23215,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkRelationshipsAdd");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/relationships/add";
+			var localVarPath = "/externalcontacts/bulk/relationships/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23320,7 +23320,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkRelationshipsRemove");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/relationships/remove";
+			var localVarPath = "/externalcontacts/bulk/relationships/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23426,7 +23426,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkRelationshipsRemove");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/relationships/remove";
+			var localVarPath = "/externalcontacts/bulk/relationships/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23531,7 +23531,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkRelationshipsUpdate");
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/relationships/update";
+			var localVarPath = "/externalcontacts/bulk/relationships/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23637,7 +23637,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsBulkRelationshipsUpdate");
 
 
-			var localVarPath = "/api/v2/externalcontacts/bulk/relationships/update";
+			var localVarPath = "/externalcontacts/bulk/relationships/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23744,7 +23744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostExternalcontactsContactJourneySegments");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/segments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23853,7 +23853,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostExternalcontactsContactJourneySegments");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/journey/segments";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/journey/segments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23964,7 +23964,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactNotes");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/notes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24077,7 +24077,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactNotes");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/notes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24183,7 +24183,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostExternalcontactsContactPromotion");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/promotion";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/promotion";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24284,7 +24284,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling ExternalContactsApi->PostExternalcontactsContactPromotion");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/promotion";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/promotion";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24384,7 +24384,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContacts");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts";
+			var localVarPath = "/externalcontacts/contacts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24490,7 +24490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContacts");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts";
+			var localVarPath = "/externalcontacts/contacts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24597,7 +24597,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactsEnrich");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/enrich";
+			var localVarPath = "/externalcontacts/contacts/enrich";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24706,7 +24706,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactsEnrich");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/enrich";
+			var localVarPath = "/externalcontacts/contacts/enrich";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24812,7 +24812,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactsExports");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/exports";
+			var localVarPath = "/externalcontacts/contacts/exports";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24918,7 +24918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactsExports");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/exports";
+			var localVarPath = "/externalcontacts/contacts/exports";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25023,7 +25023,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactsMerge");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/merge";
+			var localVarPath = "/externalcontacts/contacts/merge";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25129,7 +25129,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactsMerge");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/merge";
+			var localVarPath = "/externalcontacts/contacts/merge";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25234,7 +25234,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactsSchemas");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas";
+			var localVarPath = "/externalcontacts/contacts/schemas";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25340,7 +25340,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsContactsSchemas");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas";
+			var localVarPath = "/externalcontacts/contacts/schemas";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25445,7 +25445,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsExternalsources");
 
-			var localVarPath = "/api/v2/externalcontacts/externalsources";
+			var localVarPath = "/externalcontacts/externalsources";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25551,7 +25551,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsExternalsources");
 
 
-			var localVarPath = "/api/v2/externalcontacts/externalsources";
+			var localVarPath = "/externalcontacts/externalsources";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25630,7 +25630,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Fetch a contact using an identifier type and value. 
-		/// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+		/// NOTE: Deprecated. Please use /externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="identifier"></param>
@@ -25645,7 +25645,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Fetch a contact using an identifier type and value. 
-		/// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+		/// NOTE: Deprecated. Please use /externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="identifier"></param>
@@ -25658,7 +25658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (identifier == null)
 				throw new ApiException(400, "Missing required parameter 'identifier' when calling ExternalContactsApi->PostExternalcontactsIdentifierlookup");
 
-			var localVarPath = "/api/v2/externalcontacts/identifierlookup";
+			var localVarPath = "/externalcontacts/identifierlookup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25737,7 +25737,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Fetch a contact using an identifier type and value. 
-		/// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+		/// NOTE: Deprecated. Please use /externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="identifier"></param>
@@ -25753,7 +25753,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Fetch a contact using an identifier type and value. 
-		/// NOTE: Deprecated. Please use /api/v2/externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
+		/// NOTE: Deprecated. Please use /externalcontacts/identifierlookup/contacts as an alternative endpoint instead. Phone number identifier values must be provided with the country code and a leading '+' symbol. Example: \"+1 704 298 4733\"
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="identifier"></param>
@@ -25767,7 +25767,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'identifier' when calling ExternalContactsApi->PostExternalcontactsIdentifierlookup");
 
 
-			var localVarPath = "/api/v2/externalcontacts/identifierlookup";
+			var localVarPath = "/externalcontacts/identifierlookup";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25875,7 +25875,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (identifier == null)
 				throw new ApiException(400, "Missing required parameter 'identifier' when calling ExternalContactsApi->PostExternalcontactsIdentifierlookupContacts");
 
-			var localVarPath = "/api/v2/externalcontacts/identifierlookup/contacts";
+			var localVarPath = "/externalcontacts/identifierlookup/contacts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25984,7 +25984,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'identifier' when calling ExternalContactsApi->PostExternalcontactsIdentifierlookupContacts");
 
 
-			var localVarPath = "/api/v2/externalcontacts/identifierlookup/contacts";
+			var localVarPath = "/externalcontacts/identifierlookup/contacts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26092,7 +26092,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (identifier == null)
 				throw new ApiException(400, "Missing required parameter 'identifier' when calling ExternalContactsApi->PostExternalcontactsIdentifierlookupOrganizations");
 
-			var localVarPath = "/api/v2/externalcontacts/identifierlookup/organizations";
+			var localVarPath = "/externalcontacts/identifierlookup/organizations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26201,7 +26201,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'identifier' when calling ExternalContactsApi->PostExternalcontactsIdentifierlookupOrganizations");
 
 
-			var localVarPath = "/api/v2/externalcontacts/identifierlookup/organizations";
+			var localVarPath = "/externalcontacts/identifierlookup/organizations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26307,7 +26307,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsImportCsvJobs");
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/jobs";
+			var localVarPath = "/externalcontacts/import/csv/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26413,7 +26413,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsImportCsvJobs");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/jobs";
+			var localVarPath = "/externalcontacts/import/csv/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26518,7 +26518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsImportCsvSettings");
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/settings";
+			var localVarPath = "/externalcontacts/import/csv/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26624,7 +26624,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsImportCsvSettings");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/settings";
+			var localVarPath = "/externalcontacts/import/csv/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26729,7 +26729,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsImportCsvUploads");
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/uploads";
+			var localVarPath = "/externalcontacts/import/csv/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26835,7 +26835,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsImportCsvUploads");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/uploads";
+			var localVarPath = "/externalcontacts/import/csv/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26940,7 +26940,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsImportJobs");
 
-			var localVarPath = "/api/v2/externalcontacts/import/jobs";
+			var localVarPath = "/externalcontacts/import/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27046,7 +27046,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsImportJobs");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/jobs";
+			var localVarPath = "/externalcontacts/import/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27151,7 +27151,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsImportSettings");
 
-			var localVarPath = "/api/v2/externalcontacts/import/settings";
+			var localVarPath = "/externalcontacts/import/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27257,7 +27257,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsImportSettings");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/settings";
+			var localVarPath = "/externalcontacts/import/settings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27336,7 +27336,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Merge two contacts into a new contact record 
-		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /api/v2/externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
+		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">MergeRequest</param>
@@ -27350,7 +27350,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Merge two contacts into a new contact record 
-		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /api/v2/externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
+		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">MergeRequest</param>
@@ -27362,7 +27362,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsMergeContacts");
 
-			var localVarPath = "/api/v2/externalcontacts/merge/contacts";
+			var localVarPath = "/externalcontacts/merge/contacts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27440,7 +27440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Merge two contacts into a new contact record 
-		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /api/v2/externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
+		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">MergeRequest</param>
@@ -27455,7 +27455,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Merge two contacts into a new contact record 
-		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /api/v2/externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
+		/// Two curated contacts cannot be merged. Refer to the Contact Merging article on the Developer Center for details. Deprecated: This API has been superseded by a new merge API. You are encouraged to instead use /externalcontacts/contacts/merge, which supports merging up to 25 Contacts of any type, and overriding specific fields in the resulting Contact.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">MergeRequest</param>
@@ -27468,7 +27468,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsMergeContacts");
 
 
-			var localVarPath = "/api/v2/externalcontacts/merge/contacts";
+			var localVarPath = "/externalcontacts/merge/contacts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27578,7 +27578,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationNotes");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/notes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27691,7 +27691,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationNotes");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/notes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27797,7 +27797,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizations");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations";
+			var localVarPath = "/externalcontacts/organizations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27903,7 +27903,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizations");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations";
+			var localVarPath = "/externalcontacts/organizations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28010,7 +28010,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationsEnrich");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/enrich";
+			var localVarPath = "/externalcontacts/organizations/enrich";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28119,7 +28119,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationsEnrich");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/enrich";
+			var localVarPath = "/externalcontacts/organizations/enrich";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28225,7 +28225,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationsSchemas");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas";
+			var localVarPath = "/externalcontacts/organizations/schemas";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28331,7 +28331,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsOrganizationsSchemas");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas";
+			var localVarPath = "/externalcontacts/organizations/schemas";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28436,7 +28436,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsRelationships");
 
-			var localVarPath = "/api/v2/externalcontacts/relationships";
+			var localVarPath = "/externalcontacts/relationships";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28542,7 +28542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PostExternalcontactsRelationships");
 
 
-			var localVarPath = "/api/v2/externalcontacts/relationships";
+			var localVarPath = "/externalcontacts/relationships";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28652,7 +28652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContact");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28765,7 +28765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContact");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28881,7 +28881,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContactNote");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/notes/{noteId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29001,7 +29001,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContactNote");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/{contactId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/contacts/{contactId}/notes/{noteId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29113,7 +29113,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContactsSchema");
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+			var localVarPath = "/externalcontacts/contacts/schemas/{schemaId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29226,7 +29226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsContactsSchema");
 
 
-			var localVarPath = "/api/v2/externalcontacts/contacts/schemas/{schemaId}";
+			var localVarPath = "/externalcontacts/contacts/schemas/{schemaId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29336,7 +29336,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsConversation");
 
-			var localVarPath = "/api/v2/externalcontacts/conversations/{conversationId}";
+			var localVarPath = "/externalcontacts/conversations/{conversationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29448,7 +29448,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsConversation");
 
 
-			var localVarPath = "/api/v2/externalcontacts/conversations/{conversationId}";
+			var localVarPath = "/externalcontacts/conversations/{conversationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29559,7 +29559,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsExternalsource");
 
-			var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+			var localVarPath = "/externalcontacts/externalsources/{externalSourceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29672,7 +29672,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsExternalsource");
 
 
-			var localVarPath = "/api/v2/externalcontacts/externalsources/{externalSourceId}";
+			var localVarPath = "/externalcontacts/externalsources/{externalSourceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29783,7 +29783,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsImportCsvSetting");
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/csv/settings/{settingsId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29896,7 +29896,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsImportCsvSetting");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/csv/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/csv/settings/{settingsId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30007,7 +30007,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsImportJob");
 
-			var localVarPath = "/api/v2/externalcontacts/import/jobs/{jobId}";
+			var localVarPath = "/externalcontacts/import/jobs/{jobId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30120,7 +30120,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsImportJob");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/jobs/{jobId}";
+			var localVarPath = "/externalcontacts/import/jobs/{jobId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30231,7 +30231,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsImportSetting");
 
-			var localVarPath = "/api/v2/externalcontacts/import/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/settings/{settingsId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30344,7 +30344,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsImportSetting");
 
 
-			var localVarPath = "/api/v2/externalcontacts/import/settings/{settingsId}";
+			var localVarPath = "/externalcontacts/import/settings/{settingsId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30455,7 +30455,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganization");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30568,7 +30568,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganization");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30684,7 +30684,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganizationNote");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30804,7 +30804,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganizationNote");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/notes/{noteId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30916,7 +30916,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trustorId == null)
 				throw new ApiException(400, "Missing required parameter 'trustorId' when calling ExternalContactsApi->PutExternalcontactsOrganizationTrustorTrustorId");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31024,7 +31024,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trustorId' when calling ExternalContactsApi->PutExternalcontactsOrganizationTrustorTrustorId");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId}";
+			var localVarPath = "/externalcontacts/organizations/{externalOrganizationId}/trustor/{trustorId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31130,7 +31130,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganizationsSchema");
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}";
+			var localVarPath = "/externalcontacts/organizations/schemas/{schemaId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31243,7 +31243,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsOrganizationsSchema");
 
 
-			var localVarPath = "/api/v2/externalcontacts/organizations/schemas/{schemaId}";
+			var localVarPath = "/externalcontacts/organizations/schemas/{schemaId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31354,7 +31354,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsRelationship");
 
-			var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
+			var localVarPath = "/externalcontacts/relationships/{relationshipId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31467,7 +31467,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ExternalContactsApi->PutExternalcontactsRelationship");
 
 
-			var localVarPath = "/api/v2/externalcontacts/relationships/{relationshipId}";
+			var localVarPath = "/externalcontacts/relationships/{relationshipId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

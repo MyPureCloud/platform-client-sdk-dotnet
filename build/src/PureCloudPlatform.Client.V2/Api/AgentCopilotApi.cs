@@ -283,7 +283,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assistantId == null)
 				throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentCopilotApi->GetAssistantCopilot");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/copilot";
+			var localVarPath = "/assistants/{assistantId}/copilot";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -384,7 +384,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentCopilotApi->GetAssistantCopilot");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/copilot";
+			var localVarPath = "/assistants/{assistantId}/copilot";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -481,7 +481,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LanguageSupportResponse> GetAssistantsCopilotFeaturesupportWithHttpInfo(string language = null)
 		{
 
-			var localVarPath = "/api/v2/assistants/copilot/featuresupport";
+			var localVarPath = "/assistants/copilot/featuresupport";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -578,7 +578,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LanguageSupportResponse>> GetAssistantsCopilotFeaturesupportAsyncWithHttpInfo(string language = null)
 		{
 
-			var localVarPath = "/api/v2/assistants/copilot/featuresupport";
+			var localVarPath = "/assistants/copilot/featuresupport";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -683,7 +683,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentCopilotApi->PutAssistantCopilot");
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/copilot";
+			var localVarPath = "/assistants/{assistantId}/copilot";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -796,7 +796,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AgentCopilotApi->PutAssistantCopilot");
 
 
-			var localVarPath = "/api/v2/assistants/{assistantId}/copilot";
+			var localVarPath = "/assistants/{assistantId}/copilot";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

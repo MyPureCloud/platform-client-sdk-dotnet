@@ -5499,7 +5499,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebase");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5600,7 +5600,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebase");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5705,7 +5705,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (categoryId == null)
 				throw new ApiException(400, "Missing required parameter 'categoryId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseCategory");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5813,7 +5813,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'categoryId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseCategory");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5918,7 +5918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseDocument");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6025,7 +6025,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseDocument");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6135,7 +6135,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseDocumentVariation");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6249,7 +6249,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseDocumentVariation");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6355,7 +6355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (exportJobId == null)
 				throw new ApiException(400, "Missing required parameter 'exportJobId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseExportJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6462,7 +6462,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'exportJobId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseExportJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6567,7 +6567,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (importJobId == null)
 				throw new ApiException(400, "Missing required parameter 'importJobId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseImportJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6674,7 +6674,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'importJobId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseImportJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6780,7 +6780,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (labelId == null)
 				throw new ApiException(400, "Missing required parameter 'labelId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseLabel");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6888,7 +6888,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'labelId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseLabel");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6993,7 +6993,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sourceId == null)
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7100,7 +7100,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7205,7 +7205,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sourceId == null)
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7312,7 +7312,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7417,7 +7417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (syncJobId == null)
 				throw new ApiException(400, "Missing required parameter 'syncJobId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseSynchronizeJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7524,7 +7524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'syncJobId' when calling KnowledgeApi->DeleteKnowledgeKnowledgebaseSynchronizeJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7643,7 +7643,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->GetKnowledgeGuestSessionCategories");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/categories";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/categories";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7764,7 +7764,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->GetKnowledgeGuestSessionCategories");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/categories";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/categories";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7871,7 +7871,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->GetKnowledgeGuestSessionDocument");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/{documentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7972,7 +7972,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->GetKnowledgeGuestSessionDocument");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/{documentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8070,7 +8070,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->GetKnowledgeGuestSessionDocuments");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8170,7 +8170,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->GetKnowledgeGuestSessionDocuments");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8267,7 +8267,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling KnowledgeApi->GetKnowledgeIntegrationOptions");
 
-			var localVarPath = "/api/v2/knowledge/integrations/{integrationId}/options";
+			var localVarPath = "/knowledge/integrations/{integrationId}/options";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8371,7 +8371,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling KnowledgeApi->GetKnowledgeIntegrationOptions");
 
 
-			var localVarPath = "/api/v2/knowledge/integrations/{integrationId}/options";
+			var localVarPath = "/knowledge/integrations/{integrationId}/options";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8472,7 +8472,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebase");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8573,7 +8573,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebase");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8691,7 +8691,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseCategories");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/categories";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8819,7 +8819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseCategories");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/categories";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8933,7 +8933,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (categoryId == null)
 				throw new ApiException(400, "Missing required parameter 'categoryId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseCategory");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9041,7 +9041,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'categoryId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseCategory");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9151,7 +9151,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocument");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9265,7 +9265,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocument");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9395,7 +9395,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentFeedback");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9536,7 +9536,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentFeedback");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9658,7 +9658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (feedbackId == null)
 				throw new ApiException(400, "Missing required parameter 'feedbackId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackId");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9773,7 +9773,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'feedbackId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentFeedbackFeedbackId");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9889,7 +9889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVariation");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10010,7 +10010,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVariation");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10129,7 +10129,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVariations");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10252,7 +10252,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVariations");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10370,7 +10370,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVersion");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10488,7 +10488,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVersion");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10606,7 +10606,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (variationId == null)
 				throw new ApiException(400, "Missing required parameter 'variationId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVersionVariation");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations/{variationId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations/{variationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10728,7 +10728,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'variationId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVersionVariation");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations/{variationId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations/{variationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10847,7 +10847,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVersionVariations");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10971,7 +10971,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVersionVariations");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions/{versionId}/variations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11089,7 +11089,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVersions");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11209,7 +11209,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocumentVersions");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11336,7 +11336,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocuments");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11470,7 +11470,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseDocuments");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11586,7 +11586,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (exportJobId == null)
 				throw new ApiException(400, "Missing required parameter 'exportJobId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseExportJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11694,7 +11694,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'exportJobId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseExportJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs/{exportJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11802,7 +11802,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (importJobId == null)
 				throw new ApiException(400, "Missing required parameter 'importJobId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseImportJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11913,7 +11913,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'importJobId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseImportJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12020,7 +12020,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (labelId == null)
 				throw new ApiException(400, "Missing required parameter 'labelId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseLabel");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12128,7 +12128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'labelId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseLabel");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12239,7 +12239,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseLabels");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/labels";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12355,7 +12355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseLabels");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/labels";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12476,7 +12476,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseOperations");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/operations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12601,7 +12601,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseOperations");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/operations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12709,7 +12709,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseOperationsUsersQuery");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations/users/query";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/operations/users/query";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12810,7 +12810,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseOperationsUsersQuery");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/operations/users/query";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/operations/users/query";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12917,7 +12917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (parseJobId == null)
 				throw new ApiException(400, "Missing required parameter 'parseJobId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseParseJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13028,7 +13028,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'parseJobId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseParseJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13136,7 +13136,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseSources");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13246,7 +13246,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseSources");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13356,7 +13356,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sourceId == null)
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseSourcesSalesforceSourceId");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13467,7 +13467,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseSourcesSalesforceSourceId");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13576,7 +13576,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sourceId == null)
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseSourcesServicenowSourceId");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13687,7 +13687,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseSourcesServicenowSourceId");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13794,7 +13794,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (syncJobId == null)
 				throw new ApiException(400, "Missing required parameter 'syncJobId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseSynchronizeJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13902,7 +13902,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'syncJobId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseSynchronizeJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14014,7 +14014,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (groupId == null)
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseUnansweredGroup");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14131,7 +14131,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'groupId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseUnansweredGroup");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14251,7 +14251,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (phraseGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'phraseGroupId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14375,7 +14375,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'phraseGroupId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseUnansweredGroupPhrasegroup");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14486,7 +14486,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseUnansweredGroups");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14596,7 +14596,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseUnansweredGroups");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14704,7 +14704,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseUploadsUrlsJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14812,7 +14812,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling KnowledgeApi->GetKnowledgeKnowledgebaseUploadsUrlsJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14926,7 +14926,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<KnowledgeBaseListing> GetKnowledgeKnowledgebasesWithHttpInfo(string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases";
+			var localVarPath = "/knowledge/knowledgebases";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15047,7 +15047,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<KnowledgeBaseListing>> GetKnowledgeKnowledgebasesAsyncWithHttpInfo(string before = null, string after = null, string limit = null, string pageSize = null, string name = null, string coreLanguage = null, bool? published = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases";
+			var localVarPath = "/knowledge/knowledgebases";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15164,7 +15164,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeGuestSessionDocumentsSearchSearchId");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/search/{searchId}";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/search/{searchId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15276,7 +15276,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeGuestSessionDocumentsSearchSearchId");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/search/{searchId}";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/search/{searchId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15381,7 +15381,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebase");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15494,7 +15494,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebase");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15610,7 +15610,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseCategory");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15730,7 +15730,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseCategory");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15847,7 +15847,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocument");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15967,7 +15967,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocument");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16086,7 +16086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (feedbackId == null)
 				throw new ApiException(400, "Missing required parameter 'feedbackId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16209,7 +16209,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'feedbackId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16332,7 +16332,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentVariation");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16459,7 +16459,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentVariation");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16573,7 +16573,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (searchId == null)
 				throw new ApiException(400, "Missing required parameter 'searchId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentsSearchSearchId");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/{searchId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/{searchId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16688,7 +16688,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'searchId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseDocumentsSearchSearchId");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/{searchId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/{searchId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16805,7 +16805,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseImportJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16925,7 +16925,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseImportJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs/{importJobId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17042,7 +17042,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseLabel");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17162,7 +17162,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseLabel");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/labels/{labelId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17278,7 +17278,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseParseJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17397,7 +17397,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseParseJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17514,7 +17514,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseSynchronizeJob");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17634,7 +17634,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseSynchronizeJob");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17756,7 +17756,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17883,7 +17883,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17991,7 +17991,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeDocumentuploads");
 
-			var localVarPath = "/api/v2/knowledge/documentuploads";
+			var localVarPath = "/knowledge/documentuploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18097,7 +18097,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeDocumentuploads");
 
 
-			var localVarPath = "/api/v2/knowledge/documentuploads";
+			var localVarPath = "/knowledge/documentuploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18208,7 +18208,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentCopies");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18316,7 +18316,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentCopies");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18423,7 +18423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentFeedback");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18532,7 +18532,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentFeedback");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18638,7 +18638,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentViews");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/views";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/{documentId}/views";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18746,7 +18746,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentViews");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/views";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/{documentId}/views";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18851,7 +18851,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsAnswers");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/answers";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/answers";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18957,7 +18957,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsAnswers");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/answers";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/answers";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19057,7 +19057,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsPresentations");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/presentations";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/presentations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19158,7 +19158,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsPresentations");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/presentations";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/presentations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19261,7 +19261,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsSearch");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/search";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19366,7 +19366,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsSearch");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/search";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19468,7 +19468,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsSearchSuggestions");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/search/suggestions";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/search/suggestions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19570,7 +19570,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling KnowledgeApi->PostKnowledgeGuestSessionDocumentsSearchSuggestions");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions/{sessionId}/documents/search/suggestions";
+			var localVarPath = "/knowledge/guest/sessions/{sessionId}/documents/search/suggestions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19669,7 +19669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeGuestSessions");
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions";
+			var localVarPath = "/knowledge/guest/sessions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19768,7 +19768,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeGuestSessions");
 
 
-			var localVarPath = "/api/v2/knowledge/guest/sessions";
+			var localVarPath = "/knowledge/guest/sessions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19871,7 +19871,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseCategories");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/categories";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19984,7 +19984,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseCategories");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/categories";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20092,7 +20092,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseChunksSearch");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20201,7 +20201,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseChunksSearch");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20313,7 +20313,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentCopies");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/copies";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/copies";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20428,7 +20428,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentCopies");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/copies";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/copies";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20542,7 +20542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentFeedback");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20658,7 +20658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentFeedback");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20775,7 +20775,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentVariations");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20895,7 +20895,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentVariations");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21012,7 +21012,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentVersions");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21132,7 +21132,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentVersions");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21245,7 +21245,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (documentId == null)
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentViews");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/views";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/views";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21360,7 +21360,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'documentId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentViews");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/views";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/views";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21472,7 +21472,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocuments");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21585,7 +21585,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocuments");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21696,7 +21696,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsAnswers");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/answers";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/answers";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21809,7 +21809,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsAnswers");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/answers";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/answers";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21920,7 +21920,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsBulkRemove");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22033,7 +22033,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsBulkRemove");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22144,7 +22144,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsBulkUpdate");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22257,7 +22257,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsBulkUpdate");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/bulk/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22364,7 +22364,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsPresentations");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/presentations";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/presentations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22472,7 +22472,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsPresentations");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/presentations";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/presentations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22582,7 +22582,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsQuery");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/query";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22694,7 +22694,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsQuery");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/query";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22805,7 +22805,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsSearch");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22917,7 +22917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsSearch");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23026,7 +23026,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (knowledgeBaseId == null)
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsSearchSuggestions");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/suggestions";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/suggestions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23135,7 +23135,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsSearchSuggestions");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/suggestions";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/search/suggestions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23246,7 +23246,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/versions/bulk/add";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/versions/bulk/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23359,7 +23359,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseDocumentsVersionsBulkAdd");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/versions/bulk/add";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/documents/versions/bulk/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23470,7 +23470,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseExportJobs");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23583,7 +23583,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseExportJobs");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/export/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23694,7 +23694,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseImportJobs");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23807,7 +23807,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseImportJobs");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/import/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23918,7 +23918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseLabels");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/labels";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24031,7 +24031,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseLabels");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/labels";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/labels";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24146,7 +24146,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseParseJobImport");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}/import";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}/import";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24265,7 +24265,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseParseJobImport");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}/import";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId}/import";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24377,7 +24377,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseParseJobs");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24490,7 +24490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseParseJobs");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24601,7 +24601,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseSourcesSalesforce");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24714,7 +24714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseSourcesSalesforce");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24827,7 +24827,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sourceId == null)
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}/sync";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}/sync";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24943,7 +24943,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseSourcesSalesforceSourceIdSync");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}/sync";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}/sync";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25055,7 +25055,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseSourcesServicenow");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25168,7 +25168,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseSourcesServicenow");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25281,7 +25281,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sourceId == null)
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}/sync";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}/sync";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25397,7 +25397,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sourceId' when calling KnowledgeApi->PostKnowledgeKnowledgebaseSourcesServicenowSourceIdSync");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}/sync";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}/sync";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25509,7 +25509,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseSynchronizeJobs");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25622,7 +25622,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseSynchronizeJobs");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25733,7 +25733,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseUploadsUrlsJobs");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25846,7 +25846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebaseUploadsUrlsJobs");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25952,7 +25952,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebases");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases";
+			var localVarPath = "/knowledge/knowledgebases";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26058,7 +26058,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PostKnowledgeKnowledgebases");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases";
+			var localVarPath = "/knowledge/knowledgebases";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26173,7 +26173,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PutKnowledgeKnowledgebaseSourcesSalesforceSourceId");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26293,7 +26293,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PutKnowledgeKnowledgebaseSourcesSalesforceSourceId");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26410,7 +26410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PutKnowledgeKnowledgebaseSourcesServicenowSourceId");
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26530,7 +26530,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling KnowledgeApi->PutKnowledgeKnowledgebaseSourcesServicenowSourceId");
 
 
-			var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
+			var localVarPath = "/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

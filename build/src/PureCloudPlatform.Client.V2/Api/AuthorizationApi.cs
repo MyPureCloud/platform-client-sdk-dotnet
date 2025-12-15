@@ -3328,7 +3328,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (divisionId == null)
 				throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->DeleteAuthorizationDivision");
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+			var localVarPath = "/authorization/divisions/{divisionId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3431,7 +3431,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->DeleteAuthorizationDivision");
 
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+			var localVarPath = "/authorization/divisions/{divisionId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3538,7 +3538,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (subjectId == null)
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->DeleteAuthorizationPoliciesTargetSubjectSubjectId");
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}";
+			var localVarPath = "/authorization/policies/targets/{targetName}/subject/{subjectId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3647,7 +3647,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->DeleteAuthorizationPoliciesTargetSubjectSubjectId");
 
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}";
+			var localVarPath = "/authorization/policies/targets/{targetName}/subject/{subjectId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3747,7 +3747,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roleId == null)
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->DeleteAuthorizationRole");
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}";
+			var localVarPath = "/authorization/roles/{roleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3847,7 +3847,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->DeleteAuthorizationRole");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}";
+			var localVarPath = "/authorization/roles/{roleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3956,7 +3956,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roleId == null)
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->DeleteAuthorizationSubjectDivisionRole");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+			var localVarPath = "/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4070,7 +4070,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->DeleteAuthorizationSubjectDivisionRole");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+			var localVarPath = "/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4174,7 +4174,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (divisionId == null)
 				throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->GetAuthorizationDivision");
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+			var localVarPath = "/authorization/divisions/{divisionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4278,7 +4278,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->GetAuthorizationDivision");
 
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+			var localVarPath = "/authorization/divisions/{divisionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4383,7 +4383,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (divisionId == null)
 				throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->GetAuthorizationDivisionGrants");
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}/grants";
+			var localVarPath = "/authorization/divisions/{divisionId}/grants";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4490,7 +4490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'divisionId' when calling AuthorizationApi->GetAuthorizationDivisionGrants");
 
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}/grants";
+			var localVarPath = "/authorization/divisions/{divisionId}/grants";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4605,7 +4605,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AuthzDivisionEntityListing> GetAuthorizationDivisionsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/divisions";
+			var localVarPath = "/authorization/divisions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4726,7 +4726,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, bool? objectCount = null, List<string> id = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/divisions";
+			var localVarPath = "/authorization/divisions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4833,7 +4833,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AuthzDivisionEntityListing> GetAuthorizationDivisionsDeletedWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/divisions/deleted";
+			var localVarPath = "/authorization/divisions/deleted";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4933,7 +4933,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AuthzDivisionEntityListing>> GetAuthorizationDivisionsDeletedAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/divisions/deleted";
+			var localVarPath = "/authorization/divisions/deleted";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5029,7 +5029,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AuthzDivision> GetAuthorizationDivisionsHomeWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/divisions/home";
+			var localVarPath = "/authorization/divisions/home";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5123,7 +5123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AuthzDivision>> GetAuthorizationDivisionsHomeAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/divisions/home";
+			var localVarPath = "/authorization/divisions/home";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5217,7 +5217,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<int?> GetAuthorizationDivisionsLimitWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/divisions/limit";
+			var localVarPath = "/authorization/divisions/limit";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5311,7 +5311,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<int?>> GetAuthorizationDivisionsLimitAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/divisions/limit";
+			var localVarPath = "/authorization/divisions/limit";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5415,7 +5415,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AuthzDivisionCursorListing> GetAuthorizationDivisionsQueryWithHttpInfo(string before = null, string after = null, string pageSize = null, List<string> id = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/divisions/query";
+			var localVarPath = "/authorization/divisions/query";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5524,7 +5524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AuthzDivisionCursorListing>> GetAuthorizationDivisionsQueryAsyncWithHttpInfo(string before = null, string after = null, string pageSize = null, List<string> id = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/divisions/query";
+			var localVarPath = "/authorization/divisions/query";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5630,7 +5630,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (permission == null)
 				throw new ApiException(400, "Missing required parameter 'permission' when calling AuthorizationApi->GetAuthorizationDivisionspermittedMe");
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/me";
+			var localVarPath = "/authorization/divisionspermitted/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5734,7 +5734,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'permission' when calling AuthorizationApi->GetAuthorizationDivisionspermittedMe");
 
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/me";
+			var localVarPath = "/authorization/divisionspermitted/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5839,7 +5839,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (permission == null)
 				throw new ApiException(400, "Missing required parameter 'permission' when calling AuthorizationApi->GetAuthorizationDivisionspermittedPagedMe");
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/paged/me";
+			var localVarPath = "/authorization/divisionspermitted/paged/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5946,7 +5946,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'permission' when calling AuthorizationApi->GetAuthorizationDivisionspermittedPagedMe");
 
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/paged/me";
+			var localVarPath = "/authorization/divisionspermitted/paged/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6057,7 +6057,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (permission == null)
 				throw new ApiException(400, "Missing required parameter 'permission' when calling AuthorizationApi->GetAuthorizationDivisionspermittedPagedSubjectId");
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/paged/{subjectId}";
+			var localVarPath = "/authorization/divisionspermitted/paged/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6171,7 +6171,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'permission' when calling AuthorizationApi->GetAuthorizationDivisionspermittedPagedSubjectId");
 
 
-			var localVarPath = "/api/v2/authorization/divisionspermitted/paged/{subjectId}";
+			var localVarPath = "/authorization/divisionspermitted/paged/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6277,7 +6277,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<PermissionCollectionEntityListing> GetAuthorizationPermissionsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/permissions";
+			var localVarPath = "/authorization/permissions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6383,7 +6383,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<PermissionCollectionEntityListing>> GetAuthorizationPermissionsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string queryType = null, string query = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/permissions";
+			var localVarPath = "/authorization/permissions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6487,7 +6487,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AuthorizationPolicyEntityListing> GetAuthorizationPoliciesWithHttpInfo(string after = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/policies";
+			var localVarPath = "/authorization/policies";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6589,7 +6589,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicyEntityListing>> GetAuthorizationPoliciesAsyncWithHttpInfo(string after = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/policies";
+			var localVarPath = "/authorization/policies";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6696,7 +6696,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (subjectId == null)
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationPoliciesSubjectSubjectId");
 
-			var localVarPath = "/api/v2/authorization/policies/subject/{subjectId}";
+			var localVarPath = "/authorization/policies/subject/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6805,7 +6805,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationPoliciesSubjectSubjectId");
 
 
-			var localVarPath = "/api/v2/authorization/policies/subject/{subjectId}";
+			var localVarPath = "/authorization/policies/subject/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6913,7 +6913,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (targetName == null)
 				throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->GetAuthorizationPoliciesTarget");
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+			var localVarPath = "/authorization/policies/targets/{targetName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7022,7 +7022,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'targetName' when calling AuthorizationApi->GetAuthorizationPoliciesTarget");
 
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+			var localVarPath = "/authorization/policies/targets/{targetName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7131,7 +7131,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (subjectId == null)
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationPoliciesTargetSubjectSubjectId");
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}";
+			var localVarPath = "/authorization/policies/targets/{targetName}/subject/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7241,7 +7241,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationPoliciesTargetSubjectSubjectId");
 
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/subject/{subjectId}";
+			var localVarPath = "/authorization/policies/targets/{targetName}/subject/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7339,7 +7339,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TargetAttributes> GetAuthorizationPoliciesTargetsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/policies/targets";
+			var localVarPath = "/authorization/policies/targets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7435,7 +7435,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TargetAttributes>> GetAuthorizationPoliciesTargetsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/policies/targets";
+			var localVarPath = "/authorization/policies/targets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7536,7 +7536,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (policyId == null)
 				throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->GetAuthorizationPolicy");
 
-			var localVarPath = "/api/v2/authorization/policies/{policyId}";
+			var localVarPath = "/authorization/policies/{policyId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7639,7 +7639,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->GetAuthorizationPolicy");
 
 
-			var localVarPath = "/api/v2/authorization/policies/{policyId}";
+			var localVarPath = "/authorization/policies/{policyId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7741,7 +7741,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (policyId == null)
 				throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->GetAuthorizationPolicyAttributes");
 
-			var localVarPath = "/api/v2/authorization/policies/{policyId}/attributes";
+			var localVarPath = "/authorization/policies/{policyId}/attributes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7844,7 +7844,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'policyId' when calling AuthorizationApi->GetAuthorizationPolicyAttributes");
 
 
-			var localVarPath = "/api/v2/authorization/policies/{policyId}/attributes";
+			var localVarPath = "/authorization/policies/{policyId}/attributes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7939,7 +7939,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OrganizationProductEntityListing> GetAuthorizationProductsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/products";
+			var localVarPath = "/authorization/products";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8033,7 +8033,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OrganizationProductEntityListing>> GetAuthorizationProductsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/products";
+			var localVarPath = "/authorization/products";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8136,7 +8136,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roleId == null)
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetAuthorizationRole");
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}";
+			var localVarPath = "/authorization/roles/{roleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8243,7 +8243,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetAuthorizationRole");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}";
+			var localVarPath = "/authorization/roles/{roleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8350,7 +8350,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (rightRoleId == null)
 				throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->GetAuthorizationRoleComparedefaultRightRoleId");
 
-			var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
+			var localVarPath = "/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8458,7 +8458,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'rightRoleId' when calling AuthorizationApi->GetAuthorizationRoleComparedefaultRightRoleId");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
+			var localVarPath = "/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8571,7 +8571,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roleId == null)
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetAuthorizationRoleSubjectgrants");
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}/subjectgrants";
+			var localVarPath = "/authorization/roles/{roleId}/subjectgrants";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8690,7 +8690,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetAuthorizationRoleSubjectgrants");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}/subjectgrants";
+			var localVarPath = "/authorization/roles/{roleId}/subjectgrants";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8800,7 +8800,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roleId == null)
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetAuthorizationRoleUsers");
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}/users";
+			var localVarPath = "/authorization/roles/{roleId}/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8907,7 +8907,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->GetAuthorizationRoleUsers");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}/users";
+			var localVarPath = "/authorization/roles/{roleId}/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9026,7 +9026,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OrganizationRoleEntityListing> GetAuthorizationRolesWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/roles";
+			var localVarPath = "/authorization/roles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9153,7 +9153,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> GetAuthorizationRolesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string name = null, List<string> permission = null, List<string> defaultRoleId = null, bool? userCount = null, List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/roles";
+			var localVarPath = "/authorization/roles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9258,7 +9258,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<RoleSettings> GetAuthorizationRolesSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/roles/settings";
+			var localVarPath = "/authorization/roles/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9352,7 +9352,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<RoleSettings>> GetAuthorizationRolesSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/roles/settings";
+			var localVarPath = "/authorization/roles/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9446,7 +9446,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AuthorizationSettings> GetAuthorizationSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/settings";
+			var localVarPath = "/authorization/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9540,7 +9540,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AuthorizationSettings>> GetAuthorizationSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/authorization/settings";
+			var localVarPath = "/authorization/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9641,7 +9641,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (subjectId == null)
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationSubject");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}";
+			var localVarPath = "/authorization/subjects/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9745,7 +9745,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetAuthorizationSubject");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}";
+			var localVarPath = "/authorization/subjects/{subjectId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9843,7 +9843,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AuthzSubject> GetAuthorizationSubjectsMeWithHttpInfo(bool? includeDuplicates = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/subjects/me";
+			var localVarPath = "/authorization/subjects/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9940,7 +9940,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AuthzSubject>> GetAuthorizationSubjectsMeAsyncWithHttpInfo(bool? includeDuplicates = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/subjects/me";
+			var localVarPath = "/authorization/subjects/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10037,7 +10037,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Dictionary<string, Object>> GetAuthorizationSubjectsRolecountsWithHttpInfo(List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/subjects/rolecounts";
+			var localVarPath = "/authorization/subjects/rolecounts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10134,7 +10134,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Dictionary<string, Object>>> GetAuthorizationSubjectsRolecountsAsyncWithHttpInfo(List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/subjects/rolecounts";
+			var localVarPath = "/authorization/subjects/rolecounts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10234,7 +10234,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (subjectId == null)
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetUserRoles");
 
-			var localVarPath = "/api/v2/users/{subjectId}/roles";
+			var localVarPath = "/users/{subjectId}/roles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10335,7 +10335,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'subjectId' when calling AuthorizationApi->GetUserRoles");
 
 
-			var localVarPath = "/api/v2/users/{subjectId}/roles";
+			var localVarPath = "/users/{subjectId}/roles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10440,7 +10440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PatchAuthorizationRole");
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}";
+			var localVarPath = "/authorization/roles/{roleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10553,7 +10553,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PatchAuthorizationRole");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}";
+			var localVarPath = "/authorization/roles/{roleId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10659,7 +10659,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PatchAuthorizationSettings");
 
-			var localVarPath = "/api/v2/authorization/settings";
+			var localVarPath = "/authorization/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10765,7 +10765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PatchAuthorizationSettings");
 
 
-			var localVarPath = "/api/v2/authorization/settings";
+			var localVarPath = "/authorization/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10879,7 +10879,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisionObject");
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}/objects/{objectType}";
+			var localVarPath = "/authorization/divisions/{divisionId}/objects/{objectType}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10998,7 +10998,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisionObject");
 
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}/objects/{objectType}";
+			var localVarPath = "/authorization/divisions/{divisionId}/objects/{objectType}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11110,7 +11110,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisionRestore");
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}/restore";
+			var localVarPath = "/authorization/divisions/{divisionId}/restore";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11223,7 +11223,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisionRestore");
 
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}/restore";
+			var localVarPath = "/authorization/divisions/{divisionId}/restore";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11329,7 +11329,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisions");
 
-			var localVarPath = "/api/v2/authorization/divisions";
+			var localVarPath = "/authorization/divisions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11435,7 +11435,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationDivisions");
 
 
-			var localVarPath = "/api/v2/authorization/divisions";
+			var localVarPath = "/authorization/divisions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11547,7 +11547,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPoliciesTarget");
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+			var localVarPath = "/authorization/policies/targets/{targetName}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11662,7 +11662,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPoliciesTarget");
 
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+			var localVarPath = "/authorization/policies/targets/{targetName}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11775,7 +11775,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPoliciesTargetValidate");
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/validate";
+			var localVarPath = "/authorization/policies/targets/{targetName}/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11890,7 +11890,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPoliciesTargetValidate");
 
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}/validate";
+			var localVarPath = "/authorization/policies/targets/{targetName}/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12003,7 +12003,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPolicySimulate");
 
-			var localVarPath = "/api/v2/authorization/policies/{policyId}/simulate";
+			var localVarPath = "/authorization/policies/{policyId}/simulate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12118,7 +12118,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationPolicySimulate");
 
 
-			var localVarPath = "/api/v2/authorization/policies/{policyId}/simulate";
+			var localVarPath = "/authorization/policies/{policyId}/simulate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12230,7 +12230,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRole");
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}";
+			var localVarPath = "/authorization/roles/{roleId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12345,7 +12345,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRole");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}";
+			var localVarPath = "/authorization/roles/{roleId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12462,7 +12462,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRoleComparedefaultRightRoleId");
 
-			var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
+			var localVarPath = "/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12582,7 +12582,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRoleComparedefaultRightRoleId");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
+			var localVarPath = "/authorization/roles/{leftRoleId}/comparedefault/{rightRoleId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12689,7 +12689,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRoles");
 
-			var localVarPath = "/api/v2/authorization/roles";
+			var localVarPath = "/authorization/roles";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12795,7 +12795,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationRoles");
 
 
-			var localVarPath = "/api/v2/authorization/roles";
+			var localVarPath = "/authorization/roles";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12897,7 +12897,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OrganizationRoleEntityListing> PostAuthorizationRolesDefaultWithHttpInfo(bool? force = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/roles/default";
+			var localVarPath = "/authorization/roles/default";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12994,7 +12994,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OrganizationRoleEntityListing>> PostAuthorizationRolesDefaultAsyncWithHttpInfo(bool? force = null)
 		{
 
-			var localVarPath = "/api/v2/authorization/roles/default";
+			var localVarPath = "/authorization/roles/default";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13100,7 +13100,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationSubjectBulkadd");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkadd";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkadd";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13215,7 +13215,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationSubjectBulkadd");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkadd";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkadd";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13326,7 +13326,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationSubjectBulkremove");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkremove";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkremove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13438,7 +13438,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationSubjectBulkremove");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkremove";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkremove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13550,7 +13550,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationSubjectBulkreplace");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkreplace";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkreplace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13665,7 +13665,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PostAuthorizationSubjectBulkreplace");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/bulkreplace";
+			var localVarPath = "/authorization/subjects/{subjectId}/bulkreplace";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13783,7 +13783,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (roleId == null)
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PostAuthorizationSubjectDivisionRole");
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+			var localVarPath = "/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13900,7 +13900,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'roleId' when calling AuthorizationApi->PostAuthorizationSubjectDivisionRole");
 
 
-			var localVarPath = "/api/v2/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
+			var localVarPath = "/authorization/subjects/{subjectId}/divisions/{divisionId}/roles/{roleId}";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14008,7 +14008,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationDivision");
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+			var localVarPath = "/authorization/divisions/{divisionId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14121,7 +14121,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationDivision");
 
 
-			var localVarPath = "/api/v2/authorization/divisions/{divisionId}";
+			var localVarPath = "/authorization/divisions/{divisionId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14234,7 +14234,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationPoliciesTarget");
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+			var localVarPath = "/authorization/policies/targets/{targetName}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14349,7 +14349,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationPoliciesTarget");
 
 
-			var localVarPath = "/api/v2/authorization/policies/targets/{targetName}";
+			var localVarPath = "/authorization/policies/targets/{targetName}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14462,7 +14462,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationPolicy");
 
-			var localVarPath = "/api/v2/authorization/policies/{policyId}";
+			var localVarPath = "/authorization/policies/{policyId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14577,7 +14577,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationPolicy");
 
 
-			var localVarPath = "/api/v2/authorization/policies/{policyId}";
+			var localVarPath = "/authorization/policies/{policyId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14688,7 +14688,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRole");
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}";
+			var localVarPath = "/authorization/roles/{roleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14801,7 +14801,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRole");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}";
+			var localVarPath = "/authorization/roles/{roleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14912,7 +14912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRoleUsersAdd");
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}/users/add";
+			var localVarPath = "/authorization/roles/{roleId}/users/add";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15025,7 +15025,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRoleUsersAdd");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}/users/add";
+			var localVarPath = "/authorization/roles/{roleId}/users/add";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15136,7 +15136,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRoleUsersRemove");
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}/users/remove";
+			var localVarPath = "/authorization/roles/{roleId}/users/remove";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15249,7 +15249,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRoleUsersRemove");
 
 
-			var localVarPath = "/api/v2/authorization/roles/{roleId}/users/remove";
+			var localVarPath = "/authorization/roles/{roleId}/users/remove";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15355,7 +15355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRolesDefault");
 
-			var localVarPath = "/api/v2/authorization/roles/default";
+			var localVarPath = "/authorization/roles/default";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15461,7 +15461,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRolesDefault");
 
 
-			var localVarPath = "/api/v2/authorization/roles/default";
+			var localVarPath = "/authorization/roles/default";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15566,7 +15566,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRolesSettings");
 
-			var localVarPath = "/api/v2/authorization/roles/settings";
+			var localVarPath = "/authorization/roles/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15672,7 +15672,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutAuthorizationRolesSettings");
 
 
-			var localVarPath = "/api/v2/authorization/roles/settings";
+			var localVarPath = "/authorization/roles/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15782,7 +15782,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutUserRoles");
 
-			var localVarPath = "/api/v2/users/{subjectId}/roles";
+			var localVarPath = "/users/{subjectId}/roles";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15895,7 +15895,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuthorizationApi->PutUserRoles");
 
 
-			var localVarPath = "/api/v2/users/{subjectId}/roles";
+			var localVarPath = "/users/{subjectId}/roles";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

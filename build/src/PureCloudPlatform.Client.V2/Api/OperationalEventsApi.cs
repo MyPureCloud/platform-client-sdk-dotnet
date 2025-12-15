@@ -335,7 +335,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (eventDefinitionId == null)
 				throw new ApiException(400, "Missing required parameter 'eventDefinitionId' when calling OperationalEventsApi->GetUsageEventsDefinition");
 
-			var localVarPath = "/api/v2/usage/events/definitions/{eventDefinitionId}";
+			var localVarPath = "/usage/events/definitions/{eventDefinitionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -436,7 +436,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'eventDefinitionId' when calling OperationalEventsApi->GetUsageEventsDefinition");
 
 
-			var localVarPath = "/api/v2/usage/events/definitions/{eventDefinitionId}";
+			var localVarPath = "/usage/events/definitions/{eventDefinitionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -531,7 +531,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EventDefinitionListing> GetUsageEventsDefinitionsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/usage/events/definitions";
+			var localVarPath = "/usage/events/definitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -625,7 +625,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EventDefinitionListing>> GetUsageEventsDefinitionsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/usage/events/definitions";
+			var localVarPath = "/usage/events/definitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -721,7 +721,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EventAggregatesResponse> PostUsageEventsAggregatesQueryWithHttpInfo(EventAggregatesQueryRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/usage/events/aggregates/query";
+			var localVarPath = "/usage/events/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -823,7 +823,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EventAggregatesResponse>> PostUsageEventsAggregatesQueryAsyncWithHttpInfo(EventAggregatesQueryRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/usage/events/aggregates/query";
+			var localVarPath = "/usage/events/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -931,7 +931,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EventQueryResponse> PostUsageEventsQueryWithHttpInfo(string before = null, string after = null, string pageSize = null, EventQueryRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/usage/events/query";
+			var localVarPath = "/usage/events/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1042,7 +1042,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EventQueryResponse>> PostUsageEventsQueryAsyncWithHttpInfo(string before = null, string after = null, string pageSize = null, EventQueryRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/usage/events/query";
+			var localVarPath = "/usage/events/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

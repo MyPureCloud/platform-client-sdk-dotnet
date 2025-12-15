@@ -115,7 +115,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create audit query execution
 		/// </summary>
 		/// <remarks>
-		/// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/servicemapping endpoint for a list of valid values
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -127,7 +127,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create audit query execution
 		/// </summary>
 		/// <remarks>
-		/// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/servicemapping endpoint for a list of valid values
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -139,7 +139,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
 		/// </summary>
 		/// <remarks>
-		/// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/realtime/servicemapping endpoint for a list of valid values
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -152,7 +152,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
 		/// </summary>
 		/// <remarks>
-		/// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/realtime/servicemapping endpoint for a list of valid values
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -295,7 +295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create audit query execution
 		/// </summary>
 		/// <remarks>
-		/// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/servicemapping endpoint for a list of valid values
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -307,7 +307,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create audit query execution
 		/// </summary>
 		/// <remarks>
-		/// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/servicemapping endpoint for a list of valid values
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -319,7 +319,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
 		/// </summary>
 		/// <remarks>
-		/// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/realtime/servicemapping endpoint for a list of valid values
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -332,7 +332,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits.
 		/// </summary>
 		/// <remarks>
-		/// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/realtime/servicemapping endpoint for a list of valid values
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -482,7 +482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AuditQueryServiceMapping> GetAuditsQueryRealtimeServicemappingWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/audits/query/realtime/servicemapping";
+			var localVarPath = "/audits/query/realtime/servicemapping";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -576,7 +576,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AuditQueryServiceMapping>> GetAuditsQueryRealtimeServicemappingAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/audits/query/realtime/servicemapping";
+			var localVarPath = "/audits/query/realtime/servicemapping";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -670,7 +670,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AuditQueryServiceMapping> GetAuditsQueryServicemappingWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/audits/query/servicemapping";
+			var localVarPath = "/audits/query/servicemapping";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -764,7 +764,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AuditQueryServiceMapping>> GetAuditsQueryServicemappingAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/audits/query/servicemapping";
+			var localVarPath = "/audits/query/servicemapping";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -863,7 +863,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (transactionId == null)
 				throw new ApiException(400, "Missing required parameter 'transactionId' when calling AuditApi->GetAuditsQueryTransactionId");
 
-			var localVarPath = "/api/v2/audits/query/{transactionId}";
+			var localVarPath = "/audits/query/{transactionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -964,7 +964,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'transactionId' when calling AuditApi->GetAuditsQueryTransactionId");
 
 
-			var localVarPath = "/api/v2/audits/query/{transactionId}";
+			var localVarPath = "/audits/query/{transactionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1072,7 +1072,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (transactionId == null)
 				throw new ApiException(400, "Missing required parameter 'transactionId' when calling AuditApi->GetAuditsQueryTransactionIdResults");
 
-			var localVarPath = "/api/v2/audits/query/{transactionId}/results";
+			var localVarPath = "/audits/query/{transactionId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1185,7 +1185,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'transactionId' when calling AuditApi->GetAuditsQueryTransactionIdResults");
 
 
-			var localVarPath = "/api/v2/audits/query/{transactionId}/results";
+			var localVarPath = "/audits/query/{transactionId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1263,7 +1263,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create audit query execution 
-		/// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/servicemapping endpoint for a list of valid values
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -1277,7 +1277,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create audit query execution 
-		/// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/servicemapping endpoint for a list of valid values
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -1289,7 +1289,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuditApi->PostAuditsQuery");
 
-			var localVarPath = "/api/v2/audits/query";
+			var localVarPath = "/audits/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1367,7 +1367,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create audit query execution 
-		/// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/servicemapping endpoint for a list of valid values
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -1382,7 +1382,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create audit query execution 
-		/// Use /api/v2/audits/query/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/servicemapping endpoint for a list of valid values
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -1395,7 +1395,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuditApi->PostAuditsQuery");
 
 
-			var localVarPath = "/api/v2/audits/query";
+			var localVarPath = "/audits/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1474,7 +1474,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
-		/// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/realtime/servicemapping endpoint for a list of valid values
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -1489,7 +1489,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
-		/// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/realtime/servicemapping endpoint for a list of valid values
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -1502,7 +1502,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuditApi->PostAuditsQueryRealtime");
 
-			var localVarPath = "/api/v2/audits/query/realtime";
+			var localVarPath = "/audits/query/realtime";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1581,7 +1581,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
-		/// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/realtime/servicemapping endpoint for a list of valid values
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -1597,7 +1597,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// This endpoint will only retrieve 14 days worth of audits for certain services. Please use /query to get a full list and older audits. 
-		/// Use /api/v2/audits/query/realtime/servicemapping endpoint for a list of valid values
+		/// Use /audits/query/realtime/servicemapping endpoint for a list of valid values
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="body">query</param>
@@ -1611,7 +1611,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuditApi->PostAuditsQueryRealtime");
 
 
-			var localVarPath = "/api/v2/audits/query/realtime";
+			var localVarPath = "/audits/query/realtime";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1719,7 +1719,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuditApi->PostAuditsQueryRealtimeRelated");
 
-			var localVarPath = "/api/v2/audits/query/realtime/related";
+			var localVarPath = "/audits/query/realtime/related";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1828,7 +1828,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling AuditApi->PostAuditsQueryRealtimeRelated");
 
 
-			var localVarPath = "/api/v2/audits/query/realtime/related";
+			var localVarPath = "/audits/query/realtime/related";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

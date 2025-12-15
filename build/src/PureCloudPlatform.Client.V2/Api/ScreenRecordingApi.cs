@@ -180,7 +180,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SignedData> PostScreenrecordingTokenWithHttpInfo(ScreenRecordingUserAuthenticatedInfo body = null)
 		{
 
-			var localVarPath = "/api/v2/screenrecording/token";
+			var localVarPath = "/screenrecording/token";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -282,7 +282,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SignedData>> PostScreenrecordingTokenAsyncWithHttpInfo(ScreenRecordingUserAuthenticatedInfo body = null)
 		{
 
-			var localVarPath = "/api/v2/screenrecording/token";
+			var localVarPath = "/screenrecording/token";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -2564,7 +2564,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		ApiResponse<ManagementUnit> GetWorkforcemanagementManagementunitWithHttpInfo(string managementUnitId, List<string> expand = null);
 
 		/// <summary>
-		/// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
+		/// Deprecated: Instead use /workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -2576,7 +2576,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		ActivityCodeContainer GetWorkforcemanagementManagementunitActivitycodes(string managementUnitId);
 
 		/// <summary>
-		/// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
+		/// Deprecated: Instead use /workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -9506,7 +9506,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<ApiResponse<ManagementUnit>> GetWorkforcemanagementManagementunitAsyncWithHttpInfo(string managementUnitId, List<string> expand = null);
 
 		/// <summary>
-		/// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
+		/// Deprecated: Instead use /workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -9518,7 +9518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		System.Threading.Tasks.Task<ActivityCodeContainer> GetWorkforcemanagementManagementunitActivitycodesAsync(string managementUnitId);
 
 		/// <summary>
-		/// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
+		/// Deprecated: Instead use /workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes
 		/// </summary>
 		/// <remarks>
 		/// 
@@ -14010,7 +14010,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunit");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14110,7 +14110,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14214,7 +14214,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (activityCodeId == null)
 				throw new ApiException(400, "Missing required parameter 'activityCodeId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitActivitycode");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14321,7 +14321,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'activityCodeId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitActivitycode");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14428,7 +14428,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (capacityPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'capacityPlanId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14538,7 +14538,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'capacityPlanId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistory");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14644,7 +14644,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (planningGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'planningGroupId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitPlanninggroup");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14751,7 +14751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'planningGroupId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitPlanninggroup");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14856,7 +14856,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (runId == null)
 				throw new ApiException(400, "Missing required parameter 'runId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitSchedulingRun");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14963,7 +14963,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'runId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitSchedulingRun");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15068,7 +15068,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (serviceGoalTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'serviceGoalTemplateId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitServicegoaltemplate");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15175,7 +15175,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'serviceGoalTemplateId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitServicegoaltemplate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15280,7 +15280,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (staffingGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'staffingGroupId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitStaffinggroup");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15387,7 +15387,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'staffingGroupId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitStaffinggroup");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15492,7 +15492,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffLimitId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitTimeofflimit");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15599,7 +15599,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitTimeofflimit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15704,7 +15704,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitTimeoffplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15811,7 +15811,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitTimeoffplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15922,7 +15922,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scheduleId == null)
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitWeekSchedule");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16037,7 +16037,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitWeekSchedule");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16148,7 +16148,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (forecastId == null)
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitWeekShorttermforecast");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16262,7 +16262,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitWeekShorttermforecast");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16368,7 +16368,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (bidId == null)
 				throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitWorkplanbid");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16475,7 +16475,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitWorkplanbid");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16585,7 +16585,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (bidGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'bidGroupId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitWorkplanbidGroup");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16699,7 +16699,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'bidGroupId' when calling WorkforceManagementApi->DeleteWorkforcemanagementBusinessunitWorkplanbidGroup");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16795,7 +16795,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteWorkforcemanagementCalendarUrlIcsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+			var localVarPath = "/workforcemanagement/calendar/url/ics";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16888,7 +16888,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+			var localVarPath = "/workforcemanagement/calendar/url/ics";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16986,7 +16986,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunit");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17086,7 +17086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17190,7 +17190,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffLimitId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeofflimit");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17297,7 +17297,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeofflimit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17402,7 +17402,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeoffplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17509,7 +17509,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitTimeoffplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17614,7 +17614,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'workPlanId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitWorkplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17721,7 +17721,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workPlanId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitWorkplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17826,7 +17826,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workPlanRotationId == null)
 				throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitWorkplanrotation");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17933,7 +17933,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->DeleteWorkforcemanagementManagementunitWorkplanrotation");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18034,7 +18034,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherence");
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence";
+			var localVarPath = "/workforcemanagement/adherence";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18135,7 +18135,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherence");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence";
+			var localVarPath = "/workforcemanagement/adherence";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18235,7 +18235,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (explanationId == null)
 				throw new ApiException(400, "Missing required parameter 'explanationId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceExplanation");
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/explanations/{explanationId}";
+			var localVarPath = "/workforcemanagement/adherence/explanations/{explanationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18336,7 +18336,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'explanationId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceExplanation");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/explanations/{explanationId}";
+			var localVarPath = "/workforcemanagement/adherence/explanations/{explanationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18436,7 +18436,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceExplanationsJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/explanations/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/adherence/explanations/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18537,7 +18537,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceExplanationsJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/explanations/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/adherence/explanations/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18637,7 +18637,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceHistoricalBulkJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/historical/bulk/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/adherence/historical/bulk/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18738,7 +18738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceHistoricalBulkJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/historical/bulk/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/adherence/historical/bulk/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18838,7 +18838,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceHistoricalJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/historical/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/adherence/historical/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18939,7 +18939,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAdherenceHistoricalJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/historical/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/adherence/historical/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19044,7 +19044,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (explanationId == null)
 				throw new ApiException(400, "Missing required parameter 'explanationId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentAdherenceExplanation");
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19152,7 +19152,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'explanationId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentAdherenceExplanation");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19253,7 +19253,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentManagementunit");
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/managementunit";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/managementunit";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19354,7 +19354,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentManagementunit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/managementunit";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/managementunit";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19454,7 +19454,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentsMeAdherenceHistoricalJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/me/adherence/historical/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/agents/me/adherence/historical/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19555,7 +19555,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAgentsMeAdherenceHistoricalJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/me/adherence/historical/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/agents/me/adherence/historical/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19650,7 +19650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AgentManagementUnitReference> GetWorkforcemanagementAgentsMeManagementunitWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/me/managementunit";
+			var localVarPath = "/workforcemanagement/agents/me/managementunit";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19744,7 +19744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AgentManagementUnitReference>> GetWorkforcemanagementAgentsMeManagementunitAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/me/managementunit";
+			var localVarPath = "/workforcemanagement/agents/me/managementunit";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19843,7 +19843,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAlternativeshiftsOffersJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/offers/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/offers/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19944,7 +19944,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAlternativeshiftsOffersJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/offers/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/offers/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20044,7 +20044,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAlternativeshiftsOffersSearchJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/offers/search/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/offers/search/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20145,7 +20145,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAlternativeshiftsOffersSearchJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/offers/search/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/offers/search/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20240,7 +20240,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AlternativeShiftBuSettingsResponse> GetWorkforcemanagementAlternativeshiftsSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/settings";
+			var localVarPath = "/workforcemanagement/alternativeshifts/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20334,7 +20334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AlternativeShiftBuSettingsResponse>> GetWorkforcemanagementAlternativeshiftsSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/settings";
+			var localVarPath = "/workforcemanagement/alternativeshifts/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20433,7 +20433,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tradeId == null)
 				throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->GetWorkforcemanagementAlternativeshiftsTrade");
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades/{tradeId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades/{tradeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20534,7 +20534,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->GetWorkforcemanagementAlternativeshiftsTrade");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades/{tradeId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades/{tradeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20631,7 +20631,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ListAlternativeShiftTradesResponse> GetWorkforcemanagementAlternativeshiftsTradesWithHttpInfo(bool? forceAsync = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20728,7 +20728,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ListAlternativeShiftTradesResponse>> GetWorkforcemanagementAlternativeshiftsTradesAsyncWithHttpInfo(bool? forceAsync = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20828,7 +20828,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAlternativeshiftsTradesJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20929,7 +20929,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAlternativeshiftsTradesJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21029,7 +21029,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAlternativeshiftsTradesStateJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades/state/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades/state/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21130,7 +21130,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementAlternativeshiftsTradesStateJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades/state/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades/state/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21234,7 +21234,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunit");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21341,7 +21341,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21448,7 +21448,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (activityCodeId == null)
 				throw new ApiException(400, "Missing required parameter 'activityCodeId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycode");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21556,7 +21556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'activityCodeId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycode");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21659,7 +21659,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycodes");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21763,7 +21763,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivitycodes");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21869,7 +21869,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (activityPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21977,7 +21977,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22088,7 +22088,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanRunsJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22203,7 +22203,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplanRunsJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22307,7 +22307,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22411,7 +22411,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22512,7 +22512,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplansJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/jobs";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22613,7 +22613,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitActivityplansJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/jobs";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22713,7 +22713,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAlternativeshiftsSettings");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22814,7 +22814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAlternativeshiftsSettings");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22919,7 +22919,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (tradeId == null)
 				throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAlternativeshiftsTrade");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23027,7 +23027,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'tradeId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAlternativeshiftsTrade");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/{tradeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23133,7 +23133,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23241,7 +23241,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitAlternativeshiftsTradesSearchJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23347,7 +23347,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (capacityPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'capacityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitCapacityplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23455,7 +23455,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'capacityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitCapacityplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23561,7 +23561,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (capacityPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'capacityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23669,7 +23669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'capacityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23775,7 +23775,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (capacityPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'capacityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffingrequirements";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffingrequirements";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23883,7 +23883,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'capacityPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitCapacityplanStaffingrequirements");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffingrequirements";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffingrequirements";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23994,7 +23994,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (forecastId == null)
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24109,7 +24109,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24211,7 +24211,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitCapacityplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24312,7 +24312,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitCapacityplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24417,7 +24417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (date == null)
 				throw new ApiException(400, "Missing required parameter 'date' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitIntradayPlanninggroups");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24525,7 +24525,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'date' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitIntradayPlanninggroups");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/intraday/planninggroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24628,7 +24628,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24731,7 +24731,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSession");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24838,7 +24838,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sessionId == null)
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24948,7 +24948,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sessionId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionId");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25061,7 +25061,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (snapshotId == null)
 				throw new ApiException(400, "Missing required parameter 'snapshotId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}/snapshot/{snapshotId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}/snapshot/{snapshotId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25178,7 +25178,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'snapshotId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitMainforecastContinuousforecastSessionSessionIdSnapshotSnapshotId");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}/snapshot/{snapshotId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/mainforecast/continuousforecast/session/{sessionId}/snapshot/{snapshotId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25284,7 +25284,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitManagementunits");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/managementunits";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/managementunits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25391,7 +25391,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitManagementunits");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/managementunits";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/managementunits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25498,7 +25498,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (planningGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'planningGroupId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitPlanninggroup");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25606,7 +25606,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'planningGroupId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitPlanninggroup");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25707,7 +25707,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitPlanninggroups");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/planninggroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25808,7 +25808,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitPlanninggroups");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/planninggroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25913,7 +25913,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (runId == null)
 				throw new ApiException(400, "Missing required parameter 'runId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitSchedulingRun");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26021,7 +26021,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'runId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitSchedulingRun");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26137,7 +26137,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (expand == null)
 				throw new ApiException(400, "Missing required parameter 'expand' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitSchedulingRunResult");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}/result";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}/result";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26259,7 +26259,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'expand' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitSchedulingRunResult");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}/result";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}/result";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26362,7 +26362,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitSchedulingRuns");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26463,7 +26463,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitSchedulingRuns");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26570,7 +26570,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (serviceGoalTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'serviceGoalTemplateId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitServicegoaltemplate");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26681,7 +26681,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'serviceGoalTemplateId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitServicegoaltemplate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26785,7 +26785,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitServicegoaltemplates");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26889,7 +26889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitServicegoaltemplates");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26995,7 +26995,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (staffingGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'staffingGroupId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitStaffinggroup");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27103,7 +27103,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'staffingGroupId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitStaffinggroup");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27208,7 +27208,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitStaffinggroups");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27315,7 +27315,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitStaffinggroups");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27422,7 +27422,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffLimitId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitTimeofflimit");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27530,7 +27530,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitTimeofflimit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27633,7 +27633,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitTimeofflimits");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27737,7 +27737,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitTimeofflimits");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27843,7 +27843,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitTimeoffplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27951,7 +27951,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitTimeoffplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28056,7 +28056,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitTimeoffplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeoffplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28163,7 +28163,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitTimeoffplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeoffplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28277,7 +28277,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scheduleId == null)
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedule");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28395,7 +28395,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedule");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28508,7 +28508,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scheduleId == null)
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28623,7 +28623,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleGenerationresults");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/generationresults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28737,7 +28737,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scheduleId == null)
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/headcountforecast";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/headcountforecast";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28855,7 +28855,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHeadcountforecast");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/headcountforecast";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/headcountforecast";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28973,7 +28973,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29095,7 +29095,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekScheduleHistoryAgent");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/history/agents/{agentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29208,7 +29208,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scheduleId == null)
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29323,7 +29323,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictions");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29440,7 +29440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (recalculationId == null)
 				throw new ApiException(400, "Missing required parameter 'recalculationId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/{recalculationId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/{recalculationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29562,7 +29562,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'recalculationId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculation");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/{recalculationId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/{recalculationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29674,7 +29674,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (weekId == null)
 				throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedules");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29788,7 +29788,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekSchedules");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29903,7 +29903,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (forecastId == null)
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecast");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30021,7 +30021,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecast");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30138,7 +30138,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (forecastId == null)
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastData");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/data";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/data";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30259,7 +30259,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastData");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/data";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/data";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30373,7 +30373,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (forecastId == null)
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/generationresults";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/generationresults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30488,7 +30488,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastGenerationresults");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/generationresults";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/generationresults";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30602,7 +30602,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (forecastId == null)
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30720,7 +30720,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastLongtermforecastdata");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/longtermforecastdata";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30833,7 +30833,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (forecastId == null)
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/planninggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/planninggroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30948,7 +30948,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastPlanninggroups");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/planninggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/planninggroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31064,7 +31064,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (forecastId == null)
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31185,7 +31185,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecastStaffingrequirement");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/staffingrequirement";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31294,7 +31294,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (weekDateId == null)
 				throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecasts");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31402,7 +31402,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWeekShorttermforecasts");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31508,7 +31508,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (bidId == null)
 				throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWorkplanbid");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31616,7 +31616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWorkplanbid");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31727,7 +31727,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (bidGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'bidGroupId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWorkplanbidGroup");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31842,7 +31842,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'bidGroupId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWorkplanbidGroup");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31954,7 +31954,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (bidGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'bidGroupId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWorkplanbidGroupPreferences");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32069,7 +32069,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'bidGroupId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWorkplanbidGroupPreferences");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32176,7 +32176,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (bidId == null)
 				throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWorkplanbidGroupsSummary");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/summary";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/summary";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32284,7 +32284,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWorkplanbidGroupsSummary");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/summary";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/summary";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32385,7 +32385,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (businessUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWorkplanbids");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32486,7 +32486,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'businessUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementBusinessunitWorkplanbids");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32585,7 +32585,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<BusinessUnitListing> GetWorkforcemanagementBusinessunitsWithHttpInfo(string feature = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits";
+			var localVarPath = "/workforcemanagement/businessunits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32685,7 +32685,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsAsyncWithHttpInfo(string feature = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits";
+			var localVarPath = "/workforcemanagement/businessunits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32783,7 +32783,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<BusinessUnitListing> GetWorkforcemanagementBusinessunitsDivisionviewsWithHttpInfo(List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/divisionviews";
+			var localVarPath = "/workforcemanagement/businessunits/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32880,7 +32880,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<BusinessUnitListing>> GetWorkforcemanagementBusinessunitsDivisionviewsAsyncWithHttpInfo(List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/divisionviews";
+			var localVarPath = "/workforcemanagement/businessunits/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32980,7 +32980,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (calendarId == null)
 				throw new ApiException(400, "Missing required parameter 'calendarId' when calling WorkforceManagementApi->GetWorkforcemanagementCalendarDataIcs");
 
-			var localVarPath = "/api/v2/workforcemanagement/calendar/data/ics";
+			var localVarPath = "/workforcemanagement/calendar/data/ics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33074,7 +33074,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'calendarId' when calling WorkforceManagementApi->GetWorkforcemanagementCalendarDataIcs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/calendar/data/ics";
+			var localVarPath = "/workforcemanagement/calendar/data/ics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33162,7 +33162,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CalendarUrlResponse> GetWorkforcemanagementCalendarUrlIcsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+			var localVarPath = "/workforcemanagement/calendar/url/ics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33256,7 +33256,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> GetWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+			var localVarPath = "/workforcemanagement/calendar/url/ics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33355,7 +33355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementHistoricaldataBulkRemoveJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/historicaldata/bulk/remove/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33456,7 +33456,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementHistoricaldataBulkRemoveJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/historicaldata/bulk/remove/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33551,7 +33551,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<HistoricalImportOverallDeleteStatusResponse> GetWorkforcemanagementHistoricaldataBulkRemoveJobsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs";
+			var localVarPath = "/workforcemanagement/historicaldata/bulk/remove/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33645,7 +33645,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<HistoricalImportOverallDeleteStatusResponse>> GetWorkforcemanagementHistoricaldataBulkRemoveJobsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs";
+			var localVarPath = "/workforcemanagement/historicaldata/bulk/remove/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33739,7 +33739,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<HistoricalImportStatusListing> GetWorkforcemanagementHistoricaldataImportstatusWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/importstatus";
+			var localVarPath = "/workforcemanagement/historicaldata/importstatus";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33833,7 +33833,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<HistoricalImportStatusListing>> GetWorkforcemanagementHistoricaldataImportstatusAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/importstatus";
+			var localVarPath = "/workforcemanagement/historicaldata/importstatus";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33932,7 +33932,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementHistoricaldataImportstatusJobId");
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/importstatus/{jobId}";
+			var localVarPath = "/workforcemanagement/historicaldata/importstatus/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34033,7 +34033,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementHistoricaldataImportstatusJobId");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/importstatus/{jobId}";
+			var localVarPath = "/workforcemanagement/historicaldata/importstatus/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34128,7 +34128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<WfmIntegrationListing> GetWorkforcemanagementIntegrationsHrisWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/integrations/hris";
+			var localVarPath = "/workforcemanagement/integrations/hris";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34222,7 +34222,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<WfmIntegrationListing>> GetWorkforcemanagementIntegrationsHrisAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/integrations/hris";
+			var localVarPath = "/workforcemanagement/integrations/hris";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34321,7 +34321,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementIntegrationsHrisTimeofftypesJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/integrations/hris/timeofftypes/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/integrations/hris/timeofftypes/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34422,7 +34422,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementIntegrationsHrisTimeofftypesJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/integrations/hris/timeofftypes/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/integrations/hris/timeofftypes/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34524,7 +34524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunit");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34628,7 +34628,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34702,7 +34702,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
+		/// Deprecated: Instead use /workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -34716,7 +34716,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
+		/// Deprecated: Instead use /workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -34729,7 +34729,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitActivitycodes");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/activitycodes";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/activitycodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34801,7 +34801,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
 		/// <summary>
-		/// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
+		/// Deprecated: Instead use /workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -34816,7 +34816,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		}
 
 		/// <summary>
-		/// Deprecated: Instead use /api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
+		/// Deprecated: Instead use /workforcemanagement/businessunits/{businessUnitId}/activitycodes. Get the list of activity codes 
 		/// 
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -34830,7 +34830,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitActivitycodes");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/activitycodes";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/activitycodes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34932,7 +34932,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitAdherence");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/adherence";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/adherence";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35036,7 +35036,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitAdherence");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/adherence";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/adherence";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35146,7 +35146,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitAgent");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35260,7 +35260,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitAgent");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35368,7 +35368,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitAgentShifttrades");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35476,7 +35476,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitAgentShifttrades");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agents/{agentId}/shifttrades";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35577,7 +35577,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesMatched");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35678,7 +35678,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesMatched");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/shifttrades/matched";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35778,7 +35778,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesUsers");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/users";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/shifttrades/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35879,7 +35879,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitShifttradesUsers");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shifttrades/users";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/shifttrades/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35984,7 +35984,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffLimitId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeofflimit");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36092,7 +36092,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffLimitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeofflimit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36193,7 +36193,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeofflimits");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36294,7 +36294,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeofflimits");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36399,7 +36399,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeoffplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36507,7 +36507,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeoffplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36608,7 +36608,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeoffplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36709,7 +36709,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitTimeoffplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36819,7 +36819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffRequestId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36934,7 +36934,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequest");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37046,7 +37046,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffRequestId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeofflimits";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeofflimits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37161,7 +37161,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequestTimeofflimits");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeofflimits";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeofflimits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37268,7 +37268,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37376,7 +37376,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUserTimeoffrequests");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37477,7 +37477,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUsers");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37578,7 +37578,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitUsers");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37692,7 +37692,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scheduleId == null)
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWeekSchedule");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37813,7 +37813,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWeekSchedule");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules/{scheduleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37928,7 +37928,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (weekId == null)
 				throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWeekSchedules");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38045,7 +38045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'weekId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWeekSchedules");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekId}/schedules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38160,7 +38160,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (weekDateId == null)
 				throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWeekShifttrades");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38277,7 +38277,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'weekDateId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWeekShifttrades");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38388,7 +38388,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'workPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38499,7 +38499,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workPlanId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38606,7 +38606,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (workPlanRotationId == null)
 				throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplanrotation");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38714,7 +38714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'workPlanRotationId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplanrotation");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38817,7 +38817,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplanrotations");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38921,7 +38921,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplanrotations");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39026,7 +39026,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (managementUnitId == null)
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39133,7 +39133,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'managementUnitId' when calling WorkforceManagementApi->GetWorkforcemanagementManagementunitWorkplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39240,7 +39240,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits";
+			var localVarPath = "/workforcemanagement/managementunits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39349,7 +39349,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string expand = null, string feature = null, string divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits";
+			var localVarPath = "/workforcemanagement/managementunits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39450,7 +39450,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ManagementUnitListing> GetWorkforcemanagementManagementunitsDivisionviewsWithHttpInfo(List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/divisionviews";
+			var localVarPath = "/workforcemanagement/managementunits/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39547,7 +39547,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ManagementUnitListing>> GetWorkforcemanagementManagementunitsDivisionviewsAsyncWithHttpInfo(List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/divisionviews";
+			var localVarPath = "/workforcemanagement/managementunits/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39642,7 +39642,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<NotificationsResponse> GetWorkforcemanagementNotificationsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/notifications";
+			var localVarPath = "/workforcemanagement/notifications";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39736,7 +39736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<NotificationsResponse>> GetWorkforcemanagementNotificationsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/notifications";
+			var localVarPath = "/workforcemanagement/notifications";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39835,7 +39835,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementSchedulingjob");
 
-			var localVarPath = "/api/v2/workforcemanagement/schedulingjobs/{jobId}";
+			var localVarPath = "/workforcemanagement/schedulingjobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39936,7 +39936,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementSchedulingjob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/schedulingjobs/{jobId}";
+			var localVarPath = "/workforcemanagement/schedulingjobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40031,7 +40031,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ShiftTradeListResponse> GetWorkforcemanagementShifttradesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/shifttrades";
+			var localVarPath = "/workforcemanagement/shifttrades";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40125,7 +40125,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ShiftTradeListResponse>> GetWorkforcemanagementShifttradesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/shifttrades";
+			var localVarPath = "/workforcemanagement/shifttrades";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40224,7 +40224,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementShrinkageJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/shrinkage/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/shrinkage/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40325,7 +40325,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementShrinkageJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/shrinkage/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/shrinkage/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40425,7 +40425,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (teamId == null)
 				throw new ApiException(400, "Missing required parameter 'teamId' when calling WorkforceManagementApi->GetWorkforcemanagementTeamAdherence");
 
-			var localVarPath = "/api/v2/workforcemanagement/teams/{teamId}/adherence";
+			var localVarPath = "/workforcemanagement/teams/{teamId}/adherence";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40526,7 +40526,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'teamId' when calling WorkforceManagementApi->GetWorkforcemanagementTeamAdherence");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/teams/{teamId}/adherence";
+			var localVarPath = "/workforcemanagement/teams/{teamId}/adherence";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40626,7 +40626,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementTimeoffbalanceJob");
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffbalance/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/timeoffbalance/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40727,7 +40727,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling WorkforceManagementApi->GetWorkforcemanagementTimeoffbalanceJob");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffbalance/jobs/{jobId}";
+			var localVarPath = "/workforcemanagement/timeoffbalance/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40827,7 +40827,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffRequestId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementTimeoffrequest");
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}";
+			var localVarPath = "/workforcemanagement/timeoffrequests/{timeOffRequestId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40928,7 +40928,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementTimeoffrequest");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}";
+			var localVarPath = "/workforcemanagement/timeoffrequests/{timeOffRequestId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41028,7 +41028,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffRequestId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementTimeoffrequestWaitlistpositions");
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions";
+			var localVarPath = "/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41129,7 +41129,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->GetWorkforcemanagementTimeoffrequestWaitlistpositions");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions";
+			var localVarPath = "/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41224,7 +41224,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TimeOffRequestList> GetWorkforcemanagementTimeoffrequestsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests";
+			var localVarPath = "/workforcemanagement/timeoffrequests";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41318,7 +41318,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TimeOffRequestList>> GetWorkforcemanagementTimeoffrequestsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests";
+			var localVarPath = "/workforcemanagement/timeoffrequests";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41417,7 +41417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userId == null)
 				throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementUserWorkplanbidranks");
 
-			var localVarPath = "/api/v2/workforcemanagement/users/{userId}/workplanbidranks";
+			var localVarPath = "/workforcemanagement/users/{userId}/workplanbidranks";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41518,7 +41518,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userId' when calling WorkforceManagementApi->GetWorkforcemanagementUserWorkplanbidranks");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/users/{userId}/workplanbidranks";
+			var localVarPath = "/workforcemanagement/users/{userId}/workplanbidranks";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41618,7 +41618,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (bidId == null)
 				throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->GetWorkforcemanagementWorkplanbidPreferences");
 
-			var localVarPath = "/api/v2/workforcemanagement/workplanbids/{bidId}/preferences";
+			var localVarPath = "/workforcemanagement/workplanbids/{bidId}/preferences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41719,7 +41719,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->GetWorkforcemanagementWorkplanbidPreferences");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/workplanbids/{bidId}/preferences";
+			var localVarPath = "/workforcemanagement/workplanbids/{bidId}/preferences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41819,7 +41819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (bidId == null)
 				throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->GetWorkforcemanagementWorkplanbidWorkplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/workplanbids/{bidId}/workplans";
+			var localVarPath = "/workforcemanagement/workplanbids/{bidId}/workplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41920,7 +41920,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'bidId' when calling WorkforceManagementApi->GetWorkforcemanagementWorkplanbidWorkplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/workplanbids/{bidId}/workplans";
+			var localVarPath = "/workforcemanagement/workplanbids/{bidId}/workplans";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42015,7 +42015,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AgentWorkPlanBids> GetWorkforcemanagementWorkplanbidsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/workplanbids";
+			var localVarPath = "/workforcemanagement/workplanbids";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42109,7 +42109,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AgentWorkPlanBids>> GetWorkforcemanagementWorkplanbidsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/workplanbids";
+			var localVarPath = "/workforcemanagement/workplanbids";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42218,7 +42218,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentAdherenceExplanation");
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42338,7 +42338,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAgentAdherenceExplanation");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/adherence/explanations/{explanationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42450,7 +42450,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAlternativeshiftsTrade");
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades/{tradeId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades/{tradeId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42563,7 +42563,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAlternativeshiftsTrade");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades/{tradeId}";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades/{tradeId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42669,7 +42669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAlternativeshiftsTradesStateJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades/state/jobs";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades/state/jobs";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42775,7 +42775,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementAlternativeshiftsTradesStateJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades/state/jobs";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades/state/jobs";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42887,7 +42887,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunit");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43003,7 +43003,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43120,7 +43120,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivitycode");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43240,7 +43240,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivitycode");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activitycodes/{activityCodeId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43357,7 +43357,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivityplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43477,7 +43477,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitActivityplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43589,7 +43589,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43702,7 +43702,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitAlternativeshiftsSettings");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43818,7 +43818,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitCapacityplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43938,7 +43938,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitCapacityplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44055,7 +44055,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitPlanninggroup");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44175,7 +44175,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitPlanninggroup");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/planninggroups/{planningGroupId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44291,7 +44291,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitSchedulingRun");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44410,7 +44410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitSchedulingRun");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/scheduling/runs/{runId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44527,7 +44527,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitServicegoaltemplate");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44647,7 +44647,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitServicegoaltemplate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates/{serviceGoalTemplateId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44764,7 +44764,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitStaffinggroup");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44884,7 +44884,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitStaffinggroup");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/{staffingGroupId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45001,7 +45001,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitTimeoffplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45121,7 +45121,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitTimeoffplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45238,7 +45238,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitWorkplanbid");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45358,7 +45358,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitWorkplanbid");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45480,7 +45480,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitWorkplanbidGroup");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45607,7 +45607,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitWorkplanbidGroup");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45730,7 +45730,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45857,7 +45857,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementBusinessunitWorkplanbidGroupPreferences");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups/{bidGroupId}/preferences";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45970,7 +45970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunit");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46083,7 +46083,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46193,7 +46193,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgents");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agents";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46305,7 +46305,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgents");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agents";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46416,7 +46416,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgentsWorkplansBulk");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/bulk";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46529,7 +46529,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitAgentsWorkplansBulk");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/bulk";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46645,7 +46645,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeofflimit");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46765,7 +46765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeofflimit");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -46882,7 +46882,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeoffplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47002,7 +47002,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeoffplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47124,7 +47124,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47251,7 +47251,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47374,7 +47374,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitUserTimeoffrequest");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47501,7 +47501,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitUserTimeoffrequest");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47624,7 +47624,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWeekShifttrade");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47751,7 +47751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWeekShifttrade");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47871,7 +47871,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWorkplan");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -47994,7 +47994,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWorkplan");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48112,7 +48112,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWorkplanrotation");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48232,7 +48232,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementManagementunitWorkplanrotation");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48344,7 +48344,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementTimeoffrequest");
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}";
+			var localVarPath = "/workforcemanagement/timeoffrequests/{timeOffRequestId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48457,7 +48457,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementTimeoffrequest");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}";
+			var localVarPath = "/workforcemanagement/timeoffrequests/{timeOffRequestId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48568,7 +48568,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementUserWorkplanbidranks");
 
-			var localVarPath = "/api/v2/workforcemanagement/users/{userId}/workplanbidranks";
+			var localVarPath = "/workforcemanagement/users/{userId}/workplanbidranks";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48681,7 +48681,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementUserWorkplanbidranks");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/users/{userId}/workplanbidranks";
+			var localVarPath = "/workforcemanagement/users/{userId}/workplanbidranks";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48787,7 +48787,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementUsersWorkplanbidranksBulk");
 
-			var localVarPath = "/api/v2/workforcemanagement/users/workplanbidranks/bulk";
+			var localVarPath = "/workforcemanagement/users/workplanbidranks/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -48893,7 +48893,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementUsersWorkplanbidranksBulk");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/users/workplanbidranks/bulk";
+			var localVarPath = "/workforcemanagement/users/workplanbidranks/bulk";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49003,7 +49003,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementWorkplanbidPreferences");
 
-			var localVarPath = "/api/v2/workforcemanagement/workplanbids/{bidId}/preferences";
+			var localVarPath = "/workforcemanagement/workplanbids/{bidId}/preferences";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49116,7 +49116,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PatchWorkforcemanagementWorkplanbidPreferences");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/workplanbids/{bidId}/preferences";
+			var localVarPath = "/workforcemanagement/workplanbids/{bidId}/preferences";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49222,7 +49222,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAdherenceExplanations");
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/explanations";
+			var localVarPath = "/workforcemanagement/adherence/explanations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49328,7 +49328,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAdherenceExplanations");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/explanations";
+			var localVarPath = "/workforcemanagement/adherence/explanations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49437,7 +49437,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAdherenceExplanationsQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/explanations/query";
+			var localVarPath = "/workforcemanagement/adherence/explanations/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49549,7 +49549,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAdherenceExplanationsQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/explanations/query";
+			var localVarPath = "/workforcemanagement/adherence/explanations/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49653,7 +49653,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<WfmHistoricalAdherenceResponse> PostWorkforcemanagementAdherenceHistoricalWithHttpInfo(WfmHistoricalAdherenceQueryForUsers body = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/historical";
+			var localVarPath = "/workforcemanagement/adherence/historical";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49755,7 +49755,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<WfmHistoricalAdherenceResponse>> PostWorkforcemanagementAdherenceHistoricalAsyncWithHttpInfo(WfmHistoricalAdherenceQueryForUsers body = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/historical";
+			var localVarPath = "/workforcemanagement/adherence/historical";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49860,7 +49860,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAdherenceHistoricalBulk");
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/historical/bulk";
+			var localVarPath = "/workforcemanagement/adherence/historical/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -49966,7 +49966,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAdherenceHistoricalBulk");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/adherence/historical/bulk";
+			var localVarPath = "/workforcemanagement/adherence/historical/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50076,7 +50076,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentAdherenceExplanations");
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/adherence/explanations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50189,7 +50189,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentAdherenceExplanations");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/adherence/explanations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50304,7 +50304,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentAdherenceExplanationsQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/adherence/explanations/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50423,7 +50423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentAdherenceExplanationsQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/adherence/explanations/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50531,7 +50531,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgents");
 
-			var localVarPath = "/api/v2/workforcemanagement/agents";
+			var localVarPath = "/workforcemanagement/agents";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50637,7 +50637,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgents");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agents";
+			var localVarPath = "/workforcemanagement/agents";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50742,7 +50742,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentsIntegrationsHrisQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/integrations/hris/query";
+			var localVarPath = "/workforcemanagement/agents/integrations/hris/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50848,7 +50848,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentsIntegrationsHrisQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/integrations/hris/query";
+			var localVarPath = "/workforcemanagement/agents/integrations/hris/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -50952,7 +50952,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<WfmAgentHistoricalAdherenceResponse> PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsWithHttpInfo(List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/me/adherence/historical/jobs";
+			var localVarPath = "/workforcemanagement/agents/me/adherence/historical/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51057,7 +51057,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<WfmAgentHistoricalAdherenceResponse>> PostWorkforcemanagementAgentsMeAdherenceHistoricalJobsAsyncWithHttpInfo(List<string> expand = null, WfmHistoricalAdherenceQueryForAgent body = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/me/adherence/historical/jobs";
+			var localVarPath = "/workforcemanagement/agents/me/adherence/historical/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51163,7 +51163,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentsMePossibleworkshifts");
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/me/possibleworkshifts";
+			var localVarPath = "/workforcemanagement/agents/me/possibleworkshifts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51269,7 +51269,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentsMePossibleworkshifts");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/me/possibleworkshifts";
+			var localVarPath = "/workforcemanagement/agents/me/possibleworkshifts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51378,7 +51378,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentschedulesManagementunitsMine");
 
-			var localVarPath = "/api/v2/workforcemanagement/agentschedules/managementunits/mine";
+			var localVarPath = "/workforcemanagement/agentschedules/managementunits/mine";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51490,7 +51490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentschedulesManagementunitsMine");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agentschedules/managementunits/mine";
+			var localVarPath = "/workforcemanagement/agentschedules/managementunits/mine";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51597,7 +51597,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentschedulesMine");
 
-			var localVarPath = "/api/v2/workforcemanagement/agentschedules/mine";
+			var localVarPath = "/workforcemanagement/agentschedules/mine";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51703,7 +51703,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAgentschedulesMine");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agentschedules/mine";
+			var localVarPath = "/workforcemanagement/agentschedules/mine";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51808,7 +51808,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAlternativeshiftsOffersJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/offers/jobs";
+			var localVarPath = "/workforcemanagement/alternativeshifts/offers/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -51914,7 +51914,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAlternativeshiftsOffersJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/offers/jobs";
+			var localVarPath = "/workforcemanagement/alternativeshifts/offers/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52019,7 +52019,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAlternativeshiftsOffersSearchJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/offers/search/jobs";
+			var localVarPath = "/workforcemanagement/alternativeshifts/offers/search/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52125,7 +52125,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAlternativeshiftsOffersSearchJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/offers/search/jobs";
+			var localVarPath = "/workforcemanagement/alternativeshifts/offers/search/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52230,7 +52230,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAlternativeshiftsTrades");
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52336,7 +52336,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementAlternativeshiftsTrades");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/alternativeshifts/trades";
+			var localVarPath = "/workforcemanagement/alternativeshifts/trades";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52446,7 +52446,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivitycodes");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52559,7 +52559,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivitycodes");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activitycodes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52670,7 +52670,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (activityPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanRunsJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52778,7 +52778,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'activityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplanRunsJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans/{activityPlanId}/runs/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52884,7 +52884,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -52997,7 +52997,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitActivityplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/activityplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/activityplans";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53112,7 +53112,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53231,7 +53231,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAdherenceExplanationsQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/adherence/explanations/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53348,7 +53348,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAgentschedulesSearch");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53467,7 +53467,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAgentschedulesSearch");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/agentschedules/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53582,7 +53582,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53698,7 +53698,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitAlternativeshiftsTradesSearch");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/alternativeshifts/trades/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53815,7 +53815,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplanCopy");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/copy";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -53935,7 +53935,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplanCopy");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/copy";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54047,7 +54047,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (capacityPlanId == null)
 				throw new ApiException(400, "Missing required parameter 'capacityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplanRequirementGenerate");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/requirement/generate";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/requirement/generate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54155,7 +54155,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'capacityPlanId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplanRequirementGenerate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/requirement/generate";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/requirement/generate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54266,7 +54266,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54386,7 +54386,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54503,7 +54503,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54623,7 +54623,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocationshistoryQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/{capacityPlanId}/staffinggroupallocationshistory/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54740,7 +54740,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (forecastId == null)
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}/forceregenerate";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}/forceregenerate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54855,7 +54855,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'forecastId' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecastForceregenerate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}/forceregenerate";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplanning/longtermrequirements/automaticbestmethod/weeks/{weekDateId}/forecasts/{forecastId}/forceregenerate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -54962,7 +54962,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55075,7 +55075,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55185,7 +55185,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplansBulkRemove");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55297,7 +55297,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitCapacityplansBulkRemove");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/capacityplans/bulk/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55410,7 +55410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitIntraday");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/intraday";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55526,7 +55526,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitIntraday");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/intraday";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/intraday";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55638,7 +55638,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitPlanninggroups");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/planninggroups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55751,7 +55751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitPlanninggroups");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/planninggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/planninggroups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55862,7 +55862,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitServicegoaltemplates");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -55975,7 +55975,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitServicegoaltemplates");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/servicegoaltemplates";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56086,7 +56086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitStaffinggroups");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56199,7 +56199,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitStaffinggroups");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56310,7 +56310,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/planninggroups/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/planninggroups/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56423,7 +56423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitStaffinggroupsPlanninggroupsQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/planninggroups/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/planninggroups/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56536,7 +56536,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitStaffinggroupsQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56652,7 +56652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitStaffinggroupsQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/staffinggroups/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56764,7 +56764,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitTimeofflimits");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56877,7 +56877,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitTimeofflimits");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -56988,7 +56988,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57101,7 +57101,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57212,7 +57212,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitTimeoffplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeoffplans";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57325,7 +57325,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitTimeoffplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeoffplans";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57450,7 +57450,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57583,7 +57583,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57708,7 +57708,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleCopy");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57835,7 +57835,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleCopy");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -57958,7 +57958,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58085,7 +58085,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58208,7 +58208,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/uploadurl";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/uploadurl";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58335,7 +58335,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculationsUploadurl");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/uploadurl";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations/uploadurl";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58458,7 +58458,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleReschedule");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58585,7 +58585,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleReschedule");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/reschedule";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58708,7 +58708,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdate");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58835,7 +58835,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -58958,7 +58958,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59085,7 +59085,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekScheduleUpdateUploadurl");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/update/uploadurl";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59203,7 +59203,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedules");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59323,7 +59323,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedules");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59440,7 +59440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesGenerate");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/generate";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/generate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59560,7 +59560,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesGenerate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/generate";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/generate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59677,7 +59677,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImport");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59797,7 +59797,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImport");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -59914,7 +59914,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60034,7 +60034,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekSchedulesImportUploadurl");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/import/uploadurl";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60158,7 +60158,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60288,7 +60288,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastCopy");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/{forecastId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60409,7 +60409,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60532,7 +60532,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsGenerate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/generate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60650,7 +60650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60770,7 +60770,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImport");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -60887,7 +60887,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61007,7 +61007,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWeekShorttermforecastsImportUploadurl");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekDateId}/shorttermforecasts/import/uploadurl";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61124,7 +61124,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWorkplanbidCopy");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61244,7 +61244,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWorkplanbidCopy");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61361,7 +61361,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWorkplanbidGroups");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61481,7 +61481,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWorkplanbidGroups");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids/{bidId}/groups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61593,7 +61593,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWorkplanbids");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61706,7 +61706,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunitWorkplanbids");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/workplanbids";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/workplanbids";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61814,7 +61814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunits");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits";
+			var localVarPath = "/workforcemanagement/businessunits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -61923,7 +61923,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementBusinessunits");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits";
+			var localVarPath = "/workforcemanagement/businessunits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62026,7 +62026,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CalendarUrlResponse> PostWorkforcemanagementCalendarUrlIcsWithHttpInfo(string language = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+			var localVarPath = "/workforcemanagement/calendar/url/ics";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62123,7 +62123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CalendarUrlResponse>> PostWorkforcemanagementCalendarUrlIcsAsyncWithHttpInfo(string language = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/calendar/url/ics";
+			var localVarPath = "/workforcemanagement/calendar/url/ics";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62223,7 +62223,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementHistoricaldataBulkRemoveJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs";
+			var localVarPath = "/workforcemanagement/historicaldata/bulk/remove/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62329,7 +62329,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementHistoricaldataBulkRemoveJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/bulk/remove/jobs";
+			var localVarPath = "/workforcemanagement/historicaldata/bulk/remove/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62434,7 +62434,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementHistoricaldataValidate");
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/validate";
+			var localVarPath = "/workforcemanagement/historicaldata/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62540,7 +62540,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementHistoricaldataValidate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/historicaldata/validate";
+			var localVarPath = "/workforcemanagement/historicaldata/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62645,7 +62645,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (hrisIntegrationId == null)
 				throw new ApiException(400, "Missing required parameter 'hrisIntegrationId' when calling WorkforceManagementApi->PostWorkforcemanagementIntegrationsHriTimeofftypesJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs";
+			var localVarPath = "/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62746,7 +62746,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'hrisIntegrationId' when calling WorkforceManagementApi->PostWorkforcemanagementIntegrationsHriTimeofftypesJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs";
+			var localVarPath = "/workforcemanagement/integrations/hris/{hrisIntegrationId}/timeofftypes/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62853,7 +62853,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitAgentsWorkplansQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -62969,7 +62969,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitAgentsWorkplansQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agents/workplans/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63085,7 +63085,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitAgentschedulesSearch");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63204,7 +63204,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitAgentschedulesSearch");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/agentschedules/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63317,7 +63317,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitHistoricaladherencequery");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63430,7 +63430,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitHistoricaladherencequery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/historicaladherencequery";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63541,7 +63541,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitMove");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/move";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/move";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63654,7 +63654,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitMove");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/move";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/move";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63765,7 +63765,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitSchedulesSearch");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/schedules/search";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/schedules/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63878,7 +63878,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitSchedulesSearch");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/schedules/search";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/schedules/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -63989,7 +63989,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitShrinkageJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shrinkage/jobs";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/shrinkage/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64102,7 +64102,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitShrinkageJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/shrinkage/jobs";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/shrinkage/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64213,7 +64213,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeofflimits");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64326,7 +64326,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeofflimits");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64437,7 +64437,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64550,7 +64550,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeofflimitsValuesQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/values/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64661,7 +64661,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64774,7 +64774,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffplans";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64885,7 +64885,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequests");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -64998,7 +64998,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequests");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65109,7 +65109,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/integrationstatus/query";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/integrationstatus/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65222,7 +65222,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsIntegrationstatusQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/integrationstatus/query";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/integrationstatus/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65335,7 +65335,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65451,7 +65451,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65563,7 +65563,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65676,7 +65676,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitTimeoffrequestsWaitlistpositionsQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/waitlistpositions/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65792,7 +65792,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitUserTimeoffbalanceJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffbalance/jobs";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffbalance/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -65912,7 +65912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitUserTimeoffbalanceJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffbalance/jobs";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffbalance/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66029,7 +66029,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (timeOffRequestId == null)
 				throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeoffbalance/jobs";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeoffbalance/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66144,7 +66144,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'timeOffRequestId' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitUserTimeoffrequestTimeoffbalanceJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeoffbalance/jobs";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId}/timeoffbalance/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66256,7 +66256,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitUserTimeoffrequestsEstimate");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/estimate";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/estimate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66376,7 +66376,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitUserTimeoffrequestsEstimate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/estimate";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/estimate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66498,7 +66498,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66625,7 +66625,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradeMatch");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId}/match";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66743,7 +66743,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttrades");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66863,7 +66863,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttrades");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -66982,7 +66982,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradesSearch");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67105,7 +67105,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradesSearch");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67225,7 +67225,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradesStateBulk");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67348,7 +67348,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWeekShifttradesStateBulk");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/state/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67466,7 +67466,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanCopy");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/copy";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67586,7 +67586,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanCopy");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/copy";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67705,7 +67705,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanValidate");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67828,7 +67828,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanValidate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId}/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -67946,7 +67946,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanrotationCopy");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68066,7 +68066,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanrotationCopy");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId}/copy";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68178,7 +68178,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanrotations");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68291,7 +68291,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplanrotations");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplanrotations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68404,7 +68404,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplans");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68520,7 +68520,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunitWorkplans");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/workplans";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68627,7 +68627,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunits");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits";
+			var localVarPath = "/workforcemanagement/managementunits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68733,7 +68733,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementManagementunits");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits";
+			var localVarPath = "/workforcemanagement/managementunits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68838,7 +68838,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementNotificationsUpdate");
 
-			var localVarPath = "/api/v2/workforcemanagement/notifications/update";
+			var localVarPath = "/workforcemanagement/notifications/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -68944,7 +68944,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementNotificationsUpdate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/notifications/update";
+			var localVarPath = "/workforcemanagement/notifications/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69046,7 +69046,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UserScheduleContainer> PostWorkforcemanagementSchedulesWithHttpInfo(CurrentUserScheduleRequestBody body = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/schedules";
+			var localVarPath = "/workforcemanagement/schedules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69148,7 +69148,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UserScheduleContainer>> PostWorkforcemanagementSchedulesAsyncWithHttpInfo(CurrentUserScheduleRequestBody body = null)
 		{
 
-			var localVarPath = "/api/v2/workforcemanagement/schedules";
+			var localVarPath = "/workforcemanagement/schedules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69258,7 +69258,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTeamAdherenceHistorical");
 
-			var localVarPath = "/api/v2/workforcemanagement/teams/{teamId}/adherence/historical";
+			var localVarPath = "/workforcemanagement/teams/{teamId}/adherence/historical";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69371,7 +69371,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTeamAdherenceHistorical");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/teams/{teamId}/adherence/historical";
+			var localVarPath = "/workforcemanagement/teams/{teamId}/adherence/historical";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69482,7 +69482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTeamShrinkageJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/teams/{teamId}/shrinkage/jobs";
+			var localVarPath = "/workforcemanagement/teams/{teamId}/shrinkage/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69595,7 +69595,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTeamShrinkageJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/teams/{teamId}/shrinkage/jobs";
+			var localVarPath = "/workforcemanagement/teams/{teamId}/shrinkage/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69701,7 +69701,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTimeoffbalanceJobs");
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffbalance/jobs";
+			var localVarPath = "/workforcemanagement/timeoffbalance/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69807,7 +69807,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTimeoffbalanceJobs");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffbalance/jobs";
+			var localVarPath = "/workforcemanagement/timeoffbalance/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -69912,7 +69912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTimeofflimitsAvailableQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/timeofflimits/available/query";
+			var localVarPath = "/workforcemanagement/timeofflimits/available/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70018,7 +70018,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTimeofflimitsAvailableQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/timeofflimits/available/query";
+			var localVarPath = "/workforcemanagement/timeofflimits/available/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70123,7 +70123,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTimeoffrequests");
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests";
+			var localVarPath = "/workforcemanagement/timeoffrequests";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70229,7 +70229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTimeoffrequests");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests";
+			var localVarPath = "/workforcemanagement/timeoffrequests";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70334,7 +70334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTimeoffrequestsEstimate");
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/estimate";
+			var localVarPath = "/workforcemanagement/timeoffrequests/estimate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70440,7 +70440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTimeoffrequestsEstimate");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/estimate";
+			var localVarPath = "/workforcemanagement/timeoffrequests/estimate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70545,7 +70545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery");
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/integrationstatus/query";
+			var localVarPath = "/workforcemanagement/timeoffrequests/integrationstatus/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70651,7 +70651,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/timeoffrequests/integrationstatus/query";
+			var localVarPath = "/workforcemanagement/timeoffrequests/integrationstatus/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70761,7 +70761,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PutWorkforcemanagementAgentIntegrationsHris");
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/integrations/hris";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/integrations/hris";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70874,7 +70874,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PutWorkforcemanagementAgentIntegrationsHris");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/agents/{agentId}/integrations/hris";
+			var localVarPath = "/workforcemanagement/agents/{agentId}/integrations/hris";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -70990,7 +70990,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PutWorkforcemanagementBusinessunitTimeofflimitValues");
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71110,7 +71110,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PutWorkforcemanagementBusinessunitTimeofflimitValues");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values";
+			var localVarPath = "/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71227,7 +71227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitTimeofflimitValues");
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -71347,7 +71347,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling WorkforceManagementApi->PutWorkforcemanagementManagementunitTimeofflimitValues");
 
 
-			var localVarPath = "/api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values";
+			var localVarPath = "/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

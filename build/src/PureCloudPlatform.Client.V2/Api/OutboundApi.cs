@@ -9346,7 +9346,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (attemptLimitsId == null)
 				throw new ApiException(400, "Missing required parameter 'attemptLimitsId' when calling OutboundApi->DeleteOutboundAttemptlimit");
 
-			var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+			var localVarPath = "/outbound/attemptlimits/{attemptLimitsId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9446,7 +9446,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'attemptLimitsId' when calling OutboundApi->DeleteOutboundAttemptlimit");
 
 
-			var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+			var localVarPath = "/outbound/attemptlimits/{attemptLimitsId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9545,7 +9545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (callableTimeSetId == null)
 				throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->DeleteOutboundCallabletimeset");
 
-			var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+			var localVarPath = "/outbound/callabletimesets/{callableTimeSetId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9645,7 +9645,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->DeleteOutboundCallabletimeset");
 
 
-			var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+			var localVarPath = "/outbound/callabletimesets/{callableTimeSetId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9744,7 +9744,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (callAnalysisSetId == null)
 				throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->DeleteOutboundCallanalysisresponseset");
 
-			var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+			var localVarPath = "/outbound/callanalysisresponsesets/{callAnalysisSetId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9844,7 +9844,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->DeleteOutboundCallanalysisresponseset");
 
 
-			var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+			var localVarPath = "/outbound/callanalysisresponsesets/{callAnalysisSetId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9944,7 +9944,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteOutboundCampaign");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+			var localVarPath = "/outbound/campaigns/{campaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10045,7 +10045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteOutboundCampaign");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+			var localVarPath = "/outbound/campaigns/{campaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10144,7 +10144,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteOutboundCampaignProgress");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/progress";
+			var localVarPath = "/outbound/campaigns/{campaignId}/progress";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10244,7 +10244,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteOutboundCampaignProgress");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/progress";
+			var localVarPath = "/outbound/campaigns/{campaignId}/progress";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10343,7 +10343,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignRuleId' when calling OutboundApi->DeleteOutboundCampaignrule");
 
-			var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+			var localVarPath = "/outbound/campaignrules/{campaignRuleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10443,7 +10443,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignRuleId' when calling OutboundApi->DeleteOutboundCampaignrule");
 
 
-			var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+			var localVarPath = "/outbound/campaignrules/{campaignRuleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10542,7 +10542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteOutboundContactlist");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10642,7 +10642,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->DeleteOutboundContactlist");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10746,7 +10746,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->DeleteOutboundContactlistContact");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/{contactId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10853,7 +10853,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->DeleteOutboundContactlistContact");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/{contactId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10958,7 +10958,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactIds == null)
 				throw new ApiException(400, "Missing required parameter 'contactIds' when calling OutboundApi->DeleteOutboundContactlistContacts");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11065,7 +11065,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactIds' when calling OutboundApi->DeleteOutboundContactlistContacts");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11165,7 +11165,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListFilterId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListFilterId' when calling OutboundApi->DeleteOutboundContactlistfilter");
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+			var localVarPath = "/outbound/contactlistfilters/{contactListFilterId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11265,7 +11265,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListFilterId' when calling OutboundApi->DeleteOutboundContactlistfilter");
 
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+			var localVarPath = "/outbound/contactlistfilters/{contactListFilterId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11364,7 +11364,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling OutboundApi->DeleteOutboundContactlists");
 
-			var localVarPath = "/api/v2/outbound/contactlists";
+			var localVarPath = "/outbound/contactlists";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11464,7 +11464,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling OutboundApi->DeleteOutboundContactlists");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists";
+			var localVarPath = "/outbound/contactlists";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11563,7 +11563,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListTemplateId' when calling OutboundApi->DeleteOutboundContactlisttemplate");
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates/{contactListTemplateId}";
+			var localVarPath = "/outbound/contactlisttemplates/{contactListTemplateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11663,7 +11663,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListTemplateId' when calling OutboundApi->DeleteOutboundContactlisttemplate");
 
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates/{contactListTemplateId}";
+			var localVarPath = "/outbound/contactlisttemplates/{contactListTemplateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11762,7 +11762,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling OutboundApi->DeleteOutboundContactlisttemplates");
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates";
+			var localVarPath = "/outbound/contactlisttemplates";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11862,7 +11862,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling OutboundApi->DeleteOutboundContactlisttemplates");
 
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates";
+			var localVarPath = "/outbound/contactlisttemplates";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11961,7 +11961,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (digitalRuleSetId == null)
 				throw new ApiException(400, "Missing required parameter 'digitalRuleSetId' when calling OutboundApi->DeleteOutboundDigitalruleset");
 
-			var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+			var localVarPath = "/outbound/digitalrulesets/{digitalRuleSetId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12061,7 +12061,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'digitalRuleSetId' when calling OutboundApi->DeleteOutboundDigitalruleset");
 
 
-			var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+			var localVarPath = "/outbound/digitalrulesets/{digitalRuleSetId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12160,7 +12160,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dncListId == null)
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclist");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+			var localVarPath = "/outbound/dnclists/{dncListId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12260,7 +12260,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclist");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+			var localVarPath = "/outbound/dnclists/{dncListId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12361,7 +12361,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dncListId == null)
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistCustomexclusioncolumns");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns";
+			var localVarPath = "/outbound/dnclists/{dncListId}/customexclusioncolumns";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12464,7 +12464,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistCustomexclusioncolumns");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns";
+			var localVarPath = "/outbound/dnclists/{dncListId}/customexclusioncolumns";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12566,7 +12566,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dncListId == null)
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistEmailaddresses");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/emailaddresses";
+			var localVarPath = "/outbound/dnclists/{dncListId}/emailaddresses";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12669,7 +12669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistEmailaddresses");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/emailaddresses";
+			var localVarPath = "/outbound/dnclists/{dncListId}/emailaddresses";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12771,7 +12771,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dncListId == null)
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistPhonenumbers");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers";
+			var localVarPath = "/outbound/dnclists/{dncListId}/phonenumbers";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12874,7 +12874,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistPhonenumbers");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers";
+			var localVarPath = "/outbound/dnclists/{dncListId}/phonenumbers";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12976,7 +12976,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dncListId == null)
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistWhatsappnumbers");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/whatsappnumbers";
+			var localVarPath = "/outbound/dnclists/{dncListId}/whatsappnumbers";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13079,7 +13079,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->DeleteOutboundDnclistWhatsappnumbers");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/whatsappnumbers";
+			var localVarPath = "/outbound/dnclists/{dncListId}/whatsappnumbers";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13179,7 +13179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (fileSpecificationTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'fileSpecificationTemplateId' when calling OutboundApi->DeleteOutboundFilespecificationtemplate");
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+			var localVarPath = "/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13279,7 +13279,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'fileSpecificationTemplateId' when calling OutboundApi->DeleteOutboundFilespecificationtemplate");
 
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+			var localVarPath = "/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13378,7 +13378,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling OutboundApi->DeleteOutboundFilespecificationtemplatesBulk");
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates/bulk";
+			var localVarPath = "/outbound/filespecificationtemplates/bulk";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13478,7 +13478,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling OutboundApi->DeleteOutboundFilespecificationtemplatesBulk");
 
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates/bulk";
+			var localVarPath = "/outbound/filespecificationtemplates/bulk";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13577,7 +13577,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (importTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'importTemplateId' when calling OutboundApi->DeleteOutboundImporttemplate");
 
-			var localVarPath = "/api/v2/outbound/importtemplates/{importTemplateId}";
+			var localVarPath = "/outbound/importtemplates/{importTemplateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13677,7 +13677,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'importTemplateId' when calling OutboundApi->DeleteOutboundImporttemplate");
 
 
-			var localVarPath = "/api/v2/outbound/importtemplates/{importTemplateId}";
+			var localVarPath = "/outbound/importtemplates/{importTemplateId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13776,7 +13776,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling OutboundApi->DeleteOutboundImporttemplates");
 
-			var localVarPath = "/api/v2/outbound/importtemplates";
+			var localVarPath = "/outbound/importtemplates";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13876,7 +13876,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling OutboundApi->DeleteOutboundImporttemplates");
 
 
-			var localVarPath = "/api/v2/outbound/importtemplates";
+			var localVarPath = "/outbound/importtemplates";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13976,7 +13976,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messagingCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->DeleteOutboundMessagingcampaign");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14077,7 +14077,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->DeleteOutboundMessagingcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14176,7 +14176,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messagingCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->DeleteOutboundMessagingcampaignProgress");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}/progress";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14276,7 +14276,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->DeleteOutboundMessagingcampaignProgress");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}/progress";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14375,7 +14375,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleSetId == null)
 				throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->DeleteOutboundRuleset");
 
-			var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+			var localVarPath = "/outbound/rulesets/{ruleSetId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14475,7 +14475,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->DeleteOutboundRuleset");
 
 
-			var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+			var localVarPath = "/outbound/rulesets/{ruleSetId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14574,7 +14574,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteOutboundSchedulesCampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+			var localVarPath = "/outbound/schedules/campaigns/{campaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14674,7 +14674,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->DeleteOutboundSchedulesCampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+			var localVarPath = "/outbound/schedules/campaigns/{campaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14773,7 +14773,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (emailCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling OutboundApi->DeleteOutboundSchedulesEmailcampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+			var localVarPath = "/outbound/schedules/emailcampaigns/{emailCampaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14873,7 +14873,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling OutboundApi->DeleteOutboundSchedulesEmailcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+			var localVarPath = "/outbound/schedules/emailcampaigns/{emailCampaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14972,7 +14972,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messagingCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->DeleteOutboundSchedulesMessagingcampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15072,7 +15072,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->DeleteOutboundSchedulesMessagingcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15171,7 +15171,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sequenceId == null)
 				throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteOutboundSchedulesSequence");
 
-			var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+			var localVarPath = "/outbound/schedules/sequences/{sequenceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15271,7 +15271,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteOutboundSchedulesSequence");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+			var localVarPath = "/outbound/schedules/sequences/{sequenceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15370,7 +15370,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (whatsAppCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'whatsAppCampaignId' when calling OutboundApi->DeleteOutboundSchedulesWhatsappcampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+			var localVarPath = "/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15470,7 +15470,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'whatsAppCampaignId' when calling OutboundApi->DeleteOutboundSchedulesWhatsappcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+			var localVarPath = "/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15569,7 +15569,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sequenceId == null)
 				throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteOutboundSequence");
 
-			var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+			var localVarPath = "/outbound/sequences/{sequenceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15669,7 +15669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->DeleteOutboundSequence");
 
 
-			var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+			var localVarPath = "/outbound/sequences/{sequenceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15769,7 +15769,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (attemptLimitsId == null)
 				throw new ApiException(400, "Missing required parameter 'attemptLimitsId' when calling OutboundApi->GetOutboundAttemptlimit");
 
-			var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+			var localVarPath = "/outbound/attemptlimits/{attemptLimitsId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15870,7 +15870,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'attemptLimitsId' when calling OutboundApi->GetOutboundAttemptlimit");
 
 
-			var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+			var localVarPath = "/outbound/attemptlimits/{attemptLimitsId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15979,7 +15979,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AttemptLimitsEntityListing> GetOutboundAttemptlimitsWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/attemptlimits";
+			var localVarPath = "/outbound/attemptlimits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16094,7 +16094,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AttemptLimitsEntityListing>> GetOutboundAttemptlimitsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/attemptlimits";
+			var localVarPath = "/outbound/attemptlimits";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16200,7 +16200,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (callableTimeSetId == null)
 				throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->GetOutboundCallabletimeset");
 
-			var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+			var localVarPath = "/outbound/callabletimesets/{callableTimeSetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16301,7 +16301,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'callableTimeSetId' when calling OutboundApi->GetOutboundCallabletimeset");
 
 
-			var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+			var localVarPath = "/outbound/callabletimesets/{callableTimeSetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16410,7 +16410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CallableTimeSetEntityListing> GetOutboundCallabletimesetsWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/callabletimesets";
+			var localVarPath = "/outbound/callabletimesets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16525,7 +16525,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CallableTimeSetEntityListing>> GetOutboundCallabletimesetsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/callabletimesets";
+			var localVarPath = "/outbound/callabletimesets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16631,7 +16631,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (callAnalysisSetId == null)
 				throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->GetOutboundCallanalysisresponseset");
 
-			var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+			var localVarPath = "/outbound/callanalysisresponsesets/{callAnalysisSetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16732,7 +16732,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'callAnalysisSetId' when calling OutboundApi->GetOutboundCallanalysisresponseset");
 
 
-			var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+			var localVarPath = "/outbound/callanalysisresponsesets/{callAnalysisSetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16841,7 +16841,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ResponseSetEntityListing> GetOutboundCallanalysisresponsesetsWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/callanalysisresponsesets";
+			var localVarPath = "/outbound/callanalysisresponsesets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16956,7 +16956,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ResponseSetEntityListing>> GetOutboundCallanalysisresponsesetsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/callanalysisresponsesets";
+			var localVarPath = "/outbound/callanalysisresponsesets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17062,7 +17062,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaign");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+			var localVarPath = "/outbound/campaigns/{campaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17163,7 +17163,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaign");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+			var localVarPath = "/outbound/campaigns/{campaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17263,7 +17263,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignAgentownedmappingpreviewResults");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results";
+			var localVarPath = "/outbound/campaigns/{campaignId}/agentownedmappingpreview/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17364,7 +17364,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignAgentownedmappingpreviewResults");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview/results";
+			var localVarPath = "/outbound/campaigns/{campaignId}/agentownedmappingpreview/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17464,7 +17464,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignDiagnostics");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/diagnostics";
+			var localVarPath = "/outbound/campaigns/{campaignId}/diagnostics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17565,7 +17565,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignDiagnostics");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/diagnostics";
+			var localVarPath = "/outbound/campaigns/{campaignId}/diagnostics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17665,7 +17665,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignInteractions");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/interactions";
+			var localVarPath = "/outbound/campaigns/{campaignId}/interactions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17766,7 +17766,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignInteractions");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/interactions";
+			var localVarPath = "/outbound/campaigns/{campaignId}/interactions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17878,7 +17878,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignLinedistribution");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/linedistribution";
+			var localVarPath = "/outbound/campaigns/{campaignId}/linedistribution";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17997,7 +17997,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignLinedistribution");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/linedistribution";
+			var localVarPath = "/outbound/campaigns/{campaignId}/linedistribution";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18103,7 +18103,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignProgress");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/progress";
+			var localVarPath = "/outbound/campaigns/{campaignId}/progress";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18204,7 +18204,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignProgress");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/progress";
+			var localVarPath = "/outbound/campaigns/{campaignId}/progress";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18308,7 +18308,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignSkillcombinations");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/skillcombinations";
+			var localVarPath = "/outbound/campaigns/{campaignId}/skillcombinations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18415,7 +18415,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignSkillcombinations");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/skillcombinations";
+			var localVarPath = "/outbound/campaigns/{campaignId}/skillcombinations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18517,7 +18517,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignStats");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/stats";
+			var localVarPath = "/outbound/campaigns/{campaignId}/stats";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18618,7 +18618,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignStats");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/stats";
+			var localVarPath = "/outbound/campaigns/{campaignId}/stats";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18718,7 +18718,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignRuleId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignRuleId' when calling OutboundApi->GetOutboundCampaignrule");
 
-			var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+			var localVarPath = "/outbound/campaignrules/{campaignRuleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18819,7 +18819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignRuleId' when calling OutboundApi->GetOutboundCampaignrule");
 
 
-			var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+			var localVarPath = "/outbound/campaignrules/{campaignRuleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18928,7 +18928,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CampaignRuleEntityListing> GetOutboundCampaignrulesWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/campaignrules";
+			var localVarPath = "/outbound/campaignrules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19043,7 +19043,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CampaignRuleEntityListing>> GetOutboundCampaignrulesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/campaignrules";
+			var localVarPath = "/outbound/campaignrules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19170,7 +19170,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CampaignEntityListing> GetOutboundCampaignsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/campaigns";
+			var localVarPath = "/outbound/campaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19303,7 +19303,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CampaignEntityListing>> GetOutboundCampaignsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string contactListId = null, string dncListIds = null, string distributionQueueId = null, string edgeGroupId = null, string callAnalysisResponseSetId = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/campaigns";
+			var localVarPath = "/outbound/campaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19424,7 +19424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CommonCampaignEntityListing> GetOutboundCampaignsAllWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/campaigns/all";
+			var localVarPath = "/outbound/campaigns/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19539,7 +19539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CommonCampaignEntityListing>> GetOutboundCampaignsAllAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/campaigns/all";
+			var localVarPath = "/outbound/campaigns/all";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19654,7 +19654,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CommonCampaignDivisionViewEntityListing> GetOutboundCampaignsAllDivisionviewsWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/campaigns/all/divisionviews";
+			var localVarPath = "/outbound/campaigns/all/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19769,7 +19769,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CommonCampaignDivisionViewEntityListing>> GetOutboundCampaignsAllDivisionviewsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, List<string> id = null, string name = null, List<string> divisionId = null, List<string> mediaType = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/campaigns/all/divisionviews";
+			var localVarPath = "/outbound/campaigns/all/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19875,7 +19875,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignsDivisionview");
 
-			var localVarPath = "/api/v2/outbound/campaigns/divisionviews/{campaignId}";
+			var localVarPath = "/outbound/campaigns/divisionviews/{campaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19976,7 +19976,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundCampaignsDivisionview");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/divisionviews/{campaignId}";
+			var localVarPath = "/outbound/campaigns/divisionviews/{campaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20085,7 +20085,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CampaignDivisionViewListing> GetOutboundCampaignsDivisionviewsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/campaigns/divisionviews";
+			var localVarPath = "/outbound/campaigns/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20200,7 +20200,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CampaignDivisionViewListing>> GetOutboundCampaignsDivisionviewsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/campaigns/divisionviews";
+			var localVarPath = "/outbound/campaigns/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20310,7 +20310,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlist");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20417,7 +20417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlist");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20524,7 +20524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactId == null)
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->GetOutboundContactlistContact");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/{contactId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20632,7 +20632,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactId' when calling OutboundApi->GetOutboundContactlistContact");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/{contactId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20738,7 +20738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling OutboundApi->GetOutboundContactlistContactsBulkJob");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs/{jobId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/bulk/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20846,7 +20846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling OutboundApi->GetOutboundContactlistContactsBulkJob");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs/{jobId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/bulk/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20947,7 +20947,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistContactsBulkJobs");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/bulk/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21048,7 +21048,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistContactsBulkJobs");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/jobs";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/bulk/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21150,7 +21150,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistExport");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/export";
+			var localVarPath = "/outbound/contactlists/{contactListId}/export";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21254,7 +21254,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistExport");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/export";
+			var localVarPath = "/outbound/contactlists/{contactListId}/export";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21355,7 +21355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistImportstatus");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/importstatus";
+			var localVarPath = "/outbound/contactlists/{contactListId}/importstatus";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21456,7 +21456,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistImportstatus");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/importstatus";
+			var localVarPath = "/outbound/contactlists/{contactListId}/importstatus";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21556,7 +21556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistTimezonemappingpreview");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/timezonemappingpreview";
+			var localVarPath = "/outbound/contactlists/{contactListId}/timezonemappingpreview";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21657,7 +21657,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistTimezonemappingpreview");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/timezonemappingpreview";
+			var localVarPath = "/outbound/contactlists/{contactListId}/timezonemappingpreview";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21757,7 +21757,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListFilterId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListFilterId' when calling OutboundApi->GetOutboundContactlistfilter");
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+			var localVarPath = "/outbound/contactlistfilters/{contactListFilterId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21858,7 +21858,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListFilterId' when calling OutboundApi->GetOutboundContactlistfilter");
 
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+			var localVarPath = "/outbound/contactlistfilters/{contactListFilterId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21969,7 +21969,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ContactListFilterEntityListing> GetOutboundContactlistfiltersWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters";
+			var localVarPath = "/outbound/contactlistfilters";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22087,7 +22087,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ContactListFilterEntityListing>> GetOutboundContactlistfiltersAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListId = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters";
+			var localVarPath = "/outbound/contactlistfilters";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22211,7 +22211,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ContactListEntityListing> GetOutboundContactlistsWithHttpInfo(bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/contactlists";
+			var localVarPath = "/outbound/contactlists";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22338,7 +22338,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ContactListEntityListing>> GetOutboundContactlistsAsyncWithHttpInfo(bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, List<string> id = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/contactlists";
+			var localVarPath = "/outbound/contactlists";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22452,7 +22452,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistsDivisionview");
 
-			var localVarPath = "/api/v2/outbound/contactlists/divisionviews/{contactListId}";
+			var localVarPath = "/outbound/contactlists/divisionviews/{contactListId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22559,7 +22559,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->GetOutboundContactlistsDivisionview");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/divisionviews/{contactListId}";
+			var localVarPath = "/outbound/contactlists/divisionviews/{contactListId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22674,7 +22674,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ContactListDivisionViewListing> GetOutboundContactlistsDivisionviewsWithHttpInfo(bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/contactlists/divisionviews";
+			var localVarPath = "/outbound/contactlists/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22795,7 +22795,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ContactListDivisionViewListing>> GetOutboundContactlistsDivisionviewsAsyncWithHttpInfo(bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, List<string> id = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/contactlists/divisionviews";
+			var localVarPath = "/outbound/contactlists/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22903,7 +22903,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListTemplateId' when calling OutboundApi->GetOutboundContactlisttemplate");
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates/{contactListTemplateId}";
+			var localVarPath = "/outbound/contactlisttemplates/{contactListTemplateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23004,7 +23004,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListTemplateId' when calling OutboundApi->GetOutboundContactlisttemplate");
 
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates/{contactListTemplateId}";
+			var localVarPath = "/outbound/contactlisttemplates/{contactListTemplateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23113,7 +23113,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ContactListTemplateEntityListing> GetOutboundContactlisttemplatesWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates";
+			var localVarPath = "/outbound/contactlisttemplates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23228,7 +23228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ContactListTemplateEntityListing>> GetOutboundContactlisttemplatesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates";
+			var localVarPath = "/outbound/contactlisttemplates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23334,7 +23334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (digitalRuleSetId == null)
 				throw new ApiException(400, "Missing required parameter 'digitalRuleSetId' when calling OutboundApi->GetOutboundDigitalruleset");
 
-			var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+			var localVarPath = "/outbound/digitalrulesets/{digitalRuleSetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23435,7 +23435,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'digitalRuleSetId' when calling OutboundApi->GetOutboundDigitalruleset");
 
 
-			var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+			var localVarPath = "/outbound/digitalrulesets/{digitalRuleSetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23542,7 +23542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DigitalRuleSetEntityListing> GetOutboundDigitalrulesetsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/digitalrulesets";
+			var localVarPath = "/outbound/digitalrulesets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23654,7 +23654,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DigitalRuleSetEntityListing>> GetOutboundDigitalrulesetsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, List<string> id = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/digitalrulesets";
+			var localVarPath = "/outbound/digitalrulesets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23763,7 +23763,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dncListId == null)
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetOutboundDnclist");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+			var localVarPath = "/outbound/dnclists/{dncListId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23870,7 +23870,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetOutboundDnclist");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+			var localVarPath = "/outbound/dnclists/{dncListId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23974,7 +23974,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dncListId == null)
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetOutboundDnclistExport");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/export";
+			var localVarPath = "/outbound/dnclists/{dncListId}/export";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24078,7 +24078,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetOutboundDnclistExport");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/export";
+			var localVarPath = "/outbound/dnclists/{dncListId}/export";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24179,7 +24179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dncListId == null)
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetOutboundDnclistImportstatus");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/importstatus";
+			var localVarPath = "/outbound/dnclists/{dncListId}/importstatus";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24280,7 +24280,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetOutboundDnclistImportstatus");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/importstatus";
+			var localVarPath = "/outbound/dnclists/{dncListId}/importstatus";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24397,7 +24397,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DncListEntityListing> GetOutboundDnclistsWithHttpInfo(bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/dnclists";
+			var localVarPath = "/outbound/dnclists";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24524,7 +24524,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DncListEntityListing>> GetOutboundDnclistsAsyncWithHttpInfo(bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string dncSourceType = null, List<string> divisionId = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/dnclists";
+			var localVarPath = "/outbound/dnclists";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24638,7 +24638,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dncListId == null)
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetOutboundDnclistsDivisionview");
 
-			var localVarPath = "/api/v2/outbound/dnclists/divisionviews/{dncListId}";
+			var localVarPath = "/outbound/dnclists/divisionviews/{dncListId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24745,7 +24745,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->GetOutboundDnclistsDivisionview");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/divisionviews/{dncListId}";
+			var localVarPath = "/outbound/dnclists/divisionviews/{dncListId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24862,7 +24862,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DncListDivisionViewListing> GetOutboundDnclistsDivisionviewsWithHttpInfo(bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/dnclists/divisionviews";
+			var localVarPath = "/outbound/dnclists/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24986,7 +24986,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DncListDivisionViewListing>> GetOutboundDnclistsDivisionviewsAsyncWithHttpInfo(bool? includeImportStatus = null, bool? includeSize = null, int? pageSize = null, int? pageNumber = null, string filterType = null, string name = null, string dncSourceType = null, List<string> id = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/dnclists/divisionviews";
+			var localVarPath = "/outbound/dnclists/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25095,7 +25095,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (eventId == null)
 				throw new ApiException(400, "Missing required parameter 'eventId' when calling OutboundApi->GetOutboundEvent");
 
-			var localVarPath = "/api/v2/outbound/events/{eventId}";
+			var localVarPath = "/outbound/events/{eventId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25196,7 +25196,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'eventId' when calling OutboundApi->GetOutboundEvent");
 
 
-			var localVarPath = "/api/v2/outbound/events/{eventId}";
+			var localVarPath = "/outbound/events/{eventId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25305,7 +25305,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DialerEventEntityListing> GetOutboundEventsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/events";
+			var localVarPath = "/outbound/events";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25420,7 +25420,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DialerEventEntityListing>> GetOutboundEventsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string filterType = null, string category = null, string level = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/events";
+			var localVarPath = "/outbound/events";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25526,7 +25526,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (fileSpecificationTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'fileSpecificationTemplateId' when calling OutboundApi->GetOutboundFilespecificationtemplate");
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+			var localVarPath = "/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25627,7 +25627,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'fileSpecificationTemplateId' when calling OutboundApi->GetOutboundFilespecificationtemplate");
 
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+			var localVarPath = "/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25736,7 +25736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FileSpecificationTemplateEntityListing> GetOutboundFilespecificationtemplatesWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates";
+			var localVarPath = "/outbound/filespecificationtemplates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25851,7 +25851,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FileSpecificationTemplateEntityListing>> GetOutboundFilespecificationtemplatesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates";
+			var localVarPath = "/outbound/filespecificationtemplates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25959,7 +25959,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (importTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'importTemplateId' when calling OutboundApi->GetOutboundImporttemplate");
 
-			var localVarPath = "/api/v2/outbound/importtemplates/{importTemplateId}";
+			var localVarPath = "/outbound/importtemplates/{importTemplateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26063,7 +26063,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'importTemplateId' when calling OutboundApi->GetOutboundImporttemplate");
 
 
-			var localVarPath = "/api/v2/outbound/importtemplates/{importTemplateId}";
+			var localVarPath = "/outbound/importtemplates/{importTemplateId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26166,7 +26166,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (importTemplateId == null)
 				throw new ApiException(400, "Missing required parameter 'importTemplateId' when calling OutboundApi->GetOutboundImporttemplateImportstatus");
 
-			var localVarPath = "/api/v2/outbound/importtemplates/{importTemplateId}/importstatus";
+			var localVarPath = "/outbound/importtemplates/{importTemplateId}/importstatus";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26270,7 +26270,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'importTemplateId' when calling OutboundApi->GetOutboundImporttemplateImportstatus");
 
 
-			var localVarPath = "/api/v2/outbound/importtemplates/{importTemplateId}/importstatus";
+			var localVarPath = "/outbound/importtemplates/{importTemplateId}/importstatus";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26384,7 +26384,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ImportTemplateEntityListing> GetOutboundImporttemplatesWithHttpInfo(bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/importtemplates";
+			var localVarPath = "/outbound/importtemplates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26505,7 +26505,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ImportTemplateEntityListing>> GetOutboundImporttemplatesAsyncWithHttpInfo(bool? includeImportStatus = null, int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null, string contactListTemplateId = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/importtemplates";
+			var localVarPath = "/outbound/importtemplates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26613,7 +26613,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messagingCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundMessagingcampaign");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26714,7 +26714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundMessagingcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26814,7 +26814,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messagingCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundMessagingcampaignDiagnostics");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/diagnostics";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}/diagnostics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26915,7 +26915,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundMessagingcampaignDiagnostics");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/diagnostics";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}/diagnostics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27015,7 +27015,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messagingCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundMessagingcampaignProgress");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}/progress";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27116,7 +27116,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundMessagingcampaignProgress");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/progress";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}/progress";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27237,7 +27237,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MessagingCampaignEntityListing> GetOutboundMessagingcampaignsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns";
+			var localVarPath = "/outbound/messagingcampaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27370,7 +27370,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignEntityListing>> GetOutboundMessagingcampaignsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string contactListId = null, List<string> divisionId = null, string type = null, string senderSmsPhoneNumber = null, List<string> id = null, string contentTemplateId = null, string campaignStatus = null, List<string> ruleSetIds = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns";
+			var localVarPath = "/outbound/messagingcampaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27482,7 +27482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messagingCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundMessagingcampaignsDivisionview");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId}";
+			var localVarPath = "/outbound/messagingcampaigns/divisionviews/{messagingCampaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27583,7 +27583,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundMessagingcampaignsDivisionview");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/divisionviews/{messagingCampaignId}";
+			var localVarPath = "/outbound/messagingcampaigns/divisionviews/{messagingCampaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27696,7 +27696,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MessagingCampaignDivisionViewEntityListing> GetOutboundMessagingcampaignsDivisionviewsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null, string contentTemplateId = null, string campaignStatus = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/divisionviews";
+			var localVarPath = "/outbound/messagingcampaigns/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27817,7 +27817,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignDivisionViewEntityListing>> GetOutboundMessagingcampaignsDivisionviewsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortOrder = null, string name = null, string type = null, List<string> id = null, string senderSmsPhoneNumber = null, string contentTemplateId = null, string campaignStatus = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/divisionviews";
+			var localVarPath = "/outbound/messagingcampaigns/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27925,7 +27925,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ruleSetId == null)
 				throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->GetOutboundRuleset");
 
-			var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+			var localVarPath = "/outbound/rulesets/{ruleSetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28026,7 +28026,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ruleSetId' when calling OutboundApi->GetOutboundRuleset");
 
 
-			var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+			var localVarPath = "/outbound/rulesets/{ruleSetId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28135,7 +28135,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<RuleSetEntityListing> GetOutboundRulesetsWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/rulesets";
+			var localVarPath = "/outbound/rulesets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28250,7 +28250,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<RuleSetEntityListing>> GetOutboundRulesetsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/rulesets";
+			var localVarPath = "/outbound/rulesets";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28356,7 +28356,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundSchedulesCampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+			var localVarPath = "/outbound/schedules/campaigns/{campaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28457,7 +28457,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundSchedulesCampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+			var localVarPath = "/outbound/schedules/campaigns/{campaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28552,7 +28552,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<List<CampaignSchedule>> GetOutboundSchedulesCampaignsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/schedules/campaigns";
+			var localVarPath = "/outbound/schedules/campaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28646,7 +28646,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<List<CampaignSchedule>>> GetOutboundSchedulesCampaignsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/schedules/campaigns";
+			var localVarPath = "/outbound/schedules/campaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28745,7 +28745,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (emailCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling OutboundApi->GetOutboundSchedulesEmailcampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+			var localVarPath = "/outbound/schedules/emailcampaigns/{emailCampaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28846,7 +28846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'emailCampaignId' when calling OutboundApi->GetOutboundSchedulesEmailcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+			var localVarPath = "/outbound/schedules/emailcampaigns/{emailCampaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28941,7 +28941,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmailCampaignScheduleEntityListing> GetOutboundSchedulesEmailcampaignsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/schedules/emailcampaigns";
+			var localVarPath = "/outbound/schedules/emailcampaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29035,7 +29035,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmailCampaignScheduleEntityListing>> GetOutboundSchedulesEmailcampaignsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/schedules/emailcampaigns";
+			var localVarPath = "/outbound/schedules/emailcampaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29134,7 +29134,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messagingCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundSchedulesMessagingcampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29235,7 +29235,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->GetOutboundSchedulesMessagingcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29330,7 +29330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<MessagingCampaignScheduleEntityListing> GetOutboundSchedulesMessagingcampaignsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns";
+			var localVarPath = "/outbound/schedules/messagingcampaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29424,7 +29424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<MessagingCampaignScheduleEntityListing>> GetOutboundSchedulesMessagingcampaignsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns";
+			var localVarPath = "/outbound/schedules/messagingcampaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29523,7 +29523,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sequenceId == null)
 				throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetOutboundSchedulesSequence");
 
-			var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+			var localVarPath = "/outbound/schedules/sequences/{sequenceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29624,7 +29624,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetOutboundSchedulesSequence");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+			var localVarPath = "/outbound/schedules/sequences/{sequenceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29719,7 +29719,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<List<SequenceSchedule>> GetOutboundSchedulesSequencesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/schedules/sequences";
+			var localVarPath = "/outbound/schedules/sequences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29813,7 +29813,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<List<SequenceSchedule>>> GetOutboundSchedulesSequencesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/schedules/sequences";
+			var localVarPath = "/outbound/schedules/sequences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29912,7 +29912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (whatsAppCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'whatsAppCampaignId' when calling OutboundApi->GetOutboundSchedulesWhatsappcampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+			var localVarPath = "/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30013,7 +30013,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'whatsAppCampaignId' when calling OutboundApi->GetOutboundSchedulesWhatsappcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+			var localVarPath = "/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30108,7 +30108,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<WhatsAppCampaignScheduleEntityListing> GetOutboundSchedulesWhatsappcampaignsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns";
+			var localVarPath = "/outbound/schedules/whatsappcampaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30202,7 +30202,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<WhatsAppCampaignScheduleEntityListing>> GetOutboundSchedulesWhatsappcampaignsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns";
+			var localVarPath = "/outbound/schedules/whatsappcampaigns";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30301,7 +30301,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (sequenceId == null)
 				throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetOutboundSequence");
 
-			var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+			var localVarPath = "/outbound/sequences/{sequenceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30402,7 +30402,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'sequenceId' when calling OutboundApi->GetOutboundSequence");
 
 
-			var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+			var localVarPath = "/outbound/sequences/{sequenceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30511,7 +30511,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CampaignSequenceEntityListing> GetOutboundSequencesWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/sequences";
+			var localVarPath = "/outbound/sequences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30626,7 +30626,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CampaignSequenceEntityListing>> GetOutboundSequencesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/outbound/sequences";
+			var localVarPath = "/outbound/sequences";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30727,7 +30727,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<OutboundSettings> GetOutboundSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/settings";
+			var localVarPath = "/outbound/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30821,7 +30821,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<OutboundSettings>> GetOutboundSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/settings";
+			var localVarPath = "/outbound/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30915,7 +30915,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<WrapUpCodeMapping> GetOutboundWrapupcodemappingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/wrapupcodemappings";
+			var localVarPath = "/outbound/wrapupcodemappings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31009,7 +31009,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<WrapUpCodeMapping>> GetOutboundWrapupcodemappingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/outbound/wrapupcodemappings";
+			var localVarPath = "/outbound/wrapupcodemappings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31112,7 +31112,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundCampaign");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+			var localVarPath = "/outbound/campaigns/{campaignId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31224,7 +31224,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundCampaign");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+			var localVarPath = "/outbound/campaigns/{campaignId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31334,7 +31334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistCustomexclusioncolumns");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns";
+			var localVarPath = "/outbound/dnclists/{dncListId}/customexclusioncolumns";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31446,7 +31446,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistCustomexclusioncolumns");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/customexclusioncolumns";
+			var localVarPath = "/outbound/dnclists/{dncListId}/customexclusioncolumns";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31556,7 +31556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistEmailaddresses");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/emailaddresses";
+			var localVarPath = "/outbound/dnclists/{dncListId}/emailaddresses";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31668,7 +31668,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistEmailaddresses");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/emailaddresses";
+			var localVarPath = "/outbound/dnclists/{dncListId}/emailaddresses";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31778,7 +31778,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistPhonenumbers");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers";
+			var localVarPath = "/outbound/dnclists/{dncListId}/phonenumbers";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31890,7 +31890,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistPhonenumbers");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers";
+			var localVarPath = "/outbound/dnclists/{dncListId}/phonenumbers";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32000,7 +32000,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistWhatsappnumbers");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/whatsappnumbers";
+			var localVarPath = "/outbound/dnclists/{dncListId}/whatsappnumbers";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32112,7 +32112,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundDnclistWhatsappnumbers");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/whatsappnumbers";
+			var localVarPath = "/outbound/dnclists/{dncListId}/whatsappnumbers";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32219,7 +32219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundSettings");
 
-			var localVarPath = "/api/v2/outbound/settings";
+			var localVarPath = "/outbound/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32327,7 +32327,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PatchOutboundSettings");
 
 
-			var localVarPath = "/api/v2/outbound/settings";
+			var localVarPath = "/outbound/settings";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32433,7 +32433,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundAttemptlimits");
 
-			var localVarPath = "/api/v2/outbound/attemptlimits";
+			var localVarPath = "/outbound/attemptlimits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32539,7 +32539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundAttemptlimits");
 
 
-			var localVarPath = "/api/v2/outbound/attemptlimits";
+			var localVarPath = "/outbound/attemptlimits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32644,7 +32644,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCallabletimesets");
 
-			var localVarPath = "/api/v2/outbound/callabletimesets";
+			var localVarPath = "/outbound/callabletimesets";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32750,7 +32750,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCallabletimesets");
 
 
-			var localVarPath = "/api/v2/outbound/callabletimesets";
+			var localVarPath = "/outbound/callabletimesets";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32855,7 +32855,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCallanalysisresponsesets");
 
-			var localVarPath = "/api/v2/outbound/callanalysisresponsesets";
+			var localVarPath = "/outbound/callanalysisresponsesets";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32961,7 +32961,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCallanalysisresponsesets");
 
 
-			var localVarPath = "/api/v2/outbound/callanalysisresponsesets";
+			var localVarPath = "/outbound/callanalysisresponsesets";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33066,7 +33066,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostOutboundCampaignAgentownedmappingpreview");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview";
+			var localVarPath = "/outbound/campaigns/{campaignId}/agentownedmappingpreview";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33167,7 +33167,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostOutboundCampaignAgentownedmappingpreview");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agentownedmappingpreview";
+			var localVarPath = "/outbound/campaigns/{campaignId}/agentownedmappingpreview";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33272,7 +33272,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaignCallbackSchedule");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/callback/schedule";
+			var localVarPath = "/outbound/campaigns/{campaignId}/callback/schedule";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33385,7 +33385,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaignCallbackSchedule");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/callback/schedule";
+			var localVarPath = "/outbound/campaigns/{campaignId}/callback/schedule";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33490,7 +33490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostOutboundCampaignStart");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/start";
+			var localVarPath = "/outbound/campaigns/{campaignId}/start";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33590,7 +33590,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostOutboundCampaignStart");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/start";
+			var localVarPath = "/outbound/campaigns/{campaignId}/start";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33689,7 +33689,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (campaignId == null)
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostOutboundCampaignStop");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/stop";
+			var localVarPath = "/outbound/campaigns/{campaignId}/stop";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33789,7 +33789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->PostOutboundCampaignStop");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/stop";
+			var localVarPath = "/outbound/campaigns/{campaignId}/stop";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33889,7 +33889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaignrules");
 
-			var localVarPath = "/api/v2/outbound/campaignrules";
+			var localVarPath = "/outbound/campaignrules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33995,7 +33995,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaignrules");
 
 
-			var localVarPath = "/api/v2/outbound/campaignrules";
+			var localVarPath = "/outbound/campaignrules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34102,7 +34102,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaigns");
 
-			var localVarPath = "/api/v2/outbound/campaigns";
+			var localVarPath = "/outbound/campaigns";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34211,7 +34211,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaigns");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns";
+			var localVarPath = "/outbound/campaigns";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34317,7 +34317,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaignsPerformanceQuery");
 
-			var localVarPath = "/api/v2/outbound/campaigns/performance/query";
+			var localVarPath = "/outbound/campaigns/performance/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34423,7 +34423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaignsPerformanceQuery");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/performance/query";
+			var localVarPath = "/outbound/campaigns/performance/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34528,7 +34528,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaignsProgress");
 
-			var localVarPath = "/api/v2/outbound/campaigns/progress";
+			var localVarPath = "/outbound/campaigns/progress";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34634,7 +34634,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundCampaignsProgress");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/progress";
+			var localVarPath = "/outbound/campaigns/progress";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34738,7 +34738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistClear");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/clear";
+			var localVarPath = "/outbound/contactlists/{contactListId}/clear";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34838,7 +34838,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistClear");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/clear";
+			var localVarPath = "/outbound/contactlists/{contactListId}/clear";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34949,7 +34949,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContacts");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35071,7 +35071,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContacts");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35185,7 +35185,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsBulk");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35298,7 +35298,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsBulk");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/bulk";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35409,7 +35409,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsBulkRemove");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/remove";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/bulk/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35522,7 +35522,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsBulkRemove");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/remove";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/bulk/remove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35633,7 +35633,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsBulkUpdate");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/update";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/bulk/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35746,7 +35746,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsBulkUpdate");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/bulk/update";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/bulk/update";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35857,7 +35857,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsSearch");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/search";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35970,7 +35970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistContactsSearch");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/search";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36078,7 +36078,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contactListId == null)
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistExport");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/export";
+			var localVarPath = "/outbound/contactlists/{contactListId}/export";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36187,7 +36187,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contactListId' when calling OutboundApi->PostOutboundContactlistExport");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/export";
+			var localVarPath = "/outbound/contactlists/{contactListId}/export";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36293,7 +36293,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfilters");
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters";
+			var localVarPath = "/outbound/contactlistfilters";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36399,7 +36399,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfilters");
 
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters";
+			var localVarPath = "/outbound/contactlistfilters";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36504,7 +36504,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfiltersBulkRetrieve");
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters/bulk/retrieve";
+			var localVarPath = "/outbound/contactlistfilters/bulk/retrieve";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36610,7 +36610,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfiltersBulkRetrieve");
 
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters/bulk/retrieve";
+			var localVarPath = "/outbound/contactlistfilters/bulk/retrieve";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36715,7 +36715,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfiltersPreview");
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters/preview";
+			var localVarPath = "/outbound/contactlistfilters/preview";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36821,7 +36821,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlistfiltersPreview");
 
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters/preview";
+			var localVarPath = "/outbound/contactlistfilters/preview";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36926,7 +36926,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlists");
 
-			var localVarPath = "/api/v2/outbound/contactlists";
+			var localVarPath = "/outbound/contactlists";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37032,7 +37032,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlists");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists";
+			var localVarPath = "/outbound/contactlists";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37137,7 +37137,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlisttemplates");
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates";
+			var localVarPath = "/outbound/contactlisttemplates";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37243,7 +37243,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlisttemplates");
 
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates";
+			var localVarPath = "/outbound/contactlisttemplates";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37348,7 +37348,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlisttemplatesBulkAdd");
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates/bulk/add";
+			var localVarPath = "/outbound/contactlisttemplates/bulk/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37454,7 +37454,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlisttemplatesBulkAdd");
 
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates/bulk/add";
+			var localVarPath = "/outbound/contactlisttemplates/bulk/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37559,7 +37559,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlisttemplatesBulkRetrieve");
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates/bulk/retrieve";
+			var localVarPath = "/outbound/contactlisttemplates/bulk/retrieve";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37665,7 +37665,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundContactlisttemplatesBulkRetrieve");
 
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates/bulk/retrieve";
+			var localVarPath = "/outbound/contactlisttemplates/bulk/retrieve";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37769,7 +37769,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (conversationId == null)
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling OutboundApi->PostOutboundConversationDnc");
 
-			var localVarPath = "/api/v2/outbound/conversations/{conversationId}/dnc";
+			var localVarPath = "/outbound/conversations/{conversationId}/dnc";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37869,7 +37869,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'conversationId' when calling OutboundApi->PostOutboundConversationDnc");
 
 
-			var localVarPath = "/api/v2/outbound/conversations/{conversationId}/dnc";
+			var localVarPath = "/outbound/conversations/{conversationId}/dnc";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37969,7 +37969,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundDigitalrulesets");
 
-			var localVarPath = "/api/v2/outbound/digitalrulesets";
+			var localVarPath = "/outbound/digitalrulesets";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38075,7 +38075,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundDigitalrulesets");
 
 
-			var localVarPath = "/api/v2/outbound/digitalrulesets";
+			var localVarPath = "/outbound/digitalrulesets";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38184,7 +38184,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundDnclistEmailaddresses");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/emailaddresses";
+			var localVarPath = "/outbound/dnclists/{dncListId}/emailaddresses";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38296,7 +38296,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundDnclistEmailaddresses");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/emailaddresses";
+			var localVarPath = "/outbound/dnclists/{dncListId}/emailaddresses";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38402,7 +38402,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dncListId == null)
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostOutboundDnclistExport");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/export";
+			var localVarPath = "/outbound/dnclists/{dncListId}/export";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38503,7 +38503,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dncListId' when calling OutboundApi->PostOutboundDnclistExport");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/export";
+			var localVarPath = "/outbound/dnclists/{dncListId}/export";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38609,7 +38609,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundDnclistPhonenumbers");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers";
+			var localVarPath = "/outbound/dnclists/{dncListId}/phonenumbers";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38724,7 +38724,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundDnclistPhonenumbers");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}/phonenumbers";
+			var localVarPath = "/outbound/dnclists/{dncListId}/phonenumbers";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38831,7 +38831,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundDnclists");
 
-			var localVarPath = "/api/v2/outbound/dnclists";
+			var localVarPath = "/outbound/dnclists";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38937,7 +38937,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundDnclists");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists";
+			var localVarPath = "/outbound/dnclists";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39042,7 +39042,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundFilespecificationtemplates");
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates";
+			var localVarPath = "/outbound/filespecificationtemplates";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39148,7 +39148,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundFilespecificationtemplates");
 
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates";
+			var localVarPath = "/outbound/filespecificationtemplates";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39253,7 +39253,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundImporttemplates");
 
-			var localVarPath = "/api/v2/outbound/importtemplates";
+			var localVarPath = "/outbound/importtemplates";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39359,7 +39359,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundImporttemplates");
 
 
-			var localVarPath = "/api/v2/outbound/importtemplates";
+			var localVarPath = "/outbound/importtemplates";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39464,7 +39464,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundImporttemplatesBulkAdd");
 
-			var localVarPath = "/api/v2/outbound/importtemplates/bulk/add";
+			var localVarPath = "/outbound/importtemplates/bulk/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39570,7 +39570,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundImporttemplatesBulkAdd");
 
 
-			var localVarPath = "/api/v2/outbound/importtemplates/bulk/add";
+			var localVarPath = "/outbound/importtemplates/bulk/add";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39674,7 +39674,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messagingCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->PostOutboundMessagingcampaignStart");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/start";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}/start";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39774,7 +39774,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->PostOutboundMessagingcampaignStart");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/start";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}/start";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39873,7 +39873,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (messagingCampaignId == null)
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->PostOutboundMessagingcampaignStop");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/stop";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}/stop";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39973,7 +39973,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'messagingCampaignId' when calling OutboundApi->PostOutboundMessagingcampaignStop");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}/stop";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}/stop";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40073,7 +40073,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundMessagingcampaigns");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns";
+			var localVarPath = "/outbound/messagingcampaigns";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40179,7 +40179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundMessagingcampaigns");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns";
+			var localVarPath = "/outbound/messagingcampaigns";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40284,7 +40284,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundMessagingcampaignsProgress");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/progress";
+			var localVarPath = "/outbound/messagingcampaigns/progress";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40390,7 +40390,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundMessagingcampaignsProgress");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/progress";
+			var localVarPath = "/outbound/messagingcampaigns/progress";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40495,7 +40495,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundRulesets");
 
-			var localVarPath = "/api/v2/outbound/rulesets";
+			var localVarPath = "/outbound/rulesets";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40601,7 +40601,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundRulesets");
 
 
-			var localVarPath = "/api/v2/outbound/rulesets";
+			var localVarPath = "/outbound/rulesets";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40706,7 +40706,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundSequences");
 
-			var localVarPath = "/api/v2/outbound/sequences";
+			var localVarPath = "/outbound/sequences";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40812,7 +40812,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PostOutboundSequences");
 
 
-			var localVarPath = "/api/v2/outbound/sequences";
+			var localVarPath = "/outbound/sequences";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40922,7 +40922,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundAttemptlimit");
 
-			var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+			var localVarPath = "/outbound/attemptlimits/{attemptLimitsId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41035,7 +41035,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundAttemptlimit");
 
 
-			var localVarPath = "/api/v2/outbound/attemptlimits/{attemptLimitsId}";
+			var localVarPath = "/outbound/attemptlimits/{attemptLimitsId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41146,7 +41146,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundCallabletimeset");
 
-			var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+			var localVarPath = "/outbound/callabletimesets/{callableTimeSetId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41259,7 +41259,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundCallabletimeset");
 
 
-			var localVarPath = "/api/v2/outbound/callabletimesets/{callableTimeSetId}";
+			var localVarPath = "/outbound/callabletimesets/{callableTimeSetId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41370,7 +41370,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundCallanalysisresponseset");
 
-			var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+			var localVarPath = "/outbound/callanalysisresponsesets/{callAnalysisSetId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41483,7 +41483,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundCallanalysisresponseset");
 
 
-			var localVarPath = "/api/v2/outbound/callanalysisresponsesets/{callAnalysisSetId}";
+			var localVarPath = "/outbound/callanalysisresponsesets/{callAnalysisSetId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41596,7 +41596,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundCampaign");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+			var localVarPath = "/outbound/campaigns/{campaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41712,7 +41712,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundCampaign");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}";
+			var localVarPath = "/outbound/campaigns/{campaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41829,7 +41829,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundCampaignAgent");
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agents/{userId}";
+			var localVarPath = "/outbound/campaigns/{campaignId}/agents/{userId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -41949,7 +41949,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundCampaignAgent");
 
 
-			var localVarPath = "/api/v2/outbound/campaigns/{campaignId}/agents/{userId}";
+			var localVarPath = "/outbound/campaigns/{campaignId}/agents/{userId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42061,7 +42061,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundCampaignrule");
 
-			var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+			var localVarPath = "/outbound/campaignrules/{campaignRuleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42174,7 +42174,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundCampaignrule");
 
 
-			var localVarPath = "/api/v2/outbound/campaignrules/{campaignRuleId}";
+			var localVarPath = "/outbound/campaignrules/{campaignRuleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42285,7 +42285,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundContactlist");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42398,7 +42398,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundContactlist");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42514,7 +42514,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundContactlistContact");
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/{contactId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42634,7 +42634,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundContactlistContact");
 
 
-			var localVarPath = "/api/v2/outbound/contactlists/{contactListId}/contacts/{contactId}";
+			var localVarPath = "/outbound/contactlists/{contactListId}/contacts/{contactId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42746,7 +42746,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundContactlistfilter");
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+			var localVarPath = "/outbound/contactlistfilters/{contactListFilterId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42859,7 +42859,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundContactlistfilter");
 
 
-			var localVarPath = "/api/v2/outbound/contactlistfilters/{contactListFilterId}";
+			var localVarPath = "/outbound/contactlistfilters/{contactListFilterId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -42970,7 +42970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundContactlisttemplate");
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates/{contactListTemplateId}";
+			var localVarPath = "/outbound/contactlisttemplates/{contactListTemplateId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43083,7 +43083,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundContactlisttemplate");
 
 
-			var localVarPath = "/api/v2/outbound/contactlisttemplates/{contactListTemplateId}";
+			var localVarPath = "/outbound/contactlisttemplates/{contactListTemplateId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43194,7 +43194,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundDigitalruleset");
 
-			var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+			var localVarPath = "/outbound/digitalrulesets/{digitalRuleSetId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43307,7 +43307,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundDigitalruleset");
 
 
-			var localVarPath = "/api/v2/outbound/digitalrulesets/{digitalRuleSetId}";
+			var localVarPath = "/outbound/digitalrulesets/{digitalRuleSetId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43418,7 +43418,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundDnclist");
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+			var localVarPath = "/outbound/dnclists/{dncListId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43531,7 +43531,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundDnclist");
 
 
-			var localVarPath = "/api/v2/outbound/dnclists/{dncListId}";
+			var localVarPath = "/outbound/dnclists/{dncListId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43642,7 +43642,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundFilespecificationtemplate");
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+			var localVarPath = "/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43755,7 +43755,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundFilespecificationtemplate");
 
 
-			var localVarPath = "/api/v2/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
+			var localVarPath = "/outbound/filespecificationtemplates/{fileSpecificationTemplateId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43866,7 +43866,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundImporttemplate");
 
-			var localVarPath = "/api/v2/outbound/importtemplates/{importTemplateId}";
+			var localVarPath = "/outbound/importtemplates/{importTemplateId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -43979,7 +43979,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundImporttemplate");
 
 
-			var localVarPath = "/api/v2/outbound/importtemplates/{importTemplateId}";
+			var localVarPath = "/outbound/importtemplates/{importTemplateId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44090,7 +44090,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundMessagingcampaign");
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44203,7 +44203,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundMessagingcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44314,7 +44314,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundRuleset");
 
-			var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+			var localVarPath = "/outbound/rulesets/{ruleSetId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44427,7 +44427,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundRuleset");
 
 
-			var localVarPath = "/api/v2/outbound/rulesets/{ruleSetId}";
+			var localVarPath = "/outbound/rulesets/{ruleSetId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44538,7 +44538,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesCampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+			var localVarPath = "/outbound/schedules/campaigns/{campaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44651,7 +44651,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesCampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/campaigns/{campaignId}";
+			var localVarPath = "/outbound/schedules/campaigns/{campaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44762,7 +44762,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesEmailcampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+			var localVarPath = "/outbound/schedules/emailcampaigns/{emailCampaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44875,7 +44875,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesEmailcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/emailcampaigns/{emailCampaignId}";
+			var localVarPath = "/outbound/schedules/emailcampaigns/{emailCampaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -44986,7 +44986,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesMessagingcampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45099,7 +45099,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesMessagingcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
+			var localVarPath = "/outbound/schedules/messagingcampaigns/{messagingCampaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45210,7 +45210,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesSequence");
 
-			var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+			var localVarPath = "/outbound/schedules/sequences/{sequenceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45323,7 +45323,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesSequence");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/sequences/{sequenceId}";
+			var localVarPath = "/outbound/schedules/sequences/{sequenceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45434,7 +45434,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesWhatsappcampaign");
 
-			var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+			var localVarPath = "/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45547,7 +45547,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSchedulesWhatsappcampaign");
 
 
-			var localVarPath = "/api/v2/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
+			var localVarPath = "/outbound/schedules/whatsappcampaigns/{whatsAppCampaignId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45658,7 +45658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSequence");
 
-			var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+			var localVarPath = "/outbound/sequences/{sequenceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45771,7 +45771,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundSequence");
 
 
-			var localVarPath = "/api/v2/outbound/sequences/{sequenceId}";
+			var localVarPath = "/outbound/sequences/{sequenceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45877,7 +45877,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundWrapupcodemappings");
 
-			var localVarPath = "/api/v2/outbound/wrapupcodemappings";
+			var localVarPath = "/outbound/wrapupcodemappings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -45983,7 +45983,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OutboundApi->PutOutboundWrapupcodemappings");
 
 
-			var localVarPath = "/api/v2/outbound/wrapupcodemappings";
+			var localVarPath = "/outbound/wrapupcodemappings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

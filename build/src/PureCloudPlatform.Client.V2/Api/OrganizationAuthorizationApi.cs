@@ -2642,7 +2642,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustee");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2742,7 +2742,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustee");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2846,7 +2846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeCloneduser");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/clonedusers/{trusteeUserId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2953,7 +2953,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeCloneduser");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/clonedusers/{trusteeUserId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3058,7 +3058,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroup");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3165,7 +3165,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroup");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3270,7 +3270,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroupRoles");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3377,7 +3377,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeGroupRoles");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3482,7 +3482,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeUser");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3589,7 +3589,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeUser");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3694,7 +3694,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeUserRoles");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3801,7 +3801,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrusteeUserRoles");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3903,7 +3903,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustees");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees";
+			var localVarPath = "/orgauthorization/trustees";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4005,7 +4005,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustees");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees";
+			var localVarPath = "/orgauthorization/trustees";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4104,7 +4104,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trustorOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustor");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4204,7 +4204,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustor");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4308,7 +4308,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustorCloneduser");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4415,7 +4415,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustorCloneduser");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4520,7 +4520,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trustorGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustorGroup");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4627,7 +4627,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustorGroup");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4732,7 +4732,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustorUser");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4839,7 +4839,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustorUser");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4941,7 +4941,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustors");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors";
+			var localVarPath = "/orgauthorization/trustors";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5043,7 +5043,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling OrganizationAuthorizationApi->DeleteOrgauthorizationTrustors");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors";
+			var localVarPath = "/orgauthorization/trustors";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5143,7 +5143,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (pairingId == null)
 				throw new ApiException(400, "Missing required parameter 'pairingId' when calling OrganizationAuthorizationApi->GetOrgauthorizationPairing");
 
-			var localVarPath = "/api/v2/orgauthorization/pairings/{pairingId}";
+			var localVarPath = "/orgauthorization/pairings/{pairingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5244,7 +5244,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'pairingId' when calling OrganizationAuthorizationApi->GetOrgauthorizationPairing");
 
 
-			var localVarPath = "/api/v2/orgauthorization/pairings/{pairingId}";
+			var localVarPath = "/orgauthorization/pairings/{pairingId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5344,7 +5344,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustee");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5445,7 +5445,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustee");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5545,7 +5545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeClonedusers");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/clonedusers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5646,7 +5646,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeClonedusers");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/clonedusers";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/clonedusers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5751,7 +5751,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroup");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5859,7 +5859,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroup");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5965,7 +5965,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroupRoles");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6073,7 +6073,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroupRoles");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6178,7 +6178,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroups");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6285,7 +6285,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeGroups");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6392,7 +6392,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeUser");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6500,7 +6500,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeUser");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6606,7 +6606,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeUserRoles");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6714,7 +6714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeUserRoles");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6819,7 +6819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeUsers");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6926,7 +6926,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrusteeUsers");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7027,7 +7027,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TrustEntityListing> GetOrgauthorizationTrusteesWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustees";
+			var localVarPath = "/orgauthorization/trustees";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7127,7 +7127,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TrustEntityListing>> GetOrgauthorizationTrusteesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustees";
+			var localVarPath = "/orgauthorization/trustees";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7223,7 +7223,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TrusteeReferenceList> GetOrgauthorizationTrusteesCareWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/care";
+			var localVarPath = "/orgauthorization/trustees/care";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7317,7 +7317,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TrusteeReferenceList>> GetOrgauthorizationTrusteesCareAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/care";
+			var localVarPath = "/orgauthorization/trustees/care";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7411,7 +7411,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Trustee> GetOrgauthorizationTrusteesDefaultWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/default";
+			var localVarPath = "/orgauthorization/trustees/default";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7505,7 +7505,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Trustee>> GetOrgauthorizationTrusteesDefaultAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/default";
+			var localVarPath = "/orgauthorization/trustees/default";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7604,7 +7604,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trustorOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustor");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7705,7 +7705,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustor");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7810,7 +7810,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorCloneduser");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7918,7 +7918,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorCloneduser");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8019,7 +8019,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trustorOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorClonedusers");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/clonedusers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8120,7 +8120,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorClonedusers");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/clonedusers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8225,7 +8225,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trustorGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorGroup");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8333,7 +8333,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorGroup");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8438,7 +8438,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trustorOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorGroups");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/groups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8545,7 +8545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorGroups");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/groups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8652,7 +8652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorUser");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8760,7 +8760,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorUser");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8865,7 +8865,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trustorOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorUsers");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/users";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8972,7 +8972,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling OrganizationAuthorizationApi->GetOrgauthorizationTrustorUsers");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/users";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/users";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9073,7 +9073,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TrustorEntityListing> GetOrgauthorizationTrustorsWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustors";
+			var localVarPath = "/orgauthorization/trustors";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9173,7 +9173,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TrustorEntityListing>> GetOrgauthorizationTrustorsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustors";
+			var localVarPath = "/orgauthorization/trustors";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9274,7 +9274,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationPairings");
 
-			var localVarPath = "/api/v2/orgauthorization/pairings";
+			var localVarPath = "/orgauthorization/pairings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9380,7 +9380,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationPairings");
 
 
-			var localVarPath = "/api/v2/orgauthorization/pairings";
+			var localVarPath = "/orgauthorization/pairings";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9490,7 +9490,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrusteeGroups");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9603,7 +9603,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrusteeGroups");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9714,7 +9714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrusteeUsers");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9827,7 +9827,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrusteeUsers");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9933,7 +9933,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrustees");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees";
+			var localVarPath = "/orgauthorization/trustees";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10039,7 +10039,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrustees");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees";
+			var localVarPath = "/orgauthorization/trustees";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10152,7 +10152,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrusteesAudits");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/audits";
+			var localVarPath = "/orgauthorization/trustees/audits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10270,7 +10270,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrusteesAudits");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/audits";
+			var localVarPath = "/orgauthorization/trustees/audits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10382,7 +10382,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TrustEntityListing> PostOrgauthorizationTrusteesCareWithHttpInfo(bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null)
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/care";
+			var localVarPath = "/orgauthorization/trustees/care";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10488,7 +10488,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TrustEntityListing>> PostOrgauthorizationTrusteesCareAsyncWithHttpInfo(bool? assignDefaultRole = null, bool? autoExpire = null, bool? assignFullAccess = null, bool? allowTrustedUserAccess = null)
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/care";
+			var localVarPath = "/orgauthorization/trustees/care";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10590,7 +10590,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Trustee> PostOrgauthorizationTrusteesDefaultWithHttpInfo(bool? assignDefaultRole = null, bool? autoExpire = null)
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/default";
+			var localVarPath = "/orgauthorization/trustees/default";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10690,7 +10690,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Trustee>> PostOrgauthorizationTrusteesDefaultAsyncWithHttpInfo(bool? assignDefaultRole = null, bool? autoExpire = null)
 		{
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/default";
+			var localVarPath = "/orgauthorization/trustees/default";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10799,7 +10799,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrustorAudits");
 
-			var localVarPath = "/api/v2/orgauthorization/trustor/audits";
+			var localVarPath = "/orgauthorization/trustor/audits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10917,7 +10917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PostOrgauthorizationTrustorAudits");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustor/audits";
+			var localVarPath = "/orgauthorization/trustor/audits";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11031,7 +11031,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustee");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11144,7 +11144,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustee");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11260,7 +11260,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoledivisions");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roledivisions";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roledivisions";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11380,7 +11380,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoledivisions");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roledivisions";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roledivisions";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11497,7 +11497,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoles");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11617,7 +11617,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeGroupRoles");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/groups/{trusteeGroupId}/roles";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11734,7 +11734,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeUserRoledivisions");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11854,7 +11854,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeUserRoledivisions");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roledivisions";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11971,7 +11971,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeUserRoles");
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12091,7 +12091,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrusteeUserRoles");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
+			var localVarPath = "/orgauthorization/trustees/{trusteeOrgId}/users/{trusteeUserId}/roles";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12203,7 +12203,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustorCloneduser");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12311,7 +12311,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustorCloneduser");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/clonedusers/{trusteeUserId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12417,7 +12417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trustorGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustorGroup");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12525,7 +12525,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trustorGroupId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustorGroup");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/groups/{trustorGroupId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12631,7 +12631,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trusteeUserId == null)
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustorUser");
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12739,7 +12739,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trusteeUserId' when calling OrganizationAuthorizationApi->PutOrgauthorizationTrustorUser");
 
 
-			var localVarPath = "/api/v2/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
+			var localVarPath = "/orgauthorization/trustors/{trustorOrgId}/users/{trusteeUserId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

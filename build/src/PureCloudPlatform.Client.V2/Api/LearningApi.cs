@@ -2226,7 +2226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assignmentId == null)
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->DeleteLearningAssignment");
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}";
+			var localVarPath = "/learning/assignments/{assignmentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2326,7 +2326,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->DeleteLearningAssignment");
 
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}";
+			var localVarPath = "/learning/assignments/{assignmentId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2425,7 +2425,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (moduleId == null)
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->DeleteLearningModule");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}";
+			var localVarPath = "/learning/modules/{moduleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2525,7 +2525,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->DeleteLearningModule");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}";
+			var localVarPath = "/learning/modules/{moduleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2627,7 +2627,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assignmentId == null)
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->GetLearningAssignment");
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}";
+			var localVarPath = "/learning/assignments/{assignmentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2731,7 +2731,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->GetLearningAssignment");
 
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}";
+			var localVarPath = "/learning/assignments/{assignmentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2843,7 +2843,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (stepId == null)
 				throw new ApiException(400, "Missing required parameter 'stepId' when calling LearningApi->GetLearningAssignmentStep");
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}";
+			var localVarPath = "/learning/assignments/{assignmentId}/steps/{stepId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2960,7 +2960,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'stepId' when calling LearningApi->GetLearningAssignmentStep");
 
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}";
+			var localVarPath = "/learning/assignments/{assignmentId}/steps/{stepId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3089,7 +3089,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LearningAssignmentsDomainEntity> GetLearningAssignmentsWithHttpInfo(string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/learning/assignments";
+			var localVarPath = "/learning/assignments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3228,7 +3228,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsAsyncWithHttpInfo(string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> userId = null, List<string> types = null, List<string> states = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/learning/assignments";
+			var localVarPath = "/learning/assignments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3365,7 +3365,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LearningAssignmentsDomainEntity> GetLearningAssignmentsMeWithHttpInfo(string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/learning/assignments/me";
+			var localVarPath = "/learning/assignments/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3501,7 +3501,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentsDomainEntity>> GetLearningAssignmentsMeAsyncWithHttpInfo(string moduleId = null, string interval = null, string completionInterval = null, string overdue = null, int? pageSize = null, int? pageNumber = null, string pass = null, float? minPercentageScore = null, float? maxPercentageScore = null, string sortOrder = null, string sortBy = null, List<string> types = null, List<string> states = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/learning/assignments/me";
+			var localVarPath = "/learning/assignments/me";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3616,7 +3616,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (moduleId == null)
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->GetLearningModule");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}";
+			var localVarPath = "/learning/modules/{moduleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3720,7 +3720,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->GetLearningModule");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}";
+			var localVarPath = "/learning/modules/{moduleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3826,7 +3826,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling LearningApi->GetLearningModuleJob");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/jobs/{jobId}";
+			var localVarPath = "/learning/modules/{moduleId}/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -3934,7 +3934,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling LearningApi->GetLearningModuleJob");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/jobs/{jobId}";
+			var localVarPath = "/learning/modules/{moduleId}/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4035,7 +4035,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (moduleId == null)
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->GetLearningModulePreview");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/preview";
+			var localVarPath = "/learning/modules/{moduleId}/preview";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4136,7 +4136,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->GetLearningModulePreview");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/preview";
+			var localVarPath = "/learning/modules/{moduleId}/preview";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4236,7 +4236,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (moduleId == null)
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->GetLearningModuleRule");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/rule";
+			var localVarPath = "/learning/modules/{moduleId}/rule";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4337,7 +4337,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->GetLearningModuleRule");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/rule";
+			var localVarPath = "/learning/modules/{moduleId}/rule";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4444,7 +4444,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling LearningApi->GetLearningModuleVersion");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/versions/{versionId}";
+			var localVarPath = "/learning/modules/{moduleId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4555,7 +4555,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling LearningApi->GetLearningModuleVersion");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/versions/{versionId}";
+			var localVarPath = "/learning/modules/{moduleId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4674,7 +4674,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LearningModuleList> GetLearningModulesWithHttpInfo(bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
 		{
 
-			var localVarPath = "/api/v2/learning/modules";
+			var localVarPath = "/learning/modules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4801,7 +4801,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LearningModuleList>> GetLearningModulesAsyncWithHttpInfo(bool? isArchived = null, List<string> types = null, int? pageSize = null, int? pageNumber = null, string sortOrder = null, string sortBy = null, string searchTerm = null, List<string> expand = null, string isPublished = null, List<string> statuses = null, List<string> externalIds = null)
 		{
 
-			var localVarPath = "/api/v2/learning/modules";
+			var localVarPath = "/learning/modules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -4923,7 +4923,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (userIds == null)
 				throw new ApiException(400, "Missing required parameter 'userIds' when calling LearningApi->GetLearningModulesAssignments");
 
-			var localVarPath = "/api/v2/learning/modules/assignments";
+			var localVarPath = "/learning/modules/assignments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5042,7 +5042,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'userIds' when calling LearningApi->GetLearningModulesAssignments");
 
 
-			var localVarPath = "/api/v2/learning/modules/assignments";
+			var localVarPath = "/learning/modules/assignments";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5148,7 +5148,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (coverArtId == null)
 				throw new ApiException(400, "Missing required parameter 'coverArtId' when calling LearningApi->GetLearningModulesCoverartCoverArtId");
 
-			var localVarPath = "/api/v2/learning/modules/coverart/{coverArtId}";
+			var localVarPath = "/learning/modules/coverart/{coverArtId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5249,7 +5249,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'coverArtId' when calling LearningApi->GetLearningModulesCoverartCoverArtId");
 
 
-			var localVarPath = "/api/v2/learning/modules/coverart/{coverArtId}";
+			var localVarPath = "/learning/modules/coverart/{coverArtId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5349,7 +5349,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling LearningApi->GetLearningScheduleslotsJob");
 
-			var localVarPath = "/api/v2/learning/scheduleslots/jobs/{jobId}";
+			var localVarPath = "/learning/scheduleslots/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5450,7 +5450,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling LearningApi->GetLearningScheduleslotsJob");
 
 
-			var localVarPath = "/api/v2/learning/scheduleslots/jobs/{jobId}";
+			var localVarPath = "/learning/scheduleslots/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5550,7 +5550,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scormId == null)
 				throw new ApiException(400, "Missing required parameter 'scormId' when calling LearningApi->GetLearningScormScormId");
 
-			var localVarPath = "/api/v2/learning/scorm/{scormId}";
+			var localVarPath = "/learning/scorm/{scormId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5651,7 +5651,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scormId' when calling LearningApi->GetLearningScormScormId");
 
 
-			var localVarPath = "/api/v2/learning/scorm/{scormId}";
+			var localVarPath = "/learning/scorm/{scormId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5753,7 +5753,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assignmentId == null)
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PatchLearningAssignment");
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}";
+			var localVarPath = "/learning/assignments/{assignmentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5862,7 +5862,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PatchLearningAssignment");
 
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}";
+			var localVarPath = "/learning/assignments/{assignmentId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5970,7 +5970,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assignmentId == null)
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PatchLearningAssignmentReschedule");
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}/reschedule";
+			var localVarPath = "/learning/assignments/{assignmentId}/reschedule";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6079,7 +6079,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PatchLearningAssignmentReschedule");
 
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}/reschedule";
+			var localVarPath = "/learning/assignments/{assignmentId}/reschedule";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6192,7 +6192,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (stepId == null)
 				throw new ApiException(400, "Missing required parameter 'stepId' when calling LearningApi->PatchLearningAssignmentStep");
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}";
+			var localVarPath = "/learning/assignments/{assignmentId}/steps/{stepId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6308,7 +6308,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'stepId' when calling LearningApi->PatchLearningAssignmentStep");
 
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}/steps/{stepId}";
+			var localVarPath = "/learning/assignments/{assignmentId}/steps/{stepId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6425,7 +6425,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PatchLearningModuleUserAssignments");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/users/{userId}/assignments";
+			var localVarPath = "/learning/modules/{moduleId}/users/{userId}/assignments";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6545,7 +6545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PatchLearningModuleUserAssignments");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/users/{userId}/assignments";
+			var localVarPath = "/learning/modules/{moduleId}/users/{userId}/assignments";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6652,7 +6652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningAssessmentsScoring");
 
-			var localVarPath = "/api/v2/learning/assessments/scoring";
+			var localVarPath = "/learning/assessments/scoring";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6758,7 +6758,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningAssessmentsScoring");
 
 
-			var localVarPath = "/api/v2/learning/assessments/scoring";
+			var localVarPath = "/learning/assessments/scoring";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6863,7 +6863,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assignmentId == null)
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PostLearningAssignmentReassign");
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}/reassign";
+			var localVarPath = "/learning/assignments/{assignmentId}/reassign";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6964,7 +6964,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PostLearningAssignmentReassign");
 
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}/reassign";
+			var localVarPath = "/learning/assignments/{assignmentId}/reassign";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7064,7 +7064,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (assignmentId == null)
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PostLearningAssignmentReset");
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}/reset";
+			var localVarPath = "/learning/assignments/{assignmentId}/reset";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7165,7 +7165,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'assignmentId' when calling LearningApi->PostLearningAssignmentReset");
 
 
-			var localVarPath = "/api/v2/learning/assignments/{assignmentId}/reset";
+			var localVarPath = "/learning/assignments/{assignmentId}/reset";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7262,7 +7262,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LearningAssignment> PostLearningAssignmentsWithHttpInfo(LearningAssignmentCreate body = null)
 		{
 
-			var localVarPath = "/api/v2/learning/assignments";
+			var localVarPath = "/learning/assignments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7364,7 +7364,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LearningAssignment>> PostLearningAssignmentsAsyncWithHttpInfo(LearningAssignmentCreate body = null)
 		{
 
-			var localVarPath = "/api/v2/learning/assignments";
+			var localVarPath = "/learning/assignments";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7469,7 +7469,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningAssignmentsAggregatesQuery");
 
-			var localVarPath = "/api/v2/learning/assignments/aggregates/query";
+			var localVarPath = "/learning/assignments/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7575,7 +7575,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningAssignmentsAggregatesQuery");
 
 
-			var localVarPath = "/api/v2/learning/assignments/aggregates/query";
+			var localVarPath = "/learning/assignments/aggregates/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7677,7 +7677,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LearningAssignmentBulkAddResponse> PostLearningAssignmentsBulkaddWithHttpInfo(List<LearningAssignmentItem> body = null)
 		{
 
-			var localVarPath = "/api/v2/learning/assignments/bulkadd";
+			var localVarPath = "/learning/assignments/bulkadd";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7779,7 +7779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentBulkAddResponse>> PostLearningAssignmentsBulkaddAsyncWithHttpInfo(List<LearningAssignmentItem> body = null)
 		{
 
-			var localVarPath = "/api/v2/learning/assignments/bulkadd";
+			var localVarPath = "/learning/assignments/bulkadd";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7881,7 +7881,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LearningAssignmentBulkRemoveResponse> PostLearningAssignmentsBulkremoveWithHttpInfo(List<string> body = null)
 		{
 
-			var localVarPath = "/api/v2/learning/assignments/bulkremove";
+			var localVarPath = "/learning/assignments/bulkremove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7983,7 +7983,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LearningAssignmentBulkRemoveResponse>> PostLearningAssignmentsBulkremoveAsyncWithHttpInfo(List<string> body = null)
 		{
 
-			var localVarPath = "/api/v2/learning/assignments/bulkremove";
+			var localVarPath = "/learning/assignments/bulkremove";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8093,7 +8093,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningModuleJobs");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/jobs";
+			var localVarPath = "/learning/modules/{moduleId}/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8206,7 +8206,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningModuleJobs");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/jobs";
+			var localVarPath = "/learning/modules/{moduleId}/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8314,7 +8314,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (moduleId == null)
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PostLearningModulePublish");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/publish";
+			var localVarPath = "/learning/modules/{moduleId}/publish";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8423,7 +8423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PostLearningModulePublish");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/publish";
+			var localVarPath = "/learning/modules/{moduleId}/publish";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8531,7 +8531,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (moduleId == null)
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PostLearningModuleRuleMigrate");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/rule/migrate";
+			var localVarPath = "/learning/modules/{moduleId}/rule/migrate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8634,7 +8634,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'moduleId' when calling LearningApi->PostLearningModuleRuleMigrate");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/rule/migrate";
+			var localVarPath = "/learning/modules/{moduleId}/rule/migrate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8734,7 +8734,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningModules");
 
-			var localVarPath = "/api/v2/learning/modules";
+			var localVarPath = "/learning/modules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8840,7 +8840,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningModules");
 
 
-			var localVarPath = "/api/v2/learning/modules";
+			var localVarPath = "/learning/modules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8955,7 +8955,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningRulesQuery");
 
-			var localVarPath = "/api/v2/learning/rules/query";
+			var localVarPath = "/learning/rules/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9075,7 +9075,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningRulesQuery");
 
 
-			var localVarPath = "/api/v2/learning/rules/query";
+			var localVarPath = "/learning/rules/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9182,7 +9182,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningScheduleslotsJobs");
 
-			var localVarPath = "/api/v2/learning/scheduleslots/jobs";
+			var localVarPath = "/learning/scheduleslots/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9288,7 +9288,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningScheduleslotsJobs");
 
 
-			var localVarPath = "/api/v2/learning/scheduleslots/jobs";
+			var localVarPath = "/learning/scheduleslots/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9393,7 +9393,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningScheduleslotsQuery");
 
-			var localVarPath = "/api/v2/learning/scheduleslots/query";
+			var localVarPath = "/learning/scheduleslots/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9499,7 +9499,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PostLearningScheduleslotsQuery");
 
 
-			var localVarPath = "/api/v2/learning/scheduleslots/query";
+			var localVarPath = "/learning/scheduleslots/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9601,7 +9601,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LearningScormUploadResponse> PostLearningScormWithHttpInfo(LearningScormUploadRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/learning/scorm";
+			var localVarPath = "/learning/scorm";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9703,7 +9703,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LearningScormUploadResponse>> PostLearningScormAsyncWithHttpInfo(LearningScormUploadRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/learning/scorm";
+			var localVarPath = "/learning/scorm";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9813,7 +9813,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PutLearningModule");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}";
+			var localVarPath = "/learning/modules/{moduleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9926,7 +9926,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PutLearningModule");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}";
+			var localVarPath = "/learning/modules/{moduleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10037,7 +10037,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PutLearningModulePreview");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/preview";
+			var localVarPath = "/learning/modules/{moduleId}/preview";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10150,7 +10150,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PutLearningModulePreview");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/preview";
+			var localVarPath = "/learning/modules/{moduleId}/preview";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10263,7 +10263,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PutLearningModuleRule");
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/rule";
+			var localVarPath = "/learning/modules/{moduleId}/rule";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10379,7 +10379,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling LearningApi->PutLearningModuleRule");
 
 
-			var localVarPath = "/api/v2/learning/modules/{moduleId}/rule";
+			var localVarPath = "/learning/modules/{moduleId}/rule";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -318,7 +318,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ServerDate> GetDateWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/date";
+			var localVarPath = "/date";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -412,7 +412,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ServerDate>> GetDateAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/date";
+			var localVarPath = "/date";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -506,7 +506,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<IpAddressRangeListing> GetIprangesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/ipranges";
+			var localVarPath = "/ipranges";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -600,7 +600,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<IpAddressRangeListing>> GetIprangesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/ipranges";
+			var localVarPath = "/ipranges";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -698,7 +698,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TimeZoneEntityListing> GetTimezonesWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/timezones";
+			var localVarPath = "/timezones";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -798,7 +798,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TimeZoneEntityListing>> GetTimezonesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/timezones";
+			var localVarPath = "/timezones";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -899,7 +899,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling UtilitiesApi->PostCertificateDetails");
 
-			var localVarPath = "/api/v2/certificate/details";
+			var localVarPath = "/certificate/details";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1005,7 +1005,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling UtilitiesApi->PostCertificateDetails");
 
 
-			var localVarPath = "/api/v2/certificate/details";
+			var localVarPath = "/certificate/details";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

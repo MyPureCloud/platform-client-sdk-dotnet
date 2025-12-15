@@ -445,7 +445,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (acceleratorId == null)
 				throw new ApiException(400, "Missing required parameter 'acceleratorId' when calling InfrastructureAsCodeApi->GetInfrastructureascodeAccelerator");
 
-			var localVarPath = "/api/v2/infrastructureascode/accelerators/{acceleratorId}";
+			var localVarPath = "/infrastructureascode/accelerators/{acceleratorId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -549,7 +549,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'acceleratorId' when calling InfrastructureAsCodeApi->GetInfrastructureascodeAccelerator");
 
 
-			var localVarPath = "/api/v2/infrastructureascode/accelerators/{acceleratorId}";
+			var localVarPath = "/infrastructureascode/accelerators/{acceleratorId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -665,7 +665,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AcceleratorList> GetInfrastructureascodeAcceleratorsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null)
 		{
 
-			var localVarPath = "/api/v2/infrastructureascode/accelerators";
+			var localVarPath = "/infrastructureascode/accelerators";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -789,7 +789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AcceleratorList>> GetInfrastructureascodeAcceleratorsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string origin = null, string type = null, string classification = null, string tags = null)
 		{
 
-			var localVarPath = "/api/v2/infrastructureascode/accelerators";
+			var localVarPath = "/infrastructureascode/accelerators";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -900,7 +900,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling InfrastructureAsCodeApi->GetInfrastructureascodeJob");
 
-			var localVarPath = "/api/v2/infrastructureascode/jobs/{jobId}";
+			var localVarPath = "/infrastructureascode/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1004,7 +1004,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling InfrastructureAsCodeApi->GetInfrastructureascodeJob");
 
 
-			var localVarPath = "/api/v2/infrastructureascode/jobs/{jobId}";
+			var localVarPath = "/infrastructureascode/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1114,7 +1114,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<InfrastructureascodeJob> GetInfrastructureascodeJobsWithHttpInfo(int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null)
 		{
 
-			var localVarPath = "/api/v2/infrastructureascode/jobs";
+			var localVarPath = "/infrastructureascode/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1229,7 +1229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<InfrastructureascodeJob>> GetInfrastructureascodeJobsAsyncWithHttpInfo(int? maxResults = null, bool? includeErrors = null, string sortBy = null, string sortOrder = null, string acceleratorId = null, string submittedBy = null, string status = null)
 		{
 
-			var localVarPath = "/api/v2/infrastructureascode/jobs";
+			var localVarPath = "/infrastructureascode/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1335,7 +1335,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling InfrastructureAsCodeApi->PostInfrastructureascodeJobs");
 
-			var localVarPath = "/api/v2/infrastructureascode/jobs";
+			var localVarPath = "/infrastructureascode/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1441,7 +1441,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling InfrastructureAsCodeApi->PostInfrastructureascodeJobs");
 
 
-			var localVarPath = "/api/v2/infrastructureascode/jobs";
+			var localVarPath = "/infrastructureascode/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

@@ -613,7 +613,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (contractId == null)
 				throw new ApiException(400, "Missing required parameter 'contractId' when calling BillingApi->GetBillingContract");
 
-			var localVarPath = "/api/v2/billing/contracts/{contractId}";
+			var localVarPath = "/billing/contracts/{contractId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -716,7 +716,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'contractId' when calling BillingApi->GetBillingContract");
 
 
-			var localVarPath = "/api/v2/billing/contracts/{contractId}";
+			var localVarPath = "/billing/contracts/{contractId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -823,7 +823,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (billingPeriodId == null)
 				throw new ApiException(400, "Missing required parameter 'billingPeriodId' when calling BillingApi->GetBillingContractBillingperiod");
 
-			var localVarPath = "/api/v2/billing/contracts/{contractId}/billingperiods/{billingPeriodId}";
+			var localVarPath = "/billing/contracts/{contractId}/billingperiods/{billingPeriodId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -933,7 +933,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'billingPeriodId' when calling BillingApi->GetBillingContractBillingperiod");
 
 
-			var localVarPath = "/api/v2/billing/contracts/{contractId}/billingperiods/{billingPeriodId}";
+			var localVarPath = "/billing/contracts/{contractId}/billingperiods/{billingPeriodId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1045,7 +1045,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<BillingContractListing> GetBillingContractsWithHttpInfo(string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string status = null, string externalNumber = null)
 		{
 
-			var localVarPath = "/api/v2/billing/contracts";
+			var localVarPath = "/billing/contracts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1162,7 +1162,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<BillingContractListing>> GetBillingContractsAsyncWithHttpInfo(string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string status = null, string externalNumber = null)
 		{
 
-			var localVarPath = "/api/v2/billing/contracts";
+			var localVarPath = "/billing/contracts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1270,7 +1270,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (invoiceId == null)
 				throw new ApiException(400, "Missing required parameter 'invoiceId' when calling BillingApi->GetBillingContractsInvoiceDocument");
 
-			var localVarPath = "/api/v2/billing/contracts/invoices/{invoiceId}/document";
+			var localVarPath = "/billing/contracts/invoices/{invoiceId}/document";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1373,7 +1373,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'invoiceId' when calling BillingApi->GetBillingContractsInvoiceDocument");
 
 
-			var localVarPath = "/api/v2/billing/contracts/invoices/{invoiceId}/document";
+			var localVarPath = "/billing/contracts/invoices/{invoiceId}/document";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1481,7 +1481,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (invoiceId == null)
 				throw new ApiException(400, "Missing required parameter 'invoiceId' when calling BillingApi->GetBillingContractsInvoiceLines");
 
-			var localVarPath = "/api/v2/billing/contracts/invoices/{invoiceId}/lines";
+			var localVarPath = "/billing/contracts/invoices/{invoiceId}/lines";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1593,7 +1593,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'invoiceId' when calling BillingApi->GetBillingContractsInvoiceLines");
 
 
-			var localVarPath = "/api/v2/billing/contracts/invoices/{invoiceId}/lines";
+			var localVarPath = "/billing/contracts/invoices/{invoiceId}/lines";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1705,7 +1705,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<BillingInvoiceListing> GetBillingContractsInvoicesWithHttpInfo(string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null)
 		{
 
-			var localVarPath = "/api/v2/billing/contracts/invoices";
+			var localVarPath = "/billing/contracts/invoices";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1819,7 +1819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<BillingInvoiceListing>> GetBillingContractsInvoicesAsyncWithHttpInfo(string before = null, string after = null, string pageSize = null, String dateStart = null, String dateEnd = null, string paymentStatus = null)
 		{
 
-			var localVarPath = "/api/v2/billing/contracts/invoices";
+			var localVarPath = "/billing/contracts/invoices";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1929,7 +1929,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (endDate == null)
 				throw new ApiException(400, "Missing required parameter 'endDate' when calling BillingApi->GetBillingReportsBillableusage");
 
-			var localVarPath = "/api/v2/billing/reports/billableusage";
+			var localVarPath = "/billing/reports/billableusage";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2037,7 +2037,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'endDate' when calling BillingApi->GetBillingReportsBillableusage");
 
 
-			var localVarPath = "/api/v2/billing/reports/billableusage";
+			var localVarPath = "/billing/reports/billableusage";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2140,7 +2140,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (trustorOrgId == null)
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling BillingApi->GetBillingTrusteebillingoverviewTrustorOrgId");
 
-			var localVarPath = "/api/v2/billing/trusteebillingoverview/{trustorOrgId}";
+			var localVarPath = "/billing/trusteebillingoverview/{trustorOrgId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -2244,7 +2244,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'trustorOrgId' when calling BillingApi->GetBillingTrusteebillingoverviewTrustorOrgId");
 
 
-			var localVarPath = "/api/v2/billing/trusteebillingoverview/{trustorOrgId}";
+			var localVarPath = "/billing/trusteebillingoverview/{trustorOrgId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

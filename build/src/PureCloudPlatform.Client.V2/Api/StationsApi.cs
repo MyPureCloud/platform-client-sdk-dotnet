@@ -306,7 +306,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (stationId == null)
 				throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->DeleteStationAssociateduser");
 
-			var localVarPath = "/api/v2/stations/{stationId}/associateduser";
+			var localVarPath = "/stations/{stationId}/associateduser";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -406,7 +406,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->DeleteStationAssociateduser");
 
 
-			var localVarPath = "/api/v2/stations/{stationId}/associateduser";
+			var localVarPath = "/stations/{stationId}/associateduser";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -506,7 +506,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (stationId == null)
 				throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->GetStation");
 
-			var localVarPath = "/api/v2/stations/{stationId}";
+			var localVarPath = "/stations/{stationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -607,7 +607,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'stationId' when calling StationsApi->GetStation");
 
 
-			var localVarPath = "/api/v2/stations/{stationId}";
+			var localVarPath = "/stations/{stationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -718,7 +718,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<StationEntityListing> GetStationsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
 		{
 
-			var localVarPath = "/api/v2/stations";
+			var localVarPath = "/stations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -836,7 +836,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<StationEntityListing>> GetStationsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, string name = null, string userSelectable = null, string webRtcUserId = null, string id = null, string lineAppearanceId = null)
 		{
 
-			var localVarPath = "/api/v2/stations";
+			var localVarPath = "/stations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

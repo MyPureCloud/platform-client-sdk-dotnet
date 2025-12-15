@@ -450,7 +450,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (celebrationId == null)
 				throw new ApiException(400, "Missing required parameter 'celebrationId' when calling EmployeeEngagementApi->DeleteEmployeeengagementCelebration");
 
-			var localVarPath = "/api/v2/employeeengagement/celebrations/{celebrationId}";
+			var localVarPath = "/employeeengagement/celebrations/{celebrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -550,7 +550,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'celebrationId' when calling EmployeeEngagementApi->DeleteEmployeeengagementCelebration");
 
 
-			var localVarPath = "/api/v2/employeeengagement/celebrations/{celebrationId}";
+			var localVarPath = "/employeeengagement/celebrations/{celebrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -649,7 +649,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GetCelebrationListing> GetEmployeeengagementCelebrationsWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/employeeengagement/celebrations";
+			var localVarPath = "/employeeengagement/celebrations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -749,7 +749,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GetCelebrationListing>> GetEmployeeengagementCelebrationsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/employeeengagement/celebrations";
+			var localVarPath = "/employeeengagement/celebrations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -850,7 +850,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (recognitionId == null)
 				throw new ApiException(400, "Missing required parameter 'recognitionId' when calling EmployeeEngagementApi->GetEmployeeengagementRecognition");
 
-			var localVarPath = "/api/v2/employeeengagement/recognitions/{recognitionId}";
+			var localVarPath = "/employeeengagement/recognitions/{recognitionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -951,7 +951,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'recognitionId' when calling EmployeeEngagementApi->GetEmployeeengagementRecognition");
 
 
-			var localVarPath = "/api/v2/employeeengagement/recognitions/{recognitionId}";
+			var localVarPath = "/employeeengagement/recognitions/{recognitionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1058,7 +1058,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Recognitions> GetEmployeeengagementRecognitionsWithHttpInfo(string direction = null, string recipient = null, DateTime? dateStart = null, DateTime? dateEnd = null, int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/employeeengagement/recognitions";
+			var localVarPath = "/employeeengagement/recognitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1170,7 +1170,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Recognitions>> GetEmployeeengagementRecognitionsAsyncWithHttpInfo(string direction = null, string recipient = null, DateTime? dateStart = null, DateTime? dateEnd = null, int? pageSize = null, int? pageNumber = null)
 		{
 
-			var localVarPath = "/api/v2/employeeengagement/recognitions";
+			var localVarPath = "/employeeengagement/recognitions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1279,7 +1279,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling EmployeeEngagementApi->PatchEmployeeengagementCelebration");
 
-			var localVarPath = "/api/v2/employeeengagement/celebrations/{celebrationId}";
+			var localVarPath = "/employeeengagement/celebrations/{celebrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1391,7 +1391,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling EmployeeEngagementApi->PatchEmployeeengagementCelebration");
 
 
-			var localVarPath = "/api/v2/employeeengagement/celebrations/{celebrationId}";
+			var localVarPath = "/employeeengagement/celebrations/{celebrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1497,7 +1497,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling EmployeeEngagementApi->PostEmployeeengagementRecognitions");
 
-			var localVarPath = "/api/v2/employeeengagement/recognitions";
+			var localVarPath = "/employeeengagement/recognitions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1603,7 +1603,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling EmployeeEngagementApi->PostEmployeeengagementRecognitions");
 
 
-			var localVarPath = "/api/v2/employeeengagement/recognitions";
+			var localVarPath = "/employeeengagement/recognitions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

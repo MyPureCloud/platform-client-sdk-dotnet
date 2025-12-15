@@ -201,7 +201,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (downloadId == null)
 				throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->GetDownload");
 
-			var localVarPath = "/api/v2/downloads/{downloadId}";
+			var localVarPath = "/downloads/{downloadId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -311,7 +311,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'downloadId' when calling DownloadsApi->GetDownload");
 
 
-			var localVarPath = "/api/v2/downloads/{downloadId}";
+			var localVarPath = "/downloads/{downloadId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

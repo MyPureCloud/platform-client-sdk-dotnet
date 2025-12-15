@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send a turn event to an executing bot flow and produce the next action to take.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
+		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /textbots/botflows/sessions&#39;</param>
 		/// <param name="turnRequest"></param>
 		/// <returns>TextBotFlowTurnResponse</returns>
 
@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send a turn event to an executing bot flow and produce the next action to take.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
+		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /textbots/botflows/sessions&#39;</param>
 		/// <param name="turnRequest"></param>
 		/// <returns>ApiResponse of TextBotFlowTurnResponse</returns>
 
@@ -73,7 +73,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create an execution instance of a bot flow definition.
 		/// </summary>
 		/// <remarks>
-		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
+		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /textbots/botflows/sessions/{sessionId}/turns'.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="launchRequest"></param>
@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create an execution instance of a bot flow definition.
 		/// </summary>
 		/// <remarks>
-		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
+		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /textbots/botflows/sessions/{sessionId}/turns'.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="launchRequest"></param>
@@ -160,7 +160,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send a turn event to an executing bot flow and produce the next action to take.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
+		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /textbots/botflows/sessions&#39;</param>
 		/// <param name="turnRequest"></param>
 		/// <returns>Task of TextBotFlowTurnResponse</returns>
 
@@ -173,7 +173,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send a turn event to an executing bot flow and produce the next action to take.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
+		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /textbots/botflows/sessions&#39;</param>
 		/// <param name="turnRequest"></param>
 		/// <returns>Task of ApiResponse (TextBotFlowTurnResponse)</returns>
 
@@ -183,7 +183,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create an execution instance of a bot flow definition.
 		/// </summary>
 		/// <remarks>
-		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
+		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /textbots/botflows/sessions/{sessionId}/turns'.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="launchRequest"></param>
@@ -195,7 +195,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Create an execution instance of a bot flow definition.
 		/// </summary>
 		/// <remarks>
-		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
+		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /textbots/botflows/sessions/{sessionId}/turns'.
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="launchRequest"></param>
@@ -352,7 +352,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<BotSearchResponseEntityListing> GetTextbotsBotsSearchWithHttpInfo(List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/textbots/bots/search";
+			var localVarPath = "/textbots/bots/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -461,7 +461,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<BotSearchResponseEntityListing>> GetTextbotsBotsSearchAsyncWithHttpInfo(List<string> botType = null, string botName = null, List<string> botId = null, bool? virtualAgentEnabled = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/textbots/bots/search";
+			var localVarPath = "/textbots/bots/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -542,7 +542,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send a turn event to an executing bot flow and produce the next action to take.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
+		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /textbots/botflows/sessions&#39;</param>
 		/// <param name="turnRequest"></param>
 		/// <returns>TextBotFlowTurnResponse</returns>
 
@@ -557,7 +557,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send a turn event to an executing bot flow and produce the next action to take.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
+		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /textbots/botflows/sessions&#39;</param>
 		/// <param name="turnRequest"></param>
 		/// <returns>ApiResponse of TextBotFlowTurnResponse</returns>
 
@@ -570,7 +570,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (turnRequest == null)
 				throw new ApiException(400, "Missing required parameter 'turnRequest' when calling TextbotsApi->PostTextbotsBotflowsSessionTurns");
 
-			var localVarPath = "/api/v2/textbots/botflows/sessions/{sessionId}/turns";
+			var localVarPath = "/textbots/botflows/sessions/{sessionId}/turns";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -652,7 +652,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send a turn event to an executing bot flow and produce the next action to take.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
+		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /textbots/botflows/sessions&#39;</param>
 		/// <param name="turnRequest"></param>
 		/// <returns>Task of TextBotFlowTurnResponse</returns>
 
@@ -668,7 +668,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// Send a turn event to an executing bot flow and produce the next action to take.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /api/v2/textbots/botflows/sessions&#39;</param>
+		/// <param name="sessionId">The bot flow session ID, typically obtained from &#39;POST /textbots/botflows/sessions&#39;</param>
 		/// <param name="turnRequest"></param>
 		/// <returns>Task of ApiResponse (TextBotFlowTurnResponse)</returns>
 
@@ -683,7 +683,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'turnRequest' when calling TextbotsApi->PostTextbotsBotflowsSessionTurns");
 
 
-			var localVarPath = "/api/v2/textbots/botflows/sessions/{sessionId}/turns";
+			var localVarPath = "/textbots/botflows/sessions/{sessionId}/turns";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -763,7 +763,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create an execution instance of a bot flow definition. 
-		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
+		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /textbots/botflows/sessions/{sessionId}/turns'.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="launchRequest"></param>
@@ -777,7 +777,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create an execution instance of a bot flow definition. 
-		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
+		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /textbots/botflows/sessions/{sessionId}/turns'.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="launchRequest"></param>
@@ -789,7 +789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (launchRequest == null)
 				throw new ApiException(400, "Missing required parameter 'launchRequest' when calling TextbotsApi->PostTextbotsBotflowsSessions");
 
-			var localVarPath = "/api/v2/textbots/botflows/sessions";
+			var localVarPath = "/textbots/botflows/sessions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -867,7 +867,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create an execution instance of a bot flow definition. 
-		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
+		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /textbots/botflows/sessions/{sessionId}/turns'.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="launchRequest"></param>
@@ -882,7 +882,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// Create an execution instance of a bot flow definition. 
-		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /api/v2/textbots/botflows/sessions/{sessionId}/turns'.
+		/// The launch is asynchronous; use the returned instance ID to post turns to it using 'POST /textbots/botflows/sessions/{sessionId}/turns'.
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="launchRequest"></param>
@@ -895,7 +895,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'launchRequest' when calling TextbotsApi->PostTextbotsBotflowsSessions");
 
 
-			var localVarPath = "/api/v2/textbots/botflows/sessions";
+			var localVarPath = "/textbots/botflows/sessions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1000,7 +1000,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (postTextRequest == null)
 				throw new ApiException(400, "Missing required parameter 'postTextRequest' when calling TextbotsApi->PostTextbotsBotsExecute");
 
-			var localVarPath = "/api/v2/textbots/bots/execute";
+			var localVarPath = "/textbots/bots/execute";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1106,7 +1106,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'postTextRequest' when calling TextbotsApi->PostTextbotsBotsExecute");
 
 
-			var localVarPath = "/api/v2/textbots/bots/execute";
+			var localVarPath = "/textbots/bots/execute";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

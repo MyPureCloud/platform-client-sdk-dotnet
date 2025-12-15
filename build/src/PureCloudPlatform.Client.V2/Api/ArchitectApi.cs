@@ -8374,7 +8374,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (emergencyGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->DeleteArchitectEmergencygroup");
 
-			var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+			var localVarPath = "/architect/emergencygroups/{emergencyGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8474,7 +8474,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->DeleteArchitectEmergencygroup");
 
 
-			var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+			var localVarPath = "/architect/emergencygroups/{emergencyGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8574,7 +8574,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (grammarId == null)
 				throw new ApiException(400, "Missing required parameter 'grammarId' when calling ArchitectApi->DeleteArchitectGrammar");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}";
+			var localVarPath = "/architect/grammars/{grammarId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8675,7 +8675,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'grammarId' when calling ArchitectApi->DeleteArchitectGrammar");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}";
+			var localVarPath = "/architect/grammars/{grammarId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8779,7 +8779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectGrammarLanguage");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8886,7 +8886,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectGrammarLanguage");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8991,7 +8991,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectGrammarLanguageFilesDtmf");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9098,7 +9098,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectGrammarLanguageFilesDtmf");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9203,7 +9203,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectGrammarLanguageFilesVoice");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}/files/voice";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9310,7 +9310,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectGrammarLanguageFilesVoice");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}/files/voice";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9410,7 +9410,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ivrId == null)
 				throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->DeleteArchitectIvr");
 
-			var localVarPath = "/api/v2/architect/ivrs/{ivrId}";
+			var localVarPath = "/architect/ivrs/{ivrId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9510,7 +9510,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->DeleteArchitectIvr");
 
 
-			var localVarPath = "/api/v2/architect/ivrs/{ivrId}";
+			var localVarPath = "/architect/ivrs/{ivrId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9611,7 +9611,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (promptId == null)
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteArchitectPrompt");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}";
+			var localVarPath = "/architect/prompts/{promptId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9714,7 +9714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->DeleteArchitectPrompt");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}";
+			var localVarPath = "/architect/prompts/{promptId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9819,7 +9819,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectPromptResource");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/prompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9926,7 +9926,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectPromptResource");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/prompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10031,7 +10031,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectPromptResourceAudio");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}/audio";
+			var localVarPath = "/architect/prompts/{promptId}/resources/{languageCode}/audio";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10138,7 +10138,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectPromptResourceAudio");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}/audio";
+			var localVarPath = "/architect/prompts/{promptId}/resources/{languageCode}/audio";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10239,7 +10239,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->DeleteArchitectPrompts");
 
-			var localVarPath = "/api/v2/architect/prompts";
+			var localVarPath = "/architect/prompts";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10340,7 +10340,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->DeleteArchitectPrompts");
 
 
-			var localVarPath = "/api/v2/architect/prompts";
+			var localVarPath = "/architect/prompts";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10439,7 +10439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scheduleId == null)
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->DeleteArchitectSchedule");
 
-			var localVarPath = "/api/v2/architect/schedules/{scheduleId}";
+			var localVarPath = "/architect/schedules/{scheduleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10539,7 +10539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->DeleteArchitectSchedule");
 
 
-			var localVarPath = "/api/v2/architect/schedules/{scheduleId}";
+			var localVarPath = "/architect/schedules/{scheduleId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10638,7 +10638,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scheduleGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->DeleteArchitectSchedulegroup");
 
-			var localVarPath = "/api/v2/architect/schedulegroups/{scheduleGroupId}";
+			var localVarPath = "/architect/schedulegroups/{scheduleGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10738,7 +10738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->DeleteArchitectSchedulegroup");
 
 
-			var localVarPath = "/api/v2/architect/schedulegroups/{scheduleGroupId}";
+			var localVarPath = "/architect/schedulegroups/{scheduleGroupId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10842,7 +10842,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectSystempromptResource");
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10949,7 +10949,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->DeleteArchitectSystempromptResource");
 
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11049,7 +11049,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowId == null)
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->DeleteFlow");
 
-			var localVarPath = "/api/v2/flows/{flowId}";
+			var localVarPath = "/flows/{flowId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11149,7 +11149,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->DeleteFlow");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}";
+			var localVarPath = "/flows/{flowId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11248,7 +11248,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowId == null)
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->DeleteFlowInstancesSettingsLoglevels");
 
-			var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+			var localVarPath = "/flows/{flowId}/instances/settings/loglevels";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11348,7 +11348,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->DeleteFlowInstancesSettingsLoglevels");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+			var localVarPath = "/flows/{flowId}/instances/settings/loglevels";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11448,7 +11448,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->DeleteFlows");
 
-			var localVarPath = "/api/v2/flows";
+			var localVarPath = "/flows";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11549,7 +11549,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->DeleteFlows");
 
 
-			var localVarPath = "/api/v2/flows";
+			var localVarPath = "/flows";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11650,7 +11650,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (datatableId == null)
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->DeleteFlowsDatatable");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+			var localVarPath = "/flows/datatables/{datatableId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11753,7 +11753,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->DeleteFlowsDatatable");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+			var localVarPath = "/flows/datatables/{datatableId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11858,7 +11858,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (rowId == null)
 				throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->DeleteFlowsDatatableRow");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+			var localVarPath = "/flows/datatables/{datatableId}/rows/{rowId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11965,7 +11965,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->DeleteFlowsDatatableRow");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+			var localVarPath = "/flows/datatables/{datatableId}/rows/{rowId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12060,7 +12060,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> DeleteFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+			var localVarPath = "/flows/instances/settings/loglevels/default";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12153,7 +12153,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+			var localVarPath = "/flows/instances/settings/loglevels/default";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12252,7 +12252,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (milestoneId == null)
 				throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->DeleteFlowsMilestone");
 
-			var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+			var localVarPath = "/flows/milestones/{milestoneId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12353,7 +12353,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->DeleteFlowsMilestone");
 
 
-			var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+			var localVarPath = "/flows/milestones/{milestoneId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12467,7 +12467,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (name == null)
 				throw new ApiException(400, "Missing required parameter 'name' when calling ArchitectApi->GetArchitectDependencytracking");
 
-			var localVarPath = "/api/v2/architect/dependencytracking";
+			var localVarPath = "/architect/dependencytracking";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12589,7 +12589,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'name' when calling ArchitectApi->GetArchitectDependencytracking");
 
 
-			var localVarPath = "/api/v2/architect/dependencytracking";
+			var localVarPath = "/architect/dependencytracking";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12691,7 +12691,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DependencyStatus> GetArchitectDependencytrackingBuildWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/architect/dependencytracking/build";
+			var localVarPath = "/architect/dependencytracking/build";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12785,7 +12785,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DependencyStatus>> GetArchitectDependencytrackingBuildAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/architect/dependencytracking/build";
+			var localVarPath = "/architect/dependencytracking/build";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12900,7 +12900,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (objectType == null)
 				throw new ApiException(400, "Missing required parameter 'objectType' when calling ArchitectApi->GetArchitectDependencytrackingConsumedresources");
 
-			var localVarPath = "/api/v2/architect/dependencytracking/consumedresources";
+			var localVarPath = "/architect/dependencytracking/consumedresources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13024,7 +13024,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'objectType' when calling ArchitectApi->GetArchitectDependencytrackingConsumedresources");
 
 
-			var localVarPath = "/api/v2/architect/dependencytracking/consumedresources";
+			var localVarPath = "/architect/dependencytracking/consumedresources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13144,7 +13144,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (objectType == null)
 				throw new ApiException(400, "Missing required parameter 'objectType' when calling ArchitectApi->GetArchitectDependencytrackingConsumingresources");
 
-			var localVarPath = "/api/v2/architect/dependencytracking/consumingresources";
+			var localVarPath = "/architect/dependencytracking/consumingresources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13267,7 +13267,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'objectType' when calling ArchitectApi->GetArchitectDependencytrackingConsumingresources");
 
 
-			var localVarPath = "/api/v2/architect/dependencytracking/consumingresources";
+			var localVarPath = "/architect/dependencytracking/consumingresources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13382,7 +13382,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DependencyObjectEntityListing> GetArchitectDependencytrackingDeletedresourceconsumersWithHttpInfo(string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/architect/dependencytracking/deletedresourceconsumers";
+			var localVarPath = "/architect/dependencytracking/deletedresourceconsumers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13497,7 +13497,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingDeletedresourceconsumersAsyncWithHttpInfo(string name = null, List<string> objectType = null, string flowFilter = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/architect/dependencytracking/deletedresourceconsumers";
+			var localVarPath = "/architect/dependencytracking/deletedresourceconsumers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13617,7 +13617,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (id == null)
 				throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->GetArchitectDependencytrackingObject");
 
-			var localVarPath = "/api/v2/architect/dependencytracking/object";
+			var localVarPath = "/architect/dependencytracking/object";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13739,7 +13739,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'id' when calling ArchitectApi->GetArchitectDependencytrackingObject");
 
 
-			var localVarPath = "/api/v2/architect/dependencytracking/object";
+			var localVarPath = "/architect/dependencytracking/object";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13846,7 +13846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (typeId == null)
 				throw new ApiException(400, "Missing required parameter 'typeId' when calling ArchitectApi->GetArchitectDependencytrackingType");
 
-			var localVarPath = "/api/v2/architect/dependencytracking/types/{typeId}";
+			var localVarPath = "/architect/dependencytracking/types/{typeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13947,7 +13947,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'typeId' when calling ArchitectApi->GetArchitectDependencytrackingType");
 
 
-			var localVarPath = "/api/v2/architect/dependencytracking/types/{typeId}";
+			var localVarPath = "/architect/dependencytracking/types/{typeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14046,7 +14046,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DependencyTypeEntityListing> GetArchitectDependencytrackingTypesWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/architect/dependencytracking/types";
+			var localVarPath = "/architect/dependencytracking/types";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14146,7 +14146,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DependencyTypeEntityListing>> GetArchitectDependencytrackingTypesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/architect/dependencytracking/types";
+			var localVarPath = "/architect/dependencytracking/types";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14254,7 +14254,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DependencyObjectEntityListing> GetArchitectDependencytrackingUpdatedresourceconsumersWithHttpInfo(string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/architect/dependencytracking/updatedresourceconsumers";
+			var localVarPath = "/architect/dependencytracking/updatedresourceconsumers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14366,7 +14366,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DependencyObjectEntityListing>> GetArchitectDependencytrackingUpdatedresourceconsumersAsyncWithHttpInfo(string name = null, List<string> objectType = null, bool? consumedResources = null, List<string> consumedResourceType = null, int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/architect/dependencytracking/updatedresourceconsumers";
+			var localVarPath = "/architect/dependencytracking/updatedresourceconsumers";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14471,7 +14471,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (emergencyGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->GetArchitectEmergencygroup");
 
-			var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+			var localVarPath = "/architect/emergencygroups/{emergencyGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14572,7 +14572,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'emergencyGroupId' when calling ArchitectApi->GetArchitectEmergencygroup");
 
 
-			var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+			var localVarPath = "/architect/emergencygroups/{emergencyGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14677,7 +14677,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmergencyGroupListing> GetArchitectEmergencygroupsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/architect/emergencygroups";
+			var localVarPath = "/architect/emergencygroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14786,7 +14786,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroupListing>> GetArchitectEmergencygroupsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/architect/emergencygroups";
+			var localVarPath = "/architect/emergencygroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14899,7 +14899,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<EmergencyGroupDivisionViewEntityListing> GetArchitectEmergencygroupsDivisionviewsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/emergencygroups/divisionviews";
+			var localVarPath = "/architect/emergencygroups/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15014,7 +15014,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<EmergencyGroupDivisionViewEntityListing>> GetArchitectEmergencygroupsDivisionviewsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/emergencygroups/divisionviews";
+			var localVarPath = "/architect/emergencygroups/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15122,7 +15122,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (grammarId == null)
 				throw new ApiException(400, "Missing required parameter 'grammarId' when calling ArchitectApi->GetArchitectGrammar");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}";
+			var localVarPath = "/architect/grammars/{grammarId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15226,7 +15226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'grammarId' when calling ArchitectApi->GetArchitectGrammar");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}";
+			var localVarPath = "/architect/grammars/{grammarId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15332,7 +15332,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->GetArchitectGrammarLanguage");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15440,7 +15440,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->GetArchitectGrammarLanguage");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15554,7 +15554,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<GrammarListing> GetArchitectGrammarsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, bool? includeFileUrls = null)
 		{
 
-			var localVarPath = "/api/v2/architect/grammars";
+			var localVarPath = "/architect/grammars";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15675,7 +15675,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<GrammarListing>> GetArchitectGrammarsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, bool? includeFileUrls = null)
 		{
 
-			var localVarPath = "/api/v2/architect/grammars";
+			var localVarPath = "/architect/grammars";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15783,7 +15783,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ivrId == null)
 				throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->GetArchitectIvr");
 
-			var localVarPath = "/api/v2/architect/ivrs/{ivrId}";
+			var localVarPath = "/architect/ivrs/{ivrId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15884,7 +15884,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->GetArchitectIvr");
 
 
-			var localVarPath = "/api/v2/architect/ivrs/{ivrId}";
+			var localVarPath = "/architect/ivrs/{ivrId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15984,7 +15984,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ivrId == null)
 				throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->GetArchitectIvrIdentityresolution");
 
-			var localVarPath = "/api/v2/architect/ivrs/{ivrId}/identityresolution";
+			var localVarPath = "/architect/ivrs/{ivrId}/identityresolution";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16085,7 +16085,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ivrId' when calling ArchitectApi->GetArchitectIvrIdentityresolution");
 
 
-			var localVarPath = "/api/v2/architect/ivrs/{ivrId}/identityresolution";
+			var localVarPath = "/architect/ivrs/{ivrId}/identityresolution";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16196,7 +16196,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<IVREntityListing> GetArchitectIvrsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/architect/ivrs";
+			var localVarPath = "/architect/ivrs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16314,7 +16314,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<IVREntityListing>> GetArchitectIvrsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string dnis = null, string scheduleGroup = null, List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/architect/ivrs";
+			var localVarPath = "/architect/ivrs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16430,7 +16430,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<IVRDivisionViewEntityListing> GetArchitectIvrsDivisionviewsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/ivrs/divisionviews";
+			var localVarPath = "/architect/ivrs/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16545,7 +16545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<IVRDivisionViewEntityListing>> GetArchitectIvrsDivisionviewsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/ivrs/divisionviews";
+			var localVarPath = "/architect/ivrs/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16657,7 +16657,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (promptId == null)
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPrompt");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}";
+			var localVarPath = "/architect/prompts/{promptId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16767,7 +16767,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPrompt");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}";
+			var localVarPath = "/architect/prompts/{promptId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16885,7 +16885,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (historyId == null)
 				throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetArchitectPromptHistoryHistoryId");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/history/{historyId}";
+			var localVarPath = "/architect/prompts/{promptId}/history/{historyId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17008,7 +17008,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetArchitectPromptHistoryHistoryId");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/history/{historyId}";
+			var localVarPath = "/architect/prompts/{promptId}/history/{historyId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17119,7 +17119,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->GetArchitectPromptResource");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/prompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17227,7 +17227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->GetArchitectPromptResource");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/prompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17332,7 +17332,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (promptId == null)
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPromptResources");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources";
+			var localVarPath = "/architect/prompts/{promptId}/resources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17439,7 +17439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectPromptResources");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources";
+			var localVarPath = "/architect/prompts/{promptId}/resources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17556,7 +17556,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<PromptEntityListing> GetArchitectPromptsWithHttpInfo(int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
 		{
 
-			var localVarPath = "/api/v2/architect/prompts";
+			var localVarPath = "/architect/prompts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17680,7 +17680,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<PromptEntityListing>> GetArchitectPromptsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, List<string> name = null, string description = null, string nameOrDescription = null, string sortBy = null, string sortOrder = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
 		{
 
-			var localVarPath = "/api/v2/architect/prompts";
+			var localVarPath = "/architect/prompts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17789,7 +17789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scheduleId == null)
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->GetArchitectSchedule");
 
-			var localVarPath = "/api/v2/architect/schedules/{scheduleId}";
+			var localVarPath = "/architect/schedules/{scheduleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17890,7 +17890,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scheduleId' when calling ArchitectApi->GetArchitectSchedule");
 
 
-			var localVarPath = "/api/v2/architect/schedules/{scheduleId}";
+			var localVarPath = "/architect/schedules/{scheduleId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17990,7 +17990,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (scheduleGroupId == null)
 				throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->GetArchitectSchedulegroup");
 
-			var localVarPath = "/api/v2/architect/schedulegroups/{scheduleGroupId}";
+			var localVarPath = "/architect/schedulegroups/{scheduleGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18091,7 +18091,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'scheduleGroupId' when calling ArchitectApi->GetArchitectSchedulegroup");
 
 
-			var localVarPath = "/api/v2/architect/schedulegroups/{scheduleGroupId}";
+			var localVarPath = "/architect/schedulegroups/{scheduleGroupId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18200,7 +18200,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ScheduleGroupEntityListing> GetArchitectSchedulegroupsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/schedulegroups";
+			var localVarPath = "/architect/schedulegroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18315,7 +18315,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroupEntityListing>> GetArchitectSchedulegroupsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string scheduleIds = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/schedulegroups";
+			var localVarPath = "/architect/schedulegroups";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18430,7 +18430,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ScheduleGroupDivisionViewEntityListing> GetArchitectSchedulegroupsDivisionviewsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/schedulegroups/divisionviews";
+			var localVarPath = "/architect/schedulegroups/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18545,7 +18545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ScheduleGroupDivisionViewEntityListing>> GetArchitectSchedulegroupsDivisionviewsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/schedulegroups/divisionviews";
+			var localVarPath = "/architect/schedulegroups/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18658,7 +18658,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ScheduleEntityListing> GetArchitectSchedulesWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/schedules";
+			var localVarPath = "/architect/schedules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18770,7 +18770,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ScheduleEntityListing>> GetArchitectSchedulesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/schedules";
+			var localVarPath = "/architect/schedules";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18884,7 +18884,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ScheduleDivisionViewEntityListing> GetArchitectSchedulesDivisionviewsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/schedules/divisionviews";
+			var localVarPath = "/architect/schedules/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18999,7 +18999,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ScheduleDivisionViewEntityListing>> GetArchitectSchedulesDivisionviewsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/architect/schedules/divisionviews";
+			var localVarPath = "/architect/schedules/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19111,7 +19111,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (promptId == null)
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystemprompt");
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}";
+			var localVarPath = "/architect/systemprompts/{promptId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19221,7 +19221,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystemprompt");
 
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}";
+			var localVarPath = "/architect/systemprompts/{promptId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19339,7 +19339,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (historyId == null)
 				throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetArchitectSystempromptHistoryHistoryId");
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/history/{historyId}";
+			var localVarPath = "/architect/systemprompts/{promptId}/history/{historyId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19462,7 +19462,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetArchitectSystempromptHistoryHistoryId");
 
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/history/{historyId}";
+			var localVarPath = "/architect/systemprompts/{promptId}/history/{historyId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19573,7 +19573,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->GetArchitectSystempromptResource");
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19681,7 +19681,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->GetArchitectSystempromptResource");
 
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19790,7 +19790,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (promptId == null)
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystempromptResources");
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19903,7 +19903,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->GetArchitectSystempromptResources");
 
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20022,7 +20022,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SystemPromptEntityListing> GetArchitectSystempromptsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
 		{
 
-			var localVarPath = "/api/v2/architect/systemprompts";
+			var localVarPath = "/architect/systemprompts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20146,7 +20146,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SystemPromptEntityListing>> GetArchitectSystempromptsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, string name = null, string description = null, string nameOrDescription = null, bool? includeMediaUris = null, bool? includeResources = null, List<string> language = null)
 		{
 
-			var localVarPath = "/api/v2/architect/systemprompts";
+			var localVarPath = "/architect/systemprompts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20257,7 +20257,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowId == null)
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlow");
 
-			var localVarPath = "/api/v2/flows/{flowId}";
+			var localVarPath = "/flows/{flowId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20361,7 +20361,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlow");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}";
+			var localVarPath = "/flows/{flowId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20477,7 +20477,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (historyId == null)
 				throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetFlowHistoryHistoryId");
 
-			var localVarPath = "/api/v2/flows/{flowId}/history/{historyId}";
+			var localVarPath = "/flows/{flowId}/history/{historyId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20600,7 +20600,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'historyId' when calling ArchitectApi->GetFlowHistoryHistoryId");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/history/{historyId}";
+			var localVarPath = "/flows/{flowId}/history/{historyId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20708,7 +20708,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowId == null)
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowInstancesSettingsLoglevels");
 
-			var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+			var localVarPath = "/flows/{flowId}/instances/settings/loglevels";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20812,7 +20812,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowInstancesSettingsLoglevels");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+			var localVarPath = "/flows/{flowId}/instances/settings/loglevels";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20915,7 +20915,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowId == null)
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowLatestconfiguration");
 
-			var localVarPath = "/api/v2/flows/{flowId}/latestconfiguration";
+			var localVarPath = "/flows/{flowId}/latestconfiguration";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21019,7 +21019,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowLatestconfiguration");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/latestconfiguration";
+			var localVarPath = "/flows/{flowId}/latestconfiguration";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21127,7 +21127,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersion");
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}";
+			var localVarPath = "/flows/{flowId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21238,7 +21238,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersion");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}";
+			var localVarPath = "/flows/{flowId}/versions/{versionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21347,7 +21347,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionConfiguration");
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/configuration";
+			var localVarPath = "/flows/{flowId}/versions/{versionId}/configuration";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21458,7 +21458,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionConfiguration");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/configuration";
+			var localVarPath = "/flows/{flowId}/versions/{versionId}/configuration";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21567,7 +21567,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (versionId == null)
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionHealth");
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/health";
+			var localVarPath = "/flows/{flowId}/versions/{versionId}/health";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21678,7 +21678,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'versionId' when calling ArchitectApi->GetFlowVersionHealth");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/health";
+			var localVarPath = "/flows/{flowId}/versions/{versionId}/health";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21795,7 +21795,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (language == null)
 				throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetFlowVersionIntentHealth");
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/health";
+			var localVarPath = "/flows/{flowId}/versions/{versionId}/intents/{intentId}/health";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21917,7 +21917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetFlowVersionIntentHealth");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/health";
+			var localVarPath = "/flows/{flowId}/versions/{versionId}/intents/{intentId}/health";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22040,7 +22040,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (language == null)
 				throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health";
+			var localVarPath = "/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22169,7 +22169,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'language' when calling ArchitectApi->GetFlowVersionIntentUtteranceHealth");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health";
+			var localVarPath = "/flows/{flowId}/versions/{versionId}/intents/{intentId}/utterances/{utteranceId}/health";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22279,7 +22279,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowId == null)
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersions");
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions";
+			var localVarPath = "/flows/{flowId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22389,7 +22389,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->GetFlowVersions");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions";
+			var localVarPath = "/flows/{flowId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22527,7 +22527,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowEntityListing> GetFlowsWithHttpInfo(List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, bool? virtualAgentEnabled = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/flows";
+			var localVarPath = "/flows";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22681,7 +22681,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowEntityListing>> GetFlowsAsyncWithHttpInfo(List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, string publishVersionId = null, string editableBy = null, string lockedBy = null, string lockedByClientId = null, string secure = null, bool? deleted = null, bool? includeSchemas = null, bool? virtualAgentEnabled = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/flows";
+			var localVarPath = "/flows";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22802,7 +22802,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (datatableId == null)
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatable");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+			var localVarPath = "/flows/datatables/{datatableId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22906,7 +22906,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatable");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+			var localVarPath = "/flows/datatables/{datatableId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23012,7 +23012,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (exportJobId == null)
 				throw new ApiException(400, "Missing required parameter 'exportJobId' when calling ArchitectApi->GetFlowsDatatableExportJob");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId}";
+			var localVarPath = "/flows/datatables/{datatableId}/export/jobs/{exportJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23120,7 +23120,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'exportJobId' when calling ArchitectApi->GetFlowsDatatableExportJob");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/export/jobs/{exportJobId}";
+			var localVarPath = "/flows/datatables/{datatableId}/export/jobs/{exportJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23226,7 +23226,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (importJobId == null)
 				throw new ApiException(400, "Missing required parameter 'importJobId' when calling ArchitectApi->GetFlowsDatatableImportJob");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}";
+			var localVarPath = "/flows/datatables/{datatableId}/import/jobs/{importJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23334,7 +23334,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'importJobId' when calling ArchitectApi->GetFlowsDatatableImportJob");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs/{importJobId}";
+			var localVarPath = "/flows/datatables/{datatableId}/import/jobs/{importJobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23439,7 +23439,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (datatableId == null)
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableImportJobs");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs";
+			var localVarPath = "/flows/datatables/{datatableId}/import/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23546,7 +23546,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableImportJobs");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs";
+			var localVarPath = "/flows/datatables/{datatableId}/import/jobs";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23655,7 +23655,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (rowId == null)
 				throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->GetFlowsDatatableRow");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+			var localVarPath = "/flows/datatables/{datatableId}/rows/{rowId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23766,7 +23766,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->GetFlowsDatatableRow");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+			var localVarPath = "/flows/datatables/{datatableId}/rows/{rowId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23876,7 +23876,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (datatableId == null)
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableRows");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows";
+			var localVarPath = "/flows/datatables/{datatableId}/rows";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23989,7 +23989,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatableRows");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows";
+			var localVarPath = "/flows/datatables/{datatableId}/rows";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24102,7 +24102,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesWithHttpInfo(string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/flows/datatables";
+			var localVarPath = "/flows/datatables";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24217,7 +24217,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesAsyncWithHttpInfo(string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/flows/datatables";
+			var localVarPath = "/flows/datatables";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24325,7 +24325,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (datatableId == null)
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatablesDivisionview");
 
-			var localVarPath = "/api/v2/flows/datatables/divisionviews/{datatableId}";
+			var localVarPath = "/flows/datatables/divisionviews/{datatableId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24429,7 +24429,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->GetFlowsDatatablesDivisionview");
 
 
-			var localVarPath = "/api/v2/flows/datatables/divisionviews/{datatableId}";
+			var localVarPath = "/flows/datatables/divisionviews/{datatableId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24539,7 +24539,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DataTablesDomainEntityListing> GetFlowsDatatablesDivisionviewsWithHttpInfo(string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/flows/datatables/divisionviews";
+			var localVarPath = "/flows/datatables/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24654,7 +24654,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DataTablesDomainEntityListing>> GetFlowsDatatablesDivisionviewsAsyncWithHttpInfo(string expand = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> divisionId = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/flows/datatables/divisionviews";
+			var localVarPath = "/flows/datatables/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24779,7 +24779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowDivisionViewEntityListing> GetFlowsDivisionviewsWithHttpInfo(List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null)
 		{
 
-			var localVarPath = "/api/v2/flows/divisionviews";
+			var localVarPath = "/flows/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24909,7 +24909,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowDivisionViewEntityListing>> GetFlowsDivisionviewsAsyncWithHttpInfo(List<string> type = null, int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string publishVersionId = null, string publishedAfter = null, string publishedBefore = null, List<string> divisionId = null, bool? includeSchemas = null)
 		{
 
-			var localVarPath = "/api/v2/flows/divisionviews";
+			var localVarPath = "/flows/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25020,7 +25020,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowExecutionId == null)
 				throw new ApiException(400, "Missing required parameter 'flowExecutionId' when calling ArchitectApi->GetFlowsExecution");
 
-			var localVarPath = "/api/v2/flows/executions/{flowExecutionId}";
+			var localVarPath = "/flows/executions/{flowExecutionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25121,7 +25121,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowExecutionId' when calling ArchitectApi->GetFlowsExecution");
 
 
-			var localVarPath = "/api/v2/flows/executions/{flowExecutionId}";
+			var localVarPath = "/flows/executions/{flowExecutionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25223,7 +25223,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ArchitectApi->GetFlowsExportJob");
 
-			var localVarPath = "/api/v2/flows/export/jobs/{jobId}";
+			var localVarPath = "/flows/export/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25327,7 +25327,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ArchitectApi->GetFlowsExportJob");
 
 
-			var localVarPath = "/api/v2/flows/export/jobs/{jobId}";
+			var localVarPath = "/flows/export/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25430,7 +25430,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (instanceId == null)
 				throw new ApiException(400, "Missing required parameter 'instanceId' when calling ArchitectApi->GetFlowsInstance");
 
-			var localVarPath = "/api/v2/flows/instances/{instanceId}";
+			var localVarPath = "/flows/instances/{instanceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25534,7 +25534,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'instanceId' when calling ArchitectApi->GetFlowsInstance");
 
 
-			var localVarPath = "/api/v2/flows/instances/{instanceId}";
+			var localVarPath = "/flows/instances/{instanceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25635,7 +25635,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ArchitectApi->GetFlowsInstancesJob");
 
-			var localVarPath = "/api/v2/flows/instances/jobs/{jobId}";
+			var localVarPath = "/flows/instances/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25736,7 +25736,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ArchitectApi->GetFlowsInstancesJob");
 
 
-			var localVarPath = "/api/v2/flows/instances/jobs/{jobId}";
+			var localVarPath = "/flows/instances/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25833,7 +25833,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowsQueryCriteriaResponse> GetFlowsInstancesQuerycapabilitiesWithHttpInfo(string expand = null)
 		{
 
-			var localVarPath = "/api/v2/flows/instances/querycapabilities";
+			var localVarPath = "/flows/instances/querycapabilities";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -25930,7 +25930,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowsQueryCriteriaResponse>> GetFlowsInstancesQuerycapabilitiesAsyncWithHttpInfo(string expand = null)
 		{
 
-			var localVarPath = "/api/v2/flows/instances/querycapabilities";
+			var localVarPath = "/flows/instances/querycapabilities";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26025,7 +26025,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ExecutionDataFlowSettingsResponse> GetFlowsInstancesSettingsExecutiondataWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/flows/instances/settings/executiondata";
+			var localVarPath = "/flows/instances/settings/executiondata";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26119,7 +26119,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ExecutionDataFlowSettingsResponse>> GetFlowsInstancesSettingsExecutiondataAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/flows/instances/settings/executiondata";
+			var localVarPath = "/flows/instances/settings/executiondata";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26219,7 +26219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowSettingsResponseEntityListing> GetFlowsInstancesSettingsLoglevelsWithHttpInfo(List<string> expand = null, int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/flows/instances/settings/loglevels";
+			var localVarPath = "/flows/instances/settings/loglevels";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26322,7 +26322,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponseEntityListing>> GetFlowsInstancesSettingsLoglevelsAsyncWithHttpInfo(List<string> expand = null, int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/flows/instances/settings/loglevels";
+			var localVarPath = "/flows/instances/settings/loglevels";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26419,7 +26419,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowLogLevelCharacteristicsDefinitions> GetFlowsInstancesSettingsLoglevelsCharacteristicsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/flows/instances/settings/loglevels/characteristics";
+			var localVarPath = "/flows/instances/settings/loglevels/characteristics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26513,7 +26513,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowLogLevelCharacteristicsDefinitions>> GetFlowsInstancesSettingsLoglevelsCharacteristicsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/flows/instances/settings/loglevels/characteristics";
+			var localVarPath = "/flows/instances/settings/loglevels/characteristics";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26609,7 +26609,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowSettingsResponse> GetFlowsInstancesSettingsLoglevelsDefaultWithHttpInfo(List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+			var localVarPath = "/flows/instances/settings/loglevels/default";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26706,7 +26706,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowSettingsResponse>> GetFlowsInstancesSettingsLoglevelsDefaultAsyncWithHttpInfo(List<string> expand = null)
 		{
 
-			var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+			var localVarPath = "/flows/instances/settings/loglevels/default";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26808,7 +26808,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ArchitectApi->GetFlowsJob");
 
-			var localVarPath = "/api/v2/flows/jobs/{jobId}";
+			var localVarPath = "/flows/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -26912,7 +26912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling ArchitectApi->GetFlowsJob");
 
 
-			var localVarPath = "/api/v2/flows/jobs/{jobId}";
+			var localVarPath = "/flows/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27013,7 +27013,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (milestoneId == null)
 				throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->GetFlowsMilestone");
 
-			var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+			var localVarPath = "/flows/milestones/{milestoneId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27114,7 +27114,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->GetFlowsMilestone");
 
 
-			var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+			var localVarPath = "/flows/milestones/{milestoneId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27227,7 +27227,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowMilestoneListing> GetFlowsMilestonesWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/flows/milestones";
+			var localVarPath = "/flows/milestones";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27348,7 +27348,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowMilestoneListing>> GetFlowsMilestonesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/flows/milestones";
+			var localVarPath = "/flows/milestones";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27465,7 +27465,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowMilestoneDivisionViewEntityListing> GetFlowsMilestonesDivisionviewsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/flows/milestones/divisionviews";
+			var localVarPath = "/flows/milestones/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27580,7 +27580,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowMilestoneDivisionViewEntityListing>> GetFlowsMilestonesDivisionviewsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/flows/milestones/divisionviews";
+			var localVarPath = "/flows/milestones/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27686,7 +27686,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowOutcomeId == null)
 				throw new ApiException(400, "Missing required parameter 'flowOutcomeId' when calling ArchitectApi->GetFlowsOutcome");
 
-			var localVarPath = "/api/v2/flows/outcomes/{flowOutcomeId}";
+			var localVarPath = "/flows/outcomes/{flowOutcomeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27787,7 +27787,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowOutcomeId' when calling ArchitectApi->GetFlowsOutcome");
 
 
-			var localVarPath = "/api/v2/flows/outcomes/{flowOutcomeId}";
+			var localVarPath = "/flows/outcomes/{flowOutcomeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -27900,7 +27900,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowOutcomeListing> GetFlowsOutcomesWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/flows/outcomes";
+			var localVarPath = "/flows/outcomes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28021,7 +28021,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowOutcomeListing>> GetFlowsOutcomesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, string description = null, string nameOrDescription = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/flows/outcomes";
+			var localVarPath = "/flows/outcomes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28138,7 +28138,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowOutcomeDivisionViewEntityListing> GetFlowsOutcomesDivisionviewsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/flows/outcomes/divisionviews";
+			var localVarPath = "/flows/outcomes/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28253,7 +28253,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowOutcomeDivisionViewEntityListing>> GetFlowsOutcomesDivisionviewsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string sortBy = null, string sortOrder = null, List<string> id = null, string name = null, List<string> divisionId = null)
 		{
 
-			var localVarPath = "/api/v2/flows/outcomes/divisionviews";
+			var localVarPath = "/flows/outcomes/divisionviews";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28361,7 +28361,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (grammarId == null)
 				throw new ApiException(400, "Missing required parameter 'grammarId' when calling ArchitectApi->PatchArchitectGrammar");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}";
+			var localVarPath = "/architect/grammars/{grammarId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28470,7 +28470,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'grammarId' when calling ArchitectApi->PatchArchitectGrammar");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}";
+			var localVarPath = "/architect/grammars/{grammarId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28583,7 +28583,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PatchArchitectGrammarLanguage");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28699,7 +28699,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PatchArchitectGrammarLanguage");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28806,7 +28806,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PatchFlowsInstancesSettingsExecutiondata");
 
-			var localVarPath = "/api/v2/flows/instances/settings/executiondata";
+			var localVarPath = "/flows/instances/settings/executiondata";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -28912,7 +28912,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PatchFlowsInstancesSettingsExecutiondata");
 
 
-			var localVarPath = "/api/v2/flows/instances/settings/executiondata";
+			var localVarPath = "/flows/instances/settings/executiondata";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29011,7 +29011,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Object> PostArchitectDependencytrackingBuildWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/architect/dependencytracking/build";
+			var localVarPath = "/architect/dependencytracking/build";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29104,7 +29104,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Object>> PostArchitectDependencytrackingBuildAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/architect/dependencytracking/build";
+			var localVarPath = "/architect/dependencytracking/build";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29203,7 +29203,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectEmergencygroups");
 
-			var localVarPath = "/api/v2/architect/emergencygroups";
+			var localVarPath = "/architect/emergencygroups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29309,7 +29309,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectEmergencygroups");
 
 
-			var localVarPath = "/api/v2/architect/emergencygroups";
+			var localVarPath = "/architect/emergencygroups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29424,7 +29424,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectGrammarLanguageFilesDtmf");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29544,7 +29544,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectGrammarLanguageFilesDtmf");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}/files/dtmf";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29661,7 +29661,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectGrammarLanguageFilesVoice");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}/files/voice";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29781,7 +29781,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectGrammarLanguageFilesVoice");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages/{languageCode}/files/voice";
+			var localVarPath = "/architect/grammars/{grammarId}/languages/{languageCode}/files/voice";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -29893,7 +29893,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectGrammarLanguages");
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages";
+			var localVarPath = "/architect/grammars/{grammarId}/languages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30006,7 +30006,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectGrammarLanguages");
 
 
-			var localVarPath = "/api/v2/architect/grammars/{grammarId}/languages";
+			var localVarPath = "/architect/grammars/{grammarId}/languages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30112,7 +30112,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectGrammars");
 
-			var localVarPath = "/api/v2/architect/grammars";
+			var localVarPath = "/architect/grammars";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30218,7 +30218,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectGrammars");
 
 
-			var localVarPath = "/api/v2/architect/grammars";
+			var localVarPath = "/architect/grammars";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30323,7 +30323,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectIvrs");
 
-			var localVarPath = "/api/v2/architect/ivrs";
+			var localVarPath = "/architect/ivrs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30429,7 +30429,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectIvrs");
 
 
-			var localVarPath = "/api/v2/architect/ivrs";
+			var localVarPath = "/architect/ivrs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30534,7 +30534,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (promptId == null)
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectPromptHistory");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/history";
+			var localVarPath = "/architect/prompts/{promptId}/history";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30635,7 +30635,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectPromptHistory");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/history";
+			var localVarPath = "/architect/prompts/{promptId}/history";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30742,7 +30742,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PostArchitectPromptResourceUploads");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads";
+			var localVarPath = "/architect/prompts/{promptId}/resources/{languageCode}/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30852,7 +30852,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PostArchitectPromptResourceUploads");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}/uploads";
+			var localVarPath = "/architect/prompts/{promptId}/resources/{languageCode}/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -30958,7 +30958,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectPromptResources");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources";
+			var localVarPath = "/architect/prompts/{promptId}/resources";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31071,7 +31071,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectPromptResources");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources";
+			var localVarPath = "/architect/prompts/{promptId}/resources";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31177,7 +31177,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectPrompts");
 
-			var localVarPath = "/api/v2/architect/prompts";
+			var localVarPath = "/architect/prompts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31283,7 +31283,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectPrompts");
 
 
-			var localVarPath = "/api/v2/architect/prompts";
+			var localVarPath = "/architect/prompts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31388,7 +31388,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSchedulegroups");
 
-			var localVarPath = "/api/v2/architect/schedulegroups";
+			var localVarPath = "/architect/schedulegroups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31494,7 +31494,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSchedulegroups");
 
 
-			var localVarPath = "/api/v2/architect/schedulegroups";
+			var localVarPath = "/architect/schedulegroups";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31599,7 +31599,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSchedules");
 
-			var localVarPath = "/api/v2/architect/schedules";
+			var localVarPath = "/architect/schedules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31705,7 +31705,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSchedules");
 
 
-			var localVarPath = "/api/v2/architect/schedules";
+			var localVarPath = "/architect/schedules";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31810,7 +31810,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (promptId == null)
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectSystempromptHistory");
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/history";
+			var localVarPath = "/architect/systemprompts/{promptId}/history";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -31911,7 +31911,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'promptId' when calling ArchitectApi->PostArchitectSystempromptHistory");
 
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/history";
+			var localVarPath = "/architect/systemprompts/{promptId}/history";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32018,7 +32018,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (languageCode == null)
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PostArchitectSystempromptResourceUploads");
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources/{languageCode}/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32128,7 +32128,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'languageCode' when calling ArchitectApi->PostArchitectSystempromptResourceUploads");
 
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}/uploads";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources/{languageCode}/uploads";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32234,7 +32234,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSystempromptResources");
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32347,7 +32347,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostArchitectSystempromptResources");
 
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32453,7 +32453,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowId == null)
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowHistory");
 
-			var localVarPath = "/api/v2/flows/{flowId}/history";
+			var localVarPath = "/flows/{flowId}/history";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32554,7 +32554,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowId' when calling ArchitectApi->PostFlowHistory");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/history";
+			var localVarPath = "/flows/{flowId}/history";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32661,7 +32661,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowInstancesSettingsLoglevels");
 
-			var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+			var localVarPath = "/flows/{flowId}/instances/settings/loglevels";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32777,7 +32777,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowInstancesSettingsLoglevels");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+			var localVarPath = "/flows/{flowId}/instances/settings/loglevels";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -32889,7 +32889,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowVersions");
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions";
+			var localVarPath = "/flows/{flowId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33002,7 +33002,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowVersions");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/versions";
+			var localVarPath = "/flows/{flowId}/versions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33110,7 +33110,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlows");
 
-			var localVarPath = "/api/v2/flows";
+			var localVarPath = "/flows";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33219,7 +33219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlows");
 
 
-			var localVarPath = "/api/v2/flows";
+			var localVarPath = "/flows";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33325,7 +33325,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flow == null)
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsCheckin");
 
-			var localVarPath = "/api/v2/flows/actions/checkin";
+			var localVarPath = "/flows/actions/checkin";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33426,7 +33426,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsCheckin");
 
 
-			var localVarPath = "/api/v2/flows/actions/checkin";
+			var localVarPath = "/flows/actions/checkin";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33526,7 +33526,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flow == null)
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsCheckout");
 
-			var localVarPath = "/api/v2/flows/actions/checkout";
+			var localVarPath = "/flows/actions/checkout";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33627,7 +33627,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsCheckout");
 
 
-			var localVarPath = "/api/v2/flows/actions/checkout";
+			var localVarPath = "/flows/actions/checkout";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33727,7 +33727,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flow == null)
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsDeactivate");
 
-			var localVarPath = "/api/v2/flows/actions/deactivate";
+			var localVarPath = "/flows/actions/deactivate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33828,7 +33828,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsDeactivate");
 
 
-			var localVarPath = "/api/v2/flows/actions/deactivate";
+			var localVarPath = "/flows/actions/deactivate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -33930,7 +33930,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flow == null)
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsPublish");
 
-			var localVarPath = "/api/v2/flows/actions/publish";
+			var localVarPath = "/flows/actions/publish";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34034,7 +34034,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsPublish");
 
 
-			var localVarPath = "/api/v2/flows/actions/publish";
+			var localVarPath = "/flows/actions/publish";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34135,7 +34135,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flow == null)
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsRevert");
 
-			var localVarPath = "/api/v2/flows/actions/revert";
+			var localVarPath = "/flows/actions/revert";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34236,7 +34236,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsRevert");
 
 
-			var localVarPath = "/api/v2/flows/actions/revert";
+			var localVarPath = "/flows/actions/revert";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34336,7 +34336,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flow == null)
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsUnlock");
 
-			var localVarPath = "/api/v2/flows/actions/unlock";
+			var localVarPath = "/flows/actions/unlock";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34437,7 +34437,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flow' when calling ArchitectApi->PostFlowsActionsUnlock");
 
 
-			var localVarPath = "/api/v2/flows/actions/unlock";
+			var localVarPath = "/flows/actions/unlock";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34537,7 +34537,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (datatableId == null)
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PostFlowsDatatableExportJobs");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/export/jobs";
+			var localVarPath = "/flows/datatables/{datatableId}/export/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34638,7 +34638,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PostFlowsDatatableExportJobs");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/export/jobs";
+			var localVarPath = "/flows/datatables/{datatableId}/export/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34743,7 +34743,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsDatatableImportJobs");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs";
+			var localVarPath = "/flows/datatables/{datatableId}/import/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34856,7 +34856,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsDatatableImportJobs");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/jobs";
+			var localVarPath = "/flows/datatables/{datatableId}/import/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -34967,7 +34967,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (dataTableRow == null)
 				throw new ApiException(400, "Missing required parameter 'dataTableRow' when calling ArchitectApi->PostFlowsDatatableRows");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows";
+			var localVarPath = "/flows/datatables/{datatableId}/rows";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35080,7 +35080,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'dataTableRow' when calling ArchitectApi->PostFlowsDatatableRows");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows";
+			var localVarPath = "/flows/datatables/{datatableId}/rows";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35186,7 +35186,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsDatatables");
 
-			var localVarPath = "/api/v2/flows/datatables";
+			var localVarPath = "/flows/datatables";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35292,7 +35292,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsDatatables");
 
 
-			var localVarPath = "/api/v2/flows/datatables";
+			var localVarPath = "/flows/datatables";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35397,7 +35397,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowLaunchRequest == null)
 				throw new ApiException(400, "Missing required parameter 'flowLaunchRequest' when calling ArchitectApi->PostFlowsExecutions");
 
-			var localVarPath = "/api/v2/flows/executions";
+			var localVarPath = "/flows/executions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35503,7 +35503,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowLaunchRequest' when calling ArchitectApi->PostFlowsExecutions");
 
 
-			var localVarPath = "/api/v2/flows/executions";
+			var localVarPath = "/flows/executions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35608,7 +35608,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsExportJobs");
 
-			var localVarPath = "/api/v2/flows/export/jobs";
+			var localVarPath = "/flows/export/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35714,7 +35714,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsExportJobs");
 
 
-			var localVarPath = "/api/v2/flows/export/jobs";
+			var localVarPath = "/flows/export/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35821,7 +35821,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsInstancesJobs");
 
-			var localVarPath = "/api/v2/flows/instances/jobs";
+			var localVarPath = "/flows/instances/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -35930,7 +35930,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsInstancesJobs");
 
 
-			var localVarPath = "/api/v2/flows/instances/jobs";
+			var localVarPath = "/flows/instances/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36040,7 +36040,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsInstancesQuery");
 
-			var localVarPath = "/api/v2/flows/instances/query";
+			var localVarPath = "/flows/instances/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36152,7 +36152,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsInstancesQuery");
 
 
-			var localVarPath = "/api/v2/flows/instances/query";
+			var localVarPath = "/flows/instances/query";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36254,7 +36254,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<RegisterArchitectJobResponse> PostFlowsJobsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/flows/jobs";
+			var localVarPath = "/flows/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36348,7 +36348,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<RegisterArchitectJobResponse>> PostFlowsJobsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/flows/jobs";
+			var localVarPath = "/flows/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36444,7 +36444,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowMilestone> PostFlowsMilestonesWithHttpInfo(FlowMilestone body = null)
 		{
 
-			var localVarPath = "/api/v2/flows/milestones";
+			var localVarPath = "/flows/milestones";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36546,7 +36546,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowMilestone>> PostFlowsMilestonesAsyncWithHttpInfo(FlowMilestone body = null)
 		{
 
-			var localVarPath = "/api/v2/flows/milestones";
+			var localVarPath = "/flows/milestones";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36648,7 +36648,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<FlowOutcome> PostFlowsOutcomesWithHttpInfo(FlowOutcome body = null)
 		{
 
-			var localVarPath = "/api/v2/flows/outcomes";
+			var localVarPath = "/flows/outcomes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36750,7 +36750,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<FlowOutcome>> PostFlowsOutcomesAsyncWithHttpInfo(FlowOutcome body = null)
 		{
 
-			var localVarPath = "/api/v2/flows/outcomes";
+			var localVarPath = "/flows/outcomes";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36860,7 +36860,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectEmergencygroup");
 
-			var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+			var localVarPath = "/architect/emergencygroups/{emergencyGroupId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -36973,7 +36973,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectEmergencygroup");
 
 
-			var localVarPath = "/api/v2/architect/emergencygroups/{emergencyGroupId}";
+			var localVarPath = "/architect/emergencygroups/{emergencyGroupId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37084,7 +37084,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectIvr");
 
-			var localVarPath = "/api/v2/architect/ivrs/{ivrId}";
+			var localVarPath = "/architect/ivrs/{ivrId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37197,7 +37197,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectIvr");
 
 
-			var localVarPath = "/api/v2/architect/ivrs/{ivrId}";
+			var localVarPath = "/architect/ivrs/{ivrId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37308,7 +37308,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectIvrIdentityresolution");
 
-			var localVarPath = "/api/v2/architect/ivrs/{ivrId}/identityresolution";
+			var localVarPath = "/architect/ivrs/{ivrId}/identityresolution";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37421,7 +37421,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectIvrIdentityresolution");
 
 
-			var localVarPath = "/api/v2/architect/ivrs/{ivrId}/identityresolution";
+			var localVarPath = "/architect/ivrs/{ivrId}/identityresolution";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37532,7 +37532,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectPrompt");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}";
+			var localVarPath = "/architect/prompts/{promptId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37645,7 +37645,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectPrompt");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}";
+			var localVarPath = "/architect/prompts/{promptId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37761,7 +37761,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectPromptResource");
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/prompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37881,7 +37881,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectPromptResource");
 
 
-			var localVarPath = "/api/v2/architect/prompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/prompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -37993,7 +37993,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSchedule");
 
-			var localVarPath = "/api/v2/architect/schedules/{scheduleId}";
+			var localVarPath = "/architect/schedules/{scheduleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38106,7 +38106,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSchedule");
 
 
-			var localVarPath = "/api/v2/architect/schedules/{scheduleId}";
+			var localVarPath = "/architect/schedules/{scheduleId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38217,7 +38217,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSchedulegroup");
 
-			var localVarPath = "/api/v2/architect/schedulegroups/{scheduleGroupId}";
+			var localVarPath = "/architect/schedulegroups/{scheduleGroupId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38330,7 +38330,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSchedulegroup");
 
 
-			var localVarPath = "/api/v2/architect/schedulegroups/{scheduleGroupId}";
+			var localVarPath = "/architect/schedulegroups/{scheduleGroupId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38446,7 +38446,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSystempromptResource");
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38566,7 +38566,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutArchitectSystempromptResource");
 
 
-			var localVarPath = "/api/v2/architect/systemprompts/{promptId}/resources/{languageCode}";
+			var localVarPath = "/architect/systemprompts/{promptId}/resources/{languageCode}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38678,7 +38678,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlow");
 
-			var localVarPath = "/api/v2/flows/{flowId}";
+			var localVarPath = "/flows/{flowId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38791,7 +38791,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlow");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}";
+			var localVarPath = "/flows/{flowId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -38904,7 +38904,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowInstancesSettingsLoglevels");
 
-			var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+			var localVarPath = "/flows/{flowId}/instances/settings/loglevels";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39020,7 +39020,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowInstancesSettingsLoglevels");
 
 
-			var localVarPath = "/api/v2/flows/{flowId}/instances/settings/loglevels";
+			var localVarPath = "/flows/{flowId}/instances/settings/loglevels";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39134,7 +39134,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowsDatatable");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+			var localVarPath = "/flows/datatables/{datatableId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39250,7 +39250,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowsDatatable");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}";
+			var localVarPath = "/flows/datatables/{datatableId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39364,7 +39364,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (rowId == null)
 				throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->PutFlowsDatatableRow");
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+			var localVarPath = "/flows/datatables/{datatableId}/rows/{rowId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39480,7 +39480,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'rowId' when calling ArchitectApi->PutFlowsDatatableRow");
 
 
-			var localVarPath = "/api/v2/flows/datatables/{datatableId}/rows/{rowId}";
+			var localVarPath = "/flows/datatables/{datatableId}/rows/{rowId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39589,7 +39589,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowsInstancesSettingsLoglevelsDefault");
 
-			var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+			var localVarPath = "/flows/instances/settings/loglevels/default";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39698,7 +39698,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PutFlowsInstancesSettingsLoglevelsDefault");
 
 
-			var localVarPath = "/api/v2/flows/instances/settings/loglevels/default";
+			var localVarPath = "/flows/instances/settings/loglevels/default";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39806,7 +39806,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (milestoneId == null)
 				throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->PutFlowsMilestone");
 
-			var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+			var localVarPath = "/flows/milestones/{milestoneId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -39915,7 +39915,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'milestoneId' when calling ArchitectApi->PutFlowsMilestone");
 
 
-			var localVarPath = "/api/v2/flows/milestones/{milestoneId}";
+			var localVarPath = "/flows/milestones/{milestoneId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40023,7 +40023,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (flowOutcomeId == null)
 				throw new ApiException(400, "Missing required parameter 'flowOutcomeId' when calling ArchitectApi->PutFlowsOutcome");
 
-			var localVarPath = "/api/v2/flows/outcomes/{flowOutcomeId}";
+			var localVarPath = "/flows/outcomes/{flowOutcomeId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -40132,7 +40132,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'flowOutcomeId' when calling ArchitectApi->PutFlowsOutcome");
 
 
-			var localVarPath = "/api/v2/flows/outcomes/{flowOutcomeId}";
+			var localVarPath = "/flows/outcomes/{flowOutcomeId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

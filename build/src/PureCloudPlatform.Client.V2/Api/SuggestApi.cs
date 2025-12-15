@@ -355,7 +355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (q64 == null)
 				throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSearch");
 
-			var localVarPath = "/api/v2/search";
+			var localVarPath = "/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -462,7 +462,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSearch");
 
 
-			var localVarPath = "/api/v2/search";
+			var localVarPath = "/search";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -568,7 +568,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (q64 == null)
 				throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSearchSuggest");
 
-			var localVarPath = "/api/v2/search/suggest";
+			var localVarPath = "/search/suggest";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -675,7 +675,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'q64' when calling SuggestApi->GetSearchSuggest");
 
 
-			var localVarPath = "/api/v2/search/suggest";
+			var localVarPath = "/search/suggest";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -779,7 +779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SuggestApi->PostSearch");
 
-			var localVarPath = "/api/v2/search";
+			var localVarPath = "/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -888,7 +888,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SuggestApi->PostSearch");
 
 
-			var localVarPath = "/api/v2/search";
+			var localVarPath = "/search";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -996,7 +996,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling SuggestApi->PostSearchSuggest");
 
-			var localVarPath = "/api/v2/search/suggest";
+			var localVarPath = "/search/suggest";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1105,7 +1105,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling SuggestApi->PostSearchSuggest");
 
 
-			var localVarPath = "/api/v2/search/suggest";
+			var localVarPath = "/search/suggest";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

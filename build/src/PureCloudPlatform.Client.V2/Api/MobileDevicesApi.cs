@@ -386,7 +386,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deviceId == null)
 				throw new ApiException(400, "Missing required parameter 'deviceId' when calling MobileDevicesApi->DeleteMobiledevice");
 
-			var localVarPath = "/api/v2/mobiledevices/{deviceId}";
+			var localVarPath = "/mobiledevices/{deviceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -486,7 +486,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deviceId' when calling MobileDevicesApi->DeleteMobiledevice");
 
 
-			var localVarPath = "/api/v2/mobiledevices/{deviceId}";
+			var localVarPath = "/mobiledevices/{deviceId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -586,7 +586,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deviceId == null)
 				throw new ApiException(400, "Missing required parameter 'deviceId' when calling MobileDevicesApi->GetMobiledevice");
 
-			var localVarPath = "/api/v2/mobiledevices/{deviceId}";
+			var localVarPath = "/mobiledevices/{deviceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -687,7 +687,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deviceId' when calling MobileDevicesApi->GetMobiledevice");
 
 
-			var localVarPath = "/api/v2/mobiledevices/{deviceId}";
+			var localVarPath = "/mobiledevices/{deviceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -788,7 +788,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DirectoryUserDevicesListing> GetMobiledevicesWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/mobiledevices";
+			var localVarPath = "/mobiledevices";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -891,7 +891,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DirectoryUserDevicesListing>> GetMobiledevicesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 		{
 
-			var localVarPath = "/api/v2/mobiledevices";
+			var localVarPath = "/mobiledevices";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -993,7 +993,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling MobileDevicesApi->PostMobiledevices");
 
-			var localVarPath = "/api/v2/mobiledevices";
+			var localVarPath = "/mobiledevices";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1099,7 +1099,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling MobileDevicesApi->PostMobiledevices");
 
 
-			var localVarPath = "/api/v2/mobiledevices";
+			var localVarPath = "/mobiledevices";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1206,7 +1206,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (deviceId == null)
 				throw new ApiException(400, "Missing required parameter 'deviceId' when calling MobileDevicesApi->PutMobiledevice");
 
-			var localVarPath = "/api/v2/mobiledevices/{deviceId}";
+			var localVarPath = "/mobiledevices/{deviceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -1315,7 +1315,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'deviceId' when calling MobileDevicesApi->PutMobiledevice");
 
 
-			var localVarPath = "/api/v2/mobiledevices/{deviceId}";
+			var localVarPath = "/mobiledevices/{deviceId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();

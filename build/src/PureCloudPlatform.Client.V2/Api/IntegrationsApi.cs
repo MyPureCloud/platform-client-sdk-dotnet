@@ -937,7 +937,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// List multiple sets of credentials
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
+		/// This endpoint is deprecated. Please see the Listing API (GET /integrations/credentials/listing)
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -950,7 +950,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// List multiple sets of credentials
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
+		/// This endpoint is deprecated. Please see the Listing API (GET /integrations/credentials/listing)
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3483,7 +3483,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// List multiple sets of credentials
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
+		/// This endpoint is deprecated. Please see the Listing API (GET /integrations/credentials/listing)
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3496,7 +3496,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		/// List multiple sets of credentials
 		/// </summary>
 		/// <remarks>
-		/// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
+		/// This endpoint is deprecated. Please see the Listing API (GET /integrations/credentials/listing)
 		/// </remarks>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -5219,7 +5219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->DeleteIntegration");
 
-			var localVarPath = "/api/v2/integrations/{integrationId}";
+			var localVarPath = "/integrations/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5320,7 +5320,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->DeleteIntegration");
 
 
-			var localVarPath = "/api/v2/integrations/{integrationId}";
+			var localVarPath = "/integrations/{integrationId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5419,7 +5419,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionId == null)
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->DeleteIntegrationsAction");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}";
+			var localVarPath = "/integrations/actions/{actionId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5519,7 +5519,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->DeleteIntegrationsAction");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}";
+			var localVarPath = "/integrations/actions/{actionId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5618,7 +5618,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionId == null)
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->DeleteIntegrationsActionDraft");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft";
+			var localVarPath = "/integrations/actions/{actionId}/draft";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5718,7 +5718,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->DeleteIntegrationsActionDraft");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft";
+			var localVarPath = "/integrations/actions/{actionId}/draft";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5817,7 +5817,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (credentialId == null)
 				throw new ApiException(400, "Missing required parameter 'credentialId' when calling IntegrationsApi->DeleteIntegrationsCredential");
 
-			var localVarPath = "/api/v2/integrations/credentials/{credentialId}";
+			var localVarPath = "/integrations/credentials/{credentialId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -5917,7 +5917,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'credentialId' when calling IntegrationsApi->DeleteIntegrationsCredential");
 
 
-			var localVarPath = "/api/v2/integrations/credentials/{credentialId}";
+			var localVarPath = "/integrations/credentials/{credentialId}";
 			var localVarHttpMethod = "Delete";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6029,7 +6029,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegration");
 
-			var localVarPath = "/api/v2/integrations/{integrationId}";
+			var localVarPath = "/integrations/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6148,7 +6148,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegration");
 
 
-			var localVarPath = "/api/v2/integrations/{integrationId}";
+			var localVarPath = "/integrations/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6254,7 +6254,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationConfigCurrent");
 
-			var localVarPath = "/api/v2/integrations/{integrationId}/config/current";
+			var localVarPath = "/integrations/{integrationId}/config/current";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6355,7 +6355,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationConfigCurrent");
 
 
-			var localVarPath = "/api/v2/integrations/{integrationId}/config/current";
+			var localVarPath = "/integrations/{integrationId}/config/current";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6468,7 +6468,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<IntegrationEntityListing> GetIntegrationsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null)
 		{
 
-			var localVarPath = "/api/v2/integrations";
+			var localVarPath = "/integrations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6589,7 +6589,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<IntegrationEntityListing>> GetIntegrationsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, List<string> ids = null, string integrationType = null, string reportedState = null)
 		{
 
-			var localVarPath = "/api/v2/integrations";
+			var localVarPath = "/integrations";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6703,7 +6703,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionId == null)
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsAction");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}";
+			var localVarPath = "/integrations/actions/{actionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6813,7 +6813,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsAction");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}";
+			var localVarPath = "/integrations/actions/{actionId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -6922,7 +6922,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionId == null)
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionDraft");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft";
+			var localVarPath = "/integrations/actions/{actionId}/draft";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7032,7 +7032,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionDraft");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft";
+			var localVarPath = "/integrations/actions/{actionId}/draft";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7135,7 +7135,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionId == null)
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionDraftFunction");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function";
+			var localVarPath = "/integrations/actions/{actionId}/draft/function";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7236,7 +7236,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionDraftFunction");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function";
+			var localVarPath = "/integrations/actions/{actionId}/draft/function";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7343,7 +7343,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (fileName == null)
 				throw new ApiException(400, "Missing required parameter 'fileName' when calling IntegrationsApi->GetIntegrationsActionDraftSchema");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/schemas/{fileName}";
+			var localVarPath = "/integrations/actions/{actionId}/draft/schemas/{fileName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7454,7 +7454,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'fileName' when calling IntegrationsApi->GetIntegrationsActionDraftSchema");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/schemas/{fileName}";
+			var localVarPath = "/integrations/actions/{actionId}/draft/schemas/{fileName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7561,7 +7561,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (fileName == null)
 				throw new ApiException(400, "Missing required parameter 'fileName' when calling IntegrationsApi->GetIntegrationsActionDraftTemplate");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/templates/{fileName}";
+			var localVarPath = "/integrations/actions/{actionId}/draft/templates/{fileName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7669,7 +7669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'fileName' when calling IntegrationsApi->GetIntegrationsActionDraftTemplate");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/templates/{fileName}";
+			var localVarPath = "/integrations/actions/{actionId}/draft/templates/{fileName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7770,7 +7770,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionId == null)
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionDraftValidation");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/validation";
+			var localVarPath = "/integrations/actions/{actionId}/draft/validation";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7871,7 +7871,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionDraftValidation");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/validation";
+			var localVarPath = "/integrations/actions/{actionId}/draft/validation";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -7971,7 +7971,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionId == null)
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionFunction");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/function";
+			var localVarPath = "/integrations/actions/{actionId}/function";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8072,7 +8072,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->GetIntegrationsActionFunction");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/function";
+			var localVarPath = "/integrations/actions/{actionId}/function";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8179,7 +8179,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (fileName == null)
 				throw new ApiException(400, "Missing required parameter 'fileName' when calling IntegrationsApi->GetIntegrationsActionSchema");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/schemas/{fileName}";
+			var localVarPath = "/integrations/actions/{actionId}/schemas/{fileName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8290,7 +8290,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'fileName' when calling IntegrationsApi->GetIntegrationsActionSchema");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/schemas/{fileName}";
+			var localVarPath = "/integrations/actions/{actionId}/schemas/{fileName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8397,7 +8397,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (fileName == null)
 				throw new ApiException(400, "Missing required parameter 'fileName' when calling IntegrationsApi->GetIntegrationsActionTemplate");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/templates/{fileName}";
+			var localVarPath = "/integrations/actions/{actionId}/templates/{fileName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8505,7 +8505,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'fileName' when calling IntegrationsApi->GetIntegrationsActionTemplate");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/templates/{fileName}";
+			var localVarPath = "/integrations/actions/{actionId}/templates/{fileName}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8623,7 +8623,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ActionEntityListing> GetIntegrationsActionsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/actions";
+			var localVarPath = "/integrations/actions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8750,7 +8750,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/actions";
+			var localVarPath = "/integrations/actions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8869,7 +8869,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CategoryEntityListing> GetIntegrationsActionsCategoriesWithHttpInfo(int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/actions/categories";
+			var localVarPath = "/integrations/actions/categories";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -8984,7 +8984,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CategoryEntityListing>> GetIntegrationsActionsCategoriesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string secure = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/actions/categories";
+			var localVarPath = "/integrations/actions/categories";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9089,7 +9089,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ActionCertificateListing> GetIntegrationsActionsCertificatesWithHttpInfo(string status = null, string type = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/actions/certificates";
+			var localVarPath = "/integrations/actions/certificates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9189,7 +9189,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ActionCertificateListing>> GetIntegrationsActionsCertificatesAsyncWithHttpInfo(string status = null, string type = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/actions/certificates";
+			var localVarPath = "/integrations/actions/certificates";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9285,7 +9285,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TrustedCertificates> GetIntegrationsActionsCertificatesTruststoreWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/integrations/actions/certificates/truststore";
+			var localVarPath = "/integrations/actions/certificates/truststore";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9379,7 +9379,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TrustedCertificates>> GetIntegrationsActionsCertificatesTruststoreAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/integrations/actions/certificates/truststore";
+			var localVarPath = "/integrations/actions/certificates/truststore";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9495,7 +9495,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ActionEntityListing> GetIntegrationsActionsDraftsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/actions/drafts";
+			var localVarPath = "/integrations/actions/drafts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9622,7 +9622,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ActionEntityListing>> GetIntegrationsActionsDraftsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/actions/drafts";
+			var localVarPath = "/integrations/actions/drafts";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9727,7 +9727,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<List<FunctionRuntime>> GetIntegrationsActionsFunctionsRuntimesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/integrations/actions/functions/runtimes";
+			var localVarPath = "/integrations/actions/functions/runtimes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9821,7 +9821,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<List<FunctionRuntime>>> GetIntegrationsActionsFunctionsRuntimesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/integrations/actions/functions/runtimes";
+			var localVarPath = "/integrations/actions/functions/runtimes";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -9929,7 +9929,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (botId == null)
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsBotconnectorBot");
 
-			var localVarPath = "/api/v2/integrations/botconnectors/{integrationId}/bots/{botId}";
+			var localVarPath = "/integrations/botconnectors/{integrationId}/bots/{botId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10042,7 +10042,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsBotconnectorBot");
 
 
-			var localVarPath = "/api/v2/integrations/botconnectors/{integrationId}/bots/{botId}";
+			var localVarPath = "/integrations/botconnectors/{integrationId}/bots/{botId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10150,7 +10150,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorBots");
 
-			var localVarPath = "/api/v2/integrations/botconnectors/{integrationId}/bots";
+			var localVarPath = "/integrations/botconnectors/{integrationId}/bots";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10259,7 +10259,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorBots");
 
 
-			var localVarPath = "/api/v2/integrations/botconnectors/{integrationId}/bots";
+			var localVarPath = "/integrations/botconnectors/{integrationId}/bots";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10367,7 +10367,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorBotsSummaries");
 
-			var localVarPath = "/api/v2/integrations/botconnectors/{integrationId}/bots/summaries";
+			var localVarPath = "/integrations/botconnectors/{integrationId}/bots/summaries";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10476,7 +10476,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorBotsSummaries");
 
 
-			var localVarPath = "/api/v2/integrations/botconnectors/{integrationId}/bots/summaries";
+			var localVarPath = "/integrations/botconnectors/{integrationId}/bots/summaries";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10585,7 +10585,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (botId == null)
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBot");
 
-			var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}";
+			var localVarPath = "/integrations/botconnector/{integrationId}/bots/{botId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10696,7 +10696,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBot");
 
 
-			var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}";
+			var localVarPath = "/integrations/botconnector/{integrationId}/bots/{botId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10807,7 +10807,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (botId == null)
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBotVersions");
 
-			var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions";
+			var localVarPath = "/integrations/botconnector/{integrationId}/bots/{botId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -10921,7 +10921,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBotVersions");
 
 
-			var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/{botId}/versions";
+			var localVarPath = "/integrations/botconnector/{integrationId}/bots/{botId}/versions";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11024,7 +11024,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBots");
 
-			var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots";
+			var localVarPath = "/integrations/botconnector/{integrationId}/bots";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11125,7 +11125,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBots");
 
 
-			var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots";
+			var localVarPath = "/integrations/botconnector/{integrationId}/bots";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11229,7 +11229,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBotsSummaries");
 
-			var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/summaries";
+			var localVarPath = "/integrations/botconnector/{integrationId}/bots/summaries";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11336,7 +11336,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsBotconnectorIntegrationIdBotsSummaries");
 
 
-			var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots/summaries";
+			var localVarPath = "/integrations/botconnector/{integrationId}/bots/summaries";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11445,7 +11445,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<ClientAppEntityListing> GetIntegrationsClientappsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/clientapps";
+			var localVarPath = "/integrations/clientapps";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11557,7 +11557,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<ClientAppEntityListing>> GetIntegrationsClientappsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/clientapps";
+			var localVarPath = "/integrations/clientapps";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11669,7 +11669,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UCIntegrationListing> GetIntegrationsClientappsUnifiedcommunicationsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/clientapps/unifiedcommunications";
+			var localVarPath = "/integrations/clientapps/unifiedcommunications";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11781,7 +11781,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UCIntegrationListing>> GetIntegrationsClientappsUnifiedcommunicationsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/clientapps/unifiedcommunications";
+			var localVarPath = "/integrations/clientapps/unifiedcommunications";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11886,7 +11886,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (credentialId == null)
 				throw new ApiException(400, "Missing required parameter 'credentialId' when calling IntegrationsApi->GetIntegrationsCredential");
 
-			var localVarPath = "/api/v2/integrations/credentials/{credentialId}";
+			var localVarPath = "/integrations/credentials/{credentialId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -11987,7 +11987,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'credentialId' when calling IntegrationsApi->GetIntegrationsCredential");
 
 
-			var localVarPath = "/api/v2/integrations/credentials/{credentialId}";
+			var localVarPath = "/integrations/credentials/{credentialId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12061,7 +12061,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// List multiple sets of credentials 
-		/// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
+		/// This endpoint is deprecated. Please see the Listing API (GET /integrations/credentials/listing)
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -12076,7 +12076,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// List multiple sets of credentials 
-		/// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
+		/// This endpoint is deprecated. Please see the Listing API (GET /integrations/credentials/listing)
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -12086,7 +12086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CredentialInfoListing> GetIntegrationsCredentialsWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/credentials";
+			var localVarPath = "/integrations/credentials";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12160,7 +12160,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// List multiple sets of credentials 
-		/// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
+		/// This endpoint is deprecated. Please see the Listing API (GET /integrations/credentials/listing)
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -12176,7 +12176,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 		/// <summary>
 		/// List multiple sets of credentials 
-		/// This endpoint is deprecated. Please see the Listing API (GET /api/v2/integrations/credentials/listing)
+		/// This endpoint is deprecated. Please see the Listing API (GET /integrations/credentials/listing)
 		/// </summary>
 		/// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
 		/// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -12186,7 +12186,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CredentialInfoListing>> GetIntegrationsCredentialsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/credentials";
+			var localVarPath = "/integrations/credentials";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12288,7 +12288,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CredentialInfoCursorListing> GetIntegrationsCredentialsListingWithHttpInfo(string before = null, string after = null, string pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/credentials/listing";
+			var localVarPath = "/integrations/credentials/listing";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12391,7 +12391,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CredentialInfoCursorListing>> GetIntegrationsCredentialsListingAsyncWithHttpInfo(string before = null, string after = null, string pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/credentials/listing";
+			var localVarPath = "/integrations/credentials/listing";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12488,7 +12488,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CredentialTypeListing> GetIntegrationsCredentialsTypesWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/integrations/credentials/types";
+			var localVarPath = "/integrations/credentials/types";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12582,7 +12582,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CredentialTypeListing>> GetIntegrationsCredentialsTypesAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/integrations/credentials/types";
+			var localVarPath = "/integrations/credentials/types";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12680,7 +12680,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<AudioConnectorIntegrationEntityListing> GetIntegrationsSpeechAudioconnectorWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/audioconnector";
+			var localVarPath = "/integrations/speech/audioconnector";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12780,7 +12780,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<AudioConnectorIntegrationEntityListing>> GetIntegrationsSpeechAudioconnectorAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/audioconnector";
+			var localVarPath = "/integrations/speech/audioconnector";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12881,7 +12881,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsSpeechAudioconnectorIntegrationId");
 
-			var localVarPath = "/api/v2/integrations/speech/audioconnector/{integrationId}";
+			var localVarPath = "/integrations/speech/audioconnector/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -12982,7 +12982,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->GetIntegrationsSpeechAudioconnectorIntegrationId");
 
 
-			var localVarPath = "/api/v2/integrations/speech/audioconnector/{integrationId}";
+			var localVarPath = "/integrations/speech/audioconnector/{integrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13082,7 +13082,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling IntegrationsApi->GetIntegrationsSpeechDialogflowAgent");
 
-			var localVarPath = "/api/v2/integrations/speech/dialogflow/agents/{agentId}";
+			var localVarPath = "/integrations/speech/dialogflow/agents/{agentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13183,7 +13183,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling IntegrationsApi->GetIntegrationsSpeechDialogflowAgent");
 
 
-			var localVarPath = "/api/v2/integrations/speech/dialogflow/agents/{agentId}";
+			var localVarPath = "/integrations/speech/dialogflow/agents/{agentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13284,7 +13284,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DialogflowAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowAgentsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/dialogflow/agents";
+			var localVarPath = "/integrations/speech/dialogflow/agents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13387,7 +13387,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DialogflowAgentSummaryEntityListing>> GetIntegrationsSpeechDialogflowAgentsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/dialogflow/agents";
+			var localVarPath = "/integrations/speech/dialogflow/agents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13489,7 +13489,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (agentId == null)
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling IntegrationsApi->GetIntegrationsSpeechDialogflowcxAgent");
 
-			var localVarPath = "/api/v2/integrations/speech/dialogflowcx/agents/{agentId}";
+			var localVarPath = "/integrations/speech/dialogflowcx/agents/{agentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13590,7 +13590,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'agentId' when calling IntegrationsApi->GetIntegrationsSpeechDialogflowcxAgent");
 
 
-			var localVarPath = "/api/v2/integrations/speech/dialogflowcx/agents/{agentId}";
+			var localVarPath = "/integrations/speech/dialogflowcx/agents/{agentId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13691,7 +13691,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<DialogflowCXAgentSummaryEntityListing> GetIntegrationsSpeechDialogflowcxAgentsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/dialogflowcx/agents";
+			var localVarPath = "/integrations/speech/dialogflowcx/agents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13794,7 +13794,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<DialogflowCXAgentSummaryEntityListing>> GetIntegrationsSpeechDialogflowcxAgentsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/dialogflowcx/agents";
+			var localVarPath = "/integrations/speech/dialogflowcx/agents";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13896,7 +13896,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (aliasId == null)
 				throw new ApiException(400, "Missing required parameter 'aliasId' when calling IntegrationsApi->GetIntegrationsSpeechLexBotAlias");
 
-			var localVarPath = "/api/v2/integrations/speech/lex/bot/alias/{aliasId}";
+			var localVarPath = "/integrations/speech/lex/bot/alias/{aliasId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -13997,7 +13997,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'aliasId' when calling IntegrationsApi->GetIntegrationsSpeechLexBotAlias");
 
 
-			var localVarPath = "/api/v2/integrations/speech/lex/bot/alias/{aliasId}";
+			var localVarPath = "/integrations/speech/lex/bot/alias/{aliasId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14105,7 +14105,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (botId == null)
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsSpeechLexBotBotIdAliases");
 
-			var localVarPath = "/api/v2/integrations/speech/lex/bot/{botId}/aliases";
+			var localVarPath = "/integrations/speech/lex/bot/{botId}/aliases";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14218,7 +14218,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsSpeechLexBotBotIdAliases");
 
 
-			var localVarPath = "/api/v2/integrations/speech/lex/bot/{botId}/aliases";
+			var localVarPath = "/integrations/speech/lex/bot/{botId}/aliases";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14323,7 +14323,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LexBotEntityListing> GetIntegrationsSpeechLexBotsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/lex/bots";
+			var localVarPath = "/integrations/speech/lex/bots";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14426,7 +14426,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LexBotEntityListing>> GetIntegrationsSpeechLexBotsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/lex/bots";
+			var localVarPath = "/integrations/speech/lex/bots";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14528,7 +14528,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (aliasId == null)
 				throw new ApiException(400, "Missing required parameter 'aliasId' when calling IntegrationsApi->GetIntegrationsSpeechLexv2BotAlias");
 
-			var localVarPath = "/api/v2/integrations/speech/lexv2/bot/alias/{aliasId}";
+			var localVarPath = "/integrations/speech/lexv2/bot/alias/{aliasId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14629,7 +14629,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'aliasId' when calling IntegrationsApi->GetIntegrationsSpeechLexv2BotAlias");
 
 
-			var localVarPath = "/api/v2/integrations/speech/lexv2/bot/alias/{aliasId}";
+			var localVarPath = "/integrations/speech/lexv2/bot/alias/{aliasId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14737,7 +14737,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (botId == null)
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsSpeechLexv2BotBotIdAliases");
 
-			var localVarPath = "/api/v2/integrations/speech/lexv2/bot/{botId}/aliases";
+			var localVarPath = "/integrations/speech/lexv2/bot/{botId}/aliases";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14850,7 +14850,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsSpeechLexv2BotBotIdAliases");
 
 
-			var localVarPath = "/api/v2/integrations/speech/lexv2/bot/{botId}/aliases";
+			var localVarPath = "/integrations/speech/lexv2/bot/{botId}/aliases";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -14955,7 +14955,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<LexV2BotEntityListing> GetIntegrationsSpeechLexv2BotsWithHttpInfo(int? pageNumber = null, int? pageSize = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/lexv2/bots";
+			var localVarPath = "/integrations/speech/lexv2/bots";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15058,7 +15058,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<LexV2BotEntityListing>> GetIntegrationsSpeechLexv2BotsAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/lexv2/bots";
+			var localVarPath = "/integrations/speech/lexv2/bots";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15169,7 +15169,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (botId == null)
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBot");
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15283,7 +15283,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBot");
 
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15396,7 +15396,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob");
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15511,7 +15511,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJob");
 
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15623,7 +15623,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults");
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15738,7 +15738,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBotJobResults");
 
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15846,7 +15846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (nuanceIntegrationId == null)
 				throw new ApiException(400, "Missing required parameter 'nuanceIntegrationId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBots");
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -15956,7 +15956,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'nuanceIntegrationId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBots");
 
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16064,7 +16064,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob");
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16172,7 +16172,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJob");
 
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16278,7 +16278,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (jobId == null)
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults");
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16386,7 +16386,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'jobId' when calling IntegrationsApi->GetIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobResults");
 
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs/{jobId}/results";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16487,7 +16487,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (engineId == null)
 				throw new ApiException(400, "Missing required parameter 'engineId' when calling IntegrationsApi->GetIntegrationsSpeechSttEngine");
 
-			var localVarPath = "/api/v2/integrations/speech/stt/engines/{engineId}";
+			var localVarPath = "/integrations/speech/stt/engines/{engineId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16588,7 +16588,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'engineId' when calling IntegrationsApi->GetIntegrationsSpeechSttEngine");
 
 
-			var localVarPath = "/api/v2/integrations/speech/stt/engines/{engineId}";
+			var localVarPath = "/integrations/speech/stt/engines/{engineId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16689,7 +16689,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<SttEngineEntityListing> GetIntegrationsSpeechSttEnginesWithHttpInfo(int? pageNumber = null, int? pageSize = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/stt/engines";
+			var localVarPath = "/integrations/speech/stt/engines";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16792,7 +16792,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<SttEngineEntityListing>> GetIntegrationsSpeechSttEnginesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, string name = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/stt/engines";
+			var localVarPath = "/integrations/speech/stt/engines";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -16896,7 +16896,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (engineId == null)
 				throw new ApiException(400, "Missing required parameter 'engineId' when calling IntegrationsApi->GetIntegrationsSpeechTtsEngine");
 
-			var localVarPath = "/api/v2/integrations/speech/tts/engines/{engineId}";
+			var localVarPath = "/integrations/speech/tts/engines/{engineId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17000,7 +17000,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'engineId' when calling IntegrationsApi->GetIntegrationsSpeechTtsEngine");
 
 
-			var localVarPath = "/api/v2/integrations/speech/tts/engines/{engineId}";
+			var localVarPath = "/integrations/speech/tts/engines/{engineId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17106,7 +17106,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (voiceId == null)
 				throw new ApiException(400, "Missing required parameter 'voiceId' when calling IntegrationsApi->GetIntegrationsSpeechTtsEngineVoice");
 
-			var localVarPath = "/api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId}";
+			var localVarPath = "/integrations/speech/tts/engines/{engineId}/voices/{voiceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17214,7 +17214,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'voiceId' when calling IntegrationsApi->GetIntegrationsSpeechTtsEngineVoice");
 
 
-			var localVarPath = "/api/v2/integrations/speech/tts/engines/{engineId}/voices/{voiceId}";
+			var localVarPath = "/integrations/speech/tts/engines/{engineId}/voices/{voiceId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17319,7 +17319,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (engineId == null)
 				throw new ApiException(400, "Missing required parameter 'engineId' when calling IntegrationsApi->GetIntegrationsSpeechTtsEngineVoices");
 
-			var localVarPath = "/api/v2/integrations/speech/tts/engines/{engineId}/voices";
+			var localVarPath = "/integrations/speech/tts/engines/{engineId}/voices";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17426,7 +17426,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'engineId' when calling IntegrationsApi->GetIntegrationsSpeechTtsEngineVoices");
 
 
-			var localVarPath = "/api/v2/integrations/speech/tts/engines/{engineId}/voices";
+			var localVarPath = "/integrations/speech/tts/engines/{engineId}/voices";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17533,7 +17533,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TtsEngineEntityListing> GetIntegrationsSpeechTtsEnginesWithHttpInfo(int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/tts/engines";
+			var localVarPath = "/integrations/speech/tts/engines";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17642,7 +17642,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TtsEngineEntityListing>> GetIntegrationsSpeechTtsEnginesAsyncWithHttpInfo(int? pageNumber = null, int? pageSize = null, bool? includeVoices = null, string name = null, string language = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/tts/engines";
+			var localVarPath = "/integrations/speech/tts/engines";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17741,7 +17741,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<TtsSettings> GetIntegrationsSpeechTtsSettingsWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/tts/settings";
+			var localVarPath = "/integrations/speech/tts/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17835,7 +17835,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<TtsSettings>> GetIntegrationsSpeechTtsSettingsAsyncWithHttpInfo()
 		{
 
-			var localVarPath = "/api/v2/integrations/speech/tts/settings";
+			var localVarPath = "/integrations/speech/tts/settings";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -17934,7 +17934,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (typeId == null)
 				throw new ApiException(400, "Missing required parameter 'typeId' when calling IntegrationsApi->GetIntegrationsType");
 
-			var localVarPath = "/api/v2/integrations/types/{typeId}";
+			var localVarPath = "/integrations/types/{typeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18035,7 +18035,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'typeId' when calling IntegrationsApi->GetIntegrationsType");
 
 
-			var localVarPath = "/api/v2/integrations/types/{typeId}";
+			var localVarPath = "/integrations/types/{typeId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18140,7 +18140,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (configType == null)
 				throw new ApiException(400, "Missing required parameter 'configType' when calling IntegrationsApi->GetIntegrationsTypeConfigschema");
 
-			var localVarPath = "/api/v2/integrations/types/{typeId}/configschemas/{configType}";
+			var localVarPath = "/integrations/types/{typeId}/configschemas/{configType}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18248,7 +18248,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'configType' when calling IntegrationsApi->GetIntegrationsTypeConfigschema");
 
 
-			var localVarPath = "/api/v2/integrations/types/{typeId}/configschemas/{configType}";
+			var localVarPath = "/integrations/types/{typeId}/configschemas/{configType}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18356,7 +18356,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<IntegrationTypeEntityListing> GetIntegrationsTypesWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/types";
+			var localVarPath = "/integrations/types";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18468,7 +18468,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<IntegrationTypeEntityListing>> GetIntegrationsTypesAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/types";
+			var localVarPath = "/integrations/types";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18573,7 +18573,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (ucIntegrationId == null)
 				throw new ApiException(400, "Missing required parameter 'ucIntegrationId' when calling IntegrationsApi->GetIntegrationsUnifiedcommunicationsClientapp");
 
-			var localVarPath = "/api/v2/integrations/unifiedcommunications/clientapps/{ucIntegrationId}";
+			var localVarPath = "/integrations/unifiedcommunications/clientapps/{ucIntegrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18674,7 +18674,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'ucIntegrationId' when calling IntegrationsApi->GetIntegrationsUnifiedcommunicationsClientapp");
 
 
-			var localVarPath = "/api/v2/integrations/unifiedcommunications/clientapps/{ucIntegrationId}";
+			var localVarPath = "/integrations/unifiedcommunications/clientapps/{ucIntegrationId}";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18781,7 +18781,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UnifiedCommunicationsIntegrationListing> GetIntegrationsUnifiedcommunicationsClientappsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/unifiedcommunications/clientapps";
+			var localVarPath = "/integrations/unifiedcommunications/clientapps";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -18893,7 +18893,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UnifiedCommunicationsIntegrationListing>> GetIntegrationsUnifiedcommunicationsClientappsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/unifiedcommunications/clientapps";
+			var localVarPath = "/integrations/unifiedcommunications/clientapps";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19007,7 +19007,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<UserAppEntityListing> GetIntegrationsUserappsWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/userapps";
+			var localVarPath = "/integrations/userapps";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19122,7 +19122,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<UserAppEntityListing>> GetIntegrationsUserappsAsyncWithHttpInfo(int? pageSize = null, int? pageNumber = null, string sortBy = null, List<string> expand = null, string nextPage = null, string previousPage = null, string appHost = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/userapps";
+			var localVarPath = "/integrations/userapps";
 			var localVarHttpMethod = "Get";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19242,7 +19242,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->PatchIntegration");
 
-			var localVarPath = "/api/v2/integrations/{integrationId}";
+			var localVarPath = "/integrations/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19369,7 +19369,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->PatchIntegration");
 
 
-			var localVarPath = "/api/v2/integrations/{integrationId}";
+			var localVarPath = "/integrations/{integrationId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19486,7 +19486,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PatchIntegrationsAction");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}";
+			var localVarPath = "/integrations/actions/{actionId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19599,7 +19599,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PatchIntegrationsAction");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}";
+			var localVarPath = "/integrations/actions/{actionId}";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19710,7 +19710,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PatchIntegrationsActionDraft");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft";
+			var localVarPath = "/integrations/actions/{actionId}/draft";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19823,7 +19823,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PatchIntegrationsActionDraft");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft";
+			var localVarPath = "/integrations/actions/{actionId}/draft";
 			var localVarHttpMethod = "Patch";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -19926,7 +19926,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<Integration> PostIntegrationsWithHttpInfo(CreateIntegrationRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/integrations";
+			var localVarPath = "/integrations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20028,7 +20028,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<Integration>> PostIntegrationsAsyncWithHttpInfo(CreateIntegrationRequest body = null)
 		{
 
-			var localVarPath = "/api/v2/integrations";
+			var localVarPath = "/integrations";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20133,7 +20133,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (actionId == null)
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->PostIntegrationsActionDraft");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft";
+			var localVarPath = "/integrations/actions/{actionId}/draft";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20234,7 +20234,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'actionId' when calling IntegrationsApi->PostIntegrationsActionDraft");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft";
+			var localVarPath = "/integrations/actions/{actionId}/draft";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20339,7 +20339,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionDraftFunctionUpload");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function/upload";
+			var localVarPath = "/integrations/actions/{actionId}/draft/function/upload";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20452,7 +20452,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionDraftFunctionUpload");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function/upload";
+			var localVarPath = "/integrations/actions/{actionId}/draft/function/upload";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20563,7 +20563,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionDraftPublish");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/publish";
+			var localVarPath = "/integrations/actions/{actionId}/draft/publish";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20676,7 +20676,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionDraftPublish");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/publish";
+			var localVarPath = "/integrations/actions/{actionId}/draft/publish";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20789,7 +20789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionDraftTest");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/test";
+			var localVarPath = "/integrations/actions/{actionId}/draft/test";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -20905,7 +20905,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionDraftTest");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/test";
+			var localVarPath = "/integrations/actions/{actionId}/draft/test";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21019,7 +21019,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionExecute");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/execute";
+			var localVarPath = "/integrations/actions/{actionId}/execute";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21135,7 +21135,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionExecute");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/execute";
+			var localVarPath = "/integrations/actions/{actionId}/execute";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21249,7 +21249,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionTest");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/test";
+			var localVarPath = "/integrations/actions/{actionId}/test";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21365,7 +21365,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionTest");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/test";
+			var localVarPath = "/integrations/actions/{actionId}/test";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21472,7 +21472,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActions");
 
-			var localVarPath = "/api/v2/integrations/actions";
+			var localVarPath = "/integrations/actions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21578,7 +21578,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActions");
 
 
-			var localVarPath = "/api/v2/integrations/actions";
+			var localVarPath = "/integrations/actions";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21683,7 +21683,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionsDrafts");
 
-			var localVarPath = "/api/v2/integrations/actions/drafts";
+			var localVarPath = "/integrations/actions/drafts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21789,7 +21789,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsActionsDrafts");
 
 
-			var localVarPath = "/api/v2/integrations/actions/drafts";
+			var localVarPath = "/integrations/actions/drafts";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -21896,7 +21896,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsBotconnectorsIncomingMessages");
 
-			var localVarPath = "/api/v2/integrations/botconnectors/incoming/messages";
+			var localVarPath = "/integrations/botconnectors/incoming/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22004,7 +22004,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsBotconnectorsIncomingMessages");
 
 
-			var localVarPath = "/api/v2/integrations/botconnectors/incoming/messages";
+			var localVarPath = "/integrations/botconnectors/incoming/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22111,7 +22111,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsBotconnectorsOutgoingMessages");
 
-			var localVarPath = "/api/v2/integrations/botconnectors/outgoing/messages";
+			var localVarPath = "/integrations/botconnectors/outgoing/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22219,7 +22219,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsBotconnectorsOutgoingMessages");
 
 
-			var localVarPath = "/api/v2/integrations/botconnectors/outgoing/messages";
+			var localVarPath = "/integrations/botconnectors/outgoing/messages";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22321,7 +22321,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public ApiResponse<CredentialInfo> PostIntegrationsCredentialsWithHttpInfo(Credential body = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/credentials";
+			var localVarPath = "/integrations/credentials";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22423,7 +22423,7 @@ namespace PureCloudPlatform.Client.V2.Api
 		public async System.Threading.Tasks.Task<ApiResponse<CredentialInfo>> PostIntegrationsCredentialsAsyncWithHttpInfo(Credential body = null)
 		{
 
-			var localVarPath = "/api/v2/integrations/credentials";
+			var localVarPath = "/integrations/credentials";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22537,7 +22537,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (botId == null)
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs");
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22656,7 +22656,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'botId' when calling IntegrationsApi->PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs");
 
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/{botId}/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22770,7 +22770,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (nuanceIntegrationId == null)
 				throw new ApiException(400, "Missing required parameter 'nuanceIntegrationId' when calling IntegrationsApi->PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs");
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22880,7 +22880,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'nuanceIntegrationId' when calling IntegrationsApi->PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs");
 
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/jobs";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -22987,7 +22987,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (settings == null)
 				throw new ApiException(400, "Missing required parameter 'settings' when calling IntegrationsApi->PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate");
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23099,7 +23099,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'settings' when calling IntegrationsApi->PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate");
 
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/validate";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23210,7 +23210,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsWebhookEvents");
 
-			var localVarPath = "/api/v2/integrations/webhooks/{tokenId}/events";
+			var localVarPath = "/integrations/webhooks/{tokenId}/events";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23316,7 +23316,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PostIntegrationsWebhookEvents");
 
 
-			var localVarPath = "/api/v2/integrations/webhooks/{tokenId}/events";
+			var localVarPath = "/integrations/webhooks/{tokenId}/events";
 			var localVarHttpMethod = "Post";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23417,7 +23417,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (integrationId == null)
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->PutIntegrationConfigCurrent");
 
-			var localVarPath = "/api/v2/integrations/{integrationId}/config/current";
+			var localVarPath = "/integrations/{integrationId}/config/current";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23526,7 +23526,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'integrationId' when calling IntegrationsApi->PutIntegrationConfigCurrent");
 
 
-			var localVarPath = "/api/v2/integrations/{integrationId}/config/current";
+			var localVarPath = "/integrations/{integrationId}/config/current";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23637,7 +23637,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PutIntegrationsActionDraftFunction");
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function";
+			var localVarPath = "/integrations/actions/{actionId}/draft/function";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23750,7 +23750,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PutIntegrationsActionDraftFunction");
 
 
-			var localVarPath = "/api/v2/integrations/actions/{actionId}/draft/function";
+			var localVarPath = "/integrations/actions/{actionId}/draft/function";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23860,7 +23860,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (botList == null)
 				throw new ApiException(400, "Missing required parameter 'botList' when calling IntegrationsApi->PutIntegrationsBotconnectorIntegrationIdBots");
 
-			var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots";
+			var localVarPath = "/integrations/botconnector/{integrationId}/bots";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -23972,7 +23972,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'botList' when calling IntegrationsApi->PutIntegrationsBotconnectorIntegrationIdBots");
 
 
-			var localVarPath = "/api/v2/integrations/botconnector/{integrationId}/bots";
+			var localVarPath = "/integrations/botconnector/{integrationId}/bots";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24080,7 +24080,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (credentialId == null)
 				throw new ApiException(400, "Missing required parameter 'credentialId' when calling IntegrationsApi->PutIntegrationsCredential");
 
-			var localVarPath = "/api/v2/integrations/credentials/{credentialId}";
+			var localVarPath = "/integrations/credentials/{credentialId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24189,7 +24189,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'credentialId' when calling IntegrationsApi->PutIntegrationsCredential");
 
 
-			var localVarPath = "/api/v2/integrations/credentials/{credentialId}";
+			var localVarPath = "/integrations/credentials/{credentialId}";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24299,7 +24299,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (settings == null)
 				throw new ApiException(400, "Missing required parameter 'settings' when calling IntegrationsApi->PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings");
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24411,7 +24411,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'settings' when calling IntegrationsApi->PutIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchSettings");
 
 
-			var localVarPath = "/api/v2/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings";
+			var localVarPath = "/integrations/speech/nuance/{nuanceIntegrationId}/bots/launch/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24517,7 +24517,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PutIntegrationsSpeechTtsSettings");
 
-			var localVarPath = "/api/v2/integrations/speech/tts/settings";
+			var localVarPath = "/integrations/speech/tts/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24623,7 +24623,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PutIntegrationsSpeechTtsSettings");
 
 
-			var localVarPath = "/api/v2/integrations/speech/tts/settings";
+			var localVarPath = "/integrations/speech/tts/settings";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24733,7 +24733,7 @@ namespace PureCloudPlatform.Client.V2.Api
 			if (body == null)
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PutIntegrationsUnifiedcommunicationThirdpartypresences");
 
-			var localVarPath = "/api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences";
+			var localVarPath = "/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
@@ -24846,7 +24846,7 @@ namespace PureCloudPlatform.Client.V2.Api
 				throw new ApiException(400, "Missing required parameter 'body' when calling IntegrationsApi->PutIntegrationsUnifiedcommunicationThirdpartypresences");
 
 
-			var localVarPath = "/api/v2/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences";
+			var localVarPath = "/integrations/unifiedcommunications/{ucIntegrationId}/thirdpartypresences";
 			var localVarHttpMethod = "Put";
 			var localVarPathParams = new Dictionary<String, String>();
 			var localVarQueryParams = new List<Tuple<String, String>>();
