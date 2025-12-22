@@ -104,7 +104,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsRightPartyContact">IsRightPartyContact.</param>
         /// <param name="CallAnalysisDisposition">CallAnalysisDisposition.</param>
         /// <param name="AgentId">AgentId.</param>
-        public OutboundPreviewCampaignPostContactOutboundPreviewCampaignPostContactEvent(long? EventTime = null, OutboundPreviewCampaignPostContactVoiceAttributes VoiceAttributes = null, string WrapupCode = null, Guid? OutboundCampaignId = null, DialingModeEnum? DialingMode = null, Guid? AgentScriptId = null, Guid? DivisionId = null, Guid? OutboundContactListId = null, Guid? OutboundContactListFilterId = null, Guid? OutboundQueueId = null, string OutboundContactId = null, bool? IsCampaignAlwaysRunning = null, bool? IsCampaignSkillBased = null, bool? IsCampaignDynamicSorting = null, bool? IsCampaignDynamicFiltering = null, long? OutboundCampaignHealthMask = null, bool? IsReCall = null, string ScheduledDateTime = null, Guid? ConversationId = null, bool? IsRightPartyContact = null, string CallAnalysisDisposition = null, string AgentId = null)
+        /// <param name="IsPreviewAutoEnded">IsPreviewAutoEnded.</param>
+        public OutboundPreviewCampaignPostContactOutboundPreviewCampaignPostContactEvent(long? EventTime = null, OutboundPreviewCampaignPostContactVoiceAttributes VoiceAttributes = null, string WrapupCode = null, Guid? OutboundCampaignId = null, DialingModeEnum? DialingMode = null, Guid? AgentScriptId = null, Guid? DivisionId = null, Guid? OutboundContactListId = null, Guid? OutboundContactListFilterId = null, Guid? OutboundQueueId = null, string OutboundContactId = null, bool? IsCampaignAlwaysRunning = null, bool? IsCampaignSkillBased = null, bool? IsCampaignDynamicSorting = null, bool? IsCampaignDynamicFiltering = null, long? OutboundCampaignHealthMask = null, bool? IsReCall = null, string ScheduledDateTime = null, Guid? ConversationId = null, bool? IsRightPartyContact = null, string CallAnalysisDisposition = null, string AgentId = null, bool? IsPreviewAutoEnded = null)
         {
             this.EventTime = EventTime;
             this.VoiceAttributes = VoiceAttributes;
@@ -128,6 +129,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IsRightPartyContact = IsRightPartyContact;
             this.CallAnalysisDisposition = CallAnalysisDisposition;
             this.AgentId = AgentId;
+            this.IsPreviewAutoEnded = IsPreviewAutoEnded;
             
         }
         
@@ -302,6 +304,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string AgentId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets IsPreviewAutoEnded
+        /// </summary>
+        [DataMember(Name="isPreviewAutoEnded", EmitDefaultValue=false)]
+        public bool? IsPreviewAutoEnded { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -333,6 +343,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IsRightPartyContact: ").Append(IsRightPartyContact).Append("\n");
             sb.Append("  CallAnalysisDisposition: ").Append(CallAnalysisDisposition).Append("\n");
             sb.Append("  AgentId: ").Append(AgentId).Append("\n");
+            sb.Append("  IsPreviewAutoEnded: ").Append(IsPreviewAutoEnded).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -482,6 +493,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentId == other.AgentId ||
                     this.AgentId != null &&
                     this.AgentId.Equals(other.AgentId)
+                ) &&
+                (
+                    this.IsPreviewAutoEnded == other.IsPreviewAutoEnded ||
+                    this.IsPreviewAutoEnded != null &&
+                    this.IsPreviewAutoEnded.Equals(other.IsPreviewAutoEnded)
                 );
         }
 
@@ -561,6 +577,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AgentId != null)
                     hash = hash * 59 + this.AgentId.GetHashCode();
+
+                if (this.IsPreviewAutoEnded != null)
+                    hash = hash * 59 + this.IsPreviewAutoEnded.GetHashCode();
 
                 return hash;
             }

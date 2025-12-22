@@ -347,7 +347,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DivisionId">DivisionId.</param>
         /// <param name="ScoredAgents">ScoredAgents.</param>
         /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
-        public WorkitemsQueueEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, long? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, long? DurationSeconds = null, long? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsQueueEventsNotificationDelta> Changes = null, List<WorkitemsQueueEventsNotificationPropertyChange> PropertyChanges = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, long? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsQueueEventsNotificationCustomAttribute> CustomFields = null, WorkitemsQueueEventsNotificationWrapup Wrapup = null, List<WorkitemsQueueEventsNotificationSession> Sessions = null, List<Guid?> SkillIds = null, string ScriptId = null, string WorkbinName = null, string TypeName = null, List<Guid?> PreferredAgentIds = null, string DivisionId = null, List<WorkitemsQueueEventsNotificationScoredAgent> ScoredAgents = null, string UtilizationLabelId = null)
+        /// <param name="CaseId">CaseId.</param>
+        public WorkitemsQueueEventsNotificationWorkitem(string Id = null, string Name = null, string TypeId = null, string Description = null, string LanguageId = null, long? Priority = null, string DateCreated = null, string DateModified = null, string DateDue = null, string DateExpires = null, string DateAssignmentStateChanged = null, long? DurationSeconds = null, long? Ttl = null, string StatusId = null, StatusCategoryEnum? StatusCategory = null, string DateClosed = null, string WorkbinId = null, string ReporterId = null, string AssigneeId = null, string ExternalContactId = null, string ExternalTag = null, string WrapupId = null, string ModifiedBy = null, OperationEnum? Operation = null, List<WorkitemsQueueEventsNotificationDelta> Changes = null, List<WorkitemsQueueEventsNotificationPropertyChange> PropertyChanges = null, AssignmentStateEnum? AssignmentState = null, string AssignmentId = null, long? AlertTimeoutSeconds = null, string QueueId = null, Dictionary<string, WorkitemsQueueEventsNotificationCustomAttribute> CustomFields = null, WorkitemsQueueEventsNotificationWrapup Wrapup = null, List<WorkitemsQueueEventsNotificationSession> Sessions = null, List<Guid?> SkillIds = null, string ScriptId = null, string WorkbinName = null, string TypeName = null, List<Guid?> PreferredAgentIds = null, string DivisionId = null, List<WorkitemsQueueEventsNotificationScoredAgent> ScoredAgents = null, string UtilizationLabelId = null, string CaseId = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -390,6 +391,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DivisionId = DivisionId;
             this.ScoredAgents = ScoredAgents;
             this.UtilizationLabelId = UtilizationLabelId;
+            this.CaseId = CaseId;
             
         }
         
@@ -704,6 +706,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string UtilizationLabelId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets CaseId
+        /// </summary>
+        [DataMember(Name="caseId", EmitDefaultValue=false)]
+        public string CaseId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -754,6 +764,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("  ScoredAgents: ").Append(ScoredAgents).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
+            sb.Append("  CaseId: ").Append(CaseId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -998,6 +1009,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UtilizationLabelId == other.UtilizationLabelId ||
                     this.UtilizationLabelId != null &&
                     this.UtilizationLabelId.Equals(other.UtilizationLabelId)
+                ) &&
+                (
+                    this.CaseId == other.CaseId ||
+                    this.CaseId != null &&
+                    this.CaseId.Equals(other.CaseId)
                 );
         }
 
@@ -1134,6 +1150,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UtilizationLabelId != null)
                     hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
+
+                if (this.CaseId != null)
+                    hash = hash * 59 + this.CaseId.GetHashCode();
 
                 return hash;
             }

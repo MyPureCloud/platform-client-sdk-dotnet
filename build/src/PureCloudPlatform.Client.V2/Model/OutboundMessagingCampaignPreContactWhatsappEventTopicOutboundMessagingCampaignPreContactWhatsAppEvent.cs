@@ -152,7 +152,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum OutboundMessageButtonUrlParameterValueTooLong for "OUTBOUND_MESSAGE_BUTTON_URL_PARAMETER_VALUE_TOO_LONG"
             /// </summary>
             [EnumMember(Value = "OUTBOUND_MESSAGE_BUTTON_URL_PARAMETER_VALUE_TOO_LONG")]
-            OutboundMessageButtonUrlParameterValueTooLong
+            OutboundMessageButtonUrlParameterValueTooLong,
+            
+            /// <summary>
+            /// Enum OutboundRuleErrorSkipped for "OUTBOUND_RULE_ERROR_SKIPPED"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_RULE_ERROR_SKIPPED")]
+            OutboundRuleErrorSkipped,
+            
+            /// <summary>
+            /// Enum OutboundRuleSkipped for "OUTBOUND_RULE_SKIPPED"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_RULE_SKIPPED")]
+            OutboundRuleSkipped,
+            
+            /// <summary>
+            /// Enum OutboundContactAddressUncontactableSkipped for "OUTBOUND_CONTACT_ADDRESS_UNCONTACTABLE_SKIPPED"
+            /// </summary>
+            [EnumMember(Value = "OUTBOUND_CONTACT_ADDRESS_UNCONTACTABLE_SKIPPED")]
+            OutboundContactAddressUncontactableSkipped
         }
         /// <summary>
         /// Gets or Sets OutboundCampaignType
