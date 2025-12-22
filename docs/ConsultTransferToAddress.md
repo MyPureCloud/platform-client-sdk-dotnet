@@ -12,4 +12,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 251.0.0_
+_PureCloudPlatform.Client.V2 252.0.0_
