@@ -3,6 +3,5 @@
     <File Path="Directory.Build.props" />
     <File Path="Directory.Packages.props" />
   </Folder>
-  <Project Path="src/PureCloudPlatform.Client.V2.Tests/PureCloudPlatform.Client.V2.Tests.csproj" />
   <Project Path="src/PureCloudPlatform.Client.V2/PureCloudPlatform.Client.V2.csproj" />
 </Solution>
