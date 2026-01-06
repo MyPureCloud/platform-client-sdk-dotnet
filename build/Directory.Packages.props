@@ -6,6 +6,5 @@
     <PackageVersion Include="Newtonsoft.Json" version="13.0.4" />
     <PackageVersion Include="NUnit" Version="4.4.0" />
     <PackageVersion Include="RestSharp" Version="113.0.0" />
-    <PackageVersion Include="WebSocketSharp" Version="1.0.3-rc11" />
   </ItemGroup>
 </Project>
