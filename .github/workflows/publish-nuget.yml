@@ -1,0 +1,48 @@
+name: Publish NuGet Package
+
+on:
+  push:
+    branches:
+      - NET10
+    paths:
+      - 'build/src/PureCloudPlatform.Client.V2/**'
+      - 'build/Directory.Build.props'
+      - 'build/Directory.Packages.props'
+      - '.github/workflows/publish-nuget.yml'
+  workflow_dispatch:
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Restore dependencies
+        working-directory: ./build
+        run: dotnet restore
+
+      - name: Build
+        working-directory: ./build
+        run: dotnet build -c Release --no-restore
+
+      - name: Pack NuGet
+        working-directory: ./build/src/PureCloudPlatform.Client.V2
+        run: dotnet pack -c Release -o ${{ runner.temp }}/nupkg
+
+      - name: Publish to GitHub Package Registry
+        working-directory: ./build/src/PureCloudPlatform.Client.V2
+        run: |
+          dotnet nuget add source --username ${{ github.actor }} --password ${{ secrets.GITHUB_TOKEN }} --store-password-in-clear-text --name github "https://nuget.pkg.github.com/${{ github.repository_owner }}/index.json"
+          dotnet nuget push "${{ runner.temp }}/nupkg/*.nupkg" --source github --skip-duplicate --api-key ${{ secrets.GITHUB_TOKEN }}
