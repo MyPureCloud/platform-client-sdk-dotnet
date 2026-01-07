@@ -4,5 +4,7 @@
     <ImplicitUsings>disable</ImplicitUsings>
     <LangVersion>default</LangVersion>
     <TargetFramework>net10.0</TargetFramework>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <RepositoryUrl>https://github.com/Noesys/genesys-client</RepositoryUrl>
   </PropertyGroup>
 </Project>
