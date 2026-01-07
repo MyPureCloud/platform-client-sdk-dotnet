@@ -4,10 +4,10 @@
     <Nullable>enable</Nullable>
     <PackageId>Infoveave.PureCloudPlatform.Client.V2</PackageId>
     <IsPackable>true</IsPackable>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <Authors>Infoveave</Authors>
     <Description>Genesys PureCloud Platform API Client for .NET</Description>
-    <RepositoryUrl>https://github.com/${{ github.repository_owner }}/genesys-client</RepositoryUrl>
+    <RepositoryUrl>https://github.com/Noesys/genesys-client</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
     <GenerateDocumentationFile>false</GenerateDocumentationFile>
