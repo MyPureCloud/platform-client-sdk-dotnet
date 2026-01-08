@@ -16,6 +16,8 @@ namespace PureCloudPlatform.Client.V2.Client
 	{
 		private JsonSerializerSettings serializerSettings = new JsonSerializerSettings
 		{
+			DefaultValueHandling = DefaultValueHandling.Include,
+			NullValueHandling = NullValueHandling.Include,
 			ConstructorHandling = ConstructorHandling.AllowNonPublicDefaultConstructor,
 			MetadataPropertyHandling = MetadataPropertyHandling.Ignore
 		};
@@ -578,7 +580,7 @@ namespace PureCloudPlatform.Client.V2.Client
 			{
 				if (obj != null)
 				{
-					return obj is string str ? str : JsonConvert.SerializeObject(obj);
+					return obj is string str ? str : JsonConvert.SerializeObject(obj, serializerSettings);
 				}
 				else
 				{
