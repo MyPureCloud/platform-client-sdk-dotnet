@@ -43,6 +43,7 @@
 | **Emails** | [**List&lt;QueueConversationSocialExpressionEventTopicEmail&gt;**](QueueConversationSocialExpressionEventTopicEmail) |  | [optional] |
 | **Messages** | [**List&lt;QueueConversationSocialExpressionEventTopicMessage&gt;**](QueueConversationSocialExpressionEventTopicMessage) |  | [optional] |
 | **InternalMessages** | [**List&lt;QueueConversationSocialExpressionEventTopicInternalMessage&gt;**](QueueConversationSocialExpressionEventTopicInternalMessage) |  | [optional] |
+| **ScreenMonitorings** | [**List&lt;QueueConversationSocialExpressionEventTopicScreenMonitoring&gt;**](QueueConversationSocialExpressionEventTopicScreenMonitoring) |  | [optional] |
 | **Screenshares** | [**List&lt;QueueConversationSocialExpressionEventTopicScreenShare&gt;**](QueueConversationSocialExpressionEventTopicScreenShare) |  | [optional] |
 | **SocialExpressions** | [**List&lt;QueueConversationSocialExpressionEventTopicSocialExpression&gt;**](QueueConversationSocialExpressionEventTopicSocialExpression) |  | [optional] |
 | **Videos** | [**List&lt;QueueConversationSocialExpressionEventTopicVideo&gt;**](QueueConversationSocialExpressionEventTopicVideo) |  | [optional] |
@@ -50,4 +51,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 252.1.0_
+_PureCloudPlatform.Client.V2 253.0.0_

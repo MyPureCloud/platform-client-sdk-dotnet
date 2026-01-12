@@ -136,6 +136,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetWorkforcemanagementTimeoffrequest**](#GetWorkforcemanagementTimeoffrequest) | **Get** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Get a time off request for the current user |
 | [**GetWorkforcemanagementTimeoffrequestWaitlistpositions**](#GetWorkforcemanagementTimeoffrequestWaitlistpositions) | **Get** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId}/waitlistpositions | Get the daily waitlist positions of a time off request for the current user |
 | [**GetWorkforcemanagementTimeoffrequests**](#GetWorkforcemanagementTimeoffrequests) | **Get** /api/v2/workforcemanagement/timeoffrequests | Get a list of time off requests for the current user |
+| [**GetWorkforcemanagementUnavailabletimesSettings**](#GetWorkforcemanagementUnavailabletimesSettings) | **Get** /api/v2/workforcemanagement/unavailabletimes/settings | Get availability management unit&#39;s settings for agent |
+| [**GetWorkforcemanagementUnavailabletimesValidationJob**](#GetWorkforcemanagementUnavailabletimesValidationJob) | **Get** /api/v2/workforcemanagement/unavailabletimes/validation/jobs/{jobId} | Query agent unavailable times validation job |
 | [**GetWorkforcemanagementUserWorkplanbidranks**](#GetWorkforcemanagementUserWorkplanbidranks) | **Get** /api/v2/workforcemanagement/users/{userId}/workplanbidranks | Get work plan bid ranks for a user |
 | [**GetWorkforcemanagementWorkplanbidPreferences**](#GetWorkforcemanagementWorkplanbidPreferences) | **Get** /api/v2/workforcemanagement/workplanbids/{bidId}/preferences | Gets an agent&#39;s work plan bidding preference |
 | [**GetWorkforcemanagementWorkplanbidWorkplans**](#GetWorkforcemanagementWorkplanbidWorkplans) | **Get** /api/v2/workforcemanagement/workplanbids/{bidId}/workplans | Gets an agent&#39;s work plans for a bid |
@@ -162,11 +164,13 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchWorkforcemanagementManagementunitTimeofflimit**](#PatchWorkforcemanagementManagementunitTimeofflimit) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId} | Updates a time off limit object. |
 | [**PatchWorkforcemanagementManagementunitTimeoffplan**](#PatchWorkforcemanagementManagementunitTimeoffplan) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffplans/{timeOffPlanId} | Updates a time off plan |
 | [**PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus**](#PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeoffrequests/{timeOffRequestId}/users/{userId}/integrationstatus | Set integration status for a time off request. |
+| [**PatchWorkforcemanagementManagementunitUnavailabletimesSettings**](#PatchWorkforcemanagementManagementunitUnavailabletimesSettings) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/unavailabletimes/settings | Update management unit availability settings |
 | [**PatchWorkforcemanagementManagementunitUserTimeoffrequest**](#PatchWorkforcemanagementManagementunitUserTimeoffrequest) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/users/{userId}/timeoffrequests/{timeOffRequestId} | Update a time off request |
 | [**PatchWorkforcemanagementManagementunitWeekShifttrade**](#PatchWorkforcemanagementManagementunitWeekShifttrade) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/weeks/{weekDateId}/shifttrades/{tradeId} | Updates a shift trade. This route can only be called by the initiating agent |
 | [**PatchWorkforcemanagementManagementunitWorkplan**](#PatchWorkforcemanagementManagementunitWorkplan) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplans/{workPlanId} | Update a work plan |
 | [**PatchWorkforcemanagementManagementunitWorkplanrotation**](#PatchWorkforcemanagementManagementunitWorkplanrotation) | **Patch** /api/v2/workforcemanagement/managementunits/{managementUnitId}/workplanrotations/{workPlanRotationId} | Update a work plan rotation |
 | [**PatchWorkforcemanagementTimeoffrequest**](#PatchWorkforcemanagementTimeoffrequest) | **Patch** /api/v2/workforcemanagement/timeoffrequests/{timeOffRequestId} | Update a time off request for the current user |
+| [**PatchWorkforcemanagementUnavailabletimes**](#PatchWorkforcemanagementUnavailabletimes) | **Patch** /api/v2/workforcemanagement/unavailabletimes | Update agent unavailable times |
 | [**PatchWorkforcemanagementUserWorkplanbidranks**](#PatchWorkforcemanagementUserWorkplanbidranks) | **Patch** /api/v2/workforcemanagement/users/{userId}/workplanbidranks | Update work plan bid ranks for a user |
 | [**PatchWorkforcemanagementUsersWorkplanbidranksBulk**](#PatchWorkforcemanagementUsersWorkplanbidranksBulk) | **Patch** /api/v2/workforcemanagement/users/workplanbidranks/bulk | Update bulk work plan bid ranks on users. Max 50 users can be updated at a time. |
 | [**PatchWorkforcemanagementWorkplanbidPreferences**](#PatchWorkforcemanagementWorkplanbidPreferences) | **Patch** /api/v2/workforcemanagement/workplanbids/{bidId}/preferences | Update an agent&#39;s work plan bidding preference |
@@ -176,6 +180,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementAdherenceHistoricalBulk**](#PostWorkforcemanagementAdherenceHistoricalBulk) | **Post** /api/v2/workforcemanagement/adherence/historical/bulk | Request a historical adherence report in bulk |
 | [**PostWorkforcemanagementAgentAdherenceExplanations**](#PostWorkforcemanagementAgentAdherenceExplanations) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations | Add an adherence explanation for the requested user |
 | [**PostWorkforcemanagementAgentAdherenceExplanationsQuery**](#PostWorkforcemanagementAgentAdherenceExplanationsQuery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/adherence/explanations/query | Query adherence explanations for the given agent across a specified range |
+| [**PostWorkforcemanagementAgentUnavailabletimesQuery**](#PostWorkforcemanagementAgentUnavailabletimesQuery) | **Post** /api/v2/workforcemanagement/agents/{agentId}/unavailabletimes/query | Get agent unavailable times |
 | [**PostWorkforcemanagementAgents**](#PostWorkforcemanagementAgents) | **Post** /api/v2/workforcemanagement/agents | Move agents in and out of management unit |
 | [**PostWorkforcemanagementAgentsIntegrationsHrisQuery**](#PostWorkforcemanagementAgentsIntegrationsHrisQuery) | **Post** /api/v2/workforcemanagement/agents/integrations/hris/query | Query integrations for agents |
 | [**PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs**](#PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs) | **Post** /api/v2/workforcemanagement/agents/me/adherence/historical/jobs | Request an agent historical adherence report |
@@ -207,6 +212,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementBusinessunitTimeofflimits**](#PostWorkforcemanagementBusinessunitTimeofflimits) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits | Creates a new time-off limit object |
 | [**PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery**](#PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/values/query | Retrieves time-off limit related values based on a given set of filters. |
 | [**PostWorkforcemanagementBusinessunitTimeoffplans**](#PostWorkforcemanagementBusinessunitTimeoffplans) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeoffplans | Creates a new time-off plan |
+| [**PostWorkforcemanagementBusinessunitUnavailabletimesSchedulesQuery**](#PostWorkforcemanagementBusinessunitUnavailabletimesSchedulesQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/unavailabletimes/schedules/query | Get agent schedule generation unavailable times |
+| [**PostWorkforcemanagementBusinessunitUnavailabletimesSettingsQuery**](#PostWorkforcemanagementBusinessunitUnavailabletimesSettingsQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/unavailabletimes/settings/query | Query availability management units settings |
 | [**PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery**](#PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/agentschedules/query | Loads agent schedule data from the schedule. Used in combination with the metadata route |
 | [**PostWorkforcemanagementBusinessunitWeekScheduleCopy**](#PostWorkforcemanagementBusinessunitWeekScheduleCopy) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/copy | Copy a schedule |
 | [**PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations**](#PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations) | **Post** /api/v2/workforcemanagement/businessunits/{businessUnitId}/weeks/{weekId}/schedules/{scheduleId}/performancepredictions/recalculations | Request a daily recalculation of the performance prediction for the associated schedule |
@@ -265,6 +272,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostWorkforcemanagementTimeoffrequests**](#PostWorkforcemanagementTimeoffrequests) | **Post** /api/v2/workforcemanagement/timeoffrequests | Create a time off request for the current user |
 | [**PostWorkforcemanagementTimeoffrequestsEstimate**](#PostWorkforcemanagementTimeoffrequestsEstimate) | **Post** /api/v2/workforcemanagement/timeoffrequests/estimate | Estimates available time off for current user |
 | [**PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery**](#PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery) | **Post** /api/v2/workforcemanagement/timeoffrequests/integrationstatus/query | Retrieves integration statuses for a list of current user time off requests |
+| [**PostWorkforcemanagementUnavailabletimesQuery**](#PostWorkforcemanagementUnavailabletimesQuery) | **Post** /api/v2/workforcemanagement/unavailabletimes/query | Get agent unavailable times |
+| [**PostWorkforcemanagementUnavailabletimesValidationJobs**](#PostWorkforcemanagementUnavailabletimesValidationJobs) | **Post** /api/v2/workforcemanagement/unavailabletimes/validation/jobs | Validates proposed changes to an agent&#39;s unavailable time spans against scheduling rules and constraints for a specific week |
 | [**PutWorkforcemanagementAgentIntegrationsHris**](#PutWorkforcemanagementAgentIntegrationsHris) | **Put** /api/v2/workforcemanagement/agents/{agentId}/integrations/hris | Update integrations for agent |
 | [**PutWorkforcemanagementBusinessunitTimeofflimitValues**](#PutWorkforcemanagementBusinessunitTimeofflimitValues) | **Put** /api/v2/workforcemanagement/businessunits/{businessUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time-off limit object |
 | [**PutWorkforcemanagementManagementunitTimeofflimitValues**](#PutWorkforcemanagementManagementunitTimeofflimitValues) | **Put** /api/v2/workforcemanagement/managementunits/{managementUnitId}/timeofflimits/{timeOffLimitId}/values | Sets daily values for a date range of time off limit object |
@@ -8923,6 +8932,125 @@ This endpoint does require any parameters.
 [**TimeOffRequestList**](TimeOffRequestList)
 
 
+## GetWorkforcemanagementUnavailabletimesSettings
+
+> [**ManagementUnitAvailabilitySettingsResponse**](ManagementUnitAvailabilitySettingsResponse) GetWorkforcemanagementUnavailabletimesSettings ()
+
+
+Get availability management unit's settings for agent
+
+Requires ANY permissions: 
+
+* wfm:agentUnavailableTimes:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementUnavailabletimesSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+
+            try
+            { 
+                // Get availability management unit's settings for agent
+                ManagementUnitAvailabilitySettingsResponse result = apiInstance.GetWorkforcemanagementUnavailabletimesSettings();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementUnavailabletimesSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**ManagementUnitAvailabilitySettingsResponse**](ManagementUnitAvailabilitySettingsResponse)
+
+
+## GetWorkforcemanagementUnavailabletimesValidationJob
+
+> [**QueryAgentUnavailableTimesValidationJobResponse**](QueryAgentUnavailableTimesValidationJobResponse) GetWorkforcemanagementUnavailabletimesValidationJob (string jobId)
+
+
+Query agent unavailable times validation job
+
+Requires ANY permissions: 
+
+* wfm:agentUnavailableTimes:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetWorkforcemanagementUnavailabletimesValidationJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var jobId = jobId_example;  // string | The ID of the job
+
+            try
+            { 
+                // Query agent unavailable times validation job
+                QueryAgentUnavailableTimesValidationJobResponse result = apiInstance.GetWorkforcemanagementUnavailabletimesValidationJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.GetWorkforcemanagementUnavailabletimesValidationJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The ID of the job |  |
+
+### Return type
+
+[**QueryAgentUnavailableTimesValidationJobResponse**](QueryAgentUnavailableTimesValidationJobResponse)
+
+
 ## GetWorkforcemanagementUserWorkplanbidranks
 
 > [**WorkPlanBidRanks**](WorkPlanBidRanks) GetWorkforcemanagementUserWorkplanbidranks (string userId)
@@ -10612,6 +10740,70 @@ namespace Example
 [**UserTimeOffIntegrationStatusResponse**](UserTimeOffIntegrationStatusResponse)
 
 
+## PatchWorkforcemanagementManagementunitUnavailabletimesSettings
+
+> [**ManagementUnitAvailabilitySettingsResponse**](ManagementUnitAvailabilitySettingsResponse) PatchWorkforcemanagementManagementunitUnavailabletimesSettings (string managementUnitId, UpdateManagementUnitsSettingsRequest body)
+
+
+Update management unit availability settings
+
+Requires ANY permissions: 
+
+* wfm:managementUnit:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementManagementunitUnavailabletimesSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var managementUnitId = managementUnitId_example;  // string | The ID of the management unit
+            var body = new UpdateManagementUnitsSettingsRequest(); // UpdateManagementUnitsSettingsRequest | body
+
+            try
+            { 
+                // Update management unit availability settings
+                ManagementUnitAvailabilitySettingsResponse result = apiInstance.PatchWorkforcemanagementManagementunitUnavailabletimesSettings(managementUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementManagementunitUnavailabletimesSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **managementUnitId** | **string**| The ID of the management unit |  |
+| **body** | [**UpdateManagementUnitsSettingsRequest**](UpdateManagementUnitsSettingsRequest)| body |  |
+
+### Return type
+
+[**ManagementUnitAvailabilitySettingsResponse**](ManagementUnitAvailabilitySettingsResponse)
+
+
 ## PatchWorkforcemanagementManagementunitUserTimeoffrequest
 
 > [**TimeOffRequestResponse**](TimeOffRequestResponse) PatchWorkforcemanagementManagementunitUserTimeoffrequest (string managementUnitId, string userId, string timeOffRequestId, AdminTimeOffRequestPatch body)
@@ -10944,6 +11136,68 @@ namespace Example
 ### Return type
 
 [**TimeOffRequestResponse**](TimeOffRequestResponse)
+
+
+## PatchWorkforcemanagementUnavailabletimes
+
+> [**UnavailableTimeListing**](UnavailableTimeListing) PatchWorkforcemanagementUnavailabletimes (UpdateUnavailableTimesRequest body)
+
+
+Update agent unavailable times
+
+Requires ANY permissions: 
+
+* wfm:agentUnavailableTimes:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchWorkforcemanagementUnavailabletimesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new UpdateUnavailableTimesRequest(); // UpdateUnavailableTimesRequest | body
+
+            try
+            { 
+                // Update agent unavailable times
+                UnavailableTimeListing result = apiInstance.PatchWorkforcemanagementUnavailabletimes(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PatchWorkforcemanagementUnavailabletimes: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UpdateUnavailableTimesRequest**](UpdateUnavailableTimesRequest)| body |  |
+
+### Return type
+
+[**UnavailableTimeListing**](UnavailableTimeListing)
 
 
 ## PatchWorkforcemanagementUserWorkplanbidranks
@@ -11521,6 +11775,70 @@ namespace Example
 ### Return type
 
 [**AgentQueryAdherenceExplanationsResponse**](AgentQueryAdherenceExplanationsResponse)
+
+
+## PostWorkforcemanagementAgentUnavailabletimesQuery
+
+> [**UnavailableTimeListing**](UnavailableTimeListing) PostWorkforcemanagementAgentUnavailabletimesQuery (string agentId, QueryAgentUnavailableTimesRequest body)
+
+
+Get agent unavailable times
+
+Requires ANY permissions: 
+
+* wfm:unavailableTimes:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementAgentUnavailabletimesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var agentId = agentId_example;  // string | The ID of the agent
+            var body = new QueryAgentUnavailableTimesRequest(); // QueryAgentUnavailableTimesRequest | body
+
+            try
+            { 
+                // Get agent unavailable times
+                UnavailableTimeListing result = apiInstance.PostWorkforcemanagementAgentUnavailabletimesQuery(agentId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementAgentUnavailabletimesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **agentId** | **string**| The ID of the agent |  |
+| **body** | [**QueryAgentUnavailableTimesRequest**](QueryAgentUnavailableTimesRequest)| body |  |
+
+### Return type
+
+[**UnavailableTimeListing**](UnavailableTimeListing)
 
 
 ## PostWorkforcemanagementAgents
@@ -13520,6 +13838,134 @@ namespace Example
 ### Return type
 
 [**BuTimeOffPlanResponse**](BuTimeOffPlanResponse)
+
+
+## PostWorkforcemanagementBusinessunitUnavailabletimesSchedulesQuery
+
+> [**QueryAgentScheduleUnavailableTimesResponse**](QueryAgentScheduleUnavailableTimesResponse) PostWorkforcemanagementBusinessunitUnavailabletimesSchedulesQuery (string businessUnitId, QueryAgentScheduleUnavailableTimesRequest body)
+
+
+Get agent schedule generation unavailable times
+
+Requires ANY permissions: 
+
+* wfm:unavailableTimes:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitUnavailabletimesSchedulesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new QueryAgentScheduleUnavailableTimesRequest(); // QueryAgentScheduleUnavailableTimesRequest | body
+
+            try
+            { 
+                // Get agent schedule generation unavailable times
+                QueryAgentScheduleUnavailableTimesResponse result = apiInstance.PostWorkforcemanagementBusinessunitUnavailabletimesSchedulesQuery(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitUnavailabletimesSchedulesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**QueryAgentScheduleUnavailableTimesRequest**](QueryAgentScheduleUnavailableTimesRequest)| body |  |
+
+### Return type
+
+[**QueryAgentScheduleUnavailableTimesResponse**](QueryAgentScheduleUnavailableTimesResponse)
+
+
+## PostWorkforcemanagementBusinessunitUnavailabletimesSettingsQuery
+
+> [**QueryAvailabilityManagementUnitsSettingsResponse**](QueryAvailabilityManagementUnitsSettingsResponse) PostWorkforcemanagementBusinessunitUnavailabletimesSettingsQuery (string businessUnitId, QueryAvailabilityManagementUnitsSettingsRequest body)
+
+
+Query availability management units settings
+
+Requires ANY permissions: 
+
+* wfm:managementUnit:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementBusinessunitUnavailabletimesSettingsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
+            var body = new QueryAvailabilityManagementUnitsSettingsRequest(); // QueryAvailabilityManagementUnitsSettingsRequest | body
+
+            try
+            { 
+                // Query availability management units settings
+                QueryAvailabilityManagementUnitsSettingsResponse result = apiInstance.PostWorkforcemanagementBusinessunitUnavailabletimesSettingsQuery(businessUnitId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementBusinessunitUnavailabletimesSettingsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **businessUnitId** | **string**| The ID of the business unit |  |
+| **body** | [**QueryAvailabilityManagementUnitsSettingsRequest**](QueryAvailabilityManagementUnitsSettingsRequest)| body |  |
+
+### Return type
+
+[**QueryAvailabilityManagementUnitsSettingsResponse**](QueryAvailabilityManagementUnitsSettingsResponse)
 
 
 ## PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery
@@ -17349,6 +17795,130 @@ namespace Example
 [**TimeOffIntegrationStatusResponseListing**](TimeOffIntegrationStatusResponseListing)
 
 
+## PostWorkforcemanagementUnavailabletimesQuery
+
+> [**UnavailableTimeListing**](UnavailableTimeListing) PostWorkforcemanagementUnavailabletimesQuery (QueryAgentUnavailableTimesRequest body)
+
+
+Get agent unavailable times
+
+Requires ANY permissions: 
+
+* wfm:agentUnavailableTimes:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementUnavailabletimesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new QueryAgentUnavailableTimesRequest(); // QueryAgentUnavailableTimesRequest | body
+
+            try
+            { 
+                // Get agent unavailable times
+                UnavailableTimeListing result = apiInstance.PostWorkforcemanagementUnavailabletimesQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementUnavailabletimesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**QueryAgentUnavailableTimesRequest**](QueryAgentUnavailableTimesRequest)| body |  |
+
+### Return type
+
+[**UnavailableTimeListing**](UnavailableTimeListing)
+
+
+## PostWorkforcemanagementUnavailabletimesValidationJobs
+
+> [**ValidateAgentUnavailableTimesResponse**](ValidateAgentUnavailableTimesResponse) PostWorkforcemanagementUnavailabletimesValidationJobs (ValidateAgentUnavailableTimesRequest body)
+
+
+Validates proposed changes to an agent's unavailable time spans against scheduling rules and constraints for a specific week
+
+Requires ANY permissions: 
+
+* wfm:agentUnavailableTimes:submit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostWorkforcemanagementUnavailabletimesValidationJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new WorkforceManagementApi();
+            var body = new ValidateAgentUnavailableTimesRequest(); // ValidateAgentUnavailableTimesRequest | body
+
+            try
+            { 
+                // Validates proposed changes to an agent's unavailable time spans against scheduling rules and constraints for a specific week
+                ValidateAgentUnavailableTimesResponse result = apiInstance.PostWorkforcemanagementUnavailabletimesValidationJobs(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling WorkforceManagementApi.PostWorkforcemanagementUnavailabletimesValidationJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ValidateAgentUnavailableTimesRequest**](ValidateAgentUnavailableTimesRequest)| body |  |
+
+### Return type
+
+[**ValidateAgentUnavailableTimesResponse**](ValidateAgentUnavailableTimesResponse)
+
+
 ## PutWorkforcemanagementAgentIntegrationsHris
 
 > [**AgentIntegrationsResponse**](AgentIntegrationsResponse) PutWorkforcemanagementAgentIntegrationsHris (string agentId, AgentIntegrationsRequest body)
@@ -17549,4 +18119,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 252.1.0_
+_PureCloudPlatform.Client.V2 253.0.0_

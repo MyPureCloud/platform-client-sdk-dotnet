@@ -1838,7 +1838,7 @@ namespace Example
 
 ## GetSocialmediaTopics
 
-> [**SocialTopicResponseEntityListing**](SocialTopicResponseEntityListing) GetSocialmediaTopics (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null)
+> [**SocialTopicResponseEntityListing**](SocialTopicResponseEntityListing) GetSocialmediaTopics (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null, List<string> ids = null)
 
 
 Retrieve all social topics.
@@ -1874,11 +1874,12 @@ namespace Example
             var divisionIds = new List<string>(); // List<string> | One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. (optional) 
             var includeDeleted = true;  // bool? | Determines whether to include soft-deleted items in the result. (optional) 
             var name = name_example;  // string | Search for topic by name that contains the given search string, search is case insensitive (optional) 
+            var ids = new List<string>(); // List<string> | One or more topic IDs to search through the topics. (optional) 
 
             try
             { 
                 // Retrieve all social topics.
-                SocialTopicResponseEntityListing result = apiInstance.GetSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted, name);
+                SocialTopicResponseEntityListing result = apiInstance.GetSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted, name, ids);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1900,6 +1901,7 @@ namespace Example
 | **divisionIds** | [**List<string>**](string)| One or more division IDs. If nothing is provided, the social topics associated withthe list of divisions that the user has access to will be returned. | [optional]  |
 | **includeDeleted** | **bool?**| Determines whether to include soft-deleted items in the result. | [optional]  |
 | **name** | **string**| Search for topic by name that contains the given search string, search is case insensitive | [optional]  |
+| **ids** | [**List<string>**](string)| One or more topic IDs to search through the topics. | [optional]  |
 
 ### Return type
 
@@ -3328,4 +3330,4 @@ namespace Example
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatform.Client.V2 252.1.0_
+_PureCloudPlatform.Client.V2 253.0.0_
