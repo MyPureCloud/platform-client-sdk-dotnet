@@ -21,15 +21,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationSummaryResolution" /> class.
         /// </summary>
+        /// <param name="Confidence">The AI confidence value..</param>
         /// <param name="Text">The text of the resolution..</param>
         /// <param name="Description">The description..</param>
-        public ConversationSummaryResolution(string Text = null, string Description = null)
+        /// <param name="Outcome">The outcome of the conversation&#39;s resolution..</param>
+        public ConversationSummaryResolution(float? Confidence = null, string Text = null, string Description = null, string Outcome = null)
         {
+            this.Confidence = Confidence;
             this.Text = Text;
             this.Description = Description;
+            this.Outcome = Outcome;
             
         }
         
+
+
+        /// <summary>
+        /// The AI confidence value.
+        /// </summary>
+        /// <value>The AI confidence value.</value>
+        [DataMember(Name="confidence", EmitDefaultValue=false)]
+        public float? Confidence { get; set; }
+
 
 
         /// <summary>
@@ -51,20 +64,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The AI confidence value.
-        /// </summary>
-        /// <value>The AI confidence value.</value>
-        [DataMember(Name="confidence", EmitDefaultValue=false)]
-        public float? Confidence { get; private set; }
-
-
-
-        /// <summary>
         /// The outcome of the conversation&#39;s resolution.
         /// </summary>
         /// <value>The outcome of the conversation&#39;s resolution.</value>
         [DataMember(Name="outcome", EmitDefaultValue=false)]
-        public string Outcome { get; private set; }
+        public string Outcome { get; set; }
 
 
         /// <summary>
@@ -76,9 +80,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ConversationSummaryResolution {\n");
 
+            sb.Append("  Confidence: ").Append(Confidence).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Confidence: ").Append(Confidence).Append("\n");
             sb.Append("  Outcome: ").Append(Outcome).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -121,6 +125,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Confidence == other.Confidence ||
+                    this.Confidence != null &&
+                    this.Confidence.Equals(other.Confidence)
+                ) &&
+                (
                     this.Text == other.Text ||
                     this.Text != null &&
                     this.Text.Equals(other.Text)
@@ -129,11 +138,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) &&
-                (
-                    this.Confidence == other.Confidence ||
-                    this.Confidence != null &&
-                    this.Confidence.Equals(other.Confidence)
                 ) &&
                 (
                     this.Outcome == other.Outcome ||
@@ -153,14 +157,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Confidence != null)
+                    hash = hash * 59 + this.Confidence.GetHashCode();
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-
-                if (this.Confidence != null)
-                    hash = hash * 59 + this.Confidence.GetHashCode();
 
                 if (this.Outcome != null)
                     hash = hash * 59 + this.Outcome.GetHashCode();

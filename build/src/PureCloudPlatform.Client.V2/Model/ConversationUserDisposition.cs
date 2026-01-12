@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Code">User-defined wrap-up code for the conversation. (required).</param>
         /// <param name="Notes">Text entered by the user to describe the call or disposition..</param>
-        public ConversationUserDisposition(string Code = null, string Notes = null)
+        /// <param name="User">The user that wrapped up the conversation. (required).</param>
+        public ConversationUserDisposition(string Code = null, string Notes = null, AddressableEntityRef User = null)
         {
             this.Code = Code;
             this.Notes = Notes;
+            this.User = User;
             
         }
         
@@ -61,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The user that wrapped up the conversation.</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
-        public AddressableEntityRef User { get; private set; }
+        public AddressableEntityRef User { get; set; }
 
 
         /// <summary>

@@ -172,6 +172,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversation,
             
             /// <summary>
+            /// Enum Copilot for "copilot"
+            /// </summary>
+            [EnumMember(Value = "copilot")]
+            Copilot,
+            
+            /// <summary>
             /// Enum Dataactions for "dataactions"
             /// </summary>
             [EnumMember(Value = "dataactions")]
@@ -524,6 +530,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "workforce.management")]
             Workforcemanagement,
+            
+            /// <summary>
+            /// Enum Workforcemanagementselfschedule for "workforce.management.self.schedule"
+            /// </summary>
+            [EnumMember(Value = "workforce.management.self.schedule")]
+            Workforcemanagementselfschedule,
             
             /// <summary>
             /// Enum Workforcemanagementshifttrading for "workforce.management.shift.trading"

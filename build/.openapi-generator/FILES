@@ -170,6 +170,9 @@ docs/AgentQueryAdherenceExplanationsRequest.md
 docs/AgentQueryAdherenceExplanationsResponse.md
 docs/AgentQueueTimeRequest.md
 docs/AgentScheduleShiftActivity.md
+docs/AgentScheduleUnavailableTime.md
+docs/AgentScoringRule.md
+docs/AgentScoringRuleEntityListing.md
 docs/AgentStateAgentQueryClause.md
 docs/AgentStateAgentQueryPredicate.md
 docs/AgentStateCountsRequest.md
@@ -362,6 +365,9 @@ docs/AssistantQueueListing.md
 docs/AssistantQueueUser.md
 docs/AssistantQueueUsersBulkAddRequest.md
 docs/AssistantQueueUsersBulkRemoveRequest.md
+docs/AssistantQueueUsersJobErrorInfo.md
+docs/AssistantQueueUsersJobsRequest.md
+docs/AssistantQueueUsersJobsResponse.md
 docs/AssistantQueueUsersQueryRequest.md
 docs/AssistantQueueUsersQueryResponse.md
 docs/AssociatedValueField.md
@@ -604,6 +610,7 @@ docs/BuTimeOffPlanResponse.md
 docs/BuUpdateAgentScheduleShift.md
 docs/BuUpdateAgentScheduleUploadSchema.md
 docs/BuUpdateTimeOffPlanRequest.md
+docs/BulkAddSourceIntentsRequest.md
 docs/BulkCallbackDisconnectRequest.md
 docs/BulkCallbackPatchRequest.md
 docs/BulkCallbackPatchResponse.md
@@ -647,6 +654,7 @@ docs/BulkOrganizationsRequest.md
 docs/BulkOrganizationsResponse.md
 docs/BulkRelationshipsRequest.md
 docs/BulkRelationshipsResponse.md
+docs/BulkRemoveSourceIntentsRequest.md
 docs/BulkResponse.md
 docs/BulkResponseResultExternalContactContactEnrichRequestBulkEntityErrorContactEnrichRequest.md
 docs/BulkResponseResultExternalContactEntityBulkEntityErrorEntity.md
@@ -660,7 +668,9 @@ docs/BulkResponseResultRelationshipEntityBulkEntityErrorEntity.md
 docs/BulkResponseResultRelationshipRelationshipBulkEntityErrorRelationship.md
 docs/BulkResponseResultVoidEntityBulkEntityErrorEntity.md
 docs/BulkResult.md
+docs/BulkResults.md
 docs/BulkShiftTradeStateUpdateRequest.md
+docs/BulkSourceIntentsResponse.md
 docs/BulkUpdateShiftTradeStateRequestItem.md
 docs/BulkUpdateShiftTradeStateResponse.md
 docs/BulkUpdateShiftTradeStateResult.md
@@ -806,6 +816,7 @@ docs/CaseManagementAggregationSort.md
 docs/CaseManagementAggregationView.md
 docs/CaseManagementAsyncAggregateQueryResponse.md
 docs/CaseManagementAsyncAggregationQuery.md
+docs/CaseReference.md
 docs/CategoriesEntityListing.md
 docs/CategoriesFilter.md
 docs/Category.md
@@ -1083,10 +1094,6 @@ docs/ContextPattern.md
 docs/ContinuousForecastGetSessionResponse.md
 docs/ContinuousForecastSessionResponse.md
 docs/ContinuousForecastSnapshotResponse.md
-docs/ContractDefinition.md
-docs/ContractItems.md
-docs/ContractJsonSchema.md
-docs/ContractPropertyDefinition.md
 docs/Contractual.md
 docs/Conversation.md
 docs/ConversationActivityData.md
@@ -1311,6 +1318,7 @@ docs/ConversationEventTopicPhoneNumberColumn.md
 docs/ConversationEventTopicQueueMediaSettings.md
 docs/ConversationEventTopicRecordersState.md
 docs/ConversationEventTopicScoredAgent.md
+docs/ConversationEventTopicScreenMonitoring.md
 docs/ConversationEventTopicScreenShare.md
 docs/ConversationEventTopicSocialExpression.md
 docs/ConversationEventTopicTransferDestination.md
@@ -1655,7 +1663,16 @@ docs/CustomProvider.md
 docs/CustomSmtpServerRequest.md
 docs/Customer.md
 docs/CustomerEndDetailEventTopicCustomerEndEvent.md
+docs/CustomerIntent.md
+docs/CustomerIntentAssignmentListing.md
+docs/CustomerIntentAssignmentRequest.md
+docs/CustomerIntentAssignmentResponse.md
+docs/CustomerIntentListing.md
+docs/CustomerIntentPatch.md
+docs/CustomerIntentResponse.md
 docs/CustomerInteractionCenter.md
+docs/CustomerSourceIntent.md
+docs/CustomerSourceIntentListing.md
 docs/CustomerStartDetailEventTopicCustomerStartEvent.md
 docs/CustomerStartDetailEventTopicJourneyContext.md
 docs/DID.md
@@ -1865,6 +1882,8 @@ docs/DeleteIntegration-example.txt
 docs/DeleteIntegrationsAction-example.txt
 docs/DeleteIntegrationsActionDraft-example.txt
 docs/DeleteIntegrationsCredential-example.txt
+docs/DeleteIntentsCategory-example.txt
+docs/DeleteIntentsCustomerintent-example.txt
 docs/DeleteJourneyActionmap-example.txt
 docs/DeleteJourneyActiontemplate-example.txt
 docs/DeleteJourneyOutcome-example.txt
@@ -1952,6 +1971,7 @@ docs/DeleteQualityConversationEvaluation-example.txt
 docs/DeleteQualityForm-example.txt
 docs/DeleteQualityFormsEvaluation-example.txt
 docs/DeleteQualityFormsSurvey-example.txt
+docs/DeleteQualityProgramAgentscoringrule-example.txt
 docs/DeleteRecordingCrossplatformMediaretentionpolicies-example.txt
 docs/DeleteRecordingCrossplatformMediaretentionpolicy-example.txt
 docs/DeleteRecordingJob-example.txt
@@ -2978,6 +2998,7 @@ docs/GetArchitectSystemprompts-example.txt
 docs/GetAssistant-example.txt
 docs/GetAssistantCopilot-example.txt
 docs/GetAssistantQueue-example.txt
+docs/GetAssistantQueueUsersJob-example.txt
 docs/GetAssistantQueues-example.txt
 docs/GetAssistants-example.txt
 docs/GetAssistantsAgentchecklist-example.txt
@@ -3482,6 +3503,13 @@ docs/GetIntegrationsTypes-example.txt
 docs/GetIntegrationsUnifiedcommunicationsClientapp-example.txt
 docs/GetIntegrationsUnifiedcommunicationsClientapps-example.txt
 docs/GetIntegrationsUserapps-example.txt
+docs/GetIntentsAssignmentsExternalcontact-example.txt
+docs/GetIntentsCategories-example.txt
+docs/GetIntentsCategory-example.txt
+docs/GetIntentsCustomerintent-example.txt
+docs/GetIntentsCustomerintentSourceintents-example.txt
+docs/GetIntentsCustomerintents-example.txt
+docs/GetIntentsSourceintents-example.txt
 docs/GetIpranges-example.txt
 docs/GetJourneyActionmap-example.txt
 docs/GetJourneyActionmaps-example.txt
@@ -3767,6 +3795,8 @@ docs/GetQualityFormsSurveyVersions-example.txt
 docs/GetQualityFormsSurveys-example.txt
 docs/GetQualityFormsSurveysBulk-example.txt
 docs/GetQualityFormsSurveysBulkContexts-example.txt
+docs/GetQualityProgramAgentscoringrule-example.txt
+docs/GetQualityProgramAgentscoringrules-example.txt
 docs/GetQualityPublishedform-example.txt
 docs/GetQualityPublishedforms-example.txt
 docs/GetQualityPublishedformsEvaluation-example.txt
@@ -4302,6 +4332,8 @@ docs/GetWorkforcemanagementTimeoffbalanceJob-example.txt
 docs/GetWorkforcemanagementTimeoffrequest-example.txt
 docs/GetWorkforcemanagementTimeoffrequestWaitlistpositions-example.txt
 docs/GetWorkforcemanagementTimeoffrequests-example.txt
+docs/GetWorkforcemanagementUnavailabletimesSettings-example.txt
+docs/GetWorkforcemanagementUnavailabletimesValidationJob-example.txt
 docs/GetWorkforcemanagementUserWorkplanbidranks-example.txt
 docs/GetWorkforcemanagementWorkplanbidPreferences-example.txt
 docs/GetWorkforcemanagementWorkplanbidWorkplans-example.txt
@@ -4508,6 +4540,11 @@ docs/Intent.md
 docs/IntentDefinition.md
 docs/IntentFeedback.md
 docs/IntentReference.md
+docs/IntentsApi.json
+docs/IntentsApi.md
+docs/IntentsCategory.md
+docs/IntentsCategoryListing.md
+docs/IntentsCategoryPatch.md
 docs/InteractiveApplication.md
 docs/InternalMessage.md
 docs/InternalMessageConversation.md
@@ -5031,6 +5068,7 @@ docs/MaestroWebhooksInvocationTopicPublicWebhooksEvent.md
 docs/MaestroWebhooksInvocationTopicWebhooksInvocation.md
 docs/MailFromResult.md
 docs/ManagementUnit.md
+docs/ManagementUnitAvailabilitySettingsResponse.md
 docs/ManagementUnitListing.md
 docs/ManagementUnitReference.md
 docs/ManagementUnitSettingsRequest.md
@@ -5597,6 +5635,8 @@ docs/PatchIntegrationAction.md
 docs/PatchIntegrationActionFields.md
 docs/PatchIntegrationsAction-example.txt
 docs/PatchIntegrationsActionDraft-example.txt
+docs/PatchIntentsCategory-example.txt
+docs/PatchIntentsCustomerintent-example.txt
 docs/PatchJourney.md
 docs/PatchJourneyActionmap-example.txt
 docs/PatchJourneyActiontarget-example.txt
@@ -5731,11 +5771,13 @@ docs/PatchWorkforcemanagementManagementunitAgentsWorkplansBulk-example.txt
 docs/PatchWorkforcemanagementManagementunitTimeofflimit-example.txt
 docs/PatchWorkforcemanagementManagementunitTimeoffplan-example.txt
 docs/PatchWorkforcemanagementManagementunitTimeoffrequestUserIntegrationstatus-example.txt
+docs/PatchWorkforcemanagementManagementunitUnavailabletimesSettings-example.txt
 docs/PatchWorkforcemanagementManagementunitUserTimeoffrequest-example.txt
 docs/PatchWorkforcemanagementManagementunitWeekShifttrade-example.txt
 docs/PatchWorkforcemanagementManagementunitWorkplan-example.txt
 docs/PatchWorkforcemanagementManagementunitWorkplanrotation-example.txt
 docs/PatchWorkforcemanagementTimeoffrequest-example.txt
+docs/PatchWorkforcemanagementUnavailabletimes-example.txt
 docs/PatchWorkforcemanagementUserWorkplanbidranks-example.txt
 docs/PatchWorkforcemanagementUsersWorkplanbidranksBulk-example.txt
 docs/PatchWorkforcemanagementWorkplanbidPreferences-example.txt
@@ -5916,6 +5958,7 @@ docs/PostArchitectSystempromptResourceUploads-example.txt
 docs/PostArchitectSystempromptResources-example.txt
 docs/PostAssistantQueueUsersBulkAdd-example.txt
 docs/PostAssistantQueueUsersBulkRemove-example.txt
+docs/PostAssistantQueueUsersJobs-example.txt
 docs/PostAssistantQueueUsersQuery-example.txt
 docs/PostAssistants-example.txt
 docs/PostAssistantsAgentchecklists-example.txt
@@ -6196,6 +6239,11 @@ docs/PostIntegrationsSpeechNuanceNuanceIntegrationIdBotJobs-example.txt
 docs/PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsJobs-example.txt
 docs/PostIntegrationsSpeechNuanceNuanceIntegrationIdBotsLaunchValidate-example.txt
 docs/PostIntegrationsWebhookEvents-example.txt
+docs/PostIntentsAssignmentsExternalcontactCustomerintentAssignment-example.txt
+docs/PostIntentsCategories-example.txt
+docs/PostIntentsCustomerintentSourceintentsBulkAdd-example.txt
+docs/PostIntentsCustomerintentSourceintentsBulkRemove-example.txt
+docs/PostIntentsCustomerintents-example.txt
 docs/PostJourneyActionmaps-example.txt
 docs/PostJourneyActionmapsEstimatesJobs-example.txt
 docs/PostJourneyActiontemplates-example.txt
@@ -6360,6 +6408,7 @@ docs/PostQualityEvaluationsScoring-example.txt
 docs/PostQualityForms-example.txt
 docs/PostQualityFormsEvaluations-example.txt
 docs/PostQualityFormsSurveys-example.txt
+docs/PostQualityProgramAgentscoringrules-example.txt
 docs/PostQualityPublishedforms-example.txt
 docs/PostQualityPublishedformsEvaluations-example.txt
 docs/PostQualityPublishedformsSurveys-example.txt
@@ -6548,6 +6597,7 @@ docs/PostWorkforcemanagementAdherenceHistorical-example.txt
 docs/PostWorkforcemanagementAdherenceHistoricalBulk-example.txt
 docs/PostWorkforcemanagementAgentAdherenceExplanations-example.txt
 docs/PostWorkforcemanagementAgentAdherenceExplanationsQuery-example.txt
+docs/PostWorkforcemanagementAgentUnavailabletimesQuery-example.txt
 docs/PostWorkforcemanagementAgents-example.txt
 docs/PostWorkforcemanagementAgentsIntegrationsHrisQuery-example.txt
 docs/PostWorkforcemanagementAgentsMeAdherenceHistoricalJobs-example.txt
@@ -6579,6 +6629,8 @@ docs/PostWorkforcemanagementBusinessunitStaffinggroupsQuery-example.txt
 docs/PostWorkforcemanagementBusinessunitTimeofflimits-example.txt
 docs/PostWorkforcemanagementBusinessunitTimeofflimitsValuesQuery-example.txt
 docs/PostWorkforcemanagementBusinessunitTimeoffplans-example.txt
+docs/PostWorkforcemanagementBusinessunitUnavailabletimesSchedulesQuery-example.txt
+docs/PostWorkforcemanagementBusinessunitUnavailabletimesSettingsQuery-example.txt
 docs/PostWorkforcemanagementBusinessunitWeekScheduleAgentschedulesQuery-example.txt
 docs/PostWorkforcemanagementBusinessunitWeekScheduleCopy-example.txt
 docs/PostWorkforcemanagementBusinessunitWeekSchedulePerformancepredictionsRecalculations-example.txt
@@ -6637,6 +6689,8 @@ docs/PostWorkforcemanagementTimeofflimitsAvailableQuery-example.txt
 docs/PostWorkforcemanagementTimeoffrequests-example.txt
 docs/PostWorkforcemanagementTimeoffrequestsEstimate-example.txt
 docs/PostWorkforcemanagementTimeoffrequestsIntegrationstatusQuery-example.txt
+docs/PostWorkforcemanagementUnavailabletimesQuery-example.txt
+docs/PostWorkforcemanagementUnavailabletimesValidationJobs-example.txt
 docs/PredictionResults.md
 docs/PredictiveRouting.md
 docs/Predictor.md
@@ -6881,6 +6935,7 @@ docs/PutQualityForm-example.txt
 docs/PutQualityFormsEvaluation-example.txt
 docs/PutQualityFormsEvaluationAiscoringSettings-example.txt
 docs/PutQualityFormsSurvey-example.txt
+docs/PutQualityProgramAgentscoringrule-example.txt
 docs/PutQualitySurveysScorable-example.txt
 docs/PutRecordingCrossplatformMediaretentionpolicy-example.txt
 docs/PutRecordingJob-example.txt
@@ -6987,7 +7042,13 @@ docs/QualityAuditQueryFilter.md
 docs/QualityEvaluationScoreItem.md
 docs/QuarterHourly.md
 docs/QueryAdherenceExplanationsResponse.md
+docs/QueryAgentScheduleUnavailableTimesRequest.md
+docs/QueryAgentScheduleUnavailableTimesResponse.md
+docs/QueryAgentUnavailableTimesRequest.md
+docs/QueryAgentUnavailableTimesValidationJobResponse.md
 docs/QueryAgentsIntegrationsRequest.md
+docs/QueryAvailabilityManagementUnitsSettingsRequest.md
+docs/QueryAvailabilityManagementUnitsSettingsResponse.md
 docs/QueryCapacityPlanStaffingGroupMetricChangeHistory.md
 docs/QueryCriteria.md
 docs/QueryDivision.md
@@ -7149,6 +7210,7 @@ docs/QueueConversationEventTopicPhoneNumberColumn.md
 docs/QueueConversationEventTopicQueueMediaSettings.md
 docs/QueueConversationEventTopicRecordersState.md
 docs/QueueConversationEventTopicScoredAgent.md
+docs/QueueConversationEventTopicScreenMonitoring.md
 docs/QueueConversationEventTopicScreenShare.md
 docs/QueueConversationEventTopicSocialExpression.md
 docs/QueueConversationEventTopicTransferDestination.md
@@ -7242,6 +7304,7 @@ docs/QueueConversationSocialExpressionEventTopicPhoneNumberColumn.md
 docs/QueueConversationSocialExpressionEventTopicQueueMediaSettings.md
 docs/QueueConversationSocialExpressionEventTopicRecordersState.md
 docs/QueueConversationSocialExpressionEventTopicScoredAgent.md
+docs/QueueConversationSocialExpressionEventTopicScreenMonitoring.md
 docs/QueueConversationSocialExpressionEventTopicScreenShare.md
 docs/QueueConversationSocialExpressionEventTopicSocialExpression.md
 docs/QueueConversationSocialExpressionEventTopicTransferDestination.md
@@ -7292,6 +7355,7 @@ docs/QueueConversationVideoEventTopicPhoneNumberColumn.md
 docs/QueueConversationVideoEventTopicQueueMediaSettings.md
 docs/QueueConversationVideoEventTopicRecordersState.md
 docs/QueueConversationVideoEventTopicScoredAgent.md
+docs/QueueConversationVideoEventTopicScreenMonitoring.md
 docs/QueueConversationVideoEventTopicScreenShare.md
 docs/QueueConversationVideoEventTopicSocialExpression.md
 docs/QueueConversationVideoEventTopicTransferDestination.md
@@ -7386,6 +7450,8 @@ docs/RecordingRoadsideAssistance.md
 docs/RecordingSettings.md
 docs/RecordingTemplateBody.md
 docs/RecordingTemplateButton.md
+docs/RecordingTemplateCard.md
+docs/RecordingTemplateCarousel.md
 docs/RecordingTemplateFooter.md
 docs/RecordingTemplateHeader.md
 docs/RecordingTranscodeCompleteTopicMediaResult.md
@@ -7490,6 +7556,8 @@ docs/RestorePresenceSettings.md
 docs/RetentionDuration.md
 docs/ReverseWhitepagesLookupResult.md
 docs/ReviewAssessmentResults.md
+docs/RichLink.md
+docs/RichLinkHeader.md
 docs/Ring.md
 docs/RoleDivision.md
 docs/RoleDivisionGrants.md
@@ -7603,6 +7671,7 @@ docs/ScimV2SchemaListResponse.md
 docs/ScimV2User.md
 docs/ScorableSurvey.md
 docs/ScoredAgent.md
+docs/ScreenMonitoring.md
 docs/ScreenRecordingActiveSessions.md
 docs/ScreenRecordingApi.json
 docs/ScreenRecordingApi.md
@@ -7801,6 +7870,7 @@ docs/SourceBaseResponse.md
 docs/SourceConfiguration.md
 docs/SourceEntity.md
 docs/SourceEntityListing.md
+docs/SourceIntent.md
 docs/SourceLastSync.md
 docs/SourcePlanningGroupRequest.md
 docs/SourceSyncResponse.md
@@ -8223,6 +8293,12 @@ docs/UnansweredPhrase.md
 docs/UnansweredPhraseGroup.md
 docs/UnansweredPhraseGroupPatchRequestBody.md
 docs/UnansweredPhraseGroupUpdateResponse.md
+docs/UnavailableTime.md
+docs/UnavailableTimeListing.md
+docs/UnavailableTimesManagementUnitSettings.md
+docs/UnavailableTimesTimeSpan.md
+docs/UnavailableTimesValidationResult.md
+docs/UnavailableTimesViolationMessageArgument.md
 docs/UnifiedCommunicationsIntegration.md
 docs/UnifiedCommunicationsIntegrationListing.md
 docs/UnifiedGeneralTopic.md
@@ -8251,6 +8327,7 @@ docs/UpdateGuide.md
 docs/UpdateGuideVersion.md
 docs/UpdateKpiRequest.md
 docs/UpdateManagementUnitRequest.md
+docs/UpdateManagementUnitsSettingsRequest.md
 docs/UpdateMuAgentRequest.md
 docs/UpdateMuAgentWorkPlanFailureResponse.md
 docs/UpdateMuAgentWorkPlanRequest.md
@@ -8273,6 +8350,8 @@ docs/UpdateTimeOffPlanBusinessUnitAssociation.md
 docs/UpdateTimeOffPlanManagementUnitAssociation.md
 docs/UpdateTimeOffPlanRequest.md
 docs/UpdateTriggerRequest.md
+docs/UpdateUnavailableTime.md
+docs/UpdateUnavailableTimesRequest.md
 docs/UpdateUser.md
 docs/UpdateUtilizationLabelRequest.md
 docs/UpdateVerifierRequest.md
@@ -8524,6 +8603,8 @@ docs/V2WemEngagementCelebrationUpdatesTopicSourceEntity.md
 docs/V2WemEngagementCelebrationUpdatesTopicUserId.md
 docs/ValidateAddressRequest.md
 docs/ValidateAddressResponse.md
+docs/ValidateAgentUnavailableTimesRequest.md
+docs/ValidateAgentUnavailableTimesResponse.md
 docs/ValidateAssignUsers.md
 docs/ValidateWorkPlanMessages.md
 docs/ValidateWorkPlanResponse.md
@@ -8892,6 +8973,8 @@ docs/WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification.md
 docs/WorkPlanConfigurationViolationMessage.md
 docs/WorkPlanConstraintConflictMessage.md
 docs/WorkPlanConstraintMessage.md
+docs/WorkPlanConstraintViolationMessage.md
+docs/WorkPlanConstraintsViolationMessage.md
 docs/WorkPlanListItemResponse.md
 docs/WorkPlanListResponse.md
 docs/WorkPlanOverride.md
@@ -9098,6 +9181,7 @@ src/PureCloudPlatform.Client.V2/Api/GroupsApi.cs
 src/PureCloudPlatform.Client.V2/Api/IdentityProviderApi.cs
 src/PureCloudPlatform.Client.V2/Api/InfrastructureAsCodeApi.cs
 src/PureCloudPlatform.Client.V2/Api/IntegrationsApi.cs
+src/PureCloudPlatform.Client.V2/Api/IntentsApi.cs
 src/PureCloudPlatform.Client.V2/Api/JourneyApi.cs
 src/PureCloudPlatform.Client.V2/Api/KnowledgeApi.cs
 src/PureCloudPlatform.Client.V2/Api/LanguageUnderstandingApi.cs
@@ -9314,6 +9398,9 @@ src/PureCloudPlatform.Client.V2/Model/AgentQueryAdherenceExplanationsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentQueryAdherenceExplanationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AgentQueueTimeRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AgentScheduleShiftActivity.cs
+src/PureCloudPlatform.Client.V2/Model/AgentScheduleUnavailableTime.cs
+src/PureCloudPlatform.Client.V2/Model/AgentScoringRule.cs
+src/PureCloudPlatform.Client.V2/Model/AgentScoringRuleEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateAgentQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateAgentQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateCountsRequest.cs
@@ -9498,6 +9585,9 @@ src/PureCloudPlatform.Client.V2/Model/AssistantQueueListing.cs
 src/PureCloudPlatform.Client.V2/Model/AssistantQueueUser.cs
 src/PureCloudPlatform.Client.V2/Model/AssistantQueueUsersBulkAddRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AssistantQueueUsersBulkRemoveRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AssistantQueueUsersJobErrorInfo.cs
+src/PureCloudPlatform.Client.V2/Model/AssistantQueueUsersJobsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AssistantQueueUsersJobsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AssistantQueueUsersQueryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/AssistantQueueUsersQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/AssociatedValueField.cs
@@ -9734,6 +9824,7 @@ src/PureCloudPlatform.Client.V2/Model/BuTimeOffPlanResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BuUpdateAgentScheduleShift.cs
 src/PureCloudPlatform.Client.V2/Model/BuUpdateAgentScheduleUploadSchema.cs
 src/PureCloudPlatform.Client.V2/Model/BuUpdateTimeOffPlanRequest.cs
+src/PureCloudPlatform.Client.V2/Model/BulkAddSourceIntentsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkCallbackDisconnectRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkCallbackPatchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkCallbackPatchResponse.cs
@@ -9777,6 +9868,7 @@ src/PureCloudPlatform.Client.V2/Model/BulkOrganizationsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkOrganizationsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkRelationshipsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkRelationshipsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/BulkRemoveSourceIntentsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultExternalContactContactEnrichRequestBulkEntityErrorContactEnrichRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultExternalContactEntityBulkEntityErrorEntity.cs
@@ -9790,7 +9882,9 @@ src/PureCloudPlatform.Client.V2/Model/BulkResponseResultRelationshipEntityBulkEn
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultRelationshipRelationshipBulkEntityErrorRelationship.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResponseResultVoidEntityBulkEntityErrorEntity.cs
 src/PureCloudPlatform.Client.V2/Model/BulkResult.cs
+src/PureCloudPlatform.Client.V2/Model/BulkResults.cs
 src/PureCloudPlatform.Client.V2/Model/BulkShiftTradeStateUpdateRequest.cs
+src/PureCloudPlatform.Client.V2/Model/BulkSourceIntentsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkUpdateShiftTradeStateRequestItem.cs
 src/PureCloudPlatform.Client.V2/Model/BulkUpdateShiftTradeStateResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BulkUpdateShiftTradeStateResult.cs
@@ -9932,6 +10026,7 @@ src/PureCloudPlatform.Client.V2/Model/CaseManagementAggregationSort.cs
 src/PureCloudPlatform.Client.V2/Model/CaseManagementAggregationView.cs
 src/PureCloudPlatform.Client.V2/Model/CaseManagementAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CaseManagementAsyncAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/CaseReference.cs
 src/PureCloudPlatform.Client.V2/Model/CategoriesEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/CategoriesFilter.cs
 src/PureCloudPlatform.Client.V2/Model/Category.cs
@@ -10203,10 +10298,6 @@ src/PureCloudPlatform.Client.V2/Model/ContextPattern.cs
 src/PureCloudPlatform.Client.V2/Model/ContinuousForecastGetSessionResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContinuousForecastSessionResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ContinuousForecastSnapshotResponse.cs
-src/PureCloudPlatform.Client.V2/Model/ContractDefinition.cs
-src/PureCloudPlatform.Client.V2/Model/ContractItems.cs
-src/PureCloudPlatform.Client.V2/Model/ContractJsonSchema.cs
-src/PureCloudPlatform.Client.V2/Model/ContractPropertyDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/Contractual.cs
 src/PureCloudPlatform.Client.V2/Model/Conversation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationActivityData.cs
@@ -10431,6 +10522,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicPhoneNumberColumn.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicRecordersState.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicScoredAgent.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicScreenMonitoring.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicScreenShare.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicSocialExpression.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicTransferDestination.cs
@@ -10773,7 +10865,16 @@ src/PureCloudPlatform.Client.V2/Model/CustomProvider.cs
 src/PureCloudPlatform.Client.V2/Model/CustomSmtpServerRequest.cs
 src/PureCloudPlatform.Client.V2/Model/Customer.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerEndDetailEventTopicCustomerEndEvent.cs
+src/PureCloudPlatform.Client.V2/Model/CustomerIntent.cs
+src/PureCloudPlatform.Client.V2/Model/CustomerIntentAssignmentListing.cs
+src/PureCloudPlatform.Client.V2/Model/CustomerIntentAssignmentRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CustomerIntentAssignmentResponse.cs
+src/PureCloudPlatform.Client.V2/Model/CustomerIntentListing.cs
+src/PureCloudPlatform.Client.V2/Model/CustomerIntentPatch.cs
+src/PureCloudPlatform.Client.V2/Model/CustomerIntentResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerInteractionCenter.cs
+src/PureCloudPlatform.Client.V2/Model/CustomerSourceIntent.cs
+src/PureCloudPlatform.Client.V2/Model/CustomerSourceIntentListing.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerStartDetailEventTopicCustomerStartEvent.cs
 src/PureCloudPlatform.Client.V2/Model/CustomerStartDetailEventTopicJourneyContext.cs
 src/PureCloudPlatform.Client.V2/Model/DID.cs
@@ -11817,6 +11918,9 @@ src/PureCloudPlatform.Client.V2/Model/Intent.cs
 src/PureCloudPlatform.Client.V2/Model/IntentDefinition.cs
 src/PureCloudPlatform.Client.V2/Model/IntentFeedback.cs
 src/PureCloudPlatform.Client.V2/Model/IntentReference.cs
+src/PureCloudPlatform.Client.V2/Model/IntentsCategory.cs
+src/PureCloudPlatform.Client.V2/Model/IntentsCategoryListing.cs
+src/PureCloudPlatform.Client.V2/Model/IntentsCategoryPatch.cs
 src/PureCloudPlatform.Client.V2/Model/InteractiveApplication.cs
 src/PureCloudPlatform.Client.V2/Model/InternalMessage.cs
 src/PureCloudPlatform.Client.V2/Model/InternalMessageConversation.cs
@@ -12324,6 +12428,7 @@ src/PureCloudPlatform.Client.V2/Model/MaestroWebhooksInvocationTopicPublicWebhoo
 src/PureCloudPlatform.Client.V2/Model/MaestroWebhooksInvocationTopicWebhooksInvocation.cs
 src/PureCloudPlatform.Client.V2/Model/MailFromResult.cs
 src/PureCloudPlatform.Client.V2/Model/ManagementUnit.cs
+src/PureCloudPlatform.Client.V2/Model/ManagementUnitAvailabilitySettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ManagementUnitListing.cs
 src/PureCloudPlatform.Client.V2/Model/ManagementUnitReference.cs
 src/PureCloudPlatform.Client.V2/Model/ManagementUnitSettingsRequest.cs
@@ -12955,7 +13060,13 @@ src/PureCloudPlatform.Client.V2/Model/QualityAuditQueryFilter.cs
 src/PureCloudPlatform.Client.V2/Model/QualityEvaluationScoreItem.cs
 src/PureCloudPlatform.Client.V2/Model/QuarterHourly.cs
 src/PureCloudPlatform.Client.V2/Model/QueryAdherenceExplanationsResponse.cs
+src/PureCloudPlatform.Client.V2/Model/QueryAgentScheduleUnavailableTimesRequest.cs
+src/PureCloudPlatform.Client.V2/Model/QueryAgentScheduleUnavailableTimesResponse.cs
+src/PureCloudPlatform.Client.V2/Model/QueryAgentUnavailableTimesRequest.cs
+src/PureCloudPlatform.Client.V2/Model/QueryAgentUnavailableTimesValidationJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/QueryAgentsIntegrationsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/QueryAvailabilityManagementUnitsSettingsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/QueryAvailabilityManagementUnitsSettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/QueryCapacityPlanStaffingGroupMetricChangeHistory.cs
 src/PureCloudPlatform.Client.V2/Model/QueryCriteria.cs
 src/PureCloudPlatform.Client.V2/Model/QueryDivision.cs
@@ -13117,6 +13228,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicPhoneNumberColu
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicRecordersState.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicScoredAgent.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicScreenMonitoring.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicScreenShare.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicSocialExpression.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicTransferDestination.cs
@@ -13210,6 +13322,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopi
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicRecordersState.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicScoredAgent.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicScreenMonitoring.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicScreenShare.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicSocialExpression.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicTransferDestination.cs
@@ -13260,6 +13373,7 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicPhoneNumbe
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicRecordersState.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicScoredAgent.cs
+src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicScreenMonitoring.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicScreenShare.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicSocialExpression.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicTransferDestination.cs
@@ -13352,6 +13466,8 @@ src/PureCloudPlatform.Client.V2/Model/RecordingRoadsideAssistance.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingSettings.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTemplateBody.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTemplateButton.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingTemplateCard.cs
+src/PureCloudPlatform.Client.V2/Model/RecordingTemplateCarousel.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTemplateFooter.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTemplateHeader.cs
 src/PureCloudPlatform.Client.V2/Model/RecordingTranscodeCompleteTopicMediaResult.cs
@@ -13454,6 +13570,8 @@ src/PureCloudPlatform.Client.V2/Model/RestorePresenceSettings.cs
 src/PureCloudPlatform.Client.V2/Model/RetentionDuration.cs
 src/PureCloudPlatform.Client.V2/Model/ReverseWhitepagesLookupResult.cs
 src/PureCloudPlatform.Client.V2/Model/ReviewAssessmentResults.cs
+src/PureCloudPlatform.Client.V2/Model/RichLink.cs
+src/PureCloudPlatform.Client.V2/Model/RichLinkHeader.cs
 src/PureCloudPlatform.Client.V2/Model/Ring.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivision.cs
 src/PureCloudPlatform.Client.V2/Model/RoleDivisionGrants.cs
@@ -13563,6 +13681,7 @@ src/PureCloudPlatform.Client.V2/Model/ScimV2SchemaListResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ScimV2User.cs
 src/PureCloudPlatform.Client.V2/Model/ScorableSurvey.cs
 src/PureCloudPlatform.Client.V2/Model/ScoredAgent.cs
+src/PureCloudPlatform.Client.V2/Model/ScreenMonitoring.cs
 src/PureCloudPlatform.Client.V2/Model/ScreenRecordingActiveSessions.cs
 src/PureCloudPlatform.Client.V2/Model/ScreenRecordingMetaData.cs
 src/PureCloudPlatform.Client.V2/Model/ScreenRecordingMetaDataRequest.cs
@@ -13751,6 +13870,7 @@ src/PureCloudPlatform.Client.V2/Model/SourceBaseResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SourceConfiguration.cs
 src/PureCloudPlatform.Client.V2/Model/SourceEntity.cs
 src/PureCloudPlatform.Client.V2/Model/SourceEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/SourceIntent.cs
 src/PureCloudPlatform.Client.V2/Model/SourceLastSync.cs
 src/PureCloudPlatform.Client.V2/Model/SourcePlanningGroupRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SourceSyncResponse.cs
@@ -14155,6 +14275,12 @@ src/PureCloudPlatform.Client.V2/Model/UnansweredPhrase.cs
 src/PureCloudPlatform.Client.V2/Model/UnansweredPhraseGroup.cs
 src/PureCloudPlatform.Client.V2/Model/UnansweredPhraseGroupPatchRequestBody.cs
 src/PureCloudPlatform.Client.V2/Model/UnansweredPhraseGroupUpdateResponse.cs
+src/PureCloudPlatform.Client.V2/Model/UnavailableTime.cs
+src/PureCloudPlatform.Client.V2/Model/UnavailableTimeListing.cs
+src/PureCloudPlatform.Client.V2/Model/UnavailableTimesManagementUnitSettings.cs
+src/PureCloudPlatform.Client.V2/Model/UnavailableTimesTimeSpan.cs
+src/PureCloudPlatform.Client.V2/Model/UnavailableTimesValidationResult.cs
+src/PureCloudPlatform.Client.V2/Model/UnavailableTimesViolationMessageArgument.cs
 src/PureCloudPlatform.Client.V2/Model/UnifiedCommunicationsIntegration.cs
 src/PureCloudPlatform.Client.V2/Model/UnifiedCommunicationsIntegrationListing.cs
 src/PureCloudPlatform.Client.V2/Model/UnifiedGeneralTopic.cs
@@ -14183,6 +14309,7 @@ src/PureCloudPlatform.Client.V2/Model/UpdateGuide.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateGuideVersion.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateKpiRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateManagementUnitRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateManagementUnitsSettingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentWorkPlanFailureResponse.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateMuAgentWorkPlanRequest.cs
@@ -14205,6 +14332,8 @@ src/PureCloudPlatform.Client.V2/Model/UpdateTimeOffPlanBusinessUnitAssociation.c
 src/PureCloudPlatform.Client.V2/Model/UpdateTimeOffPlanManagementUnitAssociation.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateTimeOffPlanRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateTriggerRequest.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateUnavailableTime.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateUnavailableTimesRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateUser.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateUtilizationLabelRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateVerifierRequest.cs
@@ -14444,6 +14573,8 @@ src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicSour
 src/PureCloudPlatform.Client.V2/Model/V2WemEngagementCelebrationUpdatesTopicUserId.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateAddressRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateAddressResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ValidateAgentUnavailableTimesRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ValidateAgentUnavailableTimesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateAssignUsers.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateWorkPlanMessages.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateWorkPlanResponse.cs
@@ -14802,6 +14933,8 @@ src/PureCloudPlatform.Client.V2/Model/WorkPlanBiddingAdminNotificationTopicWorkP
 src/PureCloudPlatform.Client.V2/Model/WorkPlanConfigurationViolationMessage.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanConstraintConflictMessage.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanConstraintMessage.cs
+src/PureCloudPlatform.Client.V2/Model/WorkPlanConstraintViolationMessage.cs
+src/PureCloudPlatform.Client.V2/Model/WorkPlanConstraintsViolationMessage.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanListItemResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanListResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WorkPlanOverride.cs

@@ -13,6 +13,7 @@
 | **ThirdPartyOrgName** | **string** | The short name for the organization. This field is globally unique and cannot be changed. | [optional] |
 | **ThirdPartyURI** | **string** |  | [optional] |
 | **Domain** | **string** |  | [optional] |
+| **Features** | **Dictionary&lt;string, bool?&gt;** | The state of features available for the organization. | [optional] |
 | **Version** | **int?** | The current version of the organization. | |
 | **State** | **string** | The current state. Examples are active, inactive, deleted. | [optional] |
 | **DefaultSiteId** | **string** |  | [optional] |
@@ -20,8 +21,7 @@
 | **VoicemailEnabled** | **bool?** |  | [optional] |
 | **ProductPlatform** | **string** | Organizations Originating Platform. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
-| **Features** | **Dictionary&lt;string, bool?&gt;** | The state of features available for the organization. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 252.1.0_
+_PureCloudPlatform.Client.V2 253.0.0_

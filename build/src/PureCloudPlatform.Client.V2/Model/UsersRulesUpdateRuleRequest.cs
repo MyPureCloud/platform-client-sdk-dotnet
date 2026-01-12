@@ -24,11 +24,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The name of the rule.</param>
         /// <param name="Description">The description of the rule.</param>
         /// <param name="Criteria">The criteria of the rule.</param>
-        public UsersRulesUpdateRuleRequest(string Name = null, string Description = null, List<UsersRulesCriteria> Criteria = null)
+        /// <param name="LockedCriteria">LockedCriteria.</param>
+        public UsersRulesUpdateRuleRequest(string Name = null, string Description = null, List<UsersRulesCriteria> Criteria = null, List<UsersRulesCriteria> LockedCriteria = null)
         {
             this.Name = Name;
             this.Description = Description;
             this.Criteria = Criteria;
+            this.LockedCriteria = LockedCriteria;
             
         }
         
@@ -60,6 +62,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<UsersRulesCriteria> Criteria { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets LockedCriteria
+        /// </summary>
+        [DataMember(Name="lockedCriteria", EmitDefaultValue=false)]
+        public List<UsersRulesCriteria> LockedCriteria { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -72,6 +82,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Criteria: ").Append(Criteria).Append("\n");
+            sb.Append("  LockedCriteria: ").Append(LockedCriteria).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -126,6 +137,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Criteria == other.Criteria ||
                     this.Criteria != null &&
                     this.Criteria.SequenceEqual(other.Criteria)
+                ) &&
+                (
+                    this.LockedCriteria == other.LockedCriteria ||
+                    this.LockedCriteria != null &&
+                    this.LockedCriteria.SequenceEqual(other.LockedCriteria)
                 );
         }
 
@@ -148,6 +164,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Criteria != null)
                     hash = hash * 59 + this.Criteria.GetHashCode();
+
+                if (this.LockedCriteria != null)
+                    hash = hash * 59 + this.LockedCriteria.GetHashCode();
 
                 return hash;
             }

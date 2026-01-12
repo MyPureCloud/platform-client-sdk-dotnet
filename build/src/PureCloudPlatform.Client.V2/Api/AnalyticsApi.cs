@@ -2091,9 +2091,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
+        /// <param name="groupBy">Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional)</param>
         /// <returns>AnalyticsAgentStateCountsResponse</returns>
         
-        AnalyticsAgentStateCountsResponse PostAnalyticsAgentsStatusCounts (AgentStateCountsRequest body);
+        AnalyticsAgentStateCountsResponse PostAnalyticsAgentsStatusCounts (AgentStateCountsRequest body, List<string> groupBy = null);
 
         /// <summary>
         /// Count agents by different groupings
@@ -2103,9 +2104,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
+        /// <param name="groupBy">Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional)</param>
         /// <returns>ApiResponse of AnalyticsAgentStateCountsResponse</returns>
         
-        ApiResponse<AnalyticsAgentStateCountsResponse> PostAnalyticsAgentsStatusCountsWithHttpInfo (AgentStateCountsRequest body);
+        ApiResponse<AnalyticsAgentStateCountsResponse> PostAnalyticsAgentsStatusCountsWithHttpInfo (AgentStateCountsRequest body, List<string> groupBy = null);
 
         /// <summary>
         /// Retrieve the top 50 agents matching the query filters
@@ -5417,9 +5419,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
+        /// <param name="groupBy">Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional)</param>
         /// <returns>Task of AnalyticsAgentStateCountsResponse</returns>
         
-        System.Threading.Tasks.Task<AnalyticsAgentStateCountsResponse> PostAnalyticsAgentsStatusCountsAsync (AgentStateCountsRequest body);
+        System.Threading.Tasks.Task<AnalyticsAgentStateCountsResponse> PostAnalyticsAgentsStatusCountsAsync (AgentStateCountsRequest body, List<string> groupBy = null);
 
         /// <summary>
         /// Count agents by different groupings
@@ -5429,9 +5432,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
+        /// <param name="groupBy">Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional)</param>
         /// <returns>Task of ApiResponse (AnalyticsAgentStateCountsResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AnalyticsAgentStateCountsResponse>> PostAnalyticsAgentsStatusCountsAsyncWithHttpInfo (AgentStateCountsRequest body);
+        System.Threading.Tasks.Task<ApiResponse<AnalyticsAgentStateCountsResponse>> PostAnalyticsAgentsStatusCountsAsyncWithHttpInfo (AgentStateCountsRequest body, List<string> groupBy = null);
 
         /// <summary>
         /// Retrieve the top 50 agents matching the query filters
@@ -22750,11 +22754,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
+        /// <param name="groupBy">Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional)</param>
         /// <returns>AnalyticsAgentStateCountsResponse</returns>
         
-        public AnalyticsAgentStateCountsResponse PostAnalyticsAgentsStatusCounts (AgentStateCountsRequest body)
+        public AnalyticsAgentStateCountsResponse PostAnalyticsAgentsStatusCounts (AgentStateCountsRequest body, List<string> groupBy = null)
         {
-             ApiResponse<AnalyticsAgentStateCountsResponse> localVarResponse = PostAnalyticsAgentsStatusCountsWithHttpInfo(body);
+             ApiResponse<AnalyticsAgentStateCountsResponse> localVarResponse = PostAnalyticsAgentsStatusCountsWithHttpInfo(body, groupBy);
              return localVarResponse.Data;
         }
 
@@ -22764,9 +22769,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
+        /// <param name="groupBy">Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional)</param>
         /// <returns>ApiResponse of AnalyticsAgentStateCountsResponse</returns>
         
-        public ApiResponse< AnalyticsAgentStateCountsResponse > PostAnalyticsAgentsStatusCountsWithHttpInfo (AgentStateCountsRequest body)
+        public ApiResponse< AnalyticsAgentStateCountsResponse > PostAnalyticsAgentsStatusCountsWithHttpInfo (AgentStateCountsRequest body, List<string> groupBy = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -22806,6 +22812,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (groupBy != null) groupBy.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("groupBy", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -22854,11 +22861,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
+        /// <param name="groupBy">Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional)</param>
         /// <returns>Task of AnalyticsAgentStateCountsResponse</returns>
         
-        public async System.Threading.Tasks.Task<AnalyticsAgentStateCountsResponse> PostAnalyticsAgentsStatusCountsAsync (AgentStateCountsRequest body)
+        public async System.Threading.Tasks.Task<AnalyticsAgentStateCountsResponse> PostAnalyticsAgentsStatusCountsAsync (AgentStateCountsRequest body, List<string> groupBy = null)
         {
-             ApiResponse<AnalyticsAgentStateCountsResponse> localVarResponse = await PostAnalyticsAgentsStatusCountsAsyncWithHttpInfo(body);
+             ApiResponse<AnalyticsAgentStateCountsResponse> localVarResponse = await PostAnalyticsAgentsStatusCountsAsyncWithHttpInfo(body, groupBy);
              return localVarResponse.Data;
 
         }
@@ -22869,9 +22877,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">query</param>
+        /// <param name="groupBy">Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional)</param>
         /// <returns>Task of ApiResponse (AnalyticsAgentStateCountsResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsAgentStateCountsResponse>> PostAnalyticsAgentsStatusCountsAsyncWithHttpInfo (AgentStateCountsRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<AnalyticsAgentStateCountsResponse>> PostAnalyticsAgentsStatusCountsAsyncWithHttpInfo (AgentStateCountsRequest body, List<string> groupBy = null)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -22912,6 +22921,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (groupBy != null) groupBy.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("groupBy", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 

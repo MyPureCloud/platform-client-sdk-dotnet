@@ -25,7 +25,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RowAuthoringSchema">JSON schema describing required value types for each column in every row in a decision table.</param>
         /// <param name="ExecutionInputSchema">JSON schema for execution input data for a decision table.</param>
         /// <param name="ExecutionOutputSchema">JSON schema for execution output data for a decision table.</param>
-        public DecisionTableContract(DomainEntityRef ParentSchema = null, ContractJsonSchema RowAuthoringSchema = null, ContractJsonSchema ExecutionInputSchema = null, ContractJsonSchema ExecutionOutputSchema = null)
+        public DecisionTableContract(DomainEntityRef ParentSchema = null, JsonSchemaDocument RowAuthoringSchema = null, JsonSchemaDocument ExecutionInputSchema = null, JsonSchemaDocument ExecutionOutputSchema = null)
         {
             this.ParentSchema = ParentSchema;
             this.RowAuthoringSchema = RowAuthoringSchema;
@@ -50,7 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>JSON schema describing required value types for each column in every row in a decision table</value>
         [DataMember(Name="rowAuthoringSchema", EmitDefaultValue=false)]
-        public ContractJsonSchema RowAuthoringSchema { get; set; }
+        public JsonSchemaDocument RowAuthoringSchema { get; set; }
 
 
 
@@ -59,7 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>JSON schema for execution input data for a decision table</value>
         [DataMember(Name="executionInputSchema", EmitDefaultValue=false)]
-        public ContractJsonSchema ExecutionInputSchema { get; set; }
+        public JsonSchemaDocument ExecutionInputSchema { get; set; }
 
 
 
@@ -68,7 +68,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>JSON schema for execution output data for a decision table</value>
         [DataMember(Name="executionOutputSchema", EmitDefaultValue=false)]
-        public ContractJsonSchema ExecutionOutputSchema { get; set; }
+        public JsonSchemaDocument ExecutionOutputSchema { get; set; }
 
 
         /// <summary>

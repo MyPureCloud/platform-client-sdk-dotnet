@@ -345,7 +345,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **types** | [**List<string>**](string)| The types of the rule | <br />**Values**: Learning |
+| **types** | [**List<string>**](string)| The types of the rule | <br />**Values**: Learning, ActivityPlan |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Number of results per page | [optional] [default to 25] |
 | **expand** | [**List<string>**](string)| Fields to expand in response | [optional] <br />**Values**: criteria |
@@ -414,7 +414,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **ruleType** | **string**| The type of the rule | <br />**Values**: Learning |
+| **ruleType** | **string**| The type of the rule | <br />**Values**: Learning, ActivityPlan |
 
 ### Return type
 
@@ -625,4 +625,4 @@ namespace Example
 [**UsersRulesQueryResponse**](UsersRulesQueryResponse)
 
 
-_PureCloudPlatform.Client.V2 252.1.0_
+_PureCloudPlatform.Client.V2 253.0.0_

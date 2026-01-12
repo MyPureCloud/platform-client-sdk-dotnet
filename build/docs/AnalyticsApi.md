@@ -5116,7 +5116,7 @@ namespace Example
 
 ## PostAnalyticsAgentsStatusCounts
 
-> [**AnalyticsAgentStateCountsResponse**](AnalyticsAgentStateCountsResponse) PostAnalyticsAgentsStatusCounts (AgentStateCountsRequest body)
+> [**AnalyticsAgentStateCountsResponse**](AnalyticsAgentStateCountsResponse) PostAnalyticsAgentsStatusCounts (AgentStateCountsRequest body, List<string> groupBy = null)
 
 
 Count agents by different groupings
@@ -5148,11 +5148,12 @@ namespace Example
 
             var apiInstance = new AnalyticsApi();
             var body = new AgentStateCountsRequest(); // AgentStateCountsRequest | query
+            var groupBy = new List<string>(); // List<string> | Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType (optional) 
 
             try
             { 
                 // Count agents by different groupings
-                AnalyticsAgentStateCountsResponse result = apiInstance.PostAnalyticsAgentsStatusCounts(body);
+                AnalyticsAgentStateCountsResponse result = apiInstance.PostAnalyticsAgentsStatusCounts(body, groupBy);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5170,6 +5171,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**AgentStateCountsRequest**](AgentStateCountsRequest)| query |  |
+| **groupBy** | [**List<string>**](string)| Include to choose which groupings to count by and return. If not included it will return only counts grouped by segmentType | [optional] <br />**Values**: segmentType, presence, routingStatus, isOutOfOffice |
 
 ### Return type
 
@@ -8273,4 +8275,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 252.1.0_
+_PureCloudPlatform.Client.V2 253.0.0_

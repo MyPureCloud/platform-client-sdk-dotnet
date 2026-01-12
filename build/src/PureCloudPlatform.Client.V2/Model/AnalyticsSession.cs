@@ -704,6 +704,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SessionId">The unique identifier of this session.</param>
         /// <param name="SharingScreen">Flag determining if screen share is started or not (true/false).</param>
         /// <param name="SkipEnabled">(Dialer) Whether the agent can skip the dialer contact.</param>
+        /// <param name="SnippetRecording">Whether or not the conversation included a snippet being recorded..</param>
         /// <param name="TimeoutSeconds">The number of seconds before Genesys Cloud begins the call for a call back (0 disables automatic calling).</param>
         /// <param name="UsedRouting">Complete routing method.</param>
         /// <param name="VideoAddressSelf">Direct Video address.</param>
@@ -715,7 +716,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Flow">IVR flow execution associated with this session.</param>
         /// <param name="Metrics">List of metrics for this session.</param>
         /// <param name="Segments">List of segments for this session.</param>
-        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string BargedParticipantId = null, List<string> Bcc = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, List<string> Cc = null, bool? Cleared = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, bool? DeliveryPushed = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DateTime? DetectedSpeechEnd = null, DateTime? DetectedSpeechStart = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, EngagementSourceEnum? EngagementSource = null, string ExtendedDeliveryStatus = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string ScreenMonitoredUserId = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsAgentGroup> AgentGroups = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
+        public AnalyticsSession(List<string> ActiveSkillIds = null, bool? AcwSkipped = null, string AddressFrom = null, string AddressOther = null, string AddressSelf = null, string AddressTo = null, string AgentAssistantId = null, int? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string BargedParticipantId = null, List<string> Bcc = null, List<string> CallbackNumbers = null, DateTime? CallbackScheduledTime = null, string CallbackUserName = null, List<string> Cc = null, bool? Cleared = null, string CoachedParticipantId = null, string CobrowseRole = null, string CobrowseRoomId = null, bool? DeliveryPushed = null, DeliveryStatusEnum? DeliveryStatus = null, DateTime? DeliveryStatusChangeDate = null, List<string> DestinationAddresses = null, DateTime? DetectedSpeechEnd = null, DateTime? DetectedSpeechStart = null, DirectionEnum? Direction = null, string DispositionAnalyzer = null, string DispositionName = null, string Dnis = null, string EdgeId = null, List<int?> EligibleAgentCounts = null, EngagementSourceEnum? EngagementSource = null, string ExtendedDeliveryStatus = null, string FlowInType = null, string FlowOutType = null, string JourneyActionId = null, string JourneyActionMapId = null, int? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string MediaBridgeId = null, int? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, string MonitoredParticipantId = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string PeerId = null, string ProtocolCallId = null, string Provider = null, bool? Recording = null, string Remote = null, string RemoteNameDisplayable = null, List<string> RemovedSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, int? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string ScreenMonitoredUserId = null, string ScreenShareAddressSelf = null, string ScreenShareRoomId = null, string ScriptId = null, string SelectedAgentId = null, int? SelectedAgentRank = null, string SessionDnis = null, string SessionId = null, bool? SharingScreen = null, bool? SkipEnabled = null, bool? SnippetRecording = null, int? TimeoutSeconds = null, UsedRoutingEnum? UsedRouting = null, string VideoAddressSelf = null, string VideoRoomId = null, List<int?> WaitingInteractionCounts = null, List<AnalyticsAgentGroup> AgentGroups = null, List<AnalyticsProposedAgent> ProposedAgents = null, List<AnalyticsMediaEndpointStat> MediaEndpointStats = null, AnalyticsFlow Flow = null, List<AnalyticsSessionMetric> Metrics = null, List<AnalyticsConversationSegment> Segments = null)
         {
             this.ActiveSkillIds = ActiveSkillIds;
             this.AcwSkipped = AcwSkipped;
@@ -792,6 +793,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SessionId = SessionId;
             this.SharingScreen = SharingScreen;
             this.SkipEnabled = SkipEnabled;
+            this.SnippetRecording = SnippetRecording;
             this.TimeoutSeconds = TimeoutSeconds;
             this.UsedRouting = UsedRouting;
             this.VideoAddressSelf = VideoAddressSelf;
@@ -1449,6 +1451,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether or not the conversation included a snippet being recorded.
+        /// </summary>
+        /// <value>Whether or not the conversation included a snippet being recorded.</value>
+        [DataMember(Name="snippetRecording", EmitDefaultValue=false)]
+        public bool? SnippetRecording { get; set; }
+
+
+
+        /// <summary>
         /// The number of seconds before Genesys Cloud begins the call for a call back (0 disables automatic calling)
         /// </summary>
         /// <value>The number of seconds before Genesys Cloud begins the call for a call back (0 disables automatic calling)</value>
@@ -1623,6 +1634,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
             sb.Append("  SharingScreen: ").Append(SharingScreen).Append("\n");
             sb.Append("  SkipEnabled: ").Append(SkipEnabled).Append("\n");
+            sb.Append("  SnippetRecording: ").Append(SnippetRecording).Append("\n");
             sb.Append("  TimeoutSeconds: ").Append(TimeoutSeconds).Append("\n");
             sb.Append("  UsedRouting: ").Append(UsedRouting).Append("\n");
             sb.Append("  VideoAddressSelf: ").Append(VideoAddressSelf).Append("\n");
@@ -2050,6 +2062,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkipEnabled.Equals(other.SkipEnabled)
                 ) &&
                 (
+                    this.SnippetRecording == other.SnippetRecording ||
+                    this.SnippetRecording != null &&
+                    this.SnippetRecording.Equals(other.SnippetRecording)
+                ) &&
+                (
                     this.TimeoutSeconds == other.TimeoutSeconds ||
                     this.TimeoutSeconds != null &&
                     this.TimeoutSeconds.Equals(other.TimeoutSeconds)
@@ -2341,6 +2358,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SkipEnabled != null)
                     hash = hash * 59 + this.SkipEnabled.GetHashCode();
+
+                if (this.SnippetRecording != null)
+                    hash = hash * 59 + this.SnippetRecording.GetHashCode();
 
                 if (this.TimeoutSeconds != null)
                     hash = hash * 59 + this.TimeoutSeconds.GetHashCode();

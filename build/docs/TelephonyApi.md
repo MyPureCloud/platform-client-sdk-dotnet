@@ -26,8 +26,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Get an agent's greetings.
 
-GetTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * telephony:otherAgentGreeting:view
@@ -89,8 +87,6 @@ namespace Example
 
 
 Get the agent's own greetings.
-
-GetTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -534,8 +530,6 @@ namespace Example
 
 Updates an agent's greetings.
 
-PutTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * telephony:otherAgentGreeting:edit
@@ -600,8 +594,6 @@ namespace Example
 
 Updates the agent's own greetings.
 
-PutTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * telephony:selfAgentGreeting:edit
@@ -657,4 +649,4 @@ namespace Example
 [**SelfAgentGreeting**](SelfAgentGreeting)
 
 
-_PureCloudPlatform.Client.V2 252.1.0_
+_PureCloudPlatform.Client.V2 253.0.0_

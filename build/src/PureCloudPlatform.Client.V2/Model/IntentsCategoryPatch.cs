@@ -13,31 +13,32 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ContractDefinition
+    /// IntentsCategoryPatch
     /// </summary>
     [DataContract]
-    public partial class ContractDefinition :  IEquatable<ContractDefinition>
+    public partial class IntentsCategoryPatch :  IEquatable<IntentsCategoryPatch>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ContractDefinition" /> class.
+        /// Initializes a new instance of the <see cref="IntentsCategoryPatch" /> class.
         /// </summary>
         /// <param name="Name">Name.</param>
-        /// <param name="Title">Title.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="Type">Type.</param>
-        /// <param name="Pattern">Pattern.</param>
-        /// <param name="Items">Items.</param>
-        public ContractDefinition(string Name = null, string Title = null, string Description = null, List<string> Type = null, string Pattern = null, ContractItems Items = null)
+        /// <param name="Description">Description of the category.</param>
+        public IntentsCategoryPatch(string Name = null, string Description = null)
         {
             this.Name = Name;
-            this.Title = Title;
             this.Description = Description;
-            this.Type = Type;
-            this.Pattern = Pattern;
-            this.Items = Items;
             
         }
         
+
+
+        /// <summary>
+        /// The globally unique identifier for the object.
+        /// </summary>
+        /// <value>The globally unique identifier for the object.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; private set; }
+
 
 
         /// <summary>
@@ -49,42 +50,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Title
+        /// Description of the category
         /// </summary>
-        [DataMember(Name="title", EmitDefaultValue=false)]
-        public string Title { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Description
-        /// </summary>
+        /// <value>Description of the category</value>
         [DataMember(Name="description", EmitDefaultValue=false)]
         public string Description { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Type
-        /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public List<string> Type { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Pattern
-        /// </summary>
-        [DataMember(Name="pattern", EmitDefaultValue=false)]
-        public string Pattern { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Items
-        /// </summary>
-        [DataMember(Name="items", EmitDefaultValue=false)]
-        public ContractItems Items { get; set; }
 
 
 
@@ -103,14 +73,11 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ContractDefinition {\n");
+            sb.Append("class IntentsCategoryPatch {\n");
 
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
-            sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Pattern: ").Append(Pattern).Append("\n");
-            sb.Append("  Items: ").Append(Items).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -137,15 +104,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ContractDefinition);
+            return this.Equals(obj as IntentsCategoryPatch);
         }
 
         /// <summary>
-        /// Returns true if ContractDefinition instances are equal
+        /// Returns true if IntentsCategoryPatch instances are equal
         /// </summary>
-        /// <param name="other">Instance of ContractDefinition to be compared</param>
+        /// <param name="other">Instance of IntentsCategoryPatch to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ContractDefinition other)
+        public bool Equals(IntentsCategoryPatch other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -153,34 +120,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Name == other.Name ||
                     this.Name != null &&
                     this.Name.Equals(other.Name)
                 ) &&
                 (
-                    this.Title == other.Title ||
-                    this.Title != null &&
-                    this.Title.Equals(other.Title)
-                ) &&
-                (
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) &&
-                (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.SequenceEqual(other.Type)
-                ) &&
-                (
-                    this.Pattern == other.Pattern ||
-                    this.Pattern != null &&
-                    this.Pattern.Equals(other.Pattern)
-                ) &&
-                (
-                    this.Items == other.Items ||
-                    this.Items != null &&
-                    this.Items.Equals(other.Items)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -200,23 +152,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
 
-                if (this.Title != null)
-                    hash = hash * 59 + this.Title.GetHashCode();
-
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
-
-                if (this.Pattern != null)
-                    hash = hash * 59 + this.Pattern.GetHashCode();
-
-                if (this.Items != null)
-                    hash = hash * 59 + this.Items.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

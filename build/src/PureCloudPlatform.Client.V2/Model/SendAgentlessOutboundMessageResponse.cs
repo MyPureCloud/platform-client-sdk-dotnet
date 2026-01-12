@@ -169,20 +169,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-
-
-
-        /// <summary>
         /// Details of the user created the job
         /// </summary>
         /// <value>Details of the user created the job</value>
         [DataMember(Name="user", EmitDefaultValue=false)]
         public AddressableEntityRef User { get; private set; }
+
+
+
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
 
 
         /// <summary>
@@ -204,8 +204,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UseExistingActiveConversation: ").Append(UseExistingActiveConversation).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  User: ").Append(User).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -297,14 +297,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Timestamp.Equals(other.Timestamp)
                 ) &&
                 (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
                     this.User == other.User ||
                     this.User != null &&
                     this.User.Equals(other.User)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -349,11 +349,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Timestamp != null)
                     hash = hash * 59 + this.Timestamp.GetHashCode();
 
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
-
                 if (this.User != null)
                     hash = hash * 59 + this.User.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

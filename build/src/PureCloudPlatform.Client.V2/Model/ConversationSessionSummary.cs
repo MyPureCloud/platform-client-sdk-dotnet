@@ -135,7 +135,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationSessionSummary" /> class.
         /// </summary>
+        /// <param name="Id">The id of the summary..</param>
         /// <param name="Text">The text of the summary..</param>
+        /// <param name="Confidence">The AI confidence value..</param>
         /// <param name="Status">The status of the conversation summary..</param>
         /// <param name="MediaType">The media type of the conversation..</param>
         /// <param name="Language">The language of the conversation..</param>
@@ -145,10 +147,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Followup">The followup of the conversation summary..</param>
         /// <param name="Resolution">The resolution of the conversation summary..</param>
         /// <param name="DateCreated">The created date of the summary. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="Communication">The communication object of the summary..</param>
         /// <param name="Participants">The list of participants..</param>
-        public ConversationSessionSummary(string Text = null, StatusEnum? Status = null, MediaTypeEnum? MediaType = null, string Language = null, List<ConversationSummaryWrapupCode> PredictedWrapupCodes = null, ConversationEditedInput EditedSummary = null, ConversationSummaryReason Reason = null, ConversationSummaryFollowup Followup = null, ConversationSummaryResolution Resolution = null, DateTime? DateCreated = null, List<AddressableEntityRef> Participants = null)
+        public ConversationSessionSummary(string Id = null, string Text = null, float? Confidence = null, StatusEnum? Status = null, MediaTypeEnum? MediaType = null, string Language = null, List<ConversationSummaryWrapupCode> PredictedWrapupCodes = null, ConversationEditedInput EditedSummary = null, ConversationSummaryReason Reason = null, ConversationSummaryFollowup Followup = null, ConversationSummaryResolution Resolution = null, DateTime? DateCreated = null, Entity Communication = null, List<AddressableEntityRef> Participants = null)
         {
+            this.Id = Id;
             this.Text = Text;
+            this.Confidence = Confidence;
             this.Status = Status;
             this.MediaType = MediaType;
             this.Language = Language;
@@ -158,10 +163,20 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Followup = Followup;
             this.Resolution = Resolution;
             this.DateCreated = DateCreated;
+            this.Communication = Communication;
             this.Participants = Participants;
             
         }
         
+
+
+        /// <summary>
+        /// The id of the summary.
+        /// </summary>
+        /// <value>The id of the summary.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+
 
 
         /// <summary>
@@ -170,6 +185,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The text of the summary.</value>
         [DataMember(Name="text", EmitDefaultValue=false)]
         public string Text { get; set; }
+
+
+
+        /// <summary>
+        /// The AI confidence value.
+        /// </summary>
+        /// <value>The AI confidence value.</value>
+        [DataMember(Name="confidence", EmitDefaultValue=false)]
+        public float? Confidence { get; set; }
 
 
 
@@ -241,20 +265,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The id of the summary.
+        /// The communication object of the summary.
         /// </summary>
-        /// <value>The id of the summary.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-
-
-
-        /// <summary>
-        /// The AI confidence value.
-        /// </summary>
-        /// <value>The AI confidence value.</value>
-        [DataMember(Name="confidence", EmitDefaultValue=false)]
-        public float? Confidence { get; private set; }
+        /// <value>The communication object of the summary.</value>
+        [DataMember(Name="communication", EmitDefaultValue=false)]
+        public Entity Communication { get; set; }
 
 
 
@@ -266,15 +281,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AddressableEntityRef> Participants { get; set; }
 
 
-
-        /// <summary>
-        /// The communication object of the summary.
-        /// </summary>
-        /// <value>The communication object of the summary.</value>
-        [DataMember(Name="communication", EmitDefaultValue=false)]
-        public Entity Communication { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -284,7 +290,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ConversationSessionSummary {\n");
 
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
+            sb.Append("  Confidence: ").Append(Confidence).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
@@ -294,10 +302,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Followup: ").Append(Followup).Append("\n");
             sb.Append("  Resolution: ").Append(Resolution).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
-            sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Confidence: ").Append(Confidence).Append("\n");
-            sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("  Communication: ").Append(Communication).Append("\n");
+            sb.Append("  Participants: ").Append(Participants).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -339,9 +345,19 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Text == other.Text ||
                     this.Text != null &&
                     this.Text.Equals(other.Text)
+                ) &&
+                (
+                    this.Confidence == other.Confidence ||
+                    this.Confidence != null &&
+                    this.Confidence.Equals(other.Confidence)
                 ) &&
                 (
                     this.Status == other.Status ||
@@ -389,24 +405,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCreated.Equals(other.DateCreated)
                 ) &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
-                    this.Confidence == other.Confidence ||
-                    this.Confidence != null &&
-                    this.Confidence.Equals(other.Confidence)
+                    this.Communication == other.Communication ||
+                    this.Communication != null &&
+                    this.Communication.Equals(other.Communication)
                 ) &&
                 (
                     this.Participants == other.Participants ||
                     this.Participants != null &&
                     this.Participants.SequenceEqual(other.Participants)
-                ) &&
-                (
-                    this.Communication == other.Communication ||
-                    this.Communication != null &&
-                    this.Communication.Equals(other.Communication)
                 );
         }
 
@@ -421,8 +427,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
+
+                if (this.Confidence != null)
+                    hash = hash * 59 + this.Confidence.GetHashCode();
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
@@ -451,17 +463,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();
 
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-
-                if (this.Confidence != null)
-                    hash = hash * 59 + this.Confidence.GetHashCode();
+                if (this.Communication != null)
+                    hash = hash * 59 + this.Communication.GetHashCode();
 
                 if (this.Participants != null)
                     hash = hash * 59 + this.Participants.GetHashCode();
-
-                if (this.Communication != null)
-                    hash = hash * 59 + this.Communication.GetHashCode();
 
                 return hash;
             }

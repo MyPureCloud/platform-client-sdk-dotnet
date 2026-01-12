@@ -370,6 +370,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Tscreenmonitoring,
             
             /// <summary>
+            /// Enum Tsnippetrecord for "tSnippetRecord"
+            /// </summary>
+            [EnumMember(Value = "tSnippetRecord")]
+            Tsnippetrecord,
+            
+            /// <summary>
             /// Enum Ttalk for "tTalk"
             /// </summary>
             [EnumMember(Value = "tTalk")]

@@ -13,38 +13,35 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ContractItems
+    /// ManagementUnitAvailabilitySettingsResponse
     /// </summary>
     [DataContract]
-    public partial class ContractItems :  IEquatable<ContractItems>
+    public partial class ManagementUnitAvailabilitySettingsResponse :  IEquatable<ManagementUnitAvailabilitySettingsResponse>
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="ContractItems" /> class.
+        /// Initializes a new instance of the <see cref="ManagementUnitAvailabilitySettingsResponse" /> class.
         /// </summary>
-        /// <param name="Type">Type.</param>
-        /// <param name="Pattern">Pattern.</param>
-        public ContractItems(List<string> Type = null, string Pattern = null)
+        [JsonConstructorAttribute]
+        protected ManagementUnitAvailabilitySettingsResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ManagementUnitAvailabilitySettingsResponse" /> class.
+        /// </summary>
+        /// <param name="Enabled">Indicates whether agent availability is enabled for the management unit (required).</param>
+        public ManagementUnitAvailabilitySettingsResponse(bool? Enabled = null)
         {
-            this.Type = Type;
-            this.Pattern = Pattern;
+            this.Enabled = Enabled;
             
         }
         
 
 
         /// <summary>
-        /// Gets or Sets Type
+        /// Indicates whether agent availability is enabled for the management unit
         /// </summary>
-        [DataMember(Name="type", EmitDefaultValue=false)]
-        public List<string> Type { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Pattern
-        /// </summary>
-        [DataMember(Name="pattern", EmitDefaultValue=false)]
-        public string Pattern { get; set; }
+        /// <value>Indicates whether agent availability is enabled for the management unit</value>
+        [DataMember(Name="enabled", EmitDefaultValue=false)]
+        public bool? Enabled { get; set; }
 
 
         /// <summary>
@@ -54,10 +51,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ContractItems {\n");
+            sb.Append("class ManagementUnitAvailabilitySettingsResponse {\n");
 
-            sb.Append("  Type: ").Append(Type).Append("\n");
-            sb.Append("  Pattern: ").Append(Pattern).Append("\n");
+            sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -83,15 +79,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ContractItems);
+            return this.Equals(obj as ManagementUnitAvailabilitySettingsResponse);
         }
 
         /// <summary>
-        /// Returns true if ContractItems instances are equal
+        /// Returns true if ManagementUnitAvailabilitySettingsResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of ContractItems to be compared</param>
+        /// <param name="other">Instance of ManagementUnitAvailabilitySettingsResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ContractItems other)
+        public bool Equals(ManagementUnitAvailabilitySettingsResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -99,14 +95,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Type == other.Type ||
-                    this.Type != null &&
-                    this.Type.SequenceEqual(other.Type)
-                ) &&
-                (
-                    this.Pattern == other.Pattern ||
-                    this.Pattern != null &&
-                    this.Pattern.Equals(other.Pattern)
+                    this.Enabled == other.Enabled ||
+                    this.Enabled != null &&
+                    this.Enabled.Equals(other.Enabled)
                 );
         }
 
@@ -121,11 +112,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Type != null)
-                    hash = hash * 59 + this.Type.GetHashCode();
-
-                if (this.Pattern != null)
-                    hash = hash * 59 + this.Pattern.GetHashCode();
+                if (this.Enabled != null)
+                    hash = hash * 59 + this.Enabled.GetHashCode();
 
                 return hash;
             }

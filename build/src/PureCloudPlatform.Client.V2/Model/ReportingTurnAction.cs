@@ -483,6 +483,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sendinteractiveapplicationaction,
             
             /// <summary>
+            /// Enum Sendrichlinkaction for "SendRichLinkAction"
+            /// </summary>
+            [EnumMember(Value = "SendRichLinkAction")]
+            Sendrichlinkaction,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

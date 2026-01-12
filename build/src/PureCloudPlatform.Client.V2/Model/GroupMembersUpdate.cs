@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="GroupMembersUpdate" /> class.
         /// </summary>
         /// <param name="MemberIds">A list of the ids of the members to add. A maximum of 50 members are allowed per request. (required).</param>
-        /// <param name="Version">The current group version. (required).</param>
+        /// <param name="Version">The current group version..</param>
         public GroupMembersUpdate(List<string> MemberIds = null, int? Version = null)
         {
             this.MemberIds = MemberIds;

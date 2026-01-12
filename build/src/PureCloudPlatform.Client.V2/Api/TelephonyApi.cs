@@ -20,7 +20,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -33,7 +32,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -46,7 +44,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SelfAgentGreeting</returns>
@@ -58,7 +55,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SelfAgentGreeting</returns>
@@ -224,7 +220,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -238,7 +233,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -252,7 +246,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Agent Greeting</param>
@@ -265,7 +258,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Agent Greeting</param>
@@ -282,7 +274,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -295,7 +286,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -308,7 +298,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SelfAgentGreeting</returns>
@@ -320,7 +309,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SelfAgentGreeting)</returns>
@@ -486,7 +474,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -500,7 +487,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -514,7 +500,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Agent Greeting</param>
@@ -527,7 +512,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Agent Greeting</param>
@@ -630,7 +614,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an agent&#39;s greetings. 
         /// 
-        /// GetTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -645,7 +628,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an agent&#39;s greetings. 
         /// 
-        /// GetTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -731,7 +713,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an agent&#39;s greetings. 
         /// 
-        /// GetTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -747,7 +728,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get an agent&#39;s greetings. 
         /// 
-        /// GetTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -835,7 +815,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the agent&#39;s own greetings. 
         /// 
-        /// GetTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SelfAgentGreeting</returns>
@@ -849,7 +828,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the agent&#39;s own greetings. 
         /// 
-        /// GetTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SelfAgentGreeting</returns>
@@ -930,7 +908,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the agent&#39;s own greetings. 
         /// 
-        /// GetTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SelfAgentGreeting</returns>
@@ -945,7 +922,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the agent&#39;s own greetings. 
         /// 
-        /// GetTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SelfAgentGreeting)</returns>
@@ -2273,7 +2249,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates an agent&#39;s greetings. 
         /// 
-        /// PutTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -2289,7 +2264,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates an agent&#39;s greetings. 
         /// 
-        /// PutTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -2385,7 +2359,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates an agent&#39;s greetings. 
         /// 
-        /// PutTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -2402,7 +2375,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates an agent&#39;s greetings. 
         /// 
-        /// PutTelephonyAgentGreetings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="agentId">User ID</param>
@@ -2501,7 +2473,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates the agent&#39;s own greetings. 
         /// 
-        /// PutTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Agent Greeting</param>
@@ -2516,7 +2487,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates the agent&#39;s own greetings. 
         /// 
-        /// PutTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Agent Greeting</param>
@@ -2607,7 +2577,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates the agent&#39;s own greetings. 
         /// 
-        /// PutTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Agent Greeting</param>
@@ -2623,7 +2592,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Updates the agent&#39;s own greetings. 
         /// 
-        /// PutTelephonyAgentsGreetingsMe is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Agent Greeting</param>

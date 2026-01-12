@@ -194,6 +194,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteQualityFormsSurveyWithHttpInfo (string formId);
 
         /// <summary>
+        /// Delete an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns></returns>
+        
+        void DeleteQualityProgramAgentscoringrule (string programId, string ruleId);
+
+        /// <summary>
+        /// Delete an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteQualityProgramAgentscoringruleWithHttpInfo (string programId, string ruleId);
+
+        /// <summary>
         /// Get status for async query for evaluation aggregates
         /// </summary>
         /// <remarks>
@@ -671,9 +697,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        EvaluationFormResponseEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null);
+        EvaluationFormResponseEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -685,9 +712,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
+        ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form.
@@ -982,6 +1010,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of List&lt;SurveyForm&gt;</returns>
         
         ApiResponse<List<SurveyForm>> GetQualityFormsSurveysBulkContextsWithHttpInfo (List<string> contextId, bool? published = null);
+
+        /// <summary>
+        /// Get an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>AgentScoringRule</returns>
+        
+        AgentScoringRule GetQualityProgramAgentscoringrule (string programId, string ruleId);
+
+        /// <summary>
+        /// Get an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>ApiResponse of AgentScoringRule</returns>
+        
+        ApiResponse<AgentScoringRule> GetQualityProgramAgentscoringruleWithHttpInfo (string programId, string ruleId);
+
+        /// <summary>
+        /// Get Agent Scoring Rules for a program
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <returns>AgentScoringRuleEntityListing</returns>
+        
+        AgentScoringRuleEntityListing GetQualityProgramAgentscoringrules (string programId);
+
+        /// <summary>
+        /// Get Agent Scoring Rules for a program
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <returns>ApiResponse of AgentScoringRuleEntityListing</returns>
+        
+        ApiResponse<AgentScoringRuleEntityListing> GetQualityProgramAgentscoringrulesWithHttpInfo (string programId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -1518,6 +1596,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SurveyForm> PostQualityFormsSurveysWithHttpInfo (SurveyForm body);
 
         /// <summary>
+        /// Create an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// Creates a new Agent Scoring Rule for AI-powered automated evaluation of agent interactions. The rule defines how interactions should be selected and evaluated using the specified evaluation form.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>AgentScoringRule</returns>
+        
+        AgentScoringRule PostQualityProgramAgentscoringrules (string programId, AgentScoringRule body);
+
+        /// <summary>
+        /// Create an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// Creates a new Agent Scoring Rule for AI-powered automated evaluation of agent interactions. The rule defines how interactions should be selected and evaluated using the specified evaluation form.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>ApiResponse of AgentScoringRule</returns>
+        
+        ApiResponse<AgentScoringRule> PostQualityProgramAgentscoringrulesWithHttpInfo (string programId, AgentScoringRule body);
+
+        /// <summary>
         /// Publish an evaluation form.
         /// </summary>
         /// <remarks>
@@ -1774,6 +1878,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SurveyForm> PutQualityFormsSurveyWithHttpInfo (string formId, SurveyForm body);
 
         /// <summary>
+        /// Update an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>AgentScoringRule</returns>
+        
+        AgentScoringRule PutQualityProgramAgentscoringrule (string programId, string ruleId, AgentScoringRule body);
+
+        /// <summary>
+        /// Update an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>ApiResponse of AgentScoringRule</returns>
+        
+        ApiResponse<AgentScoringRule> PutQualityProgramAgentscoringruleWithHttpInfo (string programId, string ruleId, AgentScoringRule body);
+
+        /// <summary>
         /// Update a survey as an end-customer, for the purposes of scoring it.
         /// </summary>
         /// <remarks>
@@ -1980,6 +2112,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteQualityFormsSurveyAsyncWithHttpInfo (string formId);
+
+        /// <summary>
+        /// Delete an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteQualityProgramAgentscoringruleAsync (string programId, string ruleId);
+
+        /// <summary>
+        /// Delete an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteQualityProgramAgentscoringruleAsyncWithHttpInfo (string programId, string ruleId);
 
         /// <summary>
         /// Get status for async query for evaluation aggregates
@@ -2459,9 +2617,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Gets all the revisions for a specific evaluation.
@@ -2473,9 +2632,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         [Obsolete]
-        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null);
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of evaluation forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding evaluation form.
@@ -2770,6 +2930,56 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (List&lt;SurveyForm&gt;)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<List<SurveyForm>>> GetQualityFormsSurveysBulkContextsAsyncWithHttpInfo (List<string> contextId, bool? published = null);
+
+        /// <summary>
+        /// Get an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>Task of AgentScoringRule</returns>
+        
+        System.Threading.Tasks.Task<AgentScoringRule> GetQualityProgramAgentscoringruleAsync (string programId, string ruleId);
+
+        /// <summary>
+        /// Get an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>Task of ApiResponse (AgentScoringRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AgentScoringRule>> GetQualityProgramAgentscoringruleAsyncWithHttpInfo (string programId, string ruleId);
+
+        /// <summary>
+        /// Get Agent Scoring Rules for a program
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <returns>Task of AgentScoringRuleEntityListing</returns>
+        
+        System.Threading.Tasks.Task<AgentScoringRuleEntityListing> GetQualityProgramAgentscoringrulesAsync (string programId);
+
+        /// <summary>
+        /// Get Agent Scoring Rules for a program
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <returns>Task of ApiResponse (AgentScoringRuleEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AgentScoringRuleEntityListing>> GetQualityProgramAgentscoringrulesAsyncWithHttpInfo (string programId);
 
         /// <summary>
         /// Get the published evaluation forms.
@@ -3306,6 +3516,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SurveyForm>> PostQualityFormsSurveysAsyncWithHttpInfo (SurveyForm body);
 
         /// <summary>
+        /// Create an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// Creates a new Agent Scoring Rule for AI-powered automated evaluation of agent interactions. The rule defines how interactions should be selected and evaluated using the specified evaluation form.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>Task of AgentScoringRule</returns>
+        
+        System.Threading.Tasks.Task<AgentScoringRule> PostQualityProgramAgentscoringrulesAsync (string programId, AgentScoringRule body);
+
+        /// <summary>
+        /// Create an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// Creates a new Agent Scoring Rule for AI-powered automated evaluation of agent interactions. The rule defines how interactions should be selected and evaluated using the specified evaluation form.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>Task of ApiResponse (AgentScoringRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AgentScoringRule>> PostQualityProgramAgentscoringrulesAsyncWithHttpInfo (string programId, AgentScoringRule body);
+
+        /// <summary>
         /// Publish an evaluation form.
         /// </summary>
         /// <remarks>
@@ -3560,6 +3796,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (SurveyForm)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<SurveyForm>> PutQualityFormsSurveyAsyncWithHttpInfo (string formId, SurveyForm body);
+
+        /// <summary>
+        /// Update an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>Task of AgentScoringRule</returns>
+        
+        System.Threading.Tasks.Task<AgentScoringRule> PutQualityProgramAgentscoringruleAsync (string programId, string ruleId, AgentScoringRule body);
+
+        /// <summary>
+        /// Update an Agent Scoring Rule
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>Task of ApiResponse (AgentScoringRule)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AgentScoringRule>> PutQualityProgramAgentscoringruleAsyncWithHttpInfo (string programId, string ruleId, AgentScoringRule body);
 
         /// <summary>
         /// Update a survey as an end-customer, for the purposes of scoring it.
@@ -5106,6 +5370,218 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteQualityFormsSurvey: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteQualityFormsSurvey: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns></returns>
+        
+        public void DeleteQualityProgramAgentscoringrule (string programId, string ruleId)
+        {
+             DeleteQualityProgramAgentscoringruleWithHttpInfo(programId, ruleId);
+        }
+
+        /// <summary>
+        /// Delete an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteQualityProgramAgentscoringruleWithHttpInfo (string programId, string ruleId)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling QualityApi->DeleteQualityProgramAgentscoringrule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling QualityApi->DeleteQualityProgramAgentscoringrule");
+
+            var localVarPath = "/api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQualityProgramAgentscoringrule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQualityProgramAgentscoringrule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteQualityProgramAgentscoringruleAsync (string programId, string ruleId)
+        {
+             await DeleteQualityProgramAgentscoringruleAsyncWithHttpInfo(programId, ruleId);
+
+        }
+
+        /// <summary>
+        /// Delete an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteQualityProgramAgentscoringruleAsyncWithHttpInfo (string programId, string ruleId)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling QualityApi->DeleteQualityProgramAgentscoringrule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling QualityApi->DeleteQualityProgramAgentscoringrule");
+            
+
+            var localVarPath = "/api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQualityProgramAgentscoringrule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteQualityProgramAgentscoringrule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -8312,11 +8788,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public EvaluationFormResponseEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
+        public EvaluationFormResponseEntityListing GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = GetQualityFormVersionsWithHttpInfo(formId, pageSize, pageNumber);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = GetQualityFormVersionsWithHttpInfo(formId, pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -8328,9 +8805,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public ApiResponse< EvaluationFormResponseEntityListing > GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
+        public ApiResponse< EvaluationFormResponseEntityListing > GetQualityFormVersionsWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -8372,6 +8850,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -8417,11 +8896,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of EvaluationFormResponseEntityListing</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormVersionsAsync (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         {
-             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = await GetQualityFormVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber);
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = await GetQualityFormVersionsAsyncWithHttpInfo(formId, pageSize, pageNumber, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -8434,9 +8914,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="formId">Form ID</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="sortOrder">Sort order (optional, default to "asc")</param>
         /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
         [Obsolete]
-        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null)
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormVersionsAsyncWithHttpInfo (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
         { 
             // verify the required parameter 'formId' is set
             if (formId == null)
@@ -8479,6 +8960,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -10662,6 +11144,421 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<List<SurveyForm>>(localVarStatusCode,
                 localVarHeaders,
                 (List<SurveyForm>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<SurveyForm>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>AgentScoringRule</returns>
+        
+        public AgentScoringRule GetQualityProgramAgentscoringrule (string programId, string ruleId)
+        {
+             ApiResponse<AgentScoringRule> localVarResponse = GetQualityProgramAgentscoringruleWithHttpInfo(programId, ruleId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>ApiResponse of AgentScoringRule</returns>
+        
+        public ApiResponse< AgentScoringRule > GetQualityProgramAgentscoringruleWithHttpInfo (string programId, string ruleId)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling QualityApi->GetQualityProgramAgentscoringrule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling QualityApi->GetQualityProgramAgentscoringrule");
+
+            var localVarPath = "/api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityProgramAgentscoringrule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityProgramAgentscoringrule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentScoringRule>(localVarStatusCode,
+                localVarHeaders,
+                (AgentScoringRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentScoringRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>Task of AgentScoringRule</returns>
+        
+        public async System.Threading.Tasks.Task<AgentScoringRule> GetQualityProgramAgentscoringruleAsync (string programId, string ruleId)
+        {
+             ApiResponse<AgentScoringRule> localVarResponse = await GetQualityProgramAgentscoringruleAsyncWithHttpInfo(programId, ruleId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <returns>Task of ApiResponse (AgentScoringRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AgentScoringRule>> GetQualityProgramAgentscoringruleAsyncWithHttpInfo (string programId, string ruleId)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling QualityApi->GetQualityProgramAgentscoringrule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling QualityApi->GetQualityProgramAgentscoringrule");
+            
+
+            var localVarPath = "/api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityProgramAgentscoringrule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityProgramAgentscoringrule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentScoringRule>(localVarStatusCode,
+                localVarHeaders,
+                (AgentScoringRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentScoringRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get Agent Scoring Rules for a program 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <returns>AgentScoringRuleEntityListing</returns>
+        
+        public AgentScoringRuleEntityListing GetQualityProgramAgentscoringrules (string programId)
+        {
+             ApiResponse<AgentScoringRuleEntityListing> localVarResponse = GetQualityProgramAgentscoringrulesWithHttpInfo(programId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Agent Scoring Rules for a program 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <returns>ApiResponse of AgentScoringRuleEntityListing</returns>
+        
+        public ApiResponse< AgentScoringRuleEntityListing > GetQualityProgramAgentscoringrulesWithHttpInfo (string programId)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling QualityApi->GetQualityProgramAgentscoringrules");
+
+            var localVarPath = "/api/v2/quality/programs/{programId}/agentscoringrules";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityProgramAgentscoringrules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityProgramAgentscoringrules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentScoringRuleEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AgentScoringRuleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentScoringRuleEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Agent Scoring Rules for a program 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <returns>Task of AgentScoringRuleEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<AgentScoringRuleEntityListing> GetQualityProgramAgentscoringrulesAsync (string programId)
+        {
+             ApiResponse<AgentScoringRuleEntityListing> localVarResponse = await GetQualityProgramAgentscoringrulesAsyncWithHttpInfo(programId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Agent Scoring Rules for a program 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <returns>Task of ApiResponse (AgentScoringRuleEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AgentScoringRuleEntityListing>> GetQualityProgramAgentscoringrulesAsyncWithHttpInfo (string programId)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling QualityApi->GetQualityProgramAgentscoringrules");
+            
+
+            var localVarPath = "/api/v2/quality/programs/{programId}/agentscoringrules";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityProgramAgentscoringrules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityProgramAgentscoringrules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentScoringRuleEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (AgentScoringRuleEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentScoringRuleEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15085,6 +15982,230 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create an Agent Scoring Rule 
+        /// Creates a new Agent Scoring Rule for AI-powered automated evaluation of agent interactions. The rule defines how interactions should be selected and evaluated using the specified evaluation form.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>AgentScoringRule</returns>
+        
+        public AgentScoringRule PostQualityProgramAgentscoringrules (string programId, AgentScoringRule body)
+        {
+             ApiResponse<AgentScoringRule> localVarResponse = PostQualityProgramAgentscoringrulesWithHttpInfo(programId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an Agent Scoring Rule 
+        /// Creates a new Agent Scoring Rule for AI-powered automated evaluation of agent interactions. The rule defines how interactions should be selected and evaluated using the specified evaluation form.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>ApiResponse of AgentScoringRule</returns>
+        
+        public ApiResponse< AgentScoringRule > PostQualityProgramAgentscoringrulesWithHttpInfo (string programId, AgentScoringRule body)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling QualityApi->PostQualityProgramAgentscoringrules");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityProgramAgentscoringrules");
+
+            var localVarPath = "/api/v2/quality/programs/{programId}/agentscoringrules";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityProgramAgentscoringrules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityProgramAgentscoringrules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentScoringRule>(localVarStatusCode,
+                localVarHeaders,
+                (AgentScoringRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentScoringRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create an Agent Scoring Rule 
+        /// Creates a new Agent Scoring Rule for AI-powered automated evaluation of agent interactions. The rule defines how interactions should be selected and evaluated using the specified evaluation form.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>Task of AgentScoringRule</returns>
+        
+        public async System.Threading.Tasks.Task<AgentScoringRule> PostQualityProgramAgentscoringrulesAsync (string programId, AgentScoringRule body)
+        {
+             ApiResponse<AgentScoringRule> localVarResponse = await PostQualityProgramAgentscoringrulesAsyncWithHttpInfo(programId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an Agent Scoring Rule 
+        /// Creates a new Agent Scoring Rule for AI-powered automated evaluation of agent interactions. The rule defines how interactions should be selected and evaluated using the specified evaluation form.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>Task of ApiResponse (AgentScoringRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AgentScoringRule>> PostQualityProgramAgentscoringrulesAsyncWithHttpInfo (string programId, AgentScoringRule body)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling QualityApi->PostQualityProgramAgentscoringrules");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityProgramAgentscoringrules");
+            
+
+            var localVarPath = "/api/v2/quality/programs/{programId}/agentscoringrules";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityProgramAgentscoringrules: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityProgramAgentscoringrules: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentScoringRule>(localVarStatusCode,
+                localVarHeaders,
+                (AgentScoringRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentScoringRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Publish an evaluation form. 
         /// 
         /// </summary>
@@ -17285,6 +18406,243 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<SurveyForm>(localVarStatusCode,
                 localVarHeaders,
                 (SurveyForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyForm)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>AgentScoringRule</returns>
+        
+        public AgentScoringRule PutQualityProgramAgentscoringrule (string programId, string ruleId, AgentScoringRule body)
+        {
+             ApiResponse<AgentScoringRule> localVarResponse = PutQualityProgramAgentscoringruleWithHttpInfo(programId, ruleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>ApiResponse of AgentScoringRule</returns>
+        
+        public ApiResponse< AgentScoringRule > PutQualityProgramAgentscoringruleWithHttpInfo (string programId, string ruleId, AgentScoringRule body)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling QualityApi->PutQualityProgramAgentscoringrule");
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling QualityApi->PutQualityProgramAgentscoringrule");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityProgramAgentscoringrule");
+
+            var localVarPath = "/api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutQualityProgramAgentscoringrule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutQualityProgramAgentscoringrule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentScoringRule>(localVarStatusCode,
+                localVarHeaders,
+                (AgentScoringRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentScoringRule)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>Task of AgentScoringRule</returns>
+        
+        public async System.Threading.Tasks.Task<AgentScoringRule> PutQualityProgramAgentscoringruleAsync (string programId, string ruleId, AgentScoringRule body)
+        {
+             ApiResponse<AgentScoringRule> localVarResponse = await PutQualityProgramAgentscoringruleAsyncWithHttpInfo(programId, ruleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an Agent Scoring Rule 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="programId">Program ID from Speech and Text Analytics</param>
+        /// <param name="ruleId">Agent Scoring Rule ID</param>
+        /// <param name="body">Agent Scoring Rule</param>
+        /// <returns>Task of ApiResponse (AgentScoringRule)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AgentScoringRule>> PutQualityProgramAgentscoringruleAsyncWithHttpInfo (string programId, string ruleId, AgentScoringRule body)
+        { 
+            // verify the required parameter 'programId' is set
+            if (programId == null)
+                throw new ApiException(400, "Missing required parameter 'programId' when calling QualityApi->PutQualityProgramAgentscoringrule");
+            
+            // verify the required parameter 'ruleId' is set
+            if (ruleId == null)
+                throw new ApiException(400, "Missing required parameter 'ruleId' when calling QualityApi->PutQualityProgramAgentscoringrule");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PutQualityProgramAgentscoringrule");
+            
+
+            var localVarPath = "/api/v2/quality/programs/{programId}/agentscoringrules/{ruleId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (programId != null) localVarPathParams.Add("programId", this.Configuration.ApiClient.ParameterToString(programId));
+            if (ruleId != null) localVarPathParams.Add("ruleId", this.Configuration.ApiClient.ParameterToString(ruleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutQualityProgramAgentscoringrule: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutQualityProgramAgentscoringrule: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AgentScoringRule>(localVarStatusCode,
+                localVarHeaders,
+                (AgentScoringRule) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AgentScoringRule)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

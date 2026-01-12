@@ -170,6 +170,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<AssistantQueue> GetAssistantQueueWithHttpInfo (string assistantId, string queueId, string expand = null);
 
         /// <summary>
+        /// Get job details.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>AssistantQueueUsersJobsResponse</returns>
+        
+        AssistantQueueUsersJobsResponse GetAssistantQueueUsersJob (string assistantId, string queueId, string jobId);
+
+        /// <summary>
+        /// Get job details.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ApiResponse of AssistantQueueUsersJobsResponse</returns>
+        
+        ApiResponse<AssistantQueueUsersJobsResponse> GetAssistantQueueUsersJobWithHttpInfo (string assistantId, string queueId, string jobId);
+
+        /// <summary>
         /// Get all the queues associated with an assistant.
         /// </summary>
         /// <remarks>
@@ -456,6 +484,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of BulkResponse</returns>
         
         ApiResponse<BulkResponse> PostAssistantQueueUsersBulkRemoveWithHttpInfo (string assistantId, string queueId, AssistantQueueUsersBulkRemoveRequest body);
+
+        /// <summary>
+        /// Start a new job to assistant-queue.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>AssistantQueueUsersJobsResponse</returns>
+        
+        AssistantQueueUsersJobsResponse PostAssistantQueueUsersJobs (string assistantId, string queueId, AssistantQueueUsersJobsRequest body);
+
+        /// <summary>
+        /// Start a new job to assistant-queue.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of AssistantQueueUsersJobsResponse</returns>
+        
+        ApiResponse<AssistantQueueUsersJobsResponse> PostAssistantQueueUsersJobsWithHttpInfo (string assistantId, string queueId, AssistantQueueUsersJobsRequest body);
 
         /// <summary>
         /// Query for users in the assistant-queue (requires manual assignment mode).
@@ -748,6 +804,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<AssistantQueue>> GetAssistantQueueAsyncWithHttpInfo (string assistantId, string queueId, string expand = null);
 
         /// <summary>
+        /// Get job details.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of AssistantQueueUsersJobsResponse</returns>
+        
+        System.Threading.Tasks.Task<AssistantQueueUsersJobsResponse> GetAssistantQueueUsersJobAsync (string assistantId, string queueId, string jobId);
+
+        /// <summary>
+        /// Get job details.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ApiResponse (AssistantQueueUsersJobsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AssistantQueueUsersJobsResponse>> GetAssistantQueueUsersJobAsyncWithHttpInfo (string assistantId, string queueId, string jobId);
+
+        /// <summary>
         /// Get all the queues associated with an assistant.
         /// </summary>
         /// <remarks>
@@ -1034,6 +1118,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (BulkResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<BulkResponse>> PostAssistantQueueUsersBulkRemoveAsyncWithHttpInfo (string assistantId, string queueId, AssistantQueueUsersBulkRemoveRequest body);
+
+        /// <summary>
+        /// Start a new job to assistant-queue.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of AssistantQueueUsersJobsResponse</returns>
+        
+        System.Threading.Tasks.Task<AssistantQueueUsersJobsResponse> PostAssistantQueueUsersJobsAsync (string assistantId, string queueId, AssistantQueueUsersJobsRequest body);
+
+        /// <summary>
+        /// Start a new job to assistant-queue.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (AssistantQueueUsersJobsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<AssistantQueueUsersJobsResponse>> PostAssistantQueueUsersJobsAsyncWithHttpInfo (string assistantId, string queueId, AssistantQueueUsersJobsRequest body);
 
         /// <summary>
         /// Query for users in the assistant-queue (requires manual assignment mode).
@@ -2495,6 +2607,233 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<AssistantQueue>(localVarStatusCode,
                 localVarHeaders,
                 (AssistantQueue) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssistantQueue)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get job details. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>AssistantQueueUsersJobsResponse</returns>
+        
+        public AssistantQueueUsersJobsResponse GetAssistantQueueUsersJob (string assistantId, string queueId, string jobId)
+        {
+             ApiResponse<AssistantQueueUsersJobsResponse> localVarResponse = GetAssistantQueueUsersJobWithHttpInfo(assistantId, queueId, jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get job details. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>ApiResponse of AssistantQueueUsersJobsResponse</returns>
+        
+        public ApiResponse< AssistantQueueUsersJobsResponse > GetAssistantQueueUsersJobWithHttpInfo (string assistantId, string queueId, string jobId)
+        { 
+            // verify the required parameter 'assistantId' is set
+            if (assistantId == null)
+                throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->GetAssistantQueueUsersJob");
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling AgentAssistantsApi->GetAssistantQueueUsersJob");
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AgentAssistantsApi->GetAssistantQueueUsersJob");
+
+            var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assistantId != null) localVarPathParams.Add("assistantId", this.Configuration.ApiClient.ParameterToString(assistantId));
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantQueueUsersJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantQueueUsersJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssistantQueueUsersJobsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AssistantQueueUsersJobsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssistantQueueUsersJobsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get job details. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of AssistantQueueUsersJobsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<AssistantQueueUsersJobsResponse> GetAssistantQueueUsersJobAsync (string assistantId, string queueId, string jobId)
+        {
+             ApiResponse<AssistantQueueUsersJobsResponse> localVarResponse = await GetAssistantQueueUsersJobAsyncWithHttpInfo(assistantId, queueId, jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get job details. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="jobId">Job ID</param>
+        /// <returns>Task of ApiResponse (AssistantQueueUsersJobsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AssistantQueueUsersJobsResponse>> GetAssistantQueueUsersJobAsyncWithHttpInfo (string assistantId, string queueId, string jobId)
+        { 
+            // verify the required parameter 'assistantId' is set
+            if (assistantId == null)
+                throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->GetAssistantQueueUsersJob");
+            
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling AgentAssistantsApi->GetAssistantQueueUsersJob");
+            
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling AgentAssistantsApi->GetAssistantQueueUsersJob");
+            
+
+            var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assistantId != null) localVarPathParams.Add("assistantId", this.Configuration.ApiClient.ParameterToString(assistantId));
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantQueueUsersJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetAssistantQueueUsersJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssistantQueueUsersJobsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AssistantQueueUsersJobsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssistantQueueUsersJobsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -4703,6 +5042,243 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<BulkResponse>(localVarStatusCode,
                 localVarHeaders,
                 (BulkResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BulkResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Start a new job to assistant-queue. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>AssistantQueueUsersJobsResponse</returns>
+        
+        public AssistantQueueUsersJobsResponse PostAssistantQueueUsersJobs (string assistantId, string queueId, AssistantQueueUsersJobsRequest body)
+        {
+             ApiResponse<AssistantQueueUsersJobsResponse> localVarResponse = PostAssistantQueueUsersJobsWithHttpInfo(assistantId, queueId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Start a new job to assistant-queue. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>ApiResponse of AssistantQueueUsersJobsResponse</returns>
+        
+        public ApiResponse< AssistantQueueUsersJobsResponse > PostAssistantQueueUsersJobsWithHttpInfo (string assistantId, string queueId, AssistantQueueUsersJobsRequest body)
+        { 
+            // verify the required parameter 'assistantId' is set
+            if (assistantId == null)
+                throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->PostAssistantQueueUsersJobs");
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling AgentAssistantsApi->PostAssistantQueueUsersJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistantQueueUsersJobs");
+
+            var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assistantId != null) localVarPathParams.Add("assistantId", this.Configuration.ApiClient.ParameterToString(assistantId));
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAssistantQueueUsersJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAssistantQueueUsersJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssistantQueueUsersJobsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AssistantQueueUsersJobsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssistantQueueUsersJobsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Start a new job to assistant-queue. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of AssistantQueueUsersJobsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<AssistantQueueUsersJobsResponse> PostAssistantQueueUsersJobsAsync (string assistantId, string queueId, AssistantQueueUsersJobsRequest body)
+        {
+             ApiResponse<AssistantQueueUsersJobsResponse> localVarResponse = await PostAssistantQueueUsersJobsAsyncWithHttpInfo(assistantId, queueId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Start a new job to assistant-queue. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="assistantId">Assistant ID</param>
+        /// <param name="queueId">Queue ID</param>
+        /// <param name="body"></param>
+        /// <returns>Task of ApiResponse (AssistantQueueUsersJobsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<AssistantQueueUsersJobsResponse>> PostAssistantQueueUsersJobsAsyncWithHttpInfo (string assistantId, string queueId, AssistantQueueUsersJobsRequest body)
+        { 
+            // verify the required parameter 'assistantId' is set
+            if (assistantId == null)
+                throw new ApiException(400, "Missing required parameter 'assistantId' when calling AgentAssistantsApi->PostAssistantQueueUsersJobs");
+            
+            // verify the required parameter 'queueId' is set
+            if (queueId == null)
+                throw new ApiException(400, "Missing required parameter 'queueId' when calling AgentAssistantsApi->PostAssistantQueueUsersJobs");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AgentAssistantsApi->PostAssistantQueueUsersJobs");
+            
+
+            var localVarPath = "/api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (assistantId != null) localVarPathParams.Add("assistantId", this.Configuration.ApiClient.ParameterToString(assistantId));
+            if (queueId != null) localVarPathParams.Add("queueId", this.Configuration.ApiClient.ParameterToString(queueId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAssistantQueueUsersJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAssistantQueueUsersJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<AssistantQueueUsersJobsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (AssistantQueueUsersJobsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(AssistantQueueUsersJobsResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

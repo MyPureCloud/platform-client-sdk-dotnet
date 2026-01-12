@@ -221,6 +221,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The ID of the bot session..</param>
         /// <param name="Flow">The flow associated to this bot session..</param>
+        /// <param name="Conversation">The conversation details, across potentially multiple Bot Flow sessions..</param>
         /// <param name="Channel">Channel-specific information that describes the message channel/provider..</param>
         /// <param name="Language">The initial language of operation for the session..</param>
         /// <param name="EndLanguage">The language of the session at the time the session ended.</param>
@@ -228,10 +229,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BotResultCategory">The category of result for the session..</param>
         /// <param name="DateCreated">Timestamp indicating when the session was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateCompleted">Timestamp indicating when the session was completed. Note: The &#39;interval&#39; query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public BotFlowSession(string Id = null, Entity Flow = null, BotChannel Channel = null, string Language = null, string EndLanguage = null, BotResultEnum? BotResult = null, BotResultCategoryEnum? BotResultCategory = null, DateTime? DateCreated = null, DateTime? DateCompleted = null)
+        public BotFlowSession(string Id = null, Entity Flow = null, AddressableEntityRef Conversation = null, BotChannel Channel = null, string Language = null, string EndLanguage = null, BotResultEnum? BotResult = null, BotResultCategoryEnum? BotResultCategory = null, DateTime? DateCreated = null, DateTime? DateCompleted = null)
         {
             this.Id = Id;
             this.Flow = Flow;
+            this.Conversation = Conversation;
             this.Channel = Channel;
             this.Language = Language;
             this.EndLanguage = EndLanguage;
@@ -259,6 +261,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The flow associated to this bot session.</value>
         [DataMember(Name="flow", EmitDefaultValue=false)]
         public Entity Flow { get; set; }
+
+
+
+        /// <summary>
+        /// The conversation details, across potentially multiple Bot Flow sessions.
+        /// </summary>
+        /// <value>The conversation details, across potentially multiple Bot Flow sessions.</value>
+        [DataMember(Name="conversation", EmitDefaultValue=false)]
+        public AddressableEntityRef Conversation { get; set; }
 
 
 
@@ -310,15 +321,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? DateCompleted { get; set; }
 
 
-
-        /// <summary>
-        /// The conversation details, across potentially multiple Bot Flow sessions.
-        /// </summary>
-        /// <value>The conversation details, across potentially multiple Bot Flow sessions.</value>
-        [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public AddressableEntityRef Conversation { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -330,6 +332,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Flow: ").Append(Flow).Append("\n");
+            sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  Channel: ").Append(Channel).Append("\n");
             sb.Append("  Language: ").Append(Language).Append("\n");
             sb.Append("  EndLanguage: ").Append(EndLanguage).Append("\n");
@@ -337,7 +340,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  BotResultCategory: ").Append(BotResultCategory).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
-            sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -389,6 +391,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Flow.Equals(other.Flow)
                 ) &&
                 (
+                    this.Conversation == other.Conversation ||
+                    this.Conversation != null &&
+                    this.Conversation.Equals(other.Conversation)
+                ) &&
+                (
                     this.Channel == other.Channel ||
                     this.Channel != null &&
                     this.Channel.Equals(other.Channel)
@@ -422,11 +429,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateCompleted == other.DateCompleted ||
                     this.DateCompleted != null &&
                     this.DateCompleted.Equals(other.DateCompleted)
-                ) &&
-                (
-                    this.Conversation == other.Conversation ||
-                    this.Conversation != null &&
-                    this.Conversation.Equals(other.Conversation)
                 );
         }
 
@@ -446,6 +448,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Flow != null)
                     hash = hash * 59 + this.Flow.GetHashCode();
+
+                if (this.Conversation != null)
+                    hash = hash * 59 + this.Conversation.GetHashCode();
 
                 if (this.Channel != null)
                     hash = hash * 59 + this.Channel.GetHashCode();
@@ -467,9 +472,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateCompleted != null)
                     hash = hash * 59 + this.DateCompleted.GetHashCode();
-
-                if (this.Conversation != null)
-                    hash = hash * 59 + this.Conversation.GetHashCode();
 
                 return hash;
             }

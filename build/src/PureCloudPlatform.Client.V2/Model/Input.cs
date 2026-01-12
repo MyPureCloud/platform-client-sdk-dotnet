@@ -18,6 +18,324 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class Input :  IEquatable<Input>
     {
+        /// <summary>
+        /// Type of keyboard to be shown
+        /// </summary>
+        /// <value>Type of keyboard to be shown</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum KeyboardTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Default for "Default"
+            /// </summary>
+            [EnumMember(Value = "Default")]
+            Default,
+            
+            /// <summary>
+            /// Enum Numberpunctuation for "NumberPunctuation"
+            /// </summary>
+            [EnumMember(Value = "NumberPunctuation")]
+            Numberpunctuation,
+            
+            /// <summary>
+            /// Enum Number for "Number"
+            /// </summary>
+            [EnumMember(Value = "Number")]
+            Number,
+            
+            /// <summary>
+            /// Enum Phone for "Phone"
+            /// </summary>
+            [EnumMember(Value = "Phone")]
+            Phone,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Decimal for "Decimal"
+            /// </summary>
+            [EnumMember(Value = "Decimal")]
+            Decimal,
+            
+            /// <summary>
+            /// Enum Websearch for "Websearch"
+            /// </summary>
+            [EnumMember(Value = "Websearch")]
+            Websearch,
+            
+            /// <summary>
+            /// Enum Url for "URL"
+            /// </summary>
+            [EnumMember(Value = "URL")]
+            Url
+        }
+        /// <summary>
+        /// A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter
+        /// </summary>
+        /// <value>A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AutoCompleteTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Prefix for "Prefix"
+            /// </summary>
+            [EnumMember(Value = "Prefix")]
+            Prefix,
+            
+            /// <summary>
+            /// Enum Name for "Name"
+            /// </summary>
+            [EnumMember(Value = "Name")]
+            Name,
+            
+            /// <summary>
+            /// Enum Givenname for "GivenName"
+            /// </summary>
+            [EnumMember(Value = "GivenName")]
+            Givenname,
+            
+            /// <summary>
+            /// Enum Middlename for "MiddleName"
+            /// </summary>
+            [EnumMember(Value = "MiddleName")]
+            Middlename,
+            
+            /// <summary>
+            /// Enum Familyname for "FamilyName"
+            /// </summary>
+            [EnumMember(Value = "FamilyName")]
+            Familyname,
+            
+            /// <summary>
+            /// Enum Suffix for "Suffix"
+            /// </summary>
+            [EnumMember(Value = "Suffix")]
+            Suffix,
+            
+            /// <summary>
+            /// Enum Nickname for "Nickname"
+            /// </summary>
+            [EnumMember(Value = "Nickname")]
+            Nickname,
+            
+            /// <summary>
+            /// Enum Title for "Title"
+            /// </summary>
+            [EnumMember(Value = "Title")]
+            Title,
+            
+            /// <summary>
+            /// Enum Organization for "Organization"
+            /// </summary>
+            [EnumMember(Value = "Organization")]
+            Organization,
+            
+            /// <summary>
+            /// Enum Location for "Location"
+            /// </summary>
+            [EnumMember(Value = "Location")]
+            Location,
+            
+            /// <summary>
+            /// Enum Streetaddress for "StreetAddress"
+            /// </summary>
+            [EnumMember(Value = "StreetAddress")]
+            Streetaddress,
+            
+            /// <summary>
+            /// Enum Addressline1 for "Addressline1"
+            /// </summary>
+            [EnumMember(Value = "Addressline1")]
+            Addressline1,
+            
+            /// <summary>
+            /// Enum Addressline2 for "Addressline2"
+            /// </summary>
+            [EnumMember(Value = "Addressline2")]
+            Addressline2,
+            
+            /// <summary>
+            /// Enum City for "City"
+            /// </summary>
+            [EnumMember(Value = "City")]
+            City,
+            
+            /// <summary>
+            /// Enum State for "State"
+            /// </summary>
+            [EnumMember(Value = "State")]
+            State,
+            
+            /// <summary>
+            /// Enum Country for "Country"
+            /// </summary>
+            [EnumMember(Value = "Country")]
+            Country,
+            
+            /// <summary>
+            /// Enum Postalcode for "PostalCode"
+            /// </summary>
+            [EnumMember(Value = "PostalCode")]
+            Postalcode,
+            
+            /// <summary>
+            /// Enum Username for "Username"
+            /// </summary>
+            [EnumMember(Value = "Username")]
+            Username,
+            
+            /// <summary>
+            /// Enum Onetimecode for "OneTimeCode"
+            /// </summary>
+            [EnumMember(Value = "OneTimeCode")]
+            Onetimecode,
+            
+            /// <summary>
+            /// Enum Email for "Email"
+            /// </summary>
+            [EnumMember(Value = "Email")]
+            Email,
+            
+            /// <summary>
+            /// Enum Phone for "Phone"
+            /// </summary>
+            [EnumMember(Value = "Phone")]
+            Phone,
+            
+            /// <summary>
+            /// Enum Paymentcardnumber for "PaymentCardNumber"
+            /// </summary>
+            [EnumMember(Value = "PaymentCardNumber")]
+            Paymentcardnumber,
+            
+            /// <summary>
+            /// Enum Paymentcardexpiration for "PaymentCardExpiration"
+            /// </summary>
+            [EnumMember(Value = "PaymentCardExpiration")]
+            Paymentcardexpiration,
+            
+            /// <summary>
+            /// Enum Paymentcardexpirationmonth for "PaymentCardExpirationMonth"
+            /// </summary>
+            [EnumMember(Value = "PaymentCardExpirationMonth")]
+            Paymentcardexpirationmonth,
+            
+            /// <summary>
+            /// Enum Paymentcardexpirationyear for "PaymentCardExpirationYear"
+            /// </summary>
+            [EnumMember(Value = "PaymentCardExpirationYear")]
+            Paymentcardexpirationyear,
+            
+            /// <summary>
+            /// Enum Paymentcardsecuritycode for "PaymentCardSecurityCode"
+            /// </summary>
+            [EnumMember(Value = "PaymentCardSecurityCode")]
+            Paymentcardsecuritycode,
+            
+            /// <summary>
+            /// Enum Paymentcardtype for "PaymentCardType"
+            /// </summary>
+            [EnumMember(Value = "PaymentCardType")]
+            Paymentcardtype,
+            
+            /// <summary>
+            /// Enum Paymentcardname for "PaymentCardName"
+            /// </summary>
+            [EnumMember(Value = "PaymentCardName")]
+            Paymentcardname,
+            
+            /// <summary>
+            /// Enum Paymentcardgivenname for "PaymentCardGivenName"
+            /// </summary>
+            [EnumMember(Value = "PaymentCardGivenName")]
+            Paymentcardgivenname,
+            
+            /// <summary>
+            /// Enum Paymentcardmiddlename for "PaymentCardMiddleName"
+            /// </summary>
+            [EnumMember(Value = "PaymentCardMiddleName")]
+            Paymentcardmiddlename,
+            
+            /// <summary>
+            /// Enum Paymentcardfamilyname for "PaymentCardFamilyName"
+            /// </summary>
+            [EnumMember(Value = "PaymentCardFamilyName")]
+            Paymentcardfamilyname,
+            
+            /// <summary>
+            /// Enum Birthdate for "Birthdate"
+            /// </summary>
+            [EnumMember(Value = "Birthdate")]
+            Birthdate,
+            
+            /// <summary>
+            /// Enum Birthdateday for "BirthdateDay"
+            /// </summary>
+            [EnumMember(Value = "BirthdateDay")]
+            Birthdateday,
+            
+            /// <summary>
+            /// Enum Birthdatemonth for "BirthdateMonth"
+            /// </summary>
+            [EnumMember(Value = "BirthdateMonth")]
+            Birthdatemonth,
+            
+            /// <summary>
+            /// Enum Birthdateyear for "BirthdateYear"
+            /// </summary>
+            [EnumMember(Value = "BirthdateYear")]
+            Birthdateyear,
+            
+            /// <summary>
+            /// Enum Datetime for "DateTime"
+            /// </summary>
+            [EnumMember(Value = "DateTime")]
+            Datetime,
+            
+            /// <summary>
+            /// Enum Flightnumber for "FlightNumber"
+            /// </summary>
+            [EnumMember(Value = "FlightNumber")]
+            Flightnumber,
+            
+            /// <summary>
+            /// Enum Url for "Url"
+            /// </summary>
+            [EnumMember(Value = "Url")]
+            Url
+        }
+        /// <summary>
+        /// Type of keyboard to be shown
+        /// </summary>
+        /// <value>Type of keyboard to be shown</value>
+        [DataMember(Name="keyboardType", EmitDefaultValue=false)]
+        public KeyboardTypeEnum? KeyboardType { get; set; }
+        /// <summary>
+        /// A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter
+        /// </summary>
+        /// <value>A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter</value>
+        [DataMember(Name="autoCompleteType", EmitDefaultValue=false)]
+        public AutoCompleteTypeEnum? AutoCompleteType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="Input" /> class.
@@ -33,7 +351,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PlaceholderText">Placeholder text for the input.</param>
         /// <param name="IsMultipleLine">Whether the input supports multiple lines (required).</param>
         /// <param name="IsRequired">Whether the input is required (required).</param>
-        public Input(string Id = null, string Title = null, string Subtitle = null, string PlaceholderText = null, bool? IsMultipleLine = null, bool? IsRequired = null)
+        /// <param name="KeyboardType">Type of keyboard to be shown.</param>
+        /// <param name="AutoCompleteType">A string value representing the keyboard and system information about the expected semantic meaning for the content that users enter.</param>
+        public Input(string Id = null, string Title = null, string Subtitle = null, string PlaceholderText = null, bool? IsMultipleLine = null, bool? IsRequired = null, KeyboardTypeEnum? KeyboardType = null, AutoCompleteTypeEnum? AutoCompleteType = null)
         {
             this.Id = Id;
             this.Title = Title;
@@ -41,6 +361,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PlaceholderText = PlaceholderText;
             this.IsMultipleLine = IsMultipleLine;
             this.IsRequired = IsRequired;
+            this.KeyboardType = KeyboardType;
+            this.AutoCompleteType = AutoCompleteType;
             
         }
         
@@ -99,6 +421,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? IsRequired { get; set; }
 
 
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -114,6 +440,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PlaceholderText: ").Append(PlaceholderText).Append("\n");
             sb.Append("  IsMultipleLine: ").Append(IsMultipleLine).Append("\n");
             sb.Append("  IsRequired: ").Append(IsRequired).Append("\n");
+            sb.Append("  KeyboardType: ").Append(KeyboardType).Append("\n");
+            sb.Append("  AutoCompleteType: ").Append(AutoCompleteType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -183,6 +511,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IsRequired == other.IsRequired ||
                     this.IsRequired != null &&
                     this.IsRequired.Equals(other.IsRequired)
+                ) &&
+                (
+                    this.KeyboardType == other.KeyboardType ||
+                    this.KeyboardType != null &&
+                    this.KeyboardType.Equals(other.KeyboardType)
+                ) &&
+                (
+                    this.AutoCompleteType == other.AutoCompleteType ||
+                    this.AutoCompleteType != null &&
+                    this.AutoCompleteType.Equals(other.AutoCompleteType)
                 );
         }
 
@@ -214,6 +552,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IsRequired != null)
                     hash = hash * 59 + this.IsRequired.GetHashCode();
+
+                if (this.KeyboardType != null)
+                    hash = hash * 59 + this.KeyboardType.GetHashCode();
+
+                if (this.AutoCompleteType != null)
+                    hash = hash * 59 + this.AutoCompleteType.GetHashCode();
 
                 return hash;
             }

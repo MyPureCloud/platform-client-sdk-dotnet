@@ -102,6 +102,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Details of the user created the job
+        /// </summary>
+        /// <value>Details of the user created the job</value>
+        [DataMember(Name="user", EmitDefaultValue=false)]
+        public AddressableEntityRef User { get; private set; }
+
+
+
 
 
         /// <summary>
@@ -202,15 +211,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string SelfUri { get; private set; }
 
 
-
-        /// <summary>
-        /// Details of the user created the job
-        /// </summary>
-        /// <value>Details of the user created the job</value>
-        [DataMember(Name="user", EmitDefaultValue=false)]
-        public AddressableEntityRef User { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -221,6 +221,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class RecordingJob {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  RecordingJobsQuery: ").Append(RecordingJobsQuery).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
@@ -233,7 +234,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ErrorMessage: ").Append(ErrorMessage).Append("\n");
             sb.Append("  FailedRecordings: ").Append(FailedRecordings).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
-            sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -278,6 +278,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.User == other.User ||
+                    this.User != null &&
+                    this.User.Equals(other.User)
                 ) &&
                 (
                     this.State == other.State ||
@@ -338,11 +343,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
-                ) &&
-                (
-                    this.User == other.User ||
-                    this.User != null &&
-                    this.User.Equals(other.User)
                 );
         }
 
@@ -359,6 +359,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.User != null)
+                    hash = hash * 59 + this.User.GetHashCode();
 
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
@@ -395,9 +398,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
-
-                if (this.User != null)
-                    hash = hash * 59 + this.User.GetHashCode();
 
                 return hash;
             }

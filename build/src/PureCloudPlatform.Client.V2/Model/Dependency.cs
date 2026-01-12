@@ -159,6 +159,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Dialogflowcxagent,
             
             /// <summary>
+            /// Enum Digitalaudio for "DIGITALAUDIO"
+            /// </summary>
+            [EnumMember(Value = "DIGITALAUDIO")]
+            Digitalaudio,
+            
+            /// <summary>
             /// Enum Digitalbotconnector for "DIGITALBOTCONNECTOR"
             /// </summary>
             [EnumMember(Value = "DIGITALBOTCONNECTOR")]
@@ -193,6 +199,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "EMERGENCYGROUP")]
             Emergencygroup,
+            
+            /// <summary>
+            /// Enum File for "FILE"
+            /// </summary>
+            [EnumMember(Value = "FILE")]
+            File,
             
             /// <summary>
             /// Enum Flowaction for "FLOWACTION"
@@ -393,6 +405,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Response,
             
             /// <summary>
+            /// Enum Responseasset for "RESPONSEASSET"
+            /// </summary>
+            [EnumMember(Value = "RESPONSEASSET")]
+            Responseasset,
+            
+            /// <summary>
             /// Enum Schedule for "SCHEDULE"
             /// </summary>
             [EnumMember(Value = "SCHEDULE")]
@@ -475,6 +493,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "UTILIZATIONLABEL")]
             Utilizationlabel,
+            
+            /// <summary>
+            /// Enum Video for "VIDEO"
+            /// </summary>
+            [EnumMember(Value = "VIDEO")]
+            Video,
             
             /// <summary>
             /// Enum Voiceflow for "VOICEFLOW"

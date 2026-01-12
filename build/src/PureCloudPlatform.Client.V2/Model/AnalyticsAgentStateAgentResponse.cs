@@ -19,6 +19,150 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class AnalyticsAgentStateAgentResponse :  IEquatable<AnalyticsAgentStateAgentResponse>
     {
         /// <summary>
+        /// The user's system presence
+        /// </summary>
+        /// <value>The user's system presence</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SystemPresenceEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Available for "AVAILABLE"
+            /// </summary>
+            [EnumMember(Value = "AVAILABLE")]
+            Available,
+            
+            /// <summary>
+            /// Enum Away for "AWAY"
+            /// </summary>
+            [EnumMember(Value = "AWAY")]
+            Away,
+            
+            /// <summary>
+            /// Enum Busy for "BUSY"
+            /// </summary>
+            [EnumMember(Value = "BUSY")]
+            Busy,
+            
+            /// <summary>
+            /// Enum Offline for "OFFLINE"
+            /// </summary>
+            [EnumMember(Value = "OFFLINE")]
+            Offline,
+            
+            /// <summary>
+            /// Enum Idle for "IDLE"
+            /// </summary>
+            [EnumMember(Value = "IDLE")]
+            Idle,
+            
+            /// <summary>
+            /// Enum OnQueue for "ON_QUEUE"
+            /// </summary>
+            [EnumMember(Value = "ON_QUEUE")]
+            OnQueue,
+            
+            /// <summary>
+            /// Enum Meal for "MEAL"
+            /// </summary>
+            [EnumMember(Value = "MEAL")]
+            Meal,
+            
+            /// <summary>
+            /// Enum Training for "TRAINING"
+            /// </summary>
+            [EnumMember(Value = "TRAINING")]
+            Training,
+            
+            /// <summary>
+            /// Enum Meeting for "MEETING"
+            /// </summary>
+            [EnumMember(Value = "MEETING")]
+            Meeting,
+            
+            /// <summary>
+            /// Enum Break for "BREAK"
+            /// </summary>
+            [EnumMember(Value = "BREAK")]
+            Break
+        }
+        /// <summary>
+        /// The user's routing status
+        /// </summary>
+        /// <value>The user's routing status</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum RoutingStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "UNKNOWN"
+            /// </summary>
+            [EnumMember(Value = "UNKNOWN")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum OffQueue for "OFF_QUEUE"
+            /// </summary>
+            [EnumMember(Value = "OFF_QUEUE")]
+            OffQueue,
+            
+            /// <summary>
+            /// Enum Idle for "IDLE"
+            /// </summary>
+            [EnumMember(Value = "IDLE")]
+            Idle,
+            
+            /// <summary>
+            /// Enum Interacting for "INTERACTING"
+            /// </summary>
+            [EnumMember(Value = "INTERACTING")]
+            Interacting,
+            
+            /// <summary>
+            /// Enum NotResponding for "NOT_RESPONDING"
+            /// </summary>
+            [EnumMember(Value = "NOT_RESPONDING")]
+            NotResponding,
+            
+            /// <summary>
+            /// Enum Communicating for "COMMUNICATING"
+            /// </summary>
+            [EnumMember(Value = "COMMUNICATING")]
+            Communicating
+        }
+        /// <summary>
+        /// The user's system presence
+        /// </summary>
+        /// <value>The user's system presence</value>
+        [DataMember(Name="systemPresence", EmitDefaultValue=false)]
+        public SystemPresenceEnum? SystemPresence { get; set; }
+        /// <summary>
+        /// The user's routing status
+        /// </summary>
+        /// <value>The user's routing status</value>
+        [DataMember(Name="routingStatus", EmitDefaultValue=false)]
+        public RoutingStatusEnum? RoutingStatus { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsAgentStateAgentResponse" /> class.
         /// </summary>
         /// <param name="UserId">User Id - only returned if division is covered by agentStateNames permission.</param>
@@ -27,7 +171,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ManagerId">The user that this user reports to.</param>
         /// <param name="SessionCount">The count of sessions.</param>
         /// <param name="Sessions">List of sessions.</param>
-        public AnalyticsAgentStateAgentResponse(string UserId = null, string DivisionId = null, string UserName = null, string ManagerId = null, int? SessionCount = null, List<AnalyticsAgentStateAgentSessionResult> Sessions = null)
+        /// <param name="SystemPresence">The user&#39;s system presence.</param>
+        /// <param name="OrganizationPresenceId">The identifier for the user&#39;s organization presence.</param>
+        /// <param name="PresenceDate">The timestamp for when the user&#39;s presence began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="RoutingStatus">The user&#39;s routing status.</param>
+        /// <param name="RoutingStatusDate">The timestamp for when the user&#39;s routing status began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="IsOutOfOffice">Whether the user is out of office.</param>
+        public AnalyticsAgentStateAgentResponse(string UserId = null, string DivisionId = null, string UserName = null, string ManagerId = null, int? SessionCount = null, List<AnalyticsAgentStateAgentSessionResult> Sessions = null, SystemPresenceEnum? SystemPresence = null, string OrganizationPresenceId = null, DateTime? PresenceDate = null, RoutingStatusEnum? RoutingStatus = null, DateTime? RoutingStatusDate = null, bool? IsOutOfOffice = null)
         {
             this.UserId = UserId;
             this.DivisionId = DivisionId;
@@ -35,6 +185,12 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ManagerId = ManagerId;
             this.SessionCount = SessionCount;
             this.Sessions = Sessions;
+            this.SystemPresence = SystemPresence;
+            this.OrganizationPresenceId = OrganizationPresenceId;
+            this.PresenceDate = PresenceDate;
+            this.RoutingStatus = RoutingStatus;
+            this.RoutingStatusDate = RoutingStatusDate;
+            this.IsOutOfOffice = IsOutOfOffice;
             
         }
         
@@ -93,6 +249,46 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<AnalyticsAgentStateAgentSessionResult> Sessions { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// The identifier for the user&#39;s organization presence
+        /// </summary>
+        /// <value>The identifier for the user&#39;s organization presence</value>
+        [DataMember(Name="organizationPresenceId", EmitDefaultValue=false)]
+        public string OrganizationPresenceId { get; set; }
+
+
+
+        /// <summary>
+        /// The timestamp for when the user&#39;s presence began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The timestamp for when the user&#39;s presence began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="presenceDate", EmitDefaultValue=false)]
+        public DateTime? PresenceDate { get; set; }
+
+
+
+
+
+        /// <summary>
+        /// The timestamp for when the user&#39;s routing status began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>The timestamp for when the user&#39;s routing status began. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="routingStatusDate", EmitDefaultValue=false)]
+        public DateTime? RoutingStatusDate { get; set; }
+
+
+
+        /// <summary>
+        /// Whether the user is out of office
+        /// </summary>
+        /// <value>Whether the user is out of office</value>
+        [DataMember(Name="isOutOfOffice", EmitDefaultValue=false)]
+        public bool? IsOutOfOffice { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -108,6 +304,12 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ManagerId: ").Append(ManagerId).Append("\n");
             sb.Append("  SessionCount: ").Append(SessionCount).Append("\n");
             sb.Append("  Sessions: ").Append(Sessions).Append("\n");
+            sb.Append("  SystemPresence: ").Append(SystemPresence).Append("\n");
+            sb.Append("  OrganizationPresenceId: ").Append(OrganizationPresenceId).Append("\n");
+            sb.Append("  PresenceDate: ").Append(PresenceDate).Append("\n");
+            sb.Append("  RoutingStatus: ").Append(RoutingStatus).Append("\n");
+            sb.Append("  RoutingStatusDate: ").Append(RoutingStatusDate).Append("\n");
+            sb.Append("  IsOutOfOffice: ").Append(IsOutOfOffice).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -177,6 +379,36 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Sessions == other.Sessions ||
                     this.Sessions != null &&
                     this.Sessions.SequenceEqual(other.Sessions)
+                ) &&
+                (
+                    this.SystemPresence == other.SystemPresence ||
+                    this.SystemPresence != null &&
+                    this.SystemPresence.Equals(other.SystemPresence)
+                ) &&
+                (
+                    this.OrganizationPresenceId == other.OrganizationPresenceId ||
+                    this.OrganizationPresenceId != null &&
+                    this.OrganizationPresenceId.Equals(other.OrganizationPresenceId)
+                ) &&
+                (
+                    this.PresenceDate == other.PresenceDate ||
+                    this.PresenceDate != null &&
+                    this.PresenceDate.Equals(other.PresenceDate)
+                ) &&
+                (
+                    this.RoutingStatus == other.RoutingStatus ||
+                    this.RoutingStatus != null &&
+                    this.RoutingStatus.Equals(other.RoutingStatus)
+                ) &&
+                (
+                    this.RoutingStatusDate == other.RoutingStatusDate ||
+                    this.RoutingStatusDate != null &&
+                    this.RoutingStatusDate.Equals(other.RoutingStatusDate)
+                ) &&
+                (
+                    this.IsOutOfOffice == other.IsOutOfOffice ||
+                    this.IsOutOfOffice != null &&
+                    this.IsOutOfOffice.Equals(other.IsOutOfOffice)
                 );
         }
 
@@ -208,6 +440,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Sessions != null)
                     hash = hash * 59 + this.Sessions.GetHashCode();
+
+                if (this.SystemPresence != null)
+                    hash = hash * 59 + this.SystemPresence.GetHashCode();
+
+                if (this.OrganizationPresenceId != null)
+                    hash = hash * 59 + this.OrganizationPresenceId.GetHashCode();
+
+                if (this.PresenceDate != null)
+                    hash = hash * 59 + this.PresenceDate.GetHashCode();
+
+                if (this.RoutingStatus != null)
+                    hash = hash * 59 + this.RoutingStatus.GetHashCode();
+
+                if (this.RoutingStatusDate != null)
+                    hash = hash * 59 + this.RoutingStatusDate.GetHashCode();
+
+                if (this.IsOutOfOffice != null)
+                    hash = hash * 59 + this.IsOutOfOffice.GetHashCode();
 
                 return hash;
             }

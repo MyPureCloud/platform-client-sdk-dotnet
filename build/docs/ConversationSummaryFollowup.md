@@ -6,10 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **Confidence** | **float?** | The AI confidence value. | [optional] |
 | **Text** | **string** | The text of the followup. | [optional] |
 | **Description** | **string** | The description. | [optional] |
-| **Confidence** | **float?** | The AI confidence value. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 252.1.0_
+_PureCloudPlatform.Client.V2 253.0.0_

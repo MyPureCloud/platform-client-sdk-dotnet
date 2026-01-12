@@ -195,6 +195,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Cobrowsesessions">Cobrowsesessions.</param>
         /// <param name="Emails">Emails.</param>
         /// <param name="Messages">Messages.</param>
+        /// <param name="InternalMessages">InternalMessages.</param>
+        /// <param name="ScreenMonitorings">ScreenMonitorings.</param>
         /// <param name="Screenshares">Screenshares.</param>
         /// <param name="SocialExpressions">SocialExpressions.</param>
         /// <param name="Videos">Videos.</param>
@@ -203,9 +205,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FlaggedReason">The reason specifying why participant flagged the conversation..</param>
         /// <param name="StartAcwTime">The timestamp when this participant started after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="EndAcwTime">The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="InternalMessages">InternalMessages.</param>
         /// <param name="BargedParticipantId">If this participant barged in a participant&#39;s call, then this will be the id of the targeted participant..</param>
-        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalContactInitialDivisionId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, List<string> MediaRoles = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, List<InternalMessage> InternalMessages = null, string BargedParticipantId = null)
+        public Participant(string Id = null, DateTime? StartTime = null, DateTime? EndTime = null, DateTime? ConnectedTime = null, string Name = null, string UserUri = null, string UserId = null, string ExternalContactId = null, string ExternalContactInitialDivisionId = null, string ExternalOrganizationId = null, string QueueId = null, string GroupId = null, string TeamId = null, string QueueName = null, string Purpose = null, string ParticipantType = null, string ConsultParticipantId = null, string Address = null, string Ani = null, string AniName = null, string Dnis = null, string Locale = null, bool? WrapupRequired = null, WrapupPromptEnum? WrapupPrompt = null, int? WrapupTimeoutMs = null, bool? WrapupSkipped = null, Wrapup Wrapup = null, List<string> MediaRoles = null, ConversationRoutingData ConversationRoutingData = null, int? AlertingTimeoutMs = null, string MonitoredParticipantId = null, string CoachedParticipantId = null, Dictionary<string, string> Attributes = null, List<Call> Calls = null, List<Callback> Callbacks = null, List<ConversationChat> Chats = null, List<Cobrowsesession> Cobrowsesessions = null, List<Email> Emails = null, List<Message> Messages = null, List<InternalMessage> InternalMessages = null, List<ScreenMonitoring> ScreenMonitorings = null, List<Screenshare> Screenshares = null, List<SocialExpression> SocialExpressions = null, List<Video> Videos = null, List<Evaluation> Evaluations = null, ScreenRecordingStateEnum? ScreenRecordingState = null, FlaggedReasonEnum? FlaggedReason = null, DateTime? StartAcwTime = null, DateTime? EndAcwTime = null, string BargedParticipantId = null)
         {
             this.Id = Id;
             this.StartTime = StartTime;
@@ -246,6 +247,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Cobrowsesessions = Cobrowsesessions;
             this.Emails = Emails;
             this.Messages = Messages;
+            this.InternalMessages = InternalMessages;
+            this.ScreenMonitorings = ScreenMonitorings;
             this.Screenshares = Screenshares;
             this.SocialExpressions = SocialExpressions;
             this.Videos = Videos;
@@ -254,7 +257,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FlaggedReason = FlaggedReason;
             this.StartAcwTime = StartAcwTime;
             this.EndAcwTime = EndAcwTime;
-            this.InternalMessages = InternalMessages;
             this.BargedParticipantId = BargedParticipantId;
             
         }
@@ -600,6 +602,22 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets InternalMessages
+        /// </summary>
+        [DataMember(Name="internalMessages", EmitDefaultValue=false)]
+        public List<InternalMessage> InternalMessages { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets ScreenMonitorings
+        /// </summary>
+        [DataMember(Name="screenMonitorings", EmitDefaultValue=false)]
+        public List<ScreenMonitoring> ScreenMonitorings { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Screenshares
         /// </summary>
         [DataMember(Name="screenshares", EmitDefaultValue=false)]
@@ -650,14 +668,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The timestamp when this participant ended after-call work. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="endAcwTime", EmitDefaultValue=false)]
         public DateTime? EndAcwTime { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets InternalMessages
-        /// </summary>
-        [DataMember(Name="internalMessages", EmitDefaultValue=false)]
-        public List<InternalMessage> InternalMessages { get; set; }
 
 
 
@@ -717,6 +727,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Cobrowsesessions: ").Append(Cobrowsesessions).Append("\n");
             sb.Append("  Emails: ").Append(Emails).Append("\n");
             sb.Append("  Messages: ").Append(Messages).Append("\n");
+            sb.Append("  InternalMessages: ").Append(InternalMessages).Append("\n");
+            sb.Append("  ScreenMonitorings: ").Append(ScreenMonitorings).Append("\n");
             sb.Append("  Screenshares: ").Append(Screenshares).Append("\n");
             sb.Append("  SocialExpressions: ").Append(SocialExpressions).Append("\n");
             sb.Append("  Videos: ").Append(Videos).Append("\n");
@@ -725,7 +737,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FlaggedReason: ").Append(FlaggedReason).Append("\n");
             sb.Append("  StartAcwTime: ").Append(StartAcwTime).Append("\n");
             sb.Append("  EndAcwTime: ").Append(EndAcwTime).Append("\n");
-            sb.Append("  InternalMessages: ").Append(InternalMessages).Append("\n");
             sb.Append("  BargedParticipantId: ").Append(BargedParticipantId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -963,6 +974,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Messages.SequenceEqual(other.Messages)
                 ) &&
                 (
+                    this.InternalMessages == other.InternalMessages ||
+                    this.InternalMessages != null &&
+                    this.InternalMessages.SequenceEqual(other.InternalMessages)
+                ) &&
+                (
+                    this.ScreenMonitorings == other.ScreenMonitorings ||
+                    this.ScreenMonitorings != null &&
+                    this.ScreenMonitorings.SequenceEqual(other.ScreenMonitorings)
+                ) &&
+                (
                     this.Screenshares == other.Screenshares ||
                     this.Screenshares != null &&
                     this.Screenshares.SequenceEqual(other.Screenshares)
@@ -1001,11 +1022,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndAcwTime == other.EndAcwTime ||
                     this.EndAcwTime != null &&
                     this.EndAcwTime.Equals(other.EndAcwTime)
-                ) &&
-                (
-                    this.InternalMessages == other.InternalMessages ||
-                    this.InternalMessages != null &&
-                    this.InternalMessages.SequenceEqual(other.InternalMessages)
                 ) &&
                 (
                     this.BargedParticipantId == other.BargedParticipantId ||
@@ -1142,6 +1158,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Messages != null)
                     hash = hash * 59 + this.Messages.GetHashCode();
 
+                if (this.InternalMessages != null)
+                    hash = hash * 59 + this.InternalMessages.GetHashCode();
+
+                if (this.ScreenMonitorings != null)
+                    hash = hash * 59 + this.ScreenMonitorings.GetHashCode();
+
                 if (this.Screenshares != null)
                     hash = hash * 59 + this.Screenshares.GetHashCode();
 
@@ -1165,9 +1187,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndAcwTime != null)
                     hash = hash * 59 + this.EndAcwTime.GetHashCode();
-
-                if (this.InternalMessages != null)
-                    hash = hash * 59 + this.InternalMessages.GetHashCode();
 
                 if (this.BargedParticipantId != null)
                     hash = hash * 59 + this.BargedParticipantId.GetHashCode();

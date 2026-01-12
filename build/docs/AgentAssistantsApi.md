@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteAssistantsAgentchecklist**](#DeleteAssistantsAgentchecklist) | **Delete** /api/v2/assistants/agentchecklists/{agentChecklistId} | Delete an agent checklist |
 | [**GetAssistant**](#GetAssistant) | **Get** /api/v2/assistants/{assistantId} | Get an assistant. |
 | [**GetAssistantQueue**](#GetAssistantQueue) | **Get** /api/v2/assistants/{assistantId}/queues/{queueId} | Get queue Information for an assistant. |
+| [**GetAssistantQueueUsersJob**](#GetAssistantQueueUsersJob) | **Get** /api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs/{jobId} | Get job details. |
 | [**GetAssistantQueues**](#GetAssistantQueues) | **Get** /api/v2/assistants/{assistantId}/queues | Get all the queues associated with an assistant. |
 | [**GetAssistants**](#GetAssistants) | **Get** /api/v2/assistants | Get all assistants. |
 | [**GetAssistantsAgentchecklist**](#GetAssistantsAgentchecklist) | **Get** /api/v2/assistants/agentchecklists/{agentChecklistId} | Get an agent checklist |
@@ -22,6 +23,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchAssistantQueues**](#PatchAssistantQueues) | **Patch** /api/v2/assistants/{assistantId}/queues | Update Queues for an Assistant. |
 | [**PostAssistantQueueUsersBulkAdd**](#PostAssistantQueueUsersBulkAdd) | **Post** /api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/add | Bulk add users to assistant-queue (requires manual assignment mode). |
 | [**PostAssistantQueueUsersBulkRemove**](#PostAssistantQueueUsersBulkRemove) | **Post** /api/v2/assistants/{assistantId}/queues/{queueId}/users/bulk/remove | Bulk remove users from assistant-queue (requires manual assignment mode). |
+| [**PostAssistantQueueUsersJobs**](#PostAssistantQueueUsersJobs) | **Post** /api/v2/assistants/{assistantId}/queues/{queueId}/users/jobs | Start a new job to assistant-queue. |
 | [**PostAssistantQueueUsersQuery**](#PostAssistantQueueUsersQuery) | **Post** /api/v2/assistants/{assistantId}/queues/{queueId}/users/query | Query for users in the assistant-queue (requires manual assignment mode). |
 | [**PostAssistants**](#PostAssistants) | **Post** /api/v2/assistants | Create an Assistant. |
 | [**PostAssistantsAgentchecklists**](#PostAssistantsAgentchecklists) | **Post** /api/v2/assistants/agentchecklists | Create an agent checklist |
@@ -406,6 +408,72 @@ namespace Example
 ### Return type
 
 [**AssistantQueue**](AssistantQueue)
+
+
+## GetAssistantQueueUsersJob
+
+> [**AssistantQueueUsersJobsResponse**](AssistantQueueUsersJobsResponse) GetAssistantQueueUsersJob (string assistantId, string queueId, string jobId)
+
+
+Get job details.
+
+Requires ANY permissions: 
+
+* assistants:queueUserJob:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetAssistantQueueUsersJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+            var assistantId = assistantId_example;  // string | Assistant ID
+            var queueId = queueId_example;  // string | Queue ID
+            var jobId = jobId_example;  // string | Job ID
+
+            try
+            { 
+                // Get job details.
+                AssistantQueueUsersJobsResponse result = apiInstance.GetAssistantQueueUsersJob(assistantId, queueId, jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.GetAssistantQueueUsersJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assistantId** | **string**| Assistant ID |  |
+| **queueId** | **string**| Queue ID |  |
+| **jobId** | **string**| Job ID |  |
+
+### Return type
+
+[**AssistantQueueUsersJobsResponse**](AssistantQueueUsersJobsResponse)
 
 
 ## GetAssistantQueues
@@ -1073,6 +1141,72 @@ namespace Example
 [**BulkResponse**](BulkResponse)
 
 
+## PostAssistantQueueUsersJobs
+
+> [**AssistantQueueUsersJobsResponse**](AssistantQueueUsersJobsResponse) PostAssistantQueueUsersJobs (string assistantId, string queueId, AssistantQueueUsersJobsRequest body)
+
+
+Start a new job to assistant-queue.
+
+Requires ANY permissions: 
+
+* assistants:queueUserJob:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAssistantQueueUsersJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AgentAssistantsApi();
+            var assistantId = assistantId_example;  // string | Assistant ID
+            var queueId = queueId_example;  // string | Queue ID
+            var body = new AssistantQueueUsersJobsRequest(); // AssistantQueueUsersJobsRequest | 
+
+            try
+            { 
+                // Start a new job to assistant-queue.
+                AssistantQueueUsersJobsResponse result = apiInstance.PostAssistantQueueUsersJobs(assistantId, queueId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AgentAssistantsApi.PostAssistantQueueUsersJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **assistantId** | **string**| Assistant ID |  |
+| **queueId** | **string**| Queue ID |  |
+| **body** | [**AssistantQueueUsersJobsRequest**](AssistantQueueUsersJobsRequest)|  |  |
+
+### Return type
+
+[**AssistantQueueUsersJobsResponse**](AssistantQueueUsersJobsResponse)
+
+
 ## PostAssistantQueueUsersQuery
 
 > [**AssistantQueueUsersQueryResponse**](AssistantQueueUsersQueryResponse) PostAssistantQueueUsersQuery (string assistantId, string queueId, AssistantQueueUsersQueryRequest body, List<string> expand = null)
@@ -1395,4 +1529,4 @@ namespace Example
 [**AgentChecklist**](AgentChecklist)
 
 
-_PureCloudPlatform.Client.V2 252.1.0_
+_PureCloudPlatform.Client.V2 253.0.0_

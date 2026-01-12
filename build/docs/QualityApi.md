@@ -13,6 +13,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteQualityForm**](#DeleteQualityForm) | **Delete** /api/v2/quality/forms/{formId} | Delete an evaluation form. |
 | [**DeleteQualityFormsEvaluation**](#DeleteQualityFormsEvaluation) | **Delete** /api/v2/quality/forms/evaluations/{formId} | Delete an evaluation form. |
 | [**DeleteQualityFormsSurvey**](#DeleteQualityFormsSurvey) | **Delete** /api/v2/quality/forms/surveys/{formId} | Delete a survey form. |
+| [**DeleteQualityProgramAgentscoringrule**](#DeleteQualityProgramAgentscoringrule) | **Delete** /api/v2/quality/programs/{programId}/agentscoringrules/{ruleId} | Delete an Agent Scoring Rule |
 | [**GetAnalyticsEvaluationsAggregatesJob**](#GetAnalyticsEvaluationsAggregatesJob) | **Get** /api/v2/analytics/evaluations/aggregates/jobs/{jobId} | Get status for async query for evaluation aggregates |
 | [**GetAnalyticsEvaluationsAggregatesJobResults**](#GetAnalyticsEvaluationsAggregatesJobResults) | **Get** /api/v2/analytics/evaluations/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetAnalyticsSurveysAggregatesJob**](#GetAnalyticsSurveysAggregatesJob) | **Get** /api/v2/analytics/surveys/aggregates/jobs/{jobId} | Get status for async query for survey aggregates |
@@ -38,6 +39,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityFormsSurveys**](#GetQualityFormsSurveys) | **Get** /api/v2/quality/forms/surveys | Get the list of survey forms. If you set \&quot;expand&#x3D;publishHistory\&quot;, then you will be able to get published versions for each corresponding survey form. |
 | [**GetQualityFormsSurveysBulk**](#GetQualityFormsSurveysBulk) | **Get** /api/v2/quality/forms/surveys/bulk | Retrieve a list of survey forms by their ids |
 | [**GetQualityFormsSurveysBulkContexts**](#GetQualityFormsSurveysBulkContexts) | **Get** /api/v2/quality/forms/surveys/bulk/contexts | Retrieve a list of the latest form versions by context ids |
+| [**GetQualityProgramAgentscoringrule**](#GetQualityProgramAgentscoringrule) | **Get** /api/v2/quality/programs/{programId}/agentscoringrules/{ruleId} | Get an Agent Scoring Rule |
+| [**GetQualityProgramAgentscoringrules**](#GetQualityProgramAgentscoringrules) | **Get** /api/v2/quality/programs/{programId}/agentscoringrules | Get Agent Scoring Rules for a program |
 | [**GetQualityPublishedform**](#GetQualityPublishedform) | **Get** /api/v2/quality/publishedforms/{formId} | Get the published evaluation forms. |
 | [**GetQualityPublishedforms**](#GetQualityPublishedforms) | **Get** /api/v2/quality/publishedforms | Get the published evaluation forms. |
 | [**GetQualityPublishedformsEvaluation**](#GetQualityPublishedformsEvaluation) | **Get** /api/v2/quality/publishedforms/evaluations/{formId} | Get the most recent published version of an evaluation form. |
@@ -59,6 +62,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostQualityForms**](#PostQualityForms) | **Post** /api/v2/quality/forms | Create an evaluation form. |
 | [**PostQualityFormsEvaluations**](#PostQualityFormsEvaluations) | **Post** /api/v2/quality/forms/evaluations | Create an evaluation form. |
 | [**PostQualityFormsSurveys**](#PostQualityFormsSurveys) | **Post** /api/v2/quality/forms/surveys | Create a survey form. |
+| [**PostQualityProgramAgentscoringrules**](#PostQualityProgramAgentscoringrules) | **Post** /api/v2/quality/programs/{programId}/agentscoringrules | Create an Agent Scoring Rule |
 | [**PostQualityPublishedforms**](#PostQualityPublishedforms) | **Post** /api/v2/quality/publishedforms | Publish an evaluation form. |
 | [**PostQualityPublishedformsEvaluations**](#PostQualityPublishedformsEvaluations) | **Post** /api/v2/quality/publishedforms/evaluations | Publish an evaluation form. |
 | [**PostQualityPublishedformsSurveys**](#PostQualityPublishedformsSurveys) | **Post** /api/v2/quality/publishedforms/surveys | Publish a survey form. |
@@ -69,6 +73,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutQualityFormsEvaluation**](#PutQualityFormsEvaluation) | **Put** /api/v2/quality/forms/evaluations/{formId} | Update an evaluation form. |
 | [**PutQualityFormsEvaluationAiscoringSettings**](#PutQualityFormsEvaluationAiscoringSettings) | **Put** /api/v2/quality/forms/evaluations/{formId}/aiscoring/settings | Update the AI Scoring settings of an evaluation form. |
 | [**PutQualityFormsSurvey**](#PutQualityFormsSurvey) | **Put** /api/v2/quality/forms/surveys/{formId} | Update a survey form. |
+| [**PutQualityProgramAgentscoringrule**](#PutQualityProgramAgentscoringrule) | **Put** /api/v2/quality/programs/{programId}/agentscoringrules/{ruleId} | Update an Agent Scoring Rule |
 | [**PutQualitySurveysScorable**](#PutQualitySurveysScorable) | **Put** /api/v2/quality/surveys/scorable | Update a survey as an end-customer, for the purposes of scoring it. |
 
 
@@ -509,6 +514,69 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **formId** | **string**| Form ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteQualityProgramAgentscoringrule
+
+> void DeleteQualityProgramAgentscoringrule (string programId, string ruleId)
+
+
+Delete an Agent Scoring Rule
+
+Requires ANY permissions: 
+
+* quality:scoringRule:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteQualityProgramAgentscoringruleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var programId = programId_example;  // string | Program ID from Speech and Text Analytics
+            var ruleId = ruleId_example;  // string | Agent Scoring Rule ID
+
+            try
+            { 
+                // Delete an Agent Scoring Rule
+                apiInstance.DeleteQualityProgramAgentscoringrule(programId, ruleId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.DeleteQualityProgramAgentscoringrule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| Program ID from Speech and Text Analytics |  |
+| **ruleId** | **string**| Agent Scoring Rule ID |  |
 
 ### Return type
 
@@ -1528,7 +1596,7 @@ namespace Example
 
 ## GetQualityFormVersions
 
-> [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing) GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null)
+> [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing) GetQualityFormVersions (string formId, int? pageSize = null, int? pageNumber = null, string sortOrder = null)
 
 :::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
 This resource has been deprecated
@@ -1565,11 +1633,12 @@ namespace Example
             var formId = formId_example;  // string | Form ID
             var pageSize = 56;  // int? | Page size (optional)  (default to 25)
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var sortOrder = sortOrder_example;  // string | Sort order (optional)  (default to "asc")
 
             try
             { 
                 // Gets all the revisions for a specific evaluation.
-                EvaluationFormResponseEntityListing result = apiInstance.GetQualityFormVersions(formId, pageSize, pageNumber);
+                EvaluationFormResponseEntityListing result = apiInstance.GetQualityFormVersions(formId, pageSize, pageNumber, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1589,6 +1658,7 @@ namespace Example
 | **formId** | **string**| Form ID |  |
 | **pageSize** | **int?**| Page size | [optional] [default to 25] |
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **sortOrder** | **string**| Sort order | [optional] [default to "asc"] |
 
 ### Return type
 
@@ -2272,6 +2342,132 @@ namespace Example
 ### Return type
 
 [**List<SurveyForm>**](SurveyForm)
+
+
+## GetQualityProgramAgentscoringrule
+
+> [**AgentScoringRule**](AgentScoringRule) GetQualityProgramAgentscoringrule (string programId, string ruleId)
+
+
+Get an Agent Scoring Rule
+
+Requires ANY permissions: 
+
+* quality:scoringRule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityProgramAgentscoringruleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var programId = programId_example;  // string | Program ID from Speech and Text Analytics
+            var ruleId = ruleId_example;  // string | Agent Scoring Rule ID
+
+            try
+            { 
+                // Get an Agent Scoring Rule
+                AgentScoringRule result = apiInstance.GetQualityProgramAgentscoringrule(programId, ruleId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityProgramAgentscoringrule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| Program ID from Speech and Text Analytics |  |
+| **ruleId** | **string**| Agent Scoring Rule ID |  |
+
+### Return type
+
+[**AgentScoringRule**](AgentScoringRule)
+
+
+## GetQualityProgramAgentscoringrules
+
+> [**AgentScoringRuleEntityListing**](AgentScoringRuleEntityListing) GetQualityProgramAgentscoringrules (string programId)
+
+
+Get Agent Scoring Rules for a program
+
+Requires ANY permissions: 
+
+* quality:scoringRule:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityProgramAgentscoringrulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var programId = programId_example;  // string | Program ID from Speech and Text Analytics
+
+            try
+            { 
+                // Get Agent Scoring Rules for a program
+                AgentScoringRuleEntityListing result = apiInstance.GetQualityProgramAgentscoringrules(programId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityProgramAgentscoringrules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| Program ID from Speech and Text Analytics |  |
+
+### Return type
+
+[**AgentScoringRuleEntityListing**](AgentScoringRuleEntityListing)
 
 
 ## GetQualityPublishedform
@@ -3606,6 +3802,72 @@ namespace Example
 [**SurveyForm**](SurveyForm)
 
 
+## PostQualityProgramAgentscoringrules
+
+> [**AgentScoringRule**](AgentScoringRule) PostQualityProgramAgentscoringrules (string programId, AgentScoringRule body)
+
+
+Create an Agent Scoring Rule
+
+Creates a new Agent Scoring Rule for AI-powered automated evaluation of agent interactions. The rule defines how interactions should be selected and evaluated using the specified evaluation form.
+
+Requires ANY permissions: 
+
+* quality:scoringRule:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostQualityProgramAgentscoringrulesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var programId = programId_example;  // string | Program ID from Speech and Text Analytics
+            var body = new AgentScoringRule(); // AgentScoringRule | Agent Scoring Rule
+
+            try
+            { 
+                // Create an Agent Scoring Rule
+                AgentScoringRule result = apiInstance.PostQualityProgramAgentscoringrules(programId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostQualityProgramAgentscoringrules: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| Program ID from Speech and Text Analytics |  |
+| **body** | [**AgentScoringRule**](AgentScoringRule)| Agent Scoring Rule |  |
+
+### Return type
+
+[**AgentScoringRule**](AgentScoringRule)
+
+
 ## PostQualityPublishedforms
 
 > [**EvaluationFormResponse**](EvaluationFormResponse) PostQualityPublishedforms (PublishForm body)
@@ -4251,6 +4513,72 @@ namespace Example
 [**SurveyForm**](SurveyForm)
 
 
+## PutQualityProgramAgentscoringrule
+
+> [**AgentScoringRule**](AgentScoringRule) PutQualityProgramAgentscoringrule (string programId, string ruleId, AgentScoringRule body)
+
+
+Update an Agent Scoring Rule
+
+Requires ANY permissions: 
+
+* quality:scoringRule:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutQualityProgramAgentscoringruleExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var programId = programId_example;  // string | Program ID from Speech and Text Analytics
+            var ruleId = ruleId_example;  // string | Agent Scoring Rule ID
+            var body = new AgentScoringRule(); // AgentScoringRule | Agent Scoring Rule
+
+            try
+            { 
+                // Update an Agent Scoring Rule
+                AgentScoringRule result = apiInstance.PutQualityProgramAgentscoringrule(programId, ruleId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PutQualityProgramAgentscoringrule: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **programId** | **string**| Program ID from Speech and Text Analytics |  |
+| **ruleId** | **string**| Agent Scoring Rule ID |  |
+| **body** | [**AgentScoringRule**](AgentScoringRule)| Agent Scoring Rule |  |
+
+### Return type
+
+[**AgentScoringRule**](AgentScoringRule)
+
+
 ## PutQualitySurveysScorable
 
 > [**ScorableSurvey**](ScorableSurvey) PutQualitySurveysScorable (string customerSurveyUrl, ScorableSurvey body)
@@ -4308,4 +4636,4 @@ namespace Example
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatform.Client.V2 252.1.0_
+_PureCloudPlatform.Client.V2 253.0.0_

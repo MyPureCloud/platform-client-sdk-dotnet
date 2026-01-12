@@ -205,13 +205,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">Type of the element. (required).</param>
         /// <param name="Count">Count of all journeys that include this element. (required).</param>
         /// <param name="Flows">Details of flows involved in journeys that include this element. (required).</param>
+        /// <param name="FlowMilestone">The flow milestone, set if the element type is Milestone..</param>
+        /// <param name="FlowOutcome">The flow outcome, set if the element type is Outcome or Milestone..</param>
         /// <param name="FlowOutcomeValue">The value of the flow outcome, if the element type is Outcome..</param>
-        public FlowPathsElement(string ParentId = null, TypeEnum? Type = null, int? Count = null, List<FlowPathsFlowDetails> Flows = null, FlowOutcomeValueEnum? FlowOutcomeValue = null)
+        public FlowPathsElement(string ParentId = null, TypeEnum? Type = null, int? Count = null, List<FlowPathsFlowDetails> Flows = null, AddressableEntityRef FlowMilestone = null, AddressableEntityRef FlowOutcome = null, FlowOutcomeValueEnum? FlowOutcomeValue = null)
         {
             this.ParentId = ParentId;
             this.Type = Type;
             this.Count = Count;
             this.Flows = Flows;
+            this.FlowMilestone = FlowMilestone;
+            this.FlowOutcome = FlowOutcome;
             this.FlowOutcomeValue = FlowOutcomeValue;
             
         }
@@ -247,14 +251,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
-
-
         /// <summary>
         /// The flow milestone, set if the element type is Milestone.
         /// </summary>
         /// <value>The flow milestone, set if the element type is Milestone.</value>
         [DataMember(Name="flowMilestone", EmitDefaultValue=false)]
-        public AddressableEntityRef FlowMilestone { get; private set; }
+        public AddressableEntityRef FlowMilestone { get; set; }
 
 
 
@@ -263,7 +265,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The flow outcome, set if the element type is Outcome or Milestone.</value>
         [DataMember(Name="flowOutcome", EmitDefaultValue=false)]
-        public AddressableEntityRef FlowOutcome { get; private set; }
+        public AddressableEntityRef FlowOutcome { get; set; }
+
+
 
 
         /// <summary>
@@ -279,9 +283,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
             sb.Append("  Flows: ").Append(Flows).Append("\n");
-            sb.Append("  FlowOutcomeValue: ").Append(FlowOutcomeValue).Append("\n");
             sb.Append("  FlowMilestone: ").Append(FlowMilestone).Append("\n");
             sb.Append("  FlowOutcome: ").Append(FlowOutcome).Append("\n");
+            sb.Append("  FlowOutcomeValue: ").Append(FlowOutcomeValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -343,11 +347,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Flows.SequenceEqual(other.Flows)
                 ) &&
                 (
-                    this.FlowOutcomeValue == other.FlowOutcomeValue ||
-                    this.FlowOutcomeValue != null &&
-                    this.FlowOutcomeValue.Equals(other.FlowOutcomeValue)
-                ) &&
-                (
                     this.FlowMilestone == other.FlowMilestone ||
                     this.FlowMilestone != null &&
                     this.FlowMilestone.Equals(other.FlowMilestone)
@@ -356,6 +355,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FlowOutcome == other.FlowOutcome ||
                     this.FlowOutcome != null &&
                     this.FlowOutcome.Equals(other.FlowOutcome)
+                ) &&
+                (
+                    this.FlowOutcomeValue == other.FlowOutcomeValue ||
+                    this.FlowOutcomeValue != null &&
+                    this.FlowOutcomeValue.Equals(other.FlowOutcomeValue)
                 );
         }
 
@@ -382,14 +386,14 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Flows != null)
                     hash = hash * 59 + this.Flows.GetHashCode();
 
-                if (this.FlowOutcomeValue != null)
-                    hash = hash * 59 + this.FlowOutcomeValue.GetHashCode();
-
                 if (this.FlowMilestone != null)
                     hash = hash * 59 + this.FlowMilestone.GetHashCode();
 
                 if (this.FlowOutcome != null)
                     hash = hash * 59 + this.FlowOutcome.GetHashCode();
+
+                if (this.FlowOutcomeValue != null)
+                    hash = hash * 59 + this.FlowOutcomeValue.GetHashCode();
 
                 return hash;
             }

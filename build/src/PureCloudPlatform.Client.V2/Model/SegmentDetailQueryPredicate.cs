@@ -475,6 +475,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sipresponsecode,
             
             /// <summary>
+            /// Enum Snippetrecording for "snippetRecording"
+            /// </summary>
+            [EnumMember(Value = "snippetRecording")]
+            Snippetrecording,
+            
+            /// <summary>
             /// Enum Subject for "subject"
             /// </summary>
             [EnumMember(Value = "subject")]

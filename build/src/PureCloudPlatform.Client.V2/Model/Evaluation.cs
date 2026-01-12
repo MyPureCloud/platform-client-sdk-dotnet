@@ -119,6 +119,12 @@ namespace PureCloudPlatform.Client.V2.Model
             InternalMessage,
             
             /// <summary>
+            /// Enum ScreenMonitoring for "SCREEN_MONITORING"
+            /// </summary>
+            [EnumMember(Value = "SCREEN_MONITORING")]
+            ScreenMonitoring,
+            
+            /// <summary>
             /// Enum SocialExpression for "SOCIAL_EXPRESSION"
             /// </summary>
             [EnumMember(Value = "SOCIAL_EXPRESSION")]

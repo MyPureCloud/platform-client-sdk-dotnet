@@ -30,12 +30,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateAssigned">Date when the segment was assigned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="DateForUnassignment">Date indicating when a segment is scheduled to be unassigned. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="Segment">The segment the assignment is for. (required).</param>
+        /// <param name="ExternalContact">External contact of the customer to which the segment is assigned. (required).</param>
         /// <param name="Session">For session-scoped segments, the session for which the segment was assigned..</param>
-        public SegmentAssignment(DateTime? DateAssigned = null, DateTime? DateForUnassignment = null, SegmentAssignmentSegment Segment = null, SegmentAssignmentSession Session = null)
+        public SegmentAssignment(DateTime? DateAssigned = null, DateTime? DateForUnassignment = null, SegmentAssignmentSegment Segment = null, AddressableEntityRef ExternalContact = null, SegmentAssignmentSession Session = null)
         {
             this.DateAssigned = DateAssigned;
             this.DateForUnassignment = DateForUnassignment;
             this.Segment = Segment;
+            this.ExternalContact = ExternalContact;
             this.Session = Session;
             
         }
@@ -70,20 +72,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// External contact of the customer to which the segment is assigned.
+        /// </summary>
+        /// <value>External contact of the customer to which the segment is assigned.</value>
+        [DataMember(Name="externalContact", EmitDefaultValue=false)]
+        public AddressableEntityRef ExternalContact { get; set; }
+
+
+
+        /// <summary>
         /// For session-scoped segments, the session for which the segment was assigned.
         /// </summary>
         /// <value>For session-scoped segments, the session for which the segment was assigned.</value>
         [DataMember(Name="session", EmitDefaultValue=false)]
         public SegmentAssignmentSession Session { get; set; }
-
-
-
-        /// <summary>
-        /// External contact of the customer to which the segment is assigned.
-        /// </summary>
-        /// <value>External contact of the customer to which the segment is assigned.</value>
-        [DataMember(Name="externalContact", EmitDefaultValue=false)]
-        public AddressableEntityRef ExternalContact { get; private set; }
 
 
         /// <summary>
@@ -98,8 +100,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateAssigned: ").Append(DateAssigned).Append("\n");
             sb.Append("  DateForUnassignment: ").Append(DateForUnassignment).Append("\n");
             sb.Append("  Segment: ").Append(Segment).Append("\n");
-            sb.Append("  Session: ").Append(Session).Append("\n");
             sb.Append("  ExternalContact: ").Append(ExternalContact).Append("\n");
+            sb.Append("  Session: ").Append(Session).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -156,14 +158,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Segment.Equals(other.Segment)
                 ) &&
                 (
-                    this.Session == other.Session ||
-                    this.Session != null &&
-                    this.Session.Equals(other.Session)
-                ) &&
-                (
                     this.ExternalContact == other.ExternalContact ||
                     this.ExternalContact != null &&
                     this.ExternalContact.Equals(other.ExternalContact)
+                ) &&
+                (
+                    this.Session == other.Session ||
+                    this.Session != null &&
+                    this.Session.Equals(other.Session)
                 );
         }
 
@@ -187,11 +189,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Segment != null)
                     hash = hash * 59 + this.Segment.GetHashCode();
 
-                if (this.Session != null)
-                    hash = hash * 59 + this.Session.GetHashCode();
-
                 if (this.ExternalContact != null)
                     hash = hash * 59 + this.ExternalContact.GetHashCode();
+
+                if (this.Session != null)
+                    hash = hash * 59 + this.Session.GetHashCode();
 
                 return hash;
             }

@@ -21,15 +21,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ConversationSummaryReason" /> class.
         /// </summary>
+        /// <param name="Confidence">The AI confidence value..</param>
         /// <param name="Text">The text of the reason..</param>
         /// <param name="Description">The description..</param>
-        public ConversationSummaryReason(string Text = null, string Description = null)
+        public ConversationSummaryReason(float? Confidence = null, string Text = null, string Description = null)
         {
+            this.Confidence = Confidence;
             this.Text = Text;
             this.Description = Description;
             
         }
         
+
+
+        /// <summary>
+        /// The AI confidence value.
+        /// </summary>
+        /// <value>The AI confidence value.</value>
+        [DataMember(Name="confidence", EmitDefaultValue=false)]
+        public float? Confidence { get; set; }
+
 
 
         /// <summary>
@@ -49,15 +60,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Description { get; set; }
 
 
-
-        /// <summary>
-        /// The AI confidence value.
-        /// </summary>
-        /// <value>The AI confidence value.</value>
-        [DataMember(Name="confidence", EmitDefaultValue=false)]
-        public float? Confidence { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -67,9 +69,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ConversationSummaryReason {\n");
 
+            sb.Append("  Confidence: ").Append(Confidence).Append("\n");
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  Confidence: ").Append(Confidence).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -111,6 +113,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Confidence == other.Confidence ||
+                    this.Confidence != null &&
+                    this.Confidence.Equals(other.Confidence)
+                ) &&
+                (
                     this.Text == other.Text ||
                     this.Text != null &&
                     this.Text.Equals(other.Text)
@@ -119,11 +126,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
-                ) &&
-                (
-                    this.Confidence == other.Confidence ||
-                    this.Confidence != null &&
-                    this.Confidence.Equals(other.Confidence)
                 );
         }
 
@@ -138,14 +140,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Confidence != null)
+                    hash = hash * 59 + this.Confidence.GetHashCode();
+
                 if (this.Text != null)
                     hash = hash * 59 + this.Text.GetHashCode();
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
-
-                if (this.Confidence != null)
-                    hash = hash * 59 + this.Confidence.GetHashCode();
 
                 return hash;
             }

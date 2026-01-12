@@ -90,17 +90,28 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="FlowPathsFlowDetails" /> class.
         /// </summary>
+        /// <param name="Flow">The identifier of the flow. (required).</param>
         /// <param name="Version">The version of the flow. (required).</param>
         /// <param name="Type">The type of the flow. (required).</param>
         /// <param name="Count">Count of all journeys that include this element in the given flow. (required).</param>
-        public FlowPathsFlowDetails(string Version = null, TypeEnum? Type = null, int? Count = null)
+        public FlowPathsFlowDetails(AddressableEntityRef Flow = null, string Version = null, TypeEnum? Type = null, int? Count = null)
         {
+            this.Flow = Flow;
             this.Version = Version;
             this.Type = Type;
             this.Count = Count;
             
         }
         
+
+
+        /// <summary>
+        /// The identifier of the flow.
+        /// </summary>
+        /// <value>The identifier of the flow.</value>
+        [DataMember(Name="flow", EmitDefaultValue=false)]
+        public AddressableEntityRef Flow { get; set; }
+
 
 
         /// <summary>
@@ -122,15 +133,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? Count { get; set; }
 
 
-
-        /// <summary>
-        /// The identifier of the flow.
-        /// </summary>
-        /// <value>The identifier of the flow.</value>
-        [DataMember(Name="flow", EmitDefaultValue=false)]
-        public AddressableEntityRef Flow { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -140,10 +142,10 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class FlowPathsFlowDetails {\n");
 
+            sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Count: ").Append(Count).Append("\n");
-            sb.Append("  Flow: ").Append(Flow).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -185,6 +187,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.Flow == other.Flow ||
+                    this.Flow != null &&
+                    this.Flow.Equals(other.Flow)
+                ) &&
+                (
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
@@ -198,11 +205,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Count == other.Count ||
                     this.Count != null &&
                     this.Count.Equals(other.Count)
-                ) &&
-                (
-                    this.Flow == other.Flow ||
-                    this.Flow != null &&
-                    this.Flow.Equals(other.Flow)
                 );
         }
 
@@ -217,6 +219,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Flow != null)
+                    hash = hash * 59 + this.Flow.GetHashCode();
+
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
 
@@ -225,9 +230,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Count != null)
                     hash = hash * 59 + this.Count.GetHashCode();
-
-                if (this.Flow != null)
-                    hash = hash * 59 + this.Flow.GetHashCode();
 
                 return hash;
             }

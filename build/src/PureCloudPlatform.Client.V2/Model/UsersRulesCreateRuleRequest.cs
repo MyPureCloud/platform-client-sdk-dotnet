@@ -37,7 +37,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Learning for "Learning"
             /// </summary>
             [EnumMember(Value = "Learning")]
-            Learning
+            Learning,
+            
+            /// <summary>
+            /// Enum Activityplan for "ActivityPlan"
+            /// </summary>
+            [EnumMember(Value = "ActivityPlan")]
+            Activityplan
         }
         /// <summary>
         /// The type of the rule

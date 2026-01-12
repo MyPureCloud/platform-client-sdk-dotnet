@@ -77,7 +77,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DoNotChangeManuallyEditedShifts">Instructs the scheduler whether it is allowed to change manually edited shifts (required).</param>
         /// <param name="ActivitySmoothingType">Overrides the default BU level activity smoothing type for this reschedule run.</param>
         /// <param name="InduceScheduleVariability">Overrides the default BU level induce schedule variability setting for this reschedule run.</param>
-        public BuRescheduleRequest(DateTime? StartDate = null, DateTime? EndDate = null, List<string> AgentIds = null, List<string> ActivityCodeIds = null, List<string> ManagementUnitIds = null, bool? DoNotChangeWeeklyPaidTime = null, bool? DoNotChangeDailyPaidTime = null, bool? DoNotChangeShiftStartTimes = null, bool? DoNotChangeManuallyEditedShifts = null, ActivitySmoothingTypeEnum? ActivitySmoothingType = null, bool? InduceScheduleVariability = null)
+        /// <param name="UseUnavailableTimesSnapshot">Whether to use original unavailable times from schedule generation or latest saved unavailable times for this reschedule run.</param>
+        public BuRescheduleRequest(DateTime? StartDate = null, DateTime? EndDate = null, List<string> AgentIds = null, List<string> ActivityCodeIds = null, List<string> ManagementUnitIds = null, bool? DoNotChangeWeeklyPaidTime = null, bool? DoNotChangeDailyPaidTime = null, bool? DoNotChangeShiftStartTimes = null, bool? DoNotChangeManuallyEditedShifts = null, ActivitySmoothingTypeEnum? ActivitySmoothingType = null, bool? InduceScheduleVariability = null, bool? UseUnavailableTimesSnapshot = null)
         {
             this.StartDate = StartDate;
             this.EndDate = EndDate;
@@ -90,6 +91,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DoNotChangeManuallyEditedShifts = DoNotChangeManuallyEditedShifts;
             this.ActivitySmoothingType = ActivitySmoothingType;
             this.InduceScheduleVariability = InduceScheduleVariability;
+            this.UseUnavailableTimesSnapshot = UseUnavailableTimesSnapshot;
             
         }
         
@@ -186,6 +188,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? InduceScheduleVariability { get; set; }
 
 
+
+        /// <summary>
+        /// Whether to use original unavailable times from schedule generation or latest saved unavailable times for this reschedule run
+        /// </summary>
+        /// <value>Whether to use original unavailable times from schedule generation or latest saved unavailable times for this reschedule run</value>
+        [DataMember(Name="useUnavailableTimesSnapshot", EmitDefaultValue=false)]
+        public bool? UseUnavailableTimesSnapshot { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -206,6 +217,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DoNotChangeManuallyEditedShifts: ").Append(DoNotChangeManuallyEditedShifts).Append("\n");
             sb.Append("  ActivitySmoothingType: ").Append(ActivitySmoothingType).Append("\n");
             sb.Append("  InduceScheduleVariability: ").Append(InduceScheduleVariability).Append("\n");
+            sb.Append("  UseUnavailableTimesSnapshot: ").Append(UseUnavailableTimesSnapshot).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -300,6 +312,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InduceScheduleVariability == other.InduceScheduleVariability ||
                     this.InduceScheduleVariability != null &&
                     this.InduceScheduleVariability.Equals(other.InduceScheduleVariability)
+                ) &&
+                (
+                    this.UseUnavailableTimesSnapshot == other.UseUnavailableTimesSnapshot ||
+                    this.UseUnavailableTimesSnapshot != null &&
+                    this.UseUnavailableTimesSnapshot.Equals(other.UseUnavailableTimesSnapshot)
                 );
         }
 
@@ -346,6 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InduceScheduleVariability != null)
                     hash = hash * 59 + this.InduceScheduleVariability.GetHashCode();
+
+                if (this.UseUnavailableTimesSnapshot != null)
+                    hash = hash * 59 + this.UseUnavailableTimesSnapshot.GetHashCode();
 
                 return hash;
             }

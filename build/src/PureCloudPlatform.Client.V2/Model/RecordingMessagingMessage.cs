@@ -148,6 +148,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Form,
             
             /// <summary>
+            /// Enum Richlink for "RichLink"
+            /// </summary>
+            [EnumMember(Value = "RichLink")]
+            Richlink,
+            
+            /// <summary>
             /// Enum Roadsideassistance for "RoadsideAssistance"
             /// </summary>
             [EnumMember(Value = "RoadsideAssistance")]

@@ -153,6 +153,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="UserInput">The chosen user input associated with this reporting turn..</param>
         /// <param name="BotPrompts">The bot prompts associated with this reporting turn..</param>
         /// <param name="SessionId">The bot session ID that this reporting turn is grouped under..</param>
+        /// <param name="Conversation">The conversation details, across potentially multiple Bot Flow sessions..</param>
         /// <param name="AskAction">The bot flow &#39;ask&#39; action associated with this reporting turn (e.g. AskForIntent)..</param>
         /// <param name="Intent">The intent and associated slots detected during this reporting turn..</param>
         /// <param name="Knowledge">The knowledge data captured during this reporting turn..</param>
@@ -161,11 +162,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCompleted">Timestamp indicating when the original turn was completed. Note: The &#39;interval&#39; query param uses this timestamp to filter the output. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="AskActionResult">Result of the bot flow &#39;ask&#39; action..</param>
         /// <param name="SessionEndDetails">The details related to end of bot flow session..</param>
-        public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, ReportingTurnKnowledgeEvents KnowledgeBaseEvents = null, DateTime? DateCreated = null, DateTime? DateCompleted = null, AskActionResultEnum? AskActionResult = null, SessionEndDetails SessionEndDetails = null)
+        public ReportingTurn(string UserInput = null, List<string> BotPrompts = null, string SessionId = null, AddressableEntityRef Conversation = null, ReportingTurnAction AskAction = null, ReportingTurnIntent Intent = null, ReportingTurnKnowledge Knowledge = null, ReportingTurnKnowledgeEvents KnowledgeBaseEvents = null, DateTime? DateCreated = null, DateTime? DateCompleted = null, AskActionResultEnum? AskActionResult = null, SessionEndDetails SessionEndDetails = null)
         {
             this.UserInput = UserInput;
             this.BotPrompts = BotPrompts;
             this.SessionId = SessionId;
+            this.Conversation = Conversation;
             this.AskAction = AskAction;
             this.Intent = Intent;
             this.Knowledge = Knowledge;
@@ -203,6 +205,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The bot session ID that this reporting turn is grouped under.</value>
         [DataMember(Name="sessionId", EmitDefaultValue=false)]
         public string SessionId { get; set; }
+
+
+
+        /// <summary>
+        /// The conversation details, across potentially multiple Bot Flow sessions.
+        /// </summary>
+        /// <value>The conversation details, across potentially multiple Bot Flow sessions.</value>
+        [DataMember(Name="conversation", EmitDefaultValue=false)]
+        public AddressableEntityRef Conversation { get; set; }
 
 
 
@@ -270,15 +281,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public SessionEndDetails SessionEndDetails { get; set; }
 
 
-
-        /// <summary>
-        /// The conversation details, across potentially multiple Bot Flow sessions.
-        /// </summary>
-        /// <value>The conversation details, across potentially multiple Bot Flow sessions.</value>
-        [DataMember(Name="conversation", EmitDefaultValue=false)]
-        public AddressableEntityRef Conversation { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -291,6 +293,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  UserInput: ").Append(UserInput).Append("\n");
             sb.Append("  BotPrompts: ").Append(BotPrompts).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("  AskAction: ").Append(AskAction).Append("\n");
             sb.Append("  Intent: ").Append(Intent).Append("\n");
             sb.Append("  Knowledge: ").Append(Knowledge).Append("\n");
@@ -299,7 +302,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCompleted: ").Append(DateCompleted).Append("\n");
             sb.Append("  AskActionResult: ").Append(AskActionResult).Append("\n");
             sb.Append("  SessionEndDetails: ").Append(SessionEndDetails).Append("\n");
-            sb.Append("  Conversation: ").Append(Conversation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -356,6 +358,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SessionId.Equals(other.SessionId)
                 ) &&
                 (
+                    this.Conversation == other.Conversation ||
+                    this.Conversation != null &&
+                    this.Conversation.Equals(other.Conversation)
+                ) &&
+                (
                     this.AskAction == other.AskAction ||
                     this.AskAction != null &&
                     this.AskAction.Equals(other.AskAction)
@@ -394,11 +401,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SessionEndDetails == other.SessionEndDetails ||
                     this.SessionEndDetails != null &&
                     this.SessionEndDetails.Equals(other.SessionEndDetails)
-                ) &&
-                (
-                    this.Conversation == other.Conversation ||
-                    this.Conversation != null &&
-                    this.Conversation.Equals(other.Conversation)
                 );
         }
 
@@ -421,6 +423,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
+
+                if (this.Conversation != null)
+                    hash = hash * 59 + this.Conversation.GetHashCode();
 
                 if (this.AskAction != null)
                     hash = hash * 59 + this.AskAction.GetHashCode();
@@ -445,9 +450,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SessionEndDetails != null)
                     hash = hash * 59 + this.SessionEndDetails.GetHashCode();
-
-                if (this.Conversation != null)
-                    hash = hash * 59 + this.Conversation.GetHashCode();
 
                 return hash;
             }
