@@ -6,8 +6,8 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **UserId** | **string** | The unique channel-specific userId for the user | [optional] |
+| **UserId** | **string** | The unique channel-specific userId for the user. Max: 255 characters. | |
 
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

@@ -6,9 +6,9 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Ids** | [**List&lt;FacebookScopedId&gt;**](FacebookScopedId) | The set of scopedIds that this person has. Each scopedId is specific to a page or app that the user interacts with. | [optional] |
-| **DisplayName** | **string** | The displayName of this person&#39;s Facebook account. Roughly translates to user.first_name + &#39; &#39; + user.last_name in the Facebook API. | [optional] |
+| **Ids** | [**List&lt;FacebookScopedId&gt;**](FacebookScopedId) | The set of scopedIds that this person has. Each scopedId is specific to a page or app that the user interacts with. Max: 1 Id | |
+| **DisplayName** | **string** | The displayName of this person&#39;s Facebook account. Roughly translates to user.first_name + &#39; &#39; + user.last_name in the Facebook API. Max: 100 characters. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

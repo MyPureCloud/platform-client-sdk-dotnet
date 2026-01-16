@@ -52,6 +52,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchKnowledgeGuestSessionDocumentsSearchSearchId**](#PatchKnowledgeGuestSessionDocumentsSearchSearchId) | **Patch** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/{searchId} | Update search result. |
 | [**PatchKnowledgeKnowledgebase**](#PatchKnowledgeKnowledgebase) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Update knowledge base |
 | [**PatchKnowledgeKnowledgebaseCategory**](#PatchKnowledgeKnowledgebaseCategory) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId} | Update category |
+| [**PatchKnowledgeKnowledgebaseChunksSearchSearchId**](#PatchKnowledgeKnowledgebaseChunksSearchSearchId) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search/{searchId} | Register chunk search result. |
 | [**PatchKnowledgeKnowledgebaseDocument**](#PatchKnowledgeKnowledgebaseDocument) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId} | Update document. |
 | [**PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId**](#PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/feedback/{feedbackId} | Update feedback on a document |
 | [**PatchKnowledgeKnowledgebaseDocumentVariation**](#PatchKnowledgeKnowledgebaseDocumentVariation) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId}/variations/{documentVariationId} | Update a variation for a document. |
@@ -3200,6 +3201,71 @@ namespace Example
 [**CategoryResponse**](CategoryResponse)
 
 
+## PatchKnowledgeKnowledgebaseChunksSearchSearchId
+
+> void PatchKnowledgeKnowledgebaseChunksSearchSearchId (string knowledgeBaseId, string searchId, ChunkSearchRegisterRequest body = null)
+
+
+Register chunk search result.
+
+Requires ALL permissions: 
+
+* knowledge:knowledgebase:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeKnowledgebaseChunksSearchSearchIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeBaseId = knowledgeBaseId_example;  // string | Knowledge Base ID
+            var searchId = searchId_example;  // string | Unique identifier of search request
+            var body = new ChunkSearchRegisterRequest(); // ChunkSearchRegisterRequest |  (optional) 
+
+            try
+            { 
+                // Register chunk search result.
+                apiInstance.PatchKnowledgeKnowledgebaseChunksSearchSearchId(knowledgeBaseId, searchId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeKnowledgebaseChunksSearchSearchId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeBaseId** | **string**| Knowledge Base ID |  |
+| **searchId** | **string**| Unique identifier of search request |  |
+| **body** | [**ChunkSearchRegisterRequest**](ChunkSearchRegisterRequest)|  | [optional]  |
+
+### Return type
+
+void (empty response body)
+
+
 ## PatchKnowledgeKnowledgebaseDocument
 
 > [**KnowledgeDocumentResponse**](KnowledgeDocumentResponse) PatchKnowledgeKnowledgebaseDocument (string knowledgeBaseId, string documentId, KnowledgeDocumentReq body)
@@ -6260,4 +6326,4 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

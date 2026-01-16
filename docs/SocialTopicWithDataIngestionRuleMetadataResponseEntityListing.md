@@ -1,12 +1,12 @@
-# SocialTopicResponseEntityListing
+# SocialTopicWithDataIngestionRuleMetadataResponseEntityListing
 
-## ININ.PureCloudApi.Model.SocialTopicResponseEntityListing
+## ININ.PureCloudApi.Model.SocialTopicWithDataIngestionRuleMetadataResponseEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;SocialTopicResponse&gt;**](SocialTopicResponse) |  | [optional] |
+| **Entities** | [**List&lt;SocialTopicWithDataIngestionRuleMetadataResponse&gt;**](SocialTopicWithDataIngestionRuleMetadataResponse) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

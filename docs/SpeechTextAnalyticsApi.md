@@ -1213,7 +1213,7 @@ namespace Example
 
 ## GetSpeechandtextanalyticsProgramMappings
 
-> [**ProgramMappings**](ProgramMappings) GetSpeechandtextanalyticsProgramMappings (string programId)
+> [**TopicsDefinitionsProgramMappings**](TopicsDefinitionsProgramMappings) GetSpeechandtextanalyticsProgramMappings (string programId)
 
 
 Get Speech & Text Analytics program mappings to queues and flows by id
@@ -1249,7 +1249,7 @@ namespace Example
             try
             { 
                 // Get Speech & Text Analytics program mappings to queues and flows by id
-                ProgramMappings result = apiInstance.GetSpeechandtextanalyticsProgramMappings(programId);
+                TopicsDefinitionsProgramMappings result = apiInstance.GetSpeechandtextanalyticsProgramMappings(programId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1270,7 +1270,7 @@ namespace Example
 
 ### Return type
 
-[**ProgramMappings**](ProgramMappings)
+[**TopicsDefinitionsProgramMappings**](TopicsDefinitionsProgramMappings)
 
 
 ## GetSpeechandtextanalyticsProgramSettingsInsights
@@ -1531,7 +1531,7 @@ namespace Example
 
 ## GetSpeechandtextanalyticsProgramsMappings
 
-> [**ProgramsMappingsEntityListing**](ProgramsMappingsEntityListing) GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null)
+> [**TopicsDefinitionsProgramsMappingsEntityListing**](TopicsDefinitionsProgramsMappingsEntityListing) GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null)
 
 
 Get the list of Speech & Text Analytics programs mappings to queues and flows
@@ -1568,7 +1568,7 @@ namespace Example
             try
             { 
                 // Get the list of Speech & Text Analytics programs mappings to queues and flows
-                ProgramsMappingsEntityListing result = apiInstance.GetSpeechandtextanalyticsProgramsMappings(nextPage, pageSize);
+                TopicsDefinitionsProgramsMappingsEntityListing result = apiInstance.GetSpeechandtextanalyticsProgramsMappings(nextPage, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1590,7 +1590,7 @@ namespace Example
 
 ### Return type
 
-[**ProgramsMappingsEntityListing**](ProgramsMappingsEntityListing)
+[**TopicsDefinitionsProgramsMappingsEntityListing**](TopicsDefinitionsProgramsMappingsEntityListing)
 
 
 ## GetSpeechandtextanalyticsProgramsPublishjob
@@ -3729,7 +3729,7 @@ namespace Example
 
 ## PutSpeechandtextanalyticsProgramMappings
 
-> [**ProgramMappings**](ProgramMappings) PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body)
+> [**TopicsDefinitionsProgramMappings**](TopicsDefinitionsProgramMappings) PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body)
 
 
 Set Speech & Text Analytics program mappings to queues and flows
@@ -3766,7 +3766,7 @@ namespace Example
             try
             { 
                 // Set Speech & Text Analytics program mappings to queues and flows
-                ProgramMappings result = apiInstance.PutSpeechandtextanalyticsProgramMappings(programId, body);
+                TopicsDefinitionsProgramMappings result = apiInstance.PutSpeechandtextanalyticsProgramMappings(programId, body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3788,7 +3788,7 @@ namespace Example
 
 ### Return type
 
-[**ProgramMappings**](ProgramMappings)
+[**TopicsDefinitionsProgramMappings**](TopicsDefinitionsProgramMappings)
 
 
 ## PutSpeechandtextanalyticsProgramSettingsInsights
@@ -4046,4 +4046,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

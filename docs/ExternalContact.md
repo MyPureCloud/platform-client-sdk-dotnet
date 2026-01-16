@@ -8,32 +8,32 @@
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** | The globally unique identifier for the object. | [optional] |
 | **Division** | [**WritableStarrableDivision**](WritableStarrableDivision) | The division to which this entity belongs. | [optional] |
-| **FirstName** | **string** | The first name of the contact. | [optional] |
-| **MiddleName** | **string** |  | [optional] |
-| **LastName** | **string** | The last name of the contact. | [optional] |
-| **Salutation** | **string** |  | [optional] |
-| **Title** | **string** |  | [optional] |
+| **FirstName** | **string** | The first name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped. | [optional] |
+| **MiddleName** | **string** | The middle name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped. | [optional] |
+| **LastName** | **string** | The last name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped. | [optional] |
+| **Salutation** | **string** | The salutation of the contact. Max: 1000 characters. Leading and trailing whitespace stripped. | [optional] |
+| **Title** | **string** | The title of the contact. Max: 1000 characters. Leading and trailing whitespace stripped. | [optional] |
 | **WorkPhone** | [**PhoneNumber**](PhoneNumber) |  | [optional] |
 | **CellPhone** | [**PhoneNumber**](PhoneNumber) |  | [optional] |
 | **HomePhone** | [**PhoneNumber**](PhoneNumber) |  | [optional] |
 | **OtherPhone** | [**PhoneNumber**](PhoneNumber) |  | [optional] |
-| **WorkEmail** | **string** |  | [optional] |
-| **PersonalEmail** | **string** |  | [optional] |
-| **OtherEmail** | **string** |  | [optional] |
+| **WorkEmail** | **string** | The work email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format | [optional] |
+| **PersonalEmail** | **string** | The personal email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format | [optional] |
+| **OtherEmail** | **string** | The other email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format | [optional] |
 | **Address** | [**ContactAddress**](ContactAddress) |  | [optional] |
-| **TwitterId** | [**TwitterId**](TwitterId) |  | [optional] |
+| **TwitterId** | [**TwitterId**](TwitterId) | User information for a Twitter account | [optional] |
 | **LineId** | [**LineId**](LineId) |  | [optional] |
-| **WhatsAppId** | [**WhatsAppId**](WhatsAppId) |  | [optional] |
-| **FacebookId** | [**FacebookId**](FacebookId) |  | [optional] |
+| **WhatsAppId** | [**WhatsAppId**](WhatsAppId) | User information for a WhatsApp account | [optional] |
+| **FacebookId** | [**FacebookId**](FacebookId) | User information for a Facebook account | [optional] |
 | **InstagramId** | [**InstagramId**](InstagramId) | User information for an Instagram account | [optional] |
-| **AppleOpaqueIds** | [**List&lt;AppleOpaqueId&gt;**](AppleOpaqueId) | User information for an Apple account | [optional] |
-| **ExternalIds** | [**List&lt;ExternalId&gt;**](ExternalId) | A list of external identifiers that identify this contact in an external system | [optional] |
+| **AppleOpaqueIds** | [**List&lt;AppleOpaqueId&gt;**](AppleOpaqueId) | User information for an Apple account. Max: 10 ids | [optional] |
+| **ExternalIds** | [**List&lt;ExternalId&gt;**](ExternalId) | A list of external identifiers that identify this contact in an external system. Max: 10 ids | [optional] |
 | **Identifiers** | [**List&lt;ContactIdentifier&gt;**](ContactIdentifier) | Identifiers claimed by this contact | [optional] |
 | **ModifyDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **CreateDate** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ExternalOrganization** | [**ExternalOrganization**](ExternalOrganization) |  | [optional] |
 | **SurveyOptOut** | **bool?** |  | [optional] |
-| **ExternalSystemUrl** | **string** | A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace. | [optional] |
+| **ExternalSystemUrl** | **string** | A string that identifies an external system-of-record resource that may have more detailed information on the contact. Should be a valid URL (including the http/https protocol, port, and path [if any]). Leading and trailing whitespace stripped. Max 1000 characters. | [optional] |
 | **Schema** | [**DataSchema**](DataSchema) | The schema defining custom fields for this contact | [optional] |
 | **CustomFields** | **Dictionary&lt;string, Object&gt;** | Custom fields defined in the schema referenced by schemaId and schemaVersion. | [optional] |
 | **ExternalDataSources** | [**List&lt;ExternalDataSource&gt;**](ExternalDataSource) | Links to the sources of data (e.g. one source might be a CRM) that contributed data to this record.  Read-only, and only populated when requested via expand param. | [optional] |
@@ -47,4 +47,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

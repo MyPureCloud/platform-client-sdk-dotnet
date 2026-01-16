@@ -669,7 +669,7 @@ namespace Example
 
 Get response libraries.
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * responses:library:view
 
@@ -985,7 +985,7 @@ Update an existing response library.
 
 Fields that can be updated: name. The most recent version is required for updates.
 
-Requires ANY permissions: 
+Requires ALL permissions: 
 
 * responses:library:edit
 
@@ -1174,4 +1174,4 @@ namespace Example
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

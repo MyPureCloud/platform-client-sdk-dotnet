@@ -25,6 +25,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostGuideVersions**](#PostGuideVersions) | **Post** /api/v2/guides/{guideId}/versions | Create a guide version. |
 | [**PostGuides**](#PostGuides) | **Post** /api/v2/guides | Create a guide. |
 | [**PostGuidesJobs**](#PostGuidesJobs) | **Post** /api/v2/guides/jobs | Start a guide content generation job. |
+| [**PostGuidesUploads**](#PostGuidesUploads) | **Post** /api/v2/guides/uploads | Generate presigned URL for uploading a file content to generate guide |
 | [**PutConversationsSummariesSetting**](#PutConversationsSummariesSetting) | **Put** /api/v2/conversations/summaries/settings/{summarySettingId} | Update a summary setting. |
 
 
@@ -96,8 +97,6 @@ void (empty response body)
 
 
 Start the deletion of a guide.
-
-DeleteGuideJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -295,8 +294,6 @@ namespace Example
 
 Get guide.
 
-GetGuide is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * aiStudio:guide:view
@@ -358,8 +355,6 @@ namespace Example
 
 
 Get the specified guide deletion job.
-
-GetGuideJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -425,8 +420,6 @@ namespace Example
 
 Get a guide version.
 
-GetGuideVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * aiStudio:guideVersion:view
@@ -490,8 +483,6 @@ namespace Example
 
 
 Get the status of the publishing job for this guide version.
-
-GetGuideVersionJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -558,8 +549,6 @@ namespace Example
 
 
 Get all guides.
-
-GetGuides is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -635,8 +624,6 @@ namespace Example
 
 Get the status of the guide content generation job.
 
-GetGuidesJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * aiStudio:guideJob:view
@@ -698,8 +685,6 @@ namespace Example
 
 
 Update a guide.
-
-PatchGuide is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -764,8 +749,6 @@ namespace Example
 
 
 Update a guide version.
-
-PatchGuideVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ALL permissions: 
 
@@ -1024,8 +1007,6 @@ namespace Example
 
 Start the publishing of a guide version.
 
-PostGuideVersionJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * aiStudio:guideVersionJob:add
@@ -1092,8 +1073,6 @@ namespace Example
 
 Create a guide version.
 
-PostGuideVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * aiStudio:guideVersion:add
@@ -1158,8 +1137,6 @@ namespace Example
 
 Create a guide.
 
-PostGuides is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * aiStudio:guide:add
@@ -1222,8 +1199,6 @@ namespace Example
 
 Start a guide content generation job.
 
-PostGuidesJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ALL permissions: 
 
 * aiStudio:guideJob:add
@@ -1277,6 +1252,68 @@ namespace Example
 ### Return type
 
 [**GuideContentGenerationJob**](GuideContentGenerationJob)
+
+
+## PostGuidesUploads
+
+> [**UploadUrlResponse**](UploadUrlResponse) PostGuidesUploads (UploadUrlRequest body)
+
+
+Generate presigned URL for uploading a file content to generate guide
+
+Requires ALL permissions: 
+
+* aiStudio:guide:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostGuidesUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AIStudioApi();
+            var body = new UploadUrlRequest(); // UploadUrlRequest | query
+
+            try
+            { 
+                // Generate presigned URL for uploading a file content to generate guide
+                UploadUrlResponse result = apiInstance.PostGuidesUploads(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AIStudioApi.PostGuidesUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**UploadUrlRequest**](UploadUrlRequest)| query |  |
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
 
 
 ## PutConversationsSummariesSetting
@@ -1343,4 +1380,4 @@ namespace Example
 [**SummarySetting**](SummarySetting)
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

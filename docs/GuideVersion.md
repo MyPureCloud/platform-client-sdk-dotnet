@@ -15,7 +15,8 @@
 | **DateModified** | **DateTime?** | The date and time the guide version was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Variables** | [**List&lt;Variable&gt;**](Variable) | The variables associated with this version of the guide. Includes input variables (provided) and output variables (captured during execution). | [optional] |
 | **Resources** | [**GuideVersionResources**](GuideVersionResources) | The resources associated with this version of the guide. | [optional] |
+| **KnowledgeSettings** | [**AuthoringKnowledgeSettings**](AuthoringKnowledgeSettings) | The knowledge settings associated with this version of the guide. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_
