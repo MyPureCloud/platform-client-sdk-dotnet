@@ -8275,4 +8275,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

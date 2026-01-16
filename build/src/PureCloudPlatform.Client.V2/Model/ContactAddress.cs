@@ -21,12 +21,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ContactAddress" /> class.
         /// </summary>
-        /// <param name="Address1">Address1.</param>
-        /// <param name="Address2">Address2.</param>
-        /// <param name="City">City.</param>
-        /// <param name="State">State.</param>
-        /// <param name="PostalCode">PostalCode.</param>
-        /// <param name="CountryCode">CountryCode.</param>
+        /// <param name="Address1">Max: 200 characters. Leading and trailing whitespace stripped..</param>
+        /// <param name="Address2">Max: 200 characters. Leading and trailing whitespace stripped..</param>
+        /// <param name="City">Max: 100 characters. Leading and trailing whitespace stripped..</param>
+        /// <param name="State">Max: 50 characters. Leading and trailing whitespace stripped..</param>
+        /// <param name="PostalCode">Max: 25 characters. Leading and trailing whitespace stripped..</param>
+        /// <param name="CountryCode">Max: 25 characters. Leading and trailing whitespace stripped..</param>
         public ContactAddress(string Address1 = null, string Address2 = null, string City = null, string State = null, string PostalCode = null, string CountryCode = null)
         {
             this.Address1 = Address1;
@@ -41,48 +41,54 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Address1
+        /// Max: 200 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>Max: 200 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="address1", EmitDefaultValue=false)]
         public string Address1 { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Address2
+        /// Max: 200 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>Max: 200 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="address2", EmitDefaultValue=false)]
         public string Address2 { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets City
+        /// Max: 100 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>Max: 100 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="city", EmitDefaultValue=false)]
         public string City { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets State
+        /// Max: 50 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>Max: 50 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public string State { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets PostalCode
+        /// Max: 25 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>Max: 25 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="postalCode", EmitDefaultValue=false)]
         public string PostalCode { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets CountryCode
+        /// Max: 25 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>Max: 25 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
 

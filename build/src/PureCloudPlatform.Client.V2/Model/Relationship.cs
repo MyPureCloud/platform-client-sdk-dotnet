@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="User">The user associated with the external organization. When creating or updating a relationship, only User.id is required. User object is fully populated when expanding a note. (required).</param>
         /// <param name="ExternalOrganization">The external organization this relationship is attached to (required).</param>
-        /// <param name="_Relationship">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant (required).</param>
+        /// <param name="_Relationship">The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant. Between 1 and 100 characters. (required).</param>
         public Relationship(WritableStarrableDivision Division = null, User User = null, ExternalOrganization ExternalOrganization = null, string _Relationship = null)
         {
             this.Division = Division;
@@ -79,9 +79,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant
+        /// The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant. Between 1 and 100 characters.
         /// </summary>
-        /// <value>The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant</value>
+        /// <value>The relationship or role of the user to this external organization.Examples: Account Manager, Sales Engineer, Implementation Consultant. Between 1 and 100 characters.</value>
         [DataMember(Name="relationship", EmitDefaultValue=false)]
         public string _Relationship { get; set; }
 

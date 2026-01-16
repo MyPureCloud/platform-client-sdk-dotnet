@@ -62,32 +62,32 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="FirstName">The first name of the contact..</param>
-        /// <param name="MiddleName">MiddleName.</param>
-        /// <param name="LastName">The last name of the contact..</param>
-        /// <param name="Salutation">Salutation.</param>
-        /// <param name="Title">Title.</param>
+        /// <param name="FirstName">The first name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped..</param>
+        /// <param name="MiddleName">The middle name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped..</param>
+        /// <param name="LastName">The last name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped..</param>
+        /// <param name="Salutation">The salutation of the contact. Max: 1000 characters. Leading and trailing whitespace stripped..</param>
+        /// <param name="Title">The title of the contact. Max: 1000 characters. Leading and trailing whitespace stripped..</param>
         /// <param name="WorkPhone">WorkPhone.</param>
         /// <param name="CellPhone">CellPhone.</param>
         /// <param name="HomePhone">HomePhone.</param>
         /// <param name="OtherPhone">OtherPhone.</param>
-        /// <param name="WorkEmail">WorkEmail.</param>
-        /// <param name="PersonalEmail">PersonalEmail.</param>
-        /// <param name="OtherEmail">OtherEmail.</param>
+        /// <param name="WorkEmail">The work email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format.</param>
+        /// <param name="PersonalEmail">The personal email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format.</param>
+        /// <param name="OtherEmail">The other email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format.</param>
         /// <param name="Address">Address.</param>
-        /// <param name="TwitterId">TwitterId.</param>
+        /// <param name="TwitterId">User information for a Twitter account.</param>
         /// <param name="LineId">LineId.</param>
-        /// <param name="WhatsAppId">WhatsAppId.</param>
-        /// <param name="FacebookId">FacebookId.</param>
+        /// <param name="WhatsAppId">User information for a WhatsApp account.</param>
+        /// <param name="FacebookId">User information for a Facebook account.</param>
         /// <param name="InstagramId">User information for an Instagram account.</param>
-        /// <param name="AppleOpaqueIds">User information for an Apple account.</param>
-        /// <param name="ExternalIds">A list of external identifiers that identify this contact in an external system.</param>
+        /// <param name="AppleOpaqueIds">User information for an Apple account. Max: 10 ids.</param>
+        /// <param name="ExternalIds">A list of external identifiers that identify this contact in an external system. Max: 10 ids.</param>
         /// <param name="Identifiers">Identifiers claimed by this contact.</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ExternalOrganization">ExternalOrganization.</param>
         /// <param name="SurveyOptOut">SurveyOptOut.</param>
-        /// <param name="ExternalSystemUrl">A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace..</param>
+        /// <param name="ExternalSystemUrl">A string that identifies an external system-of-record resource that may have more detailed information on the contact. Should be a valid URL (including the http/https protocol, port, and path [if any]). Leading and trailing whitespace stripped. Max 1000 characters..</param>
         /// <param name="Schema">The schema defining custom fields for this contact.</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
         public ExternalContact(string Id = null, WritableStarrableDivision Division = null, string FirstName = null, string MiddleName = null, string LastName = null, string Salutation = null, string Title = null, PhoneNumber WorkPhone = null, PhoneNumber CellPhone = null, PhoneNumber HomePhone = null, PhoneNumber OtherPhone = null, string WorkEmail = null, string PersonalEmail = null, string OtherEmail = null, ContactAddress Address = null, TwitterId TwitterId = null, LineId LineId = null, WhatsAppId WhatsAppId = null, FacebookId FacebookId = null, InstagramId InstagramId = null, List<AppleOpaqueId> AppleOpaqueIds = null, List<ExternalId> ExternalIds = null, List<ContactIdentifier> Identifiers = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, ExternalOrganization ExternalOrganization = null, bool? SurveyOptOut = null, string ExternalSystemUrl = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null)
@@ -146,42 +146,45 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The first name of the contact.
+        /// The first name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped.
         /// </summary>
-        /// <value>The first name of the contact.</value>
+        /// <value>The first name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="firstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets MiddleName
+        /// The middle name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>The middle name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="middleName", EmitDefaultValue=false)]
         public string MiddleName { get; set; }
 
 
 
         /// <summary>
-        /// The last name of the contact.
+        /// The last name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped.
         /// </summary>
-        /// <value>The last name of the contact.</value>
+        /// <value>The last name of the contact. Max: 1000 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="lastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Salutation
+        /// The salutation of the contact. Max: 1000 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>The salutation of the contact. Max: 1000 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="salutation", EmitDefaultValue=false)]
         public string Salutation { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Title
+        /// The title of the contact. Max: 1000 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>The title of the contact. Max: 1000 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
 
@@ -220,24 +223,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets WorkEmail
+        /// The work email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format
         /// </summary>
+        /// <value>The work email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format</value>
         [DataMember(Name="workEmail", EmitDefaultValue=false)]
         public string WorkEmail { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets PersonalEmail
+        /// The personal email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format
         /// </summary>
+        /// <value>The personal email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format</value>
         [DataMember(Name="personalEmail", EmitDefaultValue=false)]
         public string PersonalEmail { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets OtherEmail
+        /// The other email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format
         /// </summary>
+        /// <value>The other email of the contact. Max: 256 characters. Leading and trailing whitespace stripped. Valid email format</value>
         [DataMember(Name="otherEmail", EmitDefaultValue=false)]
         public string OtherEmail { get; set; }
 
@@ -252,8 +258,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets TwitterId
+        /// User information for a Twitter account
         /// </summary>
+        /// <value>User information for a Twitter account</value>
         [DataMember(Name="twitterId", EmitDefaultValue=false)]
         public TwitterId TwitterId { get; set; }
 
@@ -268,16 +275,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets WhatsAppId
+        /// User information for a WhatsApp account
         /// </summary>
+        /// <value>User information for a WhatsApp account</value>
         [DataMember(Name="whatsAppId", EmitDefaultValue=false)]
         public WhatsAppId WhatsAppId { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets FacebookId
+        /// User information for a Facebook account
         /// </summary>
+        /// <value>User information for a Facebook account</value>
         [DataMember(Name="facebookId", EmitDefaultValue=false)]
         public FacebookId FacebookId { get; set; }
 
@@ -293,18 +302,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// User information for an Apple account
+        /// User information for an Apple account. Max: 10 ids
         /// </summary>
-        /// <value>User information for an Apple account</value>
+        /// <value>User information for an Apple account. Max: 10 ids</value>
         [DataMember(Name="appleOpaqueIds", EmitDefaultValue=false)]
         public List<AppleOpaqueId> AppleOpaqueIds { get; set; }
 
 
 
         /// <summary>
-        /// A list of external identifiers that identify this contact in an external system
+        /// A list of external identifiers that identify this contact in an external system. Max: 10 ids
         /// </summary>
-        /// <value>A list of external identifiers that identify this contact in an external system</value>
+        /// <value>A list of external identifiers that identify this contact in an external system. Max: 10 ids</value>
         [DataMember(Name="externalIds", EmitDefaultValue=false)]
         public List<ExternalId> ExternalIds { get; set; }
 
@@ -354,9 +363,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace.
+        /// A string that identifies an external system-of-record resource that may have more detailed information on the contact. Should be a valid URL (including the http/https protocol, port, and path [if any]). Leading and trailing whitespace stripped. Max 1000 characters.
         /// </summary>
-        /// <value>A string that identifies an external system-of-record resource that may have more detailed information on the contact. It should be a valid URL (including the http/https protocol, port, and path [if any]). The value is automatically trimmed of any leading and trailing whitespace.</value>
+        /// <value>A string that identifies an external system-of-record resource that may have more detailed information on the contact. Should be a valid URL (including the http/https protocol, port, and path [if any]). Leading and trailing whitespace stripped. Max 1000 characters.</value>
         [DataMember(Name="externalSystemUrl", EmitDefaultValue=false)]
         public string ExternalSystemUrl { get; set; }
 

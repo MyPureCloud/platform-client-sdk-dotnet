@@ -18,10 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LineUserId :  IEquatable<LineUserId>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LineUserId" /> class.
         /// </summary>
-        /// <param name="UserId">The unique channel-specific userId for the user.</param>
+        [JsonConstructorAttribute]
+        protected LineUserId() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LineUserId" /> class.
+        /// </summary>
+        /// <param name="UserId">The unique channel-specific userId for the user. Max: 255 characters. (required).</param>
         public LineUserId(string UserId = null)
         {
             this.UserId = UserId;
@@ -31,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The unique channel-specific userId for the user
+        /// The unique channel-specific userId for the user. Max: 255 characters.
         /// </summary>
-        /// <value>The unique channel-specific userId for the user</value>
+        /// <value>The unique channel-specific userId for the user. Max: 255 characters.</value>
         [DataMember(Name="userId", EmitDefaultValue=false)]
         public string UserId { get; set; }
 

@@ -63,11 +63,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="State">The current state of the guide version..</param>
         /// <param name="Resources">The resources associated with this version of the guide..</param>
-        public GuideVersion(string SelfUri = null, StateEnum? State = null, GuideVersionResources Resources = null)
+        /// <param name="KnowledgeSettings">The knowledge settings associated with this version of the guide..</param>
+        public GuideVersion(string SelfUri = null, StateEnum? State = null, GuideVersionResources Resources = null, AuthoringKnowledgeSettings KnowledgeSettings = null)
         {
             this.SelfUri = SelfUri;
             this.State = State;
             this.Resources = Resources;
+            this.KnowledgeSettings = KnowledgeSettings;
             
         }
         
@@ -145,6 +147,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public GuideVersionResources Resources { get; set; }
 
 
+
+        /// <summary>
+        /// The knowledge settings associated with this version of the guide.
+        /// </summary>
+        /// <value>The knowledge settings associated with this version of the guide.</value>
+        [DataMember(Name="knowledgeSettings", EmitDefaultValue=false)]
+        public AuthoringKnowledgeSettings KnowledgeSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -163,6 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Variables: ").Append(Variables).Append("\n");
             sb.Append("  Resources: ").Append(Resources).Append("\n");
+            sb.Append("  KnowledgeSettings: ").Append(KnowledgeSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -247,6 +259,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Resources == other.Resources ||
                     this.Resources != null &&
                     this.Resources.Equals(other.Resources)
+                ) &&
+                (
+                    this.KnowledgeSettings == other.KnowledgeSettings ||
+                    this.KnowledgeSettings != null &&
+                    this.KnowledgeSettings.Equals(other.KnowledgeSettings)
                 );
         }
 
@@ -287,6 +304,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Resources != null)
                     hash = hash * 59 + this.Resources.GetHashCode();
+
+                if (this.KnowledgeSettings != null)
+                    hash = hash * 59 + this.KnowledgeSettings.GetHashCode();
 
                 return hash;
             }

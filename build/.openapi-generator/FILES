@@ -416,6 +416,7 @@ docs/AuditTopicDomainEntityRef.md
 docs/AuditTopicMessageInfo.md
 docs/AuditTopicPropertyChange.md
 docs/AuthenticationSettings.md
+docs/AuthoringKnowledgeSettings.md
 docs/AuthorizationApi.json
 docs/AuthorizationApi.md
 docs/AuthorizationPolicy.md
@@ -802,7 +803,10 @@ docs/CapacityPlanningRequirementsResultTopicStaffingRequirementsNotification.md
 docs/CapacityPlansListResponse.md
 docs/Card.md
 docs/CardAction.md
+docs/CardBodyText.md
 docs/CardParameters.md
+docs/Carousel.md
+docs/CarouselCard.md
 docs/CarouselParameters.md
 docs/CarrierServicesApi.json
 docs/CarrierServicesApi.md
@@ -871,6 +875,7 @@ docs/ChecklistInferenceJobCreationResponse.md
 docs/ChecklistInferenceJobPayload.md
 docs/ChecklistInferenceJobResponse.md
 docs/ChecklistItem.md
+docs/ChunkSearchRegisterRequest.md
 docs/ClientApp.md
 docs/ClientAppConfigurationInfo.md
 docs/ClientAppEntityListing.md
@@ -1318,7 +1323,6 @@ docs/ConversationEventTopicPhoneNumberColumn.md
 docs/ConversationEventTopicQueueMediaSettings.md
 docs/ConversationEventTopicRecordersState.md
 docs/ConversationEventTopicScoredAgent.md
-docs/ConversationEventTopicScreenMonitoring.md
 docs/ConversationEventTopicScreenShare.md
 docs/ConversationEventTopicSocialExpression.md
 docs/ConversationEventTopicTransferDestination.md
@@ -4851,6 +4855,7 @@ docs/KnowledgeParseRecord.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocumentResponse.md
 docs/KnowledgeSetting.md
+docs/KnowledgeSettings.md
 docs/KnowledgeSuggestionConfig.md
 docs/KnowledgeSyncJobReport.md
 docs/KnowledgeSyncJobRequest.md
@@ -5648,6 +5653,7 @@ docs/PatchJourneyViewVersionJob-example.txt
 docs/PatchKnowledgeGuestSessionDocumentsSearchSearchId-example.txt
 docs/PatchKnowledgeKnowledgebase-example.txt
 docs/PatchKnowledgeKnowledgebaseCategory-example.txt
+docs/PatchKnowledgeKnowledgebaseChunksSearchSearchId-example.txt
 docs/PatchKnowledgeKnowledgebaseDocument-example.txt
 docs/PatchKnowledgeKnowledgebaseDocumentFeedbackFeedbackId-example.txt
 docs/PatchKnowledgeKnowledgebaseDocumentVariation-example.txt
@@ -6219,6 +6225,8 @@ docs/PostGuideVersionJobs-example.txt
 docs/PostGuideVersions-example.txt
 docs/PostGuides-example.txt
 docs/PostGuidesJobs-example.txt
+docs/PostGuidesUploads-example.txt
+docs/PostGuidesUploads-example.txt
 docs/PostIdentityproviders-example.txt
 docs/PostInfrastructureascodeJobs-example.txt
 docs/PostInputContract.md
@@ -6724,7 +6732,6 @@ docs/ProgramInsightsSettings.md
 docs/ProgramInsightsSettingsEntityListing.md
 docs/ProgramJob.md
 docs/ProgramJobRequest.md
-docs/ProgramMappings.md
 docs/ProgramMappingsRequest.md
 docs/ProgramRequest.md
 docs/ProgramTopicLinksTestPhraseDetectedPhrase.md
@@ -6734,7 +6741,6 @@ docs/ProgramTopicLinksTopicsDefinitionsJob.md
 docs/ProgramTranscriptionEngine.md
 docs/ProgramTranscriptionEngines.md
 docs/ProgramsEntityListing.md
-docs/ProgramsMappingsEntityListing.md
 docs/ProgressConsultTransferEvent.md
 docs/ProgressTransferEvent.md
 docs/Prompt.md
@@ -7210,7 +7216,6 @@ docs/QueueConversationEventTopicPhoneNumberColumn.md
 docs/QueueConversationEventTopicQueueMediaSettings.md
 docs/QueueConversationEventTopicRecordersState.md
 docs/QueueConversationEventTopicScoredAgent.md
-docs/QueueConversationEventTopicScreenMonitoring.md
 docs/QueueConversationEventTopicScreenShare.md
 docs/QueueConversationEventTopicSocialExpression.md
 docs/QueueConversationEventTopicTransferDestination.md
@@ -7304,7 +7309,6 @@ docs/QueueConversationSocialExpressionEventTopicPhoneNumberColumn.md
 docs/QueueConversationSocialExpressionEventTopicQueueMediaSettings.md
 docs/QueueConversationSocialExpressionEventTopicRecordersState.md
 docs/QueueConversationSocialExpressionEventTopicScoredAgent.md
-docs/QueueConversationSocialExpressionEventTopicScreenMonitoring.md
 docs/QueueConversationSocialExpressionEventTopicScreenShare.md
 docs/QueueConversationSocialExpressionEventTopicSocialExpression.md
 docs/QueueConversationSocialExpressionEventTopicTransferDestination.md
@@ -7355,7 +7359,6 @@ docs/QueueConversationVideoEventTopicPhoneNumberColumn.md
 docs/QueueConversationVideoEventTopicQueueMediaSettings.md
 docs/QueueConversationVideoEventTopicRecordersState.md
 docs/QueueConversationVideoEventTopicScoredAgent.md
-docs/QueueConversationVideoEventTopicScreenMonitoring.md
 docs/QueueConversationVideoEventTopicScreenShare.md
 docs/QueueConversationVideoEventTopicSocialExpression.md
 docs/QueueConversationVideoEventTopicTransferDestination.md
@@ -7862,8 +7865,8 @@ docs/SocialMediaStatisticalSummary.md
 docs/SocialTopicPatchRequest.md
 docs/SocialTopicRequest.md
 docs/SocialTopicResponse.md
-docs/SocialTopicResponseEntityListing.md
 docs/SocialTopicWithDataIngestionRuleMetadataResponse.md
+docs/SocialTopicWithDataIngestionRuleMetadataResponseEntityListing.md
 docs/SortItem.md
 docs/Source.md
 docs/SourceBaseResponse.md
@@ -7917,6 +7920,7 @@ docs/StationsApi.md
 docs/StatisticalResponse.md
 docs/StatisticalSummary.md
 docs/StatusChange.md
+docs/StatusInfo.md
 docs/StopSettings.md
 docs/StorySetting.md
 docs/StreetAddress.md
@@ -8162,6 +8166,8 @@ docs/TopicJobRequest.md
 docs/TopicOffset.md
 docs/TopicPhrase.md
 docs/TopicRequest.md
+docs/TopicsDefinitionsProgramMappings.md
+docs/TopicsDefinitionsProgramsMappingsEntityListing.md
 docs/TopicsEntityListing.md
 docs/Touchpoint.md
 docs/TouchpointResponse.md
@@ -9141,7 +9147,6 @@ docs/WritableDialerContact.md
 docs/WritableDivision.md
 docs/WritableEntity.md
 docs/WritableStarrableDivision.md
-docs/YearMonth.md
 git_push.sh
 src/PureCloudPlatform.Client.V2.Tests/ApiClientTests.cs
 src/PureCloudPlatform.Client.V2.Tests/Properties/AssemblyInfo.cs
@@ -9634,6 +9639,7 @@ src/PureCloudPlatform.Client.V2/Model/AuditTopicDomainEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/AuditTopicMessageInfo.cs
 src/PureCloudPlatform.Client.V2/Model/AuditTopicPropertyChange.cs
 src/PureCloudPlatform.Client.V2/Model/AuthenticationSettings.cs
+src/PureCloudPlatform.Client.V2/Model/AuthoringKnowledgeSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AuthorizationPolicy.cs
 src/PureCloudPlatform.Client.V2/Model/AuthorizationPolicyEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/AuthorizationSettings.cs
@@ -10014,7 +10020,10 @@ src/PureCloudPlatform.Client.V2/Model/CapacityPlanningRequirementsResultTopicSta
 src/PureCloudPlatform.Client.V2/Model/CapacityPlansListResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Card.cs
 src/PureCloudPlatform.Client.V2/Model/CardAction.cs
+src/PureCloudPlatform.Client.V2/Model/CardBodyText.cs
 src/PureCloudPlatform.Client.V2/Model/CardParameters.cs
+src/PureCloudPlatform.Client.V2/Model/Carousel.cs
+src/PureCloudPlatform.Client.V2/Model/CarouselCard.cs
 src/PureCloudPlatform.Client.V2/Model/CarouselParameters.cs
 src/PureCloudPlatform.Client.V2/Model/CaseManagementAggregateDataContainer.cs
 src/PureCloudPlatform.Client.V2/Model/CaseManagementAggregateQueryClause.cs
@@ -10079,6 +10088,7 @@ src/PureCloudPlatform.Client.V2/Model/ChecklistInferenceJobCreationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ChecklistInferenceJobPayload.cs
 src/PureCloudPlatform.Client.V2/Model/ChecklistInferenceJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ChecklistItem.cs
+src/PureCloudPlatform.Client.V2/Model/ChunkSearchRegisterRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ClientApp.cs
 src/PureCloudPlatform.Client.V2/Model/ClientAppConfigurationInfo.cs
 src/PureCloudPlatform.Client.V2/Model/ClientAppEntityListing.cs
@@ -10522,7 +10532,6 @@ src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicPhoneNumberColumn.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicRecordersState.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicScoredAgent.cs
-src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicScreenMonitoring.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicScreenShare.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicSocialExpression.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationEventTopicTransferDestination.cs
@@ -12223,6 +12232,7 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeParseRecord.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchClientApplication.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchDocumentResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSetting.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSettings.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSuggestionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncJobReport.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncJobRequest.cs
@@ -13010,7 +13020,6 @@ src/PureCloudPlatform.Client.V2/Model/ProgramInsightsSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramInsightsSettingsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramJob.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramJobRequest.cs
-src/PureCloudPlatform.Client.V2/Model/ProgramMappings.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramMappingsRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramTopicLinksTestPhraseDetectedPhrase.cs
@@ -13020,7 +13029,6 @@ src/PureCloudPlatform.Client.V2/Model/ProgramTopicLinksTopicsDefinitionsJob.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramTranscriptionEngine.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramTranscriptionEngines.cs
 src/PureCloudPlatform.Client.V2/Model/ProgramsEntityListing.cs
-src/PureCloudPlatform.Client.V2/Model/ProgramsMappingsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ProgressConsultTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ProgressTransferEvent.cs
 src/PureCloudPlatform.Client.V2/Model/Prompt.cs
@@ -13228,7 +13236,6 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicPhoneNumberColu
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicRecordersState.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicScoredAgent.cs
-src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicScreenMonitoring.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicScreenShare.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicSocialExpression.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationEventTopicTransferDestination.cs
@@ -13322,7 +13329,6 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopi
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicRecordersState.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicScoredAgent.cs
-src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicScreenMonitoring.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicScreenShare.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicSocialExpression.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationSocialExpressionEventTopicTransferDestination.cs
@@ -13373,7 +13379,6 @@ src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicPhoneNumbe
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicQueueMediaSettings.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicRecordersState.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicScoredAgent.cs
-src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicScreenMonitoring.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicScreenShare.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicSocialExpression.cs
 src/PureCloudPlatform.Client.V2/Model/QueueConversationVideoEventTopicTransferDestination.cs
@@ -13862,8 +13867,8 @@ src/PureCloudPlatform.Client.V2/Model/SocialMediaStatisticalSummary.cs
 src/PureCloudPlatform.Client.V2/Model/SocialTopicPatchRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SocialTopicRequest.cs
 src/PureCloudPlatform.Client.V2/Model/SocialTopicResponse.cs
-src/PureCloudPlatform.Client.V2/Model/SocialTopicResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SocialTopicWithDataIngestionRuleMetadataResponse.cs
+src/PureCloudPlatform.Client.V2/Model/SocialTopicWithDataIngestionRuleMetadataResponseEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SortItem.cs
 src/PureCloudPlatform.Client.V2/Model/Source.cs
 src/PureCloudPlatform.Client.V2/Model/SourceBaseResponse.cs
@@ -13913,6 +13918,7 @@ src/PureCloudPlatform.Client.V2/Model/StationEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/StatisticalResponse.cs
 src/PureCloudPlatform.Client.V2/Model/StatisticalSummary.cs
 src/PureCloudPlatform.Client.V2/Model/StatusChange.cs
+src/PureCloudPlatform.Client.V2/Model/StatusInfo.cs
 src/PureCloudPlatform.Client.V2/Model/StopSettings.cs
 src/PureCloudPlatform.Client.V2/Model/StorySetting.cs
 src/PureCloudPlatform.Client.V2/Model/StreetAddress.cs
@@ -14144,6 +14150,8 @@ src/PureCloudPlatform.Client.V2/Model/TopicJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/TopicOffset.cs
 src/PureCloudPlatform.Client.V2/Model/TopicPhrase.cs
 src/PureCloudPlatform.Client.V2/Model/TopicRequest.cs
+src/PureCloudPlatform.Client.V2/Model/TopicsDefinitionsProgramMappings.cs
+src/PureCloudPlatform.Client.V2/Model/TopicsDefinitionsProgramsMappingsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/TopicsEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/Touchpoint.cs
 src/PureCloudPlatform.Client.V2/Model/TouchpointResponse.cs
@@ -15099,7 +15107,6 @@ src/PureCloudPlatform.Client.V2/Model/WritableDialerContact.cs
 src/PureCloudPlatform.Client.V2/Model/WritableDivision.cs
 src/PureCloudPlatform.Client.V2/Model/WritableEntity.cs
 src/PureCloudPlatform.Client.V2/Model/WritableStarrableDivision.cs
-src/PureCloudPlatform.Client.V2/Model/YearMonth.cs
 src/PureCloudPlatform.Client.V2/Properties/AssemblyInfo.cs
 src/PureCloudPlatform.Client.V2/PureCloudPlatform.Client.V2.csproj
 src/PureCloudPlatform.Client.V2/packages.config

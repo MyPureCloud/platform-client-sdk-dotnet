@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Id">A user-specified tracker string, only useful in the Bulk-Enrich API. If one Bulk-Enrich operation in a request fails, the requested operation will be repeated in the Bulk API response, including this id field, allowing associating of request and response operations..</param>
         /// <param name="Division">The division to which this entity belongs..</param>
-        /// <param name="MatchingIdentifiers">An ordered list of one or more Identifiers which might each be claimed by a Contact. &#x60;action&#x60; describes what to do with any possibly matching Contacts. Identifier lookups will occur in the order specified here. (required).</param>
+        /// <param name="MatchingIdentifiers">An ordered list of one or more Identifiers which might each be claimed by a Contact. &#x60;action&#x60; describes what to do with any possibly matching Contacts. Identifier lookups will occur in the order specified here. Between 1 and 25. (required).</param>
         /// <param name="Action">The action that should be taken based on any Contacts found by &#x60;matchingIdentifiers&#x60;. (required).</param>
         /// <param name="Contact">Data to be added, either as an update to an existing Contact or the body of a new Contact. Omitting a field in this contract means that it will be treated as null in the &#x60;fieldRules&#x60; logic..</param>
         /// <param name="FieldRules">Logic describing how to combine data from the submitted request with data found in the database..</param>
@@ -112,9 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// An ordered list of one or more Identifiers which might each be claimed by a Contact. &#x60;action&#x60; describes what to do with any possibly matching Contacts. Identifier lookups will occur in the order specified here.
+        /// An ordered list of one or more Identifiers which might each be claimed by a Contact. &#x60;action&#x60; describes what to do with any possibly matching Contacts. Identifier lookups will occur in the order specified here. Between 1 and 25.
         /// </summary>
-        /// <value>An ordered list of one or more Identifiers which might each be claimed by a Contact. &#x60;action&#x60; describes what to do with any possibly matching Contacts. Identifier lookups will occur in the order specified here.</value>
+        /// <value>An ordered list of one or more Identifiers which might each be claimed by a Contact. &#x60;action&#x60; describes what to do with any possibly matching Contacts. Identifier lookups will occur in the order specified here. Between 1 and 25.</value>
         [DataMember(Name="matchingIdentifiers", EmitDefaultValue=false)]
         public List<ContactIdentifier> MatchingIdentifiers { get; set; }
 

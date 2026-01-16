@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ExternalSource" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
-        /// <param name="Name">The name of the external source. (required).</param>
+        /// <param name="Name">The name of the external source. Must be unique. Max: 200 characters. Leading and trailing whitespace stripped. (required).</param>
         /// <param name="Active">Active.</param>
         /// <param name="LinkConfiguration">LinkConfiguration.</param>
         public ExternalSource(string Id = null, string Name = null, bool? Active = null, LinkConfiguration LinkConfiguration = null)
@@ -52,9 +52,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The name of the external source.
+        /// The name of the external source. Must be unique. Max: 200 characters. Leading and trailing whitespace stripped.
         /// </summary>
-        /// <value>The name of the external source.</value>
+        /// <value>The name of the external source. Must be unique. Max: 200 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 

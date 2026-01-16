@@ -1,12 +1,12 @@
-# ProgramsMappingsEntityListing
+# TopicsDefinitionsProgramsMappingsEntityListing
 
-## ININ.PureCloudApi.Model.ProgramsMappingsEntityListing
+## ININ.PureCloudApi.Model.TopicsDefinitionsProgramsMappingsEntityListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;ProgramMappings&gt;**](ProgramMappings) |  | [optional] |
+| **Entities** | [**List&lt;TopicsDefinitionsProgramMappings&gt;**](TopicsDefinitionsProgramMappings) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
@@ -14,4 +14,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

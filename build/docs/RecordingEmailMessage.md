@@ -13,10 +13,11 @@
 | **Cc** | [**List&lt;EmailAddress&gt;**](EmailAddress) |  | [optional] |
 | **Bcc** | [**List&lt;EmailAddress&gt;**](EmailAddress) |  | [optional] |
 | **From** | [**EmailAddress**](EmailAddress) |  | [optional] |
+| **ReplyTo** | [**EmailAddress**](EmailAddress) | Indicates the address to which the author of the message suggests that replies be sent | [optional] |
 | **Subject** | **string** |  | [optional] |
 | **Attachments** | [**List&lt;EmailAttachment&gt;**](EmailAttachment) |  | [optional] |
 | **Time** | **DateTime?** | Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

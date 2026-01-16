@@ -18,12 +18,18 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class InstagramId :  IEquatable<InstagramId>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="InstagramId" /> class.
         /// </summary>
-        /// <param name="Ids">The set of scopedIds that this person has. Each scopedId is specific to an Instagram page or app that the user interacts with..</param>
-        /// <param name="DisplayName">The displayName of the person who owns this Instagram account.</param>
-        /// <param name="Handle">The handle of the person who owns this Instagram account.</param>
+        [JsonConstructorAttribute]
+        protected InstagramId() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="InstagramId" /> class.
+        /// </summary>
+        /// <param name="Ids">The set of scopedIds that this person has. Each scopedId is specific to an Instagram page or app that the user interacts with. Max 1 id. (required).</param>
+        /// <param name="DisplayName">The displayName of the person who owns this Instagram account. Max: 100 characters..</param>
+        /// <param name="Handle">The handle of the person who owns this Instagram account. Max: 100 characters..</param>
         public InstagramId(List<InstagramScopedId> Ids = null, string DisplayName = null, string Handle = null)
         {
             this.Ids = Ids;
@@ -35,27 +41,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The set of scopedIds that this person has. Each scopedId is specific to an Instagram page or app that the user interacts with.
+        /// The set of scopedIds that this person has. Each scopedId is specific to an Instagram page or app that the user interacts with. Max 1 id.
         /// </summary>
-        /// <value>The set of scopedIds that this person has. Each scopedId is specific to an Instagram page or app that the user interacts with.</value>
+        /// <value>The set of scopedIds that this person has. Each scopedId is specific to an Instagram page or app that the user interacts with. Max 1 id.</value>
         [DataMember(Name="ids", EmitDefaultValue=false)]
         public List<InstagramScopedId> Ids { get; set; }
 
 
 
         /// <summary>
-        /// The displayName of the person who owns this Instagram account
+        /// The displayName of the person who owns this Instagram account. Max: 100 characters.
         /// </summary>
-        /// <value>The displayName of the person who owns this Instagram account</value>
+        /// <value>The displayName of the person who owns this Instagram account. Max: 100 characters.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
 
 
 
         /// <summary>
-        /// The handle of the person who owns this Instagram account
+        /// The handle of the person who owns this Instagram account. Max: 100 characters.
         /// </summary>
-        /// <value>The handle of the person who owns this Instagram account</value>
+        /// <value>The handle of the person who owns this Instagram account. Max: 100 characters.</value>
         [DataMember(Name="handle", EmitDefaultValue=false)]
         public string Handle { get; set; }
 

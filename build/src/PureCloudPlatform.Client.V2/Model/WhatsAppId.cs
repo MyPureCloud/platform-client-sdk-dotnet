@@ -18,11 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WhatsAppId :  IEquatable<WhatsAppId>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WhatsAppId" /> class.
         /// </summary>
-        /// <param name="PhoneNumber">The phone number associated with this WhatsApp account.</param>
-        /// <param name="DisplayName">The displayName of this person&#39;s account in WhatsApp.</param>
+        [JsonConstructorAttribute]
+        protected WhatsAppId() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WhatsAppId" /> class.
+        /// </summary>
+        /// <param name="PhoneNumber">The phone number associated with this WhatsApp account. Requires &#39;E164 without a leading plus&#39; phone number. (required).</param>
+        /// <param name="DisplayName">The displayName of this person&#39;s account in WhatsApp. Max: 100 characters..</param>
         public WhatsAppId(PhoneNumber PhoneNumber = null, string DisplayName = null)
         {
             this.PhoneNumber = PhoneNumber;
@@ -33,18 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The phone number associated with this WhatsApp account
+        /// The phone number associated with this WhatsApp account. Requires &#39;E164 without a leading plus&#39; phone number.
         /// </summary>
-        /// <value>The phone number associated with this WhatsApp account</value>
+        /// <value>The phone number associated with this WhatsApp account. Requires &#39;E164 without a leading plus&#39; phone number.</value>
         [DataMember(Name="phoneNumber", EmitDefaultValue=false)]
         public PhoneNumber PhoneNumber { get; set; }
 
 
 
         /// <summary>
-        /// The displayName of this person&#39;s account in WhatsApp
+        /// The displayName of this person&#39;s account in WhatsApp. Max: 100 characters.
         /// </summary>
-        /// <value>The displayName of this person&#39;s account in WhatsApp</value>
+        /// <value>The displayName of this person&#39;s account in WhatsApp. Max: 100 characters.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
 

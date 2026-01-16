@@ -1838,7 +1838,7 @@ namespace Example
 
 ## GetSocialmediaTopics
 
-> [**SocialTopicResponseEntityListing**](SocialTopicResponseEntityListing) GetSocialmediaTopics (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null, List<string> ids = null)
+> [**SocialTopicWithDataIngestionRuleMetadataResponseEntityListing**](SocialTopicWithDataIngestionRuleMetadataResponseEntityListing) GetSocialmediaTopics (int? pageNumber = null, int? pageSize = null, List<string> divisionIds = null, bool? includeDeleted = null, string name = null, List<string> ids = null)
 
 
 Retrieve all social topics.
@@ -1879,7 +1879,7 @@ namespace Example
             try
             { 
                 // Retrieve all social topics.
-                SocialTopicResponseEntityListing result = apiInstance.GetSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted, name, ids);
+                SocialTopicWithDataIngestionRuleMetadataResponseEntityListing result = apiInstance.GetSocialmediaTopics(pageNumber, pageSize, divisionIds, includeDeleted, name, ids);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1905,7 +1905,7 @@ namespace Example
 
 ### Return type
 
-[**SocialTopicResponseEntityListing**](SocialTopicResponseEntityListing)
+[**SocialTopicWithDataIngestionRuleMetadataResponseEntityListing**](SocialTopicWithDataIngestionRuleMetadataResponseEntityListing)
 
 
 ## PatchSocialmediaTopic
@@ -3330,4 +3330,4 @@ namespace Example
 [**TwitterDataIngestionRuleResponse**](TwitterDataIngestionRuleResponse)
 
 
-_PureCloudPlatform.Client.V2 253.0.0_
+_PureCloudPlatform.Client.V2 254.0.0_

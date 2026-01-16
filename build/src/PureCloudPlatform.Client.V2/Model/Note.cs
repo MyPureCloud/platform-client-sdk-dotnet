@@ -63,7 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="EntityId">The id of the contact or organization to which this note refers. This only needs to be set for input when using the Bulk APIs..</param>
         /// <param name="EntityType">This is only need to be set when using Bulk API. Using any other value than contact or organization will result in null being used..</param>
-        /// <param name="NoteText">NoteText.</param>
+        /// <param name="NoteText">Between 1 and 32,000 characters..</param>
         /// <param name="ModifyDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreateDate">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="CreatedBy">When creating or updating a note, only User.id is required. User object is fully populated when expanding a note. (required).</param>
@@ -111,8 +111,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets NoteText
+        /// Between 1 and 32,000 characters.
         /// </summary>
+        /// <value>Between 1 and 32,000 characters.</value>
         [DataMember(Name="noteText", EmitDefaultValue=false)]
         public string NoteText { get; set; }
 

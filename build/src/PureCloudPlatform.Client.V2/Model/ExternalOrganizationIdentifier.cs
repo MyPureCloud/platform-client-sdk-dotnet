@@ -56,7 +56,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="Type">The type of this identifier (required).</param>
-        /// <param name="Value">The string value of the identifier. Will vary in syntax by type. (required).</param>
+        /// <param name="Value">The string value of the identifier. Will vary in syntax by type. Max: 255 characters. (required).</param>
         /// <param name="DateCreated">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ExternalSource">The External Source ID of the identifier.</param>
         public ExternalOrganizationIdentifier(WritableStarrableDivision Division = null, TypeEnum? Type = null, string Value = null, DateTime? DateCreated = null, ExternalSource ExternalSource = null)
@@ -92,9 +92,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The string value of the identifier. Will vary in syntax by type.
+        /// The string value of the identifier. Will vary in syntax by type. Max: 255 characters.
         /// </summary>
-        /// <value>The string value of the identifier. Will vary in syntax by type.</value>
+        /// <value>The string value of the identifier. Will vary in syntax by type. Max: 255 characters.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

@@ -1400,6 +1400,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CategoryResponse> PatchKnowledgeKnowledgebaseCategoryWithHttpInfo (string knowledgeBaseId, string categoryId, CategoryUpdateRequest body);
 
         /// <summary>
+        /// Register chunk search result.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge Base ID</param>
+        /// <param name="searchId">Unique identifier of search request</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        
+        void PatchKnowledgeKnowledgebaseChunksSearchSearchId (string knowledgeBaseId, string searchId, ChunkSearchRegisterRequest body = null);
+
+        /// <summary>
+        /// Register chunk search result.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge Base ID</param>
+        /// <param name="searchId">Unique identifier of search request</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PatchKnowledgeKnowledgebaseChunksSearchSearchIdWithHttpInfo (string knowledgeBaseId, string searchId, ChunkSearchRegisterRequest body = null);
+
+        /// <summary>
         /// Update document.
         /// </summary>
         /// <remarks>
@@ -4084,6 +4112,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (CategoryResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CategoryResponse>> PatchKnowledgeKnowledgebaseCategoryAsyncWithHttpInfo (string knowledgeBaseId, string categoryId, CategoryUpdateRequest body);
+
+        /// <summary>
+        /// Register chunk search result.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge Base ID</param>
+        /// <param name="searchId">Unique identifier of search request</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PatchKnowledgeKnowledgebaseChunksSearchSearchIdAsync (string knowledgeBaseId, string searchId, ChunkSearchRegisterRequest body = null);
+
+        /// <summary>
+        /// Register chunk search result.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge Base ID</param>
+        /// <param name="searchId">Unique identifier of search request</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PatchKnowledgeKnowledgebaseChunksSearchSearchIdAsyncWithHttpInfo (string knowledgeBaseId, string searchId, ChunkSearchRegisterRequest body = null);
 
         /// <summary>
         /// Update document.
@@ -15807,6 +15863,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CategoryResponse>(localVarStatusCode,
                 localVarHeaders,
                 (CategoryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CategoryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Register chunk search result. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge Base ID</param>
+        /// <param name="searchId">Unique identifier of search request</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns></returns>
+        
+        public void PatchKnowledgeKnowledgebaseChunksSearchSearchId (string knowledgeBaseId, string searchId, ChunkSearchRegisterRequest body = null)
+        {
+             PatchKnowledgeKnowledgebaseChunksSearchSearchIdWithHttpInfo(knowledgeBaseId, searchId, body);
+        }
+
+        /// <summary>
+        /// Register chunk search result. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge Base ID</param>
+        /// <param name="searchId">Unique identifier of search request</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PatchKnowledgeKnowledgebaseChunksSearchSearchIdWithHttpInfo (string knowledgeBaseId, string searchId, ChunkSearchRegisterRequest body = null)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseChunksSearchSearchId");
+            // verify the required parameter 'searchId' is set
+            if (searchId == null)
+                throw new ApiException(400, "Missing required parameter 'searchId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseChunksSearchSearchId");
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search/{searchId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+            if (searchId != null) localVarPathParams.Add("searchId", this.Configuration.ApiClient.ParameterToString(searchId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseChunksSearchSearchId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseChunksSearchSearchId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Register chunk search result. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge Base ID</param>
+        /// <param name="searchId">Unique identifier of search request</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PatchKnowledgeKnowledgebaseChunksSearchSearchIdAsync (string knowledgeBaseId, string searchId, ChunkSearchRegisterRequest body = null)
+        {
+             await PatchKnowledgeKnowledgebaseChunksSearchSearchIdAsyncWithHttpInfo(knowledgeBaseId, searchId, body);
+
+        }
+
+        /// <summary>
+        /// Register chunk search result. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="knowledgeBaseId">Knowledge Base ID</param>
+        /// <param name="searchId">Unique identifier of search request</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PatchKnowledgeKnowledgebaseChunksSearchSearchIdAsyncWithHttpInfo (string knowledgeBaseId, string searchId, ChunkSearchRegisterRequest body = null)
+        { 
+            // verify the required parameter 'knowledgeBaseId' is set
+            if (knowledgeBaseId == null)
+                throw new ApiException(400, "Missing required parameter 'knowledgeBaseId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseChunksSearchSearchId");
+            
+            // verify the required parameter 'searchId' is set
+            if (searchId == null)
+                throw new ApiException(400, "Missing required parameter 'searchId' when calling KnowledgeApi->PatchKnowledgeKnowledgebaseChunksSearchSearchId");
+            
+
+            var localVarPath = "/api/v2/knowledge/knowledgebases/{knowledgeBaseId}/chunks/search/{searchId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (knowledgeBaseId != null) localVarPathParams.Add("knowledgeBaseId", this.Configuration.ApiClient.ParameterToString(knowledgeBaseId));
+            if (searchId != null) localVarPathParams.Add("searchId", this.Configuration.ApiClient.ParameterToString(searchId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseChunksSearchSearchId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchKnowledgeKnowledgebaseChunksSearchSearchId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

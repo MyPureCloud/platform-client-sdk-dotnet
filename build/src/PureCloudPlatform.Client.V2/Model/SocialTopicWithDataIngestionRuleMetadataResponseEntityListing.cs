@@ -13,13 +13,13 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// SocialTopicResponseEntityListing
+    /// SocialTopicWithDataIngestionRuleMetadataResponseEntityListing
     /// </summary>
     [DataContract]
-    public partial class SocialTopicResponseEntityListing :  IEquatable<SocialTopicResponseEntityListing>, IPagedResource<SocialTopicResponse>
+    public partial class SocialTopicWithDataIngestionRuleMetadataResponseEntityListing :  IEquatable<SocialTopicWithDataIngestionRuleMetadataResponseEntityListing>, IPagedResource<SocialTopicWithDataIngestionRuleMetadataResponse>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SocialTopicResponseEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="SocialTopicWithDataIngestionRuleMetadataResponseEntityListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastUri">LastUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public SocialTopicResponseEntityListing(List<SocialTopicResponse> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
+        public SocialTopicWithDataIngestionRuleMetadataResponseEntityListing(List<SocialTopicWithDataIngestionRuleMetadataResponse> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string PreviousUri = null, string NextUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<SocialTopicResponse> Entities { get; set; }
+        public List<SocialTopicWithDataIngestionRuleMetadataResponse> Entities { get; set; }
 
 
 
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SocialTopicResponseEntityListing {\n");
+            sb.Append("class SocialTopicWithDataIngestionRuleMetadataResponseEntityListing {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -171,15 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as SocialTopicResponseEntityListing);
+            return this.Equals(obj as SocialTopicWithDataIngestionRuleMetadataResponseEntityListing);
         }
 
         /// <summary>
-        /// Returns true if SocialTopicResponseEntityListing instances are equal
+        /// Returns true if SocialTopicWithDataIngestionRuleMetadataResponseEntityListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of SocialTopicResponseEntityListing to be compared</param>
+        /// <param name="other">Instance of SocialTopicWithDataIngestionRuleMetadataResponseEntityListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SocialTopicResponseEntityListing other)
+        public bool Equals(SocialTopicWithDataIngestionRuleMetadataResponseEntityListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

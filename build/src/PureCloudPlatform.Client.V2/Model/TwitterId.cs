@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// User information for a twitter account
+    /// User information for a twitter account. Either id OR screenName (or both) must be present
     /// </summary>
     [DataContract]
     public partial class TwitterId :  IEquatable<TwitterId>
@@ -21,9 +21,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TwitterId" /> class.
         /// </summary>
-        /// <param name="Id">twitter user.id_str.</param>
-        /// <param name="Name">twitter user.name.</param>
-        /// <param name="ScreenName">twitter user.screen_name.</param>
+        /// <param name="Id">twitter user.id_str. Max: 255 characters.</param>
+        /// <param name="Name">twitter user.name. Max: 255 characters.</param>
+        /// <param name="ScreenName">twitter user.screen_name. Max: 255 characters. Must match pattern: ^@?[A-Za-z0-9_]+$.</param>
         public TwitterId(string Id = null, string Name = null, string ScreenName = null)
         {
             this.Id = Id;
@@ -35,27 +35,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// twitter user.id_str
+        /// twitter user.id_str. Max: 255 characters
         /// </summary>
-        /// <value>twitter user.id_str</value>
+        /// <value>twitter user.id_str. Max: 255 characters</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 
 
 
         /// <summary>
-        /// twitter user.name
+        /// twitter user.name. Max: 255 characters
         /// </summary>
-        /// <value>twitter user.name</value>
+        /// <value>twitter user.name. Max: 255 characters</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
 
 
         /// <summary>
-        /// twitter user.screen_name
+        /// twitter user.screen_name. Max: 255 characters. Must match pattern: ^@?[A-Za-z0-9_]+$
         /// </summary>
-        /// <value>twitter user.screen_name</value>
+        /// <value>twitter user.screen_name. Max: 255 characters. Must match pattern: ^@?[A-Za-z0-9_]+$</value>
         [DataMember(Name="screenName", EmitDefaultValue=false)]
         public string ScreenName { get; set; }
 

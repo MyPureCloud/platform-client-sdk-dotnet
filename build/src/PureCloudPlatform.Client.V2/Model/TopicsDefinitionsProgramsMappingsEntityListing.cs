@@ -13,20 +13,20 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ProgramsMappingsEntityListing
+    /// TopicsDefinitionsProgramsMappingsEntityListing
     /// </summary>
     [DataContract]
-    public partial class ProgramsMappingsEntityListing :  IEquatable<ProgramsMappingsEntityListing>
+    public partial class TopicsDefinitionsProgramsMappingsEntityListing :  IEquatable<TopicsDefinitionsProgramsMappingsEntityListing>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ProgramsMappingsEntityListing" /> class.
+        /// Initializes a new instance of the <see cref="TopicsDefinitionsProgramsMappingsEntityListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
         /// <param name="NextUri">NextUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public ProgramsMappingsEntityListing(List<ProgramMappings> Entities = null, int? PageSize = null, string NextUri = null, string SelfUri = null, int? PageCount = null)
+        public TopicsDefinitionsProgramsMappingsEntityListing(List<TopicsDefinitionsProgramMappings> Entities = null, int? PageSize = null, string NextUri = null, string SelfUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -42,7 +42,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<ProgramMappings> Entities { get; set; }
+        public List<TopicsDefinitionsProgramMappings> Entities { get; set; }
 
 
 
@@ -84,7 +84,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ProgramsMappingsEntityListing {\n");
+            sb.Append("class TopicsDefinitionsProgramsMappingsEntityListing {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -116,15 +116,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ProgramsMappingsEntityListing);
+            return this.Equals(obj as TopicsDefinitionsProgramsMappingsEntityListing);
         }
 
         /// <summary>
-        /// Returns true if ProgramsMappingsEntityListing instances are equal
+        /// Returns true if TopicsDefinitionsProgramsMappingsEntityListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of ProgramsMappingsEntityListing to be compared</param>
+        /// <param name="other">Instance of TopicsDefinitionsProgramsMappingsEntityListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ProgramsMappingsEntityListing other)
+        public bool Equals(TopicsDefinitionsProgramsMappingsEntityListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

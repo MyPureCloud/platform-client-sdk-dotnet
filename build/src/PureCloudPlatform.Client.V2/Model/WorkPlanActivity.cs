@@ -34,10 +34,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CountsAsContiguousWorkTime">Whether the activity duration is counted towards contiguous work time.</param>
         /// <param name="MinimumLengthFromShiftStartMinutes">The minimum duration between shift start and shift item (e.g., break or meal) start in minutes.</param>
         /// <param name="MinimumLengthFromShiftEndMinutes">The minimum duration between shift item (e.g., break or meal) end and shift end in minutes.</param>
+        /// <param name="MaximumLengthFromShiftEndMinutes">The maximum duration between shift item (e.g., break or meal) end and shift end in minutes.</param>
         /// <param name="Id">ID of the activity. This is required only for the case of updating an existing activity.</param>
         /// <param name="Delete">If marked true for updating an existing activity, the activity will be permanently deleted.</param>
         /// <param name="ValidationId">ID of the activity in the context of work plan validation.</param>
-        public WorkPlanActivity(string ActivityCodeId = null, string Description = null, int? LengthMinutes = null, bool? StartTimeIsRelativeToShiftStart = null, bool? FlexibleStartTime = null, int? EarliestStartTimeMinutes = null, int? LatestStartTimeMinutes = null, int? ExactStartTimeMinutes = null, int? StartTimeIncrementMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsContiguousWorkTime = null, int? MinimumLengthFromShiftStartMinutes = null, int? MinimumLengthFromShiftEndMinutes = null, string Id = null, bool? Delete = null, string ValidationId = null)
+        public WorkPlanActivity(string ActivityCodeId = null, string Description = null, int? LengthMinutes = null, bool? StartTimeIsRelativeToShiftStart = null, bool? FlexibleStartTime = null, int? EarliestStartTimeMinutes = null, int? LatestStartTimeMinutes = null, int? ExactStartTimeMinutes = null, int? StartTimeIncrementMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsContiguousWorkTime = null, int? MinimumLengthFromShiftStartMinutes = null, int? MinimumLengthFromShiftEndMinutes = null, int? MaximumLengthFromShiftEndMinutes = null, string Id = null, bool? Delete = null, string ValidationId = null)
         {
             this.ActivityCodeId = ActivityCodeId;
             this.Description = Description;
@@ -52,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CountsAsContiguousWorkTime = CountsAsContiguousWorkTime;
             this.MinimumLengthFromShiftStartMinutes = MinimumLengthFromShiftStartMinutes;
             this.MinimumLengthFromShiftEndMinutes = MinimumLengthFromShiftEndMinutes;
+            this.MaximumLengthFromShiftEndMinutes = MaximumLengthFromShiftEndMinutes;
             this.Id = Id;
             this.Delete = Delete;
             this.ValidationId = ValidationId;
@@ -178,6 +180,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The maximum duration between shift item (e.g., break or meal) end and shift end in minutes
+        /// </summary>
+        /// <value>The maximum duration between shift item (e.g., break or meal) end and shift end in minutes</value>
+        [DataMember(Name="maximumLengthFromShiftEndMinutes", EmitDefaultValue=false)]
+        public int? MaximumLengthFromShiftEndMinutes { get; set; }
+
+
+
+        /// <summary>
         /// ID of the activity. This is required only for the case of updating an existing activity
         /// </summary>
         /// <value>ID of the activity. This is required only for the case of updating an existing activity</value>
@@ -225,6 +236,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CountsAsContiguousWorkTime: ").Append(CountsAsContiguousWorkTime).Append("\n");
             sb.Append("  MinimumLengthFromShiftStartMinutes: ").Append(MinimumLengthFromShiftStartMinutes).Append("\n");
             sb.Append("  MinimumLengthFromShiftEndMinutes: ").Append(MinimumLengthFromShiftEndMinutes).Append("\n");
+            sb.Append("  MaximumLengthFromShiftEndMinutes: ").Append(MaximumLengthFromShiftEndMinutes).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Delete: ").Append(Delete).Append("\n");
             sb.Append("  ValidationId: ").Append(ValidationId).Append("\n");
@@ -334,6 +346,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MinimumLengthFromShiftEndMinutes.Equals(other.MinimumLengthFromShiftEndMinutes)
                 ) &&
                 (
+                    this.MaximumLengthFromShiftEndMinutes == other.MaximumLengthFromShiftEndMinutes ||
+                    this.MaximumLengthFromShiftEndMinutes != null &&
+                    this.MaximumLengthFromShiftEndMinutes.Equals(other.MaximumLengthFromShiftEndMinutes)
+                ) &&
+                (
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
@@ -399,6 +416,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MinimumLengthFromShiftEndMinutes != null)
                     hash = hash * 59 + this.MinimumLengthFromShiftEndMinutes.GetHashCode();
+
+                if (this.MaximumLengthFromShiftEndMinutes != null)
+                    hash = hash * 59 + this.MaximumLengthFromShiftEndMinutes.GetHashCode();
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();

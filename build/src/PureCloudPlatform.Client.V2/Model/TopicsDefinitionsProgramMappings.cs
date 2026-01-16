@@ -13,20 +13,20 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ProgramMappings
+    /// TopicsDefinitionsProgramMappings
     /// </summary>
     [DataContract]
-    public partial class ProgramMappings :  IEquatable<ProgramMappings>
+    public partial class TopicsDefinitionsProgramMappings :  IEquatable<TopicsDefinitionsProgramMappings>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="ProgramMappings" /> class.
+        /// Initializes a new instance of the <see cref="TopicsDefinitionsProgramMappings" /> class.
         /// </summary>
         /// <param name="Program">Program.</param>
         /// <param name="Queues">Queues.</param>
         /// <param name="Flows">Flows.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
         /// <param name="DateModified">Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public ProgramMappings(BaseProgramEntity Program = null, List<AddressableEntityRef> Queues = null, List<AddressableEntityRef> Flows = null, AddressableEntityRef ModifiedBy = null, DateTime? DateModified = null)
+        public TopicsDefinitionsProgramMappings(BaseProgramEntity Program = null, List<AddressableEntityRef> Queues = null, List<AddressableEntityRef> Flows = null, AddressableEntityRef ModifiedBy = null, DateTime? DateModified = null)
         {
             this.Program = Program;
             this.Queues = Queues;
@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ProgramMappings {\n");
+            sb.Append("class TopicsDefinitionsProgramMappings {\n");
 
             sb.Append("  Program: ").Append(Program).Append("\n");
             sb.Append("  Queues: ").Append(Queues).Append("\n");
@@ -117,15 +117,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ProgramMappings);
+            return this.Equals(obj as TopicsDefinitionsProgramMappings);
         }
 
         /// <summary>
-        /// Returns true if ProgramMappings instances are equal
+        /// Returns true if TopicsDefinitionsProgramMappings instances are equal
         /// </summary>
-        /// <param name="other">Instance of ProgramMappings to be compared</param>
+        /// <param name="other">Instance of TopicsDefinitionsProgramMappings to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ProgramMappings other)
+        public bool Equals(TopicsDefinitionsProgramMappings other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -34,7 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CountsAsContiguousWorkTime">Whether the activity duration is counted towards contiguous work time.</param>
         /// <param name="MinimumLengthFromShiftStartMinutes">The minimum duration between shift start and shift item (e.g., break or meal) start in minutes.</param>
         /// <param name="MinimumLengthFromShiftEndMinutes">The minimum duration between shift item (e.g., break or meal) end and shift end in minutes.</param>
-        public CreateWorkPlanActivity(string ActivityCodeId = null, string Description = null, int? LengthMinutes = null, bool? StartTimeIsRelativeToShiftStart = null, bool? FlexibleStartTime = null, int? EarliestStartTimeMinutes = null, int? LatestStartTimeMinutes = null, int? ExactStartTimeMinutes = null, int? StartTimeIncrementMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsContiguousWorkTime = null, int? MinimumLengthFromShiftStartMinutes = null, int? MinimumLengthFromShiftEndMinutes = null)
+        /// <param name="MaximumLengthFromShiftEndMinutes">The maximum duration between shift item (e.g., break or meal) end and shift end in minutes.</param>
+        public CreateWorkPlanActivity(string ActivityCodeId = null, string Description = null, int? LengthMinutes = null, bool? StartTimeIsRelativeToShiftStart = null, bool? FlexibleStartTime = null, int? EarliestStartTimeMinutes = null, int? LatestStartTimeMinutes = null, int? ExactStartTimeMinutes = null, int? StartTimeIncrementMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsContiguousWorkTime = null, int? MinimumLengthFromShiftStartMinutes = null, int? MinimumLengthFromShiftEndMinutes = null, int? MaximumLengthFromShiftEndMinutes = null)
         {
             this.ActivityCodeId = ActivityCodeId;
             this.Description = Description;
@@ -49,6 +50,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CountsAsContiguousWorkTime = CountsAsContiguousWorkTime;
             this.MinimumLengthFromShiftStartMinutes = MinimumLengthFromShiftStartMinutes;
             this.MinimumLengthFromShiftEndMinutes = MinimumLengthFromShiftEndMinutes;
+            this.MaximumLengthFromShiftEndMinutes = MaximumLengthFromShiftEndMinutes;
             
         }
         
@@ -170,6 +172,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? MinimumLengthFromShiftEndMinutes { get; set; }
 
 
+
+        /// <summary>
+        /// The maximum duration between shift item (e.g., break or meal) end and shift end in minutes
+        /// </summary>
+        /// <value>The maximum duration between shift item (e.g., break or meal) end and shift end in minutes</value>
+        [DataMember(Name="maximumLengthFromShiftEndMinutes", EmitDefaultValue=false)]
+        public int? MaximumLengthFromShiftEndMinutes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -192,6 +203,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CountsAsContiguousWorkTime: ").Append(CountsAsContiguousWorkTime).Append("\n");
             sb.Append("  MinimumLengthFromShiftStartMinutes: ").Append(MinimumLengthFromShiftStartMinutes).Append("\n");
             sb.Append("  MinimumLengthFromShiftEndMinutes: ").Append(MinimumLengthFromShiftEndMinutes).Append("\n");
+            sb.Append("  MaximumLengthFromShiftEndMinutes: ").Append(MaximumLengthFromShiftEndMinutes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -296,6 +308,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MinimumLengthFromShiftEndMinutes == other.MinimumLengthFromShiftEndMinutes ||
                     this.MinimumLengthFromShiftEndMinutes != null &&
                     this.MinimumLengthFromShiftEndMinutes.Equals(other.MinimumLengthFromShiftEndMinutes)
+                ) &&
+                (
+                    this.MaximumLengthFromShiftEndMinutes == other.MaximumLengthFromShiftEndMinutes ||
+                    this.MaximumLengthFromShiftEndMinutes != null &&
+                    this.MaximumLengthFromShiftEndMinutes.Equals(other.MaximumLengthFromShiftEndMinutes)
                 );
         }
 
@@ -348,6 +365,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MinimumLengthFromShiftEndMinutes != null)
                     hash = hash * 59 + this.MinimumLengthFromShiftEndMinutes.GetHashCode();
+
+                if (this.MaximumLengthFromShiftEndMinutes != null)
+                    hash = hash * 59 + this.MaximumLengthFromShiftEndMinutes.GetHashCode();
 
                 return hash;
             }

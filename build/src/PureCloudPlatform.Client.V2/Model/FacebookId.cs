@@ -18,11 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FacebookId :  IEquatable<FacebookId>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FacebookId" /> class.
         /// </summary>
-        /// <param name="Ids">The set of scopedIds that this person has. Each scopedId is specific to a page or app that the user interacts with..</param>
-        /// <param name="DisplayName">The displayName of this person&#39;s Facebook account. Roughly translates to user.first_name + &#39; &#39; + user.last_name in the Facebook API..</param>
+        [JsonConstructorAttribute]
+        protected FacebookId() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FacebookId" /> class.
+        /// </summary>
+        /// <param name="Ids">The set of scopedIds that this person has. Each scopedId is specific to a page or app that the user interacts with. Max: 1 Id (required).</param>
+        /// <param name="DisplayName">The displayName of this person&#39;s Facebook account. Roughly translates to user.first_name + &#39; &#39; + user.last_name in the Facebook API. Max: 100 characters..</param>
         public FacebookId(List<FacebookScopedId> Ids = null, string DisplayName = null)
         {
             this.Ids = Ids;
@@ -33,18 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The set of scopedIds that this person has. Each scopedId is specific to a page or app that the user interacts with.
+        /// The set of scopedIds that this person has. Each scopedId is specific to a page or app that the user interacts with. Max: 1 Id
         /// </summary>
-        /// <value>The set of scopedIds that this person has. Each scopedId is specific to a page or app that the user interacts with.</value>
+        /// <value>The set of scopedIds that this person has. Each scopedId is specific to a page or app that the user interacts with. Max: 1 Id</value>
         [DataMember(Name="ids", EmitDefaultValue=false)]
         public List<FacebookScopedId> Ids { get; set; }
 
 
 
         /// <summary>
-        /// The displayName of this person&#39;s Facebook account. Roughly translates to user.first_name + &#39; &#39; + user.last_name in the Facebook API.
+        /// The displayName of this person&#39;s Facebook account. Roughly translates to user.first_name + &#39; &#39; + user.last_name in the Facebook API. Max: 100 characters.
         /// </summary>
-        /// <value>The displayName of this person&#39;s Facebook account. Roughly translates to user.first_name + &#39; &#39; + user.last_name in the Facebook API.</value>
+        /// <value>The displayName of this person&#39;s Facebook account. Roughly translates to user.first_name + &#39; &#39; + user.last_name in the Facebook API. Max: 100 characters.</value>
         [DataMember(Name="displayName", EmitDefaultValue=false)]
         public string DisplayName { get; set; }
 

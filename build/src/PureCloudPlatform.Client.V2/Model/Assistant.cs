@@ -175,6 +175,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string SelfUri { get; private set; }
 
 
+
+        /// <summary>
+        /// The parent assistant if this assistant is a variation of an assistant
+        /// </summary>
+        /// <value>The parent assistant if this assistant is a variation of an assistant</value>
+        [DataMember(Name="variationParent", EmitDefaultValue=false)]
+        public AddressableEntityRef VariationParent { get; private set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -196,6 +205,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  State: ").Append(State).Append("\n");
             sb.Append("  Copilot: ").Append(Copilot).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  VariationParent: ").Append(VariationParent).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -295,6 +305,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.VariationParent == other.VariationParent ||
+                    this.VariationParent != null &&
+                    this.VariationParent.Equals(other.VariationParent)
                 );
         }
 
@@ -344,6 +359,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();
+
+                if (this.VariationParent != null)
+                    hash = hash * 59 + this.VariationParent.GetHashCode();
 
                 return hash;
             }

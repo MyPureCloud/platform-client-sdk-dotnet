@@ -18,10 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class LinkConfiguration :  IEquatable<LinkConfiguration>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="LinkConfiguration" /> class.
         /// </summary>
-        /// <param name="UriTemplate">UriTemplate.</param>
+        [JsonConstructorAttribute]
+        protected LinkConfiguration() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="LinkConfiguration" /> class.
+        /// </summary>
+        /// <param name="UriTemplate">Should be a valid URL (including the http/https protocol, port, and path [if any]). Leading and trailing whitespace stripped. Max 400 characters. (required).</param>
         public LinkConfiguration(string UriTemplate = null)
         {
             this.UriTemplate = UriTemplate;
@@ -31,8 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets UriTemplate
+        /// Should be a valid URL (including the http/https protocol, port, and path [if any]). Leading and trailing whitespace stripped. Max 400 characters.
         /// </summary>
+        /// <value>Should be a valid URL (including the http/https protocol, port, and path [if any]). Leading and trailing whitespace stripped. Max 400 characters.</value>
         [DataMember(Name="uriTemplate", EmitDefaultValue=false)]
         public string UriTemplate { get; set; }
 

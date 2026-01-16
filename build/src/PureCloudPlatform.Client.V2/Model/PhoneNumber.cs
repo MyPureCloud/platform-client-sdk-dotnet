@@ -21,13 +21,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PhoneNumber" /> class.
         /// </summary>
-        /// <param name="Display">The displayed form of the phone number string. Users should input the phone number in this field, but it will be altered by the API on write. If the phone number can be read as E164, the value will be replaced with international formatted-version of the number. If the number cannot be read as E164, the value will be preserved as-is. In both cases, the provided input string will be copied to the userInput field..</param>
+        /// <param name="Display">The displayed form of the phone number string. Users should input the phone number in this field, but it will be altered by the API on write. If the phone number can be read as E164, the value will be replaced with international formatted-version of the number. If the number cannot be read as E164, the value will be preserved as-is. In both cases, the provided input string will be copied to the userInput field. Max: 512 characters..</param>
         /// <param name="Extension">An optional extension for the provided phone number..</param>
         /// <param name="AcceptsSMS">Whether this phone number can accept SMS messages..</param>
         /// <param name="NormalizationCountryCode">The country code that will be used for E164 conversion of a provided phone number. If the country code is omitted from the provided phone number, the country code provided in this field will be used during the E164 conversion attempt. If this field is left empty, the default country code for any provided phone number that does not explicitly include a country code is assumed to be +1 (North America)..</param>
         /// <param name="UserInput">The user-inputted phone number string that was provided to the display field on write. This field is not user-writeable and will always be set by the system..</param>
         /// <param name="E164">The E164-formatted form of the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164..</param>
-        /// <param name="CountryCode">The detected country code from the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164..</param>
+        /// <param name="CountryCode">The detected country code from the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164. Max: 4 characters..</param>
         public PhoneNumber(string Display = null, long? Extension = null, bool? AcceptsSMS = null, string NormalizationCountryCode = null, string UserInput = null, string E164 = null, string CountryCode = null)
         {
             this.Display = Display;
@@ -43,9 +43,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The displayed form of the phone number string. Users should input the phone number in this field, but it will be altered by the API on write. If the phone number can be read as E164, the value will be replaced with international formatted-version of the number. If the number cannot be read as E164, the value will be preserved as-is. In both cases, the provided input string will be copied to the userInput field.
+        /// The displayed form of the phone number string. Users should input the phone number in this field, but it will be altered by the API on write. If the phone number can be read as E164, the value will be replaced with international formatted-version of the number. If the number cannot be read as E164, the value will be preserved as-is. In both cases, the provided input string will be copied to the userInput field. Max: 512 characters.
         /// </summary>
-        /// <value>The displayed form of the phone number string. Users should input the phone number in this field, but it will be altered by the API on write. If the phone number can be read as E164, the value will be replaced with international formatted-version of the number. If the number cannot be read as E164, the value will be preserved as-is. In both cases, the provided input string will be copied to the userInput field.</value>
+        /// <value>The displayed form of the phone number string. Users should input the phone number in this field, but it will be altered by the API on write. If the phone number can be read as E164, the value will be replaced with international formatted-version of the number. If the number cannot be read as E164, the value will be preserved as-is. In both cases, the provided input string will be copied to the userInput field. Max: 512 characters.</value>
         [DataMember(Name="display", EmitDefaultValue=false)]
         public string Display { get; set; }
 
@@ -97,9 +97,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The detected country code from the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164.
+        /// The detected country code from the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164. Max: 4 characters.
         /// </summary>
-        /// <value>The detected country code from the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164.</value>
+        /// <value>The detected country code from the provided phone number. This field is not user-writeable and will only be set when the provided phone number could be read as E164. Max: 4 characters.</value>
         [DataMember(Name="countryCode", EmitDefaultValue=false)]
         public string CountryCode { get; set; }
 

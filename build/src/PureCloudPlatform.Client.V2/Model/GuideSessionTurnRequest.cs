@@ -31,12 +31,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LanguageCode">The language code for this turn. (required).</param>
         /// <param name="Version">The version for this turn. (required).</param>
         /// <param name="InputVariables">The input variables for this turn..</param>
-        public GuideSessionTurnRequest(GuideSessionInputEvent InputEvent = null, string LanguageCode = null, string Version = null, List<GuideSessionVariable> InputVariables = null)
+        /// <param name="KnowledgeSettings">The knowledge settings for this turn..</param>
+        public GuideSessionTurnRequest(GuideSessionInputEvent InputEvent = null, string LanguageCode = null, string Version = null, List<GuideSessionVariable> InputVariables = null, KnowledgeSettings KnowledgeSettings = null)
         {
             this.InputEvent = InputEvent;
             this.LanguageCode = LanguageCode;
             this.Version = Version;
             this.InputVariables = InputVariables;
+            this.KnowledgeSettings = KnowledgeSettings;
             
         }
         
@@ -77,6 +79,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<GuideSessionVariable> InputVariables { get; set; }
 
 
+
+        /// <summary>
+        /// The knowledge settings for this turn.
+        /// </summary>
+        /// <value>The knowledge settings for this turn.</value>
+        [DataMember(Name="knowledgeSettings", EmitDefaultValue=false)]
+        public KnowledgeSettings KnowledgeSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -90,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LanguageCode: ").Append(LanguageCode).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  InputVariables: ").Append(InputVariables).Append("\n");
+            sb.Append("  KnowledgeSettings: ").Append(KnowledgeSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -149,6 +161,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InputVariables == other.InputVariables ||
                     this.InputVariables != null &&
                     this.InputVariables.SequenceEqual(other.InputVariables)
+                ) &&
+                (
+                    this.KnowledgeSettings == other.KnowledgeSettings ||
+                    this.KnowledgeSettings != null &&
+                    this.KnowledgeSettings.Equals(other.KnowledgeSettings)
                 );
         }
 
@@ -174,6 +191,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InputVariables != null)
                     hash = hash * 59 + this.InputVariables.GetHashCode();
+
+                if (this.KnowledgeSettings != null)
+                    hash = hash * 59 + this.KnowledgeSettings.GetHashCode();
 
                 return hash;
             }

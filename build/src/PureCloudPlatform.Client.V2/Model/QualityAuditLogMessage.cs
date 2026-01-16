@@ -265,7 +265,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Snippetrecording for "SnippetRecording"
             /// </summary>
             [EnumMember(Value = "SnippetRecording")]
-            Snippetrecording
+            Snippetrecording,
+            
+            /// <summary>
+            /// Enum Screenmonitoring for "ScreenMonitoring"
+            /// </summary>
+            [EnumMember(Value = "ScreenMonitoring")]
+            Screenmonitoring
         }
         /// <summary>
         /// Name of the service that logged this audit message.

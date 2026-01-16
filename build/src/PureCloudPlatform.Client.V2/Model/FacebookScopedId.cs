@@ -18,10 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class FacebookScopedId :  IEquatable<FacebookScopedId>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="FacebookScopedId" /> class.
         /// </summary>
-        /// <param name="ScopedId">The unique page/app-specific scopedId for the user.</param>
+        [JsonConstructorAttribute]
+        protected FacebookScopedId() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FacebookScopedId" /> class.
+        /// </summary>
+        /// <param name="ScopedId">The unique page/app-specific scopedId for the user. Max: 255 characters. (required).</param>
         public FacebookScopedId(string ScopedId = null)
         {
             this.ScopedId = ScopedId;
@@ -31,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The unique page/app-specific scopedId for the user
+        /// The unique page/app-specific scopedId for the user. Max: 255 characters.
         /// </summary>
-        /// <value>The unique page/app-specific scopedId for the user</value>
+        /// <value>The unique page/app-specific scopedId for the user. Max: 255 characters.</value>
         [DataMember(Name="scopedId", EmitDefaultValue=false)]
         public string ScopedId { get; set; }
 

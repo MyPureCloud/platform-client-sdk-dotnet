@@ -28,7 +28,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ExternalOrganization" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
-        /// <param name="Name">The name of the company. (required).</param>
+        /// <param name="Name">The name of the company. Max: 1000 characters. Leading and trailing whitespace stripped. (required).</param>
         /// <param name="Division">The division to which this entity belongs..</param>
         /// <param name="CompanyType">CompanyType.</param>
         /// <param name="Industry">Industry.</param>
@@ -48,7 +48,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Schema">The schema defining custom fields for this contact.</param>
         /// <param name="CustomFields">Custom fields defined in the schema referenced by schemaId and schemaVersion..</param>
         /// <param name="Identifiers">Identifiers claimed by this external org.</param>
-        /// <param name="ExternalIds">A list of external identifiers that identify this External Organization in an external system.</param>
+        /// <param name="ExternalIds">A list of external identifiers that identify this External Organization in an external system. Max 10 items..</param>
         public ExternalOrganization(string Id = null, string Name = null, WritableStarrableDivision Division = null, string CompanyType = null, string Industry = null, ContactAddress Address = null, PhoneNumber PhoneNumber = null, PhoneNumber FaxNumber = null, long? EmployeeCount = null, long? Revenue = null, List<string> Tags = null, List<string> Websites = null, List<Ticker> Tickers = null, TwitterId TwitterId = null, string ExternalSystemUrl = null, DateTime? ModifyDate = null, DateTime? CreateDate = null, Trustor Trustor = null, DataSchema Schema = null, Dictionary<string, Object> CustomFields = null, List<ExternalOrganizationIdentifier> Identifiers = null, List<ExternalId> ExternalIds = null)
         {
             this.Id = Id;
@@ -88,9 +88,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The name of the company.
+        /// The name of the company. Max: 1000 characters. Leading and trailing whitespace stripped.
         /// </summary>
-        /// <value>The name of the company.</value>
+        /// <value>The name of the company. Max: 1000 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -256,9 +256,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of external identifiers that identify this External Organization in an external system
+        /// A list of external identifiers that identify this External Organization in an external system. Max 10 items.
         /// </summary>
-        /// <value>A list of external identifiers that identify this External Organization in an external system</value>
+        /// <value>A list of external identifiers that identify this External Organization in an external system. Max 10 items.</value>
         [DataMember(Name="externalIds", EmitDefaultValue=false)]
         public List<ExternalId> ExternalIds { get; set; }
 

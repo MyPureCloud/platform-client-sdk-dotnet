@@ -479,9 +479,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
-        /// <returns>ProgramMappings</returns>
+        /// <returns>TopicsDefinitionsProgramMappings</returns>
         
-        ProgramMappings GetSpeechandtextanalyticsProgramMappings (string programId);
+        TopicsDefinitionsProgramMappings GetSpeechandtextanalyticsProgramMappings (string programId);
 
         /// <summary>
         /// Get Speech &amp; Text Analytics program mappings to queues and flows by id
@@ -491,9 +491,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
-        /// <returns>ApiResponse of ProgramMappings</returns>
+        /// <returns>ApiResponse of TopicsDefinitionsProgramMappings</returns>
         
-        ApiResponse<ProgramMappings> GetSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId);
+        ApiResponse<TopicsDefinitionsProgramMappings> GetSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId);
 
         /// <summary>
         /// Get AI Insights settings of a program
@@ -604,9 +604,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
-        /// <returns>ProgramsMappingsEntityListing</returns>
+        /// <returns>TopicsDefinitionsProgramsMappingsEntityListing</returns>
         
-        ProgramsMappingsEntityListing GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null);
+        TopicsDefinitionsProgramsMappingsEntityListing GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null);
 
         /// <summary>
         /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
@@ -617,9 +617,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
-        /// <returns>ApiResponse of ProgramsMappingsEntityListing</returns>
+        /// <returns>ApiResponse of TopicsDefinitionsProgramsMappingsEntityListing</returns>
         
-        ApiResponse<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo (string nextPage = null, int? pageSize = null);
+        ApiResponse<TopicsDefinitionsProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo (string nextPage = null, int? pageSize = null);
 
         /// <summary>
         /// Get a Speech &amp; Text Analytics publish programs job by id
@@ -1484,9 +1484,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
-        /// <returns>ProgramMappings</returns>
+        /// <returns>TopicsDefinitionsProgramMappings</returns>
         
-        ProgramMappings PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body);
+        TopicsDefinitionsProgramMappings PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body);
 
         /// <summary>
         /// Set Speech &amp; Text Analytics program mappings to queues and flows
@@ -1497,9 +1497,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
-        /// <returns>ApiResponse of ProgramMappings</returns>
+        /// <returns>ApiResponse of TopicsDefinitionsProgramMappings</returns>
         
-        ApiResponse<ProgramMappings> PutSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId, ProgramMappingsRequest body);
+        ApiResponse<TopicsDefinitionsProgramMappings> PutSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId, ProgramMappingsRequest body);
 
         /// <summary>
         /// Update AI Insights settings of a program
@@ -2071,9 +2071,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
-        /// <returns>Task of ProgramMappings</returns>
+        /// <returns>Task of TopicsDefinitionsProgramMappings</returns>
         
-        System.Threading.Tasks.Task<ProgramMappings> GetSpeechandtextanalyticsProgramMappingsAsync (string programId);
+        System.Threading.Tasks.Task<TopicsDefinitionsProgramMappings> GetSpeechandtextanalyticsProgramMappingsAsync (string programId);
 
         /// <summary>
         /// Get Speech &amp; Text Analytics program mappings to queues and flows by id
@@ -2083,9 +2083,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
-        /// <returns>Task of ApiResponse (ProgramMappings)</returns>
+        /// <returns>Task of ApiResponse (TopicsDefinitionsProgramMappings)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ProgramMappings>> GetSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId);
+        System.Threading.Tasks.Task<ApiResponse<TopicsDefinitionsProgramMappings>> GetSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId);
 
         /// <summary>
         /// Get AI Insights settings of a program
@@ -2196,9 +2196,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
-        /// <returns>Task of ProgramsMappingsEntityListing</returns>
+        /// <returns>Task of TopicsDefinitionsProgramsMappingsEntityListing</returns>
         
-        System.Threading.Tasks.Task<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsAsync (string nextPage = null, int? pageSize = null);
+        System.Threading.Tasks.Task<TopicsDefinitionsProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsAsync (string nextPage = null, int? pageSize = null);
 
         /// <summary>
         /// Get the list of Speech &amp; Text Analytics programs mappings to queues and flows
@@ -2209,9 +2209,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
-        /// <returns>Task of ApiResponse (ProgramsMappingsEntityListing)</returns>
+        /// <returns>Task of ApiResponse (TopicsDefinitionsProgramsMappingsEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ProgramsMappingsEntityListing>> GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<TopicsDefinitionsProgramsMappingsEntityListing>> GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null);
 
         /// <summary>
         /// Get a Speech &amp; Text Analytics publish programs job by id
@@ -3076,9 +3076,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
-        /// <returns>Task of ProgramMappings</returns>
+        /// <returns>Task of TopicsDefinitionsProgramMappings</returns>
         
-        System.Threading.Tasks.Task<ProgramMappings> PutSpeechandtextanalyticsProgramMappingsAsync (string programId, ProgramMappingsRequest body);
+        System.Threading.Tasks.Task<TopicsDefinitionsProgramMappings> PutSpeechandtextanalyticsProgramMappingsAsync (string programId, ProgramMappingsRequest body);
 
         /// <summary>
         /// Set Speech &amp; Text Analytics program mappings to queues and flows
@@ -3089,9 +3089,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
-        /// <returns>Task of ApiResponse (ProgramMappings)</returns>
+        /// <returns>Task of ApiResponse (TopicsDefinitionsProgramMappings)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ProgramMappings>> PutSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId, ProgramMappingsRequest body);
+        System.Threading.Tasks.Task<ApiResponse<TopicsDefinitionsProgramMappings>> PutSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId, ProgramMappingsRequest body);
 
         /// <summary>
         /// Update AI Insights settings of a program
@@ -6962,11 +6962,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
-        /// <returns>ProgramMappings</returns>
+        /// <returns>TopicsDefinitionsProgramMappings</returns>
         
-        public ProgramMappings GetSpeechandtextanalyticsProgramMappings (string programId)
+        public TopicsDefinitionsProgramMappings GetSpeechandtextanalyticsProgramMappings (string programId)
         {
-             ApiResponse<ProgramMappings> localVarResponse = GetSpeechandtextanalyticsProgramMappingsWithHttpInfo(programId);
+             ApiResponse<TopicsDefinitionsProgramMappings> localVarResponse = GetSpeechandtextanalyticsProgramMappingsWithHttpInfo(programId);
              return localVarResponse.Data;
         }
 
@@ -6976,9 +6976,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
-        /// <returns>ApiResponse of ProgramMappings</returns>
+        /// <returns>ApiResponse of TopicsDefinitionsProgramMappings</returns>
         
-        public ApiResponse< ProgramMappings > GetSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId)
+        public ApiResponse< TopicsDefinitionsProgramMappings > GetSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId)
         { 
             // verify the required parameter 'programId' is set
             if (programId == null)
@@ -7047,9 +7047,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramMappings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ProgramMappings>(localVarStatusCode,
+            return new ApiResponse<TopicsDefinitionsProgramMappings>(localVarStatusCode,
                 localVarHeaders,
-                (ProgramMappings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramMappings)),
+                (TopicsDefinitionsProgramMappings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TopicsDefinitionsProgramMappings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7061,11 +7061,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
-        /// <returns>Task of ProgramMappings</returns>
+        /// <returns>Task of TopicsDefinitionsProgramMappings</returns>
         
-        public async System.Threading.Tasks.Task<ProgramMappings> GetSpeechandtextanalyticsProgramMappingsAsync (string programId)
+        public async System.Threading.Tasks.Task<TopicsDefinitionsProgramMappings> GetSpeechandtextanalyticsProgramMappingsAsync (string programId)
         {
-             ApiResponse<ProgramMappings> localVarResponse = await GetSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo(programId);
+             ApiResponse<TopicsDefinitionsProgramMappings> localVarResponse = await GetSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo(programId);
              return localVarResponse.Data;
 
         }
@@ -7076,9 +7076,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
-        /// <returns>Task of ApiResponse (ProgramMappings)</returns>
+        /// <returns>Task of ApiResponse (TopicsDefinitionsProgramMappings)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ProgramMappings>> GetSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId)
+        public async System.Threading.Tasks.Task<ApiResponse<TopicsDefinitionsProgramMappings>> GetSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId)
         { 
             // verify the required parameter 'programId' is set
             if (programId == null)
@@ -7148,9 +7148,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramMappings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ProgramMappings>(localVarStatusCode,
+            return new ApiResponse<TopicsDefinitionsProgramMappings>(localVarStatusCode,
                 localVarHeaders,
-                (ProgramMappings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramMappings)),
+                (TopicsDefinitionsProgramMappings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TopicsDefinitionsProgramMappings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -7973,11 +7973,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
-        /// <returns>ProgramsMappingsEntityListing</returns>
+        /// <returns>TopicsDefinitionsProgramsMappingsEntityListing</returns>
         
-        public ProgramsMappingsEntityListing GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null)
+        public TopicsDefinitionsProgramsMappingsEntityListing GetSpeechandtextanalyticsProgramsMappings (string nextPage = null, int? pageSize = null)
         {
-             ApiResponse<ProgramsMappingsEntityListing> localVarResponse = GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo(nextPage, pageSize);
+             ApiResponse<TopicsDefinitionsProgramsMappingsEntityListing> localVarResponse = GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo(nextPage, pageSize);
              return localVarResponse.Data;
         }
 
@@ -7988,9 +7988,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
-        /// <returns>ApiResponse of ProgramsMappingsEntityListing</returns>
+        /// <returns>ApiResponse of TopicsDefinitionsProgramsMappingsEntityListing</returns>
         
-        public ApiResponse< ProgramsMappingsEntityListing > GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo (string nextPage = null, int? pageSize = null)
+        public ApiResponse< TopicsDefinitionsProgramsMappingsEntityListing > GetSpeechandtextanalyticsProgramsMappingsWithHttpInfo (string nextPage = null, int? pageSize = null)
         { 
 
             var localVarPath = "/api/v2/speechandtextanalytics/programs/mappings";
@@ -8057,9 +8057,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramsMappings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ProgramsMappingsEntityListing>(localVarStatusCode,
+            return new ApiResponse<TopicsDefinitionsProgramsMappingsEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (ProgramsMappingsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramsMappingsEntityListing)),
+                (TopicsDefinitionsProgramsMappingsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TopicsDefinitionsProgramsMappingsEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -8072,11 +8072,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
-        /// <returns>Task of ProgramsMappingsEntityListing</returns>
+        /// <returns>Task of TopicsDefinitionsProgramsMappingsEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsAsync (string nextPage = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<TopicsDefinitionsProgramsMappingsEntityListing> GetSpeechandtextanalyticsProgramsMappingsAsync (string nextPage = null, int? pageSize = null)
         {
-             ApiResponse<ProgramsMappingsEntityListing> localVarResponse = await GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo(nextPage, pageSize);
+             ApiResponse<TopicsDefinitionsProgramsMappingsEntityListing> localVarResponse = await GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo(nextPage, pageSize);
              return localVarResponse.Data;
 
         }
@@ -8088,9 +8088,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
-        /// <returns>Task of ApiResponse (ProgramsMappingsEntityListing)</returns>
+        /// <returns>Task of ApiResponse (TopicsDefinitionsProgramsMappingsEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ProgramsMappingsEntityListing>> GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<TopicsDefinitionsProgramsMappingsEntityListing>> GetSpeechandtextanalyticsProgramsMappingsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null)
         { 
 
             var localVarPath = "/api/v2/speechandtextanalytics/programs/mappings";
@@ -8157,9 +8157,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramsMappings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ProgramsMappingsEntityListing>(localVarStatusCode,
+            return new ApiResponse<TopicsDefinitionsProgramsMappingsEntityListing>(localVarStatusCode,
                 localVarHeaders,
-                (ProgramsMappingsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramsMappingsEntityListing)),
+                (TopicsDefinitionsProgramsMappingsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TopicsDefinitionsProgramsMappingsEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15200,11 +15200,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
-        /// <returns>ProgramMappings</returns>
+        /// <returns>TopicsDefinitionsProgramMappings</returns>
         
-        public ProgramMappings PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body)
+        public TopicsDefinitionsProgramMappings PutSpeechandtextanalyticsProgramMappings (string programId, ProgramMappingsRequest body)
         {
-             ApiResponse<ProgramMappings> localVarResponse = PutSpeechandtextanalyticsProgramMappingsWithHttpInfo(programId, body);
+             ApiResponse<TopicsDefinitionsProgramMappings> localVarResponse = PutSpeechandtextanalyticsProgramMappingsWithHttpInfo(programId, body);
              return localVarResponse.Data;
         }
 
@@ -15215,9 +15215,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
-        /// <returns>ApiResponse of ProgramMappings</returns>
+        /// <returns>ApiResponse of TopicsDefinitionsProgramMappings</returns>
         
-        public ApiResponse< ProgramMappings > PutSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId, ProgramMappingsRequest body)
+        public ApiResponse< TopicsDefinitionsProgramMappings > PutSpeechandtextanalyticsProgramMappingsWithHttpInfo (string programId, ProgramMappingsRequest body)
         { 
             // verify the required parameter 'programId' is set
             if (programId == null)
@@ -15295,9 +15295,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutSpeechandtextanalyticsProgramMappings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ProgramMappings>(localVarStatusCode,
+            return new ApiResponse<TopicsDefinitionsProgramMappings>(localVarStatusCode,
                 localVarHeaders,
-                (ProgramMappings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramMappings)),
+                (TopicsDefinitionsProgramMappings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TopicsDefinitionsProgramMappings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -15310,11 +15310,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
-        /// <returns>Task of ProgramMappings</returns>
+        /// <returns>Task of TopicsDefinitionsProgramMappings</returns>
         
-        public async System.Threading.Tasks.Task<ProgramMappings> PutSpeechandtextanalyticsProgramMappingsAsync (string programId, ProgramMappingsRequest body)
+        public async System.Threading.Tasks.Task<TopicsDefinitionsProgramMappings> PutSpeechandtextanalyticsProgramMappingsAsync (string programId, ProgramMappingsRequest body)
         {
-             ApiResponse<ProgramMappings> localVarResponse = await PutSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo(programId, body);
+             ApiResponse<TopicsDefinitionsProgramMappings> localVarResponse = await PutSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo(programId, body);
              return localVarResponse.Data;
 
         }
@@ -15326,9 +15326,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="programId">The id of the program</param>
         /// <param name="body">The program to set mappings for</param>
-        /// <returns>Task of ApiResponse (ProgramMappings)</returns>
+        /// <returns>Task of ApiResponse (TopicsDefinitionsProgramMappings)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ProgramMappings>> PutSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId, ProgramMappingsRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<TopicsDefinitionsProgramMappings>> PutSpeechandtextanalyticsProgramMappingsAsyncWithHttpInfo (string programId, ProgramMappingsRequest body)
         { 
             // verify the required parameter 'programId' is set
             if (programId == null)
@@ -15408,9 +15408,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PutSpeechandtextanalyticsProgramMappings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<ProgramMappings>(localVarStatusCode,
+            return new ApiResponse<TopicsDefinitionsProgramMappings>(localVarStatusCode,
                 localVarHeaders,
-                (ProgramMappings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramMappings)),
+                (TopicsDefinitionsProgramMappings) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TopicsDefinitionsProgramMappings)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

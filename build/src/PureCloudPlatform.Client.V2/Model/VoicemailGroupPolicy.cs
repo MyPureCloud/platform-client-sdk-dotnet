@@ -73,7 +73,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="GroupAlertType">Specifies if the members in this group should be contacted randomly, in a specific order, or by round-robin..</param>
         /// <param name="InteractiveResponsePromptId">The prompt to use when connecting a user to a Group Ring call.</param>
         /// <param name="InteractiveResponseRequired">Whether user should be prompted with a confirmation prompt when connecting to a Group Ring call.</param>
-        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, bool? IncludeEmailTranscriptions = null, string LanguagePreference = null, GroupEmailPolicy EmailPolicy = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null, bool? InteractiveResponseRequired = null)
+        /// <param name="IncludeGroupNumberInUserCallerIdLists">Whether the group phone number should be included in users&#39; caller id lists.</param>
+        public VoicemailGroupPolicy(string Name = null, bool? Enabled = null, bool? SendEmailNotifications = null, bool? DisableEmailPii = null, bool? IncludeEmailTranscriptions = null, string LanguagePreference = null, GroupEmailPolicy EmailPolicy = null, int? RotateCallsSecs = null, int? StopRingingAfterRotations = null, string OverflowGroupId = null, GroupAlertTypeEnum? GroupAlertType = null, string InteractiveResponsePromptId = null, bool? InteractiveResponseRequired = null, bool? IncludeGroupNumberInUserCallerIdLists = null)
         {
             this.Name = Name;
             this.Enabled = Enabled;
@@ -88,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.GroupAlertType = GroupAlertType;
             this.InteractiveResponsePromptId = InteractiveResponsePromptId;
             this.InteractiveResponseRequired = InteractiveResponseRequired;
+            this.IncludeGroupNumberInUserCallerIdLists = IncludeGroupNumberInUserCallerIdLists;
             
         }
         
@@ -210,6 +212,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? InteractiveResponseRequired { get; set; }
 
 
+
+        /// <summary>
+        /// Whether the group phone number should be included in users&#39; caller id lists
+        /// </summary>
+        /// <value>Whether the group phone number should be included in users&#39; caller id lists</value>
+        [DataMember(Name="includeGroupNumberInUserCallerIdLists", EmitDefaultValue=false)]
+        public bool? IncludeGroupNumberInUserCallerIdLists { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -233,6 +244,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  GroupAlertType: ").Append(GroupAlertType).Append("\n");
             sb.Append("  InteractiveResponsePromptId: ").Append(InteractiveResponsePromptId).Append("\n");
             sb.Append("  InteractiveResponseRequired: ").Append(InteractiveResponseRequired).Append("\n");
+            sb.Append("  IncludeGroupNumberInUserCallerIdLists: ").Append(IncludeGroupNumberInUserCallerIdLists).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -342,6 +354,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InteractiveResponseRequired == other.InteractiveResponseRequired ||
                     this.InteractiveResponseRequired != null &&
                     this.InteractiveResponseRequired.Equals(other.InteractiveResponseRequired)
+                ) &&
+                (
+                    this.IncludeGroupNumberInUserCallerIdLists == other.IncludeGroupNumberInUserCallerIdLists ||
+                    this.IncludeGroupNumberInUserCallerIdLists != null &&
+                    this.IncludeGroupNumberInUserCallerIdLists.Equals(other.IncludeGroupNumberInUserCallerIdLists)
                 );
         }
 
@@ -397,6 +414,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InteractiveResponseRequired != null)
                     hash = hash * 59 + this.InteractiveResponseRequired.GetHashCode();
+
+                if (this.IncludeGroupNumberInUserCallerIdLists != null)
+                    hash = hash * 59 + this.IncludeGroupNumberInUserCallerIdLists.GetHashCode();
 
                 return hash;
             }

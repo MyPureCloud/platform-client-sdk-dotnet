@@ -18,11 +18,17 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ExternalId :  IEquatable<ExternalId>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ExternalId" /> class.
         /// </summary>
-        /// <param name="ExternalSource">ExternalSource.</param>
-        /// <param name="Value">Value.</param>
+        [JsonConstructorAttribute]
+        protected ExternalId() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ExternalId" /> class.
+        /// </summary>
+        /// <param name="ExternalSource">The external source of the identifier. Max: 255 characters. Leading and trailing whitespace stripped. (required).</param>
+        /// <param name="Value">The string value of the identifier. Max: 255 characters. Leading and trailing whitespace stripped. (required).</param>
         public ExternalId(ExternalSource ExternalSource = null, string Value = null)
         {
             this.ExternalSource = ExternalSource;
@@ -33,16 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets ExternalSource
+        /// The external source of the identifier. Max: 255 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>The external source of the identifier. Max: 255 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="externalSource", EmitDefaultValue=false)]
         public ExternalSource ExternalSource { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Value
+        /// The string value of the identifier. Max: 255 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>The string value of the identifier. Max: 255 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 

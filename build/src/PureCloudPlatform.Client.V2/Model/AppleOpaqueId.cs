@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AppleOpaqueId" /> class.
         /// </summary>
-        /// <param name="Value">Value.</param>
+        /// <param name="Value">Max: 255 characters. Leading and trailing whitespace stripped..</param>
         public AppleOpaqueId(string Value = null)
         {
             this.Value = Value;
@@ -31,8 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets Value
+        /// Max: 255 characters. Leading and trailing whitespace stripped.
         /// </summary>
+        /// <value>Max: 255 characters. Leading and trailing whitespace stripped.</value>
         [DataMember(Name="value", EmitDefaultValue=false)]
         public string Value { get; set; }
 
