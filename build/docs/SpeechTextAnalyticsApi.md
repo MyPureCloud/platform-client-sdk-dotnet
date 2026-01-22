@@ -1023,7 +1023,7 @@ namespace Example
 
 ## GetSpeechandtextanalyticsDictionaryfeedback
 
-> [**DictionaryFeedbackEntityListing**](DictionaryFeedbackEntityListing) GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string nextPage = null, int? pageSize = null)
+> [**DictionaryFeedbackEntityListing**](DictionaryFeedbackEntityListing) GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null)
 
 
 Get the list of Speech & Text Analytics dictionary feedbacks
@@ -1055,13 +1055,14 @@ namespace Example
 
             var apiInstance = new SpeechTextAnalyticsApi();
             var dialect = en-US;  // string | The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional) 
+            var transcriptionEngine = transcriptionEngine_example;  // string | Filter by transcription engine (optional) 
             var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
             var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 500)
 
             try
             { 
                 // Get the list of Speech & Text Analytics dictionary feedbacks
-                DictionaryFeedbackEntityListing result = apiInstance.GetSpeechandtextanalyticsDictionaryfeedback(dialect, nextPage, pageSize);
+                DictionaryFeedbackEntityListing result = apiInstance.GetSpeechandtextanalyticsDictionaryfeedback(dialect, transcriptionEngine, nextPage, pageSize);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1079,6 +1080,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dialect** | **string**| The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]  |
+| **transcriptionEngine** | **string**| Filter by transcription engine | [optional] <br />**Values**: Genesys, GenesysExtended |
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 500] |
 
@@ -1400,7 +1402,7 @@ namespace Example
 
 ## GetSpeechandtextanalyticsPrograms
 
-> [**ProgramsEntityListing**](ProgramsEntityListing) GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null)
+> [**ProgramsEntityListing**](ProgramsEntityListing) GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null)
 
 
 Get the list of Speech & Text Analytics programs
@@ -1434,11 +1436,14 @@ namespace Example
             var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
             var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 20)
             var state = state_example;  // string | Program state. Defaults to Latest (optional) 
+            var name = name_example;  // string | Case insensitive partial name to filter by (optional) 
+            var sortBy = sortBy_example;  // string | Sort results by. Defaults to name (optional) 
+            var sortOrder = sortOrder_example;  // string | Sort order. Defaults to asc (optional) 
 
             try
             { 
                 // Get the list of Speech & Text Analytics programs
-                ProgramsEntityListing result = apiInstance.GetSpeechandtextanalyticsPrograms(nextPage, pageSize, state);
+                ProgramsEntityListing result = apiInstance.GetSpeechandtextanalyticsPrograms(nextPage, pageSize, state, name, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1458,6 +1463,9 @@ namespace Example
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 20] |
 | **state** | **string**| Program state. Defaults to Latest | [optional] <br />**Values**: Latest, Published |
+| **name** | **string**| Case insensitive partial name to filter by | [optional]  |
+| **sortBy** | **string**| Sort results by. Defaults to name | [optional] <br />**Values**: name |
+| **sortOrder** | **string**| Sort order. Defaults to asc | [optional] <br />**Values**: asc, desc |
 
 ### Return type
 
@@ -4046,4 +4054,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 254.0.0_
+_PureCloudPlatform.Client.V2 255.0.0_

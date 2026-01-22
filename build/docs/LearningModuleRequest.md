@@ -18,7 +18,8 @@
 | **ExternalId** | **string** | The external ID of the learning module. Maximum length: 50 characters. | [optional] |
 | **EnforceContentOrder** | **bool?** | If true, learning module content should be viewed one by one in order | [optional] |
 | **ReviewAssessmentResults** | [**ReviewAssessmentResults**](ReviewAssessmentResults) | Allows to view Assessment results in detail | [optional] |
+| **AutoAssign** | [**LearningModuleAutoAssignRequest**](LearningModuleAutoAssignRequest) | The configuration for linking a module to a rule | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 254.0.0_
+_PureCloudPlatform.Client.V2 255.0.0_

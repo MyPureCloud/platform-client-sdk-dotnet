@@ -983,9 +983,10 @@ void (empty response body)
 
 Delete Routing Skill
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * routing:skill:manage
+* routing:skill:delete
 
 ### Example
 ```{"language":"csharp"}
@@ -9150,7 +9151,7 @@ namespace Example
 
 ## PostRoutingSkills
 
-> [**RoutingSkill**](RoutingSkill) PostRoutingSkills (RoutingSkill body)
+> [**RoutingSkill**](RoutingSkill) PostRoutingSkills (CreateRoutingSkill body)
 
 
 Create Skill
@@ -9158,6 +9159,7 @@ Create Skill
 Requires ANY permissions: 
 
 * routing:skill:manage
+* routing:skill:create
 
 ### Example
 ```{"language":"csharp"}
@@ -9181,7 +9183,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new RoutingApi();
-            var body = new RoutingSkill(); // RoutingSkill | Skill
+            var body = new CreateRoutingSkill(); // CreateRoutingSkill | Skill
 
             try
             { 
@@ -9203,7 +9205,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**RoutingSkill**](RoutingSkill)| Skill |  |
+| **body** | [**CreateRoutingSkill**](CreateRoutingSkill)| Skill |  |
 
 ### Return type
 
@@ -10864,4 +10866,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 254.0.0_
+_PureCloudPlatform.Client.V2 255.0.0_

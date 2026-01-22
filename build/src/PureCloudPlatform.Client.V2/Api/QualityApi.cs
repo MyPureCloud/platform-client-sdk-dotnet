@@ -848,6 +848,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationsWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
+        /// Retrieve a list of evaluation forms by their ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100</param>
+        /// <param name="includeLatestVersionFormName">Whether to include the name of the form&#39;s most recently published version (optional, default to false)</param>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
+        
+        EvaluationFormResponseEntityListing GetQualityFormsEvaluationsBulk (List<string> id, bool? includeLatestVersionFormName = null);
+
+        /// <summary>
+        /// Retrieve a list of evaluation forms by their ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100</param>
+        /// <param name="includeLatestVersionFormName">Whether to include the name of the form&#39;s most recently published version (optional, default to false)</param>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
+        
+        ApiResponse<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationsBulkWithHttpInfo (List<string> id, bool? includeLatestVersionFormName = null);
+
+        /// <summary>
         /// Retrieve a list of the latest published evaluation form versions by context ids
         /// </summary>
         /// <remarks>
@@ -1524,6 +1550,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EvaluationScoringSet> PostQualityEvaluationsScoringWithHttpInfo (EvaluationFormAndScoringSet body);
 
         /// <summary>
+        /// Search evaluations based along specified criteria
+        /// </summary>
+        /// <remarks>
+        /// Search Rules: 1. Time Range    - Time Range: Max 3 months (required) 2. Question Group Level Query: Use at least one field containing 'questionGroup' in name + exactly one questionGroupId 3. Question Level Query: Use at least one field containing 'question' in name + exactly one questionId 4. Mixed Queries: questionId alone is sufficient 5. Search Logic:    - Multiple criteria: AND operation    - Multiple values per criterion: OR operation    EXAMPLE: (agentId₁ OR agentId₂) AND (evaluatorId₁ OR evaluatorId₂) 5. Aggregations:    - Omit or set pageSize = 0    - Choose: multiple aggregations OR single aggregation with multiple sub-aggregations    - To aggregate against question fields, one must query by either a questionId OR a single top level TERM questionId aggregation AND query by a single formID or questionGroupId, or list of questionIds    - To aggregate against question group fields, one must query either a questionId/questionGroupId OR a single top level TERM questionGroupId aggregation AND query by a single formID or list of questionGroupIds 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Evaluation search request</param>
+        /// <returns>EvaluationSearchResponse</returns>
+        
+        EvaluationSearchResponse PostQualityEvaluationsSearch (EvaluationSearchRequestDTO body);
+
+        /// <summary>
+        /// Search evaluations based along specified criteria
+        /// </summary>
+        /// <remarks>
+        /// Search Rules: 1. Time Range    - Time Range: Max 3 months (required) 2. Question Group Level Query: Use at least one field containing 'questionGroup' in name + exactly one questionGroupId 3. Question Level Query: Use at least one field containing 'question' in name + exactly one questionId 4. Mixed Queries: questionId alone is sufficient 5. Search Logic:    - Multiple criteria: AND operation    - Multiple values per criterion: OR operation    EXAMPLE: (agentId₁ OR agentId₂) AND (evaluatorId₁ OR evaluatorId₂) 5. Aggregations:    - Omit or set pageSize = 0    - Choose: multiple aggregations OR single aggregation with multiple sub-aggregations    - To aggregate against question fields, one must query by either a questionId OR a single top level TERM questionId aggregation AND query by a single formID or questionGroupId, or list of questionIds    - To aggregate against question group fields, one must query either a questionId/questionGroupId OR a single top level TERM questionGroupId aggregation AND query by a single formID or list of questionGroupIds 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Evaluation search request</param>
+        /// <returns>ApiResponse of EvaluationSearchResponse</returns>
+        
+        ApiResponse<EvaluationSearchResponse> PostQualityEvaluationsSearchWithHttpInfo (EvaluationSearchRequestDTO body);
+
+        /// <summary>
         /// Create an evaluation form.
         /// </summary>
         /// <remarks>
@@ -1692,6 +1742,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of SurveyForm</returns>
         
         ApiResponse<SurveyForm> PostQualityPublishedformsSurveysWithHttpInfo (PublishForm body);
+
+        /// <summary>
+        /// Create a survey for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Survey creation request</param>
+        /// <returns>Survey</returns>
+        
+        Survey PostQualitySurveys (CreateSurveyRequest body);
+
+        /// <summary>
+        /// Create a survey for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Survey creation request</param>
+        /// <returns>ApiResponse of Survey</returns>
+        
+        ApiResponse<Survey> PostQualitySurveysWithHttpInfo (CreateSurveyRequest body);
 
         /// <summary>
         /// Score survey
@@ -2768,6 +2842,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsEvaluationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, string sortBy = null, string nextPage = null, string previousPage = null, string expand = null, string name = null, string sortOrder = null);
 
         /// <summary>
+        /// Retrieve a list of evaluation forms by their ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100</param>
+        /// <param name="includeLatestVersionFormName">Whether to include the name of the form&#39;s most recently published version (optional, default to false)</param>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
+        
+        System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationsBulkAsync (List<string> id, bool? includeLatestVersionFormName = null);
+
+        /// <summary>
+        /// Retrieve a list of evaluation forms by their ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100</param>
+        /// <param name="includeLatestVersionFormName">Whether to include the name of the form&#39;s most recently published version (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsEvaluationsBulkAsyncWithHttpInfo (List<string> id, bool? includeLatestVersionFormName = null);
+
+        /// <summary>
         /// Retrieve a list of the latest published evaluation form versions by context ids
         /// </summary>
         /// <remarks>
@@ -3444,6 +3544,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EvaluationScoringSet>> PostQualityEvaluationsScoringAsyncWithHttpInfo (EvaluationFormAndScoringSet body);
 
         /// <summary>
+        /// Search evaluations based along specified criteria
+        /// </summary>
+        /// <remarks>
+        /// Search Rules: 1. Time Range    - Time Range: Max 3 months (required) 2. Question Group Level Query: Use at least one field containing 'questionGroup' in name + exactly one questionGroupId 3. Question Level Query: Use at least one field containing 'question' in name + exactly one questionId 4. Mixed Queries: questionId alone is sufficient 5. Search Logic:    - Multiple criteria: AND operation    - Multiple values per criterion: OR operation    EXAMPLE: (agentId₁ OR agentId₂) AND (evaluatorId₁ OR evaluatorId₂) 5. Aggregations:    - Omit or set pageSize = 0    - Choose: multiple aggregations OR single aggregation with multiple sub-aggregations    - To aggregate against question fields, one must query by either a questionId OR a single top level TERM questionId aggregation AND query by a single formID or questionGroupId, or list of questionIds    - To aggregate against question group fields, one must query either a questionId/questionGroupId OR a single top level TERM questionGroupId aggregation AND query by a single formID or list of questionGroupIds 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Evaluation search request</param>
+        /// <returns>Task of EvaluationSearchResponse</returns>
+        
+        System.Threading.Tasks.Task<EvaluationSearchResponse> PostQualityEvaluationsSearchAsync (EvaluationSearchRequestDTO body);
+
+        /// <summary>
+        /// Search evaluations based along specified criteria
+        /// </summary>
+        /// <remarks>
+        /// Search Rules: 1. Time Range    - Time Range: Max 3 months (required) 2. Question Group Level Query: Use at least one field containing 'questionGroup' in name + exactly one questionGroupId 3. Question Level Query: Use at least one field containing 'question' in name + exactly one questionId 4. Mixed Queries: questionId alone is sufficient 5. Search Logic:    - Multiple criteria: AND operation    - Multiple values per criterion: OR operation    EXAMPLE: (agentId₁ OR agentId₂) AND (evaluatorId₁ OR evaluatorId₂) 5. Aggregations:    - Omit or set pageSize = 0    - Choose: multiple aggregations OR single aggregation with multiple sub-aggregations    - To aggregate against question fields, one must query by either a questionId OR a single top level TERM questionId aggregation AND query by a single formID or questionGroupId, or list of questionIds    - To aggregate against question group fields, one must query either a questionId/questionGroupId OR a single top level TERM questionGroupId aggregation AND query by a single formID or list of questionGroupIds 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Evaluation search request</param>
+        /// <returns>Task of ApiResponse (EvaluationSearchResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<EvaluationSearchResponse>> PostQualityEvaluationsSearchAsyncWithHttpInfo (EvaluationSearchRequestDTO body);
+
+        /// <summary>
         /// Create an evaluation form.
         /// </summary>
         /// <remarks>
@@ -3612,6 +3736,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (SurveyForm)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<SurveyForm>> PostQualityPublishedformsSurveysAsyncWithHttpInfo (PublishForm body);
+
+        /// <summary>
+        /// Create a survey for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Survey creation request</param>
+        /// <returns>Task of Survey</returns>
+        
+        System.Threading.Tasks.Task<Survey> PostQualitySurveysAsync (CreateSurveyRequest body);
+
+        /// <summary>
+        /// Create a survey for a conversation
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Survey creation request</param>
+        /// <returns>Task of ApiResponse (Survey)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Survey>> PostQualitySurveysAsyncWithHttpInfo (CreateSurveyRequest body);
 
         /// <summary>
         /// Score survey
@@ -9892,6 +10040,213 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Retrieve a list of evaluation forms by their ids 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100</param>
+        /// <param name="includeLatestVersionFormName">Whether to include the name of the form&#39;s most recently published version (optional, default to false)</param>
+        /// <returns>EvaluationFormResponseEntityListing</returns>
+        
+        public EvaluationFormResponseEntityListing GetQualityFormsEvaluationsBulk (List<string> id, bool? includeLatestVersionFormName = null)
+        {
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = GetQualityFormsEvaluationsBulkWithHttpInfo(id, includeLatestVersionFormName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a list of evaluation forms by their ids 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100</param>
+        /// <param name="includeLatestVersionFormName">Whether to include the name of the form&#39;s most recently published version (optional, default to false)</param>
+        /// <returns>ApiResponse of EvaluationFormResponseEntityListing</returns>
+        
+        public ApiResponse< EvaluationFormResponseEntityListing > GetQualityFormsEvaluationsBulkWithHttpInfo (List<string> id, bool? includeLatestVersionFormName = null)
+        { 
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling QualityApi->GetQualityFormsEvaluationsBulk");
+
+            var localVarPath = "/api/v2/quality/forms/evaluations/bulk";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (includeLatestVersionFormName != null) localVarQueryParams.Add(new Tuple<string, string>("includeLatestVersionFormName", this.Configuration.ApiClient.ParameterToString(includeLatestVersionFormName)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationsBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieve a list of evaluation forms by their ids 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100</param>
+        /// <param name="includeLatestVersionFormName">Whether to include the name of the form&#39;s most recently published version (optional, default to false)</param>
+        /// <returns>Task of EvaluationFormResponseEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<EvaluationFormResponseEntityListing> GetQualityFormsEvaluationsBulkAsync (List<string> id, bool? includeLatestVersionFormName = null)
+        {
+             ApiResponse<EvaluationFormResponseEntityListing> localVarResponse = await GetQualityFormsEvaluationsBulkAsyncWithHttpInfo(id, includeLatestVersionFormName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a list of evaluation forms by their ids 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="id">A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100</param>
+        /// <param name="includeLatestVersionFormName">Whether to include the name of the form&#39;s most recently published version (optional, default to false)</param>
+        /// <returns>Task of ApiResponse (EvaluationFormResponseEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationFormResponseEntityListing>> GetQualityFormsEvaluationsBulkAsyncWithHttpInfo (List<string> id, bool? includeLatestVersionFormName = null)
+        { 
+            // verify the required parameter 'id' is set
+            if (id == null)
+                throw new ApiException(400, "Missing required parameter 'id' when calling QualityApi->GetQualityFormsEvaluationsBulk");
+            
+
+            var localVarPath = "/api/v2/quality/forms/evaluations/bulk";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (id != null) id.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("id", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (includeLatestVersionFormName != null) localVarQueryParams.Add(new Tuple<string, string>("includeLatestVersionFormName", this.Configuration.ApiClient.ParameterToString(includeLatestVersionFormName)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationsBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetQualityFormsEvaluationsBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationFormResponseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (EvaluationFormResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationFormResponseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Retrieve a list of the latest published evaluation form versions by context ids 
         /// 
         /// </summary>
@@ -15349,6 +15704,217 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Search evaluations based along specified criteria 
+        /// Search Rules: 1. Time Range    - Time Range: Max 3 months (required) 2. Question Group Level Query: Use at least one field containing 'questionGroup' in name + exactly one questionGroupId 3. Question Level Query: Use at least one field containing 'question' in name + exactly one questionId 4. Mixed Queries: questionId alone is sufficient 5. Search Logic:    - Multiple criteria: AND operation    - Multiple values per criterion: OR operation    EXAMPLE: (agentId₁ OR agentId₂) AND (evaluatorId₁ OR evaluatorId₂) 5. Aggregations:    - Omit or set pageSize = 0    - Choose: multiple aggregations OR single aggregation with multiple sub-aggregations    - To aggregate against question fields, one must query by either a questionId OR a single top level TERM questionId aggregation AND query by a single formID or questionGroupId, or list of questionIds    - To aggregate against question group fields, one must query either a questionId/questionGroupId OR a single top level TERM questionGroupId aggregation AND query by a single formID or list of questionGroupIds 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Evaluation search request</param>
+        /// <returns>EvaluationSearchResponse</returns>
+        
+        public EvaluationSearchResponse PostQualityEvaluationsSearch (EvaluationSearchRequestDTO body)
+        {
+             ApiResponse<EvaluationSearchResponse> localVarResponse = PostQualityEvaluationsSearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Search evaluations based along specified criteria 
+        /// Search Rules: 1. Time Range    - Time Range: Max 3 months (required) 2. Question Group Level Query: Use at least one field containing 'questionGroup' in name + exactly one questionGroupId 3. Question Level Query: Use at least one field containing 'question' in name + exactly one questionId 4. Mixed Queries: questionId alone is sufficient 5. Search Logic:    - Multiple criteria: AND operation    - Multiple values per criterion: OR operation    EXAMPLE: (agentId₁ OR agentId₂) AND (evaluatorId₁ OR evaluatorId₂) 5. Aggregations:    - Omit or set pageSize = 0    - Choose: multiple aggregations OR single aggregation with multiple sub-aggregations    - To aggregate against question fields, one must query by either a questionId OR a single top level TERM questionId aggregation AND query by a single formID or questionGroupId, or list of questionIds    - To aggregate against question group fields, one must query either a questionId/questionGroupId OR a single top level TERM questionGroupId aggregation AND query by a single formID or list of questionGroupIds 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Evaluation search request</param>
+        /// <returns>ApiResponse of EvaluationSearchResponse</returns>
+        
+        public ApiResponse< EvaluationSearchResponse > PostQualityEvaluationsSearchWithHttpInfo (EvaluationSearchRequestDTO body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityEvaluationsSearch");
+
+            var localVarPath = "/api/v2/quality/evaluations/search";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityEvaluationsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityEvaluationsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EvaluationSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Search evaluations based along specified criteria 
+        /// Search Rules: 1. Time Range    - Time Range: Max 3 months (required) 2. Question Group Level Query: Use at least one field containing 'questionGroup' in name + exactly one questionGroupId 3. Question Level Query: Use at least one field containing 'question' in name + exactly one questionId 4. Mixed Queries: questionId alone is sufficient 5. Search Logic:    - Multiple criteria: AND operation    - Multiple values per criterion: OR operation    EXAMPLE: (agentId₁ OR agentId₂) AND (evaluatorId₁ OR evaluatorId₂) 5. Aggregations:    - Omit or set pageSize = 0    - Choose: multiple aggregations OR single aggregation with multiple sub-aggregations    - To aggregate against question fields, one must query by either a questionId OR a single top level TERM questionId aggregation AND query by a single formID or questionGroupId, or list of questionIds    - To aggregate against question group fields, one must query either a questionId/questionGroupId OR a single top level TERM questionGroupId aggregation AND query by a single formID or list of questionGroupIds 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Evaluation search request</param>
+        /// <returns>Task of EvaluationSearchResponse</returns>
+        
+        public async System.Threading.Tasks.Task<EvaluationSearchResponse> PostQualityEvaluationsSearchAsync (EvaluationSearchRequestDTO body)
+        {
+             ApiResponse<EvaluationSearchResponse> localVarResponse = await PostQualityEvaluationsSearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Search evaluations based along specified criteria 
+        /// Search Rules: 1. Time Range    - Time Range: Max 3 months (required) 2. Question Group Level Query: Use at least one field containing 'questionGroup' in name + exactly one questionGroupId 3. Question Level Query: Use at least one field containing 'question' in name + exactly one questionId 4. Mixed Queries: questionId alone is sufficient 5. Search Logic:    - Multiple criteria: AND operation    - Multiple values per criterion: OR operation    EXAMPLE: (agentId₁ OR agentId₂) AND (evaluatorId₁ OR evaluatorId₂) 5. Aggregations:    - Omit or set pageSize = 0    - Choose: multiple aggregations OR single aggregation with multiple sub-aggregations    - To aggregate against question fields, one must query by either a questionId OR a single top level TERM questionId aggregation AND query by a single formID or questionGroupId, or list of questionIds    - To aggregate against question group fields, one must query either a questionId/questionGroupId OR a single top level TERM questionGroupId aggregation AND query by a single formID or list of questionGroupIds 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Evaluation search request</param>
+        /// <returns>Task of ApiResponse (EvaluationSearchResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<EvaluationSearchResponse>> PostQualityEvaluationsSearchAsyncWithHttpInfo (EvaluationSearchRequestDTO body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualityEvaluationsSearch");
+            
+
+            var localVarPath = "/api/v2/quality/evaluations/search";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityEvaluationsSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualityEvaluationsSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<EvaluationSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (EvaluationSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EvaluationSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Create an evaluation form. 
         /// 
         /// </summary>
@@ -16832,6 +17398,217 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<SurveyForm>(localVarStatusCode,
                 localVarHeaders,
                 (SurveyForm) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SurveyForm)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a survey for a conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Survey creation request</param>
+        /// <returns>Survey</returns>
+        
+        public Survey PostQualitySurveys (CreateSurveyRequest body)
+        {
+             ApiResponse<Survey> localVarResponse = PostQualitySurveysWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a survey for a conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Survey creation request</param>
+        /// <returns>ApiResponse of Survey</returns>
+        
+        public ApiResponse< Survey > PostQualitySurveysWithHttpInfo (CreateSurveyRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualitySurveys");
+
+            var localVarPath = "/api/v2/quality/surveys";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualitySurveys: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualitySurveys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Survey>(localVarStatusCode,
+                localVarHeaders,
+                (Survey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Survey)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a survey for a conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Survey creation request</param>
+        /// <returns>Task of Survey</returns>
+        
+        public async System.Threading.Tasks.Task<Survey> PostQualitySurveysAsync (CreateSurveyRequest body)
+        {
+             ApiResponse<Survey> localVarResponse = await PostQualitySurveysAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a survey for a conversation 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Survey creation request</param>
+        /// <returns>Task of ApiResponse (Survey)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Survey>> PostQualitySurveysAsyncWithHttpInfo (CreateSurveyRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling QualityApi->PostQualitySurveys");
+            
+
+            var localVarPath = "/api/v2/quality/surveys";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualitySurveys: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostQualitySurveys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Survey>(localVarStatusCode,
+                localVarHeaders,
+                (Survey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Survey)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

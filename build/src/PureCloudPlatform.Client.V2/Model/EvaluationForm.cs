@@ -34,7 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="QuestionGroups">A list of question groups (required).</param>
         /// <param name="PublishedVersions">A list of the published versions of this form. Not populated by default, its availability depends on the endpoint. Use the &#39;expand&#x3D;publishHistory&#39; query parameter to retrieve this data where applicable (refer to the endpoint description to see if it is applicable)..</param>
         /// <param name="EvaluationSettings">Settings for evaluations associated with this form.</param>
-        public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null, EvaluationSettings EvaluationSettings = null)
+        /// <param name="LatestVersionFormName">The name of the form&#39;s most recently published version.</param>
+        public EvaluationForm(string Name = null, DateTime? ModifiedDate = null, bool? Published = null, string ContextId = null, List<EvaluationQuestionGroup> QuestionGroups = null, DomainEntityListingEvaluationForm PublishedVersions = null, EvaluationSettings EvaluationSettings = null, string LatestVersionFormName = null)
         {
             this.Name = Name;
             this.ModifiedDate = ModifiedDate;
@@ -43,6 +44,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.QuestionGroups = QuestionGroups;
             this.PublishedVersions = PublishedVersions;
             this.EvaluationSettings = EvaluationSettings;
+            this.LatestVersionFormName = LatestVersionFormName;
             
         }
         
@@ -119,6 +121,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The name of the form&#39;s most recently published version
+        /// </summary>
+        /// <value>The name of the form&#39;s most recently published version</value>
+        [DataMember(Name="latestVersionFormName", EmitDefaultValue=false)]
+        public string LatestVersionFormName { get; set; }
+
+
+
+        /// <summary>
         /// AI scoring settings for the evaluation form.
         /// </summary>
         /// <value>AI scoring settings for the evaluation form.</value>
@@ -152,6 +163,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  QuestionGroups: ").Append(QuestionGroups).Append("\n");
             sb.Append("  PublishedVersions: ").Append(PublishedVersions).Append("\n");
             sb.Append("  EvaluationSettings: ").Append(EvaluationSettings).Append("\n");
+            sb.Append("  LatestVersionFormName: ").Append(LatestVersionFormName).Append("\n");
             sb.Append("  AiScoring: ").Append(AiScoring).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -235,6 +247,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EvaluationSettings.Equals(other.EvaluationSettings)
                 ) &&
                 (
+                    this.LatestVersionFormName == other.LatestVersionFormName ||
+                    this.LatestVersionFormName != null &&
+                    this.LatestVersionFormName.Equals(other.LatestVersionFormName)
+                ) &&
+                (
                     this.AiScoring == other.AiScoring ||
                     this.AiScoring != null &&
                     this.AiScoring.Equals(other.AiScoring)
@@ -280,6 +297,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EvaluationSettings != null)
                     hash = hash * 59 + this.EvaluationSettings.GetHashCode();
+
+                if (this.LatestVersionFormName != null)
+                    hash = hash * 59 + this.LatestVersionFormName.GetHashCode();
 
                 if (this.AiScoring != null)
                     hash = hash * 59 + this.AiScoring.GetHashCode();

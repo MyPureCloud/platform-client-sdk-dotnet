@@ -67,7 +67,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Ingestionruleversion for "IngestionRuleVersion"
             /// </summary>
             [EnumMember(Value = "IngestionRuleVersion")]
-            Ingestionruleversion
+            Ingestionruleversion,
+            
+            /// <summary>
+            /// Enum Phonenumber for "PhoneNumber"
+            /// </summary>
+            [EnumMember(Value = "PhoneNumber")]
+            Phonenumber
         }
         /// <summary>
         /// Type of the Identifier

@@ -141,11 +141,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Number of results per page (optional, default to 25)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <param name="enabled">Whether to list enabled or disabled rules (optional)</param>
         /// <param name="searchTerm">a search term for finding a rule by name (optional)</param>
         /// <param name="sortOrder">sort rules by name, ascending, descending (optional, default to ascending)</param>
         /// <returns>UsersRulesRuleList</returns>
         
-        UsersRulesRuleList GetUsersRules (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, string searchTerm = null, string sortOrder = null);
+        UsersRulesRuleList GetUsersRules (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, bool? enabled = null, string searchTerm = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of users rules
@@ -159,11 +160,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Number of results per page (optional, default to 25)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <param name="enabled">Whether to list enabled or disabled rules (optional)</param>
         /// <param name="searchTerm">a search term for finding a rule by name (optional)</param>
         /// <param name="sortOrder">sort rules by name, ascending, descending (optional, default to ascending)</param>
         /// <returns>ApiResponse of UsersRulesRuleList</returns>
         
-        ApiResponse<UsersRulesRuleList> GetUsersRulesWithHttpInfo (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, string searchTerm = null, string sortOrder = null);
+        ApiResponse<UsersRulesRuleList> GetUsersRulesWithHttpInfo (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, bool? enabled = null, string searchTerm = null, string sortOrder = null);
 
         /// <summary>
         /// Get the settings for a specific users rule type
@@ -405,11 +407,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Number of results per page (optional, default to 25)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <param name="enabled">Whether to list enabled or disabled rules (optional)</param>
         /// <param name="searchTerm">a search term for finding a rule by name (optional)</param>
         /// <param name="sortOrder">sort rules by name, ascending, descending (optional, default to ascending)</param>
         /// <returns>Task of UsersRulesRuleList</returns>
         
-        System.Threading.Tasks.Task<UsersRulesRuleList> GetUsersRulesAsync (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, string searchTerm = null, string sortOrder = null);
+        System.Threading.Tasks.Task<UsersRulesRuleList> GetUsersRulesAsync (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, bool? enabled = null, string searchTerm = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of users rules
@@ -423,11 +426,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Number of results per page (optional, default to 25)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <param name="enabled">Whether to list enabled or disabled rules (optional)</param>
         /// <param name="searchTerm">a search term for finding a rule by name (optional)</param>
         /// <param name="sortOrder">sort rules by name, ascending, descending (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (UsersRulesRuleList)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UsersRulesRuleList>> GetUsersRulesAsyncWithHttpInfo (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, string searchTerm = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<UsersRulesRuleList>> GetUsersRulesAsyncWithHttpInfo (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, bool? enabled = null, string searchTerm = null, string sortOrder = null);
 
         /// <summary>
         /// Get the settings for a specific users rule type
@@ -1503,13 +1507,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Number of results per page (optional, default to 25)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <param name="enabled">Whether to list enabled or disabled rules (optional)</param>
         /// <param name="searchTerm">a search term for finding a rule by name (optional)</param>
         /// <param name="sortOrder">sort rules by name, ascending, descending (optional, default to ascending)</param>
         /// <returns>UsersRulesRuleList</returns>
         
-        public UsersRulesRuleList GetUsersRules (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, string searchTerm = null, string sortOrder = null)
+        public UsersRulesRuleList GetUsersRules (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, bool? enabled = null, string searchTerm = null, string sortOrder = null)
         {
-             ApiResponse<UsersRulesRuleList> localVarResponse = GetUsersRulesWithHttpInfo(types, pageNumber, pageSize, expand, searchTerm, sortOrder);
+             ApiResponse<UsersRulesRuleList> localVarResponse = GetUsersRulesWithHttpInfo(types, pageNumber, pageSize, expand, enabled, searchTerm, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -1523,11 +1528,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Number of results per page (optional, default to 25)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <param name="enabled">Whether to list enabled or disabled rules (optional)</param>
         /// <param name="searchTerm">a search term for finding a rule by name (optional)</param>
         /// <param name="sortOrder">sort rules by name, ascending, descending (optional, default to ascending)</param>
         /// <returns>ApiResponse of UsersRulesRuleList</returns>
         
-        public ApiResponse< UsersRulesRuleList > GetUsersRulesWithHttpInfo (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, string searchTerm = null, string sortOrder = null)
+        public ApiResponse< UsersRulesRuleList > GetUsersRulesWithHttpInfo (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, bool? enabled = null, string searchTerm = null, string sortOrder = null)
         { 
             // verify the required parameter 'types' is set
             if (types == null)
@@ -1570,6 +1576,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (types != null) types.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("types", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
             if (searchTerm != null) localVarQueryParams.Add(new Tuple<string, string>("searchTerm", this.Configuration.ApiClient.ParameterToString(searchTerm)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
@@ -1619,13 +1626,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Number of results per page (optional, default to 25)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <param name="enabled">Whether to list enabled or disabled rules (optional)</param>
         /// <param name="searchTerm">a search term for finding a rule by name (optional)</param>
         /// <param name="sortOrder">sort rules by name, ascending, descending (optional, default to ascending)</param>
         /// <returns>Task of UsersRulesRuleList</returns>
         
-        public async System.Threading.Tasks.Task<UsersRulesRuleList> GetUsersRulesAsync (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, string searchTerm = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<UsersRulesRuleList> GetUsersRulesAsync (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, bool? enabled = null, string searchTerm = null, string sortOrder = null)
         {
-             ApiResponse<UsersRulesRuleList> localVarResponse = await GetUsersRulesAsyncWithHttpInfo(types, pageNumber, pageSize, expand, searchTerm, sortOrder);
+             ApiResponse<UsersRulesRuleList> localVarResponse = await GetUsersRulesAsyncWithHttpInfo(types, pageNumber, pageSize, expand, enabled, searchTerm, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -1640,11 +1648,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Number of results per page (optional, default to 25)</param>
         /// <param name="expand">Fields to expand in response (optional)</param>
+        /// <param name="enabled">Whether to list enabled or disabled rules (optional)</param>
         /// <param name="searchTerm">a search term for finding a rule by name (optional)</param>
         /// <param name="sortOrder">sort rules by name, ascending, descending (optional, default to ascending)</param>
         /// <returns>Task of ApiResponse (UsersRulesRuleList)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UsersRulesRuleList>> GetUsersRulesAsyncWithHttpInfo (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, string searchTerm = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UsersRulesRuleList>> GetUsersRulesAsyncWithHttpInfo (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, bool? enabled = null, string searchTerm = null, string sortOrder = null)
         { 
             // verify the required parameter 'types' is set
             if (types == null)
@@ -1688,6 +1697,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (types != null) types.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("types", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
             if (searchTerm != null) localVarQueryParams.Add(new Tuple<string, string>("searchTerm", this.Configuration.ApiClient.ParameterToString(searchTerm)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 

@@ -148,6 +148,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExcludedFromCatalog">If true, learning module is excluded when retrieving modules for manual assignment.</param>
         /// <param name="EnforceContentOrder">If true, learning module content should be viewed one by one in order.</param>
         /// <param name="ReviewAssessmentResults">Allows to view Assessment results in detail.</param>
+        /// <param name="AutoAssign">The auto assignment settings for this module.</param>
         /// <param name="CurrentAssignments">The current assignments for the requested users.</param>
         /// <param name="Description">The description of learning module.</param>
         /// <param name="CompletionTimeInDays">The completion time of learning module in days (required).</param>
@@ -159,12 +160,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CoverArt">The cover art for the learning module.</param>
         /// <param name="LengthInMinutes">The recommended time in minutes to complete the module.</param>
         /// <param name="ArchivalMode">The mode of archival for learning module.</param>
-        public AssignedLearningModule(string Name = null, bool? ExcludedFromCatalog = null, bool? EnforceContentOrder = null, ReviewAssessmentResults ReviewAssessmentResults = null, List<LearningAssignment> CurrentAssignments = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null, LearningModuleReassignSummary ReassignSummaryData = null, LearningModuleCoverArtResponse CoverArt = null, int? LengthInMinutes = null, ArchivalModeEnum? ArchivalMode = null)
+        public AssignedLearningModule(string Name = null, bool? ExcludedFromCatalog = null, bool? EnforceContentOrder = null, ReviewAssessmentResults ReviewAssessmentResults = null, LearningModuleAutoAssignResponse AutoAssign = null, List<LearningAssignment> CurrentAssignments = null, string Description = null, int? CompletionTimeInDays = null, TypeEnum? Type = null, List<LearningModuleInformStep> InformSteps = null, AssessmentForm AssessmentForm = null, LearningModuleSummary SummaryData = null, LearningModuleReassignSummary ReassignSummaryData = null, LearningModuleCoverArtResponse CoverArt = null, int? LengthInMinutes = null, ArchivalModeEnum? ArchivalMode = null)
         {
             this.Name = Name;
             this.ExcludedFromCatalog = ExcludedFromCatalog;
             this.EnforceContentOrder = EnforceContentOrder;
             this.ReviewAssessmentResults = ReviewAssessmentResults;
+            this.AutoAssign = AutoAssign;
             this.CurrentAssignments = CurrentAssignments;
             this.Description = Description;
             this.CompletionTimeInDays = CompletionTimeInDays;
@@ -288,6 +290,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Allows to view Assessment results in detail</value>
         [DataMember(Name="reviewAssessmentResults", EmitDefaultValue=false)]
         public ReviewAssessmentResults ReviewAssessmentResults { get; set; }
+
+
+
+        /// <summary>
+        /// The auto assignment settings for this module
+        /// </summary>
+        /// <value>The auto assignment settings for this module</value>
+        [DataMember(Name="autoAssign", EmitDefaultValue=false)]
+        public LearningModuleAutoAssignResponse AutoAssign { get; set; }
 
 
 
@@ -424,6 +435,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Rule: ").Append(Rule).Append("\n");
             sb.Append("  EnforceContentOrder: ").Append(EnforceContentOrder).Append("\n");
             sb.Append("  ReviewAssessmentResults: ").Append(ReviewAssessmentResults).Append("\n");
+            sb.Append("  AutoAssign: ").Append(AutoAssign).Append("\n");
             sb.Append("  CurrentAssignments: ").Append(CurrentAssignments).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("  IsArchived: ").Append(IsArchived).Append("\n");
@@ -542,6 +554,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ReviewAssessmentResults == other.ReviewAssessmentResults ||
                     this.ReviewAssessmentResults != null &&
                     this.ReviewAssessmentResults.Equals(other.ReviewAssessmentResults)
+                ) &&
+                (
+                    this.AutoAssign == other.AutoAssign ||
+                    this.AutoAssign != null &&
+                    this.AutoAssign.Equals(other.AutoAssign)
                 ) &&
                 (
                     this.CurrentAssignments == other.CurrentAssignments ||
@@ -664,6 +681,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ReviewAssessmentResults != null)
                     hash = hash * 59 + this.ReviewAssessmentResults.GetHashCode();
+
+                if (this.AutoAssign != null)
+                    hash = hash * 59 + this.AutoAssign.GetHashCode();
 
                 if (this.CurrentAssignments != null)
                     hash = hash * 59 + this.CurrentAssignments.GetHashCode();

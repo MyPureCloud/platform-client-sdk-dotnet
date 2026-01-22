@@ -285,7 +285,7 @@ namespace Example
 
 ## GetUsersRules
 
-> [**UsersRulesRuleList**](UsersRulesRuleList) GetUsersRules (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, string searchTerm = null, string sortOrder = null)
+> [**UsersRulesRuleList**](UsersRulesRuleList) GetUsersRules (List<string> types, int? pageNumber = null, int? pageSize = null, List<string> expand = null, bool? enabled = null, string searchTerm = null, string sortOrder = null)
 
 
 Get the list of users rules
@@ -322,13 +322,14 @@ namespace Example
             var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
             var pageSize = 56;  // int? | Number of results per page (optional)  (default to 25)
             var expand = new List<string>(); // List<string> | Fields to expand in response (optional) 
+            var enabled = true;  // bool? | Whether to list enabled or disabled rules (optional) 
             var searchTerm = searchTerm_example;  // string | a search term for finding a rule by name (optional) 
             var sortOrder = sortOrder_example;  // string | sort rules by name, ascending, descending (optional)  (default to ascending)
 
             try
             { 
                 // Get the list of users rules
-                UsersRulesRuleList result = apiInstance.GetUsersRules(types, pageNumber, pageSize, expand, searchTerm, sortOrder);
+                UsersRulesRuleList result = apiInstance.GetUsersRules(types, pageNumber, pageSize, expand, enabled, searchTerm, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -349,6 +350,7 @@ namespace Example
 | **pageNumber** | **int?**| Page number | [optional] [default to 1] |
 | **pageSize** | **int?**| Number of results per page | [optional] [default to 25] |
 | **expand** | [**List<string>**](string)| Fields to expand in response | [optional] <br />**Values**: criteria |
+| **enabled** | **bool?**| Whether to list enabled or disabled rules | [optional]  |
 | **searchTerm** | **string**| a search term for finding a rule by name | [optional]  |
 | **sortOrder** | **string**| sort rules by name, ascending, descending | [optional] [default to ascending]<br />**Values**: ascending, descending |
 
@@ -625,4 +627,4 @@ namespace Example
 [**UsersRulesQueryResponse**](UsersRulesQueryResponse)
 
 
-_PureCloudPlatform.Client.V2 254.0.0_
+_PureCloudPlatform.Client.V2 255.0.0_

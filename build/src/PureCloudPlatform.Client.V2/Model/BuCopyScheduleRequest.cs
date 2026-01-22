@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Description">The description for the new schedule (required).</param>
         /// <param name="WeekDate">The start weekDate for the new copy of the schedule. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        public BuCopyScheduleRequest(string Description = null, String WeekDate = null)
+        /// <param name="IncludeForecast">Whether to include the forecast while copying the schedule.</param>
+        public BuCopyScheduleRequest(string Description = null, String WeekDate = null, bool? IncludeForecast = null)
         {
             this.Description = Description;
             this.WeekDate = WeekDate;
+            this.IncludeForecast = IncludeForecast;
             
         }
         
@@ -55,6 +57,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public String WeekDate { get; set; }
 
 
+
+        /// <summary>
+        /// Whether to include the forecast while copying the schedule
+        /// </summary>
+        /// <value>Whether to include the forecast while copying the schedule</value>
+        [DataMember(Name="includeForecast", EmitDefaultValue=false)]
+        public bool? IncludeForecast { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  WeekDate: ").Append(WeekDate).Append("\n");
+            sb.Append("  IncludeForecast: ").Append(IncludeForecast).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WeekDate == other.WeekDate ||
                     this.WeekDate != null &&
                     this.WeekDate.Equals(other.WeekDate)
+                ) &&
+                (
+                    this.IncludeForecast == other.IncludeForecast ||
+                    this.IncludeForecast != null &&
+                    this.IncludeForecast.Equals(other.IncludeForecast)
                 );
         }
 
@@ -134,6 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WeekDate != null)
                     hash = hash * 59 + this.WeekDate.GetHashCode();
+
+                if (this.IncludeForecast != null)
+                    hash = hash * 59 + this.IncludeForecast.GetHashCode();
 
                 return hash;
             }

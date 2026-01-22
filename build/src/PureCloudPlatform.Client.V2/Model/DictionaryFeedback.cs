@@ -40,11 +40,83 @@ namespace PureCloudPlatform.Client.V2.Model
             Manual
         }
         /// <summary>
+        /// The transcription engine for the dictionary feedback. Only returned when GenesysExtended feature is enabled.
+        /// </summary>
+        /// <value>The transcription engine for the dictionary feedback. Only returned when GenesysExtended feature is enabled.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum TranscriptionEngineEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Genesys for "Genesys"
+            /// </summary>
+            [EnumMember(Value = "Genesys")]
+            Genesys,
+            
+            /// <summary>
+            /// Enum Genesysextended for "GenesysExtended"
+            /// </summary>
+            [EnumMember(Value = "GenesysExtended")]
+            Genesysextended
+        }
+        /// <summary>
+        /// The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled.
+        /// </summary>
+        /// <value>The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Active for "Active"
+            /// </summary>
+            [EnumMember(Value = "Active")]
+            Active,
+            
+            /// <summary>
+            /// Enum Pending for "Pending"
+            /// </summary>
+            [EnumMember(Value = "Pending")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Failed for "Failed"
+            /// </summary>
+            [EnumMember(Value = "Failed")]
+            Failed
+        }
+        /// <summary>
         /// The source of the given dictionary feedback
         /// </summary>
         /// <value>The source of the given dictionary feedback</value>
         [DataMember(Name="source", EmitDefaultValue=false)]
         public SourceEnum? Source { get; private set; }
+        /// <summary>
+        /// The transcription engine for the dictionary feedback. Only returned when GenesysExtended feature is enabled.
+        /// </summary>
+        /// <value>The transcription engine for the dictionary feedback. Only returned when GenesysExtended feature is enabled.</value>
+        [DataMember(Name="transcriptionEngine", EmitDefaultValue=false)]
+        public TranscriptionEngineEnum? TranscriptionEngine { get; set; }
+        /// <summary>
+        /// The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled.
+        /// </summary>
+        /// <value>The status of the dictionary feedback. Only returned when GenesysExtended feature is enabled.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="DictionaryFeedback" /> class.
@@ -57,13 +129,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Term">The dictionary term which needs to be added to dictionary feedback system (required).</param>
         /// <param name="Dialect">The dialect for the given term, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (required).</param>
         /// <param name="BoostValue">A weighted value assigned to a phrase. The higher the value, the higher the likelihood that the system will choose the word or phrase from the possible alternatives. Boost range is from 1.0 to 10.0. Default is 2.0.</param>
-        /// <param name="ExamplePhrases">A list of at least 3 and up to 20 unique phrases that are example usage of the term (required).</param>
-        /// <param name="SoundsLike">A list of up to 10 terms that give examples of how the term sounds.</param>
-        public DictionaryFeedback(string Term = null, string Dialect = null, float? BoostValue = null, List<DictionaryFeedbackExamplePhrase> ExamplePhrases = null, List<string> SoundsLike = null)
+        /// <param name="TranscriptionEngine">The transcription engine for the dictionary feedback. Only returned when GenesysExtended feature is enabled..</param>
+        /// <param name="DisplayAs">The display name for the dictionary feedback. Only returned when GenesysExtended feature is enabled. This field is only valid for Extended Services transcription engine..</param>
+        /// <param name="ExamplePhrases">A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid and required for Genesys transcription engine..</param>
+        /// <param name="SoundsLike">A list of up to 10 terms that give examples of how the term sounds. This field is only valid for Genesys transcription engine..</param>
+        public DictionaryFeedback(string Term = null, string Dialect = null, float? BoostValue = null, TranscriptionEngineEnum? TranscriptionEngine = null, string DisplayAs = null, List<DictionaryFeedbackExamplePhrase> ExamplePhrases = null, List<string> SoundsLike = null)
         {
             this.Term = Term;
             this.Dialect = Dialect;
             this.BoostValue = BoostValue;
+            this.TranscriptionEngine = TranscriptionEngine;
+            this.DisplayAs = DisplayAs;
             this.ExamplePhrases = ExamplePhrases;
             this.SoundsLike = SoundsLike;
             
@@ -145,19 +221,32 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+
+
         /// <summary>
-        /// A list of at least 3 and up to 20 unique phrases that are example usage of the term
+        /// The display name for the dictionary feedback. Only returned when GenesysExtended feature is enabled. This field is only valid for Extended Services transcription engine.
         /// </summary>
-        /// <value>A list of at least 3 and up to 20 unique phrases that are example usage of the term</value>
+        /// <value>The display name for the dictionary feedback. Only returned when GenesysExtended feature is enabled. This field is only valid for Extended Services transcription engine.</value>
+        [DataMember(Name="displayAs", EmitDefaultValue=false)]
+        public string DisplayAs { get; set; }
+
+
+
+        /// <summary>
+        /// A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid and required for Genesys transcription engine.
+        /// </summary>
+        /// <value>A list of at least 3 and up to 20 unique phrases that are example usage of the term. This field is only valid and required for Genesys transcription engine.</value>
         [DataMember(Name="examplePhrases", EmitDefaultValue=false)]
         public List<DictionaryFeedbackExamplePhrase> ExamplePhrases { get; set; }
 
 
 
         /// <summary>
-        /// A list of up to 10 terms that give examples of how the term sounds
+        /// A list of up to 10 terms that give examples of how the term sounds. This field is only valid for Genesys transcription engine.
         /// </summary>
-        /// <value>A list of up to 10 terms that give examples of how the term sounds</value>
+        /// <value>A list of up to 10 terms that give examples of how the term sounds. This field is only valid for Genesys transcription engine.</value>
         [DataMember(Name="soundsLike", EmitDefaultValue=false)]
         public List<string> SoundsLike { get; set; }
 
@@ -189,6 +278,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  ModifiedBy: ").Append(ModifiedBy).Append("\n");
+            sb.Append("  TranscriptionEngine: ").Append(TranscriptionEngine).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  DisplayAs: ").Append(DisplayAs).Append("\n");
             sb.Append("  ExamplePhrases: ").Append(ExamplePhrases).Append("\n");
             sb.Append("  SoundsLike: ").Append(SoundsLike).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -278,6 +370,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedBy.Equals(other.ModifiedBy)
                 ) &&
                 (
+                    this.TranscriptionEngine == other.TranscriptionEngine ||
+                    this.TranscriptionEngine != null &&
+                    this.TranscriptionEngine.Equals(other.TranscriptionEngine)
+                ) &&
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
+                    this.DisplayAs == other.DisplayAs ||
+                    this.DisplayAs != null &&
+                    this.DisplayAs.Equals(other.DisplayAs)
+                ) &&
+                (
                     this.ExamplePhrases == other.ExamplePhrases ||
                     this.ExamplePhrases != null &&
                     this.ExamplePhrases.SequenceEqual(other.ExamplePhrases)
@@ -331,6 +438,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ModifiedBy != null)
                     hash = hash * 59 + this.ModifiedBy.GetHashCode();
+
+                if (this.TranscriptionEngine != null)
+                    hash = hash * 59 + this.TranscriptionEngine.GetHashCode();
+
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.DisplayAs != null)
+                    hash = hash * 59 + this.DisplayAs.GetHashCode();
 
                 if (this.ExamplePhrases != null)
                     hash = hash * 59 + this.ExamplePhrases.GetHashCode();

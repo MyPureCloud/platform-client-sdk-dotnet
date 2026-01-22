@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="RecommendedCompletionDate">The recommended completion date of assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="LengthInMinutes">The length in minutes of assignment.</param>
-        public LearningAssignmentReassign(DateTime? RecommendedCompletionDate = null, int? LengthInMinutes = null)
+        /// <param name="AddToSchedule">If True, adds the assignment to their schedule.</param>
+        public LearningAssignmentReassign(DateTime? RecommendedCompletionDate = null, int? LengthInMinutes = null, bool? AddToSchedule = null)
         {
             this.RecommendedCompletionDate = RecommendedCompletionDate;
             this.LengthInMinutes = LengthInMinutes;
+            this.AddToSchedule = AddToSchedule;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public int? LengthInMinutes { get; set; }
 
 
+
+        /// <summary>
+        /// If True, adds the assignment to their schedule
+        /// </summary>
+        /// <value>If True, adds the assignment to their schedule</value>
+        [DataMember(Name="addToSchedule", EmitDefaultValue=false)]
+        public bool? AddToSchedule { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  RecommendedCompletionDate: ").Append(RecommendedCompletionDate).Append("\n");
             sb.Append("  LengthInMinutes: ").Append(LengthInMinutes).Append("\n");
+            sb.Append("  AddToSchedule: ").Append(AddToSchedule).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LengthInMinutes == other.LengthInMinutes ||
                     this.LengthInMinutes != null &&
                     this.LengthInMinutes.Equals(other.LengthInMinutes)
+                ) &&
+                (
+                    this.AddToSchedule == other.AddToSchedule ||
+                    this.AddToSchedule != null &&
+                    this.AddToSchedule.Equals(other.AddToSchedule)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LengthInMinutes != null)
                     hash = hash * 59 + this.LengthInMinutes.GetHashCode();
+
+                if (this.AddToSchedule != null)
+                    hash = hash * 59 + this.AddToSchedule.GetHashCode();
 
                 return hash;
             }

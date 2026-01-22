@@ -3735,7 +3735,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>RoutingSkill</returns>
         
-        RoutingSkill PostRoutingSkills (RoutingSkill body);
+        RoutingSkill PostRoutingSkills (CreateRoutingSkill body);
 
         /// <summary>
         /// Create Skill
@@ -3747,7 +3747,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of RoutingSkill</returns>
         
-        ApiResponse<RoutingSkill> PostRoutingSkillsWithHttpInfo (RoutingSkill body);
+        ApiResponse<RoutingSkill> PostRoutingSkillsWithHttpInfo (CreateRoutingSkill body);
 
         /// <summary>
         /// Provision an Address for SMS
@@ -8135,7 +8135,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of RoutingSkill</returns>
         
-        System.Threading.Tasks.Task<RoutingSkill> PostRoutingSkillsAsync (RoutingSkill body);
+        System.Threading.Tasks.Task<RoutingSkill> PostRoutingSkillsAsync (CreateRoutingSkill body);
 
         /// <summary>
         /// Create Skill
@@ -8147,7 +8147,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (RoutingSkill)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PostRoutingSkillsAsyncWithHttpInfo (RoutingSkill body);
+        System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PostRoutingSkillsAsyncWithHttpInfo (CreateRoutingSkill body);
 
         /// <summary>
         /// Provision an Address for SMS
@@ -38269,7 +38269,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>RoutingSkill</returns>
         
-        public RoutingSkill PostRoutingSkills (RoutingSkill body)
+        public RoutingSkill PostRoutingSkills (CreateRoutingSkill body)
         {
              ApiResponse<RoutingSkill> localVarResponse = PostRoutingSkillsWithHttpInfo(body);
              return localVarResponse.Data;
@@ -38283,7 +38283,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>ApiResponse of RoutingSkill</returns>
         
-        public ApiResponse< RoutingSkill > PostRoutingSkillsWithHttpInfo (RoutingSkill body)
+        public ApiResponse< RoutingSkill > PostRoutingSkillsWithHttpInfo (CreateRoutingSkill body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -38373,7 +38373,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of RoutingSkill</returns>
         
-        public async System.Threading.Tasks.Task<RoutingSkill> PostRoutingSkillsAsync (RoutingSkill body)
+        public async System.Threading.Tasks.Task<RoutingSkill> PostRoutingSkillsAsync (CreateRoutingSkill body)
         {
              ApiResponse<RoutingSkill> localVarResponse = await PostRoutingSkillsAsyncWithHttpInfo(body);
              return localVarResponse.Data;
@@ -38388,7 +38388,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="body">Skill</param>
         /// <returns>Task of ApiResponse (RoutingSkill)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PostRoutingSkillsAsyncWithHttpInfo (RoutingSkill body)
+        public async System.Threading.Tasks.Task<ApiResponse<RoutingSkill>> PostRoutingSkillsAsyncWithHttpInfo (CreateRoutingSkill body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)

@@ -8,7 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **DateRecommendedForCompletion** | **DateTime?** | The recommended completion date of the assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | |
 | **LengthInMinutes** | **int?** | The length in minutes of the assignment | [optional] |
+| **AddToSchedule** | **bool?** | If True, adds the assignment to their schedule | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 254.0.0_
+_PureCloudPlatform.Client.V2 255.0.0_

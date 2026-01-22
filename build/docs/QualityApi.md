@@ -33,6 +33,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetQualityFormsEvaluation**](#GetQualityFormsEvaluation) | **Get** /api/v2/quality/forms/evaluations/{formId} | Get an evaluation form |
 | [**GetQualityFormsEvaluationVersions**](#GetQualityFormsEvaluationVersions) | **Get** /api/v2/quality/forms/evaluations/{formId}/versions | Gets all the revisions for a specific evaluation. |
 | [**GetQualityFormsEvaluations**](#GetQualityFormsEvaluations) | **Get** /api/v2/quality/forms/evaluations | Get the list of evaluation forms |
+| [**GetQualityFormsEvaluationsBulk**](#GetQualityFormsEvaluationsBulk) | **Get** /api/v2/quality/forms/evaluations/bulk | Retrieve a list of evaluation forms by their ids |
 | [**GetQualityFormsEvaluationsBulkContexts**](#GetQualityFormsEvaluationsBulkContexts) | **Get** /api/v2/quality/forms/evaluations/bulk/contexts | Retrieve a list of the latest published evaluation form versions by context ids |
 | [**GetQualityFormsSurvey**](#GetQualityFormsSurvey) | **Get** /api/v2/quality/forms/surveys/{formId} | Get a survey form |
 | [**GetQualityFormsSurveyVersions**](#GetQualityFormsSurveyVersions) | **Get** /api/v2/quality/forms/surveys/{formId}/versions | Gets all the revisions for a specific survey. |
@@ -59,6 +60,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostQualityConversationsAuditsQuery**](#PostQualityConversationsAuditsQuery) | **Post** /api/v2/quality/conversations/audits/query | Create audit query execution |
 | [**PostQualityEvaluationsAggregatesQueryMe**](#PostQualityEvaluationsAggregatesQueryMe) | **Post** /api/v2/quality/evaluations/aggregates/query/me | Query for evaluation aggregates for the current user |
 | [**PostQualityEvaluationsScoring**](#PostQualityEvaluationsScoring) | **Post** /api/v2/quality/evaluations/scoring | Score evaluation |
+| [**PostQualityEvaluationsSearch**](#PostQualityEvaluationsSearch) | **Post** /api/v2/quality/evaluations/search | Search evaluations based along specified criteria |
 | [**PostQualityForms**](#PostQualityForms) | **Post** /api/v2/quality/forms | Create an evaluation form. |
 | [**PostQualityFormsEvaluations**](#PostQualityFormsEvaluations) | **Post** /api/v2/quality/forms/evaluations | Create an evaluation form. |
 | [**PostQualityFormsSurveys**](#PostQualityFormsSurveys) | **Post** /api/v2/quality/forms/surveys | Create a survey form. |
@@ -66,6 +68,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostQualityPublishedforms**](#PostQualityPublishedforms) | **Post** /api/v2/quality/publishedforms | Publish an evaluation form. |
 | [**PostQualityPublishedformsEvaluations**](#PostQualityPublishedformsEvaluations) | **Post** /api/v2/quality/publishedforms/evaluations | Publish an evaluation form. |
 | [**PostQualityPublishedformsSurveys**](#PostQualityPublishedformsSurveys) | **Post** /api/v2/quality/publishedforms/surveys | Publish a survey form. |
+| [**PostQualitySurveys**](#PostQualitySurveys) | **Post** /api/v2/quality/surveys | Create a survey for a conversation |
 | [**PostQualitySurveysScoring**](#PostQualitySurveysScoring) | **Post** /api/v2/quality/surveys/scoring | Score survey |
 | [**PutQualityCalibration**](#PutQualityCalibration) | **Put** /api/v2/quality/calibrations/{calibrationId} | Update a calibration to the specified calibration via PUT.  Editable fields include: evaluators, expertEvaluator, and scoringIndex |
 | [**PutQualityConversationEvaluation**](#PutQualityConversationEvaluation) | **Put** /api/v2/quality/conversations/{conversationId}/evaluations/{evaluationId} | Update an evaluation |
@@ -1952,6 +1955,70 @@ namespace Example
 [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
 
 
+## GetQualityFormsEvaluationsBulk
+
+> [**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing) GetQualityFormsEvaluationsBulk (List<string> id, bool? includeLatestVersionFormName = null)
+
+
+Retrieve a list of evaluation forms by their ids
+
+Requires ANY permissions: 
+
+* quality:evaluationForm:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetQualityFormsEvaluationsBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var id = new List<string>(); // List<string> | A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100
+            var includeLatestVersionFormName = true;  // bool? | Whether to include the name of the form's most recently published version (optional)  (default to false)
+
+            try
+            { 
+                // Retrieve a list of evaluation forms by their ids
+                EvaluationFormResponseEntityListing result = apiInstance.GetQualityFormsEvaluationsBulk(id, includeLatestVersionFormName);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.GetQualityFormsEvaluationsBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **id** | [**List<string>**](string)| A comma-delimited list of valid evaluation form ids. The maximum number of ids allowed in this list is 100 |  |
+| **includeLatestVersionFormName** | **bool?**| Whether to include the name of the form&#39;s most recently published version | [optional] [default to false] |
+
+### Return type
+
+[**EvaluationFormResponseEntityListing**](EvaluationFormResponseEntityListing)
+
+
 ## GetQualityFormsEvaluationsBulkContexts
 
 > [**List&lt;EvaluationFormResponse&gt;**](EvaluationFormResponse) GetQualityFormsEvaluationsBulkContexts (List<string> contextId)
@@ -3613,6 +3680,70 @@ namespace Example
 [**EvaluationScoringSet**](EvaluationScoringSet)
 
 
+## PostQualityEvaluationsSearch
+
+> [**EvaluationSearchResponse**](EvaluationSearchResponse) PostQualityEvaluationsSearch (EvaluationSearchRequestDTO body)
+
+
+Search evaluations based along specified criteria
+
+Search Rules: 1. Time Range    - Time Range: Max 3 months (required) 2. Question Group Level Query: Use at least one field containing 'questionGroup' in name + exactly one questionGroupId 3. Question Level Query: Use at least one field containing 'question' in name + exactly one questionId 4. Mixed Queries: questionId alone is sufficient 5. Search Logic:    - Multiple criteria: AND operation    - Multiple values per criterion: OR operation    EXAMPLE: (agentId₁ OR agentId₂) AND (evaluatorId₁ OR evaluatorId₂) 5. Aggregations:    - Omit or set pageSize = 0    - Choose: multiple aggregations OR single aggregation with multiple sub-aggregations    - To aggregate against question fields, one must query by either a questionId OR a single top level TERM questionId aggregation AND query by a single formID or questionGroupId, or list of questionIds    - To aggregate against question group fields, one must query either a questionId/questionGroupId OR a single top level TERM questionGroupId aggregation AND query by a single formID or list of questionGroupIds 
+
+Requires ANY permissions: 
+
+* quality:evaluation:searchAny
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostQualityEvaluationsSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var body = new EvaluationSearchRequestDTO(); // EvaluationSearchRequestDTO | Evaluation search request
+
+            try
+            { 
+                // Search evaluations based along specified criteria
+                EvaluationSearchResponse result = apiInstance.PostQualityEvaluationsSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostQualityEvaluationsSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**EvaluationSearchRequestDTO**](EvaluationSearchRequestDTO)| Evaluation search request |  |
+
+### Return type
+
+[**EvaluationSearchResponse**](EvaluationSearchResponse)
+
+
 ## PostQualityForms
 
 > [**EvaluationFormResponse**](EvaluationFormResponse) PostQualityForms (EvaluationForm body)
@@ -4055,6 +4186,68 @@ namespace Example
 ### Return type
 
 [**SurveyForm**](SurveyForm)
+
+
+## PostQualitySurveys
+
+> [**Survey**](Survey) PostQualitySurveys (CreateSurveyRequest body)
+
+
+Create a survey for a conversation
+
+Requires ANY permissions: 
+
+* quality:survey:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostQualitySurveysExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new QualityApi();
+            var body = new CreateSurveyRequest(); // CreateSurveyRequest | Survey creation request
+
+            try
+            { 
+                // Create a survey for a conversation
+                Survey result = apiInstance.PostQualitySurveys(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling QualityApi.PostQualitySurveys: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateSurveyRequest**](CreateSurveyRequest)| Survey creation request |  |
+
+### Return type
+
+[**Survey**](Survey)
 
 
 ## PostQualitySurveysScoring
@@ -4636,4 +4829,4 @@ namespace Example
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatform.Client.V2 254.0.0_
+_PureCloudPlatform.Client.V2 255.0.0_

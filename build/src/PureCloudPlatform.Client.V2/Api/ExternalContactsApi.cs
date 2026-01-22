@@ -406,7 +406,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="expand">which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. (optional)</param>
         /// <returns>NoteListing</returns>
         
         NoteListing GetExternalcontactsContactNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
@@ -422,7 +422,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="expand">which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         
         ApiResponse<NoteListing> GetExternalcontactsContactNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
@@ -3484,7 +3484,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="expand">which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. (optional)</param>
         /// <returns>Task of NoteListing</returns>
         
         System.Threading.Tasks.Task<NoteListing> GetExternalcontactsContactNotesAsync (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
@@ -3500,7 +3500,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="expand">which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null);
@@ -9356,7 +9356,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="expand">which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. (optional)</param>
         /// <returns>NoteListing</returns>
         
         public NoteListing GetExternalcontactsContactNotes (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
@@ -9374,7 +9374,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="expand">which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. (optional)</param>
         /// <returns>ApiResponse of NoteListing</returns>
         
         public ApiResponse< NoteListing > GetExternalcontactsContactNotesWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
@@ -9467,7 +9467,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="expand">which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. (optional)</param>
         /// <returns>Task of NoteListing</returns>
         
         public async System.Threading.Tasks.Task<NoteListing> GetExternalcontactsContactNotesAsync (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)
@@ -9486,7 +9486,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">Page size (limited to fetching first 1,000 records; pageSize &lt;&#x3D; 100; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 20)</param>
         /// <param name="pageNumber">Page number (limited to fetching first 1,000 records; pageNumber * pageSize must be &lt;&#x3D; 1,000) (optional, default to 1)</param>
         /// <param name="sortOrder">The Note field to sort by. Any of: [createDate]. Direction: [asc, desc].  e.g. \&quot;createDate:asc\&quot;, \&quot;createDate:desc\&quot; (optional)</param>
-        /// <param name="expand">which fields, if any, to expand (optional)</param>
+        /// <param name="expand">which fields, if any, to expand. mergeset will include notes attached to ancestor contacts which have been merged into this one. (optional)</param>
         /// <returns>Task of ApiResponse (NoteListing)</returns>
         
         public async System.Threading.Tasks.Task<ApiResponse<NoteListing>> GetExternalcontactsContactNotesAsyncWithHttpInfo (string contactId, int? pageSize = null, int? pageNumber = null, string sortOrder = null, List<string> expand = null)

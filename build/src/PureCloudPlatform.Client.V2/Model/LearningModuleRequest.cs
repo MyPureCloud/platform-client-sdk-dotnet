@@ -90,7 +90,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalId">The external ID of the learning module. Maximum length: 50 characters..</param>
         /// <param name="EnforceContentOrder">If true, learning module content should be viewed one by one in order.</param>
         /// <param name="ReviewAssessmentResults">Allows to view Assessment results in detail.</param>
-        public LearningModuleRequest(string Name = null, string Description = null, int? CompletionTimeInDays = null, List<LearningModuleInformStepRequest> InformSteps = null, TypeEnum? Type = null, AssessmentForm AssessmentForm = null, LearningModuleCoverArtRequest CoverArt = null, int? LengthInMinutes = null, bool? ExcludedFromCatalog = null, string ExternalId = null, bool? EnforceContentOrder = null, ReviewAssessmentResults ReviewAssessmentResults = null)
+        /// <param name="AutoAssign">The configuration for linking a module to a rule.</param>
+        public LearningModuleRequest(string Name = null, string Description = null, int? CompletionTimeInDays = null, List<LearningModuleInformStepRequest> InformSteps = null, TypeEnum? Type = null, AssessmentForm AssessmentForm = null, LearningModuleCoverArtRequest CoverArt = null, int? LengthInMinutes = null, bool? ExcludedFromCatalog = null, string ExternalId = null, bool? EnforceContentOrder = null, ReviewAssessmentResults ReviewAssessmentResults = null, LearningModuleAutoAssignRequest AutoAssign = null)
         {
             this.Name = Name;
             this.Description = Description;
@@ -104,6 +105,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ExternalId = ExternalId;
             this.EnforceContentOrder = EnforceContentOrder;
             this.ReviewAssessmentResults = ReviewAssessmentResults;
+            this.AutoAssign = AutoAssign;
             
         }
         
@@ -209,6 +211,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ReviewAssessmentResults ReviewAssessmentResults { get; set; }
 
 
+
+        /// <summary>
+        /// The configuration for linking a module to a rule
+        /// </summary>
+        /// <value>The configuration for linking a module to a rule</value>
+        [DataMember(Name="autoAssign", EmitDefaultValue=false)]
+        public LearningModuleAutoAssignRequest AutoAssign { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -230,6 +241,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  EnforceContentOrder: ").Append(EnforceContentOrder).Append("\n");
             sb.Append("  ReviewAssessmentResults: ").Append(ReviewAssessmentResults).Append("\n");
+            sb.Append("  AutoAssign: ").Append(AutoAssign).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -329,6 +341,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ReviewAssessmentResults == other.ReviewAssessmentResults ||
                     this.ReviewAssessmentResults != null &&
                     this.ReviewAssessmentResults.Equals(other.ReviewAssessmentResults)
+                ) &&
+                (
+                    this.AutoAssign == other.AutoAssign ||
+                    this.AutoAssign != null &&
+                    this.AutoAssign.Equals(other.AutoAssign)
                 );
         }
 
@@ -378,6 +395,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ReviewAssessmentResults != null)
                     hash = hash * 59 + this.ReviewAssessmentResults.GetHashCode();
+
+                if (this.AutoAssign != null)
+                    hash = hash * 59 + this.AutoAssign.GetHashCode();
 
                 return hash;
             }

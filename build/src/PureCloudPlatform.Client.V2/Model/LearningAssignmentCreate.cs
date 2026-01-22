@@ -27,12 +27,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LearningAssignmentCreate" /> class.
         /// </summary>
+        /// <param name="AddToSchedule">If True, adds the assignment to their schedule.</param>
         /// <param name="ModuleId">The Learning module Id associated with this assignment (required).</param>
         /// <param name="UserId">The User for whom the assignment is assigned (required).</param>
         /// <param name="RecommendedCompletionDate">The recommended completion date of assignment. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="LengthInMinutes">The length in minutes of assignment.</param>
-        public LearningAssignmentCreate(string ModuleId = null, string UserId = null, DateTime? RecommendedCompletionDate = null, int? LengthInMinutes = null)
+        public LearningAssignmentCreate(bool? AddToSchedule = null, string ModuleId = null, string UserId = null, DateTime? RecommendedCompletionDate = null, int? LengthInMinutes = null)
         {
+            this.AddToSchedule = AddToSchedule;
             this.ModuleId = ModuleId;
             this.UserId = UserId;
             this.RecommendedCompletionDate = RecommendedCompletionDate;
@@ -40,6 +42,15 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
+
+
+        /// <summary>
+        /// If True, adds the assignment to their schedule
+        /// </summary>
+        /// <value>If True, adds the assignment to their schedule</value>
+        [DataMember(Name="addToSchedule", EmitDefaultValue=false)]
+        public bool? AddToSchedule { get; set; }
+
 
 
         /// <summary>
@@ -86,6 +97,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class LearningAssignmentCreate {\n");
 
+            sb.Append("  AddToSchedule: ").Append(AddToSchedule).Append("\n");
             sb.Append("  ModuleId: ").Append(ModuleId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  RecommendedCompletionDate: ").Append(RecommendedCompletionDate).Append("\n");
@@ -131,6 +143,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.AddToSchedule == other.AddToSchedule ||
+                    this.AddToSchedule != null &&
+                    this.AddToSchedule.Equals(other.AddToSchedule)
+                ) &&
+                (
                     this.ModuleId == other.ModuleId ||
                     this.ModuleId != null &&
                     this.ModuleId.Equals(other.ModuleId)
@@ -163,6 +180,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.AddToSchedule != null)
+                    hash = hash * 59 + this.AddToSchedule.GetHashCode();
+
                 if (this.ModuleId != null)
                     hash = hash * 59 + this.ModuleId.GetHashCode();
 

@@ -403,11 +403,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>DictionaryFeedbackEntityListing</returns>
         
-        DictionaryFeedbackEntityListing GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string nextPage = null, int? pageSize = null);
+        DictionaryFeedbackEntityListing GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null);
 
         /// <summary>
         /// Get the list of Speech &amp; Text Analytics dictionary feedbacks
@@ -417,11 +418,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>ApiResponse of DictionaryFeedbackEntityListing</returns>
         
-        ApiResponse<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo (string dialect = null, string nextPage = null, int? pageSize = null);
+        ApiResponse<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null);
 
         /// <summary>
         /// Get a Speech &amp; Text Analytics dictionary feedback by id
@@ -553,9 +555,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
+        /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ProgramsEntityListing</returns>
         
-        ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null);
+        ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of Speech &amp; Text Analytics programs
@@ -567,9 +572,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
+        /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ApiResponse of ProgramsEntityListing</returns>
         
-        ApiResponse<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null);
+        ApiResponse<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a Speech &amp; Text Analytics general program job by id
@@ -1995,11 +2003,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>Task of DictionaryFeedbackEntityListing</returns>
         
-        System.Threading.Tasks.Task<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackAsync (string dialect = null, string nextPage = null, int? pageSize = null);
+        System.Threading.Tasks.Task<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackAsync (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null);
 
         /// <summary>
         /// Get the list of Speech &amp; Text Analytics dictionary feedbacks
@@ -2009,11 +2018,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>Task of ApiResponse (DictionaryFeedbackEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<DictionaryFeedbackEntityListing>> GetSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo (string dialect = null, string nextPage = null, int? pageSize = null);
+        System.Threading.Tasks.Task<ApiResponse<DictionaryFeedbackEntityListing>> GetSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null);
 
         /// <summary>
         /// Get a Speech &amp; Text Analytics dictionary feedback by id
@@ -2145,9 +2155,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
+        /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ProgramsEntityListing</returns>
         
-        System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null);
+        System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of Speech &amp; Text Analytics programs
@@ -2159,9 +2172,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
+        /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ApiResponse (ProgramsEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null);
+        System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a Speech &amp; Text Analytics general program job by id
@@ -6354,13 +6370,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>DictionaryFeedbackEntityListing</returns>
         
-        public DictionaryFeedbackEntityListing GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string nextPage = null, int? pageSize = null)
+        public DictionaryFeedbackEntityListing GetSpeechandtextanalyticsDictionaryfeedback (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null)
         {
-             ApiResponse<DictionaryFeedbackEntityListing> localVarResponse = GetSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo(dialect, nextPage, pageSize);
+             ApiResponse<DictionaryFeedbackEntityListing> localVarResponse = GetSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo(dialect, transcriptionEngine, nextPage, pageSize);
              return localVarResponse.Data;
         }
 
@@ -6370,11 +6387,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>ApiResponse of DictionaryFeedbackEntityListing</returns>
         
-        public ApiResponse< DictionaryFeedbackEntityListing > GetSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo (string dialect = null, string nextPage = null, int? pageSize = null)
+        public ApiResponse< DictionaryFeedbackEntityListing > GetSpeechandtextanalyticsDictionaryfeedbackWithHttpInfo (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null)
         { 
 
             var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback";
@@ -6411,6 +6429,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (dialect != null) localVarQueryParams.Add(new Tuple<string, string>("dialect", this.Configuration.ApiClient.ParameterToString(dialect)));
+            if (transcriptionEngine != null) localVarQueryParams.Add(new Tuple<string, string>("transcriptionEngine", this.Configuration.ApiClient.ParameterToString(transcriptionEngine)));
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
@@ -6456,13 +6475,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>Task of DictionaryFeedbackEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackAsync (string dialect = null, string nextPage = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<DictionaryFeedbackEntityListing> GetSpeechandtextanalyticsDictionaryfeedbackAsync (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null)
         {
-             ApiResponse<DictionaryFeedbackEntityListing> localVarResponse = await GetSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo(dialect, nextPage, pageSize);
+             ApiResponse<DictionaryFeedbackEntityListing> localVarResponse = await GetSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo(dialect, transcriptionEngine, nextPage, pageSize);
              return localVarResponse.Data;
 
         }
@@ -6473,11 +6493,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>Task of ApiResponse (DictionaryFeedbackEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<DictionaryFeedbackEntityListing>> GetSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo (string dialect = null, string nextPage = null, int? pageSize = null)
+        public async System.Threading.Tasks.Task<ApiResponse<DictionaryFeedbackEntityListing>> GetSpeechandtextanalyticsDictionaryfeedbackAsyncWithHttpInfo (string dialect = null, string transcriptionEngine = null, string nextPage = null, int? pageSize = null)
         { 
 
             var localVarPath = "/api/v2/speechandtextanalytics/dictionaryfeedback";
@@ -6514,6 +6535,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (dialect != null) localVarQueryParams.Add(new Tuple<string, string>("dialect", this.Configuration.ApiClient.ParameterToString(dialect)));
+            if (transcriptionEngine != null) localVarQueryParams.Add(new Tuple<string, string>("transcriptionEngine", this.Configuration.ApiClient.ParameterToString(transcriptionEngine)));
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
 
@@ -7567,11 +7589,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
+        /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ProgramsEntityListing</returns>
         
-        public ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null)
+        public ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<ProgramsEntityListing> localVarResponse = GetSpeechandtextanalyticsProgramsWithHttpInfo(nextPage, pageSize, state);
+             ApiResponse<ProgramsEntityListing> localVarResponse = GetSpeechandtextanalyticsProgramsWithHttpInfo(nextPage, pageSize, state, name, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -7583,9 +7608,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
+        /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ApiResponse of ProgramsEntityListing</returns>
         
-        public ApiResponse< ProgramsEntityListing > GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null)
+        public ApiResponse< ProgramsEntityListing > GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/speechandtextanalytics/programs";
@@ -7624,6 +7652,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 
@@ -7669,11 +7700,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
+        /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ProgramsEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null)
+        public async System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<ProgramsEntityListing> localVarResponse = await GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo(nextPage, pageSize, state);
+             ApiResponse<ProgramsEntityListing> localVarResponse = await GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo(nextPage, pageSize, state, name, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -7686,9 +7720,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
+        /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
+        /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ApiResponse (ProgramsEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/speechandtextanalytics/programs";
@@ -7727,6 +7764,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (nextPage != null) localVarQueryParams.Add(new Tuple<string, string>("nextPage", this.Configuration.ApiClient.ParameterToString(nextPage)));
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
+            if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
+            if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
             // Header params
 

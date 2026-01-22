@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unread for "Unread"
             /// </summary>
             [EnumMember(Value = "Unread")]
-            Unread
+            Unread,
+            
+            /// <summary>
+            /// Enum Close for "Close"
+            /// </summary>
+            [EnumMember(Value = "Close")]
+            Close
         }
         /// <summary>
         /// The action being taken on the alert.
