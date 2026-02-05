@@ -12,6 +12,7 @@
 | **OrganizationId** | **string** |  | [optional] |
 | **UserId** | **string** |  | [optional] |
 | **OauthClientId** | **string** |  | [optional] |
+| **OauthClientOrgId** | **string** |  | [optional] |
 | **Reason** | **string** |  | [optional] |
 | **Message** | **string** |  | [optional] |
 | **Data** | **Dictionary&lt;string, Object&gt;** |  | [optional] |

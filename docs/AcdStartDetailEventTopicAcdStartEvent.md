@@ -29,6 +29,7 @@
 | **UtilizationLabel** | **string** |  | [optional] |
 | **RoutingPriority** | **long?** |  | [optional] |
 | **RequestedRoutingSkillIds** | **List&lt;Guid?&gt;** |  | [optional] |
+| **SkillExpressionApplied** | **bool?** |  | [optional] |
 
 
 

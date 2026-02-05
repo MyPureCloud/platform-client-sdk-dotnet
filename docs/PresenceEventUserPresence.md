@@ -11,6 +11,7 @@
 | **Primary** | **bool?** |  | [optional] |
 | **Message** | **string** |  | [optional] |
 | **ModifiedDate** | **DateTime?** |  | [optional] |
+| **FuturePresenceDefinition** | [**PresenceEventOrganizationPresence**](PresenceEventOrganizationPresence) |  | [optional] |
 
 
 

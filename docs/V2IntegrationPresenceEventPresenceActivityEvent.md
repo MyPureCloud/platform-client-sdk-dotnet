@@ -14,6 +14,7 @@
 | **Message** | **string** |  | [optional] |
 | **CurrentDisplaySourceId** | **Guid?** |  | [optional] |
 | **PreviousDisplaySourceId** | **Guid?** |  | [optional] |
+| **FuturePresenceDefinition** | [**V2IntegrationPresenceEventOrganizationPresence**](V2IntegrationPresenceEventOrganizationPresence) |  | [optional] |
 
 
 

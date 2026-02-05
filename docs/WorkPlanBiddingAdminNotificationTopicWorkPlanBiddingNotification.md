@@ -9,6 +9,7 @@
 | **Id** | **string** |  | [optional] |
 | **BuId** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
+| **BidType** | **string** |  | [optional] |
 | **BidWindowStartDate** | **string** |  | [optional] |
 | **BidWindowEndDate** | **string** |  | [optional] |
 | **EffectiveDate** | **string** |  | [optional] |

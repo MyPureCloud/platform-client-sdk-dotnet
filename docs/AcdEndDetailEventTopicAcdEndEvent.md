@@ -30,6 +30,7 @@
 | **RequestedRoutings** | **List&lt;string&gt;** |  | [optional] |
 | **UsedRouting** | **string** |  | [optional] |
 | **RequestedRoutingSkillIds** | **List&lt;Guid?&gt;** |  | [optional] |
+| **RequestedSkillExpressionIds** | **List&lt;Guid?&gt;** |  | [optional] |
 | **RequestedLanguageId** | **string** |  | [optional] |
 | **RequestedRoutingUserIds** | **List&lt;Guid?&gt;** |  | [optional] |
 | **RoutingPriority** | **long?** |  | [optional] |
