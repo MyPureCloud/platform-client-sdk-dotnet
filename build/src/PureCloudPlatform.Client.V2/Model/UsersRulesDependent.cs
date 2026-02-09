@@ -62,11 +62,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The id of the rule
+        /// The rule associated with this dependent
         /// </summary>
-        /// <value>The id of the rule</value>
-        [DataMember(Name="ruleId", EmitDefaultValue=false)]
-        public string RuleId { get; private set; }
+        /// <value>The rule associated with this dependent</value>
+        [DataMember(Name="rule", EmitDefaultValue=false)]
+        public UsersRulesDependentRule Rule { get; private set; }
 
 
 
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class UsersRulesDependent {\n");
 
-            sb.Append("  RuleId: ").Append(RuleId).Append("\n");
+            sb.Append("  Rule: ").Append(Rule).Append("\n");
             sb.Append("  TypeId: ").Append(TypeId).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
@@ -183,9 +183,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.RuleId == other.RuleId ||
-                    this.RuleId != null &&
-                    this.RuleId.Equals(other.RuleId)
+                    this.Rule == other.Rule ||
+                    this.Rule != null &&
+                    this.Rule.Equals(other.Rule)
                 ) &&
                 (
                     this.TypeId == other.TypeId ||
@@ -235,8 +235,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.RuleId != null)
-                    hash = hash * 59 + this.RuleId.GetHashCode();
+                if (this.Rule != null)
+                    hash = hash * 59 + this.Rule.GetHashCode();
 
                 if (this.TypeId != null)
                     hash = hash * 59 + this.TypeId.GetHashCode();

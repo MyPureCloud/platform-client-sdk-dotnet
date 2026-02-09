@@ -581,7 +581,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
         /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
-        /// <param name="resourceType">Types of consumed resources to show (optional)</param>
+        /// <param name="resourceType">Types of consumed resources to show. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ConsumedResourcesEntityListing</returns>
@@ -598,7 +598,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
         /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
-        /// <param name="resourceType">Types of consumed resources to show (optional)</param>
+        /// <param name="resourceType">Types of consumed resources to show. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ConsumedResourcesEntityListing</returns>
@@ -4705,7 +4705,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
         /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
-        /// <param name="resourceType">Types of consumed resources to show (optional)</param>
+        /// <param name="resourceType">Types of consumed resources to show. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ConsumedResourcesEntityListing</returns>
@@ -4722,7 +4722,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
         /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
-        /// <param name="resourceType">Types of consumed resources to show (optional)</param>
+        /// <param name="resourceType">Types of consumed resources to show. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ConsumedResourcesEntityListing)</returns>
@@ -12868,7 +12868,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
         /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
-        /// <param name="resourceType">Types of consumed resources to show (optional)</param>
+        /// <param name="resourceType">Types of consumed resources to show. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ConsumedResourcesEntityListing</returns>
@@ -12887,7 +12887,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
         /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
-        /// <param name="resourceType">Types of consumed resources to show (optional)</param>
+        /// <param name="resourceType">Types of consumed resources to show. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>ApiResponse of ConsumedResourcesEntityListing</returns>
@@ -12988,7 +12988,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
         /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
-        /// <param name="resourceType">Types of consumed resources to show (optional)</param>
+        /// <param name="resourceType">Types of consumed resources to show. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ConsumedResourcesEntityListing</returns>
@@ -13008,7 +13008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="id">Consuming object ID</param>
         /// <param name="version">Consuming object version</param>
         /// <param name="objectType">Consuming object type.  Only versioned types are allowed here.</param>
-        /// <param name="resourceType">Types of consumed resources to show (optional)</param>
+        /// <param name="resourceType">Types of consumed resources to show. (optional)</param>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
         /// <param name="pageSize">Page size (optional, default to 25)</param>
         /// <returns>Task of ApiResponse (ConsumedResourcesEntityListing)</returns>

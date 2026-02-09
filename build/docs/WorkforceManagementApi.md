@@ -16236,7 +16236,7 @@ namespace Example
 
 Fetches time off requests matching the conditions specified in the request body
 
-Request body requires one of the following: User ID is specified, statuses == [Pending] or date range to be specified and less than or equal to 33 days.  All other fields are filters
+Request body requires one of the following: statuses == [Pending] or date range to be specified and less than or equal to 33 days. All other fields are filters
 
 Requires ANY permissions: 
 
@@ -18119,4 +18119,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

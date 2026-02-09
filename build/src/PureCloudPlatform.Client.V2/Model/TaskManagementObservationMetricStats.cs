@@ -13,35 +13,40 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ScreenRecordingUserAuthenticatedInfo
+    /// TaskManagementObservationMetricStats
     /// </summary>
     [DataContract]
-    public partial class ScreenRecordingUserAuthenticatedInfo :  IEquatable<ScreenRecordingUserAuthenticatedInfo>
+    public partial class TaskManagementObservationMetricStats :  IEquatable<TaskManagementObservationMetricStats>
     {
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="ScreenRecordingUserAuthenticatedInfo" /> class.
+        /// Initializes a new instance of the <see cref="TaskManagementObservationMetricStats" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected ScreenRecordingUserAuthenticatedInfo() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ScreenRecordingUserAuthenticatedInfo" /> class.
-        /// </summary>
-        /// <param name="BackgroundAssistantId">Id of Genesys Cloud Background Assistant (required).</param>
-        public ScreenRecordingUserAuthenticatedInfo(string BackgroundAssistantId = null)
+        /// <param name="Count">The observed value for this metric.</param>
+        /// <param name="Max">The maximum observed value for this metric. Used for &#x60;oWorkitemOldestUnassigned&#x60; and  &#x60;oWorkitemOldestAssigned&#x60;.</param>
+        public TaskManagementObservationMetricStats(int? Count = null, long? Max = null)
         {
-            this.BackgroundAssistantId = BackgroundAssistantId;
+            this.Count = Count;
+            this.Max = Max;
             
         }
         
 
 
         /// <summary>
-        /// Id of Genesys Cloud Background Assistant
+        /// The observed value for this metric
         /// </summary>
-        /// <value>Id of Genesys Cloud Background Assistant</value>
-        [DataMember(Name="backgroundAssistantId", EmitDefaultValue=false)]
-        public string BackgroundAssistantId { get; set; }
+        /// <value>The observed value for this metric</value>
+        [DataMember(Name="count", EmitDefaultValue=false)]
+        public int? Count { get; set; }
+
+
+
+        /// <summary>
+        /// The maximum observed value for this metric. Used for &#x60;oWorkitemOldestUnassigned&#x60; and  &#x60;oWorkitemOldestAssigned&#x60;
+        /// </summary>
+        /// <value>The maximum observed value for this metric. Used for &#x60;oWorkitemOldestUnassigned&#x60; and  &#x60;oWorkitemOldestAssigned&#x60;</value>
+        [DataMember(Name="max", EmitDefaultValue=false)]
+        public long? Max { get; set; }
 
 
         /// <summary>
@@ -51,9 +56,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ScreenRecordingUserAuthenticatedInfo {\n");
+            sb.Append("class TaskManagementObservationMetricStats {\n");
 
-            sb.Append("  BackgroundAssistantId: ").Append(BackgroundAssistantId).Append("\n");
+            sb.Append("  Count: ").Append(Count).Append("\n");
+            sb.Append("  Max: ").Append(Max).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -79,15 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ScreenRecordingUserAuthenticatedInfo);
+            return this.Equals(obj as TaskManagementObservationMetricStats);
         }
 
         /// <summary>
-        /// Returns true if ScreenRecordingUserAuthenticatedInfo instances are equal
+        /// Returns true if TaskManagementObservationMetricStats instances are equal
         /// </summary>
-        /// <param name="other">Instance of ScreenRecordingUserAuthenticatedInfo to be compared</param>
+        /// <param name="other">Instance of TaskManagementObservationMetricStats to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ScreenRecordingUserAuthenticatedInfo other)
+        public bool Equals(TaskManagementObservationMetricStats other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -95,9 +101,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.BackgroundAssistantId == other.BackgroundAssistantId ||
-                    this.BackgroundAssistantId != null &&
-                    this.BackgroundAssistantId.Equals(other.BackgroundAssistantId)
+                    this.Count == other.Count ||
+                    this.Count != null &&
+                    this.Count.Equals(other.Count)
+                ) &&
+                (
+                    this.Max == other.Max ||
+                    this.Max != null &&
+                    this.Max.Equals(other.Max)
                 );
         }
 
@@ -112,8 +123,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.BackgroundAssistantId != null)
-                    hash = hash * 59 + this.BackgroundAssistantId.GetHashCode();
+                if (this.Count != null)
+                    hash = hash * 59 + this.Count.GetHashCode();
+
+                if (this.Max != null)
+                    hash = hash * 59 + this.Max.GetHashCode();
 
                 return hash;
             }

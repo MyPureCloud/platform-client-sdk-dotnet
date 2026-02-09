@@ -354,7 +354,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Alerting for "Alerting"
             /// </summary>
             [EnumMember(Value = "Alerting")]
-            Alerting
+            Alerting,
+            
+            /// <summary>
+            /// Enum Assistants for "Assistants"
+            /// </summary>
+            [EnumMember(Value = "Assistants")]
+            Assistants
         }
         /// <summary>
         /// Gets or Sets Action
@@ -1261,6 +1267,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Mfaverifier,
             
             /// <summary>
+            /// Enum Identityprovider for "IdentityProvider"
+            /// </summary>
+            [EnumMember(Value = "IdentityProvider")]
+            Identityprovider,
+            
+            /// <summary>
             /// Enum Role for "Role"
             /// </summary>
             [EnumMember(Value = "Role")]
@@ -1801,6 +1813,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Capacityplan,
             
             /// <summary>
+            /// Enum Schedulebid for "ScheduleBid"
+            /// </summary>
+            [EnumMember(Value = "ScheduleBid")]
+            Schedulebid,
+            
+            /// <summary>
+            /// Enum Schedulebidgroup for "ScheduleBidGroup"
+            /// </summary>
+            [EnumMember(Value = "ScheduleBidGroup")]
+            Schedulebidgroup,
+            
+            /// <summary>
             /// Enum Trigger for "Trigger"
             /// </summary>
             [EnumMember(Value = "Trigger")]
@@ -2197,6 +2221,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Customcalculations,
             
             /// <summary>
+            /// Enum Savedviews for "SavedViews"
+            /// </summary>
+            [EnumMember(Value = "SavedViews")]
+            Savedviews,
+            
+            /// <summary>
             /// Enum Scheduledexports for "ScheduledExports"
             /// </summary>
             [EnumMember(Value = "ScheduledExports")]
@@ -2423,6 +2453,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OperationalEvent")]
             Operationalevent,
+            
+            /// <summary>
+            /// Enum Allowandblocknumber for "AllowAndBlockNumber"
+            /// </summary>
+            [EnumMember(Value = "AllowAndBlockNumber")]
+            Allowandblocknumber,
             
             /// <summary>
             /// Enum Participant for "Participant"
@@ -2662,7 +2698,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Socialmediamessage for "SocialMediaMessage"
             /// </summary>
             [EnumMember(Value = "SocialMediaMessage")]
-            Socialmediamessage
+            Socialmediamessage,
+            
+            /// <summary>
+            /// Enum Assistant for "Assistant"
+            /// </summary>
+            [EnumMember(Value = "Assistant")]
+            Assistant,
+            
+            /// <summary>
+            /// Enum Assistantqueue for "AssistantQueue"
+            /// </summary>
+            [EnumMember(Value = "AssistantQueue")]
+            Assistantqueue
         }
         /// <summary>
         /// Gets or Sets ServiceName

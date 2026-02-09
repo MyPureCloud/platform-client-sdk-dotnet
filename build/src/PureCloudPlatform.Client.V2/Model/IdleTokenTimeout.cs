@@ -19,14 +19,53 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class IdleTokenTimeout :  IEquatable<IdleTokenTimeout>
     {
         /// <summary>
+        /// The unit for the inactivity timeout (MINUTES or HOURS).
+        /// </summary>
+        /// <value>The unit for the inactivity timeout (MINUTES or HOURS).</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum InactivityTimeoutUnitEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Minutes for "Minutes"
+            /// </summary>
+            [EnumMember(Value = "Minutes")]
+            Minutes,
+            
+            /// <summary>
+            /// Enum Hours for "Hours"
+            /// </summary>
+            [EnumMember(Value = "Hours")]
+            Hours
+        }
+        /// <summary>
+        /// The unit for the inactivity timeout (MINUTES or HOURS).
+        /// </summary>
+        /// <value>The unit for the inactivity timeout (MINUTES or HOURS).</value>
+        [DataMember(Name="inactivityTimeoutUnit", EmitDefaultValue=false)]
+        public InactivityTimeoutUnitEnum? InactivityTimeoutUnit { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="IdleTokenTimeout" /> class.
         /// </summary>
         /// <param name="IdleTokenTimeoutSeconds">Token timeout length in seconds. Must be at least 5 minutes and 8 hours or less (if HIPAA is disabled) or 15 minutes or less (if HIPAA is enabled)..</param>
         /// <param name="EnableIdleTokenTimeout">Indicates whether the Token Timeout should be enabled or disabled..</param>
-        public IdleTokenTimeout(int? IdleTokenTimeoutSeconds = null, bool? EnableIdleTokenTimeout = null)
+        /// <param name="InactivityTimeoutUnit">The unit for the inactivity timeout (MINUTES or HOURS)..</param>
+        /// <param name="InactivityTimeoutGroupsEnabled">Indicates whether inactivity timeout groups are enabled..</param>
+        /// <param name="InactivityTimeoutGroupBundles">Group bundle configuration for inactivity timeout..</param>
+        public IdleTokenTimeout(int? IdleTokenTimeoutSeconds = null, bool? EnableIdleTokenTimeout = null, InactivityTimeoutUnitEnum? InactivityTimeoutUnit = null, bool? InactivityTimeoutGroupsEnabled = null, List<InactivityTimeoutGroupBundle> InactivityTimeoutGroupBundles = null)
         {
             this.IdleTokenTimeoutSeconds = IdleTokenTimeoutSeconds;
             this.EnableIdleTokenTimeout = EnableIdleTokenTimeout;
+            this.InactivityTimeoutUnit = InactivityTimeoutUnit;
+            this.InactivityTimeoutGroupsEnabled = InactivityTimeoutGroupsEnabled;
+            this.InactivityTimeoutGroupBundles = InactivityTimeoutGroupBundles;
             
         }
         
@@ -49,6 +88,26 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? EnableIdleTokenTimeout { get; set; }
 
 
+
+
+
+        /// <summary>
+        /// Indicates whether inactivity timeout groups are enabled.
+        /// </summary>
+        /// <value>Indicates whether inactivity timeout groups are enabled.</value>
+        [DataMember(Name="inactivityTimeoutGroupsEnabled", EmitDefaultValue=false)]
+        public bool? InactivityTimeoutGroupsEnabled { get; set; }
+
+
+
+        /// <summary>
+        /// Group bundle configuration for inactivity timeout.
+        /// </summary>
+        /// <value>Group bundle configuration for inactivity timeout.</value>
+        [DataMember(Name="inactivityTimeoutGroupBundles", EmitDefaultValue=false)]
+        public List<InactivityTimeoutGroupBundle> InactivityTimeoutGroupBundles { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +119,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  IdleTokenTimeoutSeconds: ").Append(IdleTokenTimeoutSeconds).Append("\n");
             sb.Append("  EnableIdleTokenTimeout: ").Append(EnableIdleTokenTimeout).Append("\n");
+            sb.Append("  InactivityTimeoutUnit: ").Append(InactivityTimeoutUnit).Append("\n");
+            sb.Append("  InactivityTimeoutGroupsEnabled: ").Append(InactivityTimeoutGroupsEnabled).Append("\n");
+            sb.Append("  InactivityTimeoutGroupBundles: ").Append(InactivityTimeoutGroupBundles).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +171,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EnableIdleTokenTimeout == other.EnableIdleTokenTimeout ||
                     this.EnableIdleTokenTimeout != null &&
                     this.EnableIdleTokenTimeout.Equals(other.EnableIdleTokenTimeout)
+                ) &&
+                (
+                    this.InactivityTimeoutUnit == other.InactivityTimeoutUnit ||
+                    this.InactivityTimeoutUnit != null &&
+                    this.InactivityTimeoutUnit.Equals(other.InactivityTimeoutUnit)
+                ) &&
+                (
+                    this.InactivityTimeoutGroupsEnabled == other.InactivityTimeoutGroupsEnabled ||
+                    this.InactivityTimeoutGroupsEnabled != null &&
+                    this.InactivityTimeoutGroupsEnabled.Equals(other.InactivityTimeoutGroupsEnabled)
+                ) &&
+                (
+                    this.InactivityTimeoutGroupBundles == other.InactivityTimeoutGroupBundles ||
+                    this.InactivityTimeoutGroupBundles != null &&
+                    this.InactivityTimeoutGroupBundles.SequenceEqual(other.InactivityTimeoutGroupBundles)
                 );
         }
 
@@ -128,6 +205,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EnableIdleTokenTimeout != null)
                     hash = hash * 59 + this.EnableIdleTokenTimeout.GetHashCode();
+
+                if (this.InactivityTimeoutUnit != null)
+                    hash = hash * 59 + this.InactivityTimeoutUnit.GetHashCode();
+
+                if (this.InactivityTimeoutGroupsEnabled != null)
+                    hash = hash * 59 + this.InactivityTimeoutGroupsEnabled.GetHashCode();
+
+                if (this.InactivityTimeoutGroupBundles != null)
+                    hash = hash * 59 + this.InactivityTimeoutGroupBundles.GetHashCode();
 
                 return hash;
             }

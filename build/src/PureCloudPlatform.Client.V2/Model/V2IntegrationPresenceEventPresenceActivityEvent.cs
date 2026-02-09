@@ -60,7 +60,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Message">Message.</param>
         /// <param name="CurrentDisplaySourceId">CurrentDisplaySourceId.</param>
         /// <param name="PreviousDisplaySourceId">PreviousDisplaySourceId.</param>
-        public V2IntegrationPresenceEventPresenceActivityEvent(Guid? UserId = null, EventTypeEnum? EventType = null, string Source = null, DateTime? ModifiedDate = null, V2IntegrationPresenceEventOrganizationPresence PresenceDefinition = null, string Message = null, Guid? CurrentDisplaySourceId = null, Guid? PreviousDisplaySourceId = null)
+        /// <param name="FuturePresenceDefinition">FuturePresenceDefinition.</param>
+        public V2IntegrationPresenceEventPresenceActivityEvent(Guid? UserId = null, EventTypeEnum? EventType = null, string Source = null, DateTime? ModifiedDate = null, V2IntegrationPresenceEventOrganizationPresence PresenceDefinition = null, string Message = null, Guid? CurrentDisplaySourceId = null, Guid? PreviousDisplaySourceId = null, V2IntegrationPresenceEventOrganizationPresence FuturePresenceDefinition = null)
         {
             this.UserId = UserId;
             this.EventType = EventType;
@@ -70,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Message = Message;
             this.CurrentDisplaySourceId = CurrentDisplaySourceId;
             this.PreviousDisplaySourceId = PreviousDisplaySourceId;
+            this.FuturePresenceDefinition = FuturePresenceDefinition;
             
         }
         
@@ -132,6 +134,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public Guid? PreviousDisplaySourceId { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets FuturePresenceDefinition
+        /// </summary>
+        [DataMember(Name="futurePresenceDefinition", EmitDefaultValue=false)]
+        public V2IntegrationPresenceEventOrganizationPresence FuturePresenceDefinition { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -149,6 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  CurrentDisplaySourceId: ").Append(CurrentDisplaySourceId).Append("\n");
             sb.Append("  PreviousDisplaySourceId: ").Append(PreviousDisplaySourceId).Append("\n");
+            sb.Append("  FuturePresenceDefinition: ").Append(FuturePresenceDefinition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -228,6 +239,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PreviousDisplaySourceId == other.PreviousDisplaySourceId ||
                     this.PreviousDisplaySourceId != null &&
                     this.PreviousDisplaySourceId.Equals(other.PreviousDisplaySourceId)
+                ) &&
+                (
+                    this.FuturePresenceDefinition == other.FuturePresenceDefinition ||
+                    this.FuturePresenceDefinition != null &&
+                    this.FuturePresenceDefinition.Equals(other.FuturePresenceDefinition)
                 );
         }
 
@@ -265,6 +281,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PreviousDisplaySourceId != null)
                     hash = hash * 59 + this.PreviousDisplaySourceId.GetHashCode();
+
+                if (this.FuturePresenceDefinition != null)
+                    hash = hash * 59 + this.FuturePresenceDefinition.GetHashCode();
 
                 return hash;
             }

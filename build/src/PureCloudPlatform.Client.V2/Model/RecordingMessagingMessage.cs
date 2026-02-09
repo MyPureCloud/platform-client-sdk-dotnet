@@ -207,6 +207,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="To">The message recipient..</param>
         /// <param name="Timestamp">The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Id">A globally unique identifier for this communication..</param>
+        /// <param name="Status">Status of the message.</param>
         /// <param name="Purpose">A well known string that specifies the purpose or type of the participant on this communication..</param>
         /// <param name="ParticipantId">A globally unique identifier for the participant on this communication..</param>
         /// <param name="Queue">A globally unique identifier for the queue involved in this communication..</param>
@@ -230,7 +231,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PaymentResponse">Payment response content..</param>
         /// <param name="Form">Form content..</param>
         /// <param name="RoadsideAssistance">Roadside Assistance content..</param>
-        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, List<ButtonResponse> ButtonResponses = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, DatePicker DatePicker = null, ListPicker ListPicker = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null, InteractiveApplication InteractiveApplication = null, PaymentRequest PaymentRequest = null, PaymentResponse PaymentResponse = null, RecordingForm Form = null, RecordingRoadsideAssistance RoadsideAssistance = null)
+        /// <param name="MessageReceipts">List of message receipts.</param>
+        public RecordingMessagingMessage(string From = null, User FromUser = null, ExternalContact FromExternalContact = null, string To = null, DateTime? Timestamp = null, string Id = null, string Status = null, string Purpose = null, string ParticipantId = null, AddressableEntityRef Queue = null, AddressableEntityRef Workflow = null, string MessageText = null, List<MessageMediaAttachment> MessageMediaAttachments = null, List<MessageStickerAttachment> MessageStickerAttachments = null, List<QuickReply> QuickReplies = null, ButtonResponse ButtonResponse = null, List<ButtonResponse> ButtonResponses = null, RecordingContentStory Story = null, List<Card> Cards = null, RecordingNotificationTemplate NotificationTemplate = null, DatePicker DatePicker = null, ListPicker ListPicker = null, ContentTypeEnum? ContentType = null, SocialVisibilityEnum? SocialVisibility = null, List<ConversationMessageEvent> Events = null, InteractiveApplication InteractiveApplication = null, PaymentRequest PaymentRequest = null, PaymentResponse PaymentResponse = null, RecordingForm Form = null, RecordingRoadsideAssistance RoadsideAssistance = null, List<RecordingMessageReceipt> MessageReceipts = null)
         {
             this.From = From;
             this.FromUser = FromUser;
@@ -238,6 +240,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.To = To;
             this.Timestamp = Timestamp;
             this.Id = Id;
+            this.Status = Status;
             this.Purpose = Purpose;
             this.ParticipantId = ParticipantId;
             this.Queue = Queue;
@@ -261,6 +264,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PaymentResponse = PaymentResponse;
             this.Form = Form;
             this.RoadsideAssistance = RoadsideAssistance;
+            this.MessageReceipts = MessageReceipts;
             
         }
         
@@ -317,6 +321,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>A globally unique identifier for this communication.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// Status of the message
+        /// </summary>
+        /// <value>Status of the message</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public string Status { get; set; }
 
 
 
@@ -512,6 +525,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public RecordingRoadsideAssistance RoadsideAssistance { get; set; }
 
 
+
+        /// <summary>
+        /// List of message receipts
+        /// </summary>
+        /// <value>List of message receipts</value>
+        [DataMember(Name="messageReceipts", EmitDefaultValue=false)]
+        public List<RecordingMessageReceipt> MessageReceipts { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -527,6 +549,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  To: ").Append(To).Append("\n");
             sb.Append("  Timestamp: ").Append(Timestamp).Append("\n");
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Purpose: ").Append(Purpose).Append("\n");
             sb.Append("  ParticipantId: ").Append(ParticipantId).Append("\n");
             sb.Append("  Queue: ").Append(Queue).Append("\n");
@@ -550,6 +573,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PaymentResponse: ").Append(PaymentResponse).Append("\n");
             sb.Append("  Form: ").Append(Form).Append("\n");
             sb.Append("  RoadsideAssistance: ").Append(RoadsideAssistance).Append("\n");
+            sb.Append("  MessageReceipts: ").Append(MessageReceipts).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -619,6 +643,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
                 ) &&
                 (
                     this.Purpose == other.Purpose ||
@@ -734,6 +763,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RoadsideAssistance == other.RoadsideAssistance ||
                     this.RoadsideAssistance != null &&
                     this.RoadsideAssistance.Equals(other.RoadsideAssistance)
+                ) &&
+                (
+                    this.MessageReceipts == other.MessageReceipts ||
+                    this.MessageReceipts != null &&
+                    this.MessageReceipts.SequenceEqual(other.MessageReceipts)
                 );
         }
 
@@ -765,6 +799,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
 
                 if (this.Purpose != null)
                     hash = hash * 59 + this.Purpose.GetHashCode();
@@ -834,6 +871,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RoadsideAssistance != null)
                     hash = hash * 59 + this.RoadsideAssistance.GetHashCode();
+
+                if (this.MessageReceipts != null)
+                    hash = hash * 59 + this.MessageReceipts.GetHashCode();
 
                 return hash;
             }

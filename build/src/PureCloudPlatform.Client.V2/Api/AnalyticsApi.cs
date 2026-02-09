@@ -3088,6 +3088,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TaskManagementAggregateQueryResponse> PostAnalyticsTaskmanagementAggregatesQueryWithHttpInfo (TaskManagementAggregationQuery body);
 
         /// <summary>
+        /// Query for task management observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsTaskmanagementMetricsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)</param>
+        /// <returns>TaskManagementObservationQueryResponse</returns>
+        
+        TaskManagementObservationQueryResponse PostAnalyticsTaskmanagementMetricsQuery (TaskManagementObservationQuery body, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Query for task management observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsTaskmanagementMetricsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)</param>
+        /// <returns>ApiResponse of TaskManagementObservationQueryResponse</returns>
+        
+        ApiResponse<TaskManagementObservationQueryResponse> PostAnalyticsTaskmanagementMetricsQueryWithHttpInfo (TaskManagementObservationQuery body, string after = null, int? pageSize = null);
+
+        /// <summary>
         /// Query for team activity observations
         /// </summary>
         /// <remarks>
@@ -6414,6 +6444,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TaskManagementAggregateQueryResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TaskManagementAggregateQueryResponse>> PostAnalyticsTaskmanagementAggregatesQueryAsyncWithHttpInfo (TaskManagementAggregationQuery body);
+
+        /// <summary>
+        /// Query for task management observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsTaskmanagementMetricsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)</param>
+        /// <returns>Task of TaskManagementObservationQueryResponse</returns>
+        
+        System.Threading.Tasks.Task<TaskManagementObservationQueryResponse> PostAnalyticsTaskmanagementMetricsQueryAsync (TaskManagementObservationQuery body, string after = null, int? pageSize = null);
+
+        /// <summary>
+        /// Query for task management observations
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostAnalyticsTaskmanagementMetricsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)</param>
+        /// <returns>Task of ApiResponse (TaskManagementObservationQueryResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TaskManagementObservationQueryResponse>> PostAnalyticsTaskmanagementMetricsQueryAsyncWithHttpInfo (TaskManagementObservationQuery body, string after = null, int? pageSize = null);
 
         /// <summary>
         /// Query for team activity observations
@@ -31289,6 +31349,233 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TaskManagementAggregateQueryResponse>(localVarStatusCode,
                 localVarHeaders,
                 (TaskManagementAggregateQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaskManagementAggregateQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query for task management observations 
+        /// 
+        /// PostAnalyticsTaskmanagementMetricsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)</param>
+        /// <returns>TaskManagementObservationQueryResponse</returns>
+        
+        public TaskManagementObservationQueryResponse PostAnalyticsTaskmanagementMetricsQuery (TaskManagementObservationQuery body, string after = null, int? pageSize = null)
+        {
+             ApiResponse<TaskManagementObservationQueryResponse> localVarResponse = PostAnalyticsTaskmanagementMetricsQueryWithHttpInfo(body, after, pageSize);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for task management observations 
+        /// 
+        /// PostAnalyticsTaskmanagementMetricsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)</param>
+        /// <returns>ApiResponse of TaskManagementObservationQueryResponse</returns>
+        
+        public ApiResponse< TaskManagementObservationQueryResponse > PostAnalyticsTaskmanagementMetricsQueryWithHttpInfo (TaskManagementObservationQuery body, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsTaskmanagementMetricsQuery");
+
+            var localVarPath = "/api/v2/analytics/taskmanagement/metrics/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsTaskmanagementMetricsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsTaskmanagementMetricsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TaskManagementObservationQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (TaskManagementObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaskManagementObservationQueryResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query for task management observations 
+        /// 
+        /// PostAnalyticsTaskmanagementMetricsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)</param>
+        /// <returns>Task of TaskManagementObservationQueryResponse</returns>
+        
+        public async System.Threading.Tasks.Task<TaskManagementObservationQueryResponse> PostAnalyticsTaskmanagementMetricsQueryAsync (TaskManagementObservationQuery body, string after = null, int? pageSize = null)
+        {
+             ApiResponse<TaskManagementObservationQueryResponse> localVarResponse = await PostAnalyticsTaskmanagementMetricsQueryAsyncWithHttpInfo(body, after, pageSize);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for task management observations 
+        /// 
+        /// PostAnalyticsTaskmanagementMetricsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">query</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional)</param>
+        /// <param name="pageSize">Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional)</param>
+        /// <returns>Task of ApiResponse (TaskManagementObservationQueryResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TaskManagementObservationQueryResponse>> PostAnalyticsTaskmanagementMetricsQueryAsyncWithHttpInfo (TaskManagementObservationQuery body, string after = null, int? pageSize = null)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling AnalyticsApi->PostAnalyticsTaskmanagementMetricsQuery");
+            
+
+            var localVarPath = "/api/v2/analytics/taskmanagement/metrics/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsTaskmanagementMetricsQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostAnalyticsTaskmanagementMetricsQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TaskManagementObservationQueryResponse>(localVarStatusCode,
+                localVarHeaders,
+                (TaskManagementObservationQueryResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TaskManagementObservationQueryResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -6,17 +6,17 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;OAuthClientListing&gt;**](OAuthClientListing) |  | [optional] |
+| **Entities** | [**List&lt;OAuthClient&gt;**](OAuthClient) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
 | **FirstUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 | **PageCount** | **int?** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

@@ -188,6 +188,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteUserWithHttpInfo (string userId);
 
         /// <summary>
+        /// Delete a custom attributes record.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns></returns>
+        
+        void DeleteUserCustomattribute (string userId, string schemaId);
+
+        /// <summary>
+        /// Delete a custom attributes record.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteUserCustomattributeWithHttpInfo (string userId, string schemaId);
+
+        /// <summary>
         /// Delete the external identifier for user.
         /// </summary>
         /// <remarks>
@@ -340,6 +368,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         
         ApiResponse<Object> DeleteUserVerifierWithHttpInfo (string userId, string verifierId);
+
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns></returns>
+        
+        void DeleteUsersCustomattributesSchema (string schemaId);
+
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteUsersCustomattributesSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Get status for async query for user aggregates
@@ -812,6 +866,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of CallForwarding</returns>
         
         ApiResponse<CallForwarding> GetUserCallforwardingWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get custom attributes by schema id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>UserCustomAttributes</returns>
+        
+        UserCustomAttributes GetUserCustomattribute (string userId, string schemaId);
+
+        /// <summary>
+        /// Get custom attributes by schema id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>ApiResponse of UserCustomAttributes</returns>
+        
+        ApiResponse<UserCustomAttributes> GetUserCustomattributeWithHttpInfo (string userId, string schemaId);
+
+        /// <summary>
+        /// Get multiple custom attributes records by schema ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaIds"></param>
+        /// <returns>List&lt;Object&gt;</returns>
+        
+        List<Object> GetUserCustomattributesBulk (string userId, List<string> schemaIds);
+
+        /// <summary>
+        /// Get multiple custom attributes records by schema ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaIds"></param>
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        
+        ApiResponse<List<Object>> GetUserCustomattributesBulkWithHttpInfo (string userId, List<string> schemaIds);
 
         /// <summary>
         /// Get direct reports
@@ -1386,6 +1496,184 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ChatItemCursorListing> GetUsersChatsMeWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, string after = null);
 
         /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchema</returns>
+        
+        DataSchema GetUsersCustomattributesSchema (string schemaId);
+
+        /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        
+        ApiResponse<DataSchema> GetUsersCustomattributesSchemaWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>DataSchema</returns>
+        
+        DataSchema GetUsersCustomattributesSchemaVersion (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        
+        ApiResponse<DataSchema> GetUsersCustomattributesSchemaVersionWithHttpInfo (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get all versions of a user schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchemaListing</returns>
+        
+        DataSchemaListing GetUsersCustomattributesSchemaVersions (string schemaId);
+
+        /// <summary>
+        /// Get all versions of a user schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
+        
+        ApiResponse<DataSchemaListing> GetUsersCustomattributesSchemaVersionsWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>DataSchemaListing</returns>
+        
+        DataSchemaListing GetUsersCustomattributesSchemas ();
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
+        
+        ApiResponse<DataSchemaListing> GetUsersCustomattributesSchemasWithHttpInfo ();
+
+        /// <summary>
+        /// Get the core types from which all schemas are built.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of the core type</param>
+        /// <returns>Coretype</returns>
+        
+        Coretype GetUsersCustomattributesSchemasCoretype (string coreTypeName);
+
+        /// <summary>
+        /// Get the core types from which all schemas are built.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of the core type</param>
+        /// <returns>ApiResponse of Coretype</returns>
+        
+        ApiResponse<Coretype> GetUsersCustomattributesSchemasCoretypeWithHttpInfo (string coreTypeName);
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CoretypeListing</returns>
+        
+        CoretypeListing GetUsersCustomattributesSchemasCoretypes ();
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CoretypeListing</returns>
+        
+        ApiResponse<CoretypeListing> GetUsersCustomattributesSchemasCoretypesWithHttpInfo ();
+
+        /// <summary>
+        /// Get quantitative limits on schemas
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SchemaQuantityLimits</returns>
+        
+        SchemaQuantityLimits GetUsersCustomattributesSchemasLimits ();
+
+        /// <summary>
+        /// Get quantitative limits on schemas
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SchemaQuantityLimits</returns>
+        
+        ApiResponse<SchemaQuantityLimits> GetUsersCustomattributesSchemasLimitsWithHttpInfo ();
+
+        /// <summary>
         /// Get list of Development Activities
         /// </summary>
         /// <remarks>
@@ -1672,6 +1960,62 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CallForwarding> PatchUserCallforwardingWithHttpInfo (string userId, CallForwarding body);
 
         /// <summary>
+        /// Update a single custom attributes record by amending the data with only the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>UserCustomAttributes</returns>
+        
+        UserCustomAttributes PatchUserCustomattributes (string userId, UserCustomAttributesUpdateRequest userCustomAttributes);
+
+        /// <summary>
+        /// Update a single custom attributes record by amending the data with only the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>ApiResponse of UserCustomAttributes</returns>
+        
+        ApiResponse<UserCustomAttributes> PatchUserCustomattributesWithHttpInfo (string userId, UserCustomAttributesUpdateRequest userCustomAttributes);
+
+        /// <summary>
+        /// Update multiple custom attributes records by amending the data with only the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributesList"></param>
+        /// <returns>UserCustomAttributes</returns>
+        
+        UserCustomAttributes PatchUserCustomattributesBulk (string userId, List<UserCustomAttributesUpdateRequest> userCustomAttributesList);
+
+        /// <summary>
+        /// Update multiple custom attributes records by amending the data with only the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributesList"></param>
+        /// <returns>ApiResponse of UserCustomAttributes</returns>
+        
+        ApiResponse<UserCustomAttributes> PatchUserCustomattributesBulkWithHttpInfo (string userId, List<UserCustomAttributesUpdateRequest> userCustomAttributesList);
+
+        /// <summary>
         /// Patch a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
@@ -1731,7 +2075,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of queues for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -1745,7 +2089,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of queues for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -2276,6 +2620,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<User> PostUsersWithHttpInfo (CreateUser body);
 
         /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>DataSchema</returns>
+        
+        DataSchema PostUsersCustomattributesSchemas (DataSchema body);
+
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        
+        ApiResponse<DataSchema> PostUsersCustomattributesSchemasWithHttpInfo (DataSchema body);
+
+        /// <summary>
         /// Retrieve aggregated development activity data
         /// </summary>
         /// <remarks>
@@ -2524,6 +2894,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of CallForwarding</returns>
         
         ApiResponse<CallForwarding> PutUserCallforwardingWithHttpInfo (string userId, CallForwarding body);
+
+        /// <summary>
+        /// Create or update a single custom attributes record. Updating replaces all data with the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>UserCustomAttributes</returns>
+        
+        UserCustomAttributes PutUserCustomattributes (string userId, UserCustomAttributesUpdateRequest userCustomAttributes);
+
+        /// <summary>
+        /// Create or update a single custom attributes record. Updating replaces all data with the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>ApiResponse of UserCustomAttributes</returns>
+        
+        ApiResponse<UserCustomAttributes> PutUserCustomattributesWithHttpInfo (string userId, UserCustomAttributesUpdateRequest userCustomAttributes);
 
         /// <summary>
         /// Update an OutOfOffice
@@ -2789,6 +3187,34 @@ namespace PureCloudPlatform.Client.V2.Api
         
         ApiResponse<Verifier> PutUserVerifierWithHttpInfo (string userId, string verifierId, UpdateVerifierRequest body);
 
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>DataSchema</returns>
+        
+        DataSchema PutUsersCustomattributesSchema (string schemaId, DataSchema body);
+
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        
+        ApiResponse<DataSchema> PutUsersCustomattributesSchemaWithHttpInfo (string schemaId, DataSchema body);
+
         #endregion Synchronous Operations
 
         #region Asynchronous Operations
@@ -2966,6 +3392,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserAsyncWithHttpInfo (string userId);
 
         /// <summary>
+        /// Delete a custom attributes record.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteUserCustomattributeAsync (string userId, string schemaId);
+
+        /// <summary>
+        /// Delete a custom attributes record.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserCustomattributeAsyncWithHttpInfo (string userId, string schemaId);
+
+        /// <summary>
         /// Delete the external identifier for user.
         /// </summary>
         /// <remarks>
@@ -3118,6 +3572,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserVerifierAsyncWithHttpInfo (string userId, string verifierId);
+
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteUsersCustomattributesSchemaAsync (string schemaId);
+
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersCustomattributesSchemaAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Get status for async query for user aggregates
@@ -3590,6 +4070,62 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CallForwarding>> GetUserCallforwardingAsyncWithHttpInfo (string userId);
+
+        /// <summary>
+        /// Get custom attributes by schema id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>Task of UserCustomAttributes</returns>
+        
+        System.Threading.Tasks.Task<UserCustomAttributes> GetUserCustomattributeAsync (string userId, string schemaId);
+
+        /// <summary>
+        /// Get custom attributes by schema id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>Task of ApiResponse (UserCustomAttributes)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UserCustomAttributes>> GetUserCustomattributeAsyncWithHttpInfo (string userId, string schemaId);
+
+        /// <summary>
+        /// Get multiple custom attributes records by schema ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaIds"></param>
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        
+        System.Threading.Tasks.Task<List<Object>> GetUserCustomattributesBulkAsync (string userId, List<string> schemaIds);
+
+        /// <summary>
+        /// Get multiple custom attributes records by schema ids
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaIds"></param>
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetUserCustomattributesBulkAsyncWithHttpInfo (string userId, List<string> schemaIds);
 
         /// <summary>
         /// Get direct reports
@@ -4164,6 +4700,184 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ChatItemCursorListing>> GetUsersChatsMeAsyncWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, string after = null);
 
         /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchema</returns>
+        
+        System.Threading.Tasks.Task<DataSchema> GetUsersCustomattributesSchemaAsync (string schemaId);
+
+        /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetUsersCustomattributesSchemaAsyncWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of DataSchema</returns>
+        
+        System.Threading.Tasks.Task<DataSchema> GetUsersCustomattributesSchemaVersionAsync (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetUsersCustomattributesSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get all versions of a user schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchemaListing</returns>
+        
+        System.Threading.Tasks.Task<DataSchemaListing> GetUsersCustomattributesSchemaVersionsAsync (string schemaId);
+
+        /// <summary>
+        /// Get all versions of a user schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetUsersCustomattributesSchemaVersionsAsyncWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DataSchemaListing</returns>
+        
+        System.Threading.Tasks.Task<DataSchemaListing> GetUsersCustomattributesSchemasAsync ();
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetUsersCustomattributesSchemasAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get the core types from which all schemas are built.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of the core type</param>
+        /// <returns>Task of Coretype</returns>
+        
+        System.Threading.Tasks.Task<Coretype> GetUsersCustomattributesSchemasCoretypeAsync (string coreTypeName);
+
+        /// <summary>
+        /// Get the core types from which all schemas are built.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of the core type</param>
+        /// <returns>Task of ApiResponse (Coretype)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Coretype>> GetUsersCustomattributesSchemasCoretypeAsyncWithHttpInfo (string coreTypeName);
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CoretypeListing</returns>
+        
+        System.Threading.Tasks.Task<CoretypeListing> GetUsersCustomattributesSchemasCoretypesAsync ();
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CoretypeListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetUsersCustomattributesSchemasCoretypesAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get quantitative limits on schemas
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SchemaQuantityLimits</returns>
+        
+        System.Threading.Tasks.Task<SchemaQuantityLimits> GetUsersCustomattributesSchemasLimitsAsync ();
+
+        /// <summary>
+        /// Get quantitative limits on schemas
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SchemaQuantityLimits)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SchemaQuantityLimits>> GetUsersCustomattributesSchemasLimitsAsyncWithHttpInfo ();
+
+        /// <summary>
         /// Get list of Development Activities
         /// </summary>
         /// <remarks>
@@ -4450,6 +5164,62 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PatchUserCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body);
 
         /// <summary>
+        /// Update a single custom attributes record by amending the data with only the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>Task of UserCustomAttributes</returns>
+        
+        System.Threading.Tasks.Task<UserCustomAttributes> PatchUserCustomattributesAsync (string userId, UserCustomAttributesUpdateRequest userCustomAttributes);
+
+        /// <summary>
+        /// Update a single custom attributes record by amending the data with only the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>Task of ApiResponse (UserCustomAttributes)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UserCustomAttributes>> PatchUserCustomattributesAsyncWithHttpInfo (string userId, UserCustomAttributesUpdateRequest userCustomAttributes);
+
+        /// <summary>
+        /// Update multiple custom attributes records by amending the data with only the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributesList"></param>
+        /// <returns>Task of UserCustomAttributes</returns>
+        
+        System.Threading.Tasks.Task<UserCustomAttributes> PatchUserCustomattributesBulkAsync (string userId, List<UserCustomAttributesUpdateRequest> userCustomAttributesList);
+
+        /// <summary>
+        /// Update multiple custom attributes records by amending the data with only the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributesList"></param>
+        /// <returns>Task of ApiResponse (UserCustomAttributes)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UserCustomAttributes>> PatchUserCustomattributesBulkAsyncWithHttpInfo (string userId, List<UserCustomAttributesUpdateRequest> userCustomAttributesList);
+
+        /// <summary>
         /// Patch a user&#39;s Geolocation
         /// </summary>
         /// <remarks>
@@ -4509,7 +5279,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of queues for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -4523,7 +5293,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of queues for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -5054,6 +5824,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<User>> PostUsersAsyncWithHttpInfo (CreateUser body);
 
         /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        
+        System.Threading.Tasks.Task<DataSchema> PostUsersCustomattributesSchemasAsync (DataSchema body);
+
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostUsersCustomattributesSchemasAsyncWithHttpInfo (DataSchema body);
+
+        /// <summary>
         /// Retrieve aggregated development activity data
         /// </summary>
         /// <remarks>
@@ -5302,6 +6098,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (CallForwarding)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CallForwarding>> PutUserCallforwardingAsyncWithHttpInfo (string userId, CallForwarding body);
+
+        /// <summary>
+        /// Create or update a single custom attributes record. Updating replaces all data with the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>Task of UserCustomAttributes</returns>
+        
+        System.Threading.Tasks.Task<UserCustomAttributes> PutUserCustomattributesAsync (string userId, UserCustomAttributesUpdateRequest userCustomAttributes);
+
+        /// <summary>
+        /// Create or update a single custom attributes record. Updating replaces all data with the provided fields.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>Task of ApiResponse (UserCustomAttributes)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UserCustomAttributes>> PutUserCustomattributesAsyncWithHttpInfo (string userId, UserCustomAttributesUpdateRequest userCustomAttributes);
 
         /// <summary>
         /// Update an OutOfOffice
@@ -5566,6 +6390,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (Verifier)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Verifier>> PutUserVerifierAsyncWithHttpInfo (string userId, string verifierId, UpdateVerifierRequest body);
+
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        
+        System.Threading.Tasks.Task<DataSchema> PutUsersCustomattributesSchemaAsync (string schemaId, DataSchema body);
+
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutUsersCustomattributesSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
 
         #endregion Asynchronous Operations
 
@@ -7072,6 +7924,222 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Delete a custom attributes record. 
+        /// 
+        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns></returns>
+        
+        public void DeleteUserCustomattribute (string userId, string schemaId)
+        {
+             DeleteUserCustomattributeWithHttpInfo(userId, schemaId);
+        }
+
+        /// <summary>
+        /// Delete a custom attributes record. 
+        /// 
+        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteUserCustomattributeWithHttpInfo (string userId, string schemaId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUserCustomattribute");
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->DeleteUserCustomattribute");
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes/{schemaId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserCustomattribute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserCustomattribute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a custom attributes record. 
+        /// 
+        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteUserCustomattributeAsync (string userId, string schemaId)
+        {
+             await DeleteUserCustomattributeAsyncWithHttpInfo(userId, schemaId);
+
+        }
+
+        /// <summary>
+        /// Delete a custom attributes record. 
+        /// 
+        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUserCustomattributeAsyncWithHttpInfo (string userId, string schemaId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->DeleteUserCustomattribute");
+            
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->DeleteUserCustomattribute");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes/{schemaId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserCustomattribute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUserCustomattribute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Delete the external identifier for user. 
         /// 
         /// </summary>
@@ -8320,6 +9388,209 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUserVerifier: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUserVerifier: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a schema 
+        /// 
+        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns></returns>
+        
+        public void DeleteUsersCustomattributesSchema (string schemaId)
+        {
+             DeleteUsersCustomattributesSchemaWithHttpInfo(schemaId);
+        }
+
+        /// <summary>
+        /// Delete a schema 
+        /// 
+        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteUsersCustomattributesSchemaWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->DeleteUsersCustomattributesSchema");
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/{schemaId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersCustomattributesSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersCustomattributesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a schema 
+        /// 
+        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteUsersCustomattributesSchemaAsync (string schemaId)
+        {
+             await DeleteUsersCustomattributesSchemaAsyncWithHttpInfo(schemaId);
+
+        }
+
+        /// <summary>
+        /// Delete a schema 
+        /// 
+        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersCustomattributesSchemaAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->DeleteUsersCustomattributesSchema");
+            
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/{schemaId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersCustomattributesSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersCustomattributesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -12037,6 +13308,442 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CallForwarding>(localVarStatusCode,
                 localVarHeaders,
                 (CallForwarding) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallForwarding)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get custom attributes by schema id 
+        /// 
+        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>UserCustomAttributes</returns>
+        
+        public UserCustomAttributes GetUserCustomattribute (string userId, string schemaId)
+        {
+             ApiResponse<UserCustomAttributes> localVarResponse = GetUserCustomattributeWithHttpInfo(userId, schemaId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get custom attributes by schema id 
+        /// 
+        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>ApiResponse of UserCustomAttributes</returns>
+        
+        public ApiResponse< UserCustomAttributes > GetUserCustomattributeWithHttpInfo (string userId, string schemaId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserCustomattribute");
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->GetUserCustomattribute");
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes/{schemaId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserCustomattribute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserCustomattribute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserCustomAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (UserCustomAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCustomAttributes)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get custom attributes by schema id 
+        /// 
+        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>Task of UserCustomAttributes</returns>
+        
+        public async System.Threading.Tasks.Task<UserCustomAttributes> GetUserCustomattributeAsync (string userId, string schemaId)
+        {
+             ApiResponse<UserCustomAttributes> localVarResponse = await GetUserCustomattributeAsyncWithHttpInfo(userId, schemaId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get custom attributes by schema id 
+        /// 
+        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaId">schemaId</param>
+        /// <returns>Task of ApiResponse (UserCustomAttributes)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UserCustomAttributes>> GetUserCustomattributeAsyncWithHttpInfo (string userId, string schemaId)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserCustomattribute");
+            
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->GetUserCustomattribute");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes/{schemaId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserCustomattribute: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserCustomattribute: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserCustomAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (UserCustomAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCustomAttributes)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get multiple custom attributes records by schema ids 
+        /// 
+        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaIds"></param>
+        /// <returns>List&lt;Object&gt;</returns>
+        
+        public List<Object> GetUserCustomattributesBulk (string userId, List<string> schemaIds)
+        {
+             ApiResponse<List<Object>> localVarResponse = GetUserCustomattributesBulkWithHttpInfo(userId, schemaIds);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get multiple custom attributes records by schema ids 
+        /// 
+        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaIds"></param>
+        /// <returns>ApiResponse of List&lt;Object&gt;</returns>
+        
+        public ApiResponse< List<Object> > GetUserCustomattributesBulkWithHttpInfo (string userId, List<string> schemaIds)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserCustomattributesBulk");
+            // verify the required parameter 'schemaIds' is set
+            if (schemaIds == null)
+                throw new ApiException(400, "Missing required parameter 'schemaIds' when calling UsersApi->GetUserCustomattributesBulk");
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes/bulk";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (schemaIds != null) schemaIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("schemaIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserCustomattributesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserCustomattributesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Object>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get multiple custom attributes records by schema ids 
+        /// 
+        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaIds"></param>
+        /// <returns>Task of List&lt;Object&gt;</returns>
+        
+        public async System.Threading.Tasks.Task<List<Object>> GetUserCustomattributesBulkAsync (string userId, List<string> schemaIds)
+        {
+             ApiResponse<List<Object>> localVarResponse = await GetUserCustomattributesBulkAsyncWithHttpInfo(userId, schemaIds);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get multiple custom attributes records by schema ids 
+        /// 
+        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="schemaIds"></param>
+        /// <returns>Task of ApiResponse (List&lt;Object&gt;)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<List<Object>>> GetUserCustomattributesBulkAsyncWithHttpInfo (string userId, List<string> schemaIds)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->GetUserCustomattributesBulk");
+            
+            // verify the required parameter 'schemaIds' is set
+            if (schemaIds == null)
+                throw new ApiException(400, "Missing required parameter 'schemaIds' when calling UsersApi->GetUserCustomattributesBulk");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes/bulk";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+            if (schemaIds != null) schemaIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("schemaIds", this.Configuration.ApiClient.ParameterToString(obj))); });
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserCustomattributesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUserCustomattributesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<Object>>(localVarStatusCode,
+                localVarHeaders,
+                (List<Object>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<Object>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -16469,6 +18176,1415 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a schema 
+        /// 
+        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchema</returns>
+        
+        public DataSchema GetUsersCustomattributesSchema (string schemaId)
+        {
+             ApiResponse<DataSchema> localVarResponse = GetUsersCustomattributesSchemaWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a schema 
+        /// 
+        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        
+        public ApiResponse< DataSchema > GetUsersCustomattributesSchemaWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->GetUsersCustomattributesSchema");
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/{schemaId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a schema 
+        /// 
+        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchema</returns>
+        
+        public async System.Threading.Tasks.Task<DataSchema> GetUsersCustomattributesSchemaAsync (string schemaId)
+        {
+             ApiResponse<DataSchema> localVarResponse = await GetUsersCustomattributesSchemaAsyncWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a schema 
+        /// 
+        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetUsersCustomattributesSchemaAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->GetUsersCustomattributesSchema");
+            
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/{schemaId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// 
+        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>DataSchema</returns>
+        
+        public DataSchema GetUsersCustomattributesSchemaVersion (string schemaId, string versionId)
+        {
+             ApiResponse<DataSchema> localVarResponse = GetUsersCustomattributesSchemaVersionWithHttpInfo(schemaId, versionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// 
+        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        
+        public ApiResponse< DataSchema > GetUsersCustomattributesSchemaVersionWithHttpInfo (string schemaId, string versionId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->GetUsersCustomattributesSchemaVersion");
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling UsersApi->GetUsersCustomattributesSchemaVersion");
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/{schemaId}/versions/{versionId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemaVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// 
+        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of DataSchema</returns>
+        
+        public async System.Threading.Tasks.Task<DataSchema> GetUsersCustomattributesSchemaVersionAsync (string schemaId, string versionId)
+        {
+             ApiResponse<DataSchema> localVarResponse = await GetUsersCustomattributesSchemaVersionAsyncWithHttpInfo(schemaId, versionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// 
+        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> GetUsersCustomattributesSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->GetUsersCustomattributesSchemaVersion");
+            
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling UsersApi->GetUsersCustomattributesSchemaVersion");
+            
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/{schemaId}/versions/{versionId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemaVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get all versions of a user schema 
+        /// 
+        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>DataSchemaListing</returns>
+        
+        public DataSchemaListing GetUsersCustomattributesSchemaVersions (string schemaId)
+        {
+             ApiResponse<DataSchemaListing> localVarResponse = GetUsersCustomattributesSchemaVersionsWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all versions of a user schema 
+        /// 
+        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
+        
+        public ApiResponse< DataSchemaListing > GetUsersCustomattributesSchemaVersionsWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->GetUsersCustomattributesSchemaVersions");
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/{schemaId}/versions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get all versions of a user schema 
+        /// 
+        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of DataSchemaListing</returns>
+        
+        public async System.Threading.Tasks.Task<DataSchemaListing> GetUsersCustomattributesSchemaVersionsAsync (string schemaId)
+        {
+             ApiResponse<DataSchemaListing> localVarResponse = await GetUsersCustomattributesSchemaVersionsAsyncWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all versions of a user schema 
+        /// 
+        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetUsersCustomattributesSchemaVersionsAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->GetUsersCustomattributesSchemaVersions");
+            
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/{schemaId}/versions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// 
+        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>DataSchemaListing</returns>
+        
+        public DataSchemaListing GetUsersCustomattributesSchemas ()
+        {
+             ApiResponse<DataSchemaListing> localVarResponse = GetUsersCustomattributesSchemasWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// 
+        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of DataSchemaListing</returns>
+        
+        public ApiResponse< DataSchemaListing > GetUsersCustomattributesSchemasWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/customattributes/schemas";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// 
+        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of DataSchemaListing</returns>
+        
+        public async System.Threading.Tasks.Task<DataSchemaListing> GetUsersCustomattributesSchemasAsync ()
+        {
+             ApiResponse<DataSchemaListing> localVarResponse = await GetUsersCustomattributesSchemasAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// 
+        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchemaListing>> GetUsersCustomattributesSchemasAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/customattributes/schemas";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the core types from which all schemas are built. 
+        /// 
+        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of the core type</param>
+        /// <returns>Coretype</returns>
+        
+        public Coretype GetUsersCustomattributesSchemasCoretype (string coreTypeName)
+        {
+             ApiResponse<Coretype> localVarResponse = GetUsersCustomattributesSchemasCoretypeWithHttpInfo(coreTypeName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the core types from which all schemas are built. 
+        /// 
+        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of the core type</param>
+        /// <returns>ApiResponse of Coretype</returns>
+        
+        public ApiResponse< Coretype > GetUsersCustomattributesSchemasCoretypeWithHttpInfo (string coreTypeName)
+        { 
+            // verify the required parameter 'coreTypeName' is set
+            if (coreTypeName == null)
+                throw new ApiException(400, "Missing required parameter 'coreTypeName' when calling UsersApi->GetUsersCustomattributesSchemasCoretype");
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/coretypes/{coreTypeName}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (coreTypeName != null) localVarPathParams.Add("coreTypeName", this.Configuration.ApiClient.ParameterToString(coreTypeName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasCoretype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasCoretype: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Coretype>(localVarStatusCode,
+                localVarHeaders,
+                (Coretype) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Coretype)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the core types from which all schemas are built. 
+        /// 
+        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of the core type</param>
+        /// <returns>Task of Coretype</returns>
+        
+        public async System.Threading.Tasks.Task<Coretype> GetUsersCustomattributesSchemasCoretypeAsync (string coreTypeName)
+        {
+             ApiResponse<Coretype> localVarResponse = await GetUsersCustomattributesSchemasCoretypeAsyncWithHttpInfo(coreTypeName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the core types from which all schemas are built. 
+        /// 
+        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of the core type</param>
+        /// <returns>Task of ApiResponse (Coretype)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Coretype>> GetUsersCustomattributesSchemasCoretypeAsyncWithHttpInfo (string coreTypeName)
+        { 
+            // verify the required parameter 'coreTypeName' is set
+            if (coreTypeName == null)
+                throw new ApiException(400, "Missing required parameter 'coreTypeName' when calling UsersApi->GetUsersCustomattributesSchemasCoretype");
+            
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/coretypes/{coreTypeName}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (coreTypeName != null) localVarPathParams.Add("coreTypeName", this.Configuration.ApiClient.ParameterToString(coreTypeName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasCoretype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasCoretype: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Coretype>(localVarStatusCode,
+                localVarHeaders,
+                (Coretype) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Coretype)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace. 
+        /// 
+        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CoretypeListing</returns>
+        
+        public CoretypeListing GetUsersCustomattributesSchemasCoretypes ()
+        {
+             ApiResponse<CoretypeListing> localVarResponse = GetUsersCustomattributesSchemasCoretypesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace. 
+        /// 
+        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CoretypeListing</returns>
+        
+        public ApiResponse< CoretypeListing > GetUsersCustomattributesSchemasCoretypesWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/coretypes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasCoretypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasCoretypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CoretypeListing>(localVarStatusCode,
+                localVarHeaders,
+                (CoretypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoretypeListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace. 
+        /// 
+        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CoretypeListing</returns>
+        
+        public async System.Threading.Tasks.Task<CoretypeListing> GetUsersCustomattributesSchemasCoretypesAsync ()
+        {
+             ApiResponse<CoretypeListing> localVarResponse = await GetUsersCustomattributesSchemasCoretypesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace. 
+        /// 
+        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CoretypeListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetUsersCustomattributesSchemasCoretypesAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/coretypes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasCoretypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasCoretypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CoretypeListing>(localVarStatusCode,
+                localVarHeaders,
+                (CoretypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoretypeListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get quantitative limits on schemas 
+        /// 
+        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SchemaQuantityLimits</returns>
+        
+        public SchemaQuantityLimits GetUsersCustomattributesSchemasLimits ()
+        {
+             ApiResponse<SchemaQuantityLimits> localVarResponse = GetUsersCustomattributesSchemasLimitsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get quantitative limits on schemas 
+        /// 
+        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SchemaQuantityLimits</returns>
+        
+        public ApiResponse< SchemaQuantityLimits > GetUsersCustomattributesSchemasLimitsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/limits";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasLimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasLimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SchemaQuantityLimits>(localVarStatusCode,
+                localVarHeaders,
+                (SchemaQuantityLimits) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchemaQuantityLimits)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get quantitative limits on schemas 
+        /// 
+        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SchemaQuantityLimits</returns>
+        
+        public async System.Threading.Tasks.Task<SchemaQuantityLimits> GetUsersCustomattributesSchemasLimitsAsync ()
+        {
+             ApiResponse<SchemaQuantityLimits> localVarResponse = await GetUsersCustomattributesSchemasLimitsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get quantitative limits on schemas 
+        /// 
+        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SchemaQuantityLimits)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SchemaQuantityLimits>> GetUsersCustomattributesSchemasLimitsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/limits";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasLimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersCustomattributesSchemasLimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SchemaQuantityLimits>(localVarStatusCode,
+                localVarHeaders,
+                (SchemaQuantityLimits) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchemaQuantityLimits)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get list of Development Activities 
         /// Either moduleId or userId is required. Results are filtered based on the applicable permissions.
         /// </summary>
@@ -18506,6 +21622,462 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update a single custom attributes record by amending the data with only the provided fields. 
+        /// 
+        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>UserCustomAttributes</returns>
+        
+        public UserCustomAttributes PatchUserCustomattributes (string userId, UserCustomAttributesUpdateRequest userCustomAttributes)
+        {
+             ApiResponse<UserCustomAttributes> localVarResponse = PatchUserCustomattributesWithHttpInfo(userId, userCustomAttributes);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a single custom attributes record by amending the data with only the provided fields. 
+        /// 
+        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>ApiResponse of UserCustomAttributes</returns>
+        
+        public ApiResponse< UserCustomAttributes > PatchUserCustomattributesWithHttpInfo (string userId, UserCustomAttributesUpdateRequest userCustomAttributes)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserCustomattributes");
+            // verify the required parameter 'userCustomAttributes' is set
+            if (userCustomAttributes == null)
+                throw new ApiException(400, "Missing required parameter 'userCustomAttributes' when calling UsersApi->PatchUserCustomattributes");
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (userCustomAttributes != null && userCustomAttributes.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(userCustomAttributes); // http body (model) parameter
+            else
+                localVarPostBody = userCustomAttributes; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserCustomattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserCustomattributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserCustomAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (UserCustomAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCustomAttributes)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a single custom attributes record by amending the data with only the provided fields. 
+        /// 
+        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>Task of UserCustomAttributes</returns>
+        
+        public async System.Threading.Tasks.Task<UserCustomAttributes> PatchUserCustomattributesAsync (string userId, UserCustomAttributesUpdateRequest userCustomAttributes)
+        {
+             ApiResponse<UserCustomAttributes> localVarResponse = await PatchUserCustomattributesAsyncWithHttpInfo(userId, userCustomAttributes);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a single custom attributes record by amending the data with only the provided fields. 
+        /// 
+        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>Task of ApiResponse (UserCustomAttributes)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UserCustomAttributes>> PatchUserCustomattributesAsyncWithHttpInfo (string userId, UserCustomAttributesUpdateRequest userCustomAttributes)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserCustomattributes");
+            
+            // verify the required parameter 'userCustomAttributes' is set
+            if (userCustomAttributes == null)
+                throw new ApiException(400, "Missing required parameter 'userCustomAttributes' when calling UsersApi->PatchUserCustomattributes");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (userCustomAttributes != null && userCustomAttributes.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(userCustomAttributes); // http body (model) parameter
+            else
+                localVarPostBody = userCustomAttributes; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserCustomattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserCustomattributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserCustomAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (UserCustomAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCustomAttributes)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update multiple custom attributes records by amending the data with only the provided fields. 
+        /// 
+        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributesList"></param>
+        /// <returns>UserCustomAttributes</returns>
+        
+        public UserCustomAttributes PatchUserCustomattributesBulk (string userId, List<UserCustomAttributesUpdateRequest> userCustomAttributesList)
+        {
+             ApiResponse<UserCustomAttributes> localVarResponse = PatchUserCustomattributesBulkWithHttpInfo(userId, userCustomAttributesList);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update multiple custom attributes records by amending the data with only the provided fields. 
+        /// 
+        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributesList"></param>
+        /// <returns>ApiResponse of UserCustomAttributes</returns>
+        
+        public ApiResponse< UserCustomAttributes > PatchUserCustomattributesBulkWithHttpInfo (string userId, List<UserCustomAttributesUpdateRequest> userCustomAttributesList)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserCustomattributesBulk");
+            // verify the required parameter 'userCustomAttributesList' is set
+            if (userCustomAttributesList == null)
+                throw new ApiException(400, "Missing required parameter 'userCustomAttributesList' when calling UsersApi->PatchUserCustomattributesBulk");
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes/bulk";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (userCustomAttributesList != null && userCustomAttributesList.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(userCustomAttributesList); // http body (model) parameter
+            else
+                localVarPostBody = userCustomAttributesList; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserCustomattributesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserCustomattributesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserCustomAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (UserCustomAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCustomAttributes)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update multiple custom attributes records by amending the data with only the provided fields. 
+        /// 
+        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributesList"></param>
+        /// <returns>Task of UserCustomAttributes</returns>
+        
+        public async System.Threading.Tasks.Task<UserCustomAttributes> PatchUserCustomattributesBulkAsync (string userId, List<UserCustomAttributesUpdateRequest> userCustomAttributesList)
+        {
+             ApiResponse<UserCustomAttributes> localVarResponse = await PatchUserCustomattributesBulkAsyncWithHttpInfo(userId, userCustomAttributesList);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update multiple custom attributes records by amending the data with only the provided fields. 
+        /// 
+        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributesList"></param>
+        /// <returns>Task of ApiResponse (UserCustomAttributes)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UserCustomAttributes>> PatchUserCustomattributesBulkAsyncWithHttpInfo (string userId, List<UserCustomAttributesUpdateRequest> userCustomAttributesList)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PatchUserCustomattributesBulk");
+            
+            // verify the required parameter 'userCustomAttributesList' is set
+            if (userCustomAttributesList == null)
+                throw new ApiException(400, "Missing required parameter 'userCustomAttributesList' when calling UsersApi->PatchUserCustomattributesBulk");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes/bulk";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (userCustomAttributesList != null && userCustomAttributesList.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(userCustomAttributesList); // http body (model) parameter
+            else
+                localVarPostBody = userCustomAttributesList; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserCustomattributesBulk: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchUserCustomattributesBulk: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserCustomAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (UserCustomAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCustomAttributes)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Patch a user&#39;s Geolocation 
         /// The geolocation object can be patched one of three ways. Option 1: Set the 'primary' property to true. This will set the client as the user's primary geolocation source.  Option 2: Provide the 'latitude' and 'longitude' values.  This will enqueue an asynchronous update of the 'city', 'region', and 'country', generating a notification. A subsequent GET operation will include the new values for 'city', 'region' and 'country'.  Option 3:  Provide the 'city', 'region', 'country' values.  Option 1 can be combined with Option 2 or Option 3.  For example, update the client as primary and provide latitude and longitude values.
         /// </summary>
@@ -18981,7 +22553,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of queues for a user 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -18997,7 +22569,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of queues for a user 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -19094,7 +22666,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of queues for a user 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -19111,7 +22683,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of queues for a user 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -23607,6 +27179,221 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create a schema 
+        /// 
+        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>DataSchema</returns>
+        
+        public DataSchema PostUsersCustomattributesSchemas (DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = PostUsersCustomattributesSchemasWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a schema 
+        /// 
+        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        
+        public ApiResponse< DataSchema > PostUsersCustomattributesSchemasWithHttpInfo (DataSchema body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersCustomattributesSchemas");
+
+            var localVarPath = "/api/v2/users/customattributes/schemas";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersCustomattributesSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersCustomattributesSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a schema 
+        /// 
+        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        
+        public async System.Threading.Tasks.Task<DataSchema> PostUsersCustomattributesSchemasAsync (DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = await PostUsersCustomattributesSchemasAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a schema 
+        /// 
+        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PostUsersCustomattributesSchemasAsyncWithHttpInfo (DataSchema body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PostUsersCustomattributesSchemas");
+            
+
+            var localVarPath = "/api/v2/users/customattributes/schemas";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersCustomattributesSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostUsersCustomattributesSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Retrieve aggregated development activity data 
         /// Results are filtered based on the applicable permissions.
         /// </summary>
@@ -25755,6 +29542,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CallForwarding>(localVarStatusCode,
                 localVarHeaders,
                 (CallForwarding) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CallForwarding)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create or update a single custom attributes record. Updating replaces all data with the provided fields. 
+        /// 
+        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>UserCustomAttributes</returns>
+        
+        public UserCustomAttributes PutUserCustomattributes (string userId, UserCustomAttributesUpdateRequest userCustomAttributes)
+        {
+             ApiResponse<UserCustomAttributes> localVarResponse = PutUserCustomattributesWithHttpInfo(userId, userCustomAttributes);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create or update a single custom attributes record. Updating replaces all data with the provided fields. 
+        /// 
+        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>ApiResponse of UserCustomAttributes</returns>
+        
+        public ApiResponse< UserCustomAttributes > PutUserCustomattributesWithHttpInfo (string userId, UserCustomAttributesUpdateRequest userCustomAttributes)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutUserCustomattributes");
+            // verify the required parameter 'userCustomAttributes' is set
+            if (userCustomAttributes == null)
+                throw new ApiException(400, "Missing required parameter 'userCustomAttributes' when calling UsersApi->PutUserCustomattributes");
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (userCustomAttributes != null && userCustomAttributes.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(userCustomAttributes); // http body (model) parameter
+            else
+                localVarPostBody = userCustomAttributes; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutUserCustomattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutUserCustomattributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserCustomAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (UserCustomAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCustomAttributes)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create or update a single custom attributes record. Updating replaces all data with the provided fields. 
+        /// 
+        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>Task of UserCustomAttributes</returns>
+        
+        public async System.Threading.Tasks.Task<UserCustomAttributes> PutUserCustomattributesAsync (string userId, UserCustomAttributesUpdateRequest userCustomAttributes)
+        {
+             ApiResponse<UserCustomAttributes> localVarResponse = await PutUserCustomattributesAsyncWithHttpInfo(userId, userCustomAttributes);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create or update a single custom attributes record. Updating replaces all data with the provided fields. 
+        /// 
+        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="userId">user ID</param>
+        /// <param name="userCustomAttributes"></param>
+        /// <returns>Task of ApiResponse (UserCustomAttributes)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UserCustomAttributes>> PutUserCustomattributesAsyncWithHttpInfo (string userId, UserCustomAttributesUpdateRequest userCustomAttributes)
+        { 
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling UsersApi->PutUserCustomattributes");
+            
+            // verify the required parameter 'userCustomAttributes' is set
+            if (userCustomAttributes == null)
+                throw new ApiException(400, "Missing required parameter 'userCustomAttributes' when calling UsersApi->PutUserCustomattributes");
+            
+
+            var localVarPath = "/api/v2/users/{userId}/customattributes";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (userId != null) localVarPathParams.Add("userId", this.Configuration.ApiClient.ParameterToString(userId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (userCustomAttributes != null && userCustomAttributes.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(userCustomAttributes); // http body (model) parameter
+            else
+                localVarPostBody = userCustomAttributes; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutUserCustomattributes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutUserCustomattributes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserCustomAttributes>(localVarStatusCode,
+                localVarHeaders,
+                (UserCustomAttributes) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserCustomAttributes)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -27997,6 +32012,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Verifier>(localVarStatusCode,
                 localVarHeaders,
                 (Verifier) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Verifier)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a schema 
+        /// 
+        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>DataSchema</returns>
+        
+        public DataSchema PutUsersCustomattributesSchema (string schemaId, DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = PutUsersCustomattributesSchemaWithHttpInfo(schemaId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a schema 
+        /// 
+        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>ApiResponse of DataSchema</returns>
+        
+        public ApiResponse< DataSchema > PutUsersCustomattributesSchemaWithHttpInfo (string schemaId, DataSchema body)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->PutUsersCustomattributesSchema");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUsersCustomattributesSchema");
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/{schemaId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersCustomattributesSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersCustomattributesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a schema 
+        /// 
+        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of DataSchema</returns>
+        
+        public async System.Threading.Tasks.Task<DataSchema> PutUsersCustomattributesSchemaAsync (string schemaId, DataSchema body)
+        {
+             ApiResponse<DataSchema> localVarResponse = await PutUsersCustomattributesSchemaAsyncWithHttpInfo(schemaId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a schema 
+        /// 
+        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Data Schema</param>
+        /// <returns>Task of ApiResponse (DataSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutUsersCustomattributesSchemaAsyncWithHttpInfo (string schemaId, DataSchema body)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling UsersApi->PutUsersCustomattributesSchema");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling UsersApi->PutUsersCustomattributesSchema");
+            
+
+            var localVarPath = "/api/v2/users/customattributes/schemas/{schemaId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersCustomattributesSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersCustomattributesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataSchema>(localVarStatusCode,
+                localVarHeaders,
+                (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

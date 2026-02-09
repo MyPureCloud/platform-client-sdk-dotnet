@@ -66,7 +66,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Queue for "queue"
             /// </summary>
             [EnumMember(Value = "queue")]
-            Queue
+            Queue,
+            
+            /// <summary>
+            /// Enum Case for "case"
+            /// </summary>
+            [EnumMember(Value = "case")]
+            Case,
+            
+            /// <summary>
+            /// Enum Externalcontact for "externalContact"
+            /// </summary>
+            [EnumMember(Value = "externalContact")]
+            Externalcontact
         }
 
         /// <summary>

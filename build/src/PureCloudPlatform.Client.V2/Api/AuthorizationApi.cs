@@ -1070,9 +1070,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>AuthorizationPolicy</returns>
         
-        AuthorizationPolicy PostAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body);
+        AuthorizationPolicy PostAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Add an access control policy for a specified resource target and subject
@@ -1083,9 +1084,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>ApiResponse of AuthorizationPolicy</returns>
         
-        ApiResponse<AuthorizationPolicy> PostAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body);
+        ApiResponse<AuthorizationPolicy> PostAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Validate the conditions and attributes of an access control policy for a specified resource target
@@ -1390,9 +1392,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>AuthorizationPolicy</returns>
         
-        AuthorizationPolicy PutAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body);
+        AuthorizationPolicy PutAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Add an access control policy for a specified resource target and subject, overwriting any existing policy
@@ -1403,9 +1406,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>ApiResponse of AuthorizationPolicy</returns>
         
-        ApiResponse<AuthorizationPolicy> PutAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body);
+        ApiResponse<AuthorizationPolicy> PutAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Update an access control policy with a given ID
@@ -1416,9 +1420,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>AuthorizationPolicy</returns>
         
-        AuthorizationPolicy PutAuthorizationPolicy (string policyId, AuthorizationPolicy body);
+        AuthorizationPolicy PutAuthorizationPolicy (string policyId, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Update an access control policy with a given ID
@@ -1429,9 +1434,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>ApiResponse of AuthorizationPolicy</returns>
         
-        ApiResponse<AuthorizationPolicy> PutAuthorizationPolicyWithHttpInfo (string policyId, AuthorizationPolicy body);
+        ApiResponse<AuthorizationPolicy> PutAuthorizationPolicyWithHttpInfo (string policyId, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Update an organization role.
@@ -2644,9 +2650,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of AuthorizationPolicy</returns>
         
-        System.Threading.Tasks.Task<AuthorizationPolicy> PostAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body);
+        System.Threading.Tasks.Task<AuthorizationPolicy> PostAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Add an access control policy for a specified resource target and subject
@@ -2657,9 +2664,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PostAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body);
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PostAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Validate the conditions and attributes of an access control policy for a specified resource target
@@ -2964,9 +2972,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of AuthorizationPolicy</returns>
         
-        System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body);
+        System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Add an access control policy for a specified resource target and subject, overwriting any existing policy
@@ -2977,9 +2986,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body);
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Update an access control policy with a given ID
@@ -2990,9 +3000,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of AuthorizationPolicy</returns>
         
-        System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPolicyAsync (string policyId, AuthorizationPolicy body);
+        System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPolicyAsync (string policyId, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Update an access control policy with a given ID
@@ -3003,9 +3014,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPolicyAsyncWithHttpInfo (string policyId, AuthorizationPolicy body);
+        System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPolicyAsyncWithHttpInfo (string policyId, AuthorizationPolicy body, bool? skipLockoutCheck = null);
 
         /// <summary>
         /// Update an organization role.
@@ -11439,11 +11451,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>AuthorizationPolicy</returns>
         
-        public AuthorizationPolicy PostAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body)
+        public AuthorizationPolicy PostAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         {
-             ApiResponse<AuthorizationPolicy> localVarResponse = PostAuthorizationPoliciesTargetWithHttpInfo(targetName, body);
+             ApiResponse<AuthorizationPolicy> localVarResponse = PostAuthorizationPoliciesTargetWithHttpInfo(targetName, body, skipLockoutCheck);
              return localVarResponse.Data;
         }
 
@@ -11454,9 +11467,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>ApiResponse of AuthorizationPolicy</returns>
         
-        public ApiResponse< AuthorizationPolicy > PostAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body)
+        public ApiResponse< AuthorizationPolicy > PostAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         { 
             // verify the required parameter 'targetName' is set
             if (targetName == null)
@@ -11500,6 +11514,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
 
             // Query params
+            if (skipLockoutCheck != null) localVarQueryParams.Add(new Tuple<string, string>("skipLockoutCheck", this.Configuration.ApiClient.ParameterToString(skipLockoutCheck)));
 
             // Header params
 
@@ -11549,11 +11564,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of AuthorizationPolicy</returns>
         
-        public async System.Threading.Tasks.Task<AuthorizationPolicy> PostAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body)
+        public async System.Threading.Tasks.Task<AuthorizationPolicy> PostAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         {
-             ApiResponse<AuthorizationPolicy> localVarResponse = await PostAuthorizationPoliciesTargetAsyncWithHttpInfo(targetName, body);
+             ApiResponse<AuthorizationPolicy> localVarResponse = await PostAuthorizationPoliciesTargetAsyncWithHttpInfo(targetName, body, skipLockoutCheck);
              return localVarResponse.Data;
 
         }
@@ -11565,9 +11581,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PostAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body)
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PostAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         { 
             // verify the required parameter 'targetName' is set
             if (targetName == null)
@@ -11613,6 +11630,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
 
             // Query params
+            if (skipLockoutCheck != null) localVarQueryParams.Add(new Tuple<string, string>("skipLockoutCheck", this.Configuration.ApiClient.ParameterToString(skipLockoutCheck)));
 
             // Header params
 
@@ -14114,11 +14132,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>AuthorizationPolicy</returns>
         
-        public AuthorizationPolicy PutAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body)
+        public AuthorizationPolicy PutAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         {
-             ApiResponse<AuthorizationPolicy> localVarResponse = PutAuthorizationPoliciesTargetWithHttpInfo(targetName, body);
+             ApiResponse<AuthorizationPolicy> localVarResponse = PutAuthorizationPoliciesTargetWithHttpInfo(targetName, body, skipLockoutCheck);
              return localVarResponse.Data;
         }
 
@@ -14129,9 +14148,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>ApiResponse of AuthorizationPolicy</returns>
         
-        public ApiResponse< AuthorizationPolicy > PutAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body)
+        public ApiResponse< AuthorizationPolicy > PutAuthorizationPoliciesTargetWithHttpInfo (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         { 
             // verify the required parameter 'targetName' is set
             if (targetName == null)
@@ -14175,6 +14195,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
 
             // Query params
+            if (skipLockoutCheck != null) localVarQueryParams.Add(new Tuple<string, string>("skipLockoutCheck", this.Configuration.ApiClient.ParameterToString(skipLockoutCheck)));
 
             // Header params
 
@@ -14224,11 +14245,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of AuthorizationPolicy</returns>
         
-        public async System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body)
+        public async System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPoliciesTargetAsync (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         {
-             ApiResponse<AuthorizationPolicy> localVarResponse = await PutAuthorizationPoliciesTargetAsyncWithHttpInfo(targetName, body);
+             ApiResponse<AuthorizationPolicy> localVarResponse = await PutAuthorizationPoliciesTargetAsyncWithHttpInfo(targetName, body, skipLockoutCheck);
              return localVarResponse.Data;
 
         }
@@ -14240,9 +14262,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="targetName">The domain:entity:action target to which the policy will be applied</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body)
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPoliciesTargetAsyncWithHttpInfo (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         { 
             // verify the required parameter 'targetName' is set
             if (targetName == null)
@@ -14288,6 +14311,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (targetName != null) localVarPathParams.Add("targetName", this.Configuration.ApiClient.ParameterToString(targetName));
 
             // Query params
+            if (skipLockoutCheck != null) localVarQueryParams.Add(new Tuple<string, string>("skipLockoutCheck", this.Configuration.ApiClient.ParameterToString(skipLockoutCheck)));
 
             // Header params
 
@@ -14338,11 +14362,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>AuthorizationPolicy</returns>
         
-        public AuthorizationPolicy PutAuthorizationPolicy (string policyId, AuthorizationPolicy body)
+        public AuthorizationPolicy PutAuthorizationPolicy (string policyId, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         {
-             ApiResponse<AuthorizationPolicy> localVarResponse = PutAuthorizationPolicyWithHttpInfo(policyId, body);
+             ApiResponse<AuthorizationPolicy> localVarResponse = PutAuthorizationPolicyWithHttpInfo(policyId, body, skipLockoutCheck);
              return localVarResponse.Data;
         }
 
@@ -14353,9 +14378,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>ApiResponse of AuthorizationPolicy</returns>
         
-        public ApiResponse< AuthorizationPolicy > PutAuthorizationPolicyWithHttpInfo (string policyId, AuthorizationPolicy body)
+        public ApiResponse< AuthorizationPolicy > PutAuthorizationPolicyWithHttpInfo (string policyId, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         { 
             // verify the required parameter 'policyId' is set
             if (policyId == null)
@@ -14399,6 +14425,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
 
             // Query params
+            if (skipLockoutCheck != null) localVarQueryParams.Add(new Tuple<string, string>("skipLockoutCheck", this.Configuration.ApiClient.ParameterToString(skipLockoutCheck)));
 
             // Header params
 
@@ -14448,11 +14475,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of AuthorizationPolicy</returns>
         
-        public async System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPolicyAsync (string policyId, AuthorizationPolicy body)
+        public async System.Threading.Tasks.Task<AuthorizationPolicy> PutAuthorizationPolicyAsync (string policyId, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         {
-             ApiResponse<AuthorizationPolicy> localVarResponse = await PutAuthorizationPolicyAsyncWithHttpInfo(policyId, body);
+             ApiResponse<AuthorizationPolicy> localVarResponse = await PutAuthorizationPolicyAsyncWithHttpInfo(policyId, body, skipLockoutCheck);
              return localVarResponse.Data;
 
         }
@@ -14464,9 +14492,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="policyId">The ID of the policy to update</param>
         /// <param name="body">Access control policy</param>
+        /// <param name="skipLockoutCheck">Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional, default to false)</param>
         /// <returns>Task of ApiResponse (AuthorizationPolicy)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPolicyAsyncWithHttpInfo (string policyId, AuthorizationPolicy body)
+        public async System.Threading.Tasks.Task<ApiResponse<AuthorizationPolicy>> PutAuthorizationPolicyAsyncWithHttpInfo (string policyId, AuthorizationPolicy body, bool? skipLockoutCheck = null)
         { 
             // verify the required parameter 'policyId' is set
             if (policyId == null)
@@ -14512,6 +14541,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (policyId != null) localVarPathParams.Add("policyId", this.Configuration.ApiClient.ParameterToString(policyId));
 
             // Query params
+            if (skipLockoutCheck != null) localVarQueryParams.Add(new Tuple<string, string>("skipLockoutCheck", this.Configuration.ApiClient.ParameterToString(skipLockoutCheck)));
 
             // Header params
 

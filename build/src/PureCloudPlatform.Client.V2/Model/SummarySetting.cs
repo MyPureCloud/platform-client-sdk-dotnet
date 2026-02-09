@@ -144,6 +144,33 @@ namespace PureCloudPlatform.Client.V2.Model
             Prompt
         }
         /// <summary>
+        /// Service type for summarization. Can be 'Native' for Genesys native summarization engine or 'External' for external service. If specified as 'External', integrationId must be provided.
+        /// </summary>
+        /// <value>Service type for summarization. Can be 'Native' for Genesys native summarization engine or 'External' for external service. If specified as 'External', integrationId must be provided.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ServiceTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Native for "Native"
+            /// </summary>
+            [EnumMember(Value = "Native")]
+            Native,
+            
+            /// <summary>
+            /// Enum External for "External"
+            /// </summary>
+            [EnumMember(Value = "External")]
+            External
+        }
+        /// <summary>
         /// Level of detail of the generated summary.
         /// </summary>
         /// <value>Level of detail of the generated summary.</value>
@@ -161,6 +188,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Type of the summary setting.</value>
         [DataMember(Name="settingType", EmitDefaultValue=false)]
         public SettingTypeEnum? SettingType { get; set; }
+        /// <summary>
+        /// Service type for summarization. Can be 'Native' for Genesys native summarization engine or 'External' for external service. If specified as 'External', integrationId must be provided.
+        /// </summary>
+        /// <value>Service type for summarization. Can be 'Native' for Genesys native summarization engine or 'External' for external service. If specified as 'External', integrationId must be provided.</value>
+        [DataMember(Name="serviceType", EmitDefaultValue=false)]
+        public ServiceTypeEnum? ServiceType { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="SummarySetting" /> class.
@@ -180,7 +213,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomEntities">Custom entity definition..</param>
         /// <param name="SettingType">Type of the summary setting..</param>
         /// <param name="Prompt">Custom prompt of summary setting..</param>
-        public SummarySetting(string Name = null, string Language = null, SummaryTypeEnum? SummaryType = null, FormatEnum? Format = null, SummarySettingPII MaskPII = null, SummarySettingParticipantLabels ParticipantLabels = null, List<PredefinedInsightsEnum> PredefinedInsights = null, List<SummarySettingCustomEntity> CustomEntities = null, SettingTypeEnum? SettingType = null, string Prompt = null)
+        /// <param name="ServiceType">Service type for summarization. Can be &#39;Native&#39; for Genesys native summarization engine or &#39;External&#39; for external service. If specified as &#39;External&#39;, integrationId must be provided..</param>
+        /// <param name="IntegrationId">Integration ID for the external summarization service. Required when serviceType is External..</param>
+        /// <param name="TimeoutDuration">Timeout duration in seconds for the external summarization service request..</param>
+        public SummarySetting(string Name = null, string Language = null, SummaryTypeEnum? SummaryType = null, FormatEnum? Format = null, SummarySettingPII MaskPII = null, SummarySettingParticipantLabels ParticipantLabels = null, List<PredefinedInsightsEnum> PredefinedInsights = null, List<SummarySettingCustomEntity> CustomEntities = null, SettingTypeEnum? SettingType = null, string Prompt = null, ServiceTypeEnum? ServiceType = null, string IntegrationId = null, int? TimeoutDuration = null)
         {
             this.Name = Name;
             this.Language = Language;
@@ -192,6 +228,9 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CustomEntities = CustomEntities;
             this.SettingType = SettingType;
             this.Prompt = Prompt;
+            this.ServiceType = ServiceType;
+            this.IntegrationId = IntegrationId;
+            this.TimeoutDuration = TimeoutDuration;
             
         }
         
@@ -275,6 +314,26 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
+        /// <summary>
+        /// Integration ID for the external summarization service. Required when serviceType is External.
+        /// </summary>
+        /// <value>Integration ID for the external summarization service. Required when serviceType is External.</value>
+        [DataMember(Name="integrationId", EmitDefaultValue=false)]
+        public string IntegrationId { get; set; }
+
+
+
+        /// <summary>
+        /// Timeout duration in seconds for the external summarization service request.
+        /// </summary>
+        /// <value>Timeout duration in seconds for the external summarization service request.</value>
+        [DataMember(Name="timeoutDuration", EmitDefaultValue=false)]
+        public int? TimeoutDuration { get; set; }
+
+
+
         /// <summary>
         /// The date and time the setting was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
@@ -321,6 +380,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CustomEntities: ").Append(CustomEntities).Append("\n");
             sb.Append("  SettingType: ").Append(SettingType).Append("\n");
             sb.Append("  Prompt: ").Append(Prompt).Append("\n");
+            sb.Append("  ServiceType: ").Append(ServiceType).Append("\n");
+            sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
+            sb.Append("  TimeoutDuration: ").Append(TimeoutDuration).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -420,6 +482,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Prompt.Equals(other.Prompt)
                 ) &&
                 (
+                    this.ServiceType == other.ServiceType ||
+                    this.ServiceType != null &&
+                    this.ServiceType.Equals(other.ServiceType)
+                ) &&
+                (
+                    this.IntegrationId == other.IntegrationId ||
+                    this.IntegrationId != null &&
+                    this.IntegrationId.Equals(other.IntegrationId)
+                ) &&
+                (
+                    this.TimeoutDuration == other.TimeoutDuration ||
+                    this.TimeoutDuration != null &&
+                    this.TimeoutDuration.Equals(other.TimeoutDuration)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -479,6 +556,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Prompt != null)
                     hash = hash * 59 + this.Prompt.GetHashCode();
+
+                if (this.ServiceType != null)
+                    hash = hash * 59 + this.ServiceType.GetHashCode();
+
+                if (this.IntegrationId != null)
+                    hash = hash * 59 + this.IntegrationId.GetHashCode();
+
+                if (this.TimeoutDuration != null)
+                    hash = hash * 59 + this.TimeoutDuration.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

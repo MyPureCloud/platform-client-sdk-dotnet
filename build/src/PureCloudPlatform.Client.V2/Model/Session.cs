@@ -184,7 +184,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sessionexpired for "SessionExpired"
             /// </summary>
             [EnumMember(Value = "SessionExpired")]
-            Sessionexpired
+            Sessionexpired,
+            
+            /// <summary>
+            /// Enum Takeover for "Takeover"
+            /// </summary>
+            [EnumMember(Value = "Takeover")]
+            Takeover
         }
         /// <summary>
         /// Last ACD outcome for the conversation.

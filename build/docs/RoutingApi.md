@@ -109,6 +109,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingConversation**](#PatchRoutingConversation) | **Patch** /api/v2/routing/conversations/{conversationId} | Update attributes of an in-queue conversation |
 | [**PatchRoutingEmailDomain**](#PatchRoutingEmailDomain) | **Patch** /api/v2/routing/email/domains/{domainId} | Update domain settings |
 | [**PatchRoutingEmailDomainValidate**](#PatchRoutingEmailDomainValidate) | **Patch** /api/v2/routing/email/domains/{domainId}/validate | Validate domain settings |
+| [**PatchRoutingEmailOutboundDomain**](#PatchRoutingEmailOutboundDomain) | **Patch** /api/v2/routing/email/outbound/domains/{domainId} | Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP). |
 | [**PatchRoutingPredictor**](#PatchRoutingPredictor) | **Patch** /api/v2/routing/predictors/{predictorId} | Update single predictor. |
 | [**PatchRoutingPredictorsKeyperformanceindicator**](#PatchRoutingPredictorsKeyperformanceindicator) | **Patch** /api/v2/routing/predictors/keyperformanceindicators/{kpiId} | Update a custom Key Performance Indicator. |
 | [**PatchRoutingQueueMember**](#PatchRoutingQueueMember) | **Patch** /api/v2/routing/queues/{queueId}/members/{memberId} | Update the ring number OR joined status for a queue member. |
@@ -134,6 +135,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostRoutingEmailDomainTestconnection**](#PostRoutingEmailDomainTestconnection) | **Post** /api/v2/routing/email/domains/{domainId}/testconnection | Tests the custom SMTP server integration connection set on this ACD domain |
 | [**PostRoutingEmailDomainVerification**](#PostRoutingEmailDomainVerification) | **Post** /api/v2/routing/email/domains/{domainId}/verification | Restart domain verification |
 | [**PostRoutingEmailDomains**](#PostRoutingEmailDomains) | **Post** /api/v2/routing/email/domains | Create a domain |
+| [**PostRoutingEmailOutboundDomainTestconnection**](#PostRoutingEmailOutboundDomainTestconnection) | **Post** /api/v2/routing/email/outbound/domains/{domainId}/testconnection | Tests the custom SMTP server integration connection set on this outbound domain |
 | [**PostRoutingEmailOutboundDomains**](#PostRoutingEmailOutboundDomains) | **Post** /api/v2/routing/email/outbound/domains | Create a domain |
 | [**PostRoutingEmailOutboundDomainsSimulated**](#PostRoutingEmailOutboundDomainsSimulated) | **Post** /api/v2/routing/email/outbound/domains/simulated | Create a simulated domain |
 | [**PostRoutingLanguages**](#PostRoutingLanguages) | **Post** /api/v2/routing/languages | Create Language |
@@ -3637,7 +3639,7 @@ namespace Example
 
 ## GetRoutingQueueAssistant
 
-> [**AssistantQueue**](AssistantQueue) GetRoutingQueueAssistant (string queueId, List<string> expand = null)
+> [**AssistantQueue**](AssistantQueue) GetRoutingQueueAssistant (string queueId, List<string> expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null)
 
 
 Get an assistant associated with a queue.
@@ -3670,11 +3672,13 @@ namespace Example
             var apiInstance = new RoutingApi();
             var queueId = queueId_example;  // string | Queue ID
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
+            var languageVariation = languageVariation_example;  // string | Language variation (optional) 
+            var fallbackToPrimaryAssistant = true;  // bool? | Fall back to primary assistant if specified variation is not found (optional) 
 
             try
             { 
                 // Get an assistant associated with a queue.
-                AssistantQueue result = apiInstance.GetRoutingQueueAssistant(queueId, expand);
+                AssistantQueue result = apiInstance.GetRoutingQueueAssistant(queueId, expand, languageVariation, fallbackToPrimaryAssistant);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3693,6 +3697,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **queueId** | **string**| Queue ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: assistant, copilot |
+| **languageVariation** | **string**| Language variation | [optional]  |
+| **fallbackToPrimaryAssistant** | **bool?**| Fall back to primary assistant if specified variation is not found | [optional]  |
 
 ### Return type
 
@@ -6650,7 +6656,7 @@ namespace Example
 
 Update attributes of an in-queue conversation
 
-Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
 
 Requires ANY permissions: 
 
@@ -6835,6 +6841,70 @@ namespace Example
 ### Return type
 
 [**InboundDomain**](InboundDomain)
+
+
+## PatchRoutingEmailOutboundDomain
+
+> [**OutboundDomain**](OutboundDomain) PatchRoutingEmailOutboundDomain (string domainId, OutboundDomainPatchRequest body)
+
+
+Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP).
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchRoutingEmailOutboundDomainExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+            var body = new OutboundDomainPatchRequest(); // OutboundDomainPatchRequest | Domain settings
+
+            try
+            { 
+                // Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP).
+                OutboundDomain result = apiInstance.PatchRoutingEmailOutboundDomain(domainId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchRoutingEmailOutboundDomain: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+| **body** | [**OutboundDomainPatchRequest**](OutboundDomainPatchRequest)| Domain settings |  |
+
+### Return type
+
+[**OutboundDomain**](OutboundDomain)
 
 
 ## PatchRoutingPredictor
@@ -7040,6 +7110,8 @@ void (empty response body)
 
 
 Join or unjoin a set of up to 100 users for a queue
+
+Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
 
 Requires ANY permissions: 
 
@@ -7560,6 +7632,8 @@ namespace Example
 
 
 Join or unjoin a set of queues for a user
+
+Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
 
 Requires ANY permissions: 
 
@@ -8448,6 +8522,72 @@ namespace Example
 ### Return type
 
 [**InboundDomain**](InboundDomain)
+
+
+## PostRoutingEmailOutboundDomainTestconnection
+
+> [**TestMessage**](TestMessage) PostRoutingEmailOutboundDomainTestconnection (string domainId, TestMessage body = null)
+
+
+Tests the custom SMTP server integration connection set on this outbound domain
+
+The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+
+Requires ALL permissions: 
+
+* routing:email:manage
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostRoutingEmailOutboundDomainTestconnectionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var domainId = domainId_example;  // string | domain ID
+            var body = new TestMessage(); // TestMessage | TestMessage (optional) 
+
+            try
+            { 
+                // Tests the custom SMTP server integration connection set on this outbound domain
+                TestMessage result = apiInstance.PostRoutingEmailOutboundDomainTestconnection(domainId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PostRoutingEmailOutboundDomainTestconnection: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **domainId** | **string**| domain ID |  |
+| **body** | [**TestMessage**](TestMessage)| TestMessage | [optional]  |
+
+### Return type
+
+[**TestMessage**](TestMessage)
 
 
 ## PostRoutingEmailOutboundDomains
@@ -10866,4 +11006,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

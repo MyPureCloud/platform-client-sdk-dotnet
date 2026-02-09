@@ -12,11 +12,11 @@
 | **Total** | **long?** |  | [optional] |
 | **PageCount** | **int?** | Total number of pages | [optional] |
 | **FirstUri** | **string** |  | [optional] |
-| **PreviousUri** | **string** |  | [optional] |
 | **NextUri** | **string** |  | [optional] |
+| **PreviousUri** | **string** |  | [optional] |
 | **LastUri** | **string** |  | [optional] |
 | **SelfUri** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

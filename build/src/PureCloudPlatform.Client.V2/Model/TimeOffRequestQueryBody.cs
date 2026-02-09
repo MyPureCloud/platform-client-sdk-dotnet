@@ -36,7 +36,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Pending for "PENDING"
             /// </summary>
             [EnumMember(Value = "PENDING")]
-            Pending
+            Pending,
+            
+            /// <summary>
+            /// Enum Approved for "APPROVED"
+            /// </summary>
+            [EnumMember(Value = "APPROVED")]
+            Approved,
+            
+            /// <summary>
+            /// Enum Denied for "DENIED"
+            /// </summary>
+            [EnumMember(Value = "DENIED")]
+            Denied,
+            
+            /// <summary>
+            /// Enum Canceled for "CANCELED"
+            /// </summary>
+            [EnumMember(Value = "CANCELED")]
+            Canceled
         }
         /// <summary>
         /// Gets or Sets Substatuses

@@ -156,7 +156,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum SessionExpired for "SESSION_EXPIRED"
             /// </summary>
             [EnumMember(Value = "SESSION_EXPIRED")]
-            SessionExpired
+            SessionExpired,
+            
+            /// <summary>
+            /// Enum Takeover for "TAKEOVER"
+            /// </summary>
+            [EnumMember(Value = "TAKEOVER")]
+            Takeover
         }
         /// <summary>
         /// Gets or Sets MediaType
@@ -587,6 +593,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RequestedRoutings">RequestedRoutings.</param>
         /// <param name="UsedRouting">UsedRouting.</param>
         /// <param name="RequestedRoutingSkillIds">RequestedRoutingSkillIds.</param>
+        /// <param name="RequestedSkillExpressionIds">RequestedSkillExpressionIds.</param>
         /// <param name="RequestedLanguageId">RequestedLanguageId.</param>
         /// <param name="RequestedRoutingUserIds">RequestedRoutingUserIds.</param>
         /// <param name="RoutingPriority">RoutingPriority.</param>
@@ -595,7 +602,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
         /// <param name="UtilizationLabel">UtilizationLabel.</param>
         /// <param name="FlowType">FlowType.</param>
-        public AcdEndDetailEventTopicAcdEndEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, long? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, AcdOutcomeEnum? AcdOutcome = null, string AnsweredUserId = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, List<Guid?> RequestedRoutingSkillIds = null, string RequestedLanguageId = null, List<Guid?> RequestedRoutingUserIds = null, long? RoutingPriority = null, long? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, string FlowType = null)
+        public AcdEndDetailEventTopicAcdEndEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, long? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string QueueId = null, string DivisionId = null, AcdOutcomeEnum? AcdOutcome = null, string AnsweredUserId = null, List<RequestedRoutingsEnum> RequestedRoutings = null, UsedRoutingEnum? UsedRouting = null, List<Guid?> RequestedRoutingSkillIds = null, List<Guid?> RequestedSkillExpressionIds = null, string RequestedLanguageId = null, List<Guid?> RequestedRoutingUserIds = null, long? RoutingPriority = null, long? ConnectedDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null, string FlowType = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -621,6 +628,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.RequestedRoutings = RequestedRoutings;
             this.UsedRouting = UsedRouting;
             this.RequestedRoutingSkillIds = RequestedRoutingSkillIds;
+            this.RequestedSkillExpressionIds = RequestedSkillExpressionIds;
             this.RequestedLanguageId = RequestedLanguageId;
             this.RequestedRoutingUserIds = RequestedRoutingUserIds;
             this.RoutingPriority = RoutingPriority;
@@ -791,6 +799,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets RequestedSkillExpressionIds
+        /// </summary>
+        [DataMember(Name="requestedSkillExpressionIds", EmitDefaultValue=false)]
+        public List<Guid?> RequestedSkillExpressionIds { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets RequestedLanguageId
         /// </summary>
         [DataMember(Name="requestedLanguageId", EmitDefaultValue=false)]
@@ -886,6 +902,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  RequestedRoutings: ").Append(RequestedRoutings).Append("\n");
             sb.Append("  UsedRouting: ").Append(UsedRouting).Append("\n");
             sb.Append("  RequestedRoutingSkillIds: ").Append(RequestedRoutingSkillIds).Append("\n");
+            sb.Append("  RequestedSkillExpressionIds: ").Append(RequestedSkillExpressionIds).Append("\n");
             sb.Append("  RequestedLanguageId: ").Append(RequestedLanguageId).Append("\n");
             sb.Append("  RequestedRoutingUserIds: ").Append(RequestedRoutingUserIds).Append("\n");
             sb.Append("  RoutingPriority: ").Append(RoutingPriority).Append("\n");
@@ -1055,6 +1072,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RequestedRoutingSkillIds.SequenceEqual(other.RequestedRoutingSkillIds)
                 ) &&
                 (
+                    this.RequestedSkillExpressionIds == other.RequestedSkillExpressionIds ||
+                    this.RequestedSkillExpressionIds != null &&
+                    this.RequestedSkillExpressionIds.SequenceEqual(other.RequestedSkillExpressionIds)
+                ) &&
+                (
                     this.RequestedLanguageId == other.RequestedLanguageId ||
                     this.RequestedLanguageId != null &&
                     this.RequestedLanguageId.Equals(other.RequestedLanguageId)
@@ -1178,6 +1200,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RequestedRoutingSkillIds != null)
                     hash = hash * 59 + this.RequestedRoutingSkillIds.GetHashCode();
+
+                if (this.RequestedSkillExpressionIds != null)
+                    hash = hash * 59 + this.RequestedSkillExpressionIds.GetHashCode();
 
                 if (this.RequestedLanguageId != null)
                     hash = hash * 59 + this.RequestedLanguageId.GetHashCode();

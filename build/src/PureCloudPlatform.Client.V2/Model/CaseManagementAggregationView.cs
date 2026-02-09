@@ -40,10 +40,46 @@ namespace PureCloudPlatform.Client.V2.Model
             Ncasesopened,
             
             /// <summary>
+            /// Enum Ncasesoversla for "nCasesOverSla"
+            /// </summary>
+            [EnumMember(Value = "nCasesOverSla")]
+            Ncasesoversla,
+            
+            /// <summary>
+            /// Enum Ncasespurged for "nCasesPurged"
+            /// </summary>
+            [EnumMember(Value = "nCasesPurged")]
+            Ncasespurged,
+            
+            /// <summary>
+            /// Enum Ncasesstatuschanged for "nCasesStatusChanged"
+            /// </summary>
+            [EnumMember(Value = "nCasesStatusChanged")]
+            Ncasesstatuschanged,
+            
+            /// <summary>
             /// Enum Ncasesterminated for "nCasesTerminated"
             /// </summary>
             [EnumMember(Value = "nCasesTerminated")]
-            Ncasesterminated
+            Ncasesterminated,
+            
+            /// <summary>
+            /// Enum Ocasesservicelevel for "oCasesServiceLevel"
+            /// </summary>
+            [EnumMember(Value = "oCasesServiceLevel")]
+            Ocasesservicelevel,
+            
+            /// <summary>
+            /// Enum Tcasesresolved for "tCasesResolved"
+            /// </summary>
+            [EnumMember(Value = "tCasesResolved")]
+            Tcasesresolved,
+            
+            /// <summary>
+            /// Enum Tcasesstatus for "tCasesStatus"
+            /// </summary>
+            [EnumMember(Value = "tCasesStatus")]
+            Tcasesstatus
         }
         /// <summary>
         /// Type of view you wish to create

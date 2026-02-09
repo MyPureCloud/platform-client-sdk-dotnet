@@ -18,16 +18,10 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class UpdateDecisionTableVersionRequest :  IEquatable<UpdateDecisionTableVersionRequest>
     {
-
         /// <summary>
         /// Initializes a new instance of the <see cref="UpdateDecisionTableVersionRequest" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected UpdateDecisionTableVersionRequest() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="UpdateDecisionTableVersionRequest" /> class.
-        /// </summary>
-        /// <param name="RowIndexUpdate">An update to a decision table version row index, which moves the row to a new position in the table. Execution output is returned based on the first matching row. (required).</param>
+        /// <param name="RowIndexUpdate">An update to a decision table version row index, which moves the row to a new position in the table..</param>
         public UpdateDecisionTableVersionRequest(UpdateRowIndexRequest RowIndexUpdate = null)
         {
             this.RowIndexUpdate = RowIndexUpdate;
@@ -37,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// An update to a decision table version row index, which moves the row to a new position in the table. Execution output is returned based on the first matching row.
+        /// An update to a decision table version row index, which moves the row to a new position in the table.
         /// </summary>
-        /// <value>An update to a decision table version row index, which moves the row to a new position in the table. Execution output is returned based on the first matching row.</value>
+        /// <value>An update to a decision table version row index, which moves the row to a new position in the table.</value>
         [DataMember(Name="rowIndexUpdate", EmitDefaultValue=false)]
         public UpdateRowIndexRequest RowIndexUpdate { get; set; }
 

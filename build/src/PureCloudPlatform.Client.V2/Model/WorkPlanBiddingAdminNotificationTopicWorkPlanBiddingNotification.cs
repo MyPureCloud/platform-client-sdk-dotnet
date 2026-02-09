@@ -87,6 +87,38 @@ namespace PureCloudPlatform.Client.V2.Model
             Published
         }
         /// <summary>
+        /// Gets or Sets BidType
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum BidTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Workplanbid for "WorkPlanBid"
+            /// </summary>
+            [EnumMember(Value = "WorkPlanBid")]
+            Workplanbid,
+            
+            /// <summary>
+            /// Enum Schedulebid for "ScheduleBid"
+            /// </summary>
+            [EnumMember(Value = "ScheduleBid")]
+            Schedulebid
+        }
+        /// <summary>
         /// Gets or Sets AgentRankingType
         /// </summary>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
@@ -200,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
+        /// Gets or Sets BidType
+        /// </summary>
+        [DataMember(Name="bidType", EmitDefaultValue=false)]
+        public BidTypeEnum? BidType { get; set; }
+        /// <summary>
         /// Gets or Sets AgentRankingType
         /// </summary>
         [DataMember(Name="agentRankingType", EmitDefaultValue=false)]
@@ -215,17 +252,19 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="BuId">BuId.</param>
         /// <param name="Status">Status.</param>
+        /// <param name="BidType">BidType.</param>
         /// <param name="BidWindowStartDate">BidWindowStartDate.</param>
         /// <param name="BidWindowEndDate">BidWindowEndDate.</param>
         /// <param name="EffectiveDate">EffectiveDate.</param>
         /// <param name="AgentRankingType">AgentRankingType.</param>
         /// <param name="RankingTiebreakerType">RankingTiebreakerType.</param>
         /// <param name="WorkPlanFieldsVisibleToAgents">WorkPlanFieldsVisibleToAgents.</param>
-        public WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification(string Id = null, string BuId = null, StatusEnum? Status = null, string BidWindowStartDate = null, string BidWindowEndDate = null, string EffectiveDate = null, AgentRankingTypeEnum? AgentRankingType = null, RankingTiebreakerTypeEnum? RankingTiebreakerType = null, List<WorkPlanFieldsVisibleToAgentsEnum> WorkPlanFieldsVisibleToAgents = null)
+        public WorkPlanBiddingAdminNotificationTopicWorkPlanBiddingNotification(string Id = null, string BuId = null, StatusEnum? Status = null, BidTypeEnum? BidType = null, string BidWindowStartDate = null, string BidWindowEndDate = null, string EffectiveDate = null, AgentRankingTypeEnum? AgentRankingType = null, RankingTiebreakerTypeEnum? RankingTiebreakerType = null, List<WorkPlanFieldsVisibleToAgentsEnum> WorkPlanFieldsVisibleToAgents = null)
         {
             this.Id = Id;
             this.BuId = BuId;
             this.Status = Status;
+            this.BidType = BidType;
             this.BidWindowStartDate = BidWindowStartDate;
             this.BidWindowEndDate = BidWindowEndDate;
             this.EffectiveDate = EffectiveDate;
@@ -250,6 +289,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="buId", EmitDefaultValue=false)]
         public string BuId { get; set; }
+
+
 
 
 
@@ -302,6 +343,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  BuId: ").Append(BuId).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
+            sb.Append("  BidType: ").Append(BidType).Append("\n");
             sb.Append("  BidWindowStartDate: ").Append(BidWindowStartDate).Append("\n");
             sb.Append("  BidWindowEndDate: ").Append(BidWindowEndDate).Append("\n");
             sb.Append("  EffectiveDate: ").Append(EffectiveDate).Append("\n");
@@ -364,6 +406,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Status.Equals(other.Status)
                 ) &&
                 (
+                    this.BidType == other.BidType ||
+                    this.BidType != null &&
+                    this.BidType.Equals(other.BidType)
+                ) &&
+                (
                     this.BidWindowStartDate == other.BidWindowStartDate ||
                     this.BidWindowStartDate != null &&
                     this.BidWindowStartDate.Equals(other.BidWindowStartDate)
@@ -414,6 +461,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
+
+                if (this.BidType != null)
+                    hash = hash * 59 + this.BidType.GetHashCode();
 
                 if (this.BidWindowStartDate != null)
                     hash = hash * 59 + this.BidWindowStartDate.GetHashCode();

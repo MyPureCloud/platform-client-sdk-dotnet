@@ -32,6 +32,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetSpeechandtextanalyticsProgramsMappings**](#GetSpeechandtextanalyticsProgramsMappings) | **Get** /api/v2/speechandtextanalytics/programs/mappings | Get the list of Speech &amp; Text Analytics programs mappings to queues and flows |
 | [**GetSpeechandtextanalyticsProgramsPublishjob**](#GetSpeechandtextanalyticsProgramsPublishjob) | **Get** /api/v2/speechandtextanalytics/programs/publishjobs/{jobId} | Get a Speech &amp; Text Analytics publish programs job by id |
 | [**GetSpeechandtextanalyticsProgramsSettingsInsights**](#GetSpeechandtextanalyticsProgramsSettingsInsights) | **Get** /api/v2/speechandtextanalytics/programs/settings/insights | Get the list of program AI Insights settings for the organization |
+| [**GetSpeechandtextanalyticsProgramsTopiclinksJob**](#GetSpeechandtextanalyticsProgramsTopiclinksJob) | **Get** /api/v2/speechandtextanalytics/programs/topiclinks/jobs/{jobId} | Get a Speech &amp; Text Analytics program-topic links job by id |
 | [**GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects**](#GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects) | **Get** /api/v2/speechandtextanalytics/programs/transcriptionengines/dialects | Get supported dialects for each transcription engine |
 | [**GetSpeechandtextanalyticsProgramsUnpublished**](#GetSpeechandtextanalyticsProgramsUnpublished) | **Get** /api/v2/speechandtextanalytics/programs/unpublished | Get the list of Speech &amp; Text Analytics unpublished programs |
 | [**GetSpeechandtextanalyticsReprocessingJob**](#GetSpeechandtextanalyticsReprocessingJob) | **Get** /api/v2/speechandtextanalytics/reprocessing/jobs/{jobId} | Get a Speech &amp; Text Analytics reprocess job by id |
@@ -1055,7 +1056,7 @@ namespace Example
 
             var apiInstance = new SpeechTextAnalyticsApi();
             var dialect = en-US;  // string | The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional) 
-            var transcriptionEngine = transcriptionEngine_example;  // string | Filter by transcription engine (optional) 
+            var transcriptionEngine = transcriptionEngine_example;  // string | Filter by transcription engine, If not provided, all transcription engines will be considered (optional) 
             var nextPage = nextPage_example;  // string | The key for listing the next page (optional) 
             var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 500)
 
@@ -1080,7 +1081,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **dialect** | **string**| The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard | [optional]  |
-| **transcriptionEngine** | **string**| Filter by transcription engine | [optional] <br />**Values**: Genesys, GenesysExtended |
+| **transcriptionEngine** | **string**| Filter by transcription engine, If not provided, all transcription engines will be considered | [optional] <br />**Values**: Genesys, GenesysExtended |
 | **nextPage** | **string**| The key for listing the next page | [optional]  |
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 500] |
 
@@ -1728,6 +1729,68 @@ namespace Example
 ### Return type
 
 [**ProgramInsightsSettingsEntityListing**](ProgramInsightsSettingsEntityListing)
+
+
+## GetSpeechandtextanalyticsProgramsTopiclinksJob
+
+> [**ProgramTopicLinksJob**](ProgramTopicLinksJob) GetSpeechandtextanalyticsProgramsTopiclinksJob (string jobId)
+
+
+Get a Speech & Text Analytics program-topic links job by id
+
+Requires ALL permissions: 
+
+* speechAndTextAnalytics:program:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetSpeechandtextanalyticsProgramsTopiclinksJobExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SpeechTextAnalyticsApi();
+            var jobId = jobId_example;  // string | The id of the program-topic links job
+
+            try
+            { 
+                // Get a Speech & Text Analytics program-topic links job by id
+                ProgramTopicLinksJob result = apiInstance.GetSpeechandtextanalyticsProgramsTopiclinksJob(jobId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SpeechTextAnalyticsApi.GetSpeechandtextanalyticsProgramsTopiclinksJob: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **jobId** | **string**| The id of the program-topic links job |  |
+
+### Return type
+
+[**ProgramTopicLinksJob**](ProgramTopicLinksJob)
 
 
 ## GetSpeechandtextanalyticsProgramsTranscriptionenginesDialects
@@ -4054,4 +4117,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

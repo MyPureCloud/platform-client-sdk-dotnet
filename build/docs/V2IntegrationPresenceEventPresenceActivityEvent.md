@@ -14,7 +14,8 @@
 | **Message** | **string** |  | [optional] |
 | **CurrentDisplaySourceId** | **Guid?** |  | [optional] |
 | **PreviousDisplaySourceId** | **Guid?** |  | [optional] |
+| **FuturePresenceDefinition** | [**V2IntegrationPresenceEventOrganizationPresence**](V2IntegrationPresenceEventOrganizationPresence) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

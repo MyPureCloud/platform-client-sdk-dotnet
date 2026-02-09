@@ -487,6 +487,12 @@ namespace PureCloudPlatform.Client.V2.Model
             System,
             
             /// <summary>
+            /// Enum Takeover for "takeover"
+            /// </summary>
+            [EnumMember(Value = "takeover")]
+            Takeover,
+            
+            /// <summary>
             /// Enum Timeout for "timeout"
             /// </summary>
             [EnumMember(Value = "timeout")]

@@ -253,7 +253,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sessionexpired for "session.expired"
             /// </summary>
             [EnumMember(Value = "session.expired")]
-            Sessionexpired
+            Sessionexpired,
+            
+            /// <summary>
+            /// Enum Takeover for "takeover"
+            /// </summary>
+            [EnumMember(Value = "takeover")]
+            Takeover
         }
         /// <summary>
         /// The reason specifying why participant flagged the conversation.

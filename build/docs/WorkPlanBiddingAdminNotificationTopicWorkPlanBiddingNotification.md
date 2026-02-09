@@ -9,6 +9,7 @@
 | **Id** | **string** |  | [optional] |
 | **BuId** | **string** |  | [optional] |
 | **Status** | **string** |  | [optional] |
+| **BidType** | **string** |  | [optional] |
 | **BidWindowStartDate** | **string** |  | [optional] |
 | **BidWindowEndDate** | **string** |  | [optional] |
 | **EffectiveDate** | **string** |  | [optional] |
@@ -18,4 +19,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

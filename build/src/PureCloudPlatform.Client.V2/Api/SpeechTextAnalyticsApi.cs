@@ -403,7 +403,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
-        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>DictionaryFeedbackEntityListing</returns>
@@ -418,7 +418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
-        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>ApiResponse of DictionaryFeedbackEntityListing</returns>
@@ -680,6 +680,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ProgramInsightsSettingsEntityListing</returns>
         
         ApiResponse<ProgramInsightsSettingsEntityListing> GetSpeechandtextanalyticsProgramsSettingsInsightsWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> programIds = null);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics program-topic links job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the program-topic links job</param>
+        /// <returns>ProgramTopicLinksJob</returns>
+        
+        ProgramTopicLinksJob GetSpeechandtextanalyticsProgramsTopiclinksJob (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics program-topic links job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the program-topic links job</param>
+        /// <returns>ApiResponse of ProgramTopicLinksJob</returns>
+        
+        ApiResponse<ProgramTopicLinksJob> GetSpeechandtextanalyticsProgramsTopiclinksJobWithHttpInfo (string jobId);
 
         /// <summary>
         /// Get supported dialects for each transcription engine
@@ -2003,7 +2027,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
-        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>Task of DictionaryFeedbackEntityListing</returns>
@@ -2018,7 +2042,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
-        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>Task of ApiResponse (DictionaryFeedbackEntityListing)</returns>
@@ -2280,6 +2304,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ProgramInsightsSettingsEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ProgramInsightsSettingsEntityListing>> GetSpeechandtextanalyticsProgramsSettingsInsightsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> programIds = null);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics program-topic links job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the program-topic links job</param>
+        /// <returns>Task of ProgramTopicLinksJob</returns>
+        
+        System.Threading.Tasks.Task<ProgramTopicLinksJob> GetSpeechandtextanalyticsProgramsTopiclinksJobAsync (string jobId);
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics program-topic links job by id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the program-topic links job</param>
+        /// <returns>Task of ApiResponse (ProgramTopicLinksJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ProgramTopicLinksJob>> GetSpeechandtextanalyticsProgramsTopiclinksJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
         /// Get supported dialects for each transcription engine
@@ -6370,7 +6418,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
-        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>DictionaryFeedbackEntityListing</returns>
@@ -6387,7 +6435,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
-        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>ApiResponse of DictionaryFeedbackEntityListing</returns>
@@ -6475,7 +6523,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
-        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>Task of DictionaryFeedbackEntityListing</returns>
@@ -6493,7 +6541,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="dialect">The key for filter the listing by dialect, dialect format is {language}-{country} where language follows ISO 639-1 standard and country follows ISO 3166-1 alpha 2 standard (optional)</param>
-        /// <param name="transcriptionEngine">Filter by transcription engine (optional)</param>
+        /// <param name="transcriptionEngine">Filter by transcription engine, If not provided, all transcription engines will be considered (optional)</param>
         /// <param name="nextPage">The key for listing the next page (optional)</param>
         /// <param name="pageSize">The page size for the listing (optional, default to 500)</param>
         /// <returns>Task of ApiResponse (DictionaryFeedbackEntityListing)</returns>
@@ -8607,6 +8655,207 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ProgramInsightsSettingsEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ProgramInsightsSettingsEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramInsightsSettingsEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics program-topic links job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the program-topic links job</param>
+        /// <returns>ProgramTopicLinksJob</returns>
+        
+        public ProgramTopicLinksJob GetSpeechandtextanalyticsProgramsTopiclinksJob (string jobId)
+        {
+             ApiResponse<ProgramTopicLinksJob> localVarResponse = GetSpeechandtextanalyticsProgramsTopiclinksJobWithHttpInfo(jobId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics program-topic links job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the program-topic links job</param>
+        /// <returns>ApiResponse of ProgramTopicLinksJob</returns>
+        
+        public ApiResponse< ProgramTopicLinksJob > GetSpeechandtextanalyticsProgramsTopiclinksJobWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramsTopiclinksJob");
+
+            var localVarPath = "/api/v2/speechandtextanalytics/programs/topiclinks/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramsTopiclinksJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramsTopiclinksJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ProgramTopicLinksJob>(localVarStatusCode,
+                localVarHeaders,
+                (ProgramTopicLinksJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramTopicLinksJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics program-topic links job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the program-topic links job</param>
+        /// <returns>Task of ProgramTopicLinksJob</returns>
+        
+        public async System.Threading.Tasks.Task<ProgramTopicLinksJob> GetSpeechandtextanalyticsProgramsTopiclinksJobAsync (string jobId)
+        {
+             ApiResponse<ProgramTopicLinksJob> localVarResponse = await GetSpeechandtextanalyticsProgramsTopiclinksJobAsyncWithHttpInfo(jobId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a Speech &amp; Text Analytics program-topic links job by id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="jobId">The id of the program-topic links job</param>
+        /// <returns>Task of ApiResponse (ProgramTopicLinksJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ProgramTopicLinksJob>> GetSpeechandtextanalyticsProgramsTopiclinksJobAsyncWithHttpInfo (string jobId)
+        { 
+            // verify the required parameter 'jobId' is set
+            if (jobId == null)
+                throw new ApiException(400, "Missing required parameter 'jobId' when calling SpeechTextAnalyticsApi->GetSpeechandtextanalyticsProgramsTopiclinksJob");
+            
+
+            var localVarPath = "/api/v2/speechandtextanalytics/programs/topiclinks/jobs/{jobId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (jobId != null) localVarPathParams.Add("jobId", this.Configuration.ApiClient.ParameterToString(jobId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramsTopiclinksJob: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSpeechandtextanalyticsProgramsTopiclinksJob: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ProgramTopicLinksJob>(localVarStatusCode,
+                localVarHeaders,
+                (ProgramTopicLinksJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ProgramTopicLinksJob)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -181,7 +181,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Artn for "ar-tn"
             /// </summary>
             [EnumMember(Value = "ar-tn")]
-            Artn
+            Artn,
+            
+            /// <summary>
+            /// Enum Dadk for "da-dk"
+            /// </summary>
+            [EnumMember(Value = "da-dk")]
+            Dadk,
+            
+            /// <summary>
+            /// Enum Fifi for "fi-fi"
+            /// </summary>
+            [EnumMember(Value = "fi-fi")]
+            Fifi,
+            
+            /// <summary>
+            /// Enum Svse for "sv-se"
+            /// </summary>
+            [EnumMember(Value = "sv-se")]
+            Svse,
+            
+            /// <summary>
+            /// Enum Nbno for "nb-no"
+            /// </summary>
+            [EnumMember(Value = "nb-no")]
+            Nbno
         }
         /// <summary>
         /// Type of the miner, intent or topic.

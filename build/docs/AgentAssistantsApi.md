@@ -282,7 +282,7 @@ void (empty response body)
 
 ## GetAssistant
 
-> [**Assistant**](Assistant) GetAssistant (string assistantId, string expand = null)
+> [**Assistant**](Assistant) GetAssistant (string assistantId, string expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null)
 
 
 Get an assistant.
@@ -315,11 +315,13 @@ namespace Example
             var apiInstance = new AgentAssistantsApi();
             var assistantId = assistantId_example;  // string | Assistant ID
             var expand = expand_example;  // string | Which fields, if any, to expand. (optional) 
+            var languageVariation = languageVariation_example;  // string | Language variation (optional) 
+            var fallbackToPrimaryAssistant = true;  // bool? | Fall back to primary assistant if specified variation is not found (optional) 
 
             try
             { 
                 // Get an assistant.
-                Assistant result = apiInstance.GetAssistant(assistantId, expand);
+                Assistant result = apiInstance.GetAssistant(assistantId, expand, languageVariation, fallbackToPrimaryAssistant);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -338,6 +340,8 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **assistantId** | **string**| Assistant ID |  |
 | **expand** | **string**| Which fields, if any, to expand. | [optional] <br />**Values**: copilot |
+| **languageVariation** | **string**| Language variation | [optional]  |
+| **fallbackToPrimaryAssistant** | **bool?**| Fall back to primary assistant if specified variation is not found | [optional]  |
 
 ### Return type
 
@@ -1529,4 +1533,4 @@ namespace Example
 [**AgentChecklist**](AgentChecklist)
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

@@ -95,10 +95,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OrganizationId">OrganizationId.</param>
         /// <param name="UserId">UserId.</param>
         /// <param name="OauthClientId">OauthClientId.</param>
+        /// <param name="OauthClientOrgId">OauthClientOrgId.</param>
         /// <param name="Reason">Reason.</param>
         /// <param name="Message">Message.</param>
         /// <param name="Data">Data.</param>
-        public UpdatedTopicSystemMessage(string ChannelId = null, SystemTopicTypeEnum? SystemTopicType = null, string CorrelationId = null, string OrganizationId = null, string UserId = null, string OauthClientId = null, ReasonEnum? Reason = null, string Message = null, Dictionary<string, Object> Data = null)
+        public UpdatedTopicSystemMessage(string ChannelId = null, SystemTopicTypeEnum? SystemTopicType = null, string CorrelationId = null, string OrganizationId = null, string UserId = null, string OauthClientId = null, string OauthClientOrgId = null, ReasonEnum? Reason = null, string Message = null, Dictionary<string, Object> Data = null)
         {
             this.ChannelId = ChannelId;
             this.SystemTopicType = SystemTopicType;
@@ -106,6 +107,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OrganizationId = OrganizationId;
             this.UserId = UserId;
             this.OauthClientId = OauthClientId;
+            this.OauthClientOrgId = OauthClientOrgId;
             this.Reason = Reason;
             this.Message = Message;
             this.Data = Data;
@@ -156,6 +158,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Gets or Sets OauthClientOrgId
+        /// </summary>
+        [DataMember(Name="oauthClientOrgId", EmitDefaultValue=false)]
+        public string OauthClientOrgId { get; set; }
+
+
+
 
 
         /// <summary>
@@ -188,6 +198,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OrganizationId: ").Append(OrganizationId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  OauthClientId: ").Append(OauthClientId).Append("\n");
+            sb.Append("  OauthClientOrgId: ").Append(OauthClientOrgId).Append("\n");
             sb.Append("  Reason: ").Append(Reason).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
@@ -262,6 +273,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.OauthClientId.Equals(other.OauthClientId)
                 ) &&
                 (
+                    this.OauthClientOrgId == other.OauthClientOrgId ||
+                    this.OauthClientOrgId != null &&
+                    this.OauthClientOrgId.Equals(other.OauthClientOrgId)
+                ) &&
+                (
                     this.Reason == other.Reason ||
                     this.Reason != null &&
                     this.Reason.Equals(other.Reason)
@@ -306,6 +322,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.OauthClientId != null)
                     hash = hash * 59 + this.OauthClientId.GetHashCode();
+
+                if (this.OauthClientOrgId != null)
+                    hash = hash * 59 + this.OauthClientOrgId.GetHashCode();
 
                 if (this.Reason != null)
                     hash = hash * 59 + this.Reason.GetHashCode();

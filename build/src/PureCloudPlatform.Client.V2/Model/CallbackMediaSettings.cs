@@ -148,7 +148,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LiveVoiceFlow">The inbound flow to transfer to if a live voice is detected during the outbound call of a customer first callback..</param>
         /// <param name="AnsweringMachineReactionType">The action to take if an answering machine is detected during the outbound call of a customer first callback..</param>
         /// <param name="AnsweringMachineFlow">The inbound flow to transfer to if an answering machine is detected during the outbound call of a customer first callback when answeringMachineReactionType is set to TransferToFlow..</param>
-        public CallbackMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, ModeEnum? Mode = null, bool? EnableAutoDialAndEnd = null, int? AutoDialDelaySeconds = null, int? AutoEndDelaySeconds = null, double? PacingModifier = null, int? MaxRetryCount = null, int? RetryDelaySeconds = null, LiveVoiceReactionTypeEnum? LiveVoiceReactionType = null, DomainEntityRef LiveVoiceFlow = null, AnsweringMachineReactionTypeEnum? AnsweringMachineReactionType = null, DomainEntityRef AnsweringMachineFlow = null)
+        /// <param name="EdgeGroup">The identifier of the edge group that will place the calls. Can be set to specify custom edge group instead of default one..</param>
+        /// <param name="Site">The identifier of the site to be used for dialing; can be set in place of an edge group..</param>
+        public CallbackMediaSettings(bool? EnableAutoAnswer = null, int? AlertingTimeoutSeconds = null, ServiceLevel ServiceLevel = null, double? AutoAnswerAlertToneSeconds = null, double? ManualAnswerAlertToneSeconds = null, ModeEnum? Mode = null, bool? EnableAutoDialAndEnd = null, int? AutoDialDelaySeconds = null, int? AutoEndDelaySeconds = null, double? PacingModifier = null, int? MaxRetryCount = null, int? RetryDelaySeconds = null, LiveVoiceReactionTypeEnum? LiveVoiceReactionType = null, DomainEntityRef LiveVoiceFlow = null, AnsweringMachineReactionTypeEnum? AnsweringMachineReactionType = null, DomainEntityRef AnsweringMachineFlow = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null)
         {
             this.EnableAutoAnswer = EnableAutoAnswer;
             this.AlertingTimeoutSeconds = AlertingTimeoutSeconds;
@@ -166,6 +168,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.LiveVoiceFlow = LiveVoiceFlow;
             this.AnsweringMachineReactionType = AnsweringMachineReactionType;
             this.AnsweringMachineFlow = AnsweringMachineFlow;
+            this.EdgeGroup = EdgeGroup;
+            this.Site = Site;
             
         }
         
@@ -293,6 +297,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public DomainEntityRef AnsweringMachineFlow { get; set; }
 
 
+
+        /// <summary>
+        /// The identifier of the edge group that will place the calls. Can be set to specify custom edge group instead of default one.
+        /// </summary>
+        /// <value>The identifier of the edge group that will place the calls. Can be set to specify custom edge group instead of default one.</value>
+        [DataMember(Name="edgeGroup", EmitDefaultValue=false)]
+        public DomainEntityRef EdgeGroup { get; set; }
+
+
+
+        /// <summary>
+        /// The identifier of the site to be used for dialing; can be set in place of an edge group.
+        /// </summary>
+        /// <value>The identifier of the site to be used for dialing; can be set in place of an edge group.</value>
+        [DataMember(Name="site", EmitDefaultValue=false)]
+        public DomainEntityRef Site { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -318,6 +340,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  LiveVoiceFlow: ").Append(LiveVoiceFlow).Append("\n");
             sb.Append("  AnsweringMachineReactionType: ").Append(AnsweringMachineReactionType).Append("\n");
             sb.Append("  AnsweringMachineFlow: ").Append(AnsweringMachineFlow).Append("\n");
+            sb.Append("  EdgeGroup: ").Append(EdgeGroup).Append("\n");
+            sb.Append("  Site: ").Append(Site).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -437,6 +461,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AnsweringMachineFlow == other.AnsweringMachineFlow ||
                     this.AnsweringMachineFlow != null &&
                     this.AnsweringMachineFlow.Equals(other.AnsweringMachineFlow)
+                ) &&
+                (
+                    this.EdgeGroup == other.EdgeGroup ||
+                    this.EdgeGroup != null &&
+                    this.EdgeGroup.Equals(other.EdgeGroup)
+                ) &&
+                (
+                    this.Site == other.Site ||
+                    this.Site != null &&
+                    this.Site.Equals(other.Site)
                 );
         }
 
@@ -498,6 +532,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AnsweringMachineFlow != null)
                     hash = hash * 59 + this.AnsweringMachineFlow.GetHashCode();
+
+                if (this.EdgeGroup != null)
+                    hash = hash * 59 + this.EdgeGroup.GetHashCode();
+
+                if (this.Site != null)
+                    hash = hash * 59 + this.Site.GetHashCode();
 
                 return hash;
             }

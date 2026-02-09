@@ -115,12 +115,6 @@ namespace PureCloudPlatform.Client.V2.Model
             Reportsto,
             
             /// <summary>
-            /// Enum Staffinggroup for "StaffingGroup"
-            /// </summary>
-            [EnumMember(Value = "StaffingGroup")]
-            Staffinggroup,
-            
-            /// <summary>
             /// Enum Team for "Team"
             /// </summary>
             [EnumMember(Value = "Team")]

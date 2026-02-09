@@ -26,13 +26,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Primary">Primary.</param>
         /// <param name="Message">Message.</param>
         /// <param name="ModifiedDate">ModifiedDate.</param>
-        public PresenceEventUserPresence(string Source = null, PresenceEventOrganizationPresence PresenceDefinition = null, bool? Primary = null, string Message = null, DateTime? ModifiedDate = null)
+        /// <param name="FuturePresenceDefinition">FuturePresenceDefinition.</param>
+        public PresenceEventUserPresence(string Source = null, PresenceEventOrganizationPresence PresenceDefinition = null, bool? Primary = null, string Message = null, DateTime? ModifiedDate = null, PresenceEventOrganizationPresence FuturePresenceDefinition = null)
         {
             this.Source = Source;
             this.PresenceDefinition = PresenceDefinition;
             this.Primary = Primary;
             this.Message = Message;
             this.ModifiedDate = ModifiedDate;
+            this.FuturePresenceDefinition = FuturePresenceDefinition;
             
         }
         
@@ -77,6 +79,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public DateTime? ModifiedDate { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets FuturePresenceDefinition
+        /// </summary>
+        [DataMember(Name="futurePresenceDefinition", EmitDefaultValue=false)]
+        public PresenceEventOrganizationPresence FuturePresenceDefinition { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -91,6 +101,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Primary: ").Append(Primary).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
+            sb.Append("  FuturePresenceDefinition: ").Append(FuturePresenceDefinition).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,6 +166,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModifiedDate == other.ModifiedDate ||
                     this.ModifiedDate != null &&
                     this.ModifiedDate.Equals(other.ModifiedDate)
+                ) &&
+                (
+                    this.FuturePresenceDefinition == other.FuturePresenceDefinition ||
+                    this.FuturePresenceDefinition != null &&
+                    this.FuturePresenceDefinition.Equals(other.FuturePresenceDefinition)
                 );
         }
 
@@ -183,6 +199,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ModifiedDate != null)
                     hash = hash * 59 + this.ModifiedDate.GetHashCode();
+
+                if (this.FuturePresenceDefinition != null)
+                    hash = hash * 59 + this.FuturePresenceDefinition.GetHashCode();
 
                 return hash;
             }

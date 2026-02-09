@@ -13,15 +13,15 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// CaseReference
+    /// UsersRuleReference
     /// </summary>
     [DataContract]
-    public partial class CaseReference :  IEquatable<CaseReference>
+    public partial class UsersRuleReference :  IEquatable<UsersRuleReference>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CaseReference" /> class.
+        /// Initializes a new instance of the <see cref="UsersRuleReference" /> class.
         /// </summary>
-        public CaseReference()
+        public UsersRuleReference()
         {
             
         }
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CaseReference {\n");
+            sb.Append("class UsersRuleReference {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -81,15 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CaseReference);
+            return this.Equals(obj as UsersRuleReference);
         }
 
         /// <summary>
-        /// Returns true if CaseReference instances are equal
+        /// Returns true if UsersRuleReference instances are equal
         /// </summary>
-        /// <param name="other">Instance of CaseReference to be compared</param>
+        /// <param name="other">Instance of UsersRuleReference to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CaseReference other)
+        public bool Equals(UsersRuleReference other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

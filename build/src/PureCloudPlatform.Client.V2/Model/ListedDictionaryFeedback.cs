@@ -97,7 +97,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Failed for "Failed"
             /// </summary>
             [EnumMember(Value = "Failed")]
-            Failed
+            Failed,
+            
+            /// <summary>
+            /// Enum Saved for "Saved"
+            /// </summary>
+            [EnumMember(Value = "Saved")]
+            Saved
         }
         /// <summary>
         /// The source of the given dictionary feedback

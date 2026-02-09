@@ -156,7 +156,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum SessionExpired for "SESSION_EXPIRED"
             /// </summary>
             [EnumMember(Value = "SESSION_EXPIRED")]
-            SessionExpired
+            SessionExpired,
+            
+            /// <summary>
+            /// Enum Takeover for "TAKEOVER"
+            /// </summary>
+            [EnumMember(Value = "TAKEOVER")]
+            Takeover
         }
         /// <summary>
         /// Gets or Sets MediaType

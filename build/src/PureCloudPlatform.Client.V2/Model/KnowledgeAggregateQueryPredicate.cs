@@ -73,6 +73,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Agentassistantid,
             
             /// <summary>
+            /// Enum Answergenerationenabled for "answerGenerationEnabled"
+            /// </summary>
+            [EnumMember(Value = "answerGenerationEnabled")]
+            Answergenerationenabled,
+            
+            /// <summary>
             /// Enum Appdeploymentid for "appDeploymentId"
             /// </summary>
             [EnumMember(Value = "appDeploymentId")]
@@ -163,6 +169,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Hascomment,
             
             /// <summary>
+            /// Enum Hasretrievedreferences for "hasRetrievedReferences"
+            /// </summary>
+            [EnumMember(Value = "hasRetrievedReferences")]
+            Hasretrievedreferences,
+            
+            /// <summary>
             /// Enum Hassearch for "hasSearch"
             /// </summary>
             [EnumMember(Value = "hasSearch")]
@@ -193,6 +205,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Knowledgebaseid,
             
             /// <summary>
+            /// Enum Knowledgesettingid for "knowledgeSettingId"
+            /// </summary>
+            [EnumMember(Value = "knowledgeSettingId")]
+            Knowledgesettingid,
+            
+            /// <summary>
             /// Enum Languagecode for "languageCode"
             /// </summary>
             [EnumMember(Value = "languageCode")]
@@ -221,6 +239,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "queryType")]
             Querytype,
+            
+            /// <summary>
+            /// Enum Querytypev3 for "queryTypeV3"
+            /// </summary>
+            [EnumMember(Value = "queryTypeV3")]
+            Querytypev3,
             
             /// <summary>
             /// Enum Queueid for "queueId"

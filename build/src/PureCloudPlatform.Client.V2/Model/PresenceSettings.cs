@@ -23,10 +23,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Name">Name.</param>
         /// <param name="RestorePresenceSettings">The settings for the restore presence feature.</param>
-        public PresenceSettings(string Name = null, RestorePresenceSettings RestorePresenceSettings = null)
+        /// <param name="RequestingOffQueueEnabled">Whether requesting off queue is enabled for the organization.</param>
+        /// <param name="DefaultPrimaryPresenceRegisteredSourceId">The default primary presence registered source ID for the organization.</param>
+        public PresenceSettings(string Name = null, RestorePresenceSettings RestorePresenceSettings = null, bool? RequestingOffQueueEnabled = null, string DefaultPrimaryPresenceRegisteredSourceId = null)
         {
             this.Name = Name;
             this.RestorePresenceSettings = RestorePresenceSettings;
+            this.RequestingOffQueueEnabled = RequestingOffQueueEnabled;
+            this.DefaultPrimaryPresenceRegisteredSourceId = DefaultPrimaryPresenceRegisteredSourceId;
             
         }
         
@@ -59,6 +63,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether requesting off queue is enabled for the organization
+        /// </summary>
+        /// <value>Whether requesting off queue is enabled for the organization</value>
+        [DataMember(Name="requestingOffQueueEnabled", EmitDefaultValue=false)]
+        public bool? RequestingOffQueueEnabled { get; set; }
+
+
+
+        /// <summary>
+        /// The default primary presence registered source ID for the organization
+        /// </summary>
+        /// <value>The default primary presence registered source ID for the organization</value>
+        [DataMember(Name="defaultPrimaryPresenceRegisteredSourceId", EmitDefaultValue=false)]
+        public string DefaultPrimaryPresenceRegisteredSourceId { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -78,6 +100,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  RestorePresenceSettings: ").Append(RestorePresenceSettings).Append("\n");
+            sb.Append("  RequestingOffQueueEnabled: ").Append(RequestingOffQueueEnabled).Append("\n");
+            sb.Append("  DefaultPrimaryPresenceRegisteredSourceId: ").Append(DefaultPrimaryPresenceRegisteredSourceId).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -135,6 +159,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RestorePresenceSettings.Equals(other.RestorePresenceSettings)
                 ) &&
                 (
+                    this.RequestingOffQueueEnabled == other.RequestingOffQueueEnabled ||
+                    this.RequestingOffQueueEnabled != null &&
+                    this.RequestingOffQueueEnabled.Equals(other.RequestingOffQueueEnabled)
+                ) &&
+                (
+                    this.DefaultPrimaryPresenceRegisteredSourceId == other.DefaultPrimaryPresenceRegisteredSourceId ||
+                    this.DefaultPrimaryPresenceRegisteredSourceId != null &&
+                    this.DefaultPrimaryPresenceRegisteredSourceId.Equals(other.DefaultPrimaryPresenceRegisteredSourceId)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -160,6 +194,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RestorePresenceSettings != null)
                     hash = hash * 59 + this.RestorePresenceSettings.GetHashCode();
+
+                if (this.RequestingOffQueueEnabled != null)
+                    hash = hash * 59 + this.RequestingOffQueueEnabled.GetHashCode();
+
+                if (this.DefaultPrimaryPresenceRegisteredSourceId != null)
+                    hash = hash * 59 + this.DefaultPrimaryPresenceRegisteredSourceId.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

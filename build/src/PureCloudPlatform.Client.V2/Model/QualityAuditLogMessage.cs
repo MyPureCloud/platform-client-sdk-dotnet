@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Qualityservice for "QualityService"
             /// </summary>
             [EnumMember(Value = "QualityService")]
-            Qualityservice
+            Qualityservice,
+            
+            /// <summary>
+            /// Enum Horusservice for "HorusService"
+            /// </summary>
+            [EnumMember(Value = "HorusService")]
+            Horusservice
         }
         /// <summary>
         /// The level of this audit message.
@@ -208,7 +214,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Updateretention for "UpdateRetention"
             /// </summary>
             [EnumMember(Value = "UpdateRetention")]
-            Updateretention
+            Updateretention,
+            
+            /// <summary>
+            /// Enum Start for "Start"
+            /// </summary>
+            [EnumMember(Value = "Start")]
+            Start,
+            
+            /// <summary>
+            /// Enum Stop for "Stop"
+            /// </summary>
+            [EnumMember(Value = "Stop")]
+            Stop
         }
         /// <summary>
         /// Type of the entity that was impacted.

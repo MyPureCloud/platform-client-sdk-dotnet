@@ -22,9 +22,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ExternalContactReference" /> class.
         /// </summary>
         /// <param name="Id">The globally unique identifier for the object..</param>
-        public ExternalContactReference(string Id = null)
+        /// <param name="FirstName">The first name of the contact..</param>
+        /// <param name="LastName">The last name of the contact..</param>
+        public ExternalContactReference(string Id = null, string FirstName = null, string LastName = null)
         {
             this.Id = Id;
+            this.FirstName = FirstName;
+            this.LastName = LastName;
             
         }
         
@@ -36,6 +40,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// The first name of the contact.
+        /// </summary>
+        /// <value>The first name of the contact.</value>
+        [DataMember(Name="firstName", EmitDefaultValue=false)]
+        public string FirstName { get; set; }
+
+
+
+        /// <summary>
+        /// The last name of the contact.
+        /// </summary>
+        /// <value>The last name of the contact.</value>
+        [DataMember(Name="lastName", EmitDefaultValue=false)]
+        public string LastName { get; set; }
 
 
 
@@ -57,6 +79,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ExternalContactReference {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  FirstName: ").Append(FirstName).Append("\n");
+            sb.Append("  LastName: ").Append(LastName).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -104,6 +128,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.FirstName == other.FirstName ||
+                    this.FirstName != null &&
+                    this.FirstName.Equals(other.FirstName)
+                ) &&
+                (
+                    this.LastName == other.LastName ||
+                    this.LastName != null &&
+                    this.LastName.Equals(other.LastName)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -123,6 +157,12 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.FirstName != null)
+                    hash = hash * 59 + this.FirstName.GetHashCode();
+
+                if (this.LastName != null)
+                    hash = hash * 59 + this.LastName.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

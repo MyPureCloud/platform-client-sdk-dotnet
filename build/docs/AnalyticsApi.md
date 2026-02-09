@@ -123,6 +123,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostAnalyticsSurveysAggregatesQuery**](#PostAnalyticsSurveysAggregatesQuery) | **Post** /api/v2/analytics/surveys/aggregates/query | Query for survey aggregates |
 | [**PostAnalyticsTaskmanagementAggregatesJobs**](#PostAnalyticsTaskmanagementAggregatesJobs) | **Post** /api/v2/analytics/taskmanagement/aggregates/jobs | Query for task management aggregates asynchronously |
 | [**PostAnalyticsTaskmanagementAggregatesQuery**](#PostAnalyticsTaskmanagementAggregatesQuery) | **Post** /api/v2/analytics/taskmanagement/aggregates/query | Query for task management aggregates |
+| [**PostAnalyticsTaskmanagementMetricsQuery**](#PostAnalyticsTaskmanagementMetricsQuery) | **Post** /api/v2/analytics/taskmanagement/metrics/query | Query for task management observations |
 | [**PostAnalyticsTeamsActivityQuery**](#PostAnalyticsTeamsActivityQuery) | **Post** /api/v2/analytics/teams/activity/query | Query for team activity observations |
 | [**PostAnalyticsTranscriptsAggregatesJobs**](#PostAnalyticsTranscriptsAggregatesJobs) | **Post** /api/v2/analytics/transcripts/aggregates/jobs | Query for transcript aggregates asynchronously |
 | [**PostAnalyticsTranscriptsAggregatesQuery**](#PostAnalyticsTranscriptsAggregatesQuery) | **Post** /api/v2/analytics/transcripts/aggregates/query | Query for transcript aggregates |
@@ -7643,6 +7644,74 @@ namespace Example
 [**TaskManagementAggregateQueryResponse**](TaskManagementAggregateQueryResponse)
 
 
+## PostAnalyticsTaskmanagementMetricsQuery
+
+> [**TaskManagementObservationQueryResponse**](TaskManagementObservationQueryResponse) PostAnalyticsTaskmanagementMetricsQuery (TaskManagementObservationQuery body, string after = null, int? pageSize = null)
+
+
+Query for task management observations
+
+PostAnalyticsTaskmanagementMetricsQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* analytics:taskManagementObservation:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostAnalyticsTaskmanagementMetricsQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new AnalyticsApi();
+            var body = new TaskManagementObservationQuery(); // TaskManagementObservationQuery | query
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. Used for pagination. (optional) 
+            var pageSize = 56;  // int? | Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an `after` key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. (optional) 
+
+            try
+            { 
+                // Query for task management observations
+                TaskManagementObservationQueryResponse result = apiInstance.PostAnalyticsTaskmanagementMetricsQuery(body, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.PostAnalyticsTaskmanagementMetricsQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**TaskManagementObservationQuery**](TaskManagementObservationQuery)| query |  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. Used for pagination. | [optional]  |
+| **pageSize** | **int?**| Limit the number of entities to return. It is not guaranteed that the requested number of entities will be filled in a single request. If an &#x60;after&#x60; key is returned as part of the response it is possible that more entities that match the filter criteria exist. Maximum of 200. | [optional]  |
+
+### Return type
+
+[**TaskManagementObservationQueryResponse**](TaskManagementObservationQueryResponse)
+
+
 ## PostAnalyticsTeamsActivityQuery
 
 > [**TeamActivityResponse**](TeamActivityResponse) PostAnalyticsTeamsActivityQuery (TeamActivityQuery body, int? pageSize = null, int? pageNumber = null)
@@ -8275,4 +8344,4 @@ namespace Example
 [**AnalyticsDataRetentionResponse**](AnalyticsDataRetentionResponse)
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

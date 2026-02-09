@@ -1430,9 +1430,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>AssistantQueue</returns>
         
-        AssistantQueue GetRoutingQueueAssistant (string queueId, List<string> expand = null);
+        AssistantQueue GetRoutingQueueAssistant (string queueId, List<string> expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null);
 
         /// <summary>
         /// Get an assistant associated with a queue.
@@ -1443,9 +1445,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>ApiResponse of AssistantQueue</returns>
         
-        ApiResponse<AssistantQueue> GetRoutingQueueAssistantWithHttpInfo (string queueId, List<string> expand = null);
+        ApiResponse<AssistantQueue> GetRoutingQueueAssistantWithHttpInfo (string queueId, List<string> expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null);
 
         /// <summary>
         /// Get a Comparison Period.
@@ -2725,7 +2729,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update attributes of an in-queue conversation
         /// </summary>
         /// <remarks>
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -2738,7 +2742,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update attributes of an in-queue conversation
         /// </summary>
         /// <remarks>
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -2798,6 +2802,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of InboundDomain</returns>
         
         ApiResponse<InboundDomain> PatchRoutingEmailDomainValidateWithHttpInfo (string domainId, InboundDomainPatchRequest body);
+
+        /// <summary>
+        /// Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>OutboundDomain</returns>
+        
+        OutboundDomain PatchRoutingEmailOutboundDomain (string domainId, OutboundDomainPatchRequest body);
+
+        /// <summary>
+        /// Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>ApiResponse of OutboundDomain</returns>
+        
+        ApiResponse<OutboundDomain> PatchRoutingEmailOutboundDomainWithHttpInfo (string domainId, OutboundDomainPatchRequest body);
 
         /// <summary>
         /// Update single predictor.
@@ -2885,7 +2915,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of up to 100 users for a queue
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -2898,7 +2928,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of up to 100 users for a queue
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -3093,7 +3123,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of queues for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -3107,7 +3137,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of queues for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -3446,6 +3476,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of InboundDomain</returns>
         
         ApiResponse<InboundDomain> PostRoutingEmailDomainsWithHttpInfo (InboundDomainCreateRequest body);
+
+        /// <summary>
+        /// Tests the custom SMTP server integration connection set on this outbound domain
+        /// </summary>
+        /// <remarks>
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">TestMessage (optional)</param>
+        /// <returns>TestMessage</returns>
+        
+        TestMessage PostRoutingEmailOutboundDomainTestconnection (string domainId, TestMessage body = null);
+
+        /// <summary>
+        /// Tests the custom SMTP server integration connection set on this outbound domain
+        /// </summary>
+        /// <remarks>
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">TestMessage (optional)</param>
+        /// <returns>ApiResponse of TestMessage</returns>
+        
+        ApiResponse<TestMessage> PostRoutingEmailOutboundDomainTestconnectionWithHttpInfo (string domainId, TestMessage body = null);
 
         /// <summary>
         /// Create a domain
@@ -5830,9 +5886,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>Task of AssistantQueue</returns>
         
-        System.Threading.Tasks.Task<AssistantQueue> GetRoutingQueueAssistantAsync (string queueId, List<string> expand = null);
+        System.Threading.Tasks.Task<AssistantQueue> GetRoutingQueueAssistantAsync (string queueId, List<string> expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null);
 
         /// <summary>
         /// Get an assistant associated with a queue.
@@ -5843,9 +5901,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>Task of ApiResponse (AssistantQueue)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<AssistantQueue>> GetRoutingQueueAssistantAsyncWithHttpInfo (string queueId, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<AssistantQueue>> GetRoutingQueueAssistantAsyncWithHttpInfo (string queueId, List<string> expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null);
 
         /// <summary>
         /// Get a Comparison Period.
@@ -7125,7 +7185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update attributes of an in-queue conversation
         /// </summary>
         /// <remarks>
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -7138,7 +7198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update attributes of an in-queue conversation
         /// </summary>
         /// <remarks>
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -7198,6 +7258,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PatchRoutingEmailDomainValidateAsyncWithHttpInfo (string domainId, InboundDomainPatchRequest body);
+
+        /// <summary>
+        /// Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>Task of OutboundDomain</returns>
+        
+        System.Threading.Tasks.Task<OutboundDomain> PatchRoutingEmailOutboundDomainAsync (string domainId, OutboundDomainPatchRequest body);
+
+        /// <summary>
+        /// Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP).
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>Task of ApiResponse (OutboundDomain)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> PatchRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId, OutboundDomainPatchRequest body);
 
         /// <summary>
         /// Update single predictor.
@@ -7285,7 +7371,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of up to 100 users for a queue
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -7298,7 +7384,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of up to 100 users for a queue
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -7493,7 +7579,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of queues for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -7507,7 +7593,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Join or unjoin a set of queues for a user
         /// </summary>
         /// <remarks>
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -7846,6 +7932,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (InboundDomain)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<InboundDomain>> PostRoutingEmailDomainsAsyncWithHttpInfo (InboundDomainCreateRequest body);
+
+        /// <summary>
+        /// Tests the custom SMTP server integration connection set on this outbound domain
+        /// </summary>
+        /// <remarks>
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">TestMessage (optional)</param>
+        /// <returns>Task of TestMessage</returns>
+        
+        System.Threading.Tasks.Task<TestMessage> PostRoutingEmailOutboundDomainTestconnectionAsync (string domainId, TestMessage body = null);
+
+        /// <summary>
+        /// Tests the custom SMTP server integration connection set on this outbound domain
+        /// </summary>
+        /// <remarks>
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">TestMessage (optional)</param>
+        /// <returns>Task of ApiResponse (TestMessage)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<TestMessage>> PostRoutingEmailOutboundDomainTestconnectionAsyncWithHttpInfo (string domainId, TestMessage body = null);
 
         /// <summary>
         /// Create a domain
@@ -20123,11 +20235,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>AssistantQueue</returns>
         
-        public AssistantQueue GetRoutingQueueAssistant (string queueId, List<string> expand = null)
+        public AssistantQueue GetRoutingQueueAssistant (string queueId, List<string> expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null)
         {
-             ApiResponse<AssistantQueue> localVarResponse = GetRoutingQueueAssistantWithHttpInfo(queueId, expand);
+             ApiResponse<AssistantQueue> localVarResponse = GetRoutingQueueAssistantWithHttpInfo(queueId, expand, languageVariation, fallbackToPrimaryAssistant);
              return localVarResponse.Data;
         }
 
@@ -20138,9 +20252,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>ApiResponse of AssistantQueue</returns>
         
-        public ApiResponse< AssistantQueue > GetRoutingQueueAssistantWithHttpInfo (string queueId, List<string> expand = null)
+        public ApiResponse< AssistantQueue > GetRoutingQueueAssistantWithHttpInfo (string queueId, List<string> expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -20181,6 +20297,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (languageVariation != null) localVarQueryParams.Add(new Tuple<string, string>("languageVariation", this.Configuration.ApiClient.ParameterToString(languageVariation)));
+            if (fallbackToPrimaryAssistant != null) localVarQueryParams.Add(new Tuple<string, string>("fallbackToPrimaryAssistant", this.Configuration.ApiClient.ParameterToString(fallbackToPrimaryAssistant)));
 
             // Header params
 
@@ -20225,11 +20343,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>Task of AssistantQueue</returns>
         
-        public async System.Threading.Tasks.Task<AssistantQueue> GetRoutingQueueAssistantAsync (string queueId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<AssistantQueue> GetRoutingQueueAssistantAsync (string queueId, List<string> expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null)
         {
-             ApiResponse<AssistantQueue> localVarResponse = await GetRoutingQueueAssistantAsyncWithHttpInfo(queueId, expand);
+             ApiResponse<AssistantQueue> localVarResponse = await GetRoutingQueueAssistantAsyncWithHttpInfo(queueId, expand, languageVariation, fallbackToPrimaryAssistant);
              return localVarResponse.Data;
 
         }
@@ -20241,9 +20361,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>Task of ApiResponse (AssistantQueue)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<AssistantQueue>> GetRoutingQueueAssistantAsyncWithHttpInfo (string queueId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<AssistantQueue>> GetRoutingQueueAssistantAsyncWithHttpInfo (string queueId, List<string> expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null)
         { 
             // verify the required parameter 'queueId' is set
             if (queueId == null)
@@ -20285,6 +20407,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
+            if (languageVariation != null) localVarQueryParams.Add(new Tuple<string, string>("languageVariation", this.Configuration.ApiClient.ParameterToString(languageVariation)));
+            if (fallbackToPrimaryAssistant != null) localVarQueryParams.Add(new Tuple<string, string>("fallbackToPrimaryAssistant", this.Configuration.ApiClient.ParameterToString(fallbackToPrimaryAssistant)));
 
             // Header params
 
@@ -29726,7 +29850,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update attributes of an in-queue conversation 
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -29741,7 +29865,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update attributes of an in-queue conversation 
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -29836,7 +29960,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update attributes of an in-queue conversation 
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -29852,7 +29976,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update attributes of an in-queue conversation 
-        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, languageId, and priority.
+        /// Returns an object indicating the updated values of all settable attributes. Supported attributes: skillIds, skillExpression, languageId, and priority.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -30390,6 +30514,230 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<InboundDomain>(localVarStatusCode,
                 localVarHeaders,
                 (InboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP). 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>OutboundDomain</returns>
+        
+        public OutboundDomain PatchRoutingEmailOutboundDomain (string domainId, OutboundDomainPatchRequest body)
+        {
+             ApiResponse<OutboundDomain> localVarResponse = PatchRoutingEmailOutboundDomainWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP). 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>ApiResponse of OutboundDomain</returns>
+        
+        public ApiResponse< OutboundDomain > PatchRoutingEmailOutboundDomainWithHttpInfo (string domainId, OutboundDomainPatchRequest body)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PatchRoutingEmailOutboundDomain");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingEmailOutboundDomain");
+
+            var localVarPath = "/api/v2/routing/email/outbound/domains/{domainId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailOutboundDomain: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailOutboundDomain: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundDomain>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP). 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>Task of OutboundDomain</returns>
+        
+        public async System.Threading.Tasks.Task<OutboundDomain> PatchRoutingEmailOutboundDomainAsync (string domainId, OutboundDomainPatchRequest body)
+        {
+             ApiResponse<OutboundDomain> localVarResponse = await PatchRoutingEmailOutboundDomainAsyncWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update configurable settings for an email domain, such as changing the sending method (e.g., to or from SMTP). 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">Domain settings</param>
+        /// <returns>Task of ApiResponse (OutboundDomain)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<OutboundDomain>> PatchRoutingEmailOutboundDomainAsyncWithHttpInfo (string domainId, OutboundDomainPatchRequest body)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PatchRoutingEmailOutboundDomain");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling RoutingApi->PatchRoutingEmailOutboundDomain");
+            
+
+            var localVarPath = "/api/v2/routing/email/outbound/domains/{domainId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailOutboundDomain: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchRoutingEmailOutboundDomain: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<OutboundDomain>(localVarStatusCode,
+                localVarHeaders,
+                (OutboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(OutboundDomain)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -31071,7 +31419,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of up to 100 users for a queue 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -31086,7 +31434,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of up to 100 users for a queue 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -31181,7 +31529,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of up to 100 users for a queue 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -31197,7 +31545,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of up to 100 users for a queue 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="queueId">Queue ID</param>
@@ -32859,7 +33207,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of queues for a user 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -32875,7 +33223,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of queues for a user 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -32972,7 +33320,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of queues for a user 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -32989,7 +33337,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Join or unjoin a set of queues for a user 
-        /// 
+        /// Users can only be joined to queues where they have membership. Non-member user-queue pairs in the request will be disregarded. Note: This operation is processed asynchronously and the response data may not reflect the final state. Changes may take time to propagate. Query the GET endpoint after a delay to retrieve the current membership status.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">User ID</param>
@@ -35886,6 +36234,223 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<InboundDomain>(localVarStatusCode,
                 localVarHeaders,
                 (InboundDomain) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(InboundDomain)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Tests the custom SMTP server integration connection set on this outbound domain 
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">TestMessage (optional)</param>
+        /// <returns>TestMessage</returns>
+        
+        public TestMessage PostRoutingEmailOutboundDomainTestconnection (string domainId, TestMessage body = null)
+        {
+             ApiResponse<TestMessage> localVarResponse = PostRoutingEmailOutboundDomainTestconnectionWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Tests the custom SMTP server integration connection set on this outbound domain 
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">TestMessage (optional)</param>
+        /// <returns>ApiResponse of TestMessage</returns>
+        
+        public ApiResponse< TestMessage > PostRoutingEmailOutboundDomainTestconnectionWithHttpInfo (string domainId, TestMessage body = null)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PostRoutingEmailOutboundDomainTestconnection");
+
+            var localVarPath = "/api/v2/routing/email/outbound/domains/{domainId}/testconnection";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailOutboundDomainTestconnection: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailOutboundDomainTestconnection: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TestMessage>(localVarStatusCode,
+                localVarHeaders,
+                (TestMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TestMessage)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Tests the custom SMTP server integration connection set on this outbound domain 
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">TestMessage (optional)</param>
+        /// <returns>Task of TestMessage</returns>
+        
+        public async System.Threading.Tasks.Task<TestMessage> PostRoutingEmailOutboundDomainTestconnectionAsync (string domainId, TestMessage body = null)
+        {
+             ApiResponse<TestMessage> localVarResponse = await PostRoutingEmailOutboundDomainTestconnectionAsyncWithHttpInfo(domainId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Tests the custom SMTP server integration connection set on this outbound domain 
+        /// The request body is optional. If omitted, this endpoint will just test the connection of the Custom SMTP Server for the outbound domain. If the body is specified, there will be an attempt to send an email message to the server.
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="domainId">domain ID</param>
+        /// <param name="body">TestMessage (optional)</param>
+        /// <returns>Task of ApiResponse (TestMessage)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<TestMessage>> PostRoutingEmailOutboundDomainTestconnectionAsyncWithHttpInfo (string domainId, TestMessage body = null)
+        { 
+            // verify the required parameter 'domainId' is set
+            if (domainId == null)
+                throw new ApiException(400, "Missing required parameter 'domainId' when calling RoutingApi->PostRoutingEmailOutboundDomainTestconnection");
+            
+
+            var localVarPath = "/api/v2/routing/email/outbound/domains/{domainId}/testconnection";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (domainId != null) localVarPathParams.Add("domainId", this.Configuration.ApiClient.ParameterToString(domainId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailOutboundDomainTestconnection: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostRoutingEmailOutboundDomainTestconnection: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<TestMessage>(localVarStatusCode,
+                localVarHeaders,
+                (TestMessage) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TestMessage)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

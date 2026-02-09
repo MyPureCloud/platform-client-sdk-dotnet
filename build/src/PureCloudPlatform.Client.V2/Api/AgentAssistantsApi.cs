@@ -124,9 +124,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assistantId">Assistant ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>Assistant</returns>
         
-        Assistant GetAssistant (string assistantId, string expand = null);
+        Assistant GetAssistant (string assistantId, string expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null);
 
         /// <summary>
         /// Get an assistant.
@@ -137,9 +139,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assistantId">Assistant ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>ApiResponse of Assistant</returns>
         
-        ApiResponse<Assistant> GetAssistantWithHttpInfo (string assistantId, string expand = null);
+        ApiResponse<Assistant> GetAssistantWithHttpInfo (string assistantId, string expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null);
 
         /// <summary>
         /// Get queue Information for an assistant.
@@ -758,9 +762,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assistantId">Assistant ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>Task of Assistant</returns>
         
-        System.Threading.Tasks.Task<Assistant> GetAssistantAsync (string assistantId, string expand = null);
+        System.Threading.Tasks.Task<Assistant> GetAssistantAsync (string assistantId, string expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null);
 
         /// <summary>
         /// Get an assistant.
@@ -771,9 +777,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assistantId">Assistant ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>Task of ApiResponse (Assistant)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Assistant>> GetAssistantAsyncWithHttpInfo (string assistantId, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Assistant>> GetAssistantAsyncWithHttpInfo (string assistantId, string expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null);
 
         /// <summary>
         /// Get queue Information for an assistant.
@@ -2193,11 +2201,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assistantId">Assistant ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>Assistant</returns>
         
-        public Assistant GetAssistant (string assistantId, string expand = null)
+        public Assistant GetAssistant (string assistantId, string expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null)
         {
-             ApiResponse<Assistant> localVarResponse = GetAssistantWithHttpInfo(assistantId, expand);
+             ApiResponse<Assistant> localVarResponse = GetAssistantWithHttpInfo(assistantId, expand, languageVariation, fallbackToPrimaryAssistant);
              return localVarResponse.Data;
         }
 
@@ -2208,9 +2218,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assistantId">Assistant ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>ApiResponse of Assistant</returns>
         
-        public ApiResponse< Assistant > GetAssistantWithHttpInfo (string assistantId, string expand = null)
+        public ApiResponse< Assistant > GetAssistantWithHttpInfo (string assistantId, string expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null)
         { 
             // verify the required parameter 'assistantId' is set
             if (assistantId == null)
@@ -2251,6 +2263,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (languageVariation != null) localVarQueryParams.Add(new Tuple<string, string>("languageVariation", this.Configuration.ApiClient.ParameterToString(languageVariation)));
+            if (fallbackToPrimaryAssistant != null) localVarQueryParams.Add(new Tuple<string, string>("fallbackToPrimaryAssistant", this.Configuration.ApiClient.ParameterToString(fallbackToPrimaryAssistant)));
 
             // Header params
 
@@ -2295,11 +2309,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assistantId">Assistant ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>Task of Assistant</returns>
         
-        public async System.Threading.Tasks.Task<Assistant> GetAssistantAsync (string assistantId, string expand = null)
+        public async System.Threading.Tasks.Task<Assistant> GetAssistantAsync (string assistantId, string expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null)
         {
-             ApiResponse<Assistant> localVarResponse = await GetAssistantAsyncWithHttpInfo(assistantId, expand);
+             ApiResponse<Assistant> localVarResponse = await GetAssistantAsyncWithHttpInfo(assistantId, expand, languageVariation, fallbackToPrimaryAssistant);
              return localVarResponse.Data;
 
         }
@@ -2311,9 +2327,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="assistantId">Assistant ID</param>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
+        /// <param name="languageVariation">Language variation (optional)</param>
+        /// <param name="fallbackToPrimaryAssistant">Fall back to primary assistant if specified variation is not found (optional)</param>
         /// <returns>Task of ApiResponse (Assistant)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Assistant>> GetAssistantAsyncWithHttpInfo (string assistantId, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Assistant>> GetAssistantAsyncWithHttpInfo (string assistantId, string expand = null, string languageVariation = null, bool? fallbackToPrimaryAssistant = null)
         { 
             // verify the required parameter 'assistantId' is set
             if (assistantId == null)
@@ -2355,6 +2373,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
             // Query params
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
+            if (languageVariation != null) localVarQueryParams.Add(new Tuple<string, string>("languageVariation", this.Configuration.ApiClient.ParameterToString(languageVariation)));
+            if (fallbackToPrimaryAssistant != null) localVarQueryParams.Add(new Tuple<string, string>("fallbackToPrimaryAssistant", this.Configuration.ApiClient.ParameterToString(fallbackToPrimaryAssistant)));
 
             // Header params
 

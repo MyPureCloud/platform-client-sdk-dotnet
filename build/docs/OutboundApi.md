@@ -138,6 +138,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundContactlistfiltersBulkRetrieve**](#PostOutboundContactlistfiltersBulkRetrieve) | **Post** /api/v2/outbound/contactlistfilters/bulk/retrieve | Retrieve multiple contact list filters |
 | [**PostOutboundContactlistfiltersPreview**](#PostOutboundContactlistfiltersPreview) | **Post** /api/v2/outbound/contactlistfilters/preview | Get a preview of the output of a contact list filter |
 | [**PostOutboundContactlists**](#PostOutboundContactlists) | **Post** /api/v2/outbound/contactlists | Create a contact List. |
+| [**PostOutboundContactlistsUploads**](#PostOutboundContactlistsUploads) | **Post** /api/v2/outbound/contactlists/uploads | Generate presigned upload URL for contact list. |
 | [**PostOutboundContactlisttemplates**](#PostOutboundContactlisttemplates) | **Post** /api/v2/outbound/contactlisttemplates | Create Contact List Template |
 | [**PostOutboundContactlisttemplatesBulkAdd**](#PostOutboundContactlisttemplatesBulkAdd) | **Post** /api/v2/outbound/contactlisttemplates/bulk/add | Add multiple contact list templates |
 | [**PostOutboundContactlisttemplatesBulkRetrieve**](#PostOutboundContactlisttemplatesBulkRetrieve) | **Post** /api/v2/outbound/contactlisttemplates/bulk/retrieve | Get multiple contact list templates |
@@ -147,6 +148,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostOutboundDnclistExport**](#PostOutboundDnclistExport) | **Post** /api/v2/outbound/dnclists/{dncListId}/export | Initiate the export of a dnc list. |
 | [**PostOutboundDnclistPhonenumbers**](#PostOutboundDnclistPhonenumbers) | **Post** /api/v2/outbound/dnclists/{dncListId}/phonenumbers | Add phone numbers to a DNC list. |
 | [**PostOutboundDnclists**](#PostOutboundDnclists) | **Post** /api/v2/outbound/dnclists | Create dialer DNC list |
+| [**PostOutboundDnclistsUploads**](#PostOutboundDnclistsUploads) | **Post** /api/v2/outbound/dnclists/uploads | Generate presigned upload URL for dnc list. |
 | [**PostOutboundFilespecificationtemplates**](#PostOutboundFilespecificationtemplates) | **Post** /api/v2/outbound/filespecificationtemplates | Create File Specification Template |
 | [**PostOutboundImporttemplates**](#PostOutboundImporttemplates) | **Post** /api/v2/outbound/importtemplates | Create Import Template |
 | [**PostOutboundImporttemplatesBulkAdd**](#PostOutboundImporttemplatesBulkAdd) | **Post** /api/v2/outbound/importtemplates/bulk/add | Add multiple import templates |
@@ -8793,6 +8795,68 @@ namespace Example
 [**ContactList**](ContactList)
 
 
+## PostOutboundContactlistsUploads
+
+> [**UploadUrlResponse**](UploadUrlResponse) PostOutboundContactlistsUploads (ContactListUploadUrlRequest body)
+
+
+Generate presigned upload URL for contact list.
+
+Requires ANY permissions: 
+
+* outbound:contactList:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundContactlistsUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new ContactListUploadUrlRequest(); // ContactListUploadUrlRequest | contactListUploadUrlRequest
+
+            try
+            { 
+                // Generate presigned upload URL for contact list.
+                UploadUrlResponse result = apiInstance.PostOutboundContactlistsUploads(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundContactlistsUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ContactListUploadUrlRequest**](ContactListUploadUrlRequest)| contactListUploadUrlRequest |  |
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
+
+
 ## PostOutboundContactlisttemplates
 
 > [**ContactListTemplate**](ContactListTemplate) PostOutboundContactlisttemplates (ContactListTemplate body)
@@ -9359,6 +9423,68 @@ namespace Example
 ### Return type
 
 [**DncList**](DncList)
+
+
+## PostOutboundDnclistsUploads
+
+> [**UploadUrlResponse**](UploadUrlResponse) PostOutboundDnclistsUploads (DNCListUploadUrlRequest body)
+
+
+Generate presigned upload URL for dnc list.
+
+Requires ANY permissions: 
+
+* outbound:dncList:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostOutboundDnclistsUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var body = new DNCListUploadUrlRequest(); // DNCListUploadUrlRequest | dncListUploadUrlRequest
+
+            try
+            { 
+                // Generate presigned upload URL for dnc list.
+                UploadUrlResponse result = apiInstance.PostOutboundDnclistsUploads(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.PostOutboundDnclistsUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**DNCListUploadUrlRequest**](DNCListUploadUrlRequest)| dncListUploadUrlRequest |  |
+
+### Return type
+
+[**UploadUrlResponse**](UploadUrlResponse)
 
 
 ## PostOutboundFilespecificationtemplates
@@ -11413,4 +11539,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_
