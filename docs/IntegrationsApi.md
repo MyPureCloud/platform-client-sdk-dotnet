@@ -1150,7 +1150,7 @@ namespace Example
 
 ## GetIntegrationsActions
 
-> [**ActionEntityListing**](ActionEntityListing) GetIntegrationsActions (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
+> [**ActionEntityListing**](ActionEntityListing) GetIntegrationsActions (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null, bool? includeConfig = null)
 
 
 Retrieves all actions associated with filters passed in via query param.
@@ -1193,11 +1193,12 @@ namespace Example
             var ids = ids_example;  // string | Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional) 
             var secure = secure_example;  // string | Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional) 
             var includeAuthActions = includeAuthActions_example;  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)  (default to false)
+            var includeConfig = includeConfig_example;  // bool? | Return config in response. (optional)  (default to false)
 
             try
             { 
                 // Retrieves all actions associated with filters passed in via query param.
-                ActionEntityListing result = apiInstance.GetIntegrationsActions(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions);
+                ActionEntityListing result = apiInstance.GetIntegrationsActions(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions, includeConfig);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1225,6 +1226,7 @@ namespace Example
 | **ids** | **string**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional]  |
 | **secure** | **string**| Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
 | **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: true, false |
+| **includeConfig** | **bool?**| Return config in response. | [optional] [default to false]<br />**Values**: true, false |
 
 ### Return type
 
@@ -1429,7 +1431,7 @@ This endpoint does require any parameters.
 
 ## GetIntegrationsActionsDrafts
 
-> [**ActionEntityListing**](ActionEntityListing) GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null)
+> [**ActionEntityListing**](ActionEntityListing) GetIntegrationsActionsDrafts (int? pageSize = null, int? pageNumber = null, string nextPage = null, string previousPage = null, string sortBy = null, string sortOrder = null, string category = null, string name = null, string ids = null, string secure = null, string includeAuthActions = null, bool? includeConfig = null)
 
 
 Retrieves all action drafts associated with the filters passed in via query param.
@@ -1472,11 +1474,12 @@ namespace Example
             var ids = ids_example;  // string | Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. (optional) 
             var secure = secure_example;  // string | Filter based on 'secure' configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. (optional) 
             var includeAuthActions = includeAuthActions_example;  // string | Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. (optional)  (default to false)
+            var includeConfig = includeConfig_example;  // bool? | Return config in response. (optional)  (default to false)
 
             try
             { 
                 // Retrieves all action drafts associated with the filters passed in via query param.
-                ActionEntityListing result = apiInstance.GetIntegrationsActionsDrafts(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions);
+                ActionEntityListing result = apiInstance.GetIntegrationsActionsDrafts(pageSize, pageNumber, nextPage, previousPage, sortBy, sortOrder, category, name, ids, secure, includeAuthActions, includeConfig);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1504,6 +1507,7 @@ namespace Example
 | **ids** | **string**| Filter by action Id. Can be a comma separated list to request multiple actions.  Limit of 50 Ids. | [optional]  |
 | **secure** | **string**| Filter based on &#39;secure&#39; configuration option. True will only return actions marked as secure. False will return only non-secure actions. Do not use filter if you want all Actions. | [optional] <br />**Values**: true, false |
 | **includeAuthActions** | **string**| Whether or not to include authentication actions in the response. These actions are not directly executable. Some integrations create them and will run them as needed to refresh authentication information for other actions. | [optional] [default to false]<br />**Values**: true, false |
+| **includeConfig** | **bool?**| Return config in response. | [optional] [default to false]<br />**Values**: true, false |
 
 ### Return type
 
@@ -6141,4 +6145,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

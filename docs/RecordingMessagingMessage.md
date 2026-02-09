@@ -12,6 +12,7 @@
 | **To** | **string** | The message recipient. | [optional] |
 | **Timestamp** | **DateTime?** | The time when the message was sent. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Id** | **string** | A globally unique identifier for this communication. | [optional] |
+| **Status** | **string** | Status of the message | [optional] |
 | **Purpose** | **string** | A well known string that specifies the purpose or type of the participant on this communication. | [optional] |
 | **ParticipantId** | **string** | A globally unique identifier for the participant on this communication. | [optional] |
 | **Queue** | [**AddressableEntityRef**](AddressableEntityRef) | A globally unique identifier for the queue involved in this communication. | [optional] |
@@ -35,7 +36,8 @@
 | **PaymentResponse** | [**PaymentResponse**](PaymentResponse) | Payment response content. | [optional] |
 | **Form** | [**RecordingForm**](RecordingForm) | Form content. | [optional] |
 | **RoadsideAssistance** | [**RecordingRoadsideAssistance**](RecordingRoadsideAssistance) | Roadside Assistance content. | [optional] |
+| **MessageReceipts** | [**List&lt;RecordingMessageReceipt&gt;**](RecordingMessageReceipt) | List of message receipts | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

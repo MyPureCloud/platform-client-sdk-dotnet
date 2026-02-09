@@ -2465,7 +2465,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **divisionId** | **string**| Division ID |  |
-| **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, EMAILCAMPAIGN, MESSAGINGCAMPAIGN, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, FLOWMILESTONE, FLOWOUTCOME, USER, CALLROUTE, EMERGENCYGROUPS, ROUTINGSCHEDULES, ROUTINGSCHEDULEGROUPS, DATATABLES, TEAM, WORKBIN, WORKTYPE, EXTENSIONPOOL, SKILLGROUP, SCRIPT |
+| **objectType** | **string**| The type of the objects. Must be one of the valid object types | <br />**Values**: QUEUE, CAMPAIGN, CONTACTLIST, DNCLIST, EMAILCAMPAIGN, MESSAGINGCAMPAIGN, MANAGEMENTUNIT, BUSINESSUNIT, FLOW, FLOWMILESTONE, FLOWOUTCOME, USER, CALLROUTE, EMERGENCYGROUPS, ROUTINGSCHEDULES, ROUTINGSCHEDULEGROUPS, DATATABLES, TEAM, WORKBIN, WORKTYPE, EXTENSIONPOOL, SKILLGROUP, SCRIPT, LIBRARY |
 | **body** | [**List<string>**](string)| Object Id List |  |
 
 ### Return type
@@ -2602,7 +2602,7 @@ namespace Example
 
 ## PostAuthorizationPoliciesTarget
 
-> [**AuthorizationPolicy**](AuthorizationPolicy) PostAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body)
+> [**AuthorizationPolicy**](AuthorizationPolicy) PostAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null)
 
 
 Add an access control policy for a specified resource target and subject
@@ -2635,11 +2635,12 @@ namespace Example
             var apiInstance = new AuthorizationApi();
             var targetName = targetName_example;  // string | The domain:entity:action target to which the policy will be applied
             var body = new AuthorizationPolicy(); // AuthorizationPolicy | Access control policy
+            var skipLockoutCheck = true;  // bool? | Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional)  (default to false)
 
             try
             { 
                 // Add an access control policy for a specified resource target and subject
-                AuthorizationPolicy result = apiInstance.PostAuthorizationPoliciesTarget(targetName, body);
+                AuthorizationPolicy result = apiInstance.PostAuthorizationPoliciesTarget(targetName, body, skipLockoutCheck);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2658,6 +2659,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **targetName** | **string**| The domain:entity:action target to which the policy will be applied |  |
 | **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy |  |
+| **skipLockoutCheck** | **bool?**| Skip lockout check; if true, policy will not be evaluated against current context for lockout risk | [optional] [default to false] |
 
 ### Return type
 
@@ -3380,7 +3382,7 @@ namespace Example
 
 ## PutAuthorizationPoliciesTarget
 
-> [**AuthorizationPolicy**](AuthorizationPolicy) PutAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body)
+> [**AuthorizationPolicy**](AuthorizationPolicy) PutAuthorizationPoliciesTarget (string targetName, AuthorizationPolicy body, bool? skipLockoutCheck = null)
 
 
 Add an access control policy for a specified resource target and subject, overwriting any existing policy
@@ -3414,11 +3416,12 @@ namespace Example
             var apiInstance = new AuthorizationApi();
             var targetName = targetName_example;  // string | The domain:entity:action target to which the policy will be applied
             var body = new AuthorizationPolicy(); // AuthorizationPolicy | Access control policy
+            var skipLockoutCheck = true;  // bool? | Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional)  (default to false)
 
             try
             { 
                 // Add an access control policy for a specified resource target and subject, overwriting any existing policy
-                AuthorizationPolicy result = apiInstance.PutAuthorizationPoliciesTarget(targetName, body);
+                AuthorizationPolicy result = apiInstance.PutAuthorizationPoliciesTarget(targetName, body, skipLockoutCheck);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3437,6 +3440,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **targetName** | **string**| The domain:entity:action target to which the policy will be applied |  |
 | **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy |  |
+| **skipLockoutCheck** | **bool?**| Skip lockout check; if true, policy will not be evaluated against current context for lockout risk | [optional] [default to false] |
 
 ### Return type
 
@@ -3445,7 +3449,7 @@ namespace Example
 
 ## PutAuthorizationPolicy
 
-> [**AuthorizationPolicy**](AuthorizationPolicy) PutAuthorizationPolicy (string policyId, AuthorizationPolicy body)
+> [**AuthorizationPolicy**](AuthorizationPolicy) PutAuthorizationPolicy (string policyId, AuthorizationPolicy body, bool? skipLockoutCheck = null)
 
 
 Update an access control policy with a given ID
@@ -3478,11 +3482,12 @@ namespace Example
             var apiInstance = new AuthorizationApi();
             var policyId = policyId_example;  // string | The ID of the policy to update
             var body = new AuthorizationPolicy(); // AuthorizationPolicy | Access control policy
+            var skipLockoutCheck = true;  // bool? | Skip lockout check; if true, policy will not be evaluated against current context for lockout risk (optional)  (default to false)
 
             try
             { 
                 // Update an access control policy with a given ID
-                AuthorizationPolicy result = apiInstance.PutAuthorizationPolicy(policyId, body);
+                AuthorizationPolicy result = apiInstance.PutAuthorizationPolicy(policyId, body, skipLockoutCheck);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3501,6 +3506,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **policyId** | **string**| The ID of the policy to update |  |
 | **body** | [**AuthorizationPolicy**](AuthorizationPolicy)| Access control policy |  |
+| **skipLockoutCheck** | **bool?**| Skip lockout check; if true, policy will not be evaluated against current context for lockout risk | [optional] [default to false] |
 
 ### Return type
 
@@ -3892,4 +3898,4 @@ namespace Example
 [**UserAuthorization**](UserAuthorization)
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

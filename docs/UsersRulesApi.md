@@ -205,7 +205,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **ruleId** | **string**| The ID of the rule for which to retrieve dependents |  |
-| **ruleType** | **string**| The type of the dependent | <br />**Values**: learning |
+| **ruleType** | **string**| The type of the dependent | <br />**Values**: learning, activityplan |
 | **typeId** | **string**| The type ID of the dependent |  |
 
 ### Return type
@@ -627,4 +627,4 @@ namespace Example
 [**UsersRulesQueryResponse**](UsersRulesQueryResponse)
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_

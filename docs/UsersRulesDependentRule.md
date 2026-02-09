@@ -1,6 +1,6 @@
-# CaseReference
+# UsersRulesDependentRule
 
-## ININ.PureCloudApi.Model.CaseReference
+## ININ.PureCloudApi.Model.UsersRulesDependentRule
 
 ## Properties
 
@@ -11,4 +11,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 255.0.0_
+_PureCloudPlatform.Client.V2 256.0.0_
