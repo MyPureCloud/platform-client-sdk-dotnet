@@ -15,6 +15,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetTelephonyProvidersEdgesSitesSearch**](#GetTelephonyProvidersEdgesSitesSearch) | **Get** /api/v2/telephony/providers/edges/sites/search | Search sites using the q64 value returned from a previous search |
 | [**GetUsersSearch**](#GetUsersSearch) | **Get** /api/v2/users/search | Search users using the q64 value returned from a previous search |
 | [**GetVoicemailSearch**](#GetVoicemailSearch) | **Get** /api/v2/voicemail/search | Search voicemails using the q64 value returned from a previous search |
+| [**PostConversationsCustomattributesSearch**](#PostConversationsCustomattributesSearch) | **Post** /api/v2/conversations/customattributes/search | Search resources. |
 | [**PostConversationsParticipantsAttributesSearch**](#PostConversationsParticipantsAttributesSearch) | **Post** /api/v2/conversations/participants/attributes/search | Search conversations |
 | [**PostDocumentationAllSearch**](#PostDocumentationAllSearch) | **Post** /api/v2/documentation/all/search | Search all documents |
 | [**PostDocumentationGknSearch**](#PostDocumentationGknSearch) | **Post** /api/v2/documentation/gkn/search | Search gkn documentation |
@@ -594,6 +595,68 @@ namespace Example
 ### Return type
 
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
+
+
+## PostConversationsCustomattributesSearch
+
+> [**JsonSearchResponse**](JsonSearchResponse) PostConversationsCustomattributesSearch (ConversationCustomAttributesSearchRequest body)
+
+
+Search resources.
+
+Requires ANY permissions: 
+
+* conversation:customAttributes:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCustomattributesSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new SearchApi();
+            var body = new ConversationCustomAttributesSearchRequest(); // ConversationCustomAttributesSearchRequest | Search request options
+
+            try
+            { 
+                // Search resources.
+                JsonSearchResponse result = apiInstance.PostConversationsCustomattributesSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling SearchApi.PostConversationsCustomattributesSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ConversationCustomAttributesSearchRequest**](ConversationCustomAttributesSearchRequest)| Search request options |  |
+
+### Return type
+
+[**JsonSearchResponse**](JsonSearchResponse)
 
 
 ## PostConversationsParticipantsAttributesSearch
@@ -1578,4 +1641,4 @@ namespace Example
 [**VoicemailsSearchResponse**](VoicemailsSearchResponse)
 
 
-_PureCloudPlatform.Client.V2 256.0.0_
+_PureCloudPlatform.Client.V2 257.0.0_

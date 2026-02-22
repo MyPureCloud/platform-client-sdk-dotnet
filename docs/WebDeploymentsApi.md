@@ -331,12 +331,10 @@ namespace Example
 
 ## GetWebdeploymentsConfigurationVersions
 
-> [**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing) GetWebdeploymentsConfigurationVersions (string configurationId)
+> [**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing) GetWebdeploymentsConfigurationVersions (string configurationId, string pageSize = null, string before = null, string after = null)
 
 
 Get the versions of a configuration
-
-This returns the 50 most recent versions for this configuration
 
 Requires ALL permissions: 
 
@@ -365,11 +363,14 @@ namespace Example
 
             var apiInstance = new WebDeploymentsApi();
             var configurationId = configurationId_example;  // string | The configuration version ID
+            var pageSize = pageSize_example;  // string | Number of entities to return. Defaults to 300. (optional) 
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
 
             try
             { 
                 // Get the versions of a configuration
-                WebDeploymentConfigurationVersionEntityListing result = apiInstance.GetWebdeploymentsConfigurationVersions(configurationId);
+                WebDeploymentConfigurationVersionEntityListing result = apiInstance.GetWebdeploymentsConfigurationVersions(configurationId, pageSize, before, after);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -387,6 +388,9 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **configurationId** | **string**| The configuration version ID |  |
+| **pageSize** | **string**| Number of entities to return. Defaults to 300. | [optional]  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 
 ### Return type
 
@@ -457,7 +461,7 @@ namespace Example
 
 ## GetWebdeploymentsConfigurations
 
-> [**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing) GetWebdeploymentsConfigurations (bool? showOnlyPublished = null)
+> [**WebDeploymentConfigurationVersionEntityListing**](WebDeploymentConfigurationVersionEntityListing) GetWebdeploymentsConfigurations (string pageSize = null, string before = null, string after = null, bool? showOnlyPublished = null)
 
 
 View configuration drafts
@@ -488,12 +492,15 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WebDeploymentsApi();
+            var pageSize = pageSize_example;  // string | Number of entities to return. Defaults to 300. (optional) 
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var showOnlyPublished = true;  // bool? | Filter by published status. (optional) 
 
             try
             { 
                 // View configuration drafts
-                WebDeploymentConfigurationVersionEntityListing result = apiInstance.GetWebdeploymentsConfigurations(showOnlyPublished);
+                WebDeploymentConfigurationVersionEntityListing result = apiInstance.GetWebdeploymentsConfigurations(pageSize, before, after, showOnlyPublished);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -510,6 +517,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **pageSize** | **string**| Number of entities to return. Defaults to 300. | [optional]  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **showOnlyPublished** | **bool?**| Filter by published status. | [optional]  |
 
 ### Return type
@@ -768,7 +778,7 @@ namespace Example
 
 ## GetWebdeploymentsDeployments
 
-> [**ExpandableWebDeploymentEntityListing**](ExpandableWebDeploymentEntityListing) GetWebdeploymentsDeployments (List<string> expand = null)
+> [**ExpandableWebDeploymentEntityListing**](ExpandableWebDeploymentEntityListing) GetWebdeploymentsDeployments (string pageSize = null, string before = null, string after = null, List<string> expand = null)
 
 
 Get deployments
@@ -799,12 +809,15 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new WebDeploymentsApi();
+            var pageSize = pageSize_example;  // string | Number of entities to return. Defaults to 300. (optional) 
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
             var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected.  (optional) 
 
             try
             { 
                 // Get deployments
-                ExpandableWebDeploymentEntityListing result = apiInstance.GetWebdeploymentsDeployments(expand);
+                ExpandableWebDeploymentEntityListing result = apiInstance.GetWebdeploymentsDeployments(pageSize, before, after, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -821,6 +834,9 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
+| **pageSize** | **string**| Number of entities to return. Defaults to 300. | [optional]  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected.  | [optional] <br />**Values**: Configuration, SupportedContent, identityresolution |
 
 ### Return type
@@ -1318,4 +1334,4 @@ namespace Example
 [**DeploymentIdentityResolutionConfig**](DeploymentIdentityResolutionConfig)
 
 
-_PureCloudPlatform.Client.V2 256.0.0_
+_PureCloudPlatform.Client.V2 257.0.0_

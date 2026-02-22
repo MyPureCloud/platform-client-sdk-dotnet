@@ -12,6 +12,7 @@
 | **MessagingSetting** | [**MessagingSettingReference**](MessagingSettingReference) |  | [optional] |
 | **Status** | **string** | The status of the Integration | [optional] |
 | **MessengerType** | **string** | The type of Messaging Integration | |
+| **OpenExtensionType** | **string** | The type of Open Messaging Integration Extension. Only present when &#39;messengerType&#39; is &#39;open&#39; and the Open Integration has an extension | [optional] |
 | **Recipient** | [**DomainEntityRef**](DomainEntityRef) | The recipient associated to the Integration. This recipient is used to associate a flow to an integration | [optional] |
 | **DateCreated** | **DateTime?** | Date this Integration was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Date this Integration was modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
@@ -22,4 +23,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 256.0.0_
+_PureCloudPlatform.Client.V2 257.0.0_

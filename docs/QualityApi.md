@@ -4190,7 +4190,7 @@ namespace Example
 
 ## PostQualitySurveys
 
-> [**Survey**](Survey) PostQualitySurveys (CreateSurveyRequest body)
+> [**CreateSurveyResponse**](CreateSurveyResponse) PostQualitySurveys (CreateSurveyRequest body)
 
 
 Create a survey for a conversation
@@ -4226,7 +4226,7 @@ namespace Example
             try
             { 
                 // Create a survey for a conversation
-                Survey result = apiInstance.PostQualitySurveys(body);
+                CreateSurveyResponse result = apiInstance.PostQualitySurveys(body);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4247,7 +4247,7 @@ namespace Example
 
 ### Return type
 
-[**Survey**](Survey)
+[**CreateSurveyResponse**](CreateSurveyResponse)
 
 
 ## PostQualitySurveysScoring
@@ -4829,4 +4829,4 @@ namespace Example
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatform.Client.V2 256.0.0_
+_PureCloudPlatform.Client.V2 257.0.0_

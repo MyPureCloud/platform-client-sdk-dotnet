@@ -710,4 +710,4 @@ namespace Example
 [**UploadUrlResponse**](UploadUrlResponse)
 
 
-_PureCloudPlatform.Client.V2 256.0.0_
+_PureCloudPlatform.Client.V2 257.0.0_
