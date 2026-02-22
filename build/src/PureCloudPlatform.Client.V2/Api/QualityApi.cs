@@ -1751,9 +1751,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Survey creation request</param>
-        /// <returns>Survey</returns>
+        /// <returns>CreateSurveyResponse</returns>
         
-        Survey PostQualitySurveys (CreateSurveyRequest body);
+        CreateSurveyResponse PostQualitySurveys (CreateSurveyRequest body);
 
         /// <summary>
         /// Create a survey for a conversation
@@ -1763,9 +1763,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Survey creation request</param>
-        /// <returns>ApiResponse of Survey</returns>
+        /// <returns>ApiResponse of CreateSurveyResponse</returns>
         
-        ApiResponse<Survey> PostQualitySurveysWithHttpInfo (CreateSurveyRequest body);
+        ApiResponse<CreateSurveyResponse> PostQualitySurveysWithHttpInfo (CreateSurveyRequest body);
 
         /// <summary>
         /// Score survey
@@ -3745,9 +3745,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Survey creation request</param>
-        /// <returns>Task of Survey</returns>
+        /// <returns>Task of CreateSurveyResponse</returns>
         
-        System.Threading.Tasks.Task<Survey> PostQualitySurveysAsync (CreateSurveyRequest body);
+        System.Threading.Tasks.Task<CreateSurveyResponse> PostQualitySurveysAsync (CreateSurveyRequest body);
 
         /// <summary>
         /// Create a survey for a conversation
@@ -3757,9 +3757,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Survey creation request</param>
-        /// <returns>Task of ApiResponse (Survey)</returns>
+        /// <returns>Task of ApiResponse (CreateSurveyResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Survey>> PostQualitySurveysAsyncWithHttpInfo (CreateSurveyRequest body);
+        System.Threading.Tasks.Task<ApiResponse<CreateSurveyResponse>> PostQualitySurveysAsyncWithHttpInfo (CreateSurveyRequest body);
 
         /// <summary>
         /// Score survey
@@ -17410,11 +17410,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Survey creation request</param>
-        /// <returns>Survey</returns>
+        /// <returns>CreateSurveyResponse</returns>
         
-        public Survey PostQualitySurveys (CreateSurveyRequest body)
+        public CreateSurveyResponse PostQualitySurveys (CreateSurveyRequest body)
         {
-             ApiResponse<Survey> localVarResponse = PostQualitySurveysWithHttpInfo(body);
+             ApiResponse<CreateSurveyResponse> localVarResponse = PostQualitySurveysWithHttpInfo(body);
              return localVarResponse.Data;
         }
 
@@ -17424,9 +17424,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Survey creation request</param>
-        /// <returns>ApiResponse of Survey</returns>
+        /// <returns>ApiResponse of CreateSurveyResponse</returns>
         
-        public ApiResponse< Survey > PostQualitySurveysWithHttpInfo (CreateSurveyRequest body)
+        public ApiResponse< CreateSurveyResponse > PostQualitySurveysWithHttpInfo (CreateSurveyRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -17500,9 +17500,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQualitySurveys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Survey>(localVarStatusCode,
+            return new ApiResponse<CreateSurveyResponse>(localVarStatusCode,
                 localVarHeaders,
-                (Survey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Survey)),
+                (CreateSurveyResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateSurveyResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -17514,11 +17514,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Survey creation request</param>
-        /// <returns>Task of Survey</returns>
+        /// <returns>Task of CreateSurveyResponse</returns>
         
-        public async System.Threading.Tasks.Task<Survey> PostQualitySurveysAsync (CreateSurveyRequest body)
+        public async System.Threading.Tasks.Task<CreateSurveyResponse> PostQualitySurveysAsync (CreateSurveyRequest body)
         {
-             ApiResponse<Survey> localVarResponse = await PostQualitySurveysAsyncWithHttpInfo(body);
+             ApiResponse<CreateSurveyResponse> localVarResponse = await PostQualitySurveysAsyncWithHttpInfo(body);
              return localVarResponse.Data;
 
         }
@@ -17529,9 +17529,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Survey creation request</param>
-        /// <returns>Task of ApiResponse (Survey)</returns>
+        /// <returns>Task of ApiResponse (CreateSurveyResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Survey>> PostQualitySurveysAsyncWithHttpInfo (CreateSurveyRequest body)
+        public async System.Threading.Tasks.Task<ApiResponse<CreateSurveyResponse>> PostQualitySurveysAsyncWithHttpInfo (CreateSurveyRequest body)
         { 
             // verify the required parameter 'body' is set
             if (body == null)
@@ -17606,9 +17606,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostQualitySurveys: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<Survey>(localVarStatusCode,
+            return new ApiResponse<CreateSurveyResponse>(localVarStatusCode,
                 localVarHeaders,
-                (Survey) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Survey)),
+                (CreateSurveyResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CreateSurveyResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

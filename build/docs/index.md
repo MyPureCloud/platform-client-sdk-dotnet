@@ -5,7 +5,7 @@ Platform API Client SDK - .NET
 
 Documentation can be found at https://mypurecloud.github.io/platform-client-sdk-dotnet/
 
-Documentation version PureCloudPlatform.Client.V2 256.0.0
+Documentation version PureCloudPlatform.Client.V2 257.0.0
 
 ## Install Using nuget
 
@@ -473,6 +473,23 @@ The Platform API definition file is downloaded at the time of the SDK build and 
 The .Net Platform API Client SDK implements the following strategy to manage the introduction of new enumeration values in the Platform API (i.e. in a version of the SDK which doesn't include these changes):
 * Each enumeration, generated from the Platform API OpenAPI v2 definition, always contains the following enumeration value: `[EnumMember(Value = "OUTDATED_SDK_VERSION")] OutdatedSdkVersion`
 * If an unknown enumeration value is received (i.e. a new enumeration value, introduced in Platform API, after the SDK version you are using was built), the SDK will map it to the `[EnumMember(Value = "OUTDATED_SDK_VERSION")] OutdatedSdkVersion` enumeration value. This is to prevent errors during deserialization when an unknown enumeration value is received from Genesys Cloud.
+
+### SDK Specific Types and Classes
+
+The Platform API Client SDK for .Net defines some types and classes specific to the SDK.
+
+#### YearMonth
+
+Some API Endpoints of the Platform API (REST API) contain properties defined as string with a "year-month" format (e.g. value equal to "2026-01").  
+If part of an API Response, these properties will be deserialized to the SDK's YearMonth class.  
+YearMonth class instance will be serialized to "year-month" string format if part of an API Request (REST API).
+
+You can import the YearMonth class in your C# code with: `using PureCloudPlatform.Client.V2.Client;`  
+The YearMonth class is defined in the `PureCloudPlatform.Client.V2.Client` namespace.
+
+The YearMonth class contains two properties of integer type: **Year** (allowing value from 0 to 9999) and **Month** (allowing value from 1 to 12).  
+An instance of the class can be created using the class constructor `YearMonth(int? Year = null, int? Month = null)` or parsing a `DateTime` with `YearMonth(DateTime Date)`.  
+A YearMonth instance can also be transformed into a DateTime (with day being forced to 1) with `myYearMonth.ToDate()`.
 
 ## NotificationHandler Helper Class
 

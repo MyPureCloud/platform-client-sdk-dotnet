@@ -19,6 +19,51 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class ConversationChannelMetadata :  IEquatable<ConversationChannelMetadata>
     {
         /// <summary>
+        /// Channel subtype
+        /// </summary>
+        /// <value>Channel subtype</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SubTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None,
+            
+            /// <summary>
+            /// Enum Googlebusinessprofile for "GoogleBusinessProfile"
+            /// </summary>
+            [EnumMember(Value = "GoogleBusinessProfile")]
+            Googlebusinessprofile,
+            
+            /// <summary>
+            /// Enum Roadsideassistance for "RoadsideAssistance"
+            /// </summary>
+            [EnumMember(Value = "RoadsideAssistance")]
+            Roadsideassistance,
+            
+            /// <summary>
+            /// Enum Youtube for "YouTube"
+            /// </summary>
+            [EnumMember(Value = "YouTube")]
+            Youtube
+        }
+        /// <summary>
+        /// Channel subtype
+        /// </summary>
+        /// <value>Channel subtype</value>
+        [DataMember(Name="subType", EmitDefaultValue=false)]
+        public SubTypeEnum? SubType { get; private set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="ConversationChannelMetadata" /> class.
         /// </summary>
         public ConversationChannelMetadata()
@@ -26,6 +71,8 @@ namespace PureCloudPlatform.Client.V2.Model
             
         }
         
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ConversationChannelMetadata {\n");
 
+            sb.Append("  SubType: ").Append(SubType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.SubType == other.SubType ||
+                    this.SubType != null &&
+                    this.SubType.Equals(other.SubType)
+                );
         }
 
         /// <summary>
@@ -89,6 +142,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.SubType != null)
+                    hash = hash * 59 + this.SubType.GetHashCode();
+
                 return hash;
             }
         }

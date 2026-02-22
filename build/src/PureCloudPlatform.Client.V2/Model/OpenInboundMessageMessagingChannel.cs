@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Time">Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="MessageId">Unique provider ID of the message..</param>
         /// <param name="Metadata">Additional Custom Information about the channel..</param>
-        public OpenInboundMessageMessagingChannel(OpenMessagingFromRecipient From = null, DateTime? Time = null, string MessageId = null, Object Metadata = null)
+        public OpenInboundMessageMessagingChannel(OpenMessagingFromRecipient From = null, DateTime? Time = null, string MessageId = null, ConversationChannelMetadata Metadata = null)
         {
             this.From = From;
             this.Time = Time;
@@ -74,7 +74,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Additional Custom Information about the channel.</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
-        public Object Metadata { get; set; }
+        public ConversationChannelMetadata Metadata { get; set; }
 
 
         /// <summary>

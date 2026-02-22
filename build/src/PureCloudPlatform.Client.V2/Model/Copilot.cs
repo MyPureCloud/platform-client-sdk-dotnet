@@ -56,14 +56,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="LiveOnQueue">Copilot is live on selected queue. (required).</param>
         /// <param name="DefaultLanguage">Copilot default language, e.g. [en-US, es-US, es-ES]. Once set, it can not be modified. (required).</param>
-        /// <param name="KnowledgeAnswerConfig">Knowledge answer configuration..</param>
+        /// <param name="KnowledgeAnswerConfig">Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead..</param>
         /// <param name="SummaryGenerationConfig">Copilot generated summary configuration..</param>
         /// <param name="WrapupCodePredictionConfig">Copilot generated wrapup code prediction configuration..</param>
-        /// <param name="AnswerGenerationConfig">Answer generation configuration..</param>
+        /// <param name="AnswerGenerationConfig">Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead..</param>
         /// <param name="NluEngineType">Language understanding engine type..</param>
         /// <param name="NluConfig">NLU configuration..</param>
         /// <param name="RuleEngineConfig">Rule engine configuration..</param>
-        public Copilot(bool? LiveOnQueue = null, string DefaultLanguage = null, KnowledgeAnswerConfig KnowledgeAnswerConfig = null, SummaryGenerationConfig SummaryGenerationConfig = null, WrapupCodePredictionConfig WrapupCodePredictionConfig = null, AnswerGenerationConfig AnswerGenerationConfig = null, NluEngineTypeEnum? NluEngineType = null, NluConfig NluConfig = null, RuleEngineConfig RuleEngineConfig = null)
+        /// <param name="AutoSearchConfig">Auto search configuration..</param>
+        /// <param name="ManualSearchConfig">Manual Search configuration..</param>
+        public Copilot(bool? LiveOnQueue = null, string DefaultLanguage = null, KnowledgeAnswerConfig KnowledgeAnswerConfig = null, SummaryGenerationConfig SummaryGenerationConfig = null, WrapupCodePredictionConfig WrapupCodePredictionConfig = null, AnswerGenerationConfig AnswerGenerationConfig = null, NluEngineTypeEnum? NluEngineType = null, NluConfig NluConfig = null, RuleEngineConfig RuleEngineConfig = null, AutoSearchConfig AutoSearchConfig = null, ManualSearchConfig ManualSearchConfig = null)
         {
             this.LiveOnQueue = LiveOnQueue;
             this.DefaultLanguage = DefaultLanguage;
@@ -74,6 +76,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.NluEngineType = NluEngineType;
             this.NluConfig = NluConfig;
             this.RuleEngineConfig = RuleEngineConfig;
+            this.AutoSearchConfig = AutoSearchConfig;
+            this.ManualSearchConfig = ManualSearchConfig;
             
         }
         
@@ -107,9 +111,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Knowledge answer configuration.
+        /// Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead.
         /// </summary>
-        /// <value>Knowledge answer configuration.</value>
+        /// <value>Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead.</value>
         [DataMember(Name="knowledgeAnswerConfig", EmitDefaultValue=false)]
         public KnowledgeAnswerConfig KnowledgeAnswerConfig { get; set; }
 
@@ -134,9 +138,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Answer generation configuration.
+        /// Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead.
         /// </summary>
-        /// <value>Answer generation configuration.</value>
+        /// <value>Deprecated: Please use AutoSearchConfig and ManualSearchConfig fields instead.</value>
         [DataMember(Name="answerGenerationConfig", EmitDefaultValue=false)]
         public AnswerGenerationConfig AnswerGenerationConfig { get; set; }
 
@@ -159,6 +163,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Rule engine configuration.</value>
         [DataMember(Name="ruleEngineConfig", EmitDefaultValue=false)]
         public RuleEngineConfig RuleEngineConfig { get; set; }
+
+
+
+        /// <summary>
+        /// Auto search configuration.
+        /// </summary>
+        /// <value>Auto search configuration.</value>
+        [DataMember(Name="autoSearchConfig", EmitDefaultValue=false)]
+        public AutoSearchConfig AutoSearchConfig { get; set; }
+
+
+
+        /// <summary>
+        /// Manual Search configuration.
+        /// </summary>
+        /// <value>Manual Search configuration.</value>
+        [DataMember(Name="manualSearchConfig", EmitDefaultValue=false)]
+        public ManualSearchConfig ManualSearchConfig { get; set; }
 
 
 
@@ -189,6 +211,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NluEngineType: ").Append(NluEngineType).Append("\n");
             sb.Append("  NluConfig: ").Append(NluConfig).Append("\n");
             sb.Append("  RuleEngineConfig: ").Append(RuleEngineConfig).Append("\n");
+            sb.Append("  AutoSearchConfig: ").Append(AutoSearchConfig).Append("\n");
+            sb.Append("  ManualSearchConfig: ").Append(ManualSearchConfig).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -281,6 +305,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.RuleEngineConfig.Equals(other.RuleEngineConfig)
                 ) &&
                 (
+                    this.AutoSearchConfig == other.AutoSearchConfig ||
+                    this.AutoSearchConfig != null &&
+                    this.AutoSearchConfig.Equals(other.AutoSearchConfig)
+                ) &&
+                (
+                    this.ManualSearchConfig == other.ManualSearchConfig ||
+                    this.ManualSearchConfig != null &&
+                    this.ManualSearchConfig.Equals(other.ManualSearchConfig)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -327,6 +361,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.RuleEngineConfig != null)
                     hash = hash * 59 + this.RuleEngineConfig.GetHashCode();
+
+                if (this.AutoSearchConfig != null)
+                    hash = hash * 59 + this.AutoSearchConfig.GetHashCode();
+
+                if (this.ManualSearchConfig != null)
+                    hash = hash * 59 + this.ManualSearchConfig.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

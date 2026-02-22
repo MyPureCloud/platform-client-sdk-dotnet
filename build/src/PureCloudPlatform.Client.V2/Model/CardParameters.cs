@@ -24,13 +24,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Index">Index of the card in the carousel template.</param>
         /// <param name="BodyParameters">A list of Response Management carousel card body parameter substitutions for the response&#39;s messaging template.</param>
         /// <param name="ButtonUrlParameters">A list of Response Management carousel card button URL parameter substitutions for the response&#39;s messaging template.</param>
-        /// <param name="ButtonQuickReplyPayloads">A list of quick reply button payloads for the carousel card.</param>
-        public CardParameters(int? Index = null, List<TemplateParameter> BodyParameters = null, List<TemplateParameter> ButtonUrlParameters = null, List<ButtonQuickReplyPayload> ButtonQuickReplyPayloads = null)
+        public CardParameters(int? Index = null, List<TemplateParameter> BodyParameters = null, List<TemplateParameter> ButtonUrlParameters = null)
         {
             this.Index = Index;
             this.BodyParameters = BodyParameters;
             this.ButtonUrlParameters = ButtonUrlParameters;
-            this.ButtonQuickReplyPayloads = ButtonQuickReplyPayloads;
             
         }
         
@@ -62,15 +60,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<TemplateParameter> ButtonUrlParameters { get; set; }
 
 
-
-        /// <summary>
-        /// A list of quick reply button payloads for the carousel card
-        /// </summary>
-        /// <value>A list of quick reply button payloads for the carousel card</value>
-        [DataMember(Name="buttonQuickReplyPayloads", EmitDefaultValue=false)]
-        public List<ButtonQuickReplyPayload> ButtonQuickReplyPayloads { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -83,7 +72,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Index: ").Append(Index).Append("\n");
             sb.Append("  BodyParameters: ").Append(BodyParameters).Append("\n");
             sb.Append("  ButtonUrlParameters: ").Append(ButtonUrlParameters).Append("\n");
-            sb.Append("  ButtonQuickReplyPayloads: ").Append(ButtonQuickReplyPayloads).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -138,11 +126,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ButtonUrlParameters == other.ButtonUrlParameters ||
                     this.ButtonUrlParameters != null &&
                     this.ButtonUrlParameters.SequenceEqual(other.ButtonUrlParameters)
-                ) &&
-                (
-                    this.ButtonQuickReplyPayloads == other.ButtonQuickReplyPayloads ||
-                    this.ButtonQuickReplyPayloads != null &&
-                    this.ButtonQuickReplyPayloads.SequenceEqual(other.ButtonQuickReplyPayloads)
                 );
         }
 
@@ -165,9 +148,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ButtonUrlParameters != null)
                     hash = hash * 59 + this.ButtonUrlParameters.GetHashCode();
-
-                if (this.ButtonQuickReplyPayloads != null)
-                    hash = hash * 59 + this.ButtonQuickReplyPayloads.GetHashCode();
 
                 return hash;
             }

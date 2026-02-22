@@ -30,12 +30,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Optional unique identifier to help map component replies to form messages where multiple List Pickers can be present..</param>
         /// <param name="Title">Text to show in the title..</param>
         /// <param name="Subtitle">Text to show in the description..</param>
+        /// <param name="Header">Text to show in the header..</param>
         /// <param name="Sections">An array of sections in the List Picker. (required).</param>
-        public ListPicker(string Id = null, string Title = null, string Subtitle = null, List<ListPickerSection> Sections = null)
+        public ListPicker(string Id = null, string Title = null, string Subtitle = null, string Header = null, List<ListPickerSection> Sections = null)
         {
             this.Id = Id;
             this.Title = Title;
             this.Subtitle = Subtitle;
+            this.Header = Header;
             this.Sections = Sections;
             
         }
@@ -70,6 +72,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Text to show in the header.
+        /// </summary>
+        /// <value>Text to show in the header.</value>
+        [DataMember(Name="header", EmitDefaultValue=false)]
+        public string Header { get; set; }
+
+
+
+        /// <summary>
         /// An array of sections in the List Picker.
         /// </summary>
         /// <value>An array of sections in the List Picker.</value>
@@ -89,6 +100,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Title: ").Append(Title).Append("\n");
             sb.Append("  Subtitle: ").Append(Subtitle).Append("\n");
+            sb.Append("  Header: ").Append(Header).Append("\n");
             sb.Append("  Sections: ").Append(Sections).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -146,6 +158,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Subtitle.Equals(other.Subtitle)
                 ) &&
                 (
+                    this.Header == other.Header ||
+                    this.Header != null &&
+                    this.Header.Equals(other.Header)
+                ) &&
+                (
                     this.Sections == other.Sections ||
                     this.Sections != null &&
                     this.Sections.SequenceEqual(other.Sections)
@@ -171,6 +188,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Subtitle != null)
                     hash = hash * 59 + this.Subtitle.GetHashCode();
+
+                if (this.Header != null)
+                    hash = hash * 59 + this.Header.GetHashCode();
 
                 if (this.Sections != null)
                     hash = hash * 59 + this.Sections.GetHashCode();

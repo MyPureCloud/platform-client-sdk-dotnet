@@ -73,7 +73,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FacebookEscalation">The target integration configuration used for a Facebook message escalation..</param>
         /// <param name="InstagramEscalation">The target integration configuration used for an Instagram message escalation..</param>
         /// <param name="TwitterEscalation">The target integration configuration used for a X (formerly Twitter) message escalation..</param>
-        public EscalationRuleResponse(string Id = null, string Name = null, string MatchCriteria = null, int? Priority = null, string DivisionId = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, EscalationTarget OpenEscalation = null, EscalationTarget FacebookEscalation = null, EscalationTarget InstagramEscalation = null, EscalationTarget TwitterEscalation = null)
+        /// <param name="GoogleBusinessProfileEscalation">The target integration configuration used for a Google Business Profile message escalation..</param>
+        public EscalationRuleResponse(string Id = null, string Name = null, string MatchCriteria = null, int? Priority = null, string DivisionId = null, string Description = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, EscalationTarget OpenEscalation = null, EscalationTarget FacebookEscalation = null, EscalationTarget InstagramEscalation = null, EscalationTarget TwitterEscalation = null, EscalationTarget GoogleBusinessProfileEscalation = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -88,6 +89,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FacebookEscalation = FacebookEscalation;
             this.InstagramEscalation = InstagramEscalation;
             this.TwitterEscalation = TwitterEscalation;
+            this.GoogleBusinessProfileEscalation = GoogleBusinessProfileEscalation;
             
         }
         
@@ -204,6 +206,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The target integration configuration used for a Google Business Profile message escalation.
+        /// </summary>
+        /// <value>The target integration configuration used for a Google Business Profile message escalation.</value>
+        [DataMember(Name="googleBusinessProfileEscalation", EmitDefaultValue=false)]
+        public EscalationTarget GoogleBusinessProfileEscalation { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -233,6 +244,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FacebookEscalation: ").Append(FacebookEscalation).Append("\n");
             sb.Append("  InstagramEscalation: ").Append(InstagramEscalation).Append("\n");
             sb.Append("  TwitterEscalation: ").Append(TwitterEscalation).Append("\n");
+            sb.Append("  GoogleBusinessProfileEscalation: ").Append(GoogleBusinessProfileEscalation).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -340,6 +352,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TwitterEscalation.Equals(other.TwitterEscalation)
                 ) &&
                 (
+                    this.GoogleBusinessProfileEscalation == other.GoogleBusinessProfileEscalation ||
+                    this.GoogleBusinessProfileEscalation != null &&
+                    this.GoogleBusinessProfileEscalation.Equals(other.GoogleBusinessProfileEscalation)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -395,6 +412,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TwitterEscalation != null)
                     hash = hash * 59 + this.TwitterEscalation.GetHashCode();
+
+                if (this.GoogleBusinessProfileEscalation != null)
+                    hash = hash * 59 + this.GoogleBusinessProfileEscalation.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

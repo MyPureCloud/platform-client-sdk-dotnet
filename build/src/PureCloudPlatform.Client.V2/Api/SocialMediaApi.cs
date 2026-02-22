@@ -120,6 +120,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdWithHttpInfo (string topicId, string facebookIngestionRuleId, bool? hardDelete = null);
 
         /// <summary>
+        /// Delete a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="hardDelete">Determines whether a Google Business Profile data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional, default to false)</param>
+        /// <returns></returns>
+        
+        void DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId (string topicId, string googleBusinessProfileIngestionRuleId, bool? hardDelete = null);
+
+        /// <summary>
+        /// Delete a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="hardDelete">Determines whether a Google Business Profile data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, bool? hardDelete = null);
+
+        /// <summary>
         /// Delete a Instagram data ingestion rule.
         /// </summary>
         /// <remarks>
@@ -504,6 +534,102 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FacebookDataIngestionRuleVersionResponseEntityListing> GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersionsWithHttpInfo (string topicId, string facebookIngestionRuleId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
 
         /// <summary>
+        /// Get a single Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        GoogleBusinessProfileDataIngestionRuleResponse GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId (string topicId, string googleBusinessProfileIngestionRuleId, bool? includeDeleted = null);
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, bool? includeDeleted = null);
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="dataIngestionRuleVersion">version</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted item in the result. (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleVersionResponse</returns>
+        
+        GoogleBusinessProfileDataIngestionRuleVersionResponse GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion (string topicId, string googleBusinessProfileIngestionRuleId, string dataIngestionRuleVersion, bool? includeDeleted = null);
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="dataIngestionRuleVersion">version</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted item in the result. (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleVersionResponse</returns>
+        
+        ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponse> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, string dataIngestionRuleVersion, bool? includeDeleted = null);
+
+        /// <summary>
+        /// Get the Google Business Profile data ingestion rule versions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing</returns>
+        
+        GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions (string topicId, string googleBusinessProfileIngestionRuleId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
+
+        /// <summary>
+        /// Get the Google Business Profile data ingestion rule versions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing</returns>
+        
+        ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionsWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
+
+        /// <summary>
         /// Get a single Instagram data ingestion rule.
         /// </summary>
         /// <remarks>
@@ -862,6 +988,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FacebookDataIngestionRuleResponse> PatchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdWithHttpInfo (string topicId, string facebookIngestionRuleId, DataIngestionRuleStatusPatchRequest body = null);
 
         /// <summary>
+        /// Update the status of a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        GoogleBusinessProfileDataIngestionRuleResponse PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId (string topicId, string googleBusinessProfileIngestionRuleId, DataIngestionRuleStatusPatchRequest body = null);
+
+        /// <summary>
+        /// Update the status of a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, DataIngestionRuleStatusPatchRequest body = null);
+
+        /// <summary>
         /// Update the status of a Instagram data ingestion rule.
         /// </summary>
         /// <remarks>
@@ -1068,6 +1224,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of FacebookDataIngestionRuleResponse</returns>
         
         ApiResponse<FacebookDataIngestionRuleResponse> PostSocialmediaTopicDataingestionrulesFacebookWithHttpInfo (string topicId, FacebookDataIngestionRuleRequest body = null);
+
+        /// <summary>
+        /// Create a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostSocialmediaTopicDataingestionrulesGooglebusinessprofile is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        GoogleBusinessProfileDataIngestionRuleResponse PostSocialmediaTopicDataingestionrulesGooglebusinessprofile (string topicId, GoogleBusinessProfileDataIngestionRuleRequest body = null);
+
+        /// <summary>
+        /// Create a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostSocialmediaTopicDataingestionrulesGooglebusinessprofile is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> PostSocialmediaTopicDataingestionrulesGooglebusinessprofileWithHttpInfo (string topicId, GoogleBusinessProfileDataIngestionRuleRequest body = null);
 
         /// <summary>
         /// Create an Instagram data ingestion rule.
@@ -1306,6 +1490,36 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FacebookDataIngestionRuleResponse> PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdWithHttpInfo (string topicId, string facebookIngestionRuleId, FacebookDataIngestionRuleRequest body = null);
 
         /// <summary>
+        /// Update the Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        GoogleBusinessProfileDataIngestionRuleResponse PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId (string topicId, string googleBusinessProfileIngestionRuleId, GoogleBusinessProfileDataIngestionRuleRequest body = null);
+
+        /// <summary>
+        /// Update the Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, GoogleBusinessProfileDataIngestionRuleRequest body = null);
+
+        /// <summary>
         /// Update the Instagram data ingestion rule.
         /// </summary>
         /// <remarks>
@@ -1496,6 +1710,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdAsyncWithHttpInfo (string topicId, string facebookIngestionRuleId, bool? hardDelete = null);
+
+        /// <summary>
+        /// Delete a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="hardDelete">Determines whether a Google Business Profile data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsync (string topicId, string googleBusinessProfileIngestionRuleId, bool? hardDelete = null);
+
+        /// <summary>
+        /// Delete a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="hardDelete">Determines whether a Google Business Profile data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, bool? hardDelete = null);
 
         /// <summary>
         /// Delete a Instagram data ingestion rule.
@@ -1882,6 +2126,102 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FacebookDataIngestionRuleVersionResponseEntityListing>> GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersionsAsyncWithHttpInfo (string topicId, string facebookIngestionRuleId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
 
         /// <summary>
+        /// Get a single Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleResponse> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsync (string topicId, string googleBusinessProfileIngestionRuleId, bool? includeDeleted = null);
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, bool? includeDeleted = null);
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="dataIngestionRuleVersion">version</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted item in the result. (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleVersionResponse</returns>
+        
+        System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleVersionResponse> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionAsync (string topicId, string googleBusinessProfileIngestionRuleId, string dataIngestionRuleVersion, bool? includeDeleted = null);
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule version.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="dataIngestionRuleVersion">version</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted item in the result. (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleVersionResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponse>> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, string dataIngestionRuleVersion, bool? includeDeleted = null);
+
+        /// <summary>
+        /// Get the Google Business Profile data ingestion rule versions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing</returns>
+        
+        System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionsAsync (string topicId, string googleBusinessProfileIngestionRuleId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
+
+        /// <summary>
+        /// Get the Google Business Profile data ingestion rule versions.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing>> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionsAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null);
+
+        /// <summary>
         /// Get a single Instagram data ingestion rule.
         /// </summary>
         /// <remarks>
@@ -2240,6 +2580,36 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FacebookDataIngestionRuleResponse>> PatchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdAsyncWithHttpInfo (string topicId, string facebookIngestionRuleId, DataIngestionRuleStatusPatchRequest body = null);
 
         /// <summary>
+        /// Update the status of a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleResponse> PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsync (string topicId, string googleBusinessProfileIngestionRuleId, DataIngestionRuleStatusPatchRequest body = null);
+
+        /// <summary>
+        /// Update the status of a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>> PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, DataIngestionRuleStatusPatchRequest body = null);
+
+        /// <summary>
         /// Update the status of a Instagram data ingestion rule.
         /// </summary>
         /// <remarks>
@@ -2446,6 +2816,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (FacebookDataIngestionRuleResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<FacebookDataIngestionRuleResponse>> PostSocialmediaTopicDataingestionrulesFacebookAsyncWithHttpInfo (string topicId, FacebookDataIngestionRuleRequest body = null);
+
+        /// <summary>
+        /// Create a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostSocialmediaTopicDataingestionrulesGooglebusinessprofile is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleResponse> PostSocialmediaTopicDataingestionrulesGooglebusinessprofileAsync (string topicId, GoogleBusinessProfileDataIngestionRuleRequest body = null);
+
+        /// <summary>
+        /// Create a Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostSocialmediaTopicDataingestionrulesGooglebusinessprofile is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>> PostSocialmediaTopicDataingestionrulesGooglebusinessprofileAsyncWithHttpInfo (string topicId, GoogleBusinessProfileDataIngestionRuleRequest body = null);
 
         /// <summary>
         /// Create an Instagram data ingestion rule.
@@ -2682,6 +3080,36 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (FacebookDataIngestionRuleResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<FacebookDataIngestionRuleResponse>> PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdAsyncWithHttpInfo (string topicId, string facebookIngestionRuleId, FacebookDataIngestionRuleRequest body = null);
+
+        /// <summary>
+        /// Update the Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleResponse> PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsync (string topicId, string googleBusinessProfileIngestionRuleId, GoogleBusinessProfileDataIngestionRuleRequest body = null);
+
+        /// <summary>
+        /// Update the Google Business Profile data ingestion rule.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>> PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, GoogleBusinessProfileDataIngestionRuleRequest body = null);
 
         /// <summary>
         /// Update the Instagram data ingestion rule.
@@ -3674,6 +4102,228 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException (localVarStatusCode, "Error calling DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a Google Business Profile data ingestion rule. 
+        /// 
+        /// DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="hardDelete">Determines whether a Google Business Profile data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional, default to false)</param>
+        /// <returns></returns>
+        
+        public void DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId (string topicId, string googleBusinessProfileIngestionRuleId, bool? hardDelete = null)
+        {
+             DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, hardDelete);
+        }
+
+        /// <summary>
+        /// Delete a Google Business Profile data ingestion rule. 
+        /// 
+        /// DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="hardDelete">Determines whether a Google Business Profile data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional, default to false)</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, bool? hardDelete = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+
+            // Query params
+            if (hardDelete != null) localVarQueryParams.Add(new Tuple<string, string>("hardDelete", this.Configuration.ApiClient.ParameterToString(hardDelete)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a Google Business Profile data ingestion rule. 
+        /// 
+        /// DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="hardDelete">Determines whether a Google Business Profile data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional, default to false)</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsync (string topicId, string googleBusinessProfileIngestionRuleId, bool? hardDelete = null)
+        {
+             await DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, hardDelete);
+
+        }
+
+        /// <summary>
+        /// Delete a Google Business Profile data ingestion rule. 
+        /// 
+        /// DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="hardDelete">Determines whether a Google Business Profile data ingestion rule should be soft-deleted (have it&#39;s state set to deleted) or hard-deleted (permanently removed). Set to false (soft-delete) by default. (optional, default to false)</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, bool? hardDelete = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+
+            // Query params
+            if (hardDelete != null) localVarQueryParams.Add(new Tuple<string, string>("hardDelete", this.Configuration.ApiClient.ParameterToString(hardDelete)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -6686,6 +7336,703 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Get a single Google Business Profile data ingestion rule. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public GoogleBusinessProfileDataIngestionRuleResponse GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId (string topicId, string googleBusinessProfileIngestionRuleId, bool? includeDeleted = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> localVarResponse = GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, includeDeleted);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public ApiResponse< GoogleBusinessProfileDataIngestionRuleResponse > GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, bool? includeDeleted = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+
+            // Query params
+            if (includeDeleted != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeleted", this.Configuration.ApiClient.ParameterToString(includeDeleted)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public async System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleResponse> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsync (string topicId, string googleBusinessProfileIngestionRuleId, bool? includeDeleted = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> localVarResponse = await GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, includeDeleted);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, bool? includeDeleted = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+
+            // Query params
+            if (includeDeleted != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeleted", this.Configuration.ApiClient.ParameterToString(includeDeleted)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule version. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="dataIngestionRuleVersion">version</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted item in the result. (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleVersionResponse</returns>
+        
+        public GoogleBusinessProfileDataIngestionRuleVersionResponse GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion (string topicId, string googleBusinessProfileIngestionRuleId, string dataIngestionRuleVersion, bool? includeDeleted = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponse> localVarResponse = GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, dataIngestionRuleVersion, includeDeleted);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule version. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="dataIngestionRuleVersion">version</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted item in the result. (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleVersionResponse</returns>
+        
+        public ApiResponse< GoogleBusinessProfileDataIngestionRuleVersionResponse > GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, string dataIngestionRuleVersion, bool? includeDeleted = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion");
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion");
+            // verify the required parameter 'dataIngestionRuleVersion' is set
+            if (dataIngestionRuleVersion == null)
+                throw new ApiException(400, "Missing required parameter 'dataIngestionRuleVersion' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion");
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}/versions/{dataIngestionRuleVersion}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+            if (dataIngestionRuleVersion != null) localVarPathParams.Add("dataIngestionRuleVersion", this.Configuration.ApiClient.ParameterToString(dataIngestionRuleVersion));
+
+            // Query params
+            if (includeDeleted != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeleted", this.Configuration.ApiClient.ParameterToString(includeDeleted)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleVersionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleVersionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule version. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="dataIngestionRuleVersion">version</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted item in the result. (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleVersionResponse</returns>
+        
+        public async System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleVersionResponse> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionAsync (string topicId, string googleBusinessProfileIngestionRuleId, string dataIngestionRuleVersion, bool? includeDeleted = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponse> localVarResponse = await GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionAsyncWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, dataIngestionRuleVersion, includeDeleted);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a single Google Business Profile data ingestion rule version. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="dataIngestionRuleVersion">version</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted item in the result. (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleVersionResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponse>> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, string dataIngestionRuleVersion, bool? includeDeleted = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion");
+            
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion");
+            
+            // verify the required parameter 'dataIngestionRuleVersion' is set
+            if (dataIngestionRuleVersion == null)
+                throw new ApiException(400, "Missing required parameter 'dataIngestionRuleVersion' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion");
+            
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}/versions/{dataIngestionRuleVersion}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+            if (dataIngestionRuleVersion != null) localVarPathParams.Add("dataIngestionRuleVersion", this.Configuration.ApiClient.ParameterToString(dataIngestionRuleVersion));
+
+            // Query params
+            if (includeDeleted != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeleted", this.Configuration.ApiClient.ParameterToString(includeDeleted)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleVersionResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleVersionResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the Google Business Profile data ingestion rule versions. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing</returns>
+        
+        public GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions (string topicId, string googleBusinessProfileIngestionRuleId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing> localVarResponse = GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionsWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, pageNumber, pageSize, includeDeleted);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the Google Business Profile data ingestion rule versions. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing</returns>
+        
+        public ApiResponse< GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing > GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionsWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions");
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions");
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}/versions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (includeDeleted != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeleted", this.Configuration.ApiClient.ParameterToString(includeDeleted)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the Google Business Profile data ingestion rule versions. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionsAsync (string topicId, string googleBusinessProfileIngestionRuleId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing> localVarResponse = await GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionsAsyncWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, pageNumber, pageSize, includeDeleted);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the Google Business Profile data ingestion rule versions. 
+        /// 
+        /// GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <param name="pageSize">Page size (optional, default to 25)</param>
+        /// <param name="includeDeleted">Determines whether to include soft-deleted items in the result. (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing>> GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersionsAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, int? pageNumber = null, int? pageSize = null, bool? includeDeleted = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions");
+            
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions");
+            
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}/versions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+
+            // Query params
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (includeDeleted != null) localVarQueryParams.Add(new Tuple<string, string>("includeDeleted", this.Configuration.ApiClient.ParameterToString(includeDeleted)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Get a single Instagram data ingestion rule. 
         /// 
         /// </summary>
@@ -9412,6 +10759,240 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update the status of a Google Business Profile data ingestion rule. 
+        /// 
+        /// PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public GoogleBusinessProfileDataIngestionRuleResponse PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId (string topicId, string googleBusinessProfileIngestionRuleId, DataIngestionRuleStatusPatchRequest body = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> localVarResponse = PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the status of a Google Business Profile data ingestion rule. 
+        /// 
+        /// PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public ApiResponse< GoogleBusinessProfileDataIngestionRuleResponse > PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, DataIngestionRuleStatusPatchRequest body = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the status of a Google Business Profile data ingestion rule. 
+        /// 
+        /// PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public async System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleResponse> PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsync (string topicId, string googleBusinessProfileIngestionRuleId, DataIngestionRuleStatusPatchRequest body = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> localVarResponse = await PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the status of a Google Business Profile data ingestion rule. 
+        /// 
+        /// PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>> PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, DataIngestionRuleStatusPatchRequest body = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update the status of a Instagram data ingestion rule. 
         /// 
         /// </summary>
@@ -11155,6 +12736,227 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<FacebookDataIngestionRuleResponse>(localVarStatusCode,
                 localVarHeaders,
                 (FacebookDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FacebookDataIngestionRuleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a Google Business Profile data ingestion rule. 
+        /// 
+        /// PostSocialmediaTopicDataingestionrulesGooglebusinessprofile is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public GoogleBusinessProfileDataIngestionRuleResponse PostSocialmediaTopicDataingestionrulesGooglebusinessprofile (string topicId, GoogleBusinessProfileDataIngestionRuleRequest body = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> localVarResponse = PostSocialmediaTopicDataingestionrulesGooglebusinessprofileWithHttpInfo(topicId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a Google Business Profile data ingestion rule. 
+        /// 
+        /// PostSocialmediaTopicDataingestionrulesGooglebusinessprofile is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public ApiResponse< GoogleBusinessProfileDataIngestionRuleResponse > PostSocialmediaTopicDataingestionrulesGooglebusinessprofileWithHttpInfo (string topicId, GoogleBusinessProfileDataIngestionRuleRequest body = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesGooglebusinessprofile");
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesGooglebusinessprofile: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesGooglebusinessprofile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a Google Business Profile data ingestion rule. 
+        /// 
+        /// PostSocialmediaTopicDataingestionrulesGooglebusinessprofile is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public async System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleResponse> PostSocialmediaTopicDataingestionrulesGooglebusinessprofileAsync (string topicId, GoogleBusinessProfileDataIngestionRuleRequest body = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> localVarResponse = await PostSocialmediaTopicDataingestionrulesGooglebusinessprofileAsyncWithHttpInfo(topicId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a Google Business Profile data ingestion rule. 
+        /// 
+        /// PostSocialmediaTopicDataingestionrulesGooglebusinessprofile is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>> PostSocialmediaTopicDataingestionrulesGooglebusinessprofileAsyncWithHttpInfo (string topicId, GoogleBusinessProfileDataIngestionRuleRequest body = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PostSocialmediaTopicDataingestionrulesGooglebusinessprofile");
+            
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesGooglebusinessprofile: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostSocialmediaTopicDataingestionrulesGooglebusinessprofile: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -13142,6 +14944,240 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<FacebookDataIngestionRuleResponse>(localVarStatusCode,
                 localVarHeaders,
                 (FacebookDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(FacebookDataIngestionRuleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update the Google Business Profile data ingestion rule. 
+        /// 
+        /// PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public GoogleBusinessProfileDataIngestionRuleResponse PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId (string topicId, string googleBusinessProfileIngestionRuleId, GoogleBusinessProfileDataIngestionRuleRequest body = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> localVarResponse = PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the Google Business Profile data ingestion rule. 
+        /// 
+        /// PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public ApiResponse< GoogleBusinessProfileDataIngestionRuleResponse > PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, GoogleBusinessProfileDataIngestionRuleRequest body = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the Google Business Profile data ingestion rule. 
+        /// 
+        /// PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of GoogleBusinessProfileDataIngestionRuleResponse</returns>
+        
+        public async System.Threading.Tasks.Task<GoogleBusinessProfileDataIngestionRuleResponse> PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsync (string topicId, string googleBusinessProfileIngestionRuleId, GoogleBusinessProfileDataIngestionRuleRequest body = null)
+        {
+             ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse> localVarResponse = await PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo(topicId, googleBusinessProfileIngestionRuleId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the Google Business Profile data ingestion rule. 
+        /// 
+        /// PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="topicId">topicId</param>
+        /// <param name="googleBusinessProfileIngestionRuleId">googleBusinessProfileIngestionRuleId</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (GoogleBusinessProfileDataIngestionRuleResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>> PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdAsyncWithHttpInfo (string topicId, string googleBusinessProfileIngestionRuleId, GoogleBusinessProfileDataIngestionRuleRequest body = null)
+        { 
+            // verify the required parameter 'topicId' is set
+            if (topicId == null)
+                throw new ApiException(400, "Missing required parameter 'topicId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            
+            // verify the required parameter 'googleBusinessProfileIngestionRuleId' is set
+            if (googleBusinessProfileIngestionRuleId == null)
+                throw new ApiException(400, "Missing required parameter 'googleBusinessProfileIngestionRuleId' when calling SocialMediaApi->PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId");
+            
+
+            var localVarPath = "/api/v2/socialmedia/topics/{topicId}/dataingestionrules/googlebusinessprofile/{googleBusinessProfileIngestionRuleId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (topicId != null) localVarPathParams.Add("topicId", this.Configuration.ApiClient.ParameterToString(topicId));
+            if (googleBusinessProfileIngestionRuleId != null) localVarPathParams.Add("googleBusinessProfileIngestionRuleId", this.Configuration.ApiClient.ParameterToString(googleBusinessProfileIngestionRuleId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<GoogleBusinessProfileDataIngestionRuleResponse>(localVarStatusCode,
+                localVarHeaders,
+                (GoogleBusinessProfileDataIngestionRuleResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(GoogleBusinessProfileDataIngestionRuleResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

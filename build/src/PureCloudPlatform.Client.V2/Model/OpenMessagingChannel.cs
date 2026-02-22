@@ -87,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="From">Information about the recipient the message is received from. (required).</param>
         /// <param name="Time">Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="Metadata">Information about the channel..</param>
-        public OpenMessagingChannel(TypeEnum? Type = null, string MessageId = null, OpenMessagingToRecipient To = null, OpenMessagingFromRecipient From = null, DateTime? Time = null, Object Metadata = null)
+        public OpenMessagingChannel(TypeEnum? Type = null, string MessageId = null, OpenMessagingToRecipient To = null, OpenMessagingFromRecipient From = null, DateTime? Time = null, ConversationChannelMetadata Metadata = null)
         {
             this.Type = Type;
             this.MessageId = MessageId;
@@ -154,7 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Information about the channel.</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
-        public Object Metadata { get; set; }
+        public ConversationChannelMetadata Metadata { get; set; }
 
 
         /// <summary>

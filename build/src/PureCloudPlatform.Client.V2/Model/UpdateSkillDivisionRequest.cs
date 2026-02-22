@@ -13,35 +13,29 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Quick reply button payload for carousel cards
+    /// UpdateSkillDivisionRequest
     /// </summary>
     [DataContract]
-    public partial class ButtonQuickReplyPayload :  IEquatable<ButtonQuickReplyPayload>
+    public partial class UpdateSkillDivisionRequest :  IEquatable<UpdateSkillDivisionRequest>
     {
-
         /// <summary>
-        /// Initializes a new instance of the <see cref="ButtonQuickReplyPayload" /> class.
+        /// Initializes a new instance of the <see cref="UpdateSkillDivisionRequest" /> class.
         /// </summary>
-        [JsonConstructorAttribute]
-        protected ButtonQuickReplyPayload() { }
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ButtonQuickReplyPayload" /> class.
-        /// </summary>
-        /// <param name="Value">Unique payload value for the quick reply button (required).</param>
-        public ButtonQuickReplyPayload(string Value = null)
+        /// <param name="DivisionId">The division to which this skill will belong.</param>
+        public UpdateSkillDivisionRequest(string DivisionId = null)
         {
-            this.Value = Value;
+            this.DivisionId = DivisionId;
             
         }
         
 
 
         /// <summary>
-        /// Unique payload value for the quick reply button
+        /// The division to which this skill will belong
         /// </summary>
-        /// <value>Unique payload value for the quick reply button</value>
-        [DataMember(Name="value", EmitDefaultValue=false)]
-        public string Value { get; set; }
+        /// <value>The division to which this skill will belong</value>
+        [DataMember(Name="divisionId", EmitDefaultValue=false)]
+        public string DivisionId { get; set; }
 
 
         /// <summary>
@@ -51,9 +45,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ButtonQuickReplyPayload {\n");
+            sb.Append("class UpdateSkillDivisionRequest {\n");
 
-            sb.Append("  Value: ").Append(Value).Append("\n");
+            sb.Append("  DivisionId: ").Append(DivisionId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -79,15 +73,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ButtonQuickReplyPayload);
+            return this.Equals(obj as UpdateSkillDivisionRequest);
         }
 
         /// <summary>
-        /// Returns true if ButtonQuickReplyPayload instances are equal
+        /// Returns true if UpdateSkillDivisionRequest instances are equal
         /// </summary>
-        /// <param name="other">Instance of ButtonQuickReplyPayload to be compared</param>
+        /// <param name="other">Instance of UpdateSkillDivisionRequest to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ButtonQuickReplyPayload other)
+        public bool Equals(UpdateSkillDivisionRequest other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -95,9 +89,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Value == other.Value ||
-                    this.Value != null &&
-                    this.Value.Equals(other.Value)
+                    this.DivisionId == other.DivisionId ||
+                    this.DivisionId != null &&
+                    this.DivisionId.Equals(other.DivisionId)
                 );
         }
 
@@ -112,8 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Value != null)
-                    hash = hash * 59 + this.Value.GetHashCode();
+                if (this.DivisionId != null)
+                    hash = hash * 59 + this.DivisionId.GetHashCode();
 
                 return hash;
             }

@@ -87,7 +87,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Time">Original time of the event. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
         /// <param name="Metadata">Information about the channel..</param>
         /// <param name="PublicMetadata">Meta data of this public post. For example, used to define where in the thread the post exists. (required).</param>
-        public OpenSocialMediaChannel(string MessageId = null, OpenSocialMediaRecipient To = null, OpenSocialMediaRecipient From = null, DateTime? Time = null, Object Metadata = null, OpenSocialMediaPublicMetadata PublicMetadata = null)
+        public OpenSocialMediaChannel(string MessageId = null, OpenSocialMediaRecipient To = null, OpenSocialMediaRecipient From = null, DateTime? Time = null, ConversationChannelMetadata Metadata = null, OpenSocialMediaPublicMetadata PublicMetadata = null)
         {
             this.MessageId = MessageId;
             this.To = To;
@@ -154,7 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Information about the channel.</value>
         [DataMember(Name="metadata", EmitDefaultValue=false)]
-        public Object Metadata { get; set; }
+        public ConversationChannelMetadata Metadata { get; set; }
 
 
 

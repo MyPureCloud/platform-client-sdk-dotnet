@@ -145,6 +145,39 @@ namespace PureCloudPlatform.Client.V2.Model
             Apple
         }
         /// <summary>
+        /// The type of Open Messaging Integration Extension. Only present when 'messengerType' is 'open' and the Open Integration has an extension
+        /// </summary>
+        /// <value>The type of Open Messaging Integration Extension. Only present when 'messengerType' is 'open' and the Open Integration has an extension</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum OpenExtensionTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum None for "None"
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None,
+            
+            /// <summary>
+            /// Enum Googlebusinessprofile for "GoogleBusinessProfile"
+            /// </summary>
+            [EnumMember(Value = "GoogleBusinessProfile")]
+            Googlebusinessprofile,
+            
+            /// <summary>
+            /// Enum Youtube for "YouTube"
+            /// </summary>
+            [EnumMember(Value = "YouTube")]
+            Youtube
+        }
+        /// <summary>
         /// The status of the Integration
         /// </summary>
         /// <value>The status of the Integration</value>
@@ -156,6 +189,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The type of Messaging Integration</value>
         [DataMember(Name="messengerType", EmitDefaultValue=false)]
         public MessengerTypeEnum? MessengerType { get; private set; }
+        /// <summary>
+        /// The type of Open Messaging Integration Extension. Only present when 'messengerType' is 'open' and the Open Integration has an extension
+        /// </summary>
+        /// <value>The type of Open Messaging Integration Extension. Only present when 'messengerType' is 'open' and the Open Integration has an extension</value>
+        [DataMember(Name="openExtensionType", EmitDefaultValue=false)]
+        public OpenExtensionTypeEnum? OpenExtensionType { get; private set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="MessagingIntegration" /> class.
         /// </summary>
@@ -202,6 +241,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="messagingSetting", EmitDefaultValue=false)]
         public MessagingSettingReference MessagingSetting { get; set; }
+
+
 
 
 
@@ -286,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MessagingSetting: ").Append(MessagingSetting).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  MessengerType: ").Append(MessengerType).Append("\n");
+            sb.Append("  OpenExtensionType: ").Append(OpenExtensionType).Append("\n");
             sb.Append("  Recipient: ").Append(Recipient).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
@@ -364,6 +406,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MessengerType.Equals(other.MessengerType)
                 ) &&
                 (
+                    this.OpenExtensionType == other.OpenExtensionType ||
+                    this.OpenExtensionType != null &&
+                    this.OpenExtensionType.Equals(other.OpenExtensionType)
+                ) &&
+                (
                     this.Recipient == other.Recipient ||
                     this.Recipient != null &&
                     this.Recipient.Equals(other.Recipient)
@@ -428,6 +475,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MessengerType != null)
                     hash = hash * 59 + this.MessengerType.GetHashCode();
+
+                if (this.OpenExtensionType != null)
+                    hash = hash * 59 + this.OpenExtensionType.GetHashCode();
 
                 if (this.Recipient != null)
                     hash = hash * 59 + this.Recipient.GetHashCode();

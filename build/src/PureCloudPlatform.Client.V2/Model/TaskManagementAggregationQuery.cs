@@ -39,6 +39,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Assigneeid,
             
             /// <summary>
+            /// Enum Caseid for "caseId"
+            /// </summary>
+            [EnumMember(Value = "caseId")]
+            Caseid,
+            
+            /// <summary>
             /// Enum Divisionid for "divisionId"
             /// </summary>
             [EnumMember(Value = "divisionId")]

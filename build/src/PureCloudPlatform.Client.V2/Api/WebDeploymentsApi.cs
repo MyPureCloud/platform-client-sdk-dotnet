@@ -145,25 +145,31 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the versions of a configuration
         /// </summary>
         /// <remarks>
-        /// This returns the 50 most recent versions for this configuration
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>WebDeploymentConfigurationVersionEntityListing</returns>
         
-        WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurationVersions (string configurationId);
+        WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurationVersions (string configurationId, string pageSize = null, string before = null, string after = null);
 
         /// <summary>
         /// Get the versions of a configuration
         /// </summary>
         /// <remarks>
-        /// This returns the 50 most recent versions for this configuration
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersionEntityListing</returns>
         
-        ApiResponse<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationVersionsWithHttpInfo (string configurationId);
+        ApiResponse<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationVersionsWithHttpInfo (string configurationId, string pageSize = null, string before = null, string after = null);
 
         /// <summary>
         /// Get the configuration draft
@@ -196,10 +202,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>WebDeploymentConfigurationVersionEntityListing</returns>
         
-        WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurations (bool? showOnlyPublished = null);
+        WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurations (string pageSize = null, string before = null, string after = null, bool? showOnlyPublished = null);
 
         /// <summary>
         /// View configuration drafts
@@ -208,10 +217,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersionEntityListing</returns>
         
-        ApiResponse<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsWithHttpInfo (bool? showOnlyPublished = null);
+        ApiResponse<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsWithHttpInfo (string pageSize = null, string before = null, string after = null, bool? showOnlyPublished = null);
 
         /// <summary>
         /// Get a deployment
@@ -324,10 +336,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>ExpandableWebDeploymentEntityListing</returns>
         
-        ExpandableWebDeploymentEntityListing GetWebdeploymentsDeployments (List<string> expand = null);
+        ExpandableWebDeploymentEntityListing GetWebdeploymentsDeployments (string pageSize = null, string before = null, string after = null, List<string> expand = null);
 
         /// <summary>
         /// Get deployments
@@ -336,10 +351,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>ApiResponse of ExpandableWebDeploymentEntityListing</returns>
         
-        ApiResponse<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsWithHttpInfo (List<string> expand = null);
+        ApiResponse<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsWithHttpInfo (string pageSize = null, string before = null, string after = null, List<string> expand = null);
 
         /// <summary>
         /// Publish the configuration draft and create a new version
@@ -673,25 +691,31 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get the versions of a configuration
         /// </summary>
         /// <remarks>
-        /// This returns the 50 most recent versions for this configuration
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>Task of WebDeploymentConfigurationVersionEntityListing</returns>
         
-        System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationVersionsAsync (string configurationId);
+        System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationVersionsAsync (string configurationId, string pageSize = null, string before = null, string after = null);
 
         /// <summary>
         /// Get the versions of a configuration
         /// </summary>
         /// <remarks>
-        /// This returns the 50 most recent versions for this configuration
+        /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersionEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationVersionsAsyncWithHttpInfo (string configurationId);
+        System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationVersionsAsyncWithHttpInfo (string configurationId, string pageSize = null, string before = null, string after = null);
 
         /// <summary>
         /// Get the configuration draft
@@ -724,10 +748,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>Task of WebDeploymentConfigurationVersionEntityListing</returns>
         
-        System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsAsync (bool? showOnlyPublished = null);
+        System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsAsync (string pageSize = null, string before = null, string after = null, bool? showOnlyPublished = null);
 
         /// <summary>
         /// View configuration drafts
@@ -736,10 +763,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersionEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationsAsyncWithHttpInfo (bool? showOnlyPublished = null);
+        System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationsAsyncWithHttpInfo (string pageSize = null, string before = null, string after = null, bool? showOnlyPublished = null);
 
         /// <summary>
         /// Get a deployment
@@ -852,10 +882,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of ExpandableWebDeploymentEntityListing</returns>
         
-        System.Threading.Tasks.Task<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsAsync (List<string> expand = null);
+        System.Threading.Tasks.Task<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsAsync (string pageSize = null, string before = null, string after = null, List<string> expand = null);
 
         /// <summary>
         /// Get deployments
@@ -864,10 +897,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of ApiResponse (ExpandableWebDeploymentEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo (List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo (string pageSize = null, string before = null, string after = null, List<string> expand = null);
 
         /// <summary>
         /// Publish the configuration draft and create a new version
@@ -2157,27 +2193,33 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the versions of a configuration 
-        /// This returns the 50 most recent versions for this configuration
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>WebDeploymentConfigurationVersionEntityListing</returns>
         
-        public WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurationVersions (string configurationId)
+        public WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurationVersions (string configurationId, string pageSize = null, string before = null, string after = null)
         {
-             ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = GetWebdeploymentsConfigurationVersionsWithHttpInfo(configurationId);
+             ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = GetWebdeploymentsConfigurationVersionsWithHttpInfo(configurationId, pageSize, before, after);
              return localVarResponse.Data;
         }
 
         /// <summary>
         /// Get the versions of a configuration 
-        /// This returns the 50 most recent versions for this configuration
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersionEntityListing</returns>
         
-        public ApiResponse< WebDeploymentConfigurationVersionEntityListing > GetWebdeploymentsConfigurationVersionsWithHttpInfo (string configurationId)
+        public ApiResponse< WebDeploymentConfigurationVersionEntityListing > GetWebdeploymentsConfigurationVersionsWithHttpInfo (string configurationId, string pageSize = null, string before = null, string after = null)
         { 
             // verify the required parameter 'configurationId' is set
             if (configurationId == null)
@@ -2217,6 +2259,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (configurationId != null) localVarPathParams.Add("configurationId", this.Configuration.ApiClient.ParameterToString(configurationId));
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
 
             // Header params
 
@@ -2256,28 +2301,34 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get the versions of a configuration 
-        /// This returns the 50 most recent versions for this configuration
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>Task of WebDeploymentConfigurationVersionEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationVersionsAsync (string configurationId)
+        public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationVersionsAsync (string configurationId, string pageSize = null, string before = null, string after = null)
         {
-             ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = await GetWebdeploymentsConfigurationVersionsAsyncWithHttpInfo(configurationId);
+             ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = await GetWebdeploymentsConfigurationVersionsAsyncWithHttpInfo(configurationId, pageSize, before, after);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
         /// Get the versions of a configuration 
-        /// This returns the 50 most recent versions for this configuration
+        /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="configurationId">The configuration version ID</param>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersionEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationVersionsAsyncWithHttpInfo (string configurationId)
+        public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationVersionsAsyncWithHttpInfo (string configurationId, string pageSize = null, string before = null, string after = null)
         { 
             // verify the required parameter 'configurationId' is set
             if (configurationId == null)
@@ -2318,6 +2369,9 @@ namespace PureCloudPlatform.Client.V2.Api
             if (configurationId != null) localVarPathParams.Add("configurationId", this.Configuration.ApiClient.ParameterToString(configurationId));
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
 
             // Header params
 
@@ -2562,12 +2616,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>WebDeploymentConfigurationVersionEntityListing</returns>
         
-        public WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurations (bool? showOnlyPublished = null)
+        public WebDeploymentConfigurationVersionEntityListing GetWebdeploymentsConfigurations (string pageSize = null, string before = null, string after = null, bool? showOnlyPublished = null)
         {
-             ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = GetWebdeploymentsConfigurationsWithHttpInfo(showOnlyPublished);
+             ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = GetWebdeploymentsConfigurationsWithHttpInfo(pageSize, before, after, showOnlyPublished);
              return localVarResponse.Data;
         }
 
@@ -2576,10 +2633,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>ApiResponse of WebDeploymentConfigurationVersionEntityListing</returns>
         
-        public ApiResponse< WebDeploymentConfigurationVersionEntityListing > GetWebdeploymentsConfigurationsWithHttpInfo (bool? showOnlyPublished = null)
+        public ApiResponse< WebDeploymentConfigurationVersionEntityListing > GetWebdeploymentsConfigurationsWithHttpInfo (string pageSize = null, string before = null, string after = null, bool? showOnlyPublished = null)
         { 
 
             var localVarPath = "/api/v2/webdeployments/configurations";
@@ -2615,6 +2675,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (showOnlyPublished != null) localVarQueryParams.Add(new Tuple<string, string>("showOnlyPublished", this.Configuration.ApiClient.ParameterToString(showOnlyPublished)));
 
             // Header params
@@ -2658,12 +2721,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>Task of WebDeploymentConfigurationVersionEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsAsync (bool? showOnlyPublished = null)
+        public async System.Threading.Tasks.Task<WebDeploymentConfigurationVersionEntityListing> GetWebdeploymentsConfigurationsAsync (string pageSize = null, string before = null, string after = null, bool? showOnlyPublished = null)
         {
-             ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = await GetWebdeploymentsConfigurationsAsyncWithHttpInfo(showOnlyPublished);
+             ApiResponse<WebDeploymentConfigurationVersionEntityListing> localVarResponse = await GetWebdeploymentsConfigurationsAsyncWithHttpInfo(pageSize, before, after, showOnlyPublished);
              return localVarResponse.Data;
 
         }
@@ -2673,10 +2739,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="showOnlyPublished">Filter by published status. (optional)</param>
         /// <returns>Task of ApiResponse (WebDeploymentConfigurationVersionEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationsAsyncWithHttpInfo (bool? showOnlyPublished = null)
+        public async System.Threading.Tasks.Task<ApiResponse<WebDeploymentConfigurationVersionEntityListing>> GetWebdeploymentsConfigurationsAsyncWithHttpInfo (string pageSize = null, string before = null, string after = null, bool? showOnlyPublished = null)
         { 
 
             var localVarPath = "/api/v2/webdeployments/configurations";
@@ -2712,6 +2781,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (showOnlyPublished != null) localVarQueryParams.Add(new Tuple<string, string>("showOnlyPublished", this.Configuration.ApiClient.ParameterToString(showOnlyPublished)));
 
             // Header params
@@ -3577,12 +3649,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>ExpandableWebDeploymentEntityListing</returns>
         
-        public ExpandableWebDeploymentEntityListing GetWebdeploymentsDeployments (List<string> expand = null)
+        public ExpandableWebDeploymentEntityListing GetWebdeploymentsDeployments (string pageSize = null, string before = null, string after = null, List<string> expand = null)
         {
-             ApiResponse<ExpandableWebDeploymentEntityListing> localVarResponse = GetWebdeploymentsDeploymentsWithHttpInfo(expand);
+             ApiResponse<ExpandableWebDeploymentEntityListing> localVarResponse = GetWebdeploymentsDeploymentsWithHttpInfo(pageSize, before, after, expand);
              return localVarResponse.Data;
         }
 
@@ -3591,10 +3666,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>ApiResponse of ExpandableWebDeploymentEntityListing</returns>
         
-        public ApiResponse< ExpandableWebDeploymentEntityListing > GetWebdeploymentsDeploymentsWithHttpInfo (List<string> expand = null)
+        public ApiResponse< ExpandableWebDeploymentEntityListing > GetWebdeploymentsDeploymentsWithHttpInfo (string pageSize = null, string before = null, string after = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/webdeployments/deployments";
@@ -3630,6 +3708,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
@@ -3673,12 +3754,15 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of ExpandableWebDeploymentEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsAsync (List<string> expand = null)
+        public async System.Threading.Tasks.Task<ExpandableWebDeploymentEntityListing> GetWebdeploymentsDeploymentsAsync (string pageSize = null, string before = null, string after = null, List<string> expand = null)
         {
-             ApiResponse<ExpandableWebDeploymentEntityListing> localVarResponse = await GetWebdeploymentsDeploymentsAsyncWithHttpInfo(expand);
+             ApiResponse<ExpandableWebDeploymentEntityListing> localVarResponse = await GetWebdeploymentsDeploymentsAsyncWithHttpInfo(pageSize, before, after, expand);
              return localVarResponse.Data;
 
         }
@@ -3688,10 +3772,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Number of entities to return. Defaults to 300. (optional)</param>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
         /// <param name="expand">The specified entity attributes will be filled. Comma separated values expected.  (optional)</param>
         /// <returns>Task of ApiResponse (ExpandableWebDeploymentEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo (List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ExpandableWebDeploymentEntityListing>> GetWebdeploymentsDeploymentsAsyncWithHttpInfo (string pageSize = null, string before = null, string after = null, List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/webdeployments/deployments";
@@ -3727,6 +3814,9 @@ namespace PureCloudPlatform.Client.V2.Api
             // Path params
 
             // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params

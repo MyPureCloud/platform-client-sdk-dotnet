@@ -64,6 +64,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Partialcollection,
             
             /// <summary>
+            /// Enum Guardrailsviolation for "GuardrailsViolation"
+            /// </summary>
+            [EnumMember(Value = "GuardrailsViolation")]
+            Guardrailsviolation,
+            
+            /// <summary>
             /// Enum Nomatchcollection for "NoMatchCollection"
             /// </summary>
             [EnumMember(Value = "NoMatchCollection")]

@@ -118,6 +118,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchRoutingQueueUsers**](#PatchRoutingQueueUsers) | **Patch** /api/v2/routing/queues/{queueId}/users | DEPRECATED: use PATCH /routing/queues/{queueId}/members.  Join or unjoin a set of users for a queue. |
 | [**PatchRoutingSettingsContactcenter**](#PatchRoutingSettingsContactcenter) | **Patch** /api/v2/routing/settings/contactcenter | Update Contact Center Settings |
 | [**PatchRoutingSettingsTranscription**](#PatchRoutingSettingsTranscription) | **Patch** /api/v2/routing/settings/transcription | Patch Transcription Settings |
+| [**PatchRoutingSkill**](#PatchRoutingSkill) | **Patch** /api/v2/routing/skills/{skillId} | Update Routing Skill Division |
 | [**PatchRoutingSkillgroup**](#PatchRoutingSkillgroup) | **Patch** /api/v2/routing/skillgroups/{skillGroupId} | Update skill group definition |
 | [**PatchRoutingSmsPhonenumber**](#PatchRoutingSmsPhonenumber) | **Patch** /api/v2/routing/sms/phonenumbers/{phoneNumberId} | Update a phone number provisioned for SMS. |
 | [**PatchUserQueue**](#PatchUserQueue) | **Patch** /api/v2/users/{userId}/queues/{queueId} | Join or unjoin a queue for a user |
@@ -7431,6 +7432,70 @@ namespace Example
 [**TranscriptionSettings**](TranscriptionSettings)
 
 
+## PatchRoutingSkill
+
+> [**RoutingSkill**](RoutingSkill) PatchRoutingSkill (string skillId, UpdateSkillDivisionRequest body)
+
+
+Update Routing Skill Division
+
+Requires ANY permissions: 
+
+* routing:skill:update
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchRoutingSkillExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new RoutingApi();
+            var skillId = skillId_example;  // string | Skill ID
+            var body = new UpdateSkillDivisionRequest(); // UpdateSkillDivisionRequest | updateSkillDivisionRequest
+
+            try
+            { 
+                // Update Routing Skill Division
+                RoutingSkill result = apiInstance.PatchRoutingSkill(skillId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling RoutingApi.PatchRoutingSkill: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **skillId** | **string**| Skill ID |  |
+| **body** | [**UpdateSkillDivisionRequest**](UpdateSkillDivisionRequest)| updateSkillDivisionRequest |  |
+
+### Return type
+
+[**RoutingSkill**](RoutingSkill)
+
+
 ## PatchRoutingSkillgroup
 
 > [**SkillGroup**](SkillGroup) PatchRoutingSkillgroup (string skillGroupId, SkillGroup body)
@@ -11006,4 +11071,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 256.0.0_
+_PureCloudPlatform.Client.V2 257.0.0_

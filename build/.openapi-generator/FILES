@@ -699,7 +699,6 @@ docs/BusinessUnitResponse.md
 docs/BusinessUnitSettingsResponse.md
 docs/Button.md
 docs/ButtonComponent.md
-docs/ButtonQuickReplyPayload.md
 docs/ButtonResponse.md
 docs/CachedMediaItem.md
 docs/CachedMediaItemEntityListing.md
@@ -1257,6 +1256,10 @@ docs/ConversationContentText.md
 docs/ConversationContentWheelPicker.md
 docs/ConversationContentWheelPickerItem.md
 docs/ConversationContext.md
+docs/ConversationCustomAttributesSearchCriteria.md
+docs/ConversationCustomAttributesSearchRequest.md
+docs/ConversationDataSchema.md
+docs/ConversationDataSchemaListing.md
 docs/ConversationDeletionProtectionQuery.md
 docs/ConversationDetailQueryClause.md
 docs/ConversationDetailQueryFilter.md
@@ -1355,6 +1358,8 @@ docs/ConversationIntentSuggestionsTopicSuggestedIntent.md
 docs/ConversationIntentSuggestionsTopicSuggestedIntentSlot.md
 docs/ConversationIntentSuggestionsTopicSuggestionContext.md
 docs/ConversationIntentSuggestionsTopicSuggestionFeedback.md
+docs/ConversationJsonSchemaDocument.md
+docs/ConversationJsonSchemaRequest.md
 docs/ConversationKnowledgeArticleSuggestionsTopicKnowledgeAnswer.md
 docs/ConversationKnowledgeArticleSuggestionsTopicKnowledgeArticleSuggestionEvent.md
 docs/ConversationKnowledgeArticleSuggestionsTopicSuggestedArticle.md
@@ -1437,6 +1442,7 @@ docs/ConversationRoutingData.md
 docs/ConversationSchemaAttribute.md
 docs/ConversationSchemaData.md
 docs/ConversationSchemaReference.md
+docs/ConversationSchemaUpdateRequest.md
 docs/ConversationScreenShareEventTopicConversationDivisionMembership.md
 docs/ConversationScreenShareEventTopicConversationRoutingData.md
 docs/ConversationScreenShareEventTopicDetail.md
@@ -1615,6 +1621,7 @@ docs/CreateShareResponse.md
 docs/CreateStaffingGroupAllocation.md
 docs/CreateStaffingGroupRequest.md
 docs/CreateSurveyRequest.md
+docs/CreateSurveyResponse.md
 docs/CreateTimeOffLimitRequest.md
 docs/CreateTimeOffPlanBusinessUnitAssociation.md
 docs/CreateTimeOffPlanManagementUnitAssociation.md
@@ -1671,6 +1678,13 @@ docs/CursorNoteListing.md
 docs/CursorOrganizationListing.md
 docs/CursorRelationshipListing.md
 docs/Cursors.md
+docs/CustomAttributes.md
+docs/CustomAttributesBulkUpdateResponse.md
+docs/CustomAttributesBulkUpdateResponseMap.md
+docs/CustomAttributesIdResponse.md
+docs/CustomAttributesListing.md
+docs/CustomAttributesPatchRequest.md
+docs/CustomAttributesUpdateRequest.md
 docs/CustomEventAttribute.md
 docs/CustomEventAttributeList.md
 docs/CustomI18nLabels.md
@@ -1836,6 +1850,7 @@ docs/DeleteContentmanagementWorkspace-example.txt
 docs/DeleteContentmanagementWorkspaceMember-example.txt
 docs/DeleteContentmanagementWorkspaceTagvalue-example.txt
 docs/DeleteConversation-example.txt
+docs/DeleteConversationCustomattribute-example.txt
 docs/DeleteConversationParticipantCode-example.txt
 docs/DeleteConversationParticipantFlaggedreason-example.txt
 docs/DeleteConversationRecordingAnnotation-example.txt
@@ -1846,6 +1861,7 @@ docs/DeleteConversationsMessagesCachedmediaCachedMediaItemId-example.txt
 docs/DeleteConversationsMessagingIntegrationsAppleIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
+docs/DeleteConversationsMessagingIntegrationsOpenExtensionsGooglebusinessprofileIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsOpenIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/DeleteConversationsMessagingIntegrationsWhatsappIntegrationId-example.txt
@@ -2031,6 +2047,7 @@ docs/DeleteSocialmediaEscalationrule-example.txt
 docs/DeleteSocialmediaMessage-example.txt
 docs/DeleteSocialmediaTopic-example.txt
 docs/DeleteSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId-example.txt
+docs/DeleteSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId-example.txt
 docs/DeleteSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId-example.txt
 docs/DeleteSocialmediaTopicDataingestionrulesOpenOpenId-example.txt
 docs/DeleteSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId-example.txt
@@ -2261,6 +2278,7 @@ docs/DivisionEntityRef.md
 docs/DivisionReference.md
 docs/DivisionedDomainEntityRef.md
 docs/DivsPermittedEntityListing.md
+docs/DmarcResult.md
 docs/DncList.md
 docs/DncListCreate.md
 docs/DncListDivisionView.md
@@ -2395,6 +2413,7 @@ docs/DynamicGroupRoutingSkillCondition.md
 docs/DynamicGroupSkillCondition.md
 docs/DynamicLineBalancingSettings.md
 docs/DynamicLineBalancingSettingsPatchRequest.md
+docs/DynamicUtilization.md
 docs/Edge.md
 docs/EdgeAutoUpdateConfig.md
 docs/EdgeChangeTopicEdge.md
@@ -2838,6 +2857,7 @@ docs/FlowVersionEntityListing.md
 docs/FlowsApi.json
 docs/FlowsApi.md
 docs/FlowsQueryCriteriaResponse.md
+docs/FollowersFilter.md
 docs/FooterTemplate.md
 docs/ForecastAbandonRateResponse.md
 docs/ForecastAverageSpeedOfAnswerResponse.md
@@ -3148,6 +3168,8 @@ docs/GetConversationCommunicationAgentchecklistJob-example.txt
 docs/GetConversationCommunicationAgentchecklists-example.txt
 docs/GetConversationCommunicationInternalmessage-example.txt
 docs/GetConversationCommunicationInternalmessages-example.txt
+docs/GetConversationCustomattribute-example.txt
+docs/GetConversationCustomattributes-example.txt
 docs/GetConversationParticipantSecureivrsession-example.txt
 docs/GetConversationParticipantSecureivrsessions-example.txt
 docs/GetConversationParticipantWrapup-example.txt
@@ -3187,6 +3209,13 @@ docs/GetConversationsCobrowsesessionParticipantCommunicationWrapup-example.txt
 docs/GetConversationsCobrowsesessionParticipantWrapup-example.txt
 docs/GetConversationsCobrowsesessionParticipantWrapupcodes-example.txt
 docs/GetConversationsCobrowsesessions-example.txt
+docs/GetConversationsCustomattributesSchema-example.txt
+docs/GetConversationsCustomattributesSchemaVersion-example.txt
+docs/GetConversationsCustomattributesSchemaVersions-example.txt
+docs/GetConversationsCustomattributesSchemas-example.txt
+docs/GetConversationsCustomattributesSchemasCoretype-example.txt
+docs/GetConversationsCustomattributesSchemasCoretypes-example.txt
+docs/GetConversationsCustomattributesSchemasLimits-example.txt
 docs/GetConversationsEmail-example.txt
 docs/GetConversationsEmailMessage-example.txt
 docs/GetConversationsEmailMessages-example.txt
@@ -3228,6 +3257,10 @@ docs/GetConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsInstagram-example.txt
 docs/GetConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsOpen-example.txt
+docs/GetConversationsMessagingIntegrationsOpenExtensionsGooglebusinessprofileIntegrationId-example.txt
+docs/GetConversationsMessagingIntegrationsOpenExtensionsGooglebusinessprofileOauthSettings-example.txt
+docs/GetConversationsMessagingIntegrationsOpenExtensionsGooglebusinessprofileToken-example.txt
+docs/GetConversationsMessagingIntegrationsOpenExtensionsGooglebusinessprofileTokenAccounts-example.txt
 docs/GetConversationsMessagingIntegrationsOpenIntegrationId-example.txt
 docs/GetConversationsMessagingIntegrationsTwitter-example.txt
 docs/GetConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
@@ -3979,6 +4012,9 @@ docs/GetSocialmediaTopicDataingestionrules-example.txt
 docs/GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId-example.txt
 docs/GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersion-example.txt
 docs/GetSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleIdVersions-example.txt
+docs/GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId-example.txt
+docs/GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersion-example.txt
+docs/GetSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleIdVersions-example.txt
 docs/GetSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId-example.txt
 docs/GetSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersion-example.txt
 docs/GetSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleIdVersions-example.txt
@@ -4378,8 +4414,22 @@ docs/GetWorkforcemanagementUserWorkplanbidranks-example.txt
 docs/GetWorkforcemanagementWorkplanbidPreferences-example.txt
 docs/GetWorkforcemanagementWorkplanbidWorkplans-example.txt
 docs/GetWorkforcemanagementWorkplanbids-example.txt
+docs/GoogleAuthToken.md
+docs/GoogleAuthTokenReference.md
+docs/GoogleAuthTokenRequest.md
+docs/GoogleBusinessProfileAccount.md
+docs/GoogleBusinessProfileAccountListing.md
+docs/GoogleBusinessProfileAccountReference.md
+docs/GoogleBusinessProfileDataIngestionRuleRequest.md
+docs/GoogleBusinessProfileDataIngestionRuleResponse.md
+docs/GoogleBusinessProfileDataIngestionRuleVersionResponse.md
+docs/GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing.md
+docs/GoogleBusinessProfileOpenIntegration.md
+docs/GoogleBusinessProfileOpenIntegrationRequest.md
+docs/GoogleBusinessProfileOpenIntegrationUpdateRequest.md
 docs/GoogleDialogflowConfig.md
 docs/GoogleDialogflowCustomSettings.md
+docs/GoogleOAuthSettingsResponse.md
 docs/Grammar.md
 docs/GrammarFileUploadRequest.md
 docs/GrammarLanguage.md
@@ -4440,6 +4490,7 @@ docs/HeadTokensMe-example.txt
 docs/HeadcountForecast.md
 docs/HeadcountInterval.md
 docs/Header.md
+docs/HeaderEntry.md
 docs/HealthInfo.md
 docs/HelpLink.md
 docs/HelpSettings.md
@@ -5607,6 +5658,8 @@ docs/PatchContentOfferStylingConfiguration.md
 docs/PatchContentPositionProperties.md
 docs/PatchContext.md
 docs/PatchContextPattern.md
+docs/PatchConversationCustomattributes-example.txt
+docs/PatchConversationCustomattributesBulk-example.txt
 docs/PatchConversationParticipant-example.txt
 docs/PatchConversationParticipantAttributes-example.txt
 docs/PatchConversationRecordingstate-example.txt
@@ -5649,6 +5702,7 @@ docs/PatchConversationsMessageParticipantCommunication-example.txt
 docs/PatchConversationsMessagingIntegrationsAppleIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
+docs/PatchConversationsMessagingIntegrationsOpenExtensionsGooglebusinessprofileIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsOpenIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsTwitterIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsWhatsappEmbeddedsignupIntegrationId-example.txt
@@ -5736,6 +5790,7 @@ docs/PatchRoutingQueueUser-example.txt
 docs/PatchRoutingQueueUsers-example.txt
 docs/PatchRoutingSettingsContactcenter-example.txt
 docs/PatchRoutingSettingsTranscription-example.txt
+docs/PatchRoutingSkill-example.txt
 docs/PatchRoutingSkillgroup-example.txt
 docs/PatchRoutingSmsPhonenumber-example.txt
 docs/PatchScimGroup-example.txt
@@ -5747,6 +5802,7 @@ docs/PatchSettingsExecutiondata-example.txt
 docs/PatchShiftTradeRequest.md
 docs/PatchSocialmediaTopic-example.txt
 docs/PatchSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId-example.txt
+docs/PatchSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId-example.txt
 docs/PatchSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId-example.txt
 docs/PatchSocialmediaTopicDataingestionrulesOpenOpenId-example.txt
 docs/PatchSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId-example.txt
@@ -6120,6 +6176,9 @@ docs/PostConversationsChatParticipantReplace-example.txt
 docs/PostConversationsChats-example.txt
 docs/PostConversationsCobrowsesessionParticipantCommunicationWrapup-example.txt
 docs/PostConversationsCobrowsesessionParticipantReplace-example.txt
+docs/PostConversationsCustomattributesSchemas-example.txt
+docs/PostConversationsCustomattributesSearch-example.txt
+docs/PostConversationsCustomattributesSearch-example.txt
 docs/PostConversationsEmailInboundmessages-example.txt
 docs/PostConversationsEmailMessages-example.txt
 docs/PostConversationsEmailMessagesDraftAttachmentsCopy-example.txt
@@ -6151,6 +6210,8 @@ docs/PostConversationsMessagingIntegrationsApple-example.txt
 docs/PostConversationsMessagingIntegrationsFacebook-example.txt
 docs/PostConversationsMessagingIntegrationsInstagram-example.txt
 docs/PostConversationsMessagingIntegrationsOpen-example.txt
+docs/PostConversationsMessagingIntegrationsOpenExtensionsGooglebusinessprofile-example.txt
+docs/PostConversationsMessagingIntegrationsOpenExtensionsGooglebusinessprofileTokens-example.txt
 docs/PostConversationsMessagingIntegrationsTwitter-example.txt
 docs/PostConversationsMessagingIntegrationsWhatsapp-example.txt
 docs/PostConversationsMessagingIntegrationsWhatsappEmbeddedsignup-example.txt
@@ -6530,6 +6591,7 @@ docs/PostSocialmediaAnalyticsMessagesJobs-example.txt
 docs/PostSocialmediaEscalationrules-example.txt
 docs/PostSocialmediaEscalationsMessages-example.txt
 docs/PostSocialmediaTopicDataingestionrulesFacebook-example.txt
+docs/PostSocialmediaTopicDataingestionrulesGooglebusinessprofile-example.txt
 docs/PostSocialmediaTopicDataingestionrulesInstagram-example.txt
 docs/PostSocialmediaTopicDataingestionrulesOpen-example.txt
 docs/PostSocialmediaTopicDataingestionrulesOpenRuleIdMessagesBulk-example.txt
@@ -6855,6 +6917,8 @@ docs/PutChatsSettings-example.txt
 docs/PutContentmanagementWorkspace-example.txt
 docs/PutContentmanagementWorkspaceMember-example.txt
 docs/PutContentmanagementWorkspaceTagvalue-example.txt
+docs/PutConversationCustomattributes-example.txt
+docs/PutConversationCustomattributesBulk-example.txt
 docs/PutConversationParticipantFlaggedreason-example.txt
 docs/PutConversationRecording-example.txt
 docs/PutConversationRecordingAnnotation-example.txt
@@ -6865,6 +6929,7 @@ docs/PutConversationsCallRecordingstate-example.txt
 docs/PutConversationsCallbackRecordingstate-example.txt
 docs/PutConversationsChatRecordingstate-example.txt
 docs/PutConversationsCobrowsesessionRecordingstate-example.txt
+docs/PutConversationsCustomattributesSchema-example.txt
 docs/PutConversationsEmailMessagesDraft-example.txt
 docs/PutConversationsEmailRecordingstate-example.txt
 docs/PutConversationsKeyconfiguration-example.txt
@@ -7030,6 +7095,7 @@ docs/PutScimV2Group-example.txt
 docs/PutScimV2User-example.txt
 docs/PutSocialmediaEscalationrule-example.txt
 docs/PutSocialmediaTopicDataingestionrulesFacebookFacebookIngestionRuleId-example.txt
+docs/PutSocialmediaTopicDataingestionrulesGooglebusinessprofileGoogleBusinessProfileIngestionRuleId-example.txt
 docs/PutSocialmediaTopicDataingestionrulesInstagramInstagramIngestionRuleId-example.txt
 docs/PutSocialmediaTopicDataingestionrulesOpenOpenId-example.txt
 docs/PutSocialmediaTopicDataingestionrulesTwitterTwitterIngestionRuleId-example.txt
@@ -8417,6 +8483,7 @@ docs/UpdateScheduleUploadSchema.md
 docs/UpdateSegmentAssignmentRequest.md
 docs/UpdateSegmentAssignmentResponse.md
 docs/UpdateServiceGoalTemplate.md
+docs/UpdateSkillDivisionRequest.md
 docs/UpdateStaffingGroupRequest.md
 docs/UpdateTimeOffLimitRequest.md
 docs/UpdateTimeOffPlanBusinessUnitAssociation.md
@@ -9990,7 +10057,6 @@ src/PureCloudPlatform.Client.V2/Model/BusinessUnitResponse.cs
 src/PureCloudPlatform.Client.V2/Model/BusinessUnitSettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Button.cs
 src/PureCloudPlatform.Client.V2/Model/ButtonComponent.cs
-src/PureCloudPlatform.Client.V2/Model/ButtonQuickReplyPayload.cs
 src/PureCloudPlatform.Client.V2/Model/ButtonResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CachedMediaItem.cs
 src/PureCloudPlatform.Client.V2/Model/CachedMediaItemEntityListing.cs
@@ -10540,6 +10606,10 @@ src/PureCloudPlatform.Client.V2/Model/ConversationContentText.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentWheelPicker.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentWheelPickerItem.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContext.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationCustomAttributesSearchCriteria.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationCustomAttributesSearchRequest.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationDataSchema.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationDataSchemaListing.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationDeletionProtectionQuery.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationDetailQueryClause.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationDetailQueryFilter.cs
@@ -10638,6 +10708,8 @@ src/PureCloudPlatform.Client.V2/Model/ConversationIntentSuggestionsTopicSuggeste
 src/PureCloudPlatform.Client.V2/Model/ConversationIntentSuggestionsTopicSuggestedIntentSlot.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationIntentSuggestionsTopicSuggestionContext.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationIntentSuggestionsTopicSuggestionFeedback.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationJsonSchemaDocument.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationJsonSchemaRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationKnowledgeArticleSuggestionsTopicKnowledgeAnswer.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationKnowledgeArticleSuggestionsTopicKnowledgeArticleSuggestionEvent.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationKnowledgeArticleSuggestionsTopicSuggestedArticle.cs
@@ -10720,6 +10792,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationRoutingData.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSchemaAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSchemaData.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSchemaReference.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationSchemaUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicConversationDivisionMembership.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicConversationRoutingData.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicDetail.cs
@@ -10896,6 +10969,7 @@ src/PureCloudPlatform.Client.V2/Model/CreateShareResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CreateStaffingGroupAllocation.cs
 src/PureCloudPlatform.Client.V2/Model/CreateStaffingGroupRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateSurveyRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CreateSurveyResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CreateTimeOffLimitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateTimeOffPlanBusinessUnitAssociation.cs
 src/PureCloudPlatform.Client.V2/Model/CreateTimeOffPlanManagementUnitAssociation.cs
@@ -10952,6 +11026,13 @@ src/PureCloudPlatform.Client.V2/Model/CursorNoteListing.cs
 src/PureCloudPlatform.Client.V2/Model/CursorOrganizationListing.cs
 src/PureCloudPlatform.Client.V2/Model/CursorRelationshipListing.cs
 src/PureCloudPlatform.Client.V2/Model/Cursors.cs
+src/PureCloudPlatform.Client.V2/Model/CustomAttributes.cs
+src/PureCloudPlatform.Client.V2/Model/CustomAttributesBulkUpdateResponse.cs
+src/PureCloudPlatform.Client.V2/Model/CustomAttributesBulkUpdateResponseMap.cs
+src/PureCloudPlatform.Client.V2/Model/CustomAttributesIdResponse.cs
+src/PureCloudPlatform.Client.V2/Model/CustomAttributesListing.cs
+src/PureCloudPlatform.Client.V2/Model/CustomAttributesPatchRequest.cs
+src/PureCloudPlatform.Client.V2/Model/CustomAttributesUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CustomEventAttribute.cs
 src/PureCloudPlatform.Client.V2/Model/CustomEventAttributeList.cs
 src/PureCloudPlatform.Client.V2/Model/CustomI18nLabels.cs
@@ -11190,6 +11271,7 @@ src/PureCloudPlatform.Client.V2/Model/DivisionEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/DivisionReference.cs
 src/PureCloudPlatform.Client.V2/Model/DivisionedDomainEntityRef.cs
 src/PureCloudPlatform.Client.V2/Model/DivsPermittedEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/DmarcResult.cs
 src/PureCloudPlatform.Client.V2/Model/DncList.cs
 src/PureCloudPlatform.Client.V2/Model/DncListCreate.cs
 src/PureCloudPlatform.Client.V2/Model/DncListDivisionView.cs
@@ -11322,6 +11404,7 @@ src/PureCloudPlatform.Client.V2/Model/DynamicGroupRoutingSkillCondition.cs
 src/PureCloudPlatform.Client.V2/Model/DynamicGroupSkillCondition.cs
 src/PureCloudPlatform.Client.V2/Model/DynamicLineBalancingSettings.cs
 src/PureCloudPlatform.Client.V2/Model/DynamicLineBalancingSettingsPatchRequest.cs
+src/PureCloudPlatform.Client.V2/Model/DynamicUtilization.cs
 src/PureCloudPlatform.Client.V2/Model/Edge.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeAutoUpdateConfig.cs
 src/PureCloudPlatform.Client.V2/Model/EdgeChangeTopicEdge.cs
@@ -11753,6 +11836,7 @@ src/PureCloudPlatform.Client.V2/Model/FlowStartDetailEventTopicFlowStartEvent.cs
 src/PureCloudPlatform.Client.V2/Model/FlowVersion.cs
 src/PureCloudPlatform.Client.V2/Model/FlowVersionEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/FlowsQueryCriteriaResponse.cs
+src/PureCloudPlatform.Client.V2/Model/FollowersFilter.cs
 src/PureCloudPlatform.Client.V2/Model/FooterTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastAbandonRateResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ForecastAverageSpeedOfAnswerResponse.cs
@@ -11830,8 +11914,22 @@ src/PureCloudPlatform.Client.V2/Model/GetProfilesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GetRulesQuery.cs
 src/PureCloudPlatform.Client.V2/Model/GetTemplatesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/GetUploadSourceUrlJobStatusResponse.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleAuthToken.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleAuthTokenReference.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleAuthTokenRequest.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileAccount.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileAccountListing.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileAccountReference.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileDataIngestionRuleRequest.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileDataIngestionRuleResponse.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileDataIngestionRuleVersionResponse.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileDataIngestionRuleVersionResponseEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileOpenIntegration.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileOpenIntegrationRequest.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleBusinessProfileOpenIntegrationUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/GoogleDialogflowConfig.cs
 src/PureCloudPlatform.Client.V2/Model/GoogleDialogflowCustomSettings.cs
+src/PureCloudPlatform.Client.V2/Model/GoogleOAuthSettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Grammar.cs
 src/PureCloudPlatform.Client.V2/Model/GrammarFileUploadRequest.cs
 src/PureCloudPlatform.Client.V2/Model/GrammarLanguage.cs
@@ -11886,6 +11984,7 @@ src/PureCloudPlatform.Client.V2/Model/GuideVersionResources.cs
 src/PureCloudPlatform.Client.V2/Model/HeadcountForecast.cs
 src/PureCloudPlatform.Client.V2/Model/HeadcountInterval.cs
 src/PureCloudPlatform.Client.V2/Model/Header.cs
+src/PureCloudPlatform.Client.V2/Model/HeaderEntry.cs
 src/PureCloudPlatform.Client.V2/Model/HealthInfo.cs
 src/PureCloudPlatform.Client.V2/Model/HelpLink.cs
 src/PureCloudPlatform.Client.V2/Model/HelpSettings.cs
@@ -14444,6 +14543,7 @@ src/PureCloudPlatform.Client.V2/Model/UpdateScheduleUploadSchema.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateSegmentAssignmentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateSegmentAssignmentResponse.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateServiceGoalTemplate.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateSkillDivisionRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateStaffingGroupRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateTimeOffLimitRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateTimeOffPlanBusinessUnitAssociation.cs

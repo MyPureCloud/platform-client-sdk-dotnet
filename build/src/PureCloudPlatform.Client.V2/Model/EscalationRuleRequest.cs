@@ -70,7 +70,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="FacebookEscalation">The target integration configuration used for a Facebook message escalation..</param>
         /// <param name="InstagramEscalation">The target integration configuration used for an Instagram message escalation..</param>
         /// <param name="TwitterEscalation">The target integration configuration used for a X (formerly Twitter) message escalation..</param>
-        public EscalationRuleRequest(string Name = null, string MatchCriteria = null, int? Priority = null, string DivisionId = null, string Description = null, StatusEnum? Status = null, EscalationTarget OpenEscalation = null, EscalationTarget FacebookEscalation = null, EscalationTarget InstagramEscalation = null, EscalationTarget TwitterEscalation = null)
+        /// <param name="GoogleBusinessProfileEscalation">The target integration configuration used for a Google Business Profile message escalation..</param>
+        public EscalationRuleRequest(string Name = null, string MatchCriteria = null, int? Priority = null, string DivisionId = null, string Description = null, StatusEnum? Status = null, EscalationTarget OpenEscalation = null, EscalationTarget FacebookEscalation = null, EscalationTarget InstagramEscalation = null, EscalationTarget TwitterEscalation = null, EscalationTarget GoogleBusinessProfileEscalation = null)
         {
             this.Name = Name;
             this.MatchCriteria = MatchCriteria;
@@ -82,6 +83,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.FacebookEscalation = FacebookEscalation;
             this.InstagramEscalation = InstagramEscalation;
             this.TwitterEscalation = TwitterEscalation;
+            this.GoogleBusinessProfileEscalation = GoogleBusinessProfileEscalation;
             
         }
         
@@ -169,6 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public EscalationTarget TwitterEscalation { get; set; }
 
 
+
+        /// <summary>
+        /// The target integration configuration used for a Google Business Profile message escalation.
+        /// </summary>
+        /// <value>The target integration configuration used for a Google Business Profile message escalation.</value>
+        [DataMember(Name="googleBusinessProfileEscalation", EmitDefaultValue=false)]
+        public EscalationTarget GoogleBusinessProfileEscalation { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -188,6 +199,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  FacebookEscalation: ").Append(FacebookEscalation).Append("\n");
             sb.Append("  InstagramEscalation: ").Append(InstagramEscalation).Append("\n");
             sb.Append("  TwitterEscalation: ").Append(TwitterEscalation).Append("\n");
+            sb.Append("  GoogleBusinessProfileEscalation: ").Append(GoogleBusinessProfileEscalation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -277,6 +289,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TwitterEscalation == other.TwitterEscalation ||
                     this.TwitterEscalation != null &&
                     this.TwitterEscalation.Equals(other.TwitterEscalation)
+                ) &&
+                (
+                    this.GoogleBusinessProfileEscalation == other.GoogleBusinessProfileEscalation ||
+                    this.GoogleBusinessProfileEscalation != null &&
+                    this.GoogleBusinessProfileEscalation.Equals(other.GoogleBusinessProfileEscalation)
                 );
         }
 
@@ -320,6 +337,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TwitterEscalation != null)
                     hash = hash * 59 + this.TwitterEscalation.GetHashCode();
+
+                if (this.GoogleBusinessProfileEscalation != null)
+                    hash = hash * 59 + this.GoogleBusinessProfileEscalation.GetHashCode();
 
                 return hash;
             }

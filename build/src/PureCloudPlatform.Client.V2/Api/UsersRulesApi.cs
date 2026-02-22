@@ -20,7 +20,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The id of the rule</param>
@@ -33,7 +32,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The id of the rule</param>
@@ -46,7 +44,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to retrieve</param>
@@ -59,7 +56,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to retrieve</param>
@@ -72,7 +68,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRuleDependentTypeId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -87,7 +82,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRuleDependentTypeId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -102,7 +96,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRuleDependents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -118,7 +111,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRuleDependents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -134,7 +126,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="types">The types of the rule</param>
@@ -153,7 +144,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="types">The types of the rule</param>
@@ -172,7 +162,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRulesSetting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleType">The type of the rule</param>
@@ -185,7 +174,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRulesSetting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleType">The type of the rule</param>
@@ -198,7 +186,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will update an existing users rule with the specified fields.
-        /// PatchUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to update</param>
@@ -212,7 +199,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will update an existing users rule with the specified fields.
-        /// PatchUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to update</param>
@@ -226,7 +212,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will create a new rule with the specified fields.
-        /// PostUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesCreateRuleRequest</param>
@@ -239,7 +224,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will create a new rule with the specified fields.
-        /// PostUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesCreateRuleRequest</param>
@@ -252,7 +236,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will query the result of a rule.
-        /// PostUsersRulesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesQueryRuleRequest</param>
@@ -267,7 +250,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will query the result of a rule.
-        /// PostUsersRulesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesQueryRuleRequest</param>
@@ -286,7 +268,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The id of the rule</param>
@@ -299,7 +280,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The id of the rule</param>
@@ -312,7 +292,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to retrieve</param>
@@ -325,7 +304,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to retrieve</param>
@@ -338,7 +316,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRuleDependentTypeId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -353,7 +330,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRuleDependentTypeId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -368,7 +344,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRuleDependents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -384,7 +359,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRuleDependents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -400,7 +374,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="types">The types of the rule</param>
@@ -419,7 +392,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="types">The types of the rule</param>
@@ -438,7 +410,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRulesSetting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleType">The type of the rule</param>
@@ -451,7 +422,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersRulesSetting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleType">The type of the rule</param>
@@ -464,7 +434,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will update an existing users rule with the specified fields.
-        /// PatchUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to update</param>
@@ -478,7 +447,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will update an existing users rule with the specified fields.
-        /// PatchUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to update</param>
@@ -492,7 +460,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will create a new rule with the specified fields.
-        /// PostUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesCreateRuleRequest</param>
@@ -505,7 +472,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will create a new rule with the specified fields.
-        /// PostUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesCreateRuleRequest</param>
@@ -518,7 +484,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will query the result of a rule.
-        /// PostUsersRulesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesQueryRuleRequest</param>
@@ -533,7 +498,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// This will query the result of a rule.
-        /// PostUsersRulesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesQueryRuleRequest</param>
@@ -638,7 +602,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an existing users rule 
         /// 
-        /// DeleteUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The id of the rule</param>
@@ -652,7 +615,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an existing users rule 
         /// 
-        /// DeleteUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The id of the rule</param>
@@ -738,7 +700,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an existing users rule 
         /// 
-        /// DeleteUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The id of the rule</param>
@@ -753,7 +714,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete an existing users rule 
         /// 
-        /// DeleteUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The id of the rule</param>
@@ -841,7 +801,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a users rule 
         /// 
-        /// GetUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to retrieve</param>
@@ -856,7 +815,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a users rule 
         /// 
-        /// GetUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to retrieve</param>
@@ -942,7 +900,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a users rule 
         /// 
-        /// GetUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to retrieve</param>
@@ -958,7 +915,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a users rule 
         /// 
-        /// GetUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to retrieve</param>
@@ -1046,7 +1002,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get dependent of a users rule 
         /// 
-        /// GetUsersRuleDependentTypeId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -1063,7 +1018,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get dependent of a users rule 
         /// 
-        /// GetUsersRuleDependentTypeId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -1159,7 +1113,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get dependent of a users rule 
         /// 
-        /// GetUsersRuleDependentTypeId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -1177,7 +1130,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get dependent of a users rule 
         /// 
-        /// GetUsersRuleDependentTypeId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -1277,7 +1229,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get dependents for a users rule 
         /// 
-        /// GetUsersRuleDependents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -1295,7 +1246,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get dependents for a users rule 
         /// 
-        /// GetUsersRuleDependents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -1387,7 +1337,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get dependents for a users rule 
         /// 
-        /// GetUsersRuleDependents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -1406,7 +1355,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get dependents for a users rule 
         /// 
-        /// GetUsersRuleDependents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule for which to retrieve dependents</param>
@@ -1500,7 +1448,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of users rules 
         /// 
-        /// GetUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="types">The types of the rule</param>
@@ -1521,7 +1468,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of users rules 
         /// 
-        /// GetUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="types">The types of the rule</param>
@@ -1619,7 +1565,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of users rules 
         /// 
-        /// GetUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="types">The types of the rule</param>
@@ -1641,7 +1586,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of users rules 
         /// 
-        /// GetUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="types">The types of the rule</param>
@@ -1741,7 +1685,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the settings for a specific users rule type 
         /// 
-        /// GetUsersRulesSetting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleType">The type of the rule</param>
@@ -1756,7 +1699,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the settings for a specific users rule type 
         /// 
-        /// GetUsersRulesSetting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleType">The type of the rule</param>
@@ -1842,7 +1784,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the settings for a specific users rule type 
         /// 
-        /// GetUsersRulesSetting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleType">The type of the rule</param>
@@ -1858,7 +1799,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the settings for a specific users rule type 
         /// 
-        /// GetUsersRulesSetting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleType">The type of the rule</param>
@@ -1946,7 +1886,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an existing users rule 
         /// This will update an existing users rule with the specified fields.
-        /// PatchUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to update</param>
@@ -1962,7 +1901,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an existing users rule 
         /// This will update an existing users rule with the specified fields.
-        /// PatchUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to update</param>
@@ -2058,7 +1996,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an existing users rule 
         /// This will update an existing users rule with the specified fields.
-        /// PatchUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to update</param>
@@ -2075,7 +2012,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update an existing users rule 
         /// This will update an existing users rule with the specified fields.
-        /// PatchUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="ruleId">The ID of the rule to update</param>
@@ -2174,7 +2110,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new rule 
         /// This will create a new rule with the specified fields.
-        /// PostUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesCreateRuleRequest</param>
@@ -2189,7 +2124,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new rule 
         /// This will create a new rule with the specified fields.
-        /// PostUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesCreateRuleRequest</param>
@@ -2280,7 +2214,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new rule 
         /// This will create a new rule with the specified fields.
-        /// PostUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesCreateRuleRequest</param>
@@ -2296,7 +2229,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a new rule 
         /// This will create a new rule with the specified fields.
-        /// PostUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesCreateRuleRequest</param>
@@ -2389,7 +2321,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query the result of a users rule 
         /// This will query the result of a rule.
-        /// PostUsersRulesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesQueryRuleRequest</param>
@@ -2406,7 +2337,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query the result of a users rule 
         /// This will query the result of a rule.
-        /// PostUsersRulesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesQueryRuleRequest</param>
@@ -2501,7 +2431,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query the result of a users rule 
         /// This will query the result of a rule.
-        /// PostUsersRulesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesQueryRuleRequest</param>
@@ -2519,7 +2448,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query the result of a users rule 
         /// This will query the result of a rule.
-        /// PostUsersRulesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">usersRulesQueryRuleRequest</param>

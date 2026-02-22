@@ -25,8 +25,6 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Delete an existing users rule
 
-DeleteUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * users:rules:delete
@@ -87,8 +85,6 @@ void (empty response body)
 
 
 Get a users rule
-
-GetUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -151,8 +147,6 @@ namespace Example
 
 
 Get dependent of a users rule
-
-GetUsersRuleDependentTypeId is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -219,8 +213,6 @@ namespace Example
 
 
 Get dependents for a users rule
-
-GetUsersRuleDependents is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -289,8 +281,6 @@ namespace Example
 
 
 Get the list of users rules
-
-GetUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -366,8 +356,6 @@ namespace Example
 
 Get the settings for a specific users rule type
 
-GetUsersRulesSetting is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * users:rules:view
@@ -431,8 +419,6 @@ namespace Example
 Update an existing users rule
 
 This will update an existing users rule with the specified fields.
-
-PatchUsersRule is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -500,8 +486,6 @@ Create a new rule
 
 This will create a new rule with the specified fields.
 
-PostUsersRules is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * users:rules:add
@@ -566,8 +550,6 @@ Query the result of a users rule
 
 This will query the result of a rule.
 
-PostUsersRulesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * users:ruleUsers:view
@@ -627,4 +609,4 @@ namespace Example
 [**UsersRulesQueryResponse**](UsersRulesQueryResponse)
 
 
-_PureCloudPlatform.Client.V2 256.0.0_
+_PureCloudPlatform.Client.V2 257.0.0_
