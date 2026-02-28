@@ -30,29 +30,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">role id.</param>
         /// <param name="Name">The name of the role (required).</param>
         /// <param name="Description">Description.</param>
-        /// <param name="DefaultRoleId">DefaultRoleId.</param>
         /// <param name="Permissions">Permissions.</param>
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
-        /// <param name="UserCount">UserCount.</param>
-        /// <param name="RoleNeedsUpdate">Optional unless patch operation..</param>
-        /// <param name="BaseLicense">BaseLicense.</param>
-        /// <param name="AddonLicenses">AddonLicenses.</param>
-        /// <param name="Base">Base.</param>
-        /// <param name="Default">Default.</param>
-        public DomainOrganizationRoleUpdate(string Id = null, string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, string BaseLicense = null, List<string> AddonLicenses = null, bool? Base = null, bool? Default = null)
+        public DomainOrganizationRoleUpdate(string Id = null, string Name = null, string Description = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null)
         {
             this.Id = Id;
             this.Name = Name;
             this.Description = Description;
-            this.DefaultRoleId = DefaultRoleId;
             this.Permissions = Permissions;
             this.PermissionPolicies = PermissionPolicies;
-            this.UserCount = UserCount;
-            this.RoleNeedsUpdate = RoleNeedsUpdate;
-            this.BaseLicense = BaseLicense;
-            this.AddonLicenses = AddonLicenses;
-            this.Base = Base;
-            this.Default = Default;
             
         }
         
@@ -85,14 +71,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets DefaultRoleId
-        /// </summary>
-        [DataMember(Name="defaultRoleId", EmitDefaultValue=false)]
-        public string DefaultRoleId { get; set; }
-
-
-
-        /// <summary>
         /// Gets or Sets Permissions
         /// </summary>
         [DataMember(Name="permissions", EmitDefaultValue=false)]
@@ -101,77 +79,10 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A collection of the permissions the role is not using
-        /// </summary>
-        /// <value>A collection of the permissions the role is not using</value>
-        [DataMember(Name="unusedPermissions", EmitDefaultValue=false)]
-        public List<string> UnusedPermissions { get; private set; }
-
-
-
-        /// <summary>
         /// Gets or Sets PermissionPolicies
         /// </summary>
         [DataMember(Name="permissionPolicies", EmitDefaultValue=false)]
         public List<DomainPermissionPolicy> PermissionPolicies { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets UserCount
-        /// </summary>
-        [DataMember(Name="userCount", EmitDefaultValue=false)]
-        public int? UserCount { get; set; }
-
-
-
-        /// <summary>
-        /// Optional unless patch operation.
-        /// </summary>
-        /// <value>Optional unless patch operation.</value>
-        [DataMember(Name="roleNeedsUpdate", EmitDefaultValue=false)]
-        public bool? RoleNeedsUpdate { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets BaseLicense
-        /// </summary>
-        [DataMember(Name="baseLicense", EmitDefaultValue=false)]
-        public string BaseLicense { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets AddonLicenses
-        /// </summary>
-        [DataMember(Name="addonLicenses", EmitDefaultValue=false)]
-        public List<string> AddonLicenses { get; set; }
-
-
-
-        /// <summary>
-        /// The time that this role licenses were most recently updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
-        /// </summary>
-        /// <value>The time that this role licenses were most recently updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
-        [DataMember(Name="dateLicenseLastUpdated", EmitDefaultValue=false)]
-        public DateTime? DateLicenseLastUpdated { get; private set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Base
-        /// </summary>
-        [DataMember(Name="base", EmitDefaultValue=false)]
-        public bool? Base { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Default
-        /// </summary>
-        [DataMember(Name="default", EmitDefaultValue=false)]
-        public bool? Default { get; set; }
 
 
 
@@ -195,17 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
-            sb.Append("  DefaultRoleId: ").Append(DefaultRoleId).Append("\n");
             sb.Append("  Permissions: ").Append(Permissions).Append("\n");
-            sb.Append("  UnusedPermissions: ").Append(UnusedPermissions).Append("\n");
             sb.Append("  PermissionPolicies: ").Append(PermissionPolicies).Append("\n");
-            sb.Append("  UserCount: ").Append(UserCount).Append("\n");
-            sb.Append("  RoleNeedsUpdate: ").Append(RoleNeedsUpdate).Append("\n");
-            sb.Append("  BaseLicense: ").Append(BaseLicense).Append("\n");
-            sb.Append("  AddonLicenses: ").Append(AddonLicenses).Append("\n");
-            sb.Append("  DateLicenseLastUpdated: ").Append(DateLicenseLastUpdated).Append("\n");
-            sb.Append("  Base: ").Append(Base).Append("\n");
-            sb.Append("  Default: ").Append(Default).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -263,59 +165,14 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description.Equals(other.Description)
                 ) &&
                 (
-                    this.DefaultRoleId == other.DefaultRoleId ||
-                    this.DefaultRoleId != null &&
-                    this.DefaultRoleId.Equals(other.DefaultRoleId)
-                ) &&
-                (
                     this.Permissions == other.Permissions ||
                     this.Permissions != null &&
                     this.Permissions.SequenceEqual(other.Permissions)
                 ) &&
                 (
-                    this.UnusedPermissions == other.UnusedPermissions ||
-                    this.UnusedPermissions != null &&
-                    this.UnusedPermissions.SequenceEqual(other.UnusedPermissions)
-                ) &&
-                (
                     this.PermissionPolicies == other.PermissionPolicies ||
                     this.PermissionPolicies != null &&
                     this.PermissionPolicies.SequenceEqual(other.PermissionPolicies)
-                ) &&
-                (
-                    this.UserCount == other.UserCount ||
-                    this.UserCount != null &&
-                    this.UserCount.Equals(other.UserCount)
-                ) &&
-                (
-                    this.RoleNeedsUpdate == other.RoleNeedsUpdate ||
-                    this.RoleNeedsUpdate != null &&
-                    this.RoleNeedsUpdate.Equals(other.RoleNeedsUpdate)
-                ) &&
-                (
-                    this.BaseLicense == other.BaseLicense ||
-                    this.BaseLicense != null &&
-                    this.BaseLicense.Equals(other.BaseLicense)
-                ) &&
-                (
-                    this.AddonLicenses == other.AddonLicenses ||
-                    this.AddonLicenses != null &&
-                    this.AddonLicenses.SequenceEqual(other.AddonLicenses)
-                ) &&
-                (
-                    this.DateLicenseLastUpdated == other.DateLicenseLastUpdated ||
-                    this.DateLicenseLastUpdated != null &&
-                    this.DateLicenseLastUpdated.Equals(other.DateLicenseLastUpdated)
-                ) &&
-                (
-                    this.Base == other.Base ||
-                    this.Base != null &&
-                    this.Base.Equals(other.Base)
-                ) &&
-                (
-                    this.Default == other.Default ||
-                    this.Default != null &&
-                    this.Default.Equals(other.Default)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -344,38 +201,11 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
 
-                if (this.DefaultRoleId != null)
-                    hash = hash * 59 + this.DefaultRoleId.GetHashCode();
-
                 if (this.Permissions != null)
                     hash = hash * 59 + this.Permissions.GetHashCode();
 
-                if (this.UnusedPermissions != null)
-                    hash = hash * 59 + this.UnusedPermissions.GetHashCode();
-
                 if (this.PermissionPolicies != null)
                     hash = hash * 59 + this.PermissionPolicies.GetHashCode();
-
-                if (this.UserCount != null)
-                    hash = hash * 59 + this.UserCount.GetHashCode();
-
-                if (this.RoleNeedsUpdate != null)
-                    hash = hash * 59 + this.RoleNeedsUpdate.GetHashCode();
-
-                if (this.BaseLicense != null)
-                    hash = hash * 59 + this.BaseLicense.GetHashCode();
-
-                if (this.AddonLicenses != null)
-                    hash = hash * 59 + this.AddonLicenses.GetHashCode();
-
-                if (this.DateLicenseLastUpdated != null)
-                    hash = hash * 59 + this.DateLicenseLastUpdated.GetHashCode();
-
-                if (this.Base != null)
-                    hash = hash * 59 + this.Base.GetHashCode();
-
-                if (this.Default != null)
-                    hash = hash * 59 + this.Default.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

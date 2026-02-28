@@ -36,8 +36,9 @@
 | **PaymentResponse** | [**PaymentResponse**](PaymentResponse) | Payment response content. | [optional] |
 | **Form** | [**RecordingForm**](RecordingForm) | Form content. | [optional] |
 | **RoadsideAssistance** | [**RecordingRoadsideAssistance**](RecordingRoadsideAssistance) | Roadside Assistance content. | [optional] |
+| **RichLink** | [**RichLink**](RichLink) | Rich Link content. | [optional] |
 | **MessageReceipts** | [**List&lt;RecordingMessageReceipt&gt;**](RecordingMessageReceipt) | List of message receipts | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 257.0.0_
+_PureCloudPlatform.Client.V2 258.0.0_

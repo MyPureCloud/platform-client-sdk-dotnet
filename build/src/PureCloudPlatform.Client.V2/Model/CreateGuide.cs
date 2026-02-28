@@ -49,7 +49,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Document for "Document"
             /// </summary>
             [EnumMember(Value = "Document")]
-            Document
+            Document,
+            
+            /// <summary>
+            /// Enum Transcripts for "Transcripts"
+            /// </summary>
+            [EnumMember(Value = "Transcripts")]
+            Transcripts
         }
         /// <summary>
         /// Indicates how the guide content was generated.

@@ -3432,7 +3432,7 @@ namespace Example
 
 ## PostQualityConversationEvaluations
 
-> [**Evaluation**](Evaluation) PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string expand = null)
+> [**Evaluation**](Evaluation) PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string idempotencyKey = null, string expand = null)
 
 
 Create an evaluation
@@ -3465,12 +3465,13 @@ namespace Example
             var apiInstance = new QualityApi();
             var conversationId = conversationId_example;  // string | conversationId
             var body = new EvaluationCreateBody(); // EvaluationCreateBody | evaluation
+            var idempotencyKey = idempotencyKey_example;  // string | Idempotency key for request deduplication (optional) 
             var expand = expand_example;  // string | evaluatorId (optional) 
 
             try
             { 
                 // Create an evaluation
-                Evaluation result = apiInstance.PostQualityConversationEvaluations(conversationId, body, expand);
+                Evaluation result = apiInstance.PostQualityConversationEvaluations(conversationId, body, idempotencyKey, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3489,6 +3490,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
 | **body** | [**EvaluationCreateBody**](EvaluationCreateBody)| evaluation |  |
+| **idempotencyKey** | **string**| Idempotency key for request deduplication | [optional]  |
 | **expand** | **string**| evaluatorId | [optional]  |
 
 ### Return type
@@ -4829,4 +4831,4 @@ namespace Example
 [**ScorableSurvey**](ScorableSurvey)
 
 
-_PureCloudPlatform.Client.V2 257.0.0_
+_PureCloudPlatform.Client.V2 258.0.0_

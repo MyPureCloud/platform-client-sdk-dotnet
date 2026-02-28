@@ -13,29 +13,44 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ConversationAttributeFilter
+    /// V3SourceRef
     /// </summary>
     [DataContract]
-    public partial class ConversationAttributeFilter :  IEquatable<ConversationAttributeFilter>
+    public partial class V3SourceRef :  IEquatable<V3SourceRef>
     {
+
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationAttributeFilter" /> class.
+        /// Initializes a new instance of the <see cref="V3SourceRef" /> class.
         /// </summary>
-        /// <param name="Schemas">Schemas and attributes to filter for..</param>
-        public ConversationAttributeFilter(List<ConversationSchemaData> Schemas = null)
+        [JsonConstructorAttribute]
+        protected V3SourceRef() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="V3SourceRef" /> class.
+        /// </summary>
+        /// <param name="Id">Source Id. (required).</param>
+        public V3SourceRef(string Id = null)
         {
-            this.Schemas = Schemas;
+            this.Id = Id;
             
         }
         
 
 
         /// <summary>
-        /// Schemas and attributes to filter for.
+        /// Source Id.
         /// </summary>
-        /// <value>Schemas and attributes to filter for.</value>
-        [DataMember(Name="schemas", EmitDefaultValue=false)]
-        public List<ConversationSchemaData> Schemas { get; set; }
+        /// <value>Source Id.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// The URI for this object
+        /// </summary>
+        /// <value>The URI for this object</value>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; private set; }
 
 
         /// <summary>
@@ -45,9 +60,10 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ConversationAttributeFilter {\n");
+            sb.Append("class V3SourceRef {\n");
 
-            sb.Append("  Schemas: ").Append(Schemas).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -73,15 +89,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ConversationAttributeFilter);
+            return this.Equals(obj as V3SourceRef);
         }
 
         /// <summary>
-        /// Returns true if ConversationAttributeFilter instances are equal
+        /// Returns true if V3SourceRef instances are equal
         /// </summary>
-        /// <param name="other">Instance of ConversationAttributeFilter to be compared</param>
+        /// <param name="other">Instance of V3SourceRef to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ConversationAttributeFilter other)
+        public bool Equals(V3SourceRef other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -89,9 +105,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Schemas == other.Schemas ||
-                    this.Schemas != null &&
-                    this.Schemas.SequenceEqual(other.Schemas)
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -106,8 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Schemas != null)
-                    hash = hash * 59 + this.Schemas.GetHashCode();
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

@@ -1130,7 +1130,7 @@ docs/ConversationAppSettings.md
 docs/ConversationAssociation.md
 docs/ConversationAsyncAggregateQueryResponse.md
 docs/ConversationAsyncAggregationQuery.md
-docs/ConversationAttributeFilter.md
+docs/ConversationAttributeProperties.md
 docs/ConversationBasic.md
 docs/ConversationCallEventTopicCallConversation.md
 docs/ConversationCallEventTopicCallMediaParticipant.md
@@ -1439,8 +1439,6 @@ docs/ConversationResponseSuggestionsTopicSuggestedIntentSlot.md
 docs/ConversationResponseSuggestionsTopicSuggestionContext.md
 docs/ConversationResponseSuggestionsTopicSuggestionFeedback.md
 docs/ConversationRoutingData.md
-docs/ConversationSchemaAttribute.md
-docs/ConversationSchemaData.md
 docs/ConversationSchemaReference.md
 docs/ConversationSchemaUpdateRequest.md
 docs/ConversationScreenShareEventTopicConversationDivisionMembership.md
@@ -1935,6 +1933,7 @@ docs/DeleteKnowledgeKnowledgebaseLabel-example.txt
 docs/DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId-example.txt
 docs/DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId-example.txt
 docs/DeleteKnowledgeKnowledgebaseSynchronizeJob-example.txt
+docs/DeleteKnowledgeSetting-example.txt
 docs/DeleteLanguage-example.txt
 docs/DeleteLanguageunderstandingDomain-example.txt
 docs/DeleteLanguageunderstandingDomainFeedbackFeedbackId-example.txt
@@ -3643,6 +3642,8 @@ docs/GetKnowledgeKnowledgebaseUnansweredGroups-example.txt
 docs/GetKnowledgeKnowledgebaseUploadsUrlsJob-example.txt
 docs/GetKnowledgeKnowledgebaseUploadsUrlsJob-example.txt
 docs/GetKnowledgeKnowledgebases-example.txt
+docs/GetKnowledgeSetting-example.txt
+docs/GetKnowledgeSettings-example.txt
 docs/GetLanguage-example.txt
 docs/GetLanguages-example.txt
 docs/GetLanguagesTranslations-example.txt
@@ -4106,6 +4107,7 @@ docs/GetTeamMembers-example.txt
 docs/GetTeams-example.txt
 docs/GetTelephonyAgentGreetings-example.txt
 docs/GetTelephonyAgentsGreetingsMe-example.txt
+docs/GetTelephonyCallsMetrics-example.txt
 docs/GetTelephonyMediaregions-example.txt
 docs/GetTelephonyProvidersEdge-example.txt
 docs/GetTelephonyProvidersEdgeDiagnosticNslookup-example.txt
@@ -4855,6 +4857,7 @@ docs/KnowledgeContextReference.md
 docs/KnowledgeContextValueReference.md
 docs/KnowledgeConversationContext.md
 docs/KnowledgeConversationContextResponse.md
+docs/KnowledgeConversationTurn.md
 docs/KnowledgeDocumentAlternative.md
 docs/KnowledgeDocumentBulkRemoveRequest.md
 docs/KnowledgeDocumentBulkUpdateEntity.md
@@ -4901,6 +4904,7 @@ docs/KnowledgeExportJobDocumentsFilter.md
 docs/KnowledgeExportJobFilter.md
 docs/KnowledgeExportJobRequest.md
 docs/KnowledgeExportJobResponse.md
+docs/KnowledgeGenerationSetting.md
 docs/KnowledgeGroupStatistics.md
 docs/KnowledgeGuestAnswerDocumentResponse.md
 docs/KnowledgeGuestAnswerDocumentsResponse.md
@@ -4940,10 +4944,17 @@ docs/KnowledgeParseJobRequestImport.md
 docs/KnowledgeParseJobRequestPatch.md
 docs/KnowledgeParseJobResponse.md
 docs/KnowledgeParseRecord.md
+docs/KnowledgeRetrievedReference.md
 docs/KnowledgeSearchClientApplication.md
 docs/KnowledgeSearchDocumentResponse.md
+docs/KnowledgeSearchPreviewRequest.md
+docs/KnowledgeSearchPreviewResponse.md
+docs/KnowledgeSearchResult.md
 docs/KnowledgeSetting.md
+docs/KnowledgeSettingListing.md
 docs/KnowledgeSettings.md
+docs/KnowledgeSettingsRequest.md
+docs/KnowledgeSettingsResponse.md
 docs/KnowledgeSuggestionConfig.md
 docs/KnowledgeSyncJobReport.md
 docs/KnowledgeSyncJobRequest.md
@@ -5468,6 +5479,7 @@ docs/OrganizationApi.json
 docs/OrganizationApi.md
 docs/OrganizationAuthorizationApi.json
 docs/OrganizationAuthorizationApi.md
+docs/OrganizationCallMetrics.md
 docs/OrganizationFeatures.md
 docs/OrganizationPresence.md
 docs/OrganizationPresenceDefinition.md
@@ -5756,6 +5768,7 @@ docs/PatchKnowledgeKnowledgebaseLabel-example.txt
 docs/PatchKnowledgeKnowledgebaseParseJob-example.txt
 docs/PatchKnowledgeKnowledgebaseSynchronizeJob-example.txt
 docs/PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup-example.txt
+docs/PatchKnowledgeSetting-example.txt
 docs/PatchLanguageunderstandingDomain-example.txt
 docs/PatchLanguageunderstandingMinerDraft-example.txt
 docs/PatchLearningAssignment-example.txt
@@ -6413,6 +6426,8 @@ docs/PostKnowledgeKnowledgebaseSynchronizeJobs-example.txt
 docs/PostKnowledgeKnowledgebaseUploadsUrlsJobs-example.txt
 docs/PostKnowledgeKnowledgebaseUploadsUrlsJobs-example.txt
 docs/PostKnowledgeKnowledgebases-example.txt
+docs/PostKnowledgeSearchPreview-example.txt
+docs/PostKnowledgeSettings-example.txt
 docs/PostLanguages-example.txt
 docs/PostLanguageunderstandingDomainFeedback-example.txt
 docs/PostLanguageunderstandingDomainVersionDetect-example.txt
@@ -8750,6 +8765,7 @@ docs/V2WfmMainForecastExportHistoricalEventMainForecastErrorBody.md
 docs/V2WfmMainForecastExportHistoricalEventMainForecastExportNotification.md
 docs/V2WfmMainForecastExportSnapshotEventMainForecastErrorBody.md
 docs/V2WfmMainForecastExportSnapshotEventMainForecastExportNotification.md
+docs/V3SourceRef.md
 docs/ValidateAddressRequest.md
 docs/ValidateAddressResponse.md
 docs/ValidateAgentUnavailableTimesRequest.md
@@ -10480,7 +10496,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationAppSettings.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAssociation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationAsyncAggregationQuery.cs
-src/PureCloudPlatform.Client.V2/Model/ConversationAttributeFilter.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationAttributeProperties.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationBasic.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicCallConversation.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationCallEventTopicCallMediaParticipant.cs
@@ -10789,8 +10805,6 @@ src/PureCloudPlatform.Client.V2/Model/ConversationResponseSuggestionsTopicSugges
 src/PureCloudPlatform.Client.V2/Model/ConversationResponseSuggestionsTopicSuggestionContext.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationResponseSuggestionsTopicSuggestionFeedback.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationRoutingData.cs
-src/PureCloudPlatform.Client.V2/Model/ConversationSchemaAttribute.cs
-src/PureCloudPlatform.Client.V2/Model/ConversationSchemaData.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSchemaReference.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationSchemaUpdateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationScreenShareEventTopicConversationDivisionMembership.cs
@@ -12337,6 +12351,7 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeContextReference.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeContextValueReference.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeConversationContext.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeConversationContextResponse.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeConversationTurn.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentAlternative.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkRemoveRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeDocumentBulkUpdateEntity.cs
@@ -12383,6 +12398,7 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeExportJobDocumentsFilter.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeExportJobFilter.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeExportJobRequest.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeExportJobResponse.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeGenerationSetting.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGroupStatistics.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestAnswerDocumentResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeGuestAnswerDocumentsResponse.cs
@@ -12422,10 +12438,17 @@ src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobRequestImport.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobRequestPatch.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeParseJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeParseRecord.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeRetrievedReference.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchClientApplication.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchDocumentResponse.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchPreviewRequest.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchPreviewResponse.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSearchResult.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSetting.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSettingListing.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSettings.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSettingsRequest.cs
+src/PureCloudPlatform.Client.V2/Model/KnowledgeSettingsResponse.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSuggestionConfig.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncJobReport.cs
 src/PureCloudPlatform.Client.V2/Model/KnowledgeSyncJobRequest.cs
@@ -12922,6 +12945,7 @@ src/PureCloudPlatform.Client.V2/Model/OrgOAuthClient.cs
 src/PureCloudPlatform.Client.V2/Model/OrgUser.cs
 src/PureCloudPlatform.Client.V2/Model/OrgWhitelistSettings.cs
 src/PureCloudPlatform.Client.V2/Model/Organization.cs
+src/PureCloudPlatform.Client.V2/Model/OrganizationCallMetrics.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationFeatures.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationPresence.cs
 src/PureCloudPlatform.Client.V2/Model/OrganizationPresenceDefinition.cs
@@ -14798,6 +14822,7 @@ src/PureCloudPlatform.Client.V2/Model/V2WfmMainForecastExportHistoricalEventMain
 src/PureCloudPlatform.Client.V2/Model/V2WfmMainForecastExportHistoricalEventMainForecastExportNotification.cs
 src/PureCloudPlatform.Client.V2/Model/V2WfmMainForecastExportSnapshotEventMainForecastErrorBody.cs
 src/PureCloudPlatform.Client.V2/Model/V2WfmMainForecastExportSnapshotEventMainForecastExportNotification.cs
+src/PureCloudPlatform.Client.V2/Model/V3SourceRef.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateAddressRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateAddressResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ValidateAgentUnavailableTimesRequest.cs

@@ -97,6 +97,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The definition of the user&#39;s desired future presence
+        /// </summary>
+        /// <value>The definition of the user&#39;s desired future presence</value>
+        [DataMember(Name="futurePresenceDefinition", EmitDefaultValue=false)]
+        public PresenceDefinition FuturePresenceDefinition { get; private set; }
+
+
+
+        /// <summary>
         /// Gets or Sets Message
         /// </summary>
         [DataMember(Name="message", EmitDefaultValue=false)]
@@ -136,6 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SourceId: ").Append(SourceId).Append("\n");
             sb.Append("  Primary: ").Append(Primary).Append("\n");
             sb.Append("  PresenceDefinition: ").Append(PresenceDefinition).Append("\n");
+            sb.Append("  FuturePresenceDefinition: ").Append(FuturePresenceDefinition).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
             sb.Append("  ModifiedDate: ").Append(ModifiedDate).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -210,6 +220,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.PresenceDefinition.Equals(other.PresenceDefinition)
                 ) &&
                 (
+                    this.FuturePresenceDefinition == other.FuturePresenceDefinition ||
+                    this.FuturePresenceDefinition != null &&
+                    this.FuturePresenceDefinition.Equals(other.FuturePresenceDefinition)
+                ) &&
+                (
                     this.Message == other.Message ||
                     this.Message != null &&
                     this.Message.Equals(other.Message)
@@ -254,6 +269,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.PresenceDefinition != null)
                     hash = hash * 59 + this.PresenceDefinition.GetHashCode();
+
+                if (this.FuturePresenceDefinition != null)
+                    hash = hash * 59 + this.FuturePresenceDefinition.GetHashCode();
 
                 if (this.Message != null)
                     hash = hash * 59 + this.Message.GetHashCode();

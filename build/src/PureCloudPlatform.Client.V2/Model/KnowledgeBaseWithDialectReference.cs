@@ -247,7 +247,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Nlbe for "nl-BE"
             /// </summary>
             [EnumMember(Value = "nl-BE")]
-            Nlbe
+            Nlbe,
+            
+            /// <summary>
+            /// Enum Filph for "fil-PH"
+            /// </summary>
+            [EnumMember(Value = "fil-PH")]
+            Filph,
+            
+            /// <summary>
+            /// Enum Msmy for "ms-MY"
+            /// </summary>
+            [EnumMember(Value = "ms-MY")]
+            Msmy,
+            
+            /// <summary>
+            /// Enum Heil for "he-IL"
+            /// </summary>
+            [EnumMember(Value = "he-IL")]
+            Heil,
+            
+            /// <summary>
+            /// Enum Elgr for "el-GR"
+            /// </summary>
+            [EnumMember(Value = "el-GR")]
+            Elgr
         }
         /// <summary>
         /// The dialect for the knowledge base.

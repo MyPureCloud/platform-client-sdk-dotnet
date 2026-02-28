@@ -29,8 +29,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PermissionPolicies">PermissionPolicies.</param>
         /// <param name="UserCount">UserCount.</param>
         /// <param name="RoleNeedsUpdate">Optional unless patch operation..</param>
-        /// <param name="BaseLicense">BaseLicense.</param>
-        /// <param name="AddonLicenses">AddonLicenses.</param>
+        /// <param name="BaseLicense">Set baseLicense only while updating license using PUT /license endpoint.</param>
+        /// <param name="AddonLicenses">Set addonLicenses only while updating license using PUT /license endpoint.</param>
         /// <param name="Base">Base.</param>
         /// <param name="Default">Default.</param>
         public DomainOrganizationRole(string Id = null, string Name = null, string Description = null, string DefaultRoleId = null, List<string> Permissions = null, List<DomainPermissionPolicy> PermissionPolicies = null, int? UserCount = null, bool? RoleNeedsUpdate = null, string BaseLicense = null, List<string> AddonLicenses = null, bool? Base = null, bool? Default = null)
@@ -128,25 +128,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Gets or Sets BaseLicense
+        /// Set baseLicense only while updating license using PUT /license endpoint
         /// </summary>
+        /// <value>Set baseLicense only while updating license using PUT /license endpoint</value>
         [DataMember(Name="baseLicense", EmitDefaultValue=false)]
         public string BaseLicense { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets AddonLicenses
+        /// Set addonLicenses only while updating license using PUT /license endpoint
         /// </summary>
+        /// <value>Set addonLicenses only while updating license using PUT /license endpoint</value>
         [DataMember(Name="addonLicenses", EmitDefaultValue=false)]
         public List<string> AddonLicenses { get; set; }
 
 
 
         /// <summary>
-        /// The time that this role licenses were most recently updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// The time that this role licenses were most recently updated using the PUT /license endpoint. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
-        /// <value>The time that this role licenses were most recently updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        /// <value>The time that this role licenses were most recently updated using the PUT /license endpoint. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="dateLicenseLastUpdated", EmitDefaultValue=false)]
         public DateTime? DateLicenseLastUpdated { get; private set; }
 

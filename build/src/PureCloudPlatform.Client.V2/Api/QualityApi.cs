@@ -1458,10 +1458,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
+        /// <param name="idempotencyKey">Idempotency key for request deduplication (optional)</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
         
-        Evaluation PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string expand = null);
+        Evaluation PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string idempotencyKey = null, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -1472,10 +1473,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
+        /// <param name="idempotencyKey">Idempotency key for request deduplication (optional)</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
         
-        ApiResponse<Evaluation> PostQualityConversationEvaluationsWithHttpInfo (string conversationId, EvaluationCreateBody body, string expand = null);
+        ApiResponse<Evaluation> PostQualityConversationEvaluationsWithHttpInfo (string conversationId, EvaluationCreateBody body, string idempotencyKey = null, string expand = null);
 
         /// <summary>
         /// Create audit query execution
@@ -3452,10 +3454,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
+        /// <param name="idempotencyKey">Idempotency key for request deduplication (optional)</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
         
-        System.Threading.Tasks.Task<Evaluation> PostQualityConversationEvaluationsAsync (string conversationId, EvaluationCreateBody body, string expand = null);
+        System.Threading.Tasks.Task<Evaluation> PostQualityConversationEvaluationsAsync (string conversationId, EvaluationCreateBody body, string idempotencyKey = null, string expand = null);
 
         /// <summary>
         /// Create an evaluation
@@ -3466,10 +3469,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
+        /// <param name="idempotencyKey">Idempotency key for request deduplication (optional)</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostQualityConversationEvaluationsAsyncWithHttpInfo (string conversationId, EvaluationCreateBody body, string expand = null);
+        System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostQualityConversationEvaluationsAsyncWithHttpInfo (string conversationId, EvaluationCreateBody body, string idempotencyKey = null, string expand = null);
 
         /// <summary>
         /// Create audit query execution
@@ -14847,12 +14851,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
+        /// <param name="idempotencyKey">Idempotency key for request deduplication (optional)</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Evaluation</returns>
         
-        public Evaluation PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string expand = null)
+        public Evaluation PostQualityConversationEvaluations (string conversationId, EvaluationCreateBody body, string idempotencyKey = null, string expand = null)
         {
-             ApiResponse<Evaluation> localVarResponse = PostQualityConversationEvaluationsWithHttpInfo(conversationId, body, expand);
+             ApiResponse<Evaluation> localVarResponse = PostQualityConversationEvaluationsWithHttpInfo(conversationId, body, idempotencyKey, expand);
              return localVarResponse.Data;
         }
 
@@ -14863,10 +14868,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
+        /// <param name="idempotencyKey">Idempotency key for request deduplication (optional)</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>ApiResponse of Evaluation</returns>
         
-        public ApiResponse< Evaluation > PostQualityConversationEvaluationsWithHttpInfo (string conversationId, EvaluationCreateBody body, string expand = null)
+        public ApiResponse< Evaluation > PostQualityConversationEvaluationsWithHttpInfo (string conversationId, EvaluationCreateBody body, string idempotencyKey = null, string expand = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -14913,6 +14919,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
+            if (idempotencyKey != null) localVarHeaderParams.Add("Idempotency-Key", this.Configuration.ApiClient.ParameterToString(idempotencyKey)); // header parameter
 
             // Form params
             
@@ -14960,12 +14967,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
+        /// <param name="idempotencyKey">Idempotency key for request deduplication (optional)</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of Evaluation</returns>
         
-        public async System.Threading.Tasks.Task<Evaluation> PostQualityConversationEvaluationsAsync (string conversationId, EvaluationCreateBody body, string expand = null)
+        public async System.Threading.Tasks.Task<Evaluation> PostQualityConversationEvaluationsAsync (string conversationId, EvaluationCreateBody body, string idempotencyKey = null, string expand = null)
         {
-             ApiResponse<Evaluation> localVarResponse = await PostQualityConversationEvaluationsAsyncWithHttpInfo(conversationId, body, expand);
+             ApiResponse<Evaluation> localVarResponse = await PostQualityConversationEvaluationsAsyncWithHttpInfo(conversationId, body, idempotencyKey, expand);
              return localVarResponse.Data;
 
         }
@@ -14977,10 +14985,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">conversationId</param>
         /// <param name="body">evaluation</param>
+        /// <param name="idempotencyKey">Idempotency key for request deduplication (optional)</param>
         /// <param name="expand">evaluatorId (optional)</param>
         /// <returns>Task of ApiResponse (Evaluation)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostQualityConversationEvaluationsAsyncWithHttpInfo (string conversationId, EvaluationCreateBody body, string expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<Evaluation>> PostQualityConversationEvaluationsAsyncWithHttpInfo (string conversationId, EvaluationCreateBody body, string idempotencyKey = null, string expand = null)
         { 
             // verify the required parameter 'conversationId' is set
             if (conversationId == null)
@@ -15029,6 +15038,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (expand != null) localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(expand)));
 
             // Header params
+            if (idempotencyKey != null) localVarHeaderParams.Add("Idempotency-Key", this.Configuration.ApiClient.ParameterToString(idempotencyKey)); // header parameter
 
             // Form params
             

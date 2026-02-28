@@ -34,6 +34,18 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Activeintent for "ActiveIntent"
+            /// </summary>
+            [EnumMember(Value = "ActiveIntent")]
+            Activeintent,
+            
+            /// <summary>
+            /// Enum Conversationattribute for "ConversationAttribute"
+            /// </summary>
+            [EnumMember(Value = "ConversationAttribute")]
+            Conversationattribute,
+            
+            /// <summary>
             /// Enum Participantdata for "ParticipantData"
             /// </summary>
             [EnumMember(Value = "ParticipantData")]
@@ -57,11 +69,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">Name of the context. (required).</param>
         /// <param name="Type">Type of the context. (required).</param>
         /// <param name="ParticipantDataProperties">Participant data properties..</param>
-        public CopilotContextValue(string Name = null, TypeEnum? Type = null, ParticipantDataProperties ParticipantDataProperties = null)
+        /// <param name="ConversationAttributeProperties">Conversation attribute properties..</param>
+        public CopilotContextValue(string Name = null, TypeEnum? Type = null, ParticipantDataProperties ParticipantDataProperties = null, ConversationAttributeProperties ConversationAttributeProperties = null)
         {
             this.Name = Name;
             this.Type = Type;
             this.ParticipantDataProperties = ParticipantDataProperties;
+            this.ConversationAttributeProperties = ConversationAttributeProperties;
             
         }
         
@@ -86,6 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ParticipantDataProperties ParticipantDataProperties { get; set; }
 
 
+
+        /// <summary>
+        /// Conversation attribute properties.
+        /// </summary>
+        /// <value>Conversation attribute properties.</value>
+        [DataMember(Name="conversationAttributeProperties", EmitDefaultValue=false)]
+        public ConversationAttributeProperties ConversationAttributeProperties { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -98,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  ParticipantDataProperties: ").Append(ParticipantDataProperties).Append("\n");
+            sb.Append("  ConversationAttributeProperties: ").Append(ConversationAttributeProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -152,6 +176,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ParticipantDataProperties == other.ParticipantDataProperties ||
                     this.ParticipantDataProperties != null &&
                     this.ParticipantDataProperties.Equals(other.ParticipantDataProperties)
+                ) &&
+                (
+                    this.ConversationAttributeProperties == other.ConversationAttributeProperties ||
+                    this.ConversationAttributeProperties != null &&
+                    this.ConversationAttributeProperties.Equals(other.ConversationAttributeProperties)
                 );
         }
 
@@ -174,6 +203,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ParticipantDataProperties != null)
                     hash = hash * 59 + this.ParticipantDataProperties.GetHashCode();
+
+                if (this.ConversationAttributeProperties != null)
+                    hash = hash * 59 + this.ConversationAttributeProperties.GetHashCode();
 
                 return hash;
             }

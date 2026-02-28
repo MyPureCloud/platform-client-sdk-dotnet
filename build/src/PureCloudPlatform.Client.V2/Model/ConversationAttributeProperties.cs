@@ -13,23 +13,25 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// ConversationSchemaAttribute
+    /// ConversationAttributeProperties
     /// </summary>
     [DataContract]
-    public partial class ConversationSchemaAttribute :  IEquatable<ConversationSchemaAttribute>
+    public partial class ConversationAttributeProperties :  IEquatable<ConversationAttributeProperties>
     {
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationSchemaAttribute" /> class.
+        /// Initializes a new instance of the <see cref="ConversationAttributeProperties" /> class.
         /// </summary>
         [JsonConstructorAttribute]
-        protected ConversationSchemaAttribute() { }
+        protected ConversationAttributeProperties() { }
         /// <summary>
-        /// Initializes a new instance of the <see cref="ConversationSchemaAttribute" /> class.
+        /// Initializes a new instance of the <see cref="ConversationAttributeProperties" /> class.
         /// </summary>
-        /// <param name="Name">Name of the attribute as defined in the schema. (required).</param>
-        public ConversationSchemaAttribute(string Name = null)
+        /// <param name="Schema">Schema that defines attributes. (required).</param>
+        /// <param name="Name">Attribute name. (required).</param>
+        public ConversationAttributeProperties(ConversationSchemaReference Schema = null, string Name = null)
         {
+            this.Schema = Schema;
             this.Name = Name;
             
         }
@@ -37,9 +39,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Name of the attribute as defined in the schema.
+        /// Schema that defines attributes.
         /// </summary>
-        /// <value>Name of the attribute as defined in the schema.</value>
+        /// <value>Schema that defines attributes.</value>
+        [DataMember(Name="schema", EmitDefaultValue=false)]
+        public ConversationSchemaReference Schema { get; set; }
+
+
+
+        /// <summary>
+        /// Attribute name.
+        /// </summary>
+        /// <value>Attribute name.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -51,8 +62,9 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class ConversationSchemaAttribute {\n");
+            sb.Append("class ConversationAttributeProperties {\n");
 
+            sb.Append("  Schema: ").Append(Schema).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -79,21 +91,26 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as ConversationSchemaAttribute);
+            return this.Equals(obj as ConversationAttributeProperties);
         }
 
         /// <summary>
-        /// Returns true if ConversationSchemaAttribute instances are equal
+        /// Returns true if ConversationAttributeProperties instances are equal
         /// </summary>
-        /// <param name="other">Instance of ConversationSchemaAttribute to be compared</param>
+        /// <param name="other">Instance of ConversationAttributeProperties to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(ConversationSchemaAttribute other)
+        public bool Equals(ConversationAttributeProperties other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
             return true &&
+                (
+                    this.Schema == other.Schema ||
+                    this.Schema != null &&
+                    this.Schema.Equals(other.Schema)
+                ) &&
                 (
                     this.Name == other.Name ||
                     this.Name != null &&
@@ -112,6 +129,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Schema != null)
+                    hash = hash * 59 + this.Schema.GetHashCode();
+
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
 
