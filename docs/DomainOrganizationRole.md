@@ -15,13 +15,13 @@
 | **PermissionPolicies** | [**List&lt;DomainPermissionPolicy&gt;**](DomainPermissionPolicy) |  | [optional] |
 | **UserCount** | **int?** |  | [optional] |
 | **RoleNeedsUpdate** | **bool?** | Optional unless patch operation. | [optional] |
-| **BaseLicense** | **string** |  | [optional] |
-| **AddonLicenses** | **List&lt;string&gt;** |  | [optional] |
-| **DateLicenseLastUpdated** | **DateTime?** | The time that this role licenses were most recently updated. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **BaseLicense** | **string** | Set baseLicense only while updating license using PUT /license endpoint | [optional] |
+| **AddonLicenses** | **List&lt;string&gt;** | Set addonLicenses only while updating license using PUT /license endpoint | [optional] |
+| **DateLicenseLastUpdated** | **DateTime?** | The time that this role licenses were most recently updated using the PUT /license endpoint. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Base** | **bool?** |  | [optional] |
 | **Default** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 257.0.0_
+_PureCloudPlatform.Client.V2 258.0.0_

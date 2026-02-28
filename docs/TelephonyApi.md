@@ -8,6 +8,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | ------------- | ------------- | ------------- |
 | [**GetTelephonyAgentGreetings**](#GetTelephonyAgentGreetings) | **Get** /api/v2/telephony/agents/{agentId}/greetings | Get an agent&#39;s greetings. |
 | [**GetTelephonyAgentsGreetingsMe**](#GetTelephonyAgentsGreetingsMe) | **Get** /api/v2/telephony/agents/greetings/me | Get the agent&#39;s own greetings. |
+| [**GetTelephonyCallsMetrics**](#GetTelephonyCallsMetrics) | **Get** /api/v2/telephony/calls/metrics | Get the concurrent call metrics for a given organization. |
 | [**GetTelephonyMediaregions**](#GetTelephonyMediaregions) | **Get** /api/v2/telephony/mediaregions | Retrieve the list of AWS regions media can stream through. |
 | [**GetTelephonySipmessagesConversation**](#GetTelephonySipmessagesConversation) | **Get** /api/v2/telephony/sipmessages/conversations/{conversationId} | Get a SIP message. |
 | [**GetTelephonySipmessagesConversationHeaders**](#GetTelephonySipmessagesConversationHeaders) | **Get** /api/v2/telephony/sipmessages/conversations/{conversationId}/headers | Get SIP headers. |
@@ -136,6 +137,68 @@ This endpoint does require any parameters.
 ### Return type
 
 [**SelfAgentGreeting**](SelfAgentGreeting)
+
+
+## GetTelephonyCallsMetrics
+
+> [**OrganizationCallMetrics**](OrganizationCallMetrics) GetTelephonyCallsMetrics (string metricType = null)
+
+
+Get the concurrent call metrics for a given organization.
+
+Requires ANY permissions: 
+
+* telephony:callMetrics:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetTelephonyCallsMetricsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new TelephonyApi();
+            var metricType = metricType_example;  // string | Flag to indicate metric type to fetch. (optional)  (default to cloud)
+
+            try
+            { 
+                // Get the concurrent call metrics for a given organization.
+                OrganizationCallMetrics result = apiInstance.GetTelephonyCallsMetrics(metricType);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TelephonyApi.GetTelephonyCallsMetrics: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **metricType** | **string**| Flag to indicate metric type to fetch. | [optional] [default to cloud]<br />**Values**: cloud, premises |
+
+### Return type
+
+[**OrganizationCallMetrics**](OrganizationCallMetrics)
 
 
 ## GetTelephonyMediaregions
@@ -649,4 +712,4 @@ namespace Example
 [**SelfAgentGreeting**](SelfAgentGreeting)
 
 
-_PureCloudPlatform.Client.V2 257.0.0_
+_PureCloudPlatform.Client.V2 258.0.0_

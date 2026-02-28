@@ -669,7 +669,7 @@ namespace Example
 
 Get response libraries.
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
 * responses:library:view
 
@@ -1174,4 +1174,4 @@ namespace Example
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatform.Client.V2 257.0.0_
+_PureCloudPlatform.Client.V2 258.0.0_

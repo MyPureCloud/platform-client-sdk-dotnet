@@ -2284,8 +2284,9 @@ namespace Example
 
 Get a route
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
+* routing:email:view
 * routing:email:manage
 
 ### Example
@@ -2415,8 +2416,9 @@ namespace Example
 
 Get routes
 
-Requires ALL permissions: 
+Requires ANY permissions: 
 
+* routing:email:view
 * routing:email:manage
 
 ### Example
@@ -11071,4 +11073,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 257.0.0_
+_PureCloudPlatform.Client.V2 258.0.0_

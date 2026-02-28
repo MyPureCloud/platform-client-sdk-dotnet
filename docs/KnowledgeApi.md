@@ -16,6 +16,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId**](#DeleteKnowledgeKnowledgebaseSourcesSalesforceSourceId) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId} | Delete Salesforce Knowledge integration source |
 | [**DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId**](#DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId} | Delete ServiceNow Knowledge integration source |
 | [**DeleteKnowledgeKnowledgebaseSynchronizeJob**](#DeleteKnowledgeKnowledgebaseSynchronizeJob) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId} | Delete synchronization job |
+| [**DeleteKnowledgeSetting**](#DeleteKnowledgeSetting) | **Delete** /api/v2/knowledge/settings/{knowledgeSettingId} | Delete Knowledge setting. |
 | [**GetKnowledgeGuestSessionCategories**](#GetKnowledgeGuestSessionCategories) | **Get** /api/v2/knowledge/guest/sessions/{sessionId}/categories | Get categories |
 | [**GetKnowledgeGuestSessionDocument**](#GetKnowledgeGuestSessionDocument) | **Get** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId} | Get a knowledge document by ID. |
 | [**GetKnowledgeGuestSessionDocuments**](#GetKnowledgeGuestSessionDocuments) | **Get** /api/v2/knowledge/guest/sessions/{sessionId}/documents | Get documents. |
@@ -49,6 +50,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeKnowledgebaseUnansweredGroups**](#GetKnowledgeKnowledgebaseUnansweredGroups) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups | Get knowledge base unanswered groups |
 | [**GetKnowledgeKnowledgebaseUploadsUrlsJob**](#GetKnowledgeKnowledgebaseUploadsUrlsJob) | **Get** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs/{jobId} | Get content upload from URL job status |
 | [**GetKnowledgeKnowledgebases**](#GetKnowledgeKnowledgebases) | **Get** /api/v2/knowledge/knowledgebases | Get knowledge bases |
+| [**GetKnowledgeSetting**](#GetKnowledgeSetting) | **Get** /api/v2/knowledge/settings/{knowledgeSettingId} | Get Knowledge setting. |
+| [**GetKnowledgeSettings**](#GetKnowledgeSettings) | **Get** /api/v2/knowledge/settings | Get Knowledge settings. |
 | [**PatchKnowledgeGuestSessionDocumentsSearchSearchId**](#PatchKnowledgeGuestSessionDocumentsSearchSearchId) | **Patch** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/{searchId} | Update search result. |
 | [**PatchKnowledgeKnowledgebase**](#PatchKnowledgeKnowledgebase) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Update knowledge base |
 | [**PatchKnowledgeKnowledgebaseCategory**](#PatchKnowledgeKnowledgebaseCategory) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId} | Update category |
@@ -62,6 +65,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchKnowledgeKnowledgebaseParseJob**](#PatchKnowledgeKnowledgebaseParseJob) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/parse/jobs/{parseJobId} | Send update to the parse operation |
 | [**PatchKnowledgeKnowledgebaseSynchronizeJob**](#PatchKnowledgeKnowledgebaseSynchronizeJob) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId} | Update synchronization job |
 | [**PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](#PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId} | Update a Knowledge base unanswered phrase group |
+| [**PatchKnowledgeSetting**](#PatchKnowledgeSetting) | **Patch** /api/v2/knowledge/settings/{knowledgeSettingId} | Update Knowledge setting. |
 | [**PostKnowledgeDocumentuploads**](#PostKnowledgeDocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**PostKnowledgeGuestSessionDocumentCopies**](#PostKnowledgeGuestSessionDocumentCopies) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies | Indicate that the document was copied by the user. |
 | [**PostKnowledgeGuestSessionDocumentFeedback**](#PostKnowledgeGuestSessionDocumentFeedback) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback | Give feedback on a document |
@@ -99,6 +103,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeKnowledgebaseSynchronizeJobs**](#PostKnowledgeKnowledgebaseSynchronizeJobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs | Create synchronization job |
 | [**PostKnowledgeKnowledgebaseUploadsUrlsJobs**](#PostKnowledgeKnowledgebaseUploadsUrlsJobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs | Create content upload from URL job |
 | [**PostKnowledgeKnowledgebases**](#PostKnowledgeKnowledgebases) | **Post** /api/v2/knowledge/knowledgebases | Create new knowledge base |
+| [**PostKnowledgeSearchPreview**](#PostKnowledgeSearchPreview) | **Post** /api/v2/knowledge/search/preview | Get Knowledge Search Preview |
+| [**PostKnowledgeSettings**](#PostKnowledgeSettings) | **Post** /api/v2/knowledge/settings | Create Knowledge setting. |
 | [**PutKnowledgeKnowledgebaseSourcesSalesforceSourceId**](#PutKnowledgeKnowledgebaseSourcesSalesforceSourceId) | **Put** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId} | Update Salesforce Knowledge integration source |
 | [**PutKnowledgeKnowledgebaseSourcesServicenowSourceId**](#PutKnowledgeKnowledgebaseSourcesServicenowSourceId) | **Put** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId} | Update ServiceNow Knowledge integration source |
 
@@ -732,6 +738,67 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **knowledgeBaseId** | **string**| Knowledge base ID |  |
 | **syncJobId** | **string**| Synchronization job ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteKnowledgeSetting
+
+> void DeleteKnowledgeSetting (string knowledgeSettingId)
+
+
+Delete Knowledge setting.
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeSettingId = knowledgeSettingId_example;  // string | Knowledge Setting ID.
+
+            try
+            { 
+                // Delete Knowledge setting.
+                apiInstance.DeleteKnowledgeSetting(knowledgeSettingId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeSettingId** | **string**| Knowledge Setting ID. |  |
 
 ### Return type
 
@@ -3013,6 +3080,142 @@ namespace Example
 [**KnowledgeBaseListing**](KnowledgeBaseListing)
 
 
+## GetKnowledgeSetting
+
+> [**KnowledgeSettingsResponse**](KnowledgeSettingsResponse) GetKnowledgeSetting (string knowledgeSettingId)
+
+
+Get Knowledge setting.
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeSettingId = knowledgeSettingId_example;  // string | Knowledge Setting ID.
+
+            try
+            { 
+                // Get Knowledge setting.
+                KnowledgeSettingsResponse result = apiInstance.GetKnowledgeSetting(knowledgeSettingId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeSettingId** | **string**| Knowledge Setting ID. |  |
+
+### Return type
+
+[**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
+
+
+## GetKnowledgeSettings
+
+> [**KnowledgeSettingListing**](KnowledgeSettingListing) GetKnowledgeSettings (string before = null, string after = null, string pageSize = null, string name = null, string sourceId = null, string sortBy = null, string sortOrder = null)
+
+
+Get Knowledge settings.
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var name = name_example;  // string | Knowledge setting name to search upon. (optional) 
+            var sourceId = sourceId_example;  // string | Source ID to filter knowledge settings by. (optional) 
+            var sortBy = sortBy_example;  // string | Field to sort the knowledge settings on. (optional) 
+            var sortOrder = sortOrder_example;  // string | Sorting order for knowledge settings. (optional) 
+
+            try
+            { 
+                // Get Knowledge settings.
+                KnowledgeSettingListing result = apiInstance.GetKnowledgeSettings(before, after, pageSize, name, sourceId, sortBy, sortOrder);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **name** | **string**| Knowledge setting name to search upon. | [optional]  |
+| **sourceId** | **string**| Source ID to filter knowledge settings by. | [optional]  |
+| **sortBy** | **string**| Field to sort the knowledge settings on. | [optional] <br />**Values**: dateModified, name |
+| **sortOrder** | **string**| Sorting order for knowledge settings. | [optional] <br />**Values**: Asc, Desc |
+
+### Return type
+
+[**KnowledgeSettingListing**](KnowledgeSettingListing)
+
+
 ## PatchKnowledgeGuestSessionDocumentsSearchSearchId
 
 > void PatchKnowledgeGuestSessionDocumentsSearchSearchId (string sessionId, string searchId, SearchUpdateRequest body)
@@ -3863,6 +4066,70 @@ namespace Example
 ### Return type
 
 [**UnansweredPhraseGroupUpdateResponse**](UnansweredPhraseGroupUpdateResponse)
+
+
+## PatchKnowledgeSetting
+
+> [**KnowledgeSettingsResponse**](KnowledgeSettingsResponse) PatchKnowledgeSetting (string knowledgeSettingId, KnowledgeSettingsRequest body)
+
+
+Update Knowledge setting.
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeSettingExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var knowledgeSettingId = knowledgeSettingId_example;  // string | Knowledge Setting ID.
+            var body = new KnowledgeSettingsRequest(); // KnowledgeSettingsRequest | 
+
+            try
+            { 
+                // Update Knowledge setting.
+                KnowledgeSettingsResponse result = apiInstance.PatchKnowledgeSetting(knowledgeSettingId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeSetting: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **knowledgeSettingId** | **string**| Knowledge Setting ID. |  |
+| **body** | [**KnowledgeSettingsRequest**](KnowledgeSettingsRequest)|  |  |
+
+### Return type
+
+[**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
 
 
 ## PostKnowledgeDocumentuploads
@@ -6194,6 +6461,130 @@ namespace Example
 [**KnowledgeBase**](KnowledgeBase)
 
 
+## PostKnowledgeSearchPreview
+
+> [**KnowledgeSearchPreviewResponse**](KnowledgeSearchPreviewResponse) PostKnowledgeSearchPreview (KnowledgeSearchPreviewRequest body = null)
+
+
+Get Knowledge Search Preview
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:searchPreview
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeSearchPreviewExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var body = new KnowledgeSearchPreviewRequest(); // KnowledgeSearchPreviewRequest |  (optional) 
+
+            try
+            { 
+                // Get Knowledge Search Preview
+                KnowledgeSearchPreviewResponse result = apiInstance.PostKnowledgeSearchPreview(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeSearchPreview: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**KnowledgeSearchPreviewRequest**](KnowledgeSearchPreviewRequest)|  | [optional]  |
+
+### Return type
+
+[**KnowledgeSearchPreviewResponse**](KnowledgeSearchPreviewResponse)
+
+
+## PostKnowledgeSettings
+
+> [**KnowledgeSettingsResponse**](KnowledgeSettingsResponse) PostKnowledgeSettings (KnowledgeSettingsRequest body = null)
+
+
+Create Knowledge setting.
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeSettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var body = new KnowledgeSettingsRequest(); // KnowledgeSettingsRequest |  (optional) 
+
+            try
+            { 
+                // Create Knowledge setting.
+                KnowledgeSettingsResponse result = apiInstance.PostKnowledgeSettings(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeSettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**KnowledgeSettingsRequest**](KnowledgeSettingsRequest)|  | [optional]  |
+
+### Return type
+
+[**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
+
+
 ## PutKnowledgeKnowledgebaseSourcesSalesforceSourceId
 
 > [**SalesforceSourceResponse**](SalesforceSourceResponse) PutKnowledgeKnowledgebaseSourcesSalesforceSourceId (string knowledgeBaseId, string sourceId, SalesforceSourceRequest body)
@@ -6326,4 +6717,4 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 257.0.0_
+_PureCloudPlatform.Client.V2 258.0.0_
