@@ -57,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Client
             ))
             {
                 UserAgent = this.UserAgent,
+                FollowRedirects = false,
                 Timeout = TimeSpan.FromMilliseconds(this.Timeout)
             };
 

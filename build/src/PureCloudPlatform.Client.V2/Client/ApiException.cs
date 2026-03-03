@@ -54,6 +54,39 @@ namespace PureCloudPlatform.Client.V2.Client
             this.ErrorContent = errorContent;
             this.Headers = headers;
         }
+
+        /// <summary>
+        /// Redirect Exception
+        /// </summary>
+        public class RedirectException : ApiException
+        {
+            /// <summary>
+            /// Initializes a new instance of the <see cref="RedirectException"/> class.
+            /// </summary>
+            public RedirectException(): base()
+            {}
+
+            /// <summary>
+            /// Initializes a new instance of the <see cref="RedirectException"/> class.
+            /// </summary>
+            /// <param name="errorCode">HTTP status code.</param>
+            /// <param name="message">Error message.</param>
+            public RedirectException(int errorCode, string message) : base(errorCode, message)
+            {}
+
+            /// <summary>
+            /// Initializes a new instance of the <see cref="RedirectException"/> class.
+            /// </summary>
+            /// <param name="errorCode">HTTP status code.</param>
+            /// <param name="message">Error message.</param>
+            /// <param name="errorContent">Error content.</param>
+            /// <param name="headers">HTTP headers.</param>
+            public RedirectException(int errorCode, string message, dynamic errorContent = null, IDictionary<string, string> headers = null) : base(errorCode, message)
+            {
+                this.ErrorContent = errorContent;
+                this.Headers = headers;
+            }
+        }
     }
 
 }

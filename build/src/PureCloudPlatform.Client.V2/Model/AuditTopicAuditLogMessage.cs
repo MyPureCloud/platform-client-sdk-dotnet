@@ -1097,6 +1097,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Send,
             
             /// <summary>
+            /// Enum Bulkdelete for "BulkDelete"
+            /// </summary>
+            [EnumMember(Value = "BulkDelete")]
+            Bulkdelete,
+            
+            /// <summary>
             /// Enum Harddelete for "HardDelete"
             /// </summary>
             [EnumMember(Value = "HardDelete")]
@@ -2453,6 +2459,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OperationalEvent")]
             Operationalevent,
+            
+            /// <summary>
+            /// Enum Sender for "Sender"
+            /// </summary>
+            [EnumMember(Value = "Sender")]
+            Sender,
             
             /// <summary>
             /// Enum Allowandblocknumber for "AllowAndBlockNumber"
