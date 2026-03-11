@@ -89,16 +89,18 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Value">The value of the metric (required).</param>
         /// <param name="Metric">The metric which is going to be modified for the selected staffing groups (required).</param>
         /// <param name="Notes">Notes about the staffing groups metric changes.</param>
+        /// <param name="TransfersFullTimeEquivalent">Full time equivalent transfer from one staffing group to another.</param>
         /// <param name="StaffingGroups">The staffing groups affected by the metric change (required).</param>
         /// <param name="CreatedBy">The user who created the metric change (required).</param>
         /// <param name="CreatedDate">The date the entity was created, in ISO-8601 format (required).</param>
-        public StaffingGroupMetricChangeResponse(int? NumberOfWeeks = null, int? WeekStartNumber = null, double? Value = null, MetricEnum? Metric = null, string Notes = null, List<StaffingGroupReference> StaffingGroups = null, UserReference CreatedBy = null, DateTime? CreatedDate = null)
+        public StaffingGroupMetricChangeResponse(int? NumberOfWeeks = null, int? WeekStartNumber = null, double? Value = null, MetricEnum? Metric = null, string Notes = null, TransfersFullTimeEquivalent TransfersFullTimeEquivalent = null, List<StaffingGroupReference> StaffingGroups = null, UserReference CreatedBy = null, DateTime? CreatedDate = null)
         {
             this.NumberOfWeeks = NumberOfWeeks;
             this.WeekStartNumber = WeekStartNumber;
             this.Value = Value;
             this.Metric = Metric;
             this.Notes = Notes;
+            this.TransfersFullTimeEquivalent = TransfersFullTimeEquivalent;
             this.StaffingGroups = StaffingGroups;
             this.CreatedBy = CreatedBy;
             this.CreatedDate = CreatedDate;
@@ -146,6 +148,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Full time equivalent transfer from one staffing group to another
+        /// </summary>
+        /// <value>Full time equivalent transfer from one staffing group to another</value>
+        [DataMember(Name="transfersFullTimeEquivalent", EmitDefaultValue=false)]
+        public TransfersFullTimeEquivalent TransfersFullTimeEquivalent { get; set; }
+
+
+
+        /// <summary>
         /// The staffing groups affected by the metric change
         /// </summary>
         /// <value>The staffing groups affected by the metric change</value>
@@ -185,6 +196,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("  Metric: ").Append(Metric).Append("\n");
             sb.Append("  Notes: ").Append(Notes).Append("\n");
+            sb.Append("  TransfersFullTimeEquivalent: ").Append(TransfersFullTimeEquivalent).Append("\n");
             sb.Append("  StaffingGroups: ").Append(StaffingGroups).Append("\n");
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
@@ -254,6 +266,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Notes.Equals(other.Notes)
                 ) &&
                 (
+                    this.TransfersFullTimeEquivalent == other.TransfersFullTimeEquivalent ||
+                    this.TransfersFullTimeEquivalent != null &&
+                    this.TransfersFullTimeEquivalent.Equals(other.TransfersFullTimeEquivalent)
+                ) &&
+                (
                     this.StaffingGroups == other.StaffingGroups ||
                     this.StaffingGroups != null &&
                     this.StaffingGroups.SequenceEqual(other.StaffingGroups)
@@ -295,6 +312,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Notes != null)
                     hash = hash * 59 + this.Notes.GetHashCode();
+
+                if (this.TransfersFullTimeEquivalent != null)
+                    hash = hash * 59 + this.TransfersFullTimeEquivalent.GetHashCode();
 
                 if (this.StaffingGroups != null)
                     hash = hash * 59 + this.StaffingGroups.GetHashCode();

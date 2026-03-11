@@ -27,24 +27,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SchedulingPeriod" /> class.
         /// </summary>
-        /// <param name="EarliestStartDate">The earliest date the associated activity plan can begin, in YYYY-MM-DD format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="LatestEndDate">The latest date the associated activity plan can end, in YYYY-MM-DD format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
-        public SchedulingPeriod(String EarliestStartDate = null, String LatestEndDate = null)
+        /// <param name="EarliestStartDate">The earliest date the associated activity plan can begin, in YYYY-MM-DD format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
+        public SchedulingPeriod(String LatestEndDate = null, String EarliestStartDate = null)
         {
-            this.EarliestStartDate = EarliestStartDate;
             this.LatestEndDate = LatestEndDate;
+            this.EarliestStartDate = EarliestStartDate;
             
         }
         
-
-
-        /// <summary>
-        /// The earliest date the associated activity plan can begin, in YYYY-MM-DD format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
-        /// </summary>
-        /// <value>The earliest date the associated activity plan can begin, in YYYY-MM-DD format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
-        [DataMember(Name="earliestStartDate", EmitDefaultValue=false)]
-        public String EarliestStartDate { get; set; }
-
 
 
         /// <summary>
@@ -53,6 +44,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The latest date the associated activity plan can end, in YYYY-MM-DD format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="latestEndDate", EmitDefaultValue=false)]
         public String LatestEndDate { get; set; }
+
+
+
+        /// <summary>
+        /// The earliest date the associated activity plan can begin, in YYYY-MM-DD format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// </summary>
+        /// <value>The earliest date the associated activity plan can begin, in YYYY-MM-DD format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        [DataMember(Name="earliestStartDate", EmitDefaultValue=false)]
+        public String EarliestStartDate { get; set; }
 
 
         /// <summary>
@@ -64,8 +64,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class SchedulingPeriod {\n");
 
-            sb.Append("  EarliestStartDate: ").Append(EarliestStartDate).Append("\n");
             sb.Append("  LatestEndDate: ").Append(LatestEndDate).Append("\n");
+            sb.Append("  EarliestStartDate: ").Append(EarliestStartDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -107,14 +107,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.EarliestStartDate == other.EarliestStartDate ||
-                    this.EarliestStartDate != null &&
-                    this.EarliestStartDate.Equals(other.EarliestStartDate)
-                ) &&
-                (
                     this.LatestEndDate == other.LatestEndDate ||
                     this.LatestEndDate != null &&
                     this.LatestEndDate.Equals(other.LatestEndDate)
+                ) &&
+                (
+                    this.EarliestStartDate == other.EarliestStartDate ||
+                    this.EarliestStartDate != null &&
+                    this.EarliestStartDate.Equals(other.EarliestStartDate)
                 );
         }
 
@@ -129,11 +129,11 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.EarliestStartDate != null)
-                    hash = hash * 59 + this.EarliestStartDate.GetHashCode();
-
                 if (this.LatestEndDate != null)
                     hash = hash * 59 + this.LatestEndDate.GetHashCode();
+
+                if (this.EarliestStartDate != null)
+                    hash = hash * 59 + this.EarliestStartDate.GetHashCode();
 
                 return hash;
             }

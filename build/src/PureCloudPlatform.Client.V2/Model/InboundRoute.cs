@@ -52,11 +52,56 @@ namespace PureCloudPlatform.Client.V2.Model
             Optional
         }
         /// <summary>
+        /// The status of the route.
+        /// </summary>
+        /// <value>The status of the route.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum StatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Pending for "Pending"
+            /// </summary>
+            [EnumMember(Value = "Pending")]
+            Pending,
+            
+            /// <summary>
+            /// Enum Active for "Active"
+            /// </summary>
+            [EnumMember(Value = "Active")]
+            Active,
+            
+            /// <summary>
+            /// Enum Removing for "Removing"
+            /// </summary>
+            [EnumMember(Value = "Removing")]
+            Removing,
+            
+            /// <summary>
+            /// Enum Error for "Error"
+            /// </summary>
+            [EnumMember(Value = "Error")]
+            Error
+        }
+        /// <summary>
         /// The configuration to indicate how the history of a conversation has to be included in a draft
         /// </summary>
         /// <value>The configuration to indicate how the history of a conversation has to be included in a draft</value>
         [DataMember(Name="historyInclusion", EmitDefaultValue=false)]
         public HistoryInclusionEnum? HistoryInclusion { get; set; }
+        /// <summary>
+        /// The status of the route.
+        /// </summary>
+        /// <value>The status of the route.</value>
+        [DataMember(Name="status", EmitDefaultValue=false)]
+        public StatusEnum? Status { get; private set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="InboundRoute" /> class.
@@ -81,7 +126,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Signature">The configuration for the canned response signature that will be appended to outbound emails sent via this route.</param>
         /// <param name="HistoryInclusion">The configuration to indicate how the history of a conversation has to be included in a draft.</param>
         /// <param name="AllowMultipleActions">Control if multiple actions are allowed on this route. When true the disconnect has to be done manually. When false a conversation will be disconnected by the system after every action.</param>
-        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null, Signature Signature = null, HistoryInclusionEnum? HistoryInclusion = null, bool? AllowMultipleActions = null)
+        /// <param name="MailboxFolders">Integration Folder routed to this route.</param>
+        public InboundRoute(string Name = null, string Pattern = null, DomainEntityRef Queue = null, int? Priority = null, List<DomainEntityRef> Skills = null, DomainEntityRef Language = null, string FromName = null, string FromEmail = null, DomainEntityRef Flow = null, QueueEmailAddress ReplyEmailAddress = null, List<EmailAddress> AutoBcc = null, DomainEntityRef SpamFlow = null, Signature Signature = null, HistoryInclusionEnum? HistoryInclusion = null, bool? AllowMultipleActions = null, List<string> MailboxFolders = null)
         {
             this.Name = Name;
             this.Pattern = Pattern;
@@ -98,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Signature = Signature;
             this.HistoryInclusion = HistoryInclusion;
             this.AllowMultipleActions = AllowMultipleActions;
+            this.MailboxFolders = MailboxFolders;
             
         }
         
@@ -240,6 +287,17 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Integration Folder routed to this route
+        /// </summary>
+        /// <value>Integration Folder routed to this route</value>
+        [DataMember(Name="mailboxFolders", EmitDefaultValue=false)]
+        public List<string> MailboxFolders { get; set; }
+
+
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -272,6 +330,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Signature: ").Append(Signature).Append("\n");
             sb.Append("  HistoryInclusion: ").Append(HistoryInclusion).Append("\n");
             sb.Append("  AllowMultipleActions: ").Append(AllowMultipleActions).Append("\n");
+            sb.Append("  MailboxFolders: ").Append(MailboxFolders).Append("\n");
+            sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -394,6 +454,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AllowMultipleActions.Equals(other.AllowMultipleActions)
                 ) &&
                 (
+                    this.MailboxFolders == other.MailboxFolders ||
+                    this.MailboxFolders != null &&
+                    this.MailboxFolders.SequenceEqual(other.MailboxFolders)
+                ) &&
+                (
+                    this.Status == other.Status ||
+                    this.Status != null &&
+                    this.Status.Equals(other.Status)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -458,6 +528,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AllowMultipleActions != null)
                     hash = hash * 59 + this.AllowMultipleActions.GetHashCode();
+
+                if (this.MailboxFolders != null)
+                    hash = hash * 59 + this.MailboxFolders.GetHashCode();
+
+                if (this.Status != null)
+                    hash = hash * 59 + this.Status.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

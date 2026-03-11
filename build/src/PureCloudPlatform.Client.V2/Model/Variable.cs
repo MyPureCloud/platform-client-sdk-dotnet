@@ -88,7 +88,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Inputandoutput for "InputAndOutput"
             /// </summary>
             [EnumMember(Value = "InputAndOutput")]
-            Inputandoutput
+            Inputandoutput,
+            
+            /// <summary>
+            /// Enum Guideonly for "GuideOnly"
+            /// </summary>
+            [EnumMember(Value = "GuideOnly")]
+            Guideonly
         }
         /// <summary>
         /// The data type of the variable.

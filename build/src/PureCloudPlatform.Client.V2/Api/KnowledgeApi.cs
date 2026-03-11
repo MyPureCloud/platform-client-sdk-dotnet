@@ -2780,6 +2780,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<KnowledgeBase> PostKnowledgeKnowledgebasesWithHttpInfo (KnowledgeBaseCreateRequest body);
 
         /// <summary>
+        /// Get Knowledge Search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>KnowledgeSourcesSearchResponse</returns>
+        
+        KnowledgeSourcesSearchResponse PostKnowledgeSearch (KnowledgeSourcesSearchRequest body = null);
+
+        /// <summary>
+        /// Get Knowledge Search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of KnowledgeSourcesSearchResponse</returns>
+        
+        ApiResponse<KnowledgeSourcesSearchResponse> PostKnowledgeSearchWithHttpInfo (KnowledgeSourcesSearchRequest body = null);
+
+        /// <summary>
         /// Get Knowledge Search Preview
         /// </summary>
         /// <remarks>
@@ -5650,6 +5674,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (KnowledgeBase)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<KnowledgeBase>> PostKnowledgeKnowledgebasesAsyncWithHttpInfo (KnowledgeBaseCreateRequest body);
+
+        /// <summary>
+        /// Get Knowledge Search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of KnowledgeSourcesSearchResponse</returns>
+        
+        System.Threading.Tasks.Task<KnowledgeSourcesSearchResponse> PostKnowledgeSearchAsync (KnowledgeSourcesSearchRequest body = null);
+
+        /// <summary>
+        /// Get Knowledge Search
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (KnowledgeSourcesSearchResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<KnowledgeSourcesSearchResponse>> PostKnowledgeSearchAsyncWithHttpInfo (KnowledgeSourcesSearchRequest body = null);
 
         /// <summary>
         /// Get Knowledge Search Preview
@@ -27975,6 +28023,214 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<KnowledgeBase>(localVarStatusCode,
                 localVarHeaders,
                 (KnowledgeBase) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeBase)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get Knowledge Search 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>KnowledgeSourcesSearchResponse</returns>
+        
+        public KnowledgeSourcesSearchResponse PostKnowledgeSearch (KnowledgeSourcesSearchRequest body = null)
+        {
+             ApiResponse<KnowledgeSourcesSearchResponse> localVarResponse = PostKnowledgeSearchWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get Knowledge Search 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of KnowledgeSourcesSearchResponse</returns>
+        
+        public ApiResponse< KnowledgeSourcesSearchResponse > PostKnowledgeSearchWithHttpInfo (KnowledgeSourcesSearchRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/knowledge/search";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostKnowledgeSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KnowledgeSourcesSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (KnowledgeSourcesSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeSourcesSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get Knowledge Search 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of KnowledgeSourcesSearchResponse</returns>
+        
+        public async System.Threading.Tasks.Task<KnowledgeSourcesSearchResponse> PostKnowledgeSearchAsync (KnowledgeSourcesSearchRequest body = null)
+        {
+             ApiResponse<KnowledgeSourcesSearchResponse> localVarResponse = await PostKnowledgeSearchAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get Knowledge Search 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (KnowledgeSourcesSearchResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<KnowledgeSourcesSearchResponse>> PostKnowledgeSearchAsyncWithHttpInfo (KnowledgeSourcesSearchRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/knowledge/search";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostKnowledgeSearch: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostKnowledgeSearch: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<KnowledgeSourcesSearchResponse>(localVarStatusCode,
+                localVarHeaders,
+                (KnowledgeSourcesSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(KnowledgeSourcesSearchResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

@@ -66,8 +66,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SubDomain">Indicates if this a PureCloud sub-domain.  If true, then the appropriate DNS records are created for sending/receiving email..</param>
         /// <param name="MailFromSettings">The DNS settings if the inbound domain is using a custom Mail From. These settings can only be used on InboundDomains where subDomain is false..</param>
         /// <param name="CustomSMTPServer">The custom SMTP server integration to use when sending outbound emails from this domain..</param>
+        /// <param name="ImapSettings">The IMAP server integration and settings to use for processing inbound emails..</param>
+        /// <param name="GraphApiSettings">The GraphAPI server integration and settings to use for processing inbound and outbound emails..</param>
         /// <param name="EmailSetting">The email settings associated with this domain..</param>
-        public InboundDomain(string Id = null, string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null, MailFromResult MailFromSettings = null, DomainEntityRef CustomSMTPServer = null, EmailSetting EmailSetting = null)
+        public InboundDomain(string Id = null, string Name = null, MxRecordStatusEnum? MxRecordStatus = null, bool? SubDomain = null, MailFromResult MailFromSettings = null, DomainEntityRef CustomSMTPServer = null, ImapSettings ImapSettings = null, GraphApiSettings GraphApiSettings = null, EmailSetting EmailSetting = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -75,6 +77,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SubDomain = SubDomain;
             this.MailFromSettings = MailFromSettings;
             this.CustomSMTPServer = CustomSMTPServer;
+            this.ImapSettings = ImapSettings;
+            this.GraphApiSettings = GraphApiSettings;
             this.EmailSetting = EmailSetting;
             
         }
@@ -128,6 +132,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The IMAP server integration and settings to use for processing inbound emails.
+        /// </summary>
+        /// <value>The IMAP server integration and settings to use for processing inbound emails.</value>
+        [DataMember(Name="imapSettings", EmitDefaultValue=false)]
+        public ImapSettings ImapSettings { get; set; }
+
+
+
+        /// <summary>
+        /// The GraphAPI server integration and settings to use for processing inbound and outbound emails.
+        /// </summary>
+        /// <value>The GraphAPI server integration and settings to use for processing inbound and outbound emails.</value>
+        [DataMember(Name="graphApiSettings", EmitDefaultValue=false)]
+        public GraphApiSettings GraphApiSettings { get; set; }
+
+
+
+        /// <summary>
         /// The email settings associated with this domain.
         /// </summary>
         /// <value>The email settings associated with this domain.</value>
@@ -159,6 +181,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SubDomain: ").Append(SubDomain).Append("\n");
             sb.Append("  MailFromSettings: ").Append(MailFromSettings).Append("\n");
             sb.Append("  CustomSMTPServer: ").Append(CustomSMTPServer).Append("\n");
+            sb.Append("  ImapSettings: ").Append(ImapSettings).Append("\n");
+            sb.Append("  GraphApiSettings: ").Append(GraphApiSettings).Append("\n");
             sb.Append("  EmailSetting: ").Append(EmailSetting).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -232,6 +256,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.CustomSMTPServer.Equals(other.CustomSMTPServer)
                 ) &&
                 (
+                    this.ImapSettings == other.ImapSettings ||
+                    this.ImapSettings != null &&
+                    this.ImapSettings.Equals(other.ImapSettings)
+                ) &&
+                (
+                    this.GraphApiSettings == other.GraphApiSettings ||
+                    this.GraphApiSettings != null &&
+                    this.GraphApiSettings.Equals(other.GraphApiSettings)
+                ) &&
+                (
                     this.EmailSetting == other.EmailSetting ||
                     this.EmailSetting != null &&
                     this.EmailSetting.Equals(other.EmailSetting)
@@ -271,6 +305,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.CustomSMTPServer != null)
                     hash = hash * 59 + this.CustomSMTPServer.GetHashCode();
+
+                if (this.ImapSettings != null)
+                    hash = hash * 59 + this.ImapSettings.GetHashCode();
+
+                if (this.GraphApiSettings != null)
+                    hash = hash * 59 + this.GraphApiSettings.GetHashCode();
 
                 if (this.EmailSetting != null)
                     hash = hash * 59 + this.EmailSetting.GetHashCode();

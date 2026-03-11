@@ -30,9 +30,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The messaging template name. (required).</param>
         /// <param name="Namespace">The messaging template namespace..</param>
         /// <param name="Language">The messaging template language configured for this template. This is a WhatsApp specific value. For example, &#39;en_US&#39; (required).</param>
-        /// <param name="Buttons">List of buttons to be included in the WhatsApp messages channel.</param>
-        /// <param name="MessageFooter">Footer for the message in the WhatsApp messages channel.</param>
-        /// <param name="Header">Header for the message in the WhatsApp messages channel.</param>
+        /// <param name="Buttons">List of buttons to be included in the standard WhatsApp messages channel.</param>
+        /// <param name="MessageFooter">Footer for the message in the standard WhatsApp messages channel.</param>
+        /// <param name="Header">Header for the message in the standard WhatsApp messages channel.</param>
         public WhatsAppDefinition(string Name = null, string Namespace = null, string Language = null, List<Button> Buttons = null, MessageFooter MessageFooter = null, MessageHeader Header = null)
         {
             this.Name = Name;
@@ -74,27 +74,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of buttons to be included in the WhatsApp messages channel
+        /// List of buttons to be included in the standard WhatsApp messages channel
         /// </summary>
-        /// <value>List of buttons to be included in the WhatsApp messages channel</value>
+        /// <value>List of buttons to be included in the standard WhatsApp messages channel</value>
         [DataMember(Name="buttons", EmitDefaultValue=false)]
         public List<Button> Buttons { get; set; }
 
 
 
         /// <summary>
-        /// Footer for the message in the WhatsApp messages channel
+        /// Footer for the message in the standard WhatsApp messages channel
         /// </summary>
-        /// <value>Footer for the message in the WhatsApp messages channel</value>
+        /// <value>Footer for the message in the standard WhatsApp messages channel</value>
         [DataMember(Name="messageFooter", EmitDefaultValue=false)]
         public MessageFooter MessageFooter { get; set; }
 
 
 
         /// <summary>
-        /// Header for the message in the WhatsApp messages channel
+        /// Header for the message in the standard WhatsApp messages channel
         /// </summary>
-        /// <value>Header for the message in the WhatsApp messages channel</value>
+        /// <value>Header for the message in the standard WhatsApp messages channel</value>
         [DataMember(Name="header", EmitDefaultValue=false)]
         public MessageHeader Header { get; set; }
 

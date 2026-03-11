@@ -103,6 +103,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeKnowledgebaseSynchronizeJobs**](#PostKnowledgeKnowledgebaseSynchronizeJobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs | Create synchronization job |
 | [**PostKnowledgeKnowledgebaseUploadsUrlsJobs**](#PostKnowledgeKnowledgebaseUploadsUrlsJobs) | **Post** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/uploads/urls/jobs | Create content upload from URL job |
 | [**PostKnowledgeKnowledgebases**](#PostKnowledgeKnowledgebases) | **Post** /api/v2/knowledge/knowledgebases | Create new knowledge base |
+| [**PostKnowledgeSearch**](#PostKnowledgeSearch) | **Post** /api/v2/knowledge/search | Get Knowledge Search |
 | [**PostKnowledgeSearchPreview**](#PostKnowledgeSearchPreview) | **Post** /api/v2/knowledge/search/preview | Get Knowledge Search Preview |
 | [**PostKnowledgeSettings**](#PostKnowledgeSettings) | **Post** /api/v2/knowledge/settings | Create Knowledge setting. |
 | [**PutKnowledgeKnowledgebaseSourcesSalesforceSourceId**](#PutKnowledgeKnowledgebaseSourcesSalesforceSourceId) | **Put** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId} | Update Salesforce Knowledge integration source |
@@ -6461,6 +6462,68 @@ namespace Example
 [**KnowledgeBase**](KnowledgeBase)
 
 
+## PostKnowledgeSearch
+
+> [**KnowledgeSourcesSearchResponse**](KnowledgeSourcesSearchResponse) PostKnowledgeSearch (KnowledgeSourcesSearchRequest body = null)
+
+
+Get Knowledge Search
+
+Requires ALL permissions: 
+
+* knowledge:knowledgeSetting:search
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeSearchExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var body = new KnowledgeSourcesSearchRequest(); // KnowledgeSourcesSearchRequest |  (optional) 
+
+            try
+            { 
+                // Get Knowledge Search
+                KnowledgeSourcesSearchResponse result = apiInstance.PostKnowledgeSearch(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeSearch: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**KnowledgeSourcesSearchRequest**](KnowledgeSourcesSearchRequest)|  | [optional]  |
+
+### Return type
+
+[**KnowledgeSourcesSearchResponse**](KnowledgeSourcesSearchResponse)
+
+
 ## PostKnowledgeSearchPreview
 
 > [**KnowledgeSearchPreviewResponse**](KnowledgeSearchPreviewResponse) PostKnowledgeSearchPreview (KnowledgeSearchPreviewRequest body = null)
@@ -6717,4 +6780,4 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 258.1.0_
+_PureCloudPlatform.Client.V2 259.0.0_

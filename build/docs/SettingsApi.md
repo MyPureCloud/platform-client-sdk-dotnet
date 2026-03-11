@@ -867,4 +867,4 @@ namespace Example
 [**AutoAnswerSettings**](AutoAnswerSettings)
 
 
-_PureCloudPlatform.Client.V2 258.1.0_
+_PureCloudPlatform.Client.V2 259.0.0_

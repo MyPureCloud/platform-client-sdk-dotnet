@@ -40,10 +40,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Native,
             
             /// <summary>
-            /// Enum Custom for "Custom"
+            /// Enum External for "External"
             /// </summary>
-            [EnumMember(Value = "Custom")]
-            Custom
+            [EnumMember(Value = "External")]
+            External
         }
         /// <summary>
         /// The source of the event definition

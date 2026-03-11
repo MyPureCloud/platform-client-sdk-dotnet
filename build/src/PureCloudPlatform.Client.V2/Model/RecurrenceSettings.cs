@@ -27,17 +27,26 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RecurrenceSettings" /> class.
         /// </summary>
+        /// <param name="EndAfter">Settings controlling when to end the recurrence for the activity plan (required).</param>
         /// <param name="RecurrencePeriod">The recurrence period of the activity plan (required).</param>
         /// <param name="MinimumTimeBetweenOccurrences">Constraint indicating the minimum time in hours between recurrences of the activity plan (required).</param>
-        /// <param name="EndAfter">Settings controlling when to end the recurrence for the activity plan (required).</param>
-        public RecurrenceSettings(RecurrencePeriod RecurrencePeriod = null, RecurrencePeriod MinimumTimeBetweenOccurrences = null, RecurrenceEndSettings EndAfter = null)
+        public RecurrenceSettings(RecurrenceEndSettings EndAfter = null, RecurrencePeriod RecurrencePeriod = null, RecurrencePeriod MinimumTimeBetweenOccurrences = null)
         {
+            this.EndAfter = EndAfter;
             this.RecurrencePeriod = RecurrencePeriod;
             this.MinimumTimeBetweenOccurrences = MinimumTimeBetweenOccurrences;
-            this.EndAfter = EndAfter;
             
         }
         
+
+
+        /// <summary>
+        /// Settings controlling when to end the recurrence for the activity plan
+        /// </summary>
+        /// <value>Settings controlling when to end the recurrence for the activity plan</value>
+        [DataMember(Name="endAfter", EmitDefaultValue=false)]
+        public RecurrenceEndSettings EndAfter { get; set; }
+
 
 
         /// <summary>
@@ -57,15 +66,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public RecurrencePeriod MinimumTimeBetweenOccurrences { get; set; }
 
 
-
-        /// <summary>
-        /// Settings controlling when to end the recurrence for the activity plan
-        /// </summary>
-        /// <value>Settings controlling when to end the recurrence for the activity plan</value>
-        [DataMember(Name="endAfter", EmitDefaultValue=false)]
-        public RecurrenceEndSettings EndAfter { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -75,9 +75,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class RecurrenceSettings {\n");
 
+            sb.Append("  EndAfter: ").Append(EndAfter).Append("\n");
             sb.Append("  RecurrencePeriod: ").Append(RecurrencePeriod).Append("\n");
             sb.Append("  MinimumTimeBetweenOccurrences: ").Append(MinimumTimeBetweenOccurrences).Append("\n");
-            sb.Append("  EndAfter: ").Append(EndAfter).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -119,6 +119,11 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.EndAfter == other.EndAfter ||
+                    this.EndAfter != null &&
+                    this.EndAfter.Equals(other.EndAfter)
+                ) &&
+                (
                     this.RecurrencePeriod == other.RecurrencePeriod ||
                     this.RecurrencePeriod != null &&
                     this.RecurrencePeriod.Equals(other.RecurrencePeriod)
@@ -127,11 +132,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MinimumTimeBetweenOccurrences == other.MinimumTimeBetweenOccurrences ||
                     this.MinimumTimeBetweenOccurrences != null &&
                     this.MinimumTimeBetweenOccurrences.Equals(other.MinimumTimeBetweenOccurrences)
-                ) &&
-                (
-                    this.EndAfter == other.EndAfter ||
-                    this.EndAfter != null &&
-                    this.EndAfter.Equals(other.EndAfter)
                 );
         }
 
@@ -146,14 +146,14 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.EndAfter != null)
+                    hash = hash * 59 + this.EndAfter.GetHashCode();
+
                 if (this.RecurrencePeriod != null)
                     hash = hash * 59 + this.RecurrencePeriod.GetHashCode();
 
                 if (this.MinimumTimeBetweenOccurrences != null)
                     hash = hash * 59 + this.MinimumTimeBetweenOccurrences.GetHashCode();
-
-                if (this.EndAfter != null)
-                    hash = hash * 59 + this.EndAfter.GetHashCode();
 
                 return hash;
             }

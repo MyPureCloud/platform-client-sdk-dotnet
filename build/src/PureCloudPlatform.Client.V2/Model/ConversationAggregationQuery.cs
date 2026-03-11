@@ -629,6 +629,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nstatetransitionerror,
             
             /// <summary>
+            /// Enum Ntakeover for "nTakeover"
+            /// </summary>
+            [EnumMember(Value = "nTakeover")]
+            Ntakeover,
+            
+            /// <summary>
             /// Enum Ntransferred for "nTransferred"
             /// </summary>
             [EnumMember(Value = "nTransferred")]

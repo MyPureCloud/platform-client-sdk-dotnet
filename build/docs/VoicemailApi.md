@@ -288,8 +288,7 @@ Get a group's voicemail policy
 
 Requires ANY permissions: 
 
-* directory:group:add
-* directory:group:edit
+* voicemail:groupPolicy:view
 
 ### Example
 ```{"language":"csharp"}
@@ -1150,8 +1149,7 @@ Update a group's voicemail policy
 
 Requires ANY permissions: 
 
-* directory:group:add
-* directory:group:edit
+* voicemail:groupPolicy:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -1711,4 +1709,4 @@ namespace Example
 [**VoicemailUserPolicy**](VoicemailUserPolicy)
 
 
-_PureCloudPlatform.Client.V2 258.1.0_
+_PureCloudPlatform.Client.V2 259.0.0_

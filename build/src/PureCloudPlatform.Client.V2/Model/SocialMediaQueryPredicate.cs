@@ -124,7 +124,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Moderationflag for "moderationFlag"
             /// </summary>
             [EnumMember(Value = "moderationFlag")]
-            Moderationflag
+            Moderationflag,
+            
+            /// <summary>
+            /// Enum Sourcetype for "sourceType"
+            /// </summary>
+            [EnumMember(Value = "sourceType")]
+            Sourcetype
         }
         /// <summary>
         /// Optional operator, default is matches

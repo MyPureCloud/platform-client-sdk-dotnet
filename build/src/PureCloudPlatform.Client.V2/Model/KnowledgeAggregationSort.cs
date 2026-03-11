@@ -100,6 +100,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Nknowledgesessions,
             
             /// <summary>
+            /// Enum Nknowledgev3search for "nKnowledgeV3Search"
+            /// </summary>
+            [EnumMember(Value = "nKnowledgeV3Search")]
+            Nknowledgev3search,
+            
+            /// <summary>
             /// Enum Oknowledgedocumentquery for "oKnowledgeDocumentQuery"
             /// </summary>
             [EnumMember(Value = "oKnowledgeDocumentQuery")]

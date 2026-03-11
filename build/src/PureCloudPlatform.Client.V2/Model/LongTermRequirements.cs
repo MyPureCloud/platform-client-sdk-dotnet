@@ -29,11 +29,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="ForecastMetadata">Forecast metadata (required).</param>
         /// <param name="DateGenerationStarted">Date the generation of the requirements started. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
+        /// <param name="Months">The list of months covered by the long-term staffing requirements, formatted as yyyy-MM.</param>
         /// <param name="RequirementResults">List of planning group outputs (required).</param>
-        public LongTermRequirements(ForecastMetadata ForecastMetadata = null, DateTime? DateGenerationStarted = null, List<PlanningGroupRequirementOutput> RequirementResults = null)
+        public LongTermRequirements(ForecastMetadata ForecastMetadata = null, DateTime? DateGenerationStarted = null, List<YearMonth> Months = null, List<PlanningGroupRequirementOutput> RequirementResults = null)
         {
             this.ForecastMetadata = ForecastMetadata;
             this.DateGenerationStarted = DateGenerationStarted;
+            this.Months = Months;
             this.RequirementResults = RequirementResults;
             
         }
@@ -59,6 +61,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The list of months covered by the long-term staffing requirements, formatted as yyyy-MM
+        /// </summary>
+        /// <value>The list of months covered by the long-term staffing requirements, formatted as yyyy-MM</value>
+        [DataMember(Name="months", EmitDefaultValue=false)]
+        public List<YearMonth> Months { get; set; }
+
+
+
+        /// <summary>
         /// List of planning group outputs
         /// </summary>
         /// <value>List of planning group outputs</value>
@@ -77,6 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  ForecastMetadata: ").Append(ForecastMetadata).Append("\n");
             sb.Append("  DateGenerationStarted: ").Append(DateGenerationStarted).Append("\n");
+            sb.Append("  Months: ").Append(Months).Append("\n");
             sb.Append("  RequirementResults: ").Append(RequirementResults).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -129,6 +141,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DateGenerationStarted.Equals(other.DateGenerationStarted)
                 ) &&
                 (
+                    this.Months == other.Months ||
+                    this.Months != null &&
+                    this.Months.SequenceEqual(other.Months)
+                ) &&
+                (
                     this.RequirementResults == other.RequirementResults ||
                     this.RequirementResults != null &&
                     this.RequirementResults.SequenceEqual(other.RequirementResults)
@@ -151,6 +168,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DateGenerationStarted != null)
                     hash = hash * 59 + this.DateGenerationStarted.GetHashCode();
+
+                if (this.Months != null)
+                    hash = hash * 59 + this.Months.GetHashCode();
 
                 if (this.RequirementResults != null)
                     hash = hash * 59 + this.RequirementResults.GetHashCode();

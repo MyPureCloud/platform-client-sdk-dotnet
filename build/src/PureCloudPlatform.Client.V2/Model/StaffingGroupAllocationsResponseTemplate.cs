@@ -28,9 +28,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="StaffingGroupAllocationsResponseTemplate" /> class.
         /// </summary>
         /// <param name="StaffingGroupAllocations">List of staffing group allocations (required).</param>
-        public StaffingGroupAllocationsResponseTemplate(List<StaffingGroupAllocation> StaffingGroupAllocations = null)
+        /// <param name="Months">The list of months covered by this capacity plan, formatted as yyyy-MM.</param>
+        /// <param name="PlanningGroupAllocations">The planning group allocations.</param>
+        /// <param name="CapacityPlanMetricsSummary">The total summary of staffing allocation metrics for this capacity plan, for the selected granularity.</param>
+        public StaffingGroupAllocationsResponseTemplate(List<StaffingGroupAllocation> StaffingGroupAllocations = null, List<YearMonth> Months = null, List<CapacityPlanningPlanningGroupAllocation> PlanningGroupAllocations = null, CapacityPlanMetricsSummary CapacityPlanMetricsSummary = null)
         {
             this.StaffingGroupAllocations = StaffingGroupAllocations;
+            this.Months = Months;
+            this.PlanningGroupAllocations = PlanningGroupAllocations;
+            this.CapacityPlanMetricsSummary = CapacityPlanMetricsSummary;
             
         }
         
@@ -44,6 +50,33 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<StaffingGroupAllocation> StaffingGroupAllocations { get; set; }
 
 
+
+        /// <summary>
+        /// The list of months covered by this capacity plan, formatted as yyyy-MM
+        /// </summary>
+        /// <value>The list of months covered by this capacity plan, formatted as yyyy-MM</value>
+        [DataMember(Name="months", EmitDefaultValue=false)]
+        public List<YearMonth> Months { get; set; }
+
+
+
+        /// <summary>
+        /// The planning group allocations
+        /// </summary>
+        /// <value>The planning group allocations</value>
+        [DataMember(Name="planningGroupAllocations", EmitDefaultValue=false)]
+        public List<CapacityPlanningPlanningGroupAllocation> PlanningGroupAllocations { get; set; }
+
+
+
+        /// <summary>
+        /// The total summary of staffing allocation metrics for this capacity plan, for the selected granularity
+        /// </summary>
+        /// <value>The total summary of staffing allocation metrics for this capacity plan, for the selected granularity</value>
+        [DataMember(Name="capacityPlanMetricsSummary", EmitDefaultValue=false)]
+        public CapacityPlanMetricsSummary CapacityPlanMetricsSummary { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -54,6 +87,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class StaffingGroupAllocationsResponseTemplate {\n");
 
             sb.Append("  StaffingGroupAllocations: ").Append(StaffingGroupAllocations).Append("\n");
+            sb.Append("  Months: ").Append(Months).Append("\n");
+            sb.Append("  PlanningGroupAllocations: ").Append(PlanningGroupAllocations).Append("\n");
+            sb.Append("  CapacityPlanMetricsSummary: ").Append(CapacityPlanMetricsSummary).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -98,6 +134,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.StaffingGroupAllocations == other.StaffingGroupAllocations ||
                     this.StaffingGroupAllocations != null &&
                     this.StaffingGroupAllocations.SequenceEqual(other.StaffingGroupAllocations)
+                ) &&
+                (
+                    this.Months == other.Months ||
+                    this.Months != null &&
+                    this.Months.SequenceEqual(other.Months)
+                ) &&
+                (
+                    this.PlanningGroupAllocations == other.PlanningGroupAllocations ||
+                    this.PlanningGroupAllocations != null &&
+                    this.PlanningGroupAllocations.SequenceEqual(other.PlanningGroupAllocations)
+                ) &&
+                (
+                    this.CapacityPlanMetricsSummary == other.CapacityPlanMetricsSummary ||
+                    this.CapacityPlanMetricsSummary != null &&
+                    this.CapacityPlanMetricsSummary.Equals(other.CapacityPlanMetricsSummary)
                 );
         }
 
@@ -114,6 +165,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.StaffingGroupAllocations != null)
                     hash = hash * 59 + this.StaffingGroupAllocations.GetHashCode();
+
+                if (this.Months != null)
+                    hash = hash * 59 + this.Months.GetHashCode();
+
+                if (this.PlanningGroupAllocations != null)
+                    hash = hash * 59 + this.PlanningGroupAllocations.GetHashCode();
+
+                if (this.CapacityPlanMetricsSummary != null)
+                    hash = hash * 59 + this.CapacityPlanMetricsSummary.GetHashCode();
 
                 return hash;
             }
