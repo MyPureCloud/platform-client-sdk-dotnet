@@ -5,7 +5,7 @@ Platform API Client SDK - .NET
 
 Documentation can be found at https://mypurecloud.github.io/platform-client-sdk-dotnet/
 
-Documentation version PureCloudPlatform.Client.V2 258.0.0
+Documentation version PureCloudPlatform.Client.V2 259.0.0
 
 ## Install Using nuget
 
@@ -463,6 +463,125 @@ When the `useDefaultApiClient` optional parameter is not specified or is set to 
         var apiInstance = new UsersApi(configuration);
         var userId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";  // string | User ID
         User resultUser = apiInstance.GetUser(userId, null, null, null);
+```
+
+#### Managing 3xx (Redirect) HTTP Responses
+
+The SDK's DefaultHttpClient, based on RestSharp, does not automatically process any 3xx HTTP Responses (issuing a consecutive GET request to the url provided as Response Location Header).  
+This is meant to prevent deserialization errors, when the redirect url provides access to a content which is different from the Platform API operation swagger definition.
+
+On 3xx, the SDK will raise an `ApiException.RedirectException` to let the developer catch this reponse and access the url provided in the `Location` HTTP Response Header. The `ApiException.RedirectException` inherits from `ApiException` and can therefore be also managed with an `ApiException`.
+
+In order to illustrate this:
+- The *GET /api/v2/downloads/{downloadId}* endpoint (in the .Net SDK: *GetDownload* method from *DownloadsApi*) is one of the few endpoints which can answer with a 2xx HTTP status or with a 3xx HTTP Status (i.e. Redirect).
+- Downloading a document, based on the downloadId value, is a two-step process.
+    - First step: The purpose of the *GET /api/v2/downloads/{downloadId}* is to return a specific url where the document is available for download (on a different server).
+    - Second step: You can then query the provided download url to get access to the document and its content.
+- If you invoke *GET /api/v2/downloads/{downloadId}* endpoint with *issueRedirect = false* (*GetDownload(downloadId, null, false, null)*), the server will answer with a 200 OK and a response body that matches the *UrlResponse* model (which contains the url).
+- If you invoke *GET /api/v2/downloads/{downloadId}* endpoint with *issueRedirect = true*, or with no *issueRedirect parameter* (*GetDownload(downloadId, null, true, null) or GetDownload(downloadId, null, null, null)*), the server will answer with a *303 See Other* and the download url will be available as a HTTP Response header, named "Location".
+
+With *issueRedirect = false*:
+```csharp
+// Instantiate instance of the Downloads API
+var downloadsApi = new DownloadsApi();
+
+// Get the url of the document for download
+UrlResponse urlresponse = downloadsApi.GetDownload(downloadId, null, false, null);
+Console.WriteLine("The download url is: {0}", urlresponse.Url);
+```
+
+With unset *issueRedirect* or *issueRedirect = true* (using `ApiException.RedirectException`):
+```csharp
+// Instantiate instance of the Downloads API
+var downloadsApi = new DownloadsApi();
+
+// Get the url of the document for download
+try
+{
+    UrlResponse urlresponse = downloadsApi.GetDownload(downloadId, null, null, null);
+}
+catch (ApiException.RedirectException e)
+{
+    Console.WriteLine("HTTP Redirect Received when calling Platform API Endpoint");
+    Console.WriteLine("The download url is: {0}", e.Headers["Location"]);
+}
+catch (ApiException e)
+{
+    ...
+}
+catch (Exception e)
+{
+    ...
+}
+```
+
+With unset *issueRedirect* or *issueRedirect = true* (using `ApiException`):
+```csharp
+// Instantiate instance of the Downloads API
+var downloadsApi = new DownloadsApi();
+
+// Get the url of the document for download
+try
+{
+    UrlResponse urlresponse = downloadsApi.GetDownload(downloadId, null, null, null);
+}
+catch (ApiException e)
+{
+    if (e.ErrorCode >= 300 && e.ErrorCode < 400) {
+        Console.WriteLine("HTTP Redirect Received when calling Platform API Endpoint");
+        Console.WriteLine("The download url is: {0}", e.Headers["Location"]);
+    } else {
+        ...
+    }
+}
+catch (Exception e)
+{
+    ...
+}
+```
+
+Once you have the download url, you can query it issuing a new HTTP request.
+
+Here is an example using the *System.Net.Http's HttpClient*:
+```csharp
+var httpClient = new HttpClient();
+try
+{
+    HttpResponseMessage httpResponse = httpClient
+        .GetAsync(downloadUrl)
+        .ConfigureAwait(false)
+        .GetAwaiter()
+        .GetResult();
+
+    int statusCode = (int)httpResponse.StatusCode;
+
+    if (statusCode >= 400 || statusCode == 0)
+    {
+        Console.WriteLine("Error status getting download content: {0}", statusCode);
+    } else {
+        // Successful Response - Read the response content
+        try
+        {
+            var responseBodyByteArray = httpResponse.Content
+                .ReadAsByteArrayAsync()
+                .ConfigureAwait(false)
+                .GetAwaiter()
+                .GetResult();
+
+            // Write byte array to a file.
+            Console.WriteLine("Content was downloaded successfully");
+            // System.IO.File.WriteAllBytes(downloadFilename, responseBodyByteArray);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error reading download content");
+        }
+    }
+}
+catch (Exception ex)
+{
+    Console.WriteLine("Error getting download content");
+}
 ```
 
 #### Managing updates in Platform API Enumerations

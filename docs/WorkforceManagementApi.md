@@ -3377,7 +3377,7 @@ namespace Example
 
 ## GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations
 
-> [**CapacityPlanStaffingGroupAllocationsResponse**](CapacityPlanStaffingGroupAllocationsResponse) GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations (string businessUnitId, string capacityPlanId)
+> [**CapacityPlanStaffingGroupAllocationsResponse**](CapacityPlanStaffingGroupAllocationsResponse) GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations (string businessUnitId, string capacityPlanId, string granularity = null)
 
 
 Get a capacity plan's staffing group allocations
@@ -3410,11 +3410,12 @@ namespace Example
             var apiInstance = new WorkforceManagementApi();
             var businessUnitId = businessUnitId_example;  // string | The ID of the business unit
             var capacityPlanId = capacityPlanId_example;  // string | The ID of the capacity plan
+            var granularity = granularity_example;  // string | Granularity to access staffing group data, defaults to weekly (optional) 
 
             try
             { 
                 // Get a capacity plan's staffing group allocations
-                CapacityPlanStaffingGroupAllocationsResponse result = apiInstance.GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId, capacityPlanId);
+                CapacityPlanStaffingGroupAllocationsResponse result = apiInstance.GetWorkforcemanagementBusinessunitCapacityplanStaffinggroupallocations(businessUnitId, capacityPlanId, granularity);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3433,6 +3434,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **businessUnitId** | **string**| The ID of the business unit |  |
 | **capacityPlanId** | **string**| The ID of the capacity plan |  |
+| **granularity** | **string**| Granularity to access staffing group data, defaults to weekly | [optional] <br />**Values**: weekly, monthly |
 
 ### Return type
 
@@ -3505,7 +3507,7 @@ namespace Example
 
 ## GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast
 
-> [**LongTermRequirementsResponse**](LongTermRequirementsResponse) GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast (string businessUnitId, String weekDateId, string forecastId)
+> [**LongTermRequirementsResponse**](LongTermRequirementsResponse) GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast (string businessUnitId, String weekDateId, string forecastId, string granularity = null)
 
 
 Get the latest long term staffing requirements for a business unit
@@ -3539,11 +3541,12 @@ namespace Example
             var businessUnitId = businessUnitId_example;  // string | 
             var weekDateId = 2013-10-20;  // String | weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
             var forecastId = forecastId_example;  // string | forecastId of forecast
+            var granularity = granularity_example;  // string | Granularity to access staffing requirements data, defaults to weekly (optional) 
 
             try
             { 
                 // Get the latest long term staffing requirements for a business unit
-                LongTermRequirementsResponse result = apiInstance.GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId, weekDateId, forecastId);
+                LongTermRequirementsResponse result = apiInstance.GetWorkforcemanagementBusinessunitCapacityplanningLongtermrequirementsAutomaticbestmethodWeekForecast(businessUnitId, weekDateId, forecastId, granularity);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3563,6 +3566,7 @@ namespace Example
 | **businessUnitId** | **string**|  |  |
 | **weekDateId** | **String**| weekDateId of forecast, format yyyy-MM-dd. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd |  |
 | **forecastId** | **string**| forecastId of forecast |  |
+| **granularity** | **string**| Granularity to access staffing requirements data, defaults to weekly | [optional] <br />**Values**: weekly, monthly |
 
 ### Return type
 
@@ -18119,4 +18123,4 @@ namespace Example
 [**TimeOffLimit**](TimeOffLimit)
 
 
-_PureCloudPlatform.Client.V2 258.0.0_
+_PureCloudPlatform.Client.V2 259.0.0_
