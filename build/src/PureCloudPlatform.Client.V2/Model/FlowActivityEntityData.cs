@@ -169,6 +169,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Digitalbot,
             
             /// <summary>
+            /// Enum Emailsend for "EMAILSEND"
+            /// </summary>
+            [EnumMember(Value = "EMAILSEND")]
+            Emailsend,
+            
+            /// <summary>
             /// Enum Inboundcall for "INBOUNDCALL"
             /// </summary>
             [EnumMember(Value = "INBOUNDCALL")]

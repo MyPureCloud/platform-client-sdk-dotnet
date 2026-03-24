@@ -210,7 +210,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteOutboundContactlistContactWithHttpInfo (string contactListId, string contactId);
 
         /// <summary>
-        /// Delete contacts from a contact list.
+        /// Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted
         /// </summary>
         /// <remarks>
         /// 
@@ -223,7 +223,7 @@ namespace PureCloudPlatform.Client.V2.Api
         void DeleteOutboundContactlistContacts (string contactListId, List<string> contactIds);
 
         /// <summary>
-        /// Delete contacts from a contact list.
+        /// Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted
         /// </summary>
         /// <remarks>
         /// 
@@ -1834,6 +1834,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of ContactListTemplateEntityListing</returns>
         
         ApiResponse<ContactListTemplateEntityListing> GetOutboundContactlisttemplatesWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get diagnostic summary for a single campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="start">Start datetime (ISO 8601 or Unix epoch)</param>
+        /// <param name="end">End datetime (ISO 8601 or Unix epoch)</param>
+        /// <returns>CampaignDiagnosticSummary</returns>
+        
+        CampaignDiagnosticSummary GetOutboundDiagnosticsCampaignSummary (string campaignId, string start, string end);
+
+        /// <summary>
+        /// Get diagnostic summary for a single campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="start">Start datetime (ISO 8601 or Unix epoch)</param>
+        /// <param name="end">End datetime (ISO 8601 or Unix epoch)</param>
+        /// <returns>ApiResponse of CampaignDiagnosticSummary</returns>
+        
+        ApiResponse<CampaignDiagnosticSummary> GetOutboundDiagnosticsCampaignSummaryWithHttpInfo (string campaignId, string start, string end);
 
         /// <summary>
         /// Get an Outbound Digital Rule Set
@@ -4868,7 +4896,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteOutboundContactlistContactAsyncWithHttpInfo (string contactListId, string contactId);
 
         /// <summary>
-        /// Delete contacts from a contact list.
+        /// Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted
         /// </summary>
         /// <remarks>
         /// 
@@ -4881,7 +4909,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task DeleteOutboundContactlistContactsAsync (string contactListId, List<string> contactIds);
 
         /// <summary>
-        /// Delete contacts from a contact list.
+        /// Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted
         /// </summary>
         /// <remarks>
         /// 
@@ -6492,6 +6520,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (ContactListTemplateEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<ContactListTemplateEntityListing>> GetOutboundContactlisttemplatesAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, bool? allowEmptyResult = null, string filterType = null, string name = null, string sortBy = null, string sortOrder = null);
+
+        /// <summary>
+        /// Get diagnostic summary for a single campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="start">Start datetime (ISO 8601 or Unix epoch)</param>
+        /// <param name="end">End datetime (ISO 8601 or Unix epoch)</param>
+        /// <returns>Task of CampaignDiagnosticSummary</returns>
+        
+        System.Threading.Tasks.Task<CampaignDiagnosticSummary> GetOutboundDiagnosticsCampaignSummaryAsync (string campaignId, string start, string end);
+
+        /// <summary>
+        /// Get diagnostic summary for a single campaign
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="start">Start datetime (ISO 8601 or Unix epoch)</param>
+        /// <param name="end">End datetime (ISO 8601 or Unix epoch)</param>
+        /// <returns>Task of ApiResponse (CampaignDiagnosticSummary)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CampaignDiagnosticSummary>> GetOutboundDiagnosticsCampaignSummaryAsyncWithHttpInfo (string campaignId, string start, string end);
 
         /// <summary>
         /// Get an Outbound Digital Rule Set
@@ -11059,7 +11115,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete contacts from a contact list. 
+        /// Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11073,7 +11129,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete contacts from a contact list. 
+        /// Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11165,7 +11221,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete contacts from a contact list. 
+        /// Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -11180,7 +11236,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete contacts from a contact list. 
+        /// Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -23668,6 +23724,237 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<ContactListTemplateEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (ContactListTemplateEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ContactListTemplateEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get diagnostic summary for a single campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="start">Start datetime (ISO 8601 or Unix epoch)</param>
+        /// <param name="end">End datetime (ISO 8601 or Unix epoch)</param>
+        /// <returns>CampaignDiagnosticSummary</returns>
+        
+        public CampaignDiagnosticSummary GetOutboundDiagnosticsCampaignSummary (string campaignId, string start, string end)
+        {
+             ApiResponse<CampaignDiagnosticSummary> localVarResponse = GetOutboundDiagnosticsCampaignSummaryWithHttpInfo(campaignId, start, end);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get diagnostic summary for a single campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="start">Start datetime (ISO 8601 or Unix epoch)</param>
+        /// <param name="end">End datetime (ISO 8601 or Unix epoch)</param>
+        /// <returns>ApiResponse of CampaignDiagnosticSummary</returns>
+        
+        public ApiResponse< CampaignDiagnosticSummary > GetOutboundDiagnosticsCampaignSummaryWithHttpInfo (string campaignId, string start, string end)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundDiagnosticsCampaignSummary");
+            // verify the required parameter 'start' is set
+            if (start == null)
+                throw new ApiException(400, "Missing required parameter 'start' when calling OutboundApi->GetOutboundDiagnosticsCampaignSummary");
+            // verify the required parameter 'end' is set
+            if (end == null)
+                throw new ApiException(400, "Missing required parameter 'end' when calling OutboundApi->GetOutboundDiagnosticsCampaignSummary");
+
+            var localVarPath = "/api/v2/outbound/diagnostics/campaigns/{campaignId}/summary";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+            if (start != null) localVarQueryParams.Add(new Tuple<string, string>("start", this.Configuration.ApiClient.ParameterToString(start)));
+            if (end != null) localVarQueryParams.Add(new Tuple<string, string>("end", this.Configuration.ApiClient.ParameterToString(end)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDiagnosticsCampaignSummary: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetOutboundDiagnosticsCampaignSummary: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDiagnosticsCampaignSummary: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignDiagnosticSummary>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignDiagnosticSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDiagnosticSummary)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get diagnostic summary for a single campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="start">Start datetime (ISO 8601 or Unix epoch)</param>
+        /// <param name="end">End datetime (ISO 8601 or Unix epoch)</param>
+        /// <returns>Task of CampaignDiagnosticSummary</returns>
+        
+        public async System.Threading.Tasks.Task<CampaignDiagnosticSummary> GetOutboundDiagnosticsCampaignSummaryAsync (string campaignId, string start, string end)
+        {
+             ApiResponse<CampaignDiagnosticSummary> localVarResponse = await GetOutboundDiagnosticsCampaignSummaryAsyncWithHttpInfo(campaignId, start, end);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get diagnostic summary for a single campaign 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="campaignId">Campaign ID</param>
+        /// <param name="start">Start datetime (ISO 8601 or Unix epoch)</param>
+        /// <param name="end">End datetime (ISO 8601 or Unix epoch)</param>
+        /// <returns>Task of ApiResponse (CampaignDiagnosticSummary)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CampaignDiagnosticSummary>> GetOutboundDiagnosticsCampaignSummaryAsyncWithHttpInfo (string campaignId, string start, string end)
+        { 
+            // verify the required parameter 'campaignId' is set
+            if (campaignId == null)
+                throw new ApiException(400, "Missing required parameter 'campaignId' when calling OutboundApi->GetOutboundDiagnosticsCampaignSummary");
+            
+            // verify the required parameter 'start' is set
+            if (start == null)
+                throw new ApiException(400, "Missing required parameter 'start' when calling OutboundApi->GetOutboundDiagnosticsCampaignSummary");
+            
+            // verify the required parameter 'end' is set
+            if (end == null)
+                throw new ApiException(400, "Missing required parameter 'end' when calling OutboundApi->GetOutboundDiagnosticsCampaignSummary");
+            
+
+            var localVarPath = "/api/v2/outbound/diagnostics/campaigns/{campaignId}/summary";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (campaignId != null) localVarPathParams.Add("campaignId", this.Configuration.ApiClient.ParameterToString(campaignId));
+
+            // Query params
+            if (start != null) localVarQueryParams.Add(new Tuple<string, string>("start", this.Configuration.ApiClient.ParameterToString(start)));
+            if (end != null) localVarQueryParams.Add(new Tuple<string, string>("end", this.Configuration.ApiClient.ParameterToString(end)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDiagnosticsCampaignSummary: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetOutboundDiagnosticsCampaignSummary: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetOutboundDiagnosticsCampaignSummary: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CampaignDiagnosticSummary>(localVarStatusCode,
+                localVarHeaders,
+                (CampaignDiagnosticSummary) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CampaignDiagnosticSummary)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

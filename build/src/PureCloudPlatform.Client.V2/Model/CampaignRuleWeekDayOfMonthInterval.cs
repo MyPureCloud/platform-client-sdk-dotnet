@@ -18,14 +18,42 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class CampaignRuleWeekDayOfMonthInterval :  IEquatable<CampaignRuleWeekDayOfMonthInterval>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleWeekDayOfMonthInterval" /> class.
         /// </summary>
-        public CampaignRuleWeekDayOfMonthInterval()
+        [JsonConstructorAttribute]
+        protected CampaignRuleWeekDayOfMonthInterval() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CampaignRuleWeekDayOfMonthInterval" /> class.
+        /// </summary>
+        /// <param name="Min">The minimum value of the interval. Required for the \&quot;between\&quot; operator (required).</param>
+        /// <param name="Max">The maximum value of the interval. Required for the \&quot;between\&quot; operator (required).</param>
+        public CampaignRuleWeekDayOfMonthInterval(CampaignRuleWeekDayOfMonth Min = null, CampaignRuleWeekDayOfMonth Max = null)
         {
+            this.Min = Min;
+            this.Max = Max;
             
         }
         
+
+
+        /// <summary>
+        /// The minimum value of the interval. Required for the \&quot;between\&quot; operator
+        /// </summary>
+        /// <value>The minimum value of the interval. Required for the \&quot;between\&quot; operator</value>
+        [DataMember(Name="min", EmitDefaultValue=false)]
+        public CampaignRuleWeekDayOfMonth Min { get; set; }
+
+
+
+        /// <summary>
+        /// The maximum value of the interval. Required for the \&quot;between\&quot; operator
+        /// </summary>
+        /// <value>The maximum value of the interval. Required for the \&quot;between\&quot; operator</value>
+        [DataMember(Name="max", EmitDefaultValue=false)]
+        public CampaignRuleWeekDayOfMonth Max { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +64,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleWeekDayOfMonthInterval {\n");
 
+            sb.Append("  Min: ").Append(Min).Append("\n");
+            sb.Append("  Max: ").Append(Max).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +105,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.Min == other.Min ||
+                    this.Min != null &&
+                    this.Min.Equals(other.Min)
+                ) &&
+                (
+                    this.Max == other.Max ||
+                    this.Max != null &&
+                    this.Max.Equals(other.Max)
+                );
         }
 
         /// <summary>
@@ -89,6 +129,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Min != null)
+                    hash = hash * 59 + this.Min.GetHashCode();
+
+                if (this.Max != null)
+                    hash = hash * 59 + this.Max.GetHashCode();
+
                 return hash;
             }
         }

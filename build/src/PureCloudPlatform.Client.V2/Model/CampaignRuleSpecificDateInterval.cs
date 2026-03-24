@@ -21,11 +21,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleSpecificDateInterval" /> class.
         /// </summary>
-        public CampaignRuleSpecificDateInterval()
+        /// <param name="Min">The minimum value of the interval in yyyy-MM-dd format (if includeYear&#x3D;true) or in MM-dd format (if includeYear&#x3D;false). Required for the \&quot;between\&quot; operator.</param>
+        /// <param name="Max">The maximum value of the interval in yyyy-MM-dd format (if includeYear&#x3D;true) or in MM-dd format (if includeYear&#x3D;false). Required for the \&quot;between\&quot; operator.</param>
+        public CampaignRuleSpecificDateInterval(string Min = null, string Max = null)
         {
+            this.Min = Min;
+            this.Max = Max;
             
         }
         
+
+
+        /// <summary>
+        /// The minimum value of the interval in yyyy-MM-dd format (if includeYear&#x3D;true) or in MM-dd format (if includeYear&#x3D;false). Required for the \&quot;between\&quot; operator
+        /// </summary>
+        /// <value>The minimum value of the interval in yyyy-MM-dd format (if includeYear&#x3D;true) or in MM-dd format (if includeYear&#x3D;false). Required for the \&quot;between\&quot; operator</value>
+        [DataMember(Name="min", EmitDefaultValue=false)]
+        public string Min { get; set; }
+
+
+
+        /// <summary>
+        /// The maximum value of the interval in yyyy-MM-dd format (if includeYear&#x3D;true) or in MM-dd format (if includeYear&#x3D;false). Required for the \&quot;between\&quot; operator
+        /// </summary>
+        /// <value>The maximum value of the interval in yyyy-MM-dd format (if includeYear&#x3D;true) or in MM-dd format (if includeYear&#x3D;false). Required for the \&quot;between\&quot; operator</value>
+        [DataMember(Name="max", EmitDefaultValue=false)]
+        public string Max { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +58,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleSpecificDateInterval {\n");
 
+            sb.Append("  Min: ").Append(Min).Append("\n");
+            sb.Append("  Max: ").Append(Max).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +99,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.Min == other.Min ||
+                    this.Min != null &&
+                    this.Min.Equals(other.Min)
+                ) &&
+                (
+                    this.Max == other.Max ||
+                    this.Max != null &&
+                    this.Max.Equals(other.Max)
+                );
         }
 
         /// <summary>
@@ -89,6 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Min != null)
+                    hash = hash * 59 + this.Min.GetHashCode();
+
+                if (this.Max != null)
+                    hash = hash * 59 + this.Max.GetHashCode();
+
                 return hash;
             }
         }

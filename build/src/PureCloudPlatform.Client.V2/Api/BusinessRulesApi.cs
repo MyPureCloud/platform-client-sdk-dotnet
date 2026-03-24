@@ -71,7 +71,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -85,7 +85,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -417,7 +417,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -430,7 +430,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -553,7 +553,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -567,7 +567,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -663,7 +663,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Decision Table</param>
@@ -675,7 +675,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Decision Table</param>
@@ -737,7 +737,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Full update a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -752,7 +752,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Full update a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -849,7 +849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -863,7 +863,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Delete a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1195,7 +1195,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1208,7 +1208,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1331,7 +1331,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1345,7 +1345,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1441,7 +1441,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Decision Table</param>
@@ -1453,7 +1453,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create a decision table
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Decision Table</param>
@@ -1515,7 +1515,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Full update a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -1530,7 +1530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Full update a decision table row
         /// </summary>
         /// <remarks>
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -2086,7 +2086,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -2101,7 +2101,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -2198,7 +2198,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -2214,7 +2214,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Delete a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -4863,7 +4863,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a decision table 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -4878,7 +4878,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a decision table 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -4975,7 +4975,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a decision table 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -4991,7 +4991,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a decision table 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -6042,7 +6042,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -6058,7 +6058,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -6160,7 +6160,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -6177,7 +6177,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -6959,7 +6959,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a decision table 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Decision Table</param>
@@ -6973,7 +6973,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a decision table 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Decision Table</param>
@@ -7065,7 +7065,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a decision table 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Decision Table</param>
@@ -7080,7 +7080,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create a decision table 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Decision Table</param>
@@ -7607,7 +7607,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Full update a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7624,7 +7624,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Full update a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7731,7 +7731,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Full update a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>
@@ -7749,7 +7749,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Full update a decision table row 
-        /// 
+        /// Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tableId">Table ID</param>

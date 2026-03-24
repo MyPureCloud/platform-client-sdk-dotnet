@@ -121,13 +121,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ParkingStateRequest" /> class.
         /// </summary>
         /// <param name="State">State to set the participant. (required).</param>
-        public ParkingStateRequest(StateEnum? State = null)
+        /// <param name="ResumeTime">Timestamp for resume parked conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public ParkingStateRequest(StateEnum? State = null, DateTime? ResumeTime = null)
         {
             this.State = State;
+            this.ResumeTime = ResumeTime;
             
         }
         
 
+
+
+
+        /// <summary>
+        /// Timestamp for resume parked conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Timestamp for resume parked conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="resumeTime", EmitDefaultValue=false)]
+        public DateTime? ResumeTime { get; set; }
 
 
         /// <summary>
@@ -140,6 +151,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ParkingStateRequest {\n");
 
             sb.Append("  State: ").Append(State).Append("\n");
+            sb.Append("  ResumeTime: ").Append(ResumeTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -184,6 +196,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.State == other.State ||
                     this.State != null &&
                     this.State.Equals(other.State)
+                ) &&
+                (
+                    this.ResumeTime == other.ResumeTime ||
+                    this.ResumeTime != null &&
+                    this.ResumeTime.Equals(other.ResumeTime)
                 );
         }
 
@@ -200,6 +217,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.State != null)
                     hash = hash * 59 + this.State.GetHashCode();
+
+                if (this.ResumeTime != null)
+                    hash = hash * 59 + this.ResumeTime.GetHashCode();
 
                 return hash;
             }

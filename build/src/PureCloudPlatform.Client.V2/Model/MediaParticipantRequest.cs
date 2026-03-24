@@ -121,7 +121,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Confined">True to confine this conversation participant.  Should only be used for ad-hoc conferences.</param>
         /// <param name="Held">True to hold this conversation participant..</param>
         /// <param name="WrapupSkipped">True to skip wrap-up for this participant..</param>
-        public MediaParticipantRequest(WrapupInput Wrapup = null, StateEnum? State = null, bool? Recording = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? WrapupSkipped = null)
+        /// <param name="ResumeTime">Time to resume parked communication. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public MediaParticipantRequest(WrapupInput Wrapup = null, StateEnum? State = null, bool? Recording = null, bool? Muted = null, bool? Confined = null, bool? Held = null, bool? WrapupSkipped = null, DateTime? ResumeTime = null)
         {
             this.Wrapup = Wrapup;
             this.State = State;
@@ -130,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Confined = Confined;
             this.Held = Held;
             this.WrapupSkipped = WrapupSkipped;
+            this.ResumeTime = ResumeTime;
             
         }
         
@@ -190,6 +192,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? WrapupSkipped { get; set; }
 
 
+
+        /// <summary>
+        /// Time to resume parked communication. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Time to resume parked communication. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="resumeTime", EmitDefaultValue=false)]
+        public DateTime? ResumeTime { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -206,6 +217,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Confined: ").Append(Confined).Append("\n");
             sb.Append("  Held: ").Append(Held).Append("\n");
             sb.Append("  WrapupSkipped: ").Append(WrapupSkipped).Append("\n");
+            sb.Append("  ResumeTime: ").Append(ResumeTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -280,6 +292,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.WrapupSkipped == other.WrapupSkipped ||
                     this.WrapupSkipped != null &&
                     this.WrapupSkipped.Equals(other.WrapupSkipped)
+                ) &&
+                (
+                    this.ResumeTime == other.ResumeTime ||
+                    this.ResumeTime != null &&
+                    this.ResumeTime.Equals(other.ResumeTime)
                 );
         }
 
@@ -314,6 +331,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.WrapupSkipped != null)
                     hash = hash * 59 + this.WrapupSkipped.GetHashCode();
+
+                if (this.ResumeTime != null)
+                    hash = hash * 59 + this.ResumeTime.GetHashCode();
 
                 return hash;
             }

@@ -37,19 +37,7 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Outbound for "Outbound"
             /// </summary>
             [EnumMember(Value = "Outbound")]
-            Outbound,
-            
-            /// <summary>
-            /// Enum Inbound for "Inbound"
-            /// </summary>
-            [EnumMember(Value = "Inbound")]
-            Inbound,
-            
-            /// <summary>
-            /// Enum Integration for "Integration"
-            /// </summary>
-            [EnumMember(Value = "Integration")]
-            Integration
+            Outbound
         }
         /// <summary>
         /// The identifier of the external participant of the given conversation.

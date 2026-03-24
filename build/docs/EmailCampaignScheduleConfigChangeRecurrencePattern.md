@@ -10,8 +10,7 @@
 | **Interval** | **long?** | the amount of time in between occurrences | [optional] |
 | **DaysOfWeek** | **List&lt;string&gt;** | the day(s) of the week the occurrence happens | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-| **GetAdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

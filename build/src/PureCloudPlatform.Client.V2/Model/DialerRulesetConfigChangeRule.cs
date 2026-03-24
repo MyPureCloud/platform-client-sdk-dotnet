@@ -61,8 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Order">The ranked order of the rule; rules are processed from lowest number to highest.</param>
         /// <param name="Category">The category of the rule.</param>
         /// <param name="Actions">The list of rule actions to be taken if the conditions are true.</param>
-        /// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
-        public DialerRulesetConfigChangeRule(List<DialerRulesetConfigChangeCondition> Conditions = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, long? Order = null, CategoryEnum? Category = null, List<DialerRulesetConfigChangeAction> Actions = null, Dictionary<string, Object> GetAdditionalProperties = null)
+        public DialerRulesetConfigChangeRule(List<DialerRulesetConfigChangeCondition> Conditions = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, long? Order = null, CategoryEnum? Category = null, List<DialerRulesetConfigChangeAction> Actions = null)
         {
             this.Conditions = Conditions;
             this.AdditionalProperties = AdditionalProperties;
@@ -71,7 +70,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Order = Order;
             this.Category = Category;
             this.Actions = Actions;
-            this.GetAdditionalProperties = GetAdditionalProperties;
             
         }
         
@@ -131,14 +129,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<DialerRulesetConfigChangeAction> Actions { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets GetAdditionalProperties
-        /// </summary>
-        [DataMember(Name="getAdditionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> GetAdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -155,7 +145,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Order: ").Append(Order).Append("\n");
             sb.Append("  Category: ").Append(Category).Append("\n");
             sb.Append("  Actions: ").Append(Actions).Append("\n");
-            sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -230,11 +219,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Actions == other.Actions ||
                     this.Actions != null &&
                     this.Actions.SequenceEqual(other.Actions)
-                ) &&
-                (
-                    this.GetAdditionalProperties == other.GetAdditionalProperties ||
-                    this.GetAdditionalProperties != null &&
-                    this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
                 );
         }
 
@@ -269,9 +253,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Actions != null)
                     hash = hash * 59 + this.Actions.GetHashCode();
-
-                if (this.GetAdditionalProperties != null)
-                    hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
 
                 return hash;
             }

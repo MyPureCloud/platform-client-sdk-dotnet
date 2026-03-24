@@ -6,7 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **DayOfWeek** | **int?** | Day of week (1-7) | |
+| **Month** | **int?** | Month (1-12) | [optional] |
+| **Occurrence** | **int?** | Occurrence 1-4, -1 (last) | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

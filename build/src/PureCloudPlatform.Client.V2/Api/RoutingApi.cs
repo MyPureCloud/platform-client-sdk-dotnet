@@ -2185,7 +2185,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a phone number provisioned for SMS.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When no supported content profile is explicitly set on an MMS-capable phone number, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile using the PATCH endpoint.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -2198,7 +2198,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a phone number provisioned for SMS.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When no supported content profile is explicitly set on an MMS-capable phone number, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile using the PATCH endpoint.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -2211,7 +2211,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of provisioned phone numbers.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When no supported content profile is explicitly set, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
@@ -2234,7 +2234,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of provisioned phone numbers.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When no supported content profile is explicitly set, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
@@ -3095,7 +3095,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a phone number provisioned for SMS.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use this endpoint to assign a custom supported content profile to an MMS-capable phone number. If no supported content profile is set, the phone number uses the \"SMS Default\" profile, which allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To customize media filtering, provide a supported content profile ID in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -3108,7 +3108,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a phone number provisioned for SMS.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use this endpoint to assign a custom supported content profile to an MMS-capable phone number. If no supported content profile is set, the phone number uses the \"SMS Default\" profile, which allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To customize media filtering, provide a supported content profile ID in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -3859,7 +3859,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Provision a phone number for SMS
         /// </summary>
         /// <remarks>
-        /// 
+        /// When provisioning an MMS-capable phone number, if no supported content profile is specified in the request, the system automatically assigns the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To use custom media filtering, specify a supported content profile ID in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -3871,7 +3871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Provision a phone number for SMS
         /// </summary>
         /// <remarks>
-        /// 
+        /// When provisioning an MMS-capable phone number, if no supported content profile is specified in the request, the system automatically assigns the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To use custom media filtering, specify a supported content profile ID in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -6667,7 +6667,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a phone number provisioned for SMS.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When no supported content profile is explicitly set on an MMS-capable phone number, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile using the PATCH endpoint.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -6680,7 +6680,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a phone number provisioned for SMS.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When no supported content profile is explicitly set on an MMS-capable phone number, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile using the PATCH endpoint.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -6693,7 +6693,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of provisioned phone numbers.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When no supported content profile is explicitly set, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
@@ -6716,7 +6716,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get a list of provisioned phone numbers.
         /// </summary>
         /// <remarks>
-        /// 
+        /// When no supported content profile is explicitly set, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
@@ -7577,7 +7577,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a phone number provisioned for SMS.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use this endpoint to assign a custom supported content profile to an MMS-capable phone number. If no supported content profile is set, the phone number uses the \"SMS Default\" profile, which allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To customize media filtering, provide a supported content profile ID in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -7590,7 +7590,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update a phone number provisioned for SMS.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Use this endpoint to assign a custom supported content profile to an MMS-capable phone number. If no supported content profile is set, the phone number uses the \"SMS Default\" profile, which allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To customize media filtering, provide a supported content profile ID in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -8341,7 +8341,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Provision a phone number for SMS
         /// </summary>
         /// <remarks>
-        /// 
+        /// When provisioning an MMS-capable phone number, if no supported content profile is specified in the request, the system automatically assigns the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To use custom media filtering, specify a supported content profile ID in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -8353,7 +8353,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Provision a phone number for SMS
         /// </summary>
         /// <remarks>
-        /// 
+        /// When provisioning an MMS-capable phone number, if no supported content profile is specified in the request, the system automatically assigns the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To use custom media filtering, specify a supported content profile ID in the request body.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -26191,7 +26191,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a phone number provisioned for SMS. 
-        /// 
+        /// When no supported content profile is explicitly set on an MMS-capable phone number, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile using the PATCH endpoint.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -26206,7 +26206,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a phone number provisioned for SMS. 
-        /// 
+        /// When no supported content profile is explicitly set on an MMS-capable phone number, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile using the PATCH endpoint.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -26295,7 +26295,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a phone number provisioned for SMS. 
-        /// 
+        /// When no supported content profile is explicitly set on an MMS-capable phone number, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile using the PATCH endpoint.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -26311,7 +26311,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a phone number provisioned for SMS. 
-        /// 
+        /// When no supported content profile is explicitly set on an MMS-capable phone number, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile using the PATCH endpoint.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -26402,7 +26402,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of provisioned phone numbers. 
-        /// 
+        /// When no supported content profile is explicitly set, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
@@ -26427,7 +26427,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of provisioned phone numbers. 
-        /// 
+        /// When no supported content profile is explicitly set, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
@@ -26533,7 +26533,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of provisioned phone numbers. 
-        /// 
+        /// When no supported content profile is explicitly set, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
@@ -26559,7 +26559,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get a list of provisioned phone numbers. 
-        /// 
+        /// When no supported content profile is explicitly set, the system uses the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. The \"SMS Default\" profile does not have an ID and cannot be modified. To customize media filtering, create and assign a custom supported content profile.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumber">Filter on phone number address. Allowable characters are the digits &#39;0-9&#39; and the wild card character &#39;\\*&#39;. If just digits are present, a contains search is done on the address pattern. For example, &#39;317&#39; could be matched anywhere in the address. An &#39;\\*&#39; will match multiple digits. For example, to match a specific area code within the US a pattern like &#39;1317*&#39; could be used. (optional)</param>
@@ -33478,7 +33478,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a phone number provisioned for SMS. 
-        /// 
+        /// Use this endpoint to assign a custom supported content profile to an MMS-capable phone number. If no supported content profile is set, the phone number uses the \"SMS Default\" profile, which allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To customize media filtering, provide a supported content profile ID in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -33493,7 +33493,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a phone number provisioned for SMS. 
-        /// 
+        /// Use this endpoint to assign a custom supported content profile to an MMS-capable phone number. If no supported content profile is set, the phone number uses the \"SMS Default\" profile, which allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To customize media filtering, provide a supported content profile ID in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -33590,7 +33590,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a phone number provisioned for SMS. 
-        /// 
+        /// Use this endpoint to assign a custom supported content profile to an MMS-capable phone number. If no supported content profile is set, the phone number uses the \"SMS Default\" profile, which allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To customize media filtering, provide a supported content profile ID in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -33606,7 +33606,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update a phone number provisioned for SMS. 
-        /// 
+        /// Use this endpoint to assign a custom supported content profile to an MMS-capable phone number. If no supported content profile is set, the phone number uses the \"SMS Default\" profile, which allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To customize media filtering, provide a supported content profile ID in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="phoneNumberId">phone number</param>
@@ -40102,7 +40102,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Provision a phone number for SMS 
-        /// 
+        /// When provisioning an MMS-capable phone number, if no supported content profile is specified in the request, the system automatically assigns the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To use custom media filtering, specify a supported content profile ID in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -40116,7 +40116,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Provision a phone number for SMS 
-        /// 
+        /// When provisioning an MMS-capable phone number, if no supported content profile is specified in the request, the system automatically assigns the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To use custom media filtering, specify a supported content profile ID in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -40208,7 +40208,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Provision a phone number for SMS 
-        /// 
+        /// When provisioning an MMS-capable phone number, if no supported content profile is specified in the request, the system automatically assigns the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To use custom media filtering, specify a supported content profile ID in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>
@@ -40223,7 +40223,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Provision a phone number for SMS 
-        /// 
+        /// When provisioning an MMS-capable phone number, if no supported content profile is specified in the request, the system automatically assigns the \"SMS Default\" profile. This default profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. To use custom media filtering, specify a supported content profile ID in the request body.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">SmsPhoneNumber</param>

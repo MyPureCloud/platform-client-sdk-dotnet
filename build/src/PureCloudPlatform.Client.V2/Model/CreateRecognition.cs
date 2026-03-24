@@ -119,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="RecipientId">The recipient of the recognition (required).</param>
         /// <param name="Type">The type of the recognition (required).</param>
-        /// <param name="Title">The title of the recognition. Max length of 100 characters (optional).</param>
+        /// <param name="Title">The title of the recognition. Max length of 100 characters (required).</param>
         /// <param name="Note">The note of the recognition. Max length of 800 characters (optional).</param>
         /// <param name="ContextType">The context type (optional).</param>
         /// <param name="ContextId">The context id (optional).</param>
@@ -148,9 +148,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The title of the recognition. Max length of 100 characters (optional)
+        /// The title of the recognition. Max length of 100 characters
         /// </summary>
-        /// <value>The title of the recognition. Max length of 100 characters (optional)</value>
+        /// <value>The title of the recognition. Max length of 100 characters</value>
         [DataMember(Name="title", EmitDefaultValue=false)]
         public string Title { get; set; }
 

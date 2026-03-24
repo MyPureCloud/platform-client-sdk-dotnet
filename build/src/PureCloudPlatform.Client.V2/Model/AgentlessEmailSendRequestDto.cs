@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class AgentlessEmailSendRequestDto :  IEquatable<AgentlessEmailSendRequestDto>
     {
         /// <summary>
-        /// The direction of the message.
+        /// The type of email domain used to send the agentless message.
         /// </summary>
-        /// <value>The direction of the message.</value>
+        /// <value>The type of email domain used to send the agentless message.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum SenderTypeEnum
         {
@@ -37,24 +37,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Outbound for "Outbound"
             /// </summary>
             [EnumMember(Value = "Outbound")]
-            Outbound,
-            
-            /// <summary>
-            /// Enum Inbound for "Inbound"
-            /// </summary>
-            [EnumMember(Value = "Inbound")]
-            Inbound,
-            
-            /// <summary>
-            /// Enum Integration for "Integration"
-            /// </summary>
-            [EnumMember(Value = "Integration")]
-            Integration
+            Outbound
         }
         /// <summary>
-        /// The direction of the message.
+        /// The type of email domain used to send the agentless message.
         /// </summary>
-        /// <value>The direction of the message.</value>
+        /// <value>The type of email domain used to send the agentless message.</value>
         [DataMember(Name="senderType", EmitDefaultValue=false)]
         public SenderTypeEnum? SenderType { get; set; }
 
@@ -66,7 +54,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentlessEmailSendRequestDto" /> class.
         /// </summary>
-        /// <param name="SenderType">The direction of the message. (required).</param>
+        /// <param name="SenderType">The type of email domain used to send the agentless message. (required).</param>
         /// <param name="ConversationId">The identifier of the conversation. This must be an email interaction..</param>
         /// <param name="FromAddress">The sender of the message. (required).</param>
         /// <param name="ToAddresses">The recipient of the message. We currently support one recipient only. (required).</param>

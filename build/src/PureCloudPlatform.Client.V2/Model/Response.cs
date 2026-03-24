@@ -128,7 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessagingTemplate">An optional messaging template definition for responseType.MessagingTemplate..</param>
         /// <param name="Assets">Assets used in the response.</param>
         /// <param name="Footer">Footer template definition for responseType.Footer..</param>
-        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<AddressableEntityRef> Assets = null, FooterTemplate Footer = null)
+        public Response(string Name = null, int? Version = null, List<DomainEntityRef> Libraries = null, List<ResponseText> Texts = null, InteractionTypeEnum? InteractionType = null, List<ResponseSubstitution> Substitutions = null, JsonSchemaDocument SubstitutionsSchema = null, ResponseTypeEnum? ResponseType = null, MessagingTemplate MessagingTemplate = null, List<RmsAssetAddressableRef> Assets = null, FooterTemplate Footer = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -244,7 +244,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Assets used in the response</value>
         [DataMember(Name="assets", EmitDefaultValue=false)]
-        public List<AddressableEntityRef> Assets { get; set; }
+        public List<RmsAssetAddressableRef> Assets { get; set; }
 
 
 

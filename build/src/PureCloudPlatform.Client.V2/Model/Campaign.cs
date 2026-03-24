@@ -178,12 +178,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AgentOwnedColumn">Name of the contact list column containing the id of the agent who owns the record. Only applicable to preview campaigns..</param>
         /// <param name="DynamicContactQueueingSettings">Settings for dynamic queueing of contacts..</param>
         /// <param name="SkillColumns">The skill columns on the ContactList that this Campaign should take into account when dialing.</param>
+        /// <param name="PreviewAutoEnd">Option to enable preview auto end.</param>
         /// <param name="MaxCallsPerAgent">The maximum number of calls that can be placed per agent on this campaign.</param>
         /// <param name="MaxCallsPerAgentDecimal">The maximum number of calls that can be placed per agent on this campaign with decimal precision.</param>
         /// <param name="CallbackAutoAnswer">The option manages the auto-answer callback calls.</param>
         /// <param name="DynamicLineBalancingSettings">Dynamic line balancing settings.</param>
         /// <param name="DiagnosticsSettings">Campaign diagnostics settings.</param>
-        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, string AgentOwnedColumn = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, List<string> SkillColumns = null, int? MaxCallsPerAgent = null, double? MaxCallsPerAgentDecimal = null, bool? CallbackAutoAnswer = null, DynamicLineBalancingSettings DynamicLineBalancingSettings = null, DiagnosticsSettings DiagnosticsSettings = null)
+        public Campaign(string Name = null, int? Version = null, DomainEntityRef ContactList = null, DomainEntityRef Queue = null, DialingModeEnum? DialingMode = null, DomainEntityRef Script = null, DomainEntityRef EdgeGroup = null, DomainEntityRef Site = null, CampaignStatusEnum? CampaignStatus = null, List<PhoneColumn> PhoneColumns = null, double? AbandonRate = null, List<DomainEntityRef> DncLists = null, DomainEntityRef CallableTimeSet = null, DomainEntityRef CallAnalysisResponseSet = null, string CallerName = null, string CallerAddress = null, int? OutboundLineCount = null, List<DomainEntityRef> RuleSets = null, bool? SkipPreviewDisabled = null, long? PreviewTimeOutSeconds = null, bool? AlwaysRunning = null, ContactSort ContactSort = null, List<ContactSort> ContactSorts = null, int? NoAnswerTimeout = null, string CallAnalysisLanguage = null, int? Priority = null, List<DomainEntityRef> ContactListFilters = null, DomainEntityRef Division = null, string AgentOwnedColumn = null, DynamicContactQueueingSettings DynamicContactQueueingSettings = null, List<string> SkillColumns = null, bool? PreviewAutoEnd = null, int? MaxCallsPerAgent = null, double? MaxCallsPerAgentDecimal = null, bool? CallbackAutoAnswer = null, DynamicLineBalancingSettings DynamicLineBalancingSettings = null, DiagnosticsSettings DiagnosticsSettings = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -216,6 +217,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AgentOwnedColumn = AgentOwnedColumn;
             this.DynamicContactQueueingSettings = DynamicContactQueueingSettings;
             this.SkillColumns = SkillColumns;
+            this.PreviewAutoEnd = PreviewAutoEnd;
             this.MaxCallsPerAgent = MaxCallsPerAgent;
             this.MaxCallsPerAgentDecimal = MaxCallsPerAgentDecimal;
             this.CallbackAutoAnswer = CallbackAutoAnswer;
@@ -528,6 +530,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Option to enable preview auto end
+        /// </summary>
+        /// <value>Option to enable preview auto end</value>
+        [DataMember(Name="previewAutoEnd", EmitDefaultValue=false)]
+        public bool? PreviewAutoEnd { get; set; }
+
+
+
+        /// <summary>
         /// The maximum number of calls that can be placed per agent on this campaign
         /// </summary>
         /// <value>The maximum number of calls that can be placed per agent on this campaign</value>
@@ -624,6 +635,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AgentOwnedColumn: ").Append(AgentOwnedColumn).Append("\n");
             sb.Append("  DynamicContactQueueingSettings: ").Append(DynamicContactQueueingSettings).Append("\n");
             sb.Append("  SkillColumns: ").Append(SkillColumns).Append("\n");
+            sb.Append("  PreviewAutoEnd: ").Append(PreviewAutoEnd).Append("\n");
             sb.Append("  MaxCallsPerAgent: ").Append(MaxCallsPerAgent).Append("\n");
             sb.Append("  MaxCallsPerAgentDecimal: ").Append(MaxCallsPerAgentDecimal).Append("\n");
             sb.Append("  CallbackAutoAnswer: ").Append(CallbackAutoAnswer).Append("\n");
@@ -846,6 +858,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SkillColumns.SequenceEqual(other.SkillColumns)
                 ) &&
                 (
+                    this.PreviewAutoEnd == other.PreviewAutoEnd ||
+                    this.PreviewAutoEnd != null &&
+                    this.PreviewAutoEnd.Equals(other.PreviewAutoEnd)
+                ) &&
+                (
                     this.MaxCallsPerAgent == other.MaxCallsPerAgent ||
                     this.MaxCallsPerAgent != null &&
                     this.MaxCallsPerAgent.Equals(other.MaxCallsPerAgent)
@@ -992,6 +1009,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SkillColumns != null)
                     hash = hash * 59 + this.SkillColumns.GetHashCode();
+
+                if (this.PreviewAutoEnd != null)
+                    hash = hash * 59 + this.PreviewAutoEnd.GetHashCode();
 
                 if (this.MaxCallsPerAgent != null)
                     hash = hash * 59 + this.MaxCallsPerAgent.GetHashCode();

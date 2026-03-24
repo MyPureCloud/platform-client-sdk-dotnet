@@ -66,6 +66,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The minimum number of schema field title characters allowed.
+        /// </summary>
+        /// <value>The minimum number of schema field title characters allowed.</value>
+        [DataMember(Name="minFieldTitleCharacters", EmitDefaultValue=false)]
+        public int? MinFieldTitleCharacters { get; private set; }
+
+
+
+        /// <summary>
+        /// The maximum number of schema field title characters allowed.
+        /// </summary>
+        /// <value>The maximum number of schema field title characters allowed.</value>
+        [DataMember(Name="maxFieldTitleCharacters", EmitDefaultValue=false)]
+        public int? MaxFieldTitleCharacters { get; private set; }
+
+
+
+        /// <summary>
         /// The minimum number of schema field description characters allowed.
         /// </summary>
         /// <value>The minimum number of schema field description characters allowed.</value>
@@ -167,6 +185,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  MinFieldNameCharacters: ").Append(MinFieldNameCharacters).Append("\n");
             sb.Append("  MaxFieldNameCharacters: ").Append(MaxFieldNameCharacters).Append("\n");
+            sb.Append("  MinFieldTitleCharacters: ").Append(MinFieldTitleCharacters).Append("\n");
+            sb.Append("  MaxFieldTitleCharacters: ").Append(MaxFieldTitleCharacters).Append("\n");
             sb.Append("  MinFieldDescriptionCharacters: ").Append(MinFieldDescriptionCharacters).Append("\n");
             sb.Append("  MaxFieldDescriptionCharacters: ").Append(MaxFieldDescriptionCharacters).Append("\n");
             sb.Append("  MinSchemaNameCharacters: ").Append(MinSchemaNameCharacters).Append("\n");
@@ -236,6 +256,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MaxFieldNameCharacters == other.MaxFieldNameCharacters ||
                     this.MaxFieldNameCharacters != null &&
                     this.MaxFieldNameCharacters.Equals(other.MaxFieldNameCharacters)
+                ) &&
+                (
+                    this.MinFieldTitleCharacters == other.MinFieldTitleCharacters ||
+                    this.MinFieldTitleCharacters != null &&
+                    this.MinFieldTitleCharacters.Equals(other.MinFieldTitleCharacters)
+                ) &&
+                (
+                    this.MaxFieldTitleCharacters == other.MaxFieldTitleCharacters ||
+                    this.MaxFieldTitleCharacters != null &&
+                    this.MaxFieldTitleCharacters.Equals(other.MaxFieldTitleCharacters)
                 ) &&
                 (
                     this.MinFieldDescriptionCharacters == other.MinFieldDescriptionCharacters ||
@@ -311,6 +341,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MaxFieldNameCharacters != null)
                     hash = hash * 59 + this.MaxFieldNameCharacters.GetHashCode();
+
+                if (this.MinFieldTitleCharacters != null)
+                    hash = hash * 59 + this.MinFieldTitleCharacters.GetHashCode();
+
+                if (this.MaxFieldTitleCharacters != null)
+                    hash = hash * 59 + this.MaxFieldTitleCharacters.GetHashCode();
 
                 if (this.MinFieldDescriptionCharacters != null)
                     hash = hash * 59 + this.MinFieldDescriptionCharacters.GetHashCode();

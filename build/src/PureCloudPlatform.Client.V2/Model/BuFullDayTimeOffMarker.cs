@@ -26,7 +26,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description of the time off marker.</param>
         /// <param name="ActivityCodeId">The ID of the activity code associated with the time off marker.</param>
         /// <param name="Paid">Whether the time off marker is paid.</param>
-        /// <param name="PayableMinutes">Payable minutes for the time off marker.</param>
+        /// <param name="PayableMinutes">Payable minutes for the time off marker. Must not exceed lengthMinutes.</param>
         /// <param name="TimeOffRequestId">The ID of the time off request.</param>
         /// <param name="TimeOffRequestSyncVersion">The sync version of the full day time off request for which the scheduled activity is associated.</param>
         /// <param name="Delete">Set to &#39;true&#39; to delete this time off marker. Will always be null on responses, only has an effect on schedule update.</param>
@@ -92,9 +92,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Payable minutes for the time off marker
+        /// Payable minutes for the time off marker. Must not exceed lengthMinutes
         /// </summary>
-        /// <value>Payable minutes for the time off marker</value>
+        /// <value>Payable minutes for the time off marker. Must not exceed lengthMinutes</value>
         [DataMember(Name="payableMinutes", EmitDefaultValue=false)]
         public int? PayableMinutes { get; set; }
 

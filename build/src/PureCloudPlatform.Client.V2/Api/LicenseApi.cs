@@ -160,6 +160,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<string>> PostLicenseInferWithHttpInfo (List<string> body = null);
 
         /// <summary>
+        /// Get a list of licenses inferred based on a list of permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostLicenseInferPermissions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The permissions to use while inferring licenses (optional)</param>
+        /// <returns>List&lt;string&gt;</returns>
+        
+        List<string> PostLicenseInferPermissions (List<string> body = null);
+
+        /// <summary>
+        /// Get a list of licenses inferred based on a list of permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostLicenseInferPermissions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The permissions to use while inferring licenses (optional)</param>
+        /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
+        ApiResponse<List<string>> PostLicenseInferPermissionsWithHttpInfo (List<string> body = null);
+
+        /// <summary>
         /// Update the organization&#39;s license assignments in a batch.
         /// </summary>
         /// <remarks>
@@ -378,6 +404,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<List<string>>> PostLicenseInferAsyncWithHttpInfo (List<string> body = null);
+
+        /// <summary>
+        /// Get a list of licenses inferred based on a list of permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostLicenseInferPermissions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The permissions to use while inferring licenses (optional)</param>
+        /// <returns>Task of List&lt;string&gt;</returns>
+        
+        System.Threading.Tasks.Task<List<string>> PostLicenseInferPermissionsAsync (List<string> body = null);
+
+        /// <summary>
+        /// Get a list of licenses inferred based on a list of permissions
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostLicenseInferPermissions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The permissions to use while inferring licenses (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<List<string>>> PostLicenseInferPermissionsAsyncWithHttpInfo (List<string> body = null);
 
         /// <summary>
         /// Update the organization&#39;s license assignments in a batch.
@@ -1752,6 +1804,218 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostLicenseInfer: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostLicenseInfer: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<string>>(localVarStatusCode,
+                localVarHeaders,
+                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of licenses inferred based on a list of permissions 
+        /// 
+        /// PostLicenseInferPermissions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The permissions to use while inferring licenses (optional)</param>
+        /// <returns>List&lt;string&gt;</returns>
+        
+        public List<string> PostLicenseInferPermissions (List<string> body = null)
+        {
+             ApiResponse<List<string>> localVarResponse = PostLicenseInferPermissionsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of licenses inferred based on a list of permissions 
+        /// 
+        /// PostLicenseInferPermissions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The permissions to use while inferring licenses (optional)</param>
+        /// <returns>ApiResponse of List&lt;string&gt;</returns>
+        
+        public ApiResponse< List<string> > PostLicenseInferPermissionsWithHttpInfo (List<string> body = null)
+        { 
+
+            var localVarPath = "/api/v2/license/infer/permissions";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLicenseInferPermissions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostLicenseInferPermissions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLicenseInferPermissions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<List<string>>(localVarStatusCode,
+                localVarHeaders,
+                (List<string>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<string>)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of licenses inferred based on a list of permissions 
+        /// 
+        /// PostLicenseInferPermissions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The permissions to use while inferring licenses (optional)</param>
+        /// <returns>Task of List&lt;string&gt;</returns>
+        
+        public async System.Threading.Tasks.Task<List<string>> PostLicenseInferPermissionsAsync (List<string> body = null)
+        {
+             ApiResponse<List<string>> localVarResponse = await PostLicenseInferPermissionsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of licenses inferred based on a list of permissions 
+        /// 
+        /// PostLicenseInferPermissions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">The permissions to use while inferring licenses (optional)</param>
+        /// <returns>Task of ApiResponse (List&lt;string&gt;)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<List<string>>> PostLicenseInferPermissionsAsyncWithHttpInfo (List<string> body = null)
+        { 
+
+            var localVarPath = "/api/v2/license/infer/permissions";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostLicenseInferPermissions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostLicenseInferPermissions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostLicenseInferPermissions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<List<string>>(localVarStatusCode,
                 localVarHeaders,

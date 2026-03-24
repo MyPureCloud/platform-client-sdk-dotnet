@@ -144,6 +144,7 @@ namespace PureCloudPlatform.Client.V2.Client
               {"v2.speechandtextanalytics.programs.publishjobs.{id}", typeof(PublishProgramTopicsDefinitionsJob)},
               {"v2.speechandtextanalytics.programs.topiclinks.jobs.{id}", typeof(ProgramTopicLinksTopicsDefinitionsJob)},
               {"v2.speechandtextanalytics.reprocessing.jobs.{id}", typeof(V2ReprocessJobStateChangedTopicJobStateChanged)},
+              {"v2.speechandtextanalytics.topics.generatedphrases.jobs.{id}", typeof(GenAiPhrasesTopicsDefinitionsJob)},
               {"v2.speechandtextanalytics.topics.publishjobs.{id}", typeof(PublishTopicTopicsDefinitionsJob)},
               {"v2.speechandtextanalytics.topics.testphrase.jobs.{id}", typeof(TestTopicPhraseTopicsDefinitionsJob)},
               {"v2.subscription.updated", typeof(UpdatedTopicSystemMessage)},

@@ -12,6 +12,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetLicenseUser**](#GetLicenseUser) | **Get** /api/v2/license/users/{userId} | Get licenses for specified user. |
 | [**GetLicenseUsers**](#GetLicenseUsers) | **Get** /api/v2/license/users | Get a page of users and their licenses |
 | [**PostLicenseInfer**](#PostLicenseInfer) | **Post** /api/v2/license/infer | Get a list of licenses inferred based on a list of roleIds |
+| [**PostLicenseInferPermissions**](#PostLicenseInferPermissions) | **Post** /api/v2/license/infer/permissions | Get a list of licenses inferred based on a list of permissions |
 | [**PostLicenseOrganization**](#PostLicenseOrganization) | **Post** /api/v2/license/organization | Update the organization&#39;s license assignments in a batch. |
 | [**PostLicenseToggle**](#PostLicenseToggle) | **Post** /api/v2/license/toggles/{featureName} | Deprecated. No alternative required - this endpoint has no effect |
 | [**PostLicenseUsers**](#PostLicenseUsers) | **Post** /api/v2/license/users | Fetch user licenses in a batch. |
@@ -389,6 +390,71 @@ namespace Example
 **List<string>**
 
 
+## PostLicenseInferPermissions
+
+> **List&lt;string&gt;** PostLicenseInferPermissions (List<string> body = null)
+
+
+Get a list of licenses inferred based on a list of permissions
+
+PostLicenseInferPermissions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* authorization:grant:add
+* authorization:license:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostLicenseInferPermissionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new LicenseApi();
+            var body = new List<string>(); // List<string> | The permissions to use while inferring licenses (optional) 
+
+            try
+            { 
+                // Get a list of licenses inferred based on a list of permissions
+                List<string> result = apiInstance.PostLicenseInferPermissions(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling LicenseApi.PostLicenseInferPermissions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**List<string>**](string)| The permissions to use while inferring licenses | [optional]  |
+
+### Return type
+
+**List<string>**
+
+
 ## PostLicenseOrganization
 
 > [**List&lt;LicenseUpdateStatus&gt;**](LicenseUpdateStatus) PostLicenseOrganization (LicenseBatchAssignmentRequest body = null)
@@ -575,4 +641,4 @@ namespace Example
 **Dictionary<string, Object>**
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

@@ -28,7 +28,8 @@
 | **ConversationExternalOrganizationIds** | **List&lt;string&gt;** |  | [optional] |
 | **JourneyContext** | [**CustomerStartDetailEventTopicJourneyContext**](CustomerStartDetailEventTopicJourneyContext) |  | [optional] |
 | **DivisionId** | **string** |  | [optional] |
+| **UtilizationLabel** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

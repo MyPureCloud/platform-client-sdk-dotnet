@@ -21,11 +21,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleTimeOfDayParameters" /> class.
         /// </summary>
-        public CampaignRuleTimeOfDayParameters()
+        /// <param name="Interval">The operand for the \&quot;between\&quot; operator.</param>
+        /// <param name="ThresholdValue">Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS.</param>
+        public CampaignRuleTimeOfDayParameters(CampaignRuleTimeOfDayInterval Interval = null, string ThresholdValue = null)
         {
+            this.Interval = Interval;
+            this.ThresholdValue = ThresholdValue;
             
         }
         
+
+
+        /// <summary>
+        /// The operand for the \&quot;between\&quot; operator
+        /// </summary>
+        /// <value>The operand for the \&quot;between\&quot; operator</value>
+        [DataMember(Name="interval", EmitDefaultValue=false)]
+        public CampaignRuleTimeOfDayInterval Interval { get; set; }
+
+
+
+        /// <summary>
+        /// Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS
+        /// </summary>
+        /// <value>Time is represented as an ISO-8601 string without a timezone. For example: HH:mm:ss.SSS</value>
+        [DataMember(Name="thresholdValue", EmitDefaultValue=false)]
+        public string ThresholdValue { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +58,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleTimeOfDayParameters {\n");
 
+            sb.Append("  Interval: ").Append(Interval).Append("\n");
+            sb.Append("  ThresholdValue: ").Append(ThresholdValue).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +99,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.Interval == other.Interval ||
+                    this.Interval != null &&
+                    this.Interval.Equals(other.Interval)
+                ) &&
+                (
+                    this.ThresholdValue == other.ThresholdValue ||
+                    this.ThresholdValue != null &&
+                    this.ThresholdValue.Equals(other.ThresholdValue)
+                );
         }
 
         /// <summary>
@@ -89,6 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.Interval != null)
+                    hash = hash * 59 + this.Interval.GetHashCode();
+
+                if (this.ThresholdValue != null)
+                    hash = hash * 59 + this.ThresholdValue.GetHashCode();
+
                 return hash;
             }
         }

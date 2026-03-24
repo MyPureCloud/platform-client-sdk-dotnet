@@ -64,8 +64,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Creation time of the entity.</param>
         /// <param name="DateModified">Last modified time of the entity.</param>
         /// <param name="Version">Required for updates, must match the version number of the most recent update.</param>
-        /// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
-        public DialerContactlistfilterConfigChangeContactListFilter(DialerContactlistfilterConfigChangeUriReference ContactList = null, List<string> ContactListColumns = null, List<DialerContactlistfilterConfigChangeFilterClause> Clauses = null, FilterTypeEnum? FilterType = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, long? Version = null, Dictionary<string, Object> GetAdditionalProperties = null)
+        public DialerContactlistfilterConfigChangeContactListFilter(DialerContactlistfilterConfigChangeUriReference ContactList = null, List<string> ContactListColumns = null, List<DialerContactlistfilterConfigChangeFilterClause> Clauses = null, FilterTypeEnum? FilterType = null, Dictionary<string, Object> AdditionalProperties = null, string Id = null, string Name = null, DateTime? DateCreated = null, DateTime? DateModified = null, long? Version = null)
         {
             this.ContactList = ContactList;
             this.ContactListColumns = ContactListColumns;
@@ -77,7 +76,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.Version = Version;
-            this.GetAdditionalProperties = GetAdditionalProperties;
             
         }
         
@@ -162,14 +160,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public long? Version { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets GetAdditionalProperties
-        /// </summary>
-        [DataMember(Name="getAdditionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> GetAdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -189,7 +179,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Version: ").Append(Version).Append("\n");
-            sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -279,11 +268,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Version == other.Version ||
                     this.Version != null &&
                     this.Version.Equals(other.Version)
-                ) &&
-                (
-                    this.GetAdditionalProperties == other.GetAdditionalProperties ||
-                    this.GetAdditionalProperties != null &&
-                    this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
                 );
         }
 
@@ -327,9 +311,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Version != null)
                     hash = hash * 59 + this.Version.GetHashCode();
-
-                if (this.GetAdditionalProperties != null)
-                    hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
 
                 return hash;
             }

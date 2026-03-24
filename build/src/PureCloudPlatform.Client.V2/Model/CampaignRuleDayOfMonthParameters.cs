@@ -21,11 +21,44 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleDayOfMonthParameters" /> class.
         /// </summary>
-        public CampaignRuleDayOfMonthParameters()
+        /// <param name="ThresholdValue">The operand for the \&quot;before\&quot; and \&quot;after\&quot; operators, can be either exact day (1-31) or \&quot;LAST_DAY\&quot;.</param>
+        /// <param name="InSet">The operand for the \&quot;in\&quot; operator, each element can be either exact day (1,31) or \&quot;LAST_DAY\&quot;, \&quot;EVEN_DAY\&quot;, \&quot;ODD_DAY\&quot;.</param>
+        /// <param name="Interval">The interval operand for the \&quot;between\&quot; operator.</param>
+        public CampaignRuleDayOfMonthParameters(string ThresholdValue = null, List<string> InSet = null, CampaignRuleDayOfMonthInterval Interval = null)
         {
+            this.ThresholdValue = ThresholdValue;
+            this.InSet = InSet;
+            this.Interval = Interval;
             
         }
         
+
+
+        /// <summary>
+        /// The operand for the \&quot;before\&quot; and \&quot;after\&quot; operators, can be either exact day (1-31) or \&quot;LAST_DAY\&quot;
+        /// </summary>
+        /// <value>The operand for the \&quot;before\&quot; and \&quot;after\&quot; operators, can be either exact day (1-31) or \&quot;LAST_DAY\&quot;</value>
+        [DataMember(Name="thresholdValue", EmitDefaultValue=false)]
+        public string ThresholdValue { get; set; }
+
+
+
+        /// <summary>
+        /// The operand for the \&quot;in\&quot; operator, each element can be either exact day (1,31) or \&quot;LAST_DAY\&quot;, \&quot;EVEN_DAY\&quot;, \&quot;ODD_DAY\&quot;
+        /// </summary>
+        /// <value>The operand for the \&quot;in\&quot; operator, each element can be either exact day (1,31) or \&quot;LAST_DAY\&quot;, \&quot;EVEN_DAY\&quot;, \&quot;ODD_DAY\&quot;</value>
+        [DataMember(Name="inSet", EmitDefaultValue=false)]
+        public List<string> InSet { get; set; }
+
+
+
+        /// <summary>
+        /// The interval operand for the \&quot;between\&quot; operator
+        /// </summary>
+        /// <value>The interval operand for the \&quot;between\&quot; operator</value>
+        [DataMember(Name="interval", EmitDefaultValue=false)]
+        public CampaignRuleDayOfMonthInterval Interval { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +69,9 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleDayOfMonthParameters {\n");
 
+            sb.Append("  ThresholdValue: ").Append(ThresholdValue).Append("\n");
+            sb.Append("  InSet: ").Append(InSet).Append("\n");
+            sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +111,22 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.ThresholdValue == other.ThresholdValue ||
+                    this.ThresholdValue != null &&
+                    this.ThresholdValue.Equals(other.ThresholdValue)
+                ) &&
+                (
+                    this.InSet == other.InSet ||
+                    this.InSet != null &&
+                    this.InSet.SequenceEqual(other.InSet)
+                ) &&
+                (
+                    this.Interval == other.Interval ||
+                    this.Interval != null &&
+                    this.Interval.Equals(other.Interval)
+                );
         }
 
         /// <summary>
@@ -89,6 +140,15 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.ThresholdValue != null)
+                    hash = hash * 59 + this.ThresholdValue.GetHashCode();
+
+                if (this.InSet != null)
+                    hash = hash * 59 + this.InSet.GetHashCode();
+
+                if (this.Interval != null)
+                    hash = hash * 59 + this.Interval.GetHashCode();
+
                 return hash;
             }
         }

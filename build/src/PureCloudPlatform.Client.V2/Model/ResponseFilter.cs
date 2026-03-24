@@ -49,7 +49,25 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Notequals for "NOTEQUALS"
             /// </summary>
             [EnumMember(Value = "NOTEQUALS")]
-            Notequals
+            Notequals,
+            
+            /// <summary>
+            /// Enum BeginsWith for "BEGINS_WITH"
+            /// </summary>
+            [EnumMember(Value = "BEGINS_WITH")]
+            BeginsWith,
+            
+            /// <summary>
+            /// Enum EndsWith for "ENDS_WITH"
+            /// </summary>
+            [EnumMember(Value = "ENDS_WITH")]
+            EndsWith,
+            
+            /// <summary>
+            /// Enum Contains for "CONTAINS"
+            /// </summary>
+            [EnumMember(Value = "CONTAINS")]
+            Contains
         }
         /// <summary>
         /// Filter operation: IN, EQUALS, NOTEQUALS.

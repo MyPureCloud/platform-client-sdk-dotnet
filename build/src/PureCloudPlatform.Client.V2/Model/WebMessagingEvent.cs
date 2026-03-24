@@ -43,7 +43,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Presence for "Presence"
             /// </summary>
             [EnumMember(Value = "Presence")]
-            Presence
+            Presence,
+            
+            /// <summary>
+            /// Enum Video for "Video"
+            /// </summary>
+            [EnumMember(Value = "Video")]
+            Video
         }
         /// <summary>
         /// Type of this event element
@@ -63,11 +69,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EventType">Type of this event element (required).</param>
         /// <param name="CoBrowse">Cobrowse event..</param>
         /// <param name="Presence">Presence event..</param>
-        public WebMessagingEvent(EventTypeEnum? EventType = null, WebMessagingEventCoBrowse CoBrowse = null, WebMessagingEventPresence Presence = null)
+        /// <param name="Video">Video event..</param>
+        public WebMessagingEvent(EventTypeEnum? EventType = null, WebMessagingEventCoBrowse CoBrowse = null, WebMessagingEventPresence Presence = null, WebMessagingEventVideo Video = null)
         {
             this.EventType = EventType;
             this.CoBrowse = CoBrowse;
             this.Presence = Presence;
+            this.Video = Video;
             
         }
         
@@ -92,6 +100,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public WebMessagingEventPresence Presence { get; set; }
 
 
+
+        /// <summary>
+        /// Video event.
+        /// </summary>
+        /// <value>Video event.</value>
+        [DataMember(Name="video", EmitDefaultValue=false)]
+        public WebMessagingEventVideo Video { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -104,6 +121,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EventType: ").Append(EventType).Append("\n");
             sb.Append("  CoBrowse: ").Append(CoBrowse).Append("\n");
             sb.Append("  Presence: ").Append(Presence).Append("\n");
+            sb.Append("  Video: ").Append(Video).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -158,6 +176,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Presence == other.Presence ||
                     this.Presence != null &&
                     this.Presence.Equals(other.Presence)
+                ) &&
+                (
+                    this.Video == other.Video ||
+                    this.Video != null &&
+                    this.Video.Equals(other.Video)
                 );
         }
 
@@ -180,6 +203,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Presence != null)
                     hash = hash * 59 + this.Presence.GetHashCode();
+
+                if (this.Video != null)
+                    hash = hash * 59 + this.Video.GetHashCode();
 
                 return hash;
             }

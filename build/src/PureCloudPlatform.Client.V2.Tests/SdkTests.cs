@@ -122,7 +122,7 @@ namespace PureCloudPlatform.Client.V2.Tests
             {
                 Name = userName,
                 Email = userEmail,
-                Password = Guid.NewGuid() + "!@#$1234asdfASDF"
+                Password = Guid.NewGuid() + "!@#$!@#$&?&?123412345656asdfasdfghghASDFASDFGHGH"
             };
 
             ApiResponse<User> user = usersApi.PostUsersWithHttpInfo(newUser);
@@ -458,7 +458,7 @@ namespace PureCloudPlatform.Client.V2.Tests
             {
                 Name = userName,
                 Email = userEmail,
-                Password = Guid.NewGuid() + "!@#$1234asdfASDF"
+                Password = Guid.NewGuid() + "!@#$!@#$&?&?123412345656asdfasdfghghASDFASDFGHGH"
             };
 
             ApiResponse<User> user = usersApi.PostUsersWithHttpInfo(newUser);

@@ -159,6 +159,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Substatus">Substatus.</param>
         /// <param name="PartialDayStartDateTimes">PartialDayStartDateTimes.</param>
         /// <param name="FullDayManagementUnitDates">FullDayManagementUnitDates.</param>
+        /// <param name="FullDayEarliestStartOffsetMinutes">FullDayEarliestStartOffsetMinutes.</param>
+        /// <param name="FullDayLatestEndOffsetMinutes">FullDayLatestEndOffsetMinutes.</param>
         /// <param name="DailyDurationMinutes">DailyDurationMinutes.</param>
         /// <param name="DurationMinutes">DurationMinutes.</param>
         /// <param name="PayableMinutes">PayableMinutes.</param>
@@ -169,7 +171,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SubmittedBy">SubmittedBy.</param>
         /// <param name="ModifiedDate">ModifiedDate.</param>
         /// <param name="ModifiedBy">ModifiedBy.</param>
-        public WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate(string Id = null, WfmTimeOffRequestUpdateTopicUserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, long? DailyDurationMinutes = null, List<long?> DurationMinutes = null, List<long?> PayableMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
+        public WfmTimeOffRequestUpdateTopicTimeOffRequestUpdate(string Id = null, WfmTimeOffRequestUpdateTopicUserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<string> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, List<long?> FullDayEarliestStartOffsetMinutes = null, List<long?> FullDayLatestEndOffsetMinutes = null, long? DailyDurationMinutes = null, List<long?> DurationMinutes = null, List<long?> PayableMinutes = null, string Notes = null, string ReviewedDate = null, string ReviewedBy = null, string SubmittedDate = null, string SubmittedBy = null, string ModifiedDate = null, string ModifiedBy = null)
         {
             this.Id = Id;
             this.User = User;
@@ -181,6 +183,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Substatus = Substatus;
             this.PartialDayStartDateTimes = PartialDayStartDateTimes;
             this.FullDayManagementUnitDates = FullDayManagementUnitDates;
+            this.FullDayEarliestStartOffsetMinutes = FullDayEarliestStartOffsetMinutes;
+            this.FullDayLatestEndOffsetMinutes = FullDayLatestEndOffsetMinutes;
             this.DailyDurationMinutes = DailyDurationMinutes;
             this.DurationMinutes = DurationMinutes;
             this.PayableMinutes = PayableMinutes;
@@ -261,6 +265,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="fullDayManagementUnitDates", EmitDefaultValue=false)]
         public List<string> FullDayManagementUnitDates { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets FullDayEarliestStartOffsetMinutes
+        /// </summary>
+        [DataMember(Name="fullDayEarliestStartOffsetMinutes", EmitDefaultValue=false)]
+        public List<long?> FullDayEarliestStartOffsetMinutes { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets FullDayLatestEndOffsetMinutes
+        /// </summary>
+        [DataMember(Name="fullDayLatestEndOffsetMinutes", EmitDefaultValue=false)]
+        public List<long?> FullDayLatestEndOffsetMinutes { get; set; }
 
 
 
@@ -362,6 +382,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Substatus: ").Append(Substatus).Append("\n");
             sb.Append("  PartialDayStartDateTimes: ").Append(PartialDayStartDateTimes).Append("\n");
             sb.Append("  FullDayManagementUnitDates: ").Append(FullDayManagementUnitDates).Append("\n");
+            sb.Append("  FullDayEarliestStartOffsetMinutes: ").Append(FullDayEarliestStartOffsetMinutes).Append("\n");
+            sb.Append("  FullDayLatestEndOffsetMinutes: ").Append(FullDayLatestEndOffsetMinutes).Append("\n");
             sb.Append("  DailyDurationMinutes: ").Append(DailyDurationMinutes).Append("\n");
             sb.Append("  DurationMinutes: ").Append(DurationMinutes).Append("\n");
             sb.Append("  PayableMinutes: ").Append(PayableMinutes).Append("\n");
@@ -463,6 +485,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FullDayManagementUnitDates.SequenceEqual(other.FullDayManagementUnitDates)
                 ) &&
                 (
+                    this.FullDayEarliestStartOffsetMinutes == other.FullDayEarliestStartOffsetMinutes ||
+                    this.FullDayEarliestStartOffsetMinutes != null &&
+                    this.FullDayEarliestStartOffsetMinutes.SequenceEqual(other.FullDayEarliestStartOffsetMinutes)
+                ) &&
+                (
+                    this.FullDayLatestEndOffsetMinutes == other.FullDayLatestEndOffsetMinutes ||
+                    this.FullDayLatestEndOffsetMinutes != null &&
+                    this.FullDayLatestEndOffsetMinutes.SequenceEqual(other.FullDayLatestEndOffsetMinutes)
+                ) &&
+                (
                     this.DailyDurationMinutes == other.DailyDurationMinutes ||
                     this.DailyDurationMinutes != null &&
                     this.DailyDurationMinutes.Equals(other.DailyDurationMinutes)
@@ -554,6 +586,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FullDayManagementUnitDates != null)
                     hash = hash * 59 + this.FullDayManagementUnitDates.GetHashCode();
+
+                if (this.FullDayEarliestStartOffsetMinutes != null)
+                    hash = hash * 59 + this.FullDayEarliestStartOffsetMinutes.GetHashCode();
+
+                if (this.FullDayLatestEndOffsetMinutes != null)
+                    hash = hash * 59 + this.FullDayLatestEndOffsetMinutes.GetHashCode();
 
                 if (this.DailyDurationMinutes != null)
                     hash = hash * 59 + this.DailyDurationMinutes.GetHashCode();

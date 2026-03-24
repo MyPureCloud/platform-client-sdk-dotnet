@@ -250,7 +250,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SupportsVoice">Set to true if this phone number has the capability to support voice.</param>
         /// <param name="Integration">The Genesys Cloud integration this phone number belongs to..</param>
         /// <param name="Compliance">Compliance configuration for short codes, including help, stop and opt in..</param>
-        /// <param name="SupportedContent">Defines the media SupportedContent profile configured for an MMS capable phone number..</param>
+        /// <param name="SupportedContent">Defines the media SupportedContent profile configured for an MMS capable phone number. If no custom profile is assigned, the phone number uses the system&#39;s \&quot;SMS Default\&quot; profile. The \&quot;SMS Default\&quot; profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. When the \&quot;SMS Default\&quot; profile is in use, this field will contain the profile name and media types, but will not have an &#39;id&#39; or &#39;selfUri&#39; field. To customize media filtering, assign a custom supported content profile using the PATCH endpoint..</param>
         public SmsPhoneNumber(string Name = null, string PhoneNumber = null, bool? ProvisionedThroughPureCloud = null, PhoneNumberStatusEnum? PhoneNumberStatus = null, string CountryCode = null, DateTime? DateCreated = null, DateTime? DateModified = null, User CreatedBy = null, User ModifiedBy = null, int? Version = null, DateTime? PurchaseDate = null, DateTime? CancellationDate = null, DateTime? RenewalDate = null, AutoRenewableEnum? AutoRenewable = null, SmsAddress AddressId = null, ShortCodeBillingTypeEnum? ShortCodeBillingType = null, SmsProvisioningStatus ProvisioningStatus = null, string Country = null, bool? SupportsSms = null, bool? SupportsMms = null, bool? SupportsVoice = null, DomainEntityRef Integration = null, Compliance Compliance = null, SupportedContentReference SupportedContent = null)
         {
             this.Name = Name;
@@ -488,9 +488,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Defines the media SupportedContent profile configured for an MMS capable phone number.
+        /// Defines the media SupportedContent profile configured for an MMS capable phone number. If no custom profile is assigned, the phone number uses the system&#39;s \&quot;SMS Default\&quot; profile. The \&quot;SMS Default\&quot; profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. When the \&quot;SMS Default\&quot; profile is in use, this field will contain the profile name and media types, but will not have an &#39;id&#39; or &#39;selfUri&#39; field. To customize media filtering, assign a custom supported content profile using the PATCH endpoint.
         /// </summary>
-        /// <value>Defines the media SupportedContent profile configured for an MMS capable phone number.</value>
+        /// <value>Defines the media SupportedContent profile configured for an MMS capable phone number. If no custom profile is assigned, the phone number uses the system&#39;s \&quot;SMS Default\&quot; profile. The \&quot;SMS Default\&quot; profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. When the \&quot;SMS Default\&quot; profile is in use, this field will contain the profile name and media types, but will not have an &#39;id&#39; or &#39;selfUri&#39; field. To customize media filtering, assign a custom supported content profile using the PATCH endpoint.</value>
         [DataMember(Name="supportedContent", EmitDefaultValue=false)]
         public SupportedContentReference SupportedContent { get; set; }
 

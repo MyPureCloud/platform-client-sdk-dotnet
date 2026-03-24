@@ -195,6 +195,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Emailroute,
             
             /// <summary>
+            /// Enum Emailsendflow for "EMAILSENDFLOW"
+            /// </summary>
+            [EnumMember(Value = "EMAILSENDFLOW")]
+            Emailsendflow,
+            
+            /// <summary>
             /// Enum Emergencygroup for "EMERGENCYGROUP"
             /// </summary>
             [EnumMember(Value = "EMERGENCYGROUP")]

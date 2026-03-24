@@ -19,13 +19,62 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class CampaignRuleCampaignWaitTimeSettings :  IEquatable<CampaignRuleCampaignWaitTimeSettings>
     {
         /// <summary>
+        /// Campaign wait type
+        /// </summary>
+        /// <value>Campaign wait type</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum WaitTypeEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Waitingforagents for "WaitingForAgents"
+            /// </summary>
+            [EnumMember(Value = "WaitingForAgents")]
+            Waitingforagents,
+            
+            /// <summary>
+            /// Enum Waitingforcontacts for "WaitingForContacts"
+            /// </summary>
+            [EnumMember(Value = "WaitingForContacts")]
+            Waitingforcontacts,
+            
+            /// <summary>
+            /// Enum Waitingforlines for "WaitingForLines"
+            /// </summary>
+            [EnumMember(Value = "WaitingForLines")]
+            Waitingforlines
+        }
+        /// <summary>
+        /// Campaign wait type
+        /// </summary>
+        /// <value>Campaign wait type</value>
+        [DataMember(Name="waitType", EmitDefaultValue=false)]
+        public WaitTypeEnum? WaitType { get; set; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleCampaignWaitTimeSettings" /> class.
         /// </summary>
-        public CampaignRuleCampaignWaitTimeSettings()
+        [JsonConstructorAttribute]
+        protected CampaignRuleCampaignWaitTimeSettings() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CampaignRuleCampaignWaitTimeSettings" /> class.
+        /// </summary>
+        /// <param name="WaitType">Campaign wait type (required).</param>
+        public CampaignRuleCampaignWaitTimeSettings(WaitTypeEnum? WaitType = null)
         {
+            this.WaitType = WaitType;
             
         }
         
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +85,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleCampaignWaitTimeSettings {\n");
 
+            sb.Append("  WaitType: ").Append(WaitType).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +125,12 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.WaitType == other.WaitType ||
+                    this.WaitType != null &&
+                    this.WaitType.Equals(other.WaitType)
+                );
         }
 
         /// <summary>
@@ -89,6 +144,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.WaitType != null)
+                    hash = hash * 59 + this.WaitType.GetHashCode();
+
                 return hash;
             }
         }

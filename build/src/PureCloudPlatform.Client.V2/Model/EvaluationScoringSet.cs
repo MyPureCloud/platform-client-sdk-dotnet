@@ -23,6 +23,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="TotalScore">Score of all questions.</param>
         /// <param name="TotalCriticalScore">Score of only the critical questions.</param>
+        /// <param name="MaxTotalRawCriticalScore">Maximum total raw score for the critical questions. Raw score is the actual point values before applying weights or percentages..</param>
+        /// <param name="MaxTotalRawScore">Maximum total raw score for all questions. Raw score is the actual point values before applying weights or percentages..</param>
         /// <param name="TotalNonCriticalScore">Score of only the non-critical questions.</param>
         /// <param name="QuestionGroupScores">QuestionGroupScores.</param>
         /// <param name="AnyFailedKillQuestions">Indicates that at least one fatal question was answered without having the highest score available for the question.</param>
@@ -30,10 +32,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PrivateComments">Overall private comments from the evaluator.</param>
         /// <param name="AgentComments">Comments from the agent while reviewing evaluation results.</param>
         /// <param name="TranscriptTopics">List of topics found within the conversation&#39;s transcripts.</param>
-        public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, float? TotalNonCriticalScore = null, List<EvaluationQuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string PrivateComments = null, string AgentComments = null, List<TranscriptTopic> TranscriptTopics = null)
+        public EvaluationScoringSet(float? TotalScore = null, float? TotalCriticalScore = null, float? MaxTotalRawCriticalScore = null, float? MaxTotalRawScore = null, float? TotalNonCriticalScore = null, List<EvaluationQuestionGroupScore> QuestionGroupScores = null, bool? AnyFailedKillQuestions = null, string Comments = null, string PrivateComments = null, string AgentComments = null, List<TranscriptTopic> TranscriptTopics = null)
         {
             this.TotalScore = TotalScore;
             this.TotalCriticalScore = TotalCriticalScore;
+            this.MaxTotalRawCriticalScore = MaxTotalRawCriticalScore;
+            this.MaxTotalRawScore = MaxTotalRawScore;
             this.TotalNonCriticalScore = TotalNonCriticalScore;
             this.QuestionGroupScores = QuestionGroupScores;
             this.AnyFailedKillQuestions = AnyFailedKillQuestions;
@@ -61,6 +65,24 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Score of only the critical questions</value>
         [DataMember(Name="totalCriticalScore", EmitDefaultValue=false)]
         public float? TotalCriticalScore { get; set; }
+
+
+
+        /// <summary>
+        /// Maximum total raw score for the critical questions. Raw score is the actual point values before applying weights or percentages.
+        /// </summary>
+        /// <value>Maximum total raw score for the critical questions. Raw score is the actual point values before applying weights or percentages.</value>
+        [DataMember(Name="maxTotalRawCriticalScore", EmitDefaultValue=false)]
+        public float? MaxTotalRawCriticalScore { get; set; }
+
+
+
+        /// <summary>
+        /// Maximum total raw score for all questions. Raw score is the actual point values before applying weights or percentages.
+        /// </summary>
+        /// <value>Maximum total raw score for all questions. Raw score is the actual point values before applying weights or percentages.</value>
+        [DataMember(Name="maxTotalRawScore", EmitDefaultValue=false)]
+        public float? MaxTotalRawScore { get; set; }
 
 
 
@@ -136,6 +158,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  TotalScore: ").Append(TotalScore).Append("\n");
             sb.Append("  TotalCriticalScore: ").Append(TotalCriticalScore).Append("\n");
+            sb.Append("  MaxTotalRawCriticalScore: ").Append(MaxTotalRawCriticalScore).Append("\n");
+            sb.Append("  MaxTotalRawScore: ").Append(MaxTotalRawScore).Append("\n");
             sb.Append("  TotalNonCriticalScore: ").Append(TotalNonCriticalScore).Append("\n");
             sb.Append("  QuestionGroupScores: ").Append(QuestionGroupScores).Append("\n");
             sb.Append("  AnyFailedKillQuestions: ").Append(AnyFailedKillQuestions).Append("\n");
@@ -194,6 +218,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.TotalCriticalScore.Equals(other.TotalCriticalScore)
                 ) &&
                 (
+                    this.MaxTotalRawCriticalScore == other.MaxTotalRawCriticalScore ||
+                    this.MaxTotalRawCriticalScore != null &&
+                    this.MaxTotalRawCriticalScore.Equals(other.MaxTotalRawCriticalScore)
+                ) &&
+                (
+                    this.MaxTotalRawScore == other.MaxTotalRawScore ||
+                    this.MaxTotalRawScore != null &&
+                    this.MaxTotalRawScore.Equals(other.MaxTotalRawScore)
+                ) &&
+                (
                     this.TotalNonCriticalScore == other.TotalNonCriticalScore ||
                     this.TotalNonCriticalScore != null &&
                     this.TotalNonCriticalScore.Equals(other.TotalNonCriticalScore)
@@ -246,6 +280,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.TotalCriticalScore != null)
                     hash = hash * 59 + this.TotalCriticalScore.GetHashCode();
+
+                if (this.MaxTotalRawCriticalScore != null)
+                    hash = hash * 59 + this.MaxTotalRawCriticalScore.GetHashCode();
+
+                if (this.MaxTotalRawScore != null)
+                    hash = hash * 59 + this.MaxTotalRawScore.GetHashCode();
 
                 if (this.TotalNonCriticalScore != null)
                     hash = hash * 59 + this.TotalNonCriticalScore.GetHashCode();

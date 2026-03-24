@@ -147,11 +147,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Id">Id.</param>
         /// <param name="Parameters">The parameters for the CampaignRuleCondition. (required).</param>
         /// <param name="ConditionType">The type of condition to evaluate. (required).</param>
-        public CampaignRuleCondition(string Id = null, CampaignRuleParameters Parameters = null, ConditionTypeEnum? ConditionType = null)
+        /// <param name="DateTimeParameters">Parameters for conditions (timeOfDay, dayOfWeek, dayOfMonth, weekDayOfMonth and specificDate).</param>
+        /// <param name="CampaignRunTimeSettings">Settings for campaignRunTime conditions.</param>
+        /// <param name="CampaignWaitTimeSettings">Settings for campaignWaitTime conditions.</param>
+        public CampaignRuleCondition(string Id = null, CampaignRuleParameters Parameters = null, ConditionTypeEnum? ConditionType = null, CampaignRuleDateTimeConditionParameters DateTimeParameters = null, CampaignRuleCampaignRunTimeSettings CampaignRunTimeSettings = null, CampaignRuleCampaignWaitTimeSettings CampaignWaitTimeSettings = null)
         {
             this.Id = Id;
             this.Parameters = Parameters;
             this.ConditionType = ConditionType;
+            this.DateTimeParameters = DateTimeParameters;
+            this.CampaignRunTimeSettings = CampaignRunTimeSettings;
+            this.CampaignWaitTimeSettings = CampaignWaitTimeSettings;
             
         }
         
@@ -175,6 +181,33 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Parameters for conditions (timeOfDay, dayOfWeek, dayOfMonth, weekDayOfMonth and specificDate)
+        /// </summary>
+        /// <value>Parameters for conditions (timeOfDay, dayOfWeek, dayOfMonth, weekDayOfMonth and specificDate)</value>
+        [DataMember(Name="dateTimeParameters", EmitDefaultValue=false)]
+        public CampaignRuleDateTimeConditionParameters DateTimeParameters { get; set; }
+
+
+
+        /// <summary>
+        /// Settings for campaignRunTime conditions
+        /// </summary>
+        /// <value>Settings for campaignRunTime conditions</value>
+        [DataMember(Name="campaignRunTimeSettings", EmitDefaultValue=false)]
+        public CampaignRuleCampaignRunTimeSettings CampaignRunTimeSettings { get; set; }
+
+
+
+        /// <summary>
+        /// Settings for campaignWaitTime conditions
+        /// </summary>
+        /// <value>Settings for campaignWaitTime conditions</value>
+        [DataMember(Name="campaignWaitTimeSettings", EmitDefaultValue=false)]
+        public CampaignRuleCampaignWaitTimeSettings CampaignWaitTimeSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -187,6 +220,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Parameters: ").Append(Parameters).Append("\n");
             sb.Append("  ConditionType: ").Append(ConditionType).Append("\n");
+            sb.Append("  DateTimeParameters: ").Append(DateTimeParameters).Append("\n");
+            sb.Append("  CampaignRunTimeSettings: ").Append(CampaignRunTimeSettings).Append("\n");
+            sb.Append("  CampaignWaitTimeSettings: ").Append(CampaignWaitTimeSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -241,6 +277,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConditionType == other.ConditionType ||
                     this.ConditionType != null &&
                     this.ConditionType.Equals(other.ConditionType)
+                ) &&
+                (
+                    this.DateTimeParameters == other.DateTimeParameters ||
+                    this.DateTimeParameters != null &&
+                    this.DateTimeParameters.Equals(other.DateTimeParameters)
+                ) &&
+                (
+                    this.CampaignRunTimeSettings == other.CampaignRunTimeSettings ||
+                    this.CampaignRunTimeSettings != null &&
+                    this.CampaignRunTimeSettings.Equals(other.CampaignRunTimeSettings)
+                ) &&
+                (
+                    this.CampaignWaitTimeSettings == other.CampaignWaitTimeSettings ||
+                    this.CampaignWaitTimeSettings != null &&
+                    this.CampaignWaitTimeSettings.Equals(other.CampaignWaitTimeSettings)
                 );
         }
 
@@ -263,6 +314,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConditionType != null)
                     hash = hash * 59 + this.ConditionType.GetHashCode();
+
+                if (this.DateTimeParameters != null)
+                    hash = hash * 59 + this.DateTimeParameters.GetHashCode();
+
+                if (this.CampaignRunTimeSettings != null)
+                    hash = hash * 59 + this.CampaignRunTimeSettings.GetHashCode();
+
+                if (this.CampaignWaitTimeSettings != null)
+                    hash = hash * 59 + this.CampaignWaitTimeSettings.GetHashCode();
 
                 return hash;
             }

@@ -32,9 +32,9 @@
 | **SupportsVoice** | **bool?** | Set to true if this phone number has the capability to support voice | [optional] |
 | **Integration** | [**DomainEntityRef**](DomainEntityRef) | The Genesys Cloud integration this phone number belongs to. | [optional] |
 | **Compliance** | [**Compliance**](Compliance) | Compliance configuration for short codes, including help, stop and opt in. | [optional] |
-| **SupportedContent** | [**SupportedContentReference**](SupportedContentReference) | Defines the media SupportedContent profile configured for an MMS capable phone number. | [optional] |
+| **SupportedContent** | [**SupportedContentReference**](SupportedContentReference) | Defines the media SupportedContent profile configured for an MMS capable phone number. If no custom profile is assigned, the phone number uses the system&#39;s \&quot;SMS Default\&quot; profile. The \&quot;SMS Default\&quot; profile allows all media types (*_/_*) for inbound messages and specific image types (image/gif, image/jpeg, image/png) for outbound messages. When the \&quot;SMS Default\&quot; profile is in use, this field will contain the profile name and media types, but will not have an &#39;id&#39; or &#39;selfUri&#39; field. To customize media filtering, assign a custom supported content profile using the PATCH endpoint. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

@@ -67,6 +67,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsScanOrganizationsDivisionviewsAll**](#GetExternalcontactsScanOrganizationsDivisionviewsAll) | **Get** /api/v2/externalcontacts/scan/organizations/divisionviews/all | Scan for external organizations using paging |
 | [**GetExternalcontactsScanRelationships**](#GetExternalcontactsScanRelationships) | **Get** /api/v2/externalcontacts/scan/relationships | Scan for relationships |
 | [**GetExternalcontactsScanRelationshipsDivisionviewsAll**](#GetExternalcontactsScanRelationshipsDivisionviewsAll) | **Get** /api/v2/externalcontacts/scan/relationships/divisionviews/all | Scan for relationships |
+| [**PatchExternalcontactsContact**](#PatchExternalcontactsContact) | **Patch** /api/v2/externalcontacts/contacts/{contactId} | Update specific fields of an external contact |
 | [**PatchExternalcontactsContactIdentifiers**](#PatchExternalcontactsContactIdentifiers) | **Patch** /api/v2/externalcontacts/contacts/{contactId}/identifiers | Claim or release identifiers for a contact |
 | [**PatchExternalcontactsOrganizationIdentifiers**](#PatchExternalcontactsOrganizationIdentifiers) | **Patch** /api/v2/externalcontacts/organizations/{externalOrganizationId}/identifiers | Claim or release identifiers for an external organization |
 | [**PostExternalcontactsBulkContacts**](#PostExternalcontactsBulkContacts) | **Post** /api/v2/externalcontacts/bulk/contacts | Bulk fetch contacts |
@@ -4055,6 +4056,70 @@ namespace Example
 [**CursorRelationshipListing**](CursorRelationshipListing)
 
 
+## PatchExternalcontactsContact
+
+> [**ExternalContact**](ExternalContact) PatchExternalcontactsContact (string contactId, ExternalContactsPatchRequest body)
+
+
+Update specific fields of an external contact
+
+Requires ANY permissions: 
+
+* externalContacts:contact:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchExternalcontactsContactExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ExternalContactsApi();
+            var contactId = contactId_example;  // string | ExternalContact ID
+            var body = new ExternalContactsPatchRequest(); // ExternalContactsPatchRequest | Contact fields to update
+
+            try
+            { 
+                // Update specific fields of an external contact
+                ExternalContact result = apiInstance.PatchExternalcontactsContact(contactId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ExternalContactsApi.PatchExternalcontactsContact: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **contactId** | **string**| ExternalContact ID |  |
+| **body** | [**ExternalContactsPatchRequest**](ExternalContactsPatchRequest)| Contact fields to update |  |
+
+### Return type
+
+[**ExternalContact**](ExternalContact)
+
+
 ## PatchExternalcontactsContactIdentifiers
 
 > [**ContactIdentifier**](ContactIdentifier) PatchExternalcontactsContactIdentifiers (string contactId, IdentifierClaimRequest body)
@@ -7814,4 +7879,4 @@ namespace Example
 [**Relationship**](Relationship)
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

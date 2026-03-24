@@ -154,8 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Range">Range.</param>
         /// <param name="Inverted">Whether or not to invert to result of evaluating the predicate.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        /// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
-        public DialerContactlistfilterConfigChangeFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? Operator = null, string Value = null, DialerContactlistfilterConfigChangeFilterRange Range = null, bool? Inverted = null, Dictionary<string, Object> AdditionalProperties = null, Dictionary<string, Object> GetAdditionalProperties = null)
+        public DialerContactlistfilterConfigChangeFilterPredicate(string Column = null, ColumnTypeEnum? ColumnType = null, OperatorEnum? Operator = null, string Value = null, DialerContactlistfilterConfigChangeFilterRange Range = null, bool? Inverted = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.Column = Column;
             this.ColumnType = ColumnType;
@@ -164,7 +163,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Range = Range;
             this.Inverted = Inverted;
             this.AdditionalProperties = AdditionalProperties;
-            this.GetAdditionalProperties = GetAdditionalProperties;
             
         }
         
@@ -216,14 +214,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets GetAdditionalProperties
-        /// </summary>
-        [DataMember(Name="getAdditionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> GetAdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -240,7 +230,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Range: ").Append(Range).Append("\n");
             sb.Append("  Inverted: ").Append(Inverted).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -315,11 +304,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
-                ) &&
-                (
-                    this.GetAdditionalProperties == other.GetAdditionalProperties ||
-                    this.GetAdditionalProperties != null &&
-                    this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
                 );
         }
 
@@ -354,9 +338,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
-
-                if (this.GetAdditionalProperties != null)
-                    hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
 
                 return hash;
             }

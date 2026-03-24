@@ -62,8 +62,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TargetContactListIds">The ids for target contact lists.</param>
         /// <param name="ListNamePrefix">The prefix used for target contact list names.</param>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        /// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
-        public DnclistImportStatusImportStatus(ImportStateEnum? ImportState = null, long? TotalRecords = null, long? CompletedRecords = null, long? PercentageComplete = null, string FailureReason = null, List<string> TargetContactListIds = null, string ListNamePrefix = null, Dictionary<string, Object> AdditionalProperties = null, Dictionary<string, Object> GetAdditionalProperties = null)
+        public DnclistImportStatusImportStatus(ImportStateEnum? ImportState = null, long? TotalRecords = null, long? CompletedRecords = null, long? PercentageComplete = null, string FailureReason = null, List<string> TargetContactListIds = null, string ListNamePrefix = null, Dictionary<string, Object> AdditionalProperties = null)
         {
             this.ImportState = ImportState;
             this.TotalRecords = TotalRecords;
@@ -73,7 +72,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.TargetContactListIds = TargetContactListIds;
             this.ListNamePrefix = ListNamePrefix;
             this.AdditionalProperties = AdditionalProperties;
-            this.GetAdditionalProperties = GetAdditionalProperties;
             
         }
         
@@ -142,14 +140,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, Object> AdditionalProperties { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets GetAdditionalProperties
-        /// </summary>
-        [DataMember(Name="getAdditionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> GetAdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -167,7 +157,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  TargetContactListIds: ").Append(TargetContactListIds).Append("\n");
             sb.Append("  ListNamePrefix: ").Append(ListNamePrefix).Append("\n");
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -247,11 +236,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
-                ) &&
-                (
-                    this.GetAdditionalProperties == other.GetAdditionalProperties ||
-                    this.GetAdditionalProperties != null &&
-                    this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
                 );
         }
 
@@ -289,9 +273,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
-
-                if (this.GetAdditionalProperties != null)
-                    hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
 
                 return hash;
             }

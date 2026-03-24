@@ -237,6 +237,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Directory,
             
             /// <summary>
+            /// Enum Locations for "Locations"
+            /// </summary>
+            [EnumMember(Value = "Locations")]
+            Locations,
+            
+            /// <summary>
             /// Enum Externalcontacts for "ExternalContacts"
             /// </summary>
             [EnumMember(Value = "ExternalContacts")]
@@ -1759,6 +1765,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Shifttrade,
             
             /// <summary>
+            /// Enum Selfschedule for "SelfSchedule"
+            /// </summary>
+            [EnumMember(Value = "SelfSchedule")]
+            Selfschedule,
+            
+            /// <summary>
             /// Enum Timeofflimit for "TimeOffLimit"
             /// </summary>
             [EnumMember(Value = "TimeOffLimit")]
@@ -1829,6 +1841,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "ScheduleBidGroup")]
             Schedulebidgroup,
+            
+            /// <summary>
+            /// Enum Opportunity for "Opportunity"
+            /// </summary>
+            [EnumMember(Value = "Opportunity")]
+            Opportunity,
             
             /// <summary>
             /// Enum Trigger for "Trigger"
@@ -2585,6 +2603,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "OrganizationLimits")]
             Organizationlimits,
+            
+            /// <summary>
+            /// Enum Routingskill for "RoutingSkill"
+            /// </summary>
+            [EnumMember(Value = "RoutingSkill")]
+            Routingskill,
+            
+            /// <summary>
+            /// Enum Routinglanguage for "RoutingLanguage"
+            /// </summary>
+            [EnumMember(Value = "RoutingLanguage")]
+            Routinglanguage,
             
             /// <summary>
             /// Enum Composerpage for "ComposerPage"

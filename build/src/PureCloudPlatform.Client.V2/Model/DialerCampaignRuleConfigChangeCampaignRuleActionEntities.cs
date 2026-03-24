@@ -25,14 +25,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
         /// <param name="Campaigns">A list of campaignIds to act on.</param>
         /// <param name="Sequences">A list of sequenceIds to act on.</param>
-        /// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
-        public DialerCampaignRuleConfigChangeCampaignRuleActionEntities(bool? UseTriggeringEntity = null, Dictionary<string, Object> AdditionalProperties = null, List<DialerCampaignRuleConfigChangeUriReference> Campaigns = null, List<DialerCampaignRuleConfigChangeUriReference> Sequences = null, Dictionary<string, Object> GetAdditionalProperties = null)
+        public DialerCampaignRuleConfigChangeCampaignRuleActionEntities(bool? UseTriggeringEntity = null, Dictionary<string, Object> AdditionalProperties = null, List<DialerCampaignRuleConfigChangeUriReference> Campaigns = null, List<DialerCampaignRuleConfigChangeUriReference> Sequences = null)
         {
             this.UseTriggeringEntity = UseTriggeringEntity;
             this.AdditionalProperties = AdditionalProperties;
             this.Campaigns = Campaigns;
             this.Sequences = Sequences;
-            this.GetAdditionalProperties = GetAdditionalProperties;
             
         }
         
@@ -72,14 +70,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<DialerCampaignRuleConfigChangeUriReference> Sequences { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets GetAdditionalProperties
-        /// </summary>
-        [DataMember(Name="getAdditionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> GetAdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -93,7 +83,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("  Campaigns: ").Append(Campaigns).Append("\n");
             sb.Append("  Sequences: ").Append(Sequences).Append("\n");
-            sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -153,11 +142,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Sequences == other.Sequences ||
                     this.Sequences != null &&
                     this.Sequences.SequenceEqual(other.Sequences)
-                ) &&
-                (
-                    this.GetAdditionalProperties == other.GetAdditionalProperties ||
-                    this.GetAdditionalProperties != null &&
-                    this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
                 );
         }
 
@@ -183,9 +167,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Sequences != null)
                     hash = hash * 59 + this.Sequences.GetHashCode();
-
-                if (this.GetAdditionalProperties != null)
-                    hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
 
                 return hash;
             }

@@ -401,7 +401,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CallbackDurationMs">CallbackDurationMs.</param>
         /// <param name="ConversationExternalContactIds">ConversationExternalContactIds.</param>
         /// <param name="ConversationExternalOrganizationIds">ConversationExternalOrganizationIds.</param>
-        public UserEndDetailEventTopicUserEndEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, long? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string UserId = null, string DivisionId = null, string QueueId = null, long? InteractingDurationMs = null, long? HeldDurationMs = null, long? AlertingDurationMs = null, long? ContactingDurationMs = null, long? DialingDurationMs = null, long? CallbackDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null)
+        /// <param name="UtilizationLabel">UtilizationLabel.</param>
+        public UserEndDetailEventTopicUserEndEvent(long? EventTime = null, string ConversationId = null, string ParticipantId = null, string SessionId = null, DisconnectTypeEnum? DisconnectType = null, MediaTypeEnum? MediaType = null, string Provider = null, DirectionEnum? Direction = null, string Ani = null, string Dnis = null, string AddressTo = null, string AddressFrom = null, string CallbackUserName = null, List<string> CallbackNumbers = null, long? CallbackScheduledTime = null, string Subject = null, MessageTypeEnum? MessageType = null, string UserId = null, string DivisionId = null, string QueueId = null, long? InteractingDurationMs = null, long? HeldDurationMs = null, long? AlertingDurationMs = null, long? ContactingDurationMs = null, long? DialingDurationMs = null, long? CallbackDurationMs = null, List<string> ConversationExternalContactIds = null, List<string> ConversationExternalOrganizationIds = null, string UtilizationLabel = null)
         {
             this.EventTime = EventTime;
             this.ConversationId = ConversationId;
@@ -431,6 +432,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CallbackDurationMs = CallbackDurationMs;
             this.ConversationExternalContactIds = ConversationExternalContactIds;
             this.ConversationExternalOrganizationIds = ConversationExternalOrganizationIds;
+            this.UtilizationLabel = UtilizationLabel;
             
         }
         
@@ -635,6 +637,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> ConversationExternalOrganizationIds { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets UtilizationLabel
+        /// </summary>
+        [DataMember(Name="utilizationLabel", EmitDefaultValue=false)]
+        public string UtilizationLabel { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -672,6 +682,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CallbackDurationMs: ").Append(CallbackDurationMs).Append("\n");
             sb.Append("  ConversationExternalContactIds: ").Append(ConversationExternalContactIds).Append("\n");
             sb.Append("  ConversationExternalOrganizationIds: ").Append(ConversationExternalOrganizationIds).Append("\n");
+            sb.Append("  UtilizationLabel: ").Append(UtilizationLabel).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -851,6 +862,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ConversationExternalOrganizationIds == other.ConversationExternalOrganizationIds ||
                     this.ConversationExternalOrganizationIds != null &&
                     this.ConversationExternalOrganizationIds.SequenceEqual(other.ConversationExternalOrganizationIds)
+                ) &&
+                (
+                    this.UtilizationLabel == other.UtilizationLabel ||
+                    this.UtilizationLabel != null &&
+                    this.UtilizationLabel.Equals(other.UtilizationLabel)
                 );
         }
 
@@ -948,6 +964,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ConversationExternalOrganizationIds != null)
                     hash = hash * 59 + this.ConversationExternalOrganizationIds.GetHashCode();
+
+                if (this.UtilizationLabel != null)
+                    hash = hash * 59 + this.UtilizationLabel.GetHashCode();
 
                 return hash;
             }

@@ -36,7 +36,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Payableminutes for "PayableMinutes"
             /// </summary>
             [EnumMember(Value = "PayableMinutes")]
-            Payableminutes
+            Payableminutes,
+            
+            /// <summary>
+            /// Enum Fulldayearlieststartoffsetminutes for "FullDayEarliestStartOffsetMinutes"
+            /// </summary>
+            [EnumMember(Value = "FullDayEarliestStartOffsetMinutes")]
+            Fulldayearlieststartoffsetminutes,
+            
+            /// <summary>
+            /// Enum Fulldaylatestendoffsetminutes for "FullDayLatestEndOffsetMinutes"
+            /// </summary>
+            [EnumMember(Value = "FullDayLatestEndOffsetMinutes")]
+            Fulldaylatestendoffsetminutes
         }
         /// <summary>
         /// Initializes a new instance of the <see cref="SetWrapperSyncTimeOffProperty" /> class.

@@ -51,6 +51,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Digitalbot,
             
             /// <summary>
+            /// Enum Emailsend for "EMAILSEND"
+            /// </summary>
+            [EnumMember(Value = "EMAILSEND")]
+            Emailsend,
+            
+            /// <summary>
             /// Enum Inboundcall for "INBOUNDCALL"
             /// </summary>
             [EnumMember(Value = "INBOUNDCALL")]
@@ -177,6 +183,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "DIGITALBOT")]
             Digitalbot,
+            
+            /// <summary>
+            /// Enum Emailsend for "EMAILSEND"
+            /// </summary>
+            [EnumMember(Value = "EMAILSEND")]
+            Emailsend,
             
             /// <summary>
             /// Enum Inboundcall for "INBOUNDCALL"

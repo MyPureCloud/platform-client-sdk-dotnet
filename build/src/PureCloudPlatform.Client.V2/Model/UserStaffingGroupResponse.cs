@@ -22,7 +22,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="UserStaffingGroupResponse" /> class.
         /// </summary>
         /// <param name="User">The user associated with the staffing group.</param>
-        /// <param name="StaffingGroup">The staffing group.</param>
+        /// <param name="StaffingGroup">The current staffing group of the user.</param>
         public UserStaffingGroupResponse(UserReference User = null, StaffingGroupReference StaffingGroup = null)
         {
             this.User = User;
@@ -42,9 +42,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The staffing group
+        /// The current staffing group of the user
         /// </summary>
-        /// <value>The staffing group</value>
+        /// <value>The current staffing group of the user</value>
         [DataMember(Name="staffingGroup", EmitDefaultValue=false)]
         public StaffingGroupReference StaffingGroup { get; set; }
 

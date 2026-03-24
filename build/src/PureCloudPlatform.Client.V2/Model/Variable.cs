@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Boolean for "Boolean"
             /// </summary>
             [EnumMember(Value = "Boolean")]
-            Boolean
+            Boolean,
+            
+            /// <summary>
+            /// Enum Date for "Date"
+            /// </summary>
+            [EnumMember(Value = "Date")]
+            Date
         }
         /// <summary>
         /// The scope that determines the variable's usage context within Guides runtime.
@@ -121,12 +127,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Type">The data type of the variable. (required).</param>
         /// <param name="Scope">The scope that determines the variable&#39;s usage context within Guides runtime. (required).</param>
         /// <param name="Description">The description of the variable used by Guides runtime for input/output handling..</param>
-        public Variable(string Name = null, TypeEnum? Type = null, ScopeEnum? Scope = null, string Description = null)
+        /// <param name="Validation">The validation configuration for the variable. Optional - if not present, no validation is applied..</param>
+        public Variable(string Name = null, TypeEnum? Type = null, ScopeEnum? Scope = null, string Description = null, VariableValidation Validation = null)
         {
             this.Name = Name;
             this.Type = Type;
             this.Scope = Scope;
             this.Description = Description;
+            this.Validation = Validation;
             
         }
         
@@ -153,6 +161,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Description { get; set; }
 
 
+
+        /// <summary>
+        /// The validation configuration for the variable. Optional - if not present, no validation is applied.
+        /// </summary>
+        /// <value>The validation configuration for the variable. Optional - if not present, no validation is applied.</value>
+        [DataMember(Name="validation", EmitDefaultValue=false)]
+        public VariableValidation Validation { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -166,6 +183,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Type: ").Append(Type).Append("\n");
             sb.Append("  Scope: ").Append(Scope).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
+            sb.Append("  Validation: ").Append(Validation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -225,6 +243,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Description == other.Description ||
                     this.Description != null &&
                     this.Description.Equals(other.Description)
+                ) &&
+                (
+                    this.Validation == other.Validation ||
+                    this.Validation != null &&
+                    this.Validation.Equals(other.Validation)
                 );
         }
 
@@ -250,6 +273,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Description != null)
                     hash = hash * 59 + this.Description.GetHashCode();
+
+                if (this.Validation != null)
+                    hash = hash * 59 + this.Validation.GetHashCode();
 
                 return hash;
             }

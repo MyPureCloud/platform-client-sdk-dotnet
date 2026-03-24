@@ -93,6 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
             CampaignBuildContactQueueError,
             
             /// <summary>
+            /// Enum CampaignCheckJobDuplicate for "CAMPAIGN_CHECK_JOB_DUPLICATE"
+            /// </summary>
+            [EnumMember(Value = "CAMPAIGN_CHECK_JOB_DUPLICATE")]
+            CampaignCheckJobDuplicate,
+            
+            /// <summary>
             /// Enum CampaignContentTemplateSubstitutionMismatch for "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH"
             /// </summary>
             [EnumMember(Value = "CAMPAIGN_CONTENT_TEMPLATE_SUBSTITUTION_MISMATCH")]

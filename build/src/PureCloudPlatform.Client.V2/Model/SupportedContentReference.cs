@@ -13,7 +13,7 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// Reference to supported content profile associated with the integration
+    /// SupportedContentReference
     /// </summary>
     [DataContract]
     public partial class SupportedContentReference :  IEquatable<SupportedContentReference>
@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="SupportedContentReference" /> class.
         /// </summary>
-        /// <param name="Id">The SupportedContent unique identifier associated with this integration (required).</param>
+        /// <param name="Id">The SupportedContent unique identifier associated with this integration or phone number (required).</param>
         public SupportedContentReference(string Id = null)
         {
             this.Id = Id;
@@ -37,9 +37,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The SupportedContent unique identifier associated with this integration
+        /// The SupportedContent unique identifier associated with this integration or phone number
         /// </summary>
-        /// <value>The SupportedContent unique identifier associated with this integration</value>
+        /// <value>The SupportedContent unique identifier associated with this integration or phone number</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

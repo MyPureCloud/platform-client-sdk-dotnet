@@ -21,11 +21,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleCampaignRunTimeSettings" /> class.
         /// </summary>
-        public CampaignRuleCampaignRunTimeSettings()
+        /// <param name="IncludeWaitingTime">When true counts all campaign running time, otherwise only running time that a campaign was not waiting. Default: true.</param>
+        public CampaignRuleCampaignRunTimeSettings(bool? IncludeWaitingTime = null)
         {
+            this.IncludeWaitingTime = IncludeWaitingTime;
             
         }
         
+
+
+        /// <summary>
+        /// When true counts all campaign running time, otherwise only running time that a campaign was not waiting. Default: true
+        /// </summary>
+        /// <value>When true counts all campaign running time, otherwise only running time that a campaign was not waiting. Default: true</value>
+        [DataMember(Name="includeWaitingTime", EmitDefaultValue=false)]
+        public bool? IncludeWaitingTime { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleCampaignRunTimeSettings {\n");
 
+            sb.Append("  IncludeWaitingTime: ").Append(IncludeWaitingTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +87,12 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.IncludeWaitingTime == other.IncludeWaitingTime ||
+                    this.IncludeWaitingTime != null &&
+                    this.IncludeWaitingTime.Equals(other.IncludeWaitingTime)
+                );
         }
 
         /// <summary>
@@ -89,6 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.IncludeWaitingTime != null)
+                    hash = hash * 59 + this.IncludeWaitingTime.GetHashCode();
+
                 return hash;
             }
         }

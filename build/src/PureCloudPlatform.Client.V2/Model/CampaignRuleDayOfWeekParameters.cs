@@ -21,11 +21,33 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CampaignRuleDayOfWeekParameters" /> class.
         /// </summary>
-        public CampaignRuleDayOfWeekParameters()
+        /// <param name="InSet">The operand for the \&quot;in\&quot; operator, each value in 1-7 (Monday-Sunday) format.</param>
+        /// <param name="Interval">The operand for the \&quot;between\&quot; operator.</param>
+        public CampaignRuleDayOfWeekParameters(List<int?> InSet = null, CampaignRuleDayOfWeekInterval Interval = null)
         {
+            this.InSet = InSet;
+            this.Interval = Interval;
             
         }
         
+
+
+        /// <summary>
+        /// The operand for the \&quot;in\&quot; operator, each value in 1-7 (Monday-Sunday) format
+        /// </summary>
+        /// <value>The operand for the \&quot;in\&quot; operator, each value in 1-7 (Monday-Sunday) format</value>
+        [DataMember(Name="inSet", EmitDefaultValue=false)]
+        public List<int?> InSet { get; set; }
+
+
+
+        /// <summary>
+        /// The operand for the \&quot;between\&quot; operator
+        /// </summary>
+        /// <value>The operand for the \&quot;between\&quot; operator</value>
+        [DataMember(Name="interval", EmitDefaultValue=false)]
+        public CampaignRuleDayOfWeekInterval Interval { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +58,8 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class CampaignRuleDayOfWeekParameters {\n");
 
+            sb.Append("  InSet: ").Append(InSet).Append("\n");
+            sb.Append("  Interval: ").Append(Interval).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +99,17 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.InSet == other.InSet ||
+                    this.InSet != null &&
+                    this.InSet.SequenceEqual(other.InSet)
+                ) &&
+                (
+                    this.Interval == other.Interval ||
+                    this.Interval != null &&
+                    this.Interval.Equals(other.Interval)
+                );
         }
 
         /// <summary>
@@ -89,6 +123,12 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.InSet != null)
+                    hash = hash * 59 + this.InSet.GetHashCode();
+
+                if (this.Interval != null)
+                    hash = hash * 59 + this.Interval.GetHashCode();
+
                 return hash;
             }
         }

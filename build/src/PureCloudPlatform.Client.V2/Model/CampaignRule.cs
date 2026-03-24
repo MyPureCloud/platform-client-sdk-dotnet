@@ -64,7 +64,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CampaignRuleProcessing">CampaignRule processing algorithm.</param>
         /// <param name="ConditionGroups">List of condition groups that are evaluated, used only with campaignRuleProcessing&#x3D;\&quot;v2\&quot;.</param>
         /// <param name="ExecutionSettings">CampaignRule execution settings.</param>
-        public CampaignRule(string Name = null, int? Version = null, CampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleCondition> CampaignRuleConditions = null, List<CampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null, CampaignRuleProcessingEnum? CampaignRuleProcessing = null, List<CampaignRuleConditionGroup> ConditionGroups = null, CampaignRuleExecutionSettings ExecutionSettings = null)
+        /// <param name="TimeZoneId">The time zone to use for date-time conditions..</param>
+        public CampaignRule(string Name = null, int? Version = null, CampaignRuleEntities CampaignRuleEntities = null, List<CampaignRuleCondition> CampaignRuleConditions = null, List<CampaignRuleAction> CampaignRuleActions = null, bool? MatchAnyConditions = null, bool? Enabled = null, CampaignRuleProcessingEnum? CampaignRuleProcessing = null, List<CampaignRuleConditionGroup> ConditionGroups = null, CampaignRuleExecutionSettings ExecutionSettings = null, string TimeZoneId = null)
         {
             this.Name = Name;
             this.Version = Version;
@@ -76,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.CampaignRuleProcessing = CampaignRuleProcessing;
             this.ConditionGroups = ConditionGroups;
             this.ExecutionSettings = ExecutionSettings;
+            this.TimeZoneId = TimeZoneId;
             
         }
         
@@ -191,6 +193,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The time zone to use for date-time conditions.
+        /// </summary>
+        /// <value>The time zone to use for date-time conditions.</value>
+        [DataMember(Name="timeZoneId", EmitDefaultValue=false)]
+        public string TimeZoneId { get; set; }
+
+
+
+        /// <summary>
         /// A list of current warning conditions associated with the campaign rule.
         /// </summary>
         /// <value>A list of current warning conditions associated with the campaign rule.</value>
@@ -229,6 +240,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CampaignRuleProcessing: ").Append(CampaignRuleProcessing).Append("\n");
             sb.Append("  ConditionGroups: ").Append(ConditionGroups).Append("\n");
             sb.Append("  ExecutionSettings: ").Append(ExecutionSettings).Append("\n");
+            sb.Append("  TimeZoneId: ").Append(TimeZoneId).Append("\n");
             sb.Append("  Warnings: ").Append(Warnings).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -337,6 +349,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExecutionSettings.Equals(other.ExecutionSettings)
                 ) &&
                 (
+                    this.TimeZoneId == other.TimeZoneId ||
+                    this.TimeZoneId != null &&
+                    this.TimeZoneId.Equals(other.TimeZoneId)
+                ) &&
+                (
                     this.Warnings == other.Warnings ||
                     this.Warnings != null &&
                     this.Warnings.SequenceEqual(other.Warnings)
@@ -397,6 +414,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExecutionSettings != null)
                     hash = hash * 59 + this.ExecutionSettings.GetHashCode();
+
+                if (this.TimeZoneId != null)
+                    hash = hash * 59 + this.TimeZoneId.GetHashCode();
 
                 if (this.Warnings != null)
                     hash = hash * 59 + this.Warnings.GetHashCode();

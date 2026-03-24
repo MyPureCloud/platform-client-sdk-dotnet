@@ -218,7 +218,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EmailMessagesPerMinute">The number of messages per minute to set a Email messaging campaign to..</param>
         /// <param name="SmsContentTemplate">The content template to set a SMS campaign to..</param>
         /// <param name="EmailContentTemplate">The content template to set a Email campaign to..</param>
-        public CampaignRuleParameters(OperatorEnum? Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null, double? AbandonRate = null, int? OutboundLineCount = null, int? RelativeWeight = null, double? MaxCallsPerAgent = null, DomainEntityRef Queue = null, int? MessagesPerMinute = null, int? SmsMessagesPerMinute = null, int? EmailMessagesPerMinute = null, DomainEntityRef SmsContentTemplate = null, DomainEntityRef EmailContentTemplate = null)
+        /// <param name="ForDuration">ISO-8601 Duration for which condition expression must be continuously true before condition is evaluated as true.</param>
+        public CampaignRuleParameters(OperatorEnum? Operator = null, string Value = null, PriorityEnum? Priority = null, DialingModeEnum? DialingMode = null, double? AbandonRate = null, int? OutboundLineCount = null, int? RelativeWeight = null, double? MaxCallsPerAgent = null, DomainEntityRef Queue = null, int? MessagesPerMinute = null, int? SmsMessagesPerMinute = null, int? EmailMessagesPerMinute = null, DomainEntityRef SmsContentTemplate = null, DomainEntityRef EmailContentTemplate = null, Duration ForDuration = null)
         {
             this.Operator = Operator;
             this.Value = Value;
@@ -234,6 +235,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EmailMessagesPerMinute = EmailMessagesPerMinute;
             this.SmsContentTemplate = SmsContentTemplate;
             this.EmailContentTemplate = EmailContentTemplate;
+            this.ForDuration = ForDuration;
             
         }
         
@@ -343,6 +345,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public DomainEntityRef EmailContentTemplate { get; set; }
 
 
+
+        /// <summary>
+        /// ISO-8601 Duration for which condition expression must be continuously true before condition is evaluated as true
+        /// </summary>
+        /// <value>ISO-8601 Duration for which condition expression must be continuously true before condition is evaluated as true</value>
+        [DataMember(Name="forDuration", EmitDefaultValue=false)]
+        public Duration ForDuration { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -366,6 +377,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EmailMessagesPerMinute: ").Append(EmailMessagesPerMinute).Append("\n");
             sb.Append("  SmsContentTemplate: ").Append(SmsContentTemplate).Append("\n");
             sb.Append("  EmailContentTemplate: ").Append(EmailContentTemplate).Append("\n");
+            sb.Append("  ForDuration: ").Append(ForDuration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -475,6 +487,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmailContentTemplate == other.EmailContentTemplate ||
                     this.EmailContentTemplate != null &&
                     this.EmailContentTemplate.Equals(other.EmailContentTemplate)
+                ) &&
+                (
+                    this.ForDuration == other.ForDuration ||
+                    this.ForDuration != null &&
+                    this.ForDuration.Equals(other.ForDuration)
                 );
         }
 
@@ -530,6 +547,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EmailContentTemplate != null)
                     hash = hash * 59 + this.EmailContentTemplate.GetHashCode();
+
+                if (this.ForDuration != null)
+                    hash = hash * 59 + this.ForDuration.GetHashCode();
 
                 return hash;
             }

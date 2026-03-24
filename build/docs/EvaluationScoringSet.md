@@ -8,6 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **TotalScore** | **float?** | Score of all questions | [optional] |
 | **TotalCriticalScore** | **float?** | Score of only the critical questions | [optional] |
+| **MaxTotalRawCriticalScore** | **float?** | Maximum total raw score for the critical questions. Raw score is the actual point values before applying weights or percentages. | [optional] |
+| **MaxTotalRawScore** | **float?** | Maximum total raw score for all questions. Raw score is the actual point values before applying weights or percentages. | [optional] |
 | **TotalNonCriticalScore** | **float?** | Score of only the non-critical questions | [optional] |
 | **QuestionGroupScores** | [**List&lt;EvaluationQuestionGroupScore&gt;**](EvaluationQuestionGroupScore) |  | [optional] |
 | **AnyFailedKillQuestions** | **bool?** | Indicates that at least one fatal question was answered without having the highest score available for the question | [optional] |
@@ -18,4 +20,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

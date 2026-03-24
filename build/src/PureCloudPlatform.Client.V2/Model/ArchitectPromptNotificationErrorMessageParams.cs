@@ -22,11 +22,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ArchitectPromptNotificationErrorMessageParams" /> class.
         /// </summary>
         /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        /// <param name="GetAdditionalProperties">GetAdditionalProperties.</param>
-        public ArchitectPromptNotificationErrorMessageParams(Dictionary<string, string> AdditionalProperties = null, Dictionary<string, string> GetAdditionalProperties = null)
+        public ArchitectPromptNotificationErrorMessageParams(Dictionary<string, string> AdditionalProperties = null)
         {
             this.AdditionalProperties = AdditionalProperties;
-            this.GetAdditionalProperties = GetAdditionalProperties;
             
         }
         
@@ -39,14 +37,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public Dictionary<string, string> AdditionalProperties { get; set; }
 
 
-
-        /// <summary>
-        /// Gets or Sets GetAdditionalProperties
-        /// </summary>
-        [DataMember(Name="getAdditionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, string> GetAdditionalProperties { get; set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -57,7 +47,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ArchitectPromptNotificationErrorMessageParams {\n");
 
             sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
-            sb.Append("  GetAdditionalProperties: ").Append(GetAdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -102,11 +91,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AdditionalProperties == other.AdditionalProperties ||
                     this.AdditionalProperties != null &&
                     this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
-                ) &&
-                (
-                    this.GetAdditionalProperties == other.GetAdditionalProperties ||
-                    this.GetAdditionalProperties != null &&
-                    this.GetAdditionalProperties.SequenceEqual(other.GetAdditionalProperties)
                 );
         }
 
@@ -123,9 +107,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.AdditionalProperties != null)
                     hash = hash * 59 + this.AdditionalProperties.GetHashCode();
-
-                if (this.GetAdditionalProperties != null)
-                    hash = hash * 59 + this.GetAdditionalProperties.GetHashCode();
 
                 return hash;
             }
