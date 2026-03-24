@@ -16,6 +16,8 @@
 | **Substatus** | **string** |  | [optional] |
 | **PartialDayStartDateTimes** | **List&lt;string&gt;** |  | [optional] |
 | **FullDayManagementUnitDates** | **List&lt;string&gt;** |  | [optional] |
+| **FullDayEarliestStartOffsetMinutes** | **List&lt;long?&gt;** |  | [optional] |
+| **FullDayLatestEndOffsetMinutes** | **List&lt;long?&gt;** |  | [optional] |
 | **DailyDurationMinutes** | **long?** |  | [optional] |
 | **DurationMinutes** | **List&lt;long?&gt;** |  | [optional] |
 | **PayableMinutes** | **List&lt;long?&gt;** |  | [optional] |
@@ -29,4 +31,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

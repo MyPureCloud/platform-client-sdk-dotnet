@@ -19,9 +19,10 @@
 | **CampaignRuleProcessing** | **string** | CampaignRule processing algorithm | [optional] |
 | **ConditionGroups** | [**List&lt;CampaignRuleConditionGroup&gt;**](CampaignRuleConditionGroup) | List of condition groups that are evaluated, used only with campaignRuleProcessing&#x3D;\&quot;v2\&quot; | [optional] |
 | **ExecutionSettings** | [**CampaignRuleExecutionSettings**](CampaignRuleExecutionSettings) | CampaignRule execution settings | [optional] |
+| **TimeZoneId** | **string** | The time zone to use for date-time conditions. | [optional] |
 | **Warnings** | [**List&lt;CampaignRuleWarning&gt;**](CampaignRuleWarning) | A list of current warning conditions associated with the campaign rule. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

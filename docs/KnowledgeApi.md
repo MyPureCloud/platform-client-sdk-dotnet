@@ -6,6 +6,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteKnowledgeConnection**](#DeleteKnowledgeConnection) | **Delete** /api/v2/knowledge/connections/{connectionId} | Delete connection |
 | [**DeleteKnowledgeKnowledgebase**](#DeleteKnowledgeKnowledgebase) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Delete knowledge base |
 | [**DeleteKnowledgeKnowledgebaseCategory**](#DeleteKnowledgeKnowledgebaseCategory) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId} | Delete category |
 | [**DeleteKnowledgeKnowledgebaseDocument**](#DeleteKnowledgeKnowledgebaseDocument) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/documents/{documentId} | Delete document. |
@@ -17,6 +18,10 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId**](#DeleteKnowledgeKnowledgebaseSourcesServicenowSourceId) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId} | Delete ServiceNow Knowledge integration source |
 | [**DeleteKnowledgeKnowledgebaseSynchronizeJob**](#DeleteKnowledgeKnowledgebaseSynchronizeJob) | **Delete** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId} | Delete synchronization job |
 | [**DeleteKnowledgeSetting**](#DeleteKnowledgeSetting) | **Delete** /api/v2/knowledge/settings/{knowledgeSettingId} | Delete Knowledge setting. |
+| [**DeleteKnowledgeSource**](#DeleteKnowledgeSource) | **Delete** /api/v2/knowledge/sources/{sourceId} | Delete source |
+| [**GetKnowledgeConnection**](#GetKnowledgeConnection) | **Get** /api/v2/knowledge/connections/{connectionId} | Get connection |
+| [**GetKnowledgeConnectionOptions**](#GetKnowledgeConnectionOptions) | **Get** /api/v2/knowledge/connections/{connectionId}/options | Get connection options |
+| [**GetKnowledgeConnections**](#GetKnowledgeConnections) | **Get** /api/v2/knowledge/connections | Get connections |
 | [**GetKnowledgeGuestSessionCategories**](#GetKnowledgeGuestSessionCategories) | **Get** /api/v2/knowledge/guest/sessions/{sessionId}/categories | Get categories |
 | [**GetKnowledgeGuestSessionDocument**](#GetKnowledgeGuestSessionDocument) | **Get** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId} | Get a knowledge document by ID. |
 | [**GetKnowledgeGuestSessionDocuments**](#GetKnowledgeGuestSessionDocuments) | **Get** /api/v2/knowledge/guest/sessions/{sessionId}/documents | Get documents. |
@@ -52,6 +57,12 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetKnowledgeKnowledgebases**](#GetKnowledgeKnowledgebases) | **Get** /api/v2/knowledge/knowledgebases | Get knowledge bases |
 | [**GetKnowledgeSetting**](#GetKnowledgeSetting) | **Get** /api/v2/knowledge/settings/{knowledgeSettingId} | Get Knowledge setting. |
 | [**GetKnowledgeSettings**](#GetKnowledgeSettings) | **Get** /api/v2/knowledge/settings | Get Knowledge settings. |
+| [**GetKnowledgeSource**](#GetKnowledgeSource) | **Get** /api/v2/knowledge/sources/{sourceId} | Get source |
+| [**GetKnowledgeSourceSynchronization**](#GetKnowledgeSourceSynchronization) | **Get** /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId} | Get a specific synchronization of a source. |
+| [**GetKnowledgeSourceSynchronizations**](#GetKnowledgeSourceSynchronizations) | **Get** /api/v2/knowledge/sources/{sourceId}/synchronizations | Get synchronizations of a source. |
+| [**GetKnowledgeSources**](#GetKnowledgeSources) | **Get** /api/v2/knowledge/sources | List sources |
+| [**GetKnowledgeSourcesSynchronizations**](#GetKnowledgeSourcesSynchronizations) | **Get** /api/v2/knowledge/sources/synchronizations | Get synchronizations of all sources of the organization. |
+| [**PatchKnowledgeConnection**](#PatchKnowledgeConnection) | **Patch** /api/v2/knowledge/connections/{connectionId} | Update connection |
 | [**PatchKnowledgeGuestSessionDocumentsSearchSearchId**](#PatchKnowledgeGuestSessionDocumentsSearchSearchId) | **Patch** /api/v2/knowledge/guest/sessions/{sessionId}/documents/search/{searchId} | Update search result. |
 | [**PatchKnowledgeKnowledgebase**](#PatchKnowledgeKnowledgebase) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId} | Update knowledge base |
 | [**PatchKnowledgeKnowledgebaseCategory**](#PatchKnowledgeKnowledgebaseCategory) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/categories/{categoryId} | Update category |
@@ -66,6 +77,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchKnowledgeKnowledgebaseSynchronizeJob**](#PatchKnowledgeKnowledgebaseSynchronizeJob) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/synchronize/jobs/{syncJobId} | Update synchronization job |
 | [**PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup**](#PatchKnowledgeKnowledgebaseUnansweredGroupPhrasegroup) | **Patch** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/unanswered/groups/{groupId}/phrasegroups/{phraseGroupId} | Update a Knowledge base unanswered phrase group |
 | [**PatchKnowledgeSetting**](#PatchKnowledgeSetting) | **Patch** /api/v2/knowledge/settings/{knowledgeSettingId} | Update Knowledge setting. |
+| [**PatchKnowledgeSourceSynchronization**](#PatchKnowledgeSourceSynchronization) | **Patch** /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId} | Update synchronization. |
+| [**PostKnowledgeConnections**](#PostKnowledgeConnections) | **Post** /api/v2/knowledge/connections | Create new connection |
 | [**PostKnowledgeDocumentuploads**](#PostKnowledgeDocumentuploads) | **Post** /api/v2/knowledge/documentuploads | Creates a presigned URL for uploading a knowledge import file with a set of documents |
 | [**PostKnowledgeGuestSessionDocumentCopies**](#PostKnowledgeGuestSessionDocumentCopies) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/copies | Indicate that the document was copied by the user. |
 | [**PostKnowledgeGuestSessionDocumentFeedback**](#PostKnowledgeGuestSessionDocumentFeedback) | **Post** /api/v2/knowledge/guest/sessions/{sessionId}/documents/{documentId}/feedback | Give feedback on a document |
@@ -106,9 +119,75 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostKnowledgeSearch**](#PostKnowledgeSearch) | **Post** /api/v2/knowledge/search | Get Knowledge Search |
 | [**PostKnowledgeSearchPreview**](#PostKnowledgeSearchPreview) | **Post** /api/v2/knowledge/search/preview | Get Knowledge Search Preview |
 | [**PostKnowledgeSettings**](#PostKnowledgeSettings) | **Post** /api/v2/knowledge/settings | Create Knowledge setting. |
+| [**PostKnowledgeSourceSynchronizationUploads**](#PostKnowledgeSourceSynchronizationUploads) | **Post** /api/v2/knowledge/sources/{sourceId}/synchronizations/{synchronizationId}/uploads | Create presigned URL for uploading a file in the synchronization. |
+| [**PostKnowledgeSourceSynchronizations**](#PostKnowledgeSourceSynchronizations) | **Post** /api/v2/knowledge/sources/{sourceId}/synchronizations | Start a manual synchronization from a source. |
+| [**PostKnowledgeSources**](#PostKnowledgeSources) | **Post** /api/v2/knowledge/sources | Create a new source |
 | [**PutKnowledgeKnowledgebaseSourcesSalesforceSourceId**](#PutKnowledgeKnowledgebaseSourcesSalesforceSourceId) | **Put** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/salesforce/{sourceId} | Update Salesforce Knowledge integration source |
 | [**PutKnowledgeKnowledgebaseSourcesServicenowSourceId**](#PutKnowledgeKnowledgebaseSourcesServicenowSourceId) | **Put** /api/v2/knowledge/knowledgebases/{knowledgeBaseId}/sources/servicenow/{sourceId} | Update ServiceNow Knowledge integration source |
+| [**PutKnowledgeSource**](#PutKnowledgeSource) | **Put** /api/v2/knowledge/sources/{sourceId} | Update the source |
 
+
+
+## DeleteKnowledgeConnection
+
+> [**ConnectionResponse**](ConnectionResponse) DeleteKnowledgeConnection (string connectionId)
+
+
+Delete connection
+
+Requires ALL permissions: 
+
+* knowledge:connection:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeConnectionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var connectionId = connectionId_example;  // string | Connection ID
+
+            try
+            { 
+                // Delete connection
+                ConnectionResponse result = apiInstance.DeleteKnowledgeConnection(connectionId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeConnection: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **connectionId** | **string**| Connection ID |  |
+
+### Return type
+
+[**ConnectionResponse**](ConnectionResponse)
 
 
 ## DeleteKnowledgeKnowledgebase
@@ -804,6 +883,252 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+
+## DeleteKnowledgeSource
+
+> void DeleteKnowledgeSource (string sourceId)
+
+
+Delete source
+
+Requires ALL permissions: 
+
+* knowledge:source:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteKnowledgeSourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var sourceId = sourceId_example;  // string | Source ID
+
+            try
+            { 
+                // Delete source
+                apiInstance.DeleteKnowledgeSource(sourceId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.DeleteKnowledgeSource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Source ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## GetKnowledgeConnection
+
+> [**ConnectionResponse**](ConnectionResponse) GetKnowledgeConnection (string connectionId, List<string> expand = null)
+
+
+Get connection
+
+Requires ALL permissions: 
+
+* knowledge:connection:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeConnectionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var connectionId = connectionId_example;  // string | Connection ID
+            var expand = new List<string>(); // List<string> | The specified entity attributes will be filled. Comma separated values expected. (optional) 
+
+            try
+            { 
+                // Get connection
+                ConnectionResponse result = apiInstance.GetKnowledgeConnection(connectionId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeConnection: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **connectionId** | **string**| Connection ID |  |
+| **expand** | [**List<string>**](string)| The specified entity attributes will be filled. Comma separated values expected. | [optional] <br />**Values**: authenticationProperties |
+
+### Return type
+
+[**ConnectionResponse**](ConnectionResponse)
+
+
+## GetKnowledgeConnectionOptions
+
+> [**ConnectionOptionListing**](ConnectionOptionListing) GetKnowledgeConnectionOptions (string connectionId, string parentId = null)
+
+
+Get connection options
+
+Requires ALL permissions: 
+
+* knowledge:connectionOptions:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeConnectionOptionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var connectionId = connectionId_example;  // string | Connection ID
+            var parentId = parentId_example;  // string | The id of the parent option whose children to be listed. (optional) 
+
+            try
+            { 
+                // Get connection options
+                ConnectionOptionListing result = apiInstance.GetKnowledgeConnectionOptions(connectionId, parentId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeConnectionOptions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **connectionId** | **string**| Connection ID |  |
+| **parentId** | **string**| The id of the parent option whose children to be listed. | [optional]  |
+
+### Return type
+
+[**ConnectionOptionListing**](ConnectionOptionListing)
+
+
+## GetKnowledgeConnections
+
+> [**ConnectionListing**](ConnectionListing) GetKnowledgeConnections ()
+
+
+Get connections
+
+Requires ALL permissions: 
+
+* knowledge:connection:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeConnectionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+
+            try
+            { 
+                // Get connections
+                ConnectionListing result = apiInstance.GetKnowledgeConnections();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeConnections: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**ConnectionListing**](ConnectionListing)
 
 
 ## GetKnowledgeGuestSessionCategories
@@ -3217,6 +3542,394 @@ namespace Example
 [**KnowledgeSettingListing**](KnowledgeSettingListing)
 
 
+## GetKnowledgeSource
+
+> [**V3SourceDetailedWithErrorResponse**](V3SourceDetailedWithErrorResponse) GetKnowledgeSource (string sourceId, List<string> expand = null)
+
+
+Get source
+
+Requires ALL permissions: 
+
+* knowledge:source:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeSourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var sourceId = sourceId_example;  // string | Source ID
+            var expand = new List<string>(); // List<string> | Optional fields to expand for the Source. (optional) 
+
+            try
+            { 
+                // Get source
+                V3SourceDetailedWithErrorResponse result = apiInstance.GetKnowledgeSource(sourceId, expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeSource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Source ID |  |
+| **expand** | [**List<string>**](string)| Optional fields to expand for the Source. | [optional] <br />**Values**: lastSync, filterDetails |
+
+### Return type
+
+[**V3SourceDetailedWithErrorResponse**](V3SourceDetailedWithErrorResponse)
+
+
+## GetKnowledgeSourceSynchronization
+
+> [**V3Synchronization**](V3Synchronization) GetKnowledgeSourceSynchronization (string sourceId, string synchronizationId)
+
+
+Get a specific synchronization of a source.
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeSourceSynchronizationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var sourceId = sourceId_example;  // string | Source ID
+            var synchronizationId = synchronizationId_example;  // string | Synchronization ID
+
+            try
+            { 
+                // Get a specific synchronization of a source.
+                V3Synchronization result = apiInstance.GetKnowledgeSourceSynchronization(sourceId, synchronizationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeSourceSynchronization: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Source ID |  |
+| **synchronizationId** | **string**| Synchronization ID |  |
+
+### Return type
+
+[**V3Synchronization**](V3Synchronization)
+
+
+## GetKnowledgeSourceSynchronizations
+
+> [**V3SynchronizationListing**](V3SynchronizationListing) GetKnowledgeSourceSynchronizations (string sourceId, string before = null, string after = null, string pageSize = null)
+
+
+Get synchronizations of a source.
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeSourceSynchronizationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var sourceId = sourceId_example;  // string | Source ID
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+
+            try
+            { 
+                // Get synchronizations of a source.
+                V3SynchronizationListing result = apiInstance.GetKnowledgeSourceSynchronizations(sourceId, before, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeSourceSynchronizations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Source ID |  |
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+
+### Return type
+
+[**V3SynchronizationListing**](V3SynchronizationListing)
+
+
+## GetKnowledgeSources
+
+> [**V3SourceWithErrorListing**](V3SourceWithErrorListing) GetKnowledgeSources (List<string> expand = null)
+
+
+List sources
+
+Requires ALL permissions: 
+
+* knowledge:source:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeSourcesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var expand = new List<string>(); // List<string> | Optional fields to expand for the Source. (optional) 
+
+            try
+            { 
+                // List sources
+                V3SourceWithErrorListing result = apiInstance.GetKnowledgeSources(expand);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeSources: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **expand** | [**List<string>**](string)| Optional fields to expand for the Source. | [optional] <br />**Values**: lastSync |
+
+### Return type
+
+[**V3SourceWithErrorListing**](V3SourceWithErrorListing)
+
+
+## GetKnowledgeSourcesSynchronizations
+
+> [**V3SynchronizationListing**](V3SynchronizationListing) GetKnowledgeSourcesSynchronizations (string before = null, string after = null, string pageSize = null)
+
+
+Get synchronizations of all sources of the organization.
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetKnowledgeSourcesSynchronizationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+
+            try
+            { 
+                // Get synchronizations of all sources of the organization.
+                V3SynchronizationListing result = apiInstance.GetKnowledgeSourcesSynchronizations(before, after, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.GetKnowledgeSourcesSynchronizations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+
+### Return type
+
+[**V3SynchronizationListing**](V3SynchronizationListing)
+
+
+## PatchKnowledgeConnection
+
+> [**ConnectionResponse**](ConnectionResponse) PatchKnowledgeConnection (string connectionId, ConnectionUpdateRequest body = null)
+
+
+Update connection
+
+Requires ALL permissions: 
+
+* knowledge:connection:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeConnectionExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var connectionId = connectionId_example;  // string | Connection ID
+            var body = new ConnectionUpdateRequest(); // ConnectionUpdateRequest |  (optional) 
+
+            try
+            { 
+                // Update connection
+                ConnectionResponse result = apiInstance.PatchKnowledgeConnection(connectionId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeConnection: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **connectionId** | **string**| Connection ID |  |
+| **body** | [**ConnectionUpdateRequest**](ConnectionUpdateRequest)|  | [optional]  |
+
+### Return type
+
+[**ConnectionResponse**](ConnectionResponse)
+
+
 ## PatchKnowledgeGuestSessionDocumentsSearchSearchId
 
 > void PatchKnowledgeGuestSessionDocumentsSearchSearchId (string sessionId, string searchId, SearchUpdateRequest body)
@@ -4131,6 +4844,134 @@ namespace Example
 ### Return type
 
 [**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
+
+
+## PatchKnowledgeSourceSynchronization
+
+> [**V3Synchronization**](V3Synchronization) PatchKnowledgeSourceSynchronization (string sourceId, string synchronizationId, V3SynchronizationUpdateRequest body)
+
+
+Update synchronization.
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchKnowledgeSourceSynchronizationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var sourceId = sourceId_example;  // string | Source ID
+            var synchronizationId = synchronizationId_example;  // string | Synchronization ID
+            var body = new V3SynchronizationUpdateRequest(); // V3SynchronizationUpdateRequest | 
+
+            try
+            { 
+                // Update synchronization.
+                V3Synchronization result = apiInstance.PatchKnowledgeSourceSynchronization(sourceId, synchronizationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PatchKnowledgeSourceSynchronization: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Source ID |  |
+| **synchronizationId** | **string**| Synchronization ID |  |
+| **body** | [**V3SynchronizationUpdateRequest**](V3SynchronizationUpdateRequest)|  |  |
+
+### Return type
+
+[**V3Synchronization**](V3Synchronization)
+
+
+## PostKnowledgeConnections
+
+> [**ConnectionCreateResponse**](ConnectionCreateResponse) PostKnowledgeConnections (ConnectionCreateRequest body)
+
+
+Create new connection
+
+Requires ALL permissions: 
+
+* knowledge:connection:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeConnectionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var body = new ConnectionCreateRequest(); // ConnectionCreateRequest | 
+
+            try
+            { 
+                // Create new connection
+                ConnectionCreateResponse result = apiInstance.PostKnowledgeConnections(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeConnections: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ConnectionCreateRequest**](ConnectionCreateRequest)|  |  |
+
+### Return type
+
+[**ConnectionCreateResponse**](ConnectionCreateResponse)
 
 
 ## PostKnowledgeDocumentuploads
@@ -6648,6 +7489,198 @@ namespace Example
 [**KnowledgeSettingsResponse**](KnowledgeSettingsResponse)
 
 
+## PostKnowledgeSourceSynchronizationUploads
+
+> [**V3SynchronizationUploadUrlResponse**](V3SynchronizationUploadUrlResponse) PostKnowledgeSourceSynchronizationUploads (string sourceId, string synchronizationId, V3SynchronizationUploadUrlRequest body)
+
+
+Create presigned URL for uploading a file in the synchronization.
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:upload
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeSourceSynchronizationUploadsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var sourceId = sourceId_example;  // string | Source ID
+            var synchronizationId = synchronizationId_example;  // string | Synchronization ID
+            var body = new V3SynchronizationUploadUrlRequest(); // V3SynchronizationUploadUrlRequest | 
+
+            try
+            { 
+                // Create presigned URL for uploading a file in the synchronization.
+                V3SynchronizationUploadUrlResponse result = apiInstance.PostKnowledgeSourceSynchronizationUploads(sourceId, synchronizationId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeSourceSynchronizationUploads: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Source ID |  |
+| **synchronizationId** | **string**| Synchronization ID |  |
+| **body** | [**V3SynchronizationUploadUrlRequest**](V3SynchronizationUploadUrlRequest)|  |  |
+
+### Return type
+
+[**V3SynchronizationUploadUrlResponse**](V3SynchronizationUploadUrlResponse)
+
+
+## PostKnowledgeSourceSynchronizations
+
+> [**V3Synchronization**](V3Synchronization) PostKnowledgeSourceSynchronizations (string sourceId, V3StartManualSyncRequest body = null)
+
+
+Start a manual synchronization from a source.
+
+Requires ALL permissions: 
+
+* knowledge:synchronization:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeSourceSynchronizationsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var sourceId = sourceId_example;  // string | Source ID
+            var body = new V3StartManualSyncRequest(); // V3StartManualSyncRequest |  (optional) 
+
+            try
+            { 
+                // Start a manual synchronization from a source.
+                V3Synchronization result = apiInstance.PostKnowledgeSourceSynchronizations(sourceId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeSourceSynchronizations: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Source ID |  |
+| **body** | [**V3StartManualSyncRequest**](V3StartManualSyncRequest)|  | [optional]  |
+
+### Return type
+
+[**V3Synchronization**](V3Synchronization)
+
+
+## PostKnowledgeSources
+
+> [**V3SourceDetailedResponse**](V3SourceDetailedResponse) PostKnowledgeSources (V3SourceCreateRequest body)
+
+
+Create a new source
+
+Requires ALL permissions: 
+
+* knowledge:source:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostKnowledgeSourcesExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var body = new V3SourceCreateRequest(); // V3SourceCreateRequest | 
+
+            try
+            { 
+                // Create a new source
+                V3SourceDetailedResponse result = apiInstance.PostKnowledgeSources(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PostKnowledgeSources: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**V3SourceCreateRequest**](V3SourceCreateRequest)|  |  |
+
+### Return type
+
+[**V3SourceDetailedResponse**](V3SourceDetailedResponse)
+
+
 ## PutKnowledgeKnowledgebaseSourcesSalesforceSourceId
 
 > [**SalesforceSourceResponse**](SalesforceSourceResponse) PutKnowledgeKnowledgebaseSourcesSalesforceSourceId (string knowledgeBaseId, string sourceId, SalesforceSourceRequest body)
@@ -6780,4 +7813,68 @@ namespace Example
 [**ServiceNowSourceResponse**](ServiceNowSourceResponse)
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+## PutKnowledgeSource
+
+> [**V3SourceDetailedResponse**](V3SourceDetailedResponse) PutKnowledgeSource (string sourceId, V3SourceUpdateRequest body)
+
+
+Update the source
+
+Requires ALL permissions: 
+
+* knowledge:source:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutKnowledgeSourceExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new KnowledgeApi();
+            var sourceId = sourceId_example;  // string | Source ID
+            var body = new V3SourceUpdateRequest(); // V3SourceUpdateRequest | 
+
+            try
+            { 
+                // Update the source
+                V3SourceDetailedResponse result = apiInstance.PutKnowledgeSource(sourceId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling KnowledgeApi.PutKnowledgeSource: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **sourceId** | **string**| Source ID |  |
+| **body** | [**V3SourceUpdateRequest**](V3SourceUpdateRequest)|  |  |
+
+### Return type
+
+[**V3SourceDetailedResponse**](V3SourceDetailedResponse)
+
+
+_PureCloudPlatform.Client.V2 260.0.0_

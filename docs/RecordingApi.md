@@ -79,6 +79,7 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recordingSegment:view
 * recording:snippetRecording:view
+* recording:screenRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -517,6 +518,7 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recordingSegment:view
 * recording:snippetRecording:view
+* recording:screenRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -600,6 +602,7 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recordingSegment:view
 * recording:snippetRecording:view
+* recording:screenRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -669,6 +672,7 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recordingSegment:view
 * recording:snippetRecording:view
+* recording:screenRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -735,6 +739,7 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recordingSegment:view
 * recording:snippetRecording:view
+* recording:screenRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -799,6 +804,7 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recordingSegment:view
 * recording:snippetRecording:view
+* recording:screenRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -865,6 +871,7 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recordingSegment:view
 * recording:snippetRecording:view
+* recording:screenRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2333,6 +2340,7 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recordingSegment:view
 * recording:snippetRecording:view
+* recording:screenRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -2401,6 +2409,7 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recordingSegment:view
 * recording:snippetRecording:view
+* recording:screenRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3144,6 +3153,7 @@ Requires ANY permissions:
 
 * recording:recording:view
 * recording:recording:editRetention
+* recording:screenRecording:view
 * recording:screenRecording:editRetention
 * recording:snippetRecording:view
 * recording:snippetRecording:editRetention
@@ -3218,6 +3228,7 @@ Requires ANY permissions:
 * recording:recording:view
 * recording:recordingSegment:view
 * recording:snippetRecording:view
+* recording:screenRecording:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3798,4 +3809,4 @@ namespace Example
 void (empty response body)
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

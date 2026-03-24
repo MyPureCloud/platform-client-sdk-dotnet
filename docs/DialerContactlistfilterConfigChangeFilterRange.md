@@ -12,8 +12,7 @@
 | **MaxInclusive** | **bool?** | Whether or not to include the maximum in the range | [optional] |
 | **InSet** | **List&lt;string&gt;** | Elements that apply to the IN operator | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-| **GetAdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

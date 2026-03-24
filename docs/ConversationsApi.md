@@ -5213,7 +5213,7 @@ namespace Example
 
 ## GetConversationsEmailMessages
 
-> [**EmailMessagePreviewListing**](EmailMessagePreviewListing) GetConversationsEmailMessages (string conversationId)
+> [**EmailMessagePreviewListing**](EmailMessagePreviewListing) GetConversationsEmailMessages (string conversationId, bool? includeAgentlessStitchedMessages = null)
 
 
 Get conversation messages
@@ -5244,11 +5244,12 @@ namespace Example
 
             var apiInstance = new ConversationsApi();
             var conversationId = conversationId_example;  // string | conversationId
+            var includeAgentlessStitchedMessages = true;  // bool? | Whether to include Agentless 'api' type of messages, on stitched conversations. If you provide a conversationId in the agentless email request (/api/v2/conversations/emails/agentless) that matches an existing conversation, then that's a stitched agentless message. (optional)  (default to false)
 
             try
             { 
                 // Get conversation messages
-                EmailMessagePreviewListing result = apiInstance.GetConversationsEmailMessages(conversationId);
+                EmailMessagePreviewListing result = apiInstance.GetConversationsEmailMessages(conversationId, includeAgentlessStitchedMessages);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -5266,6 +5267,7 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **conversationId** | **string**| conversationId |  |
+| **includeAgentlessStitchedMessages** | **bool?**| Whether to include Agentless &#39;api&#39; type of messages, on stitched conversations. If you provide a conversationId in the agentless email request (/api/v2/conversations/emails/agentless) that matches an existing conversation, then that&#39;s a stitched agentless message. | [optional] [default to false] |
 
 ### Return type
 
@@ -20816,7 +20818,7 @@ namespace Example
                 "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
 
             var apiInstance = new ConversationsApi();
-            var body = new SupportedContentReference(); // SupportedContentReference | SupportedContent
+            var body = new SupportedContentReference(); // SupportedContentReference | Reference to supported content profile
 
             try
             { 
@@ -20838,7 +20840,7 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **body** | [**SupportedContentReference**](SupportedContentReference)| SupportedContent |  |
+| **body** | [**SupportedContentReference**](SupportedContentReference)| Reference to supported content profile |  |
 
 ### Return type
 
@@ -21106,4 +21108,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

@@ -17,6 +17,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetResponsemanagementResponses**](#GetResponsemanagementResponses) | **Get** /api/v2/responsemanagement/responses | Gets a list of existing responses. |
 | [**PostResponsemanagementLibraries**](#PostResponsemanagementLibraries) | **Post** /api/v2/responsemanagement/libraries | Create a response library. |
 | [**PostResponsemanagementLibrariesBulk**](#PostResponsemanagementLibrariesBulk) | **Post** /api/v2/responsemanagement/libraries/bulk | Get response libraries. |
+| [**PostResponsemanagementLibrariesQuery**](#PostResponsemanagementLibrariesQuery) | **Post** /api/v2/responsemanagement/libraries/query | Query libraries using criteria. Users can set DivisionId parameter as &#39;*&#39; to fetch libraries that aren&#39;t associated with any divisions. |
+| [**PostResponsemanagementResponseassetsBulk**](#PostResponsemanagementResponseassetsBulk) | **Post** /api/v2/responsemanagement/responseassets/bulk | Get response assets. |
 | [**PostResponsemanagementResponseassetsSearch**](#PostResponsemanagementResponseassetsSearch) | **Post** /api/v2/responsemanagement/responseassets/search | Search response assets |
 | [**PostResponsemanagementResponseassetsUploads**](#PostResponsemanagementResponseassetsUploads) | **Post** /api/v2/responsemanagement/responseassets/uploads | Creates pre-signed url for uploading response asset |
 | [**PostResponsemanagementResponses**](#PostResponsemanagementResponses) | **Post** /api/v2/responsemanagement/responses | Create a response. |
@@ -724,6 +726,136 @@ namespace Example
 [**LibraryEntityListing**](LibraryEntityListing)
 
 
+## PostResponsemanagementLibrariesQuery
+
+> [**LibraryEntityListing**](LibraryEntityListing) PostResponsemanagementLibrariesQuery (QueryCriteriaQuery body, int? pageNumber = null, int? pageSize = null)
+
+
+Query libraries using criteria. Users can set DivisionId parameter as '*' to fetch libraries that aren't associated with any divisions.
+
+PostResponsemanagementLibrariesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* responses:library:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostResponsemanagementLibrariesQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var body = new QueryCriteriaQuery(); // QueryCriteriaQuery | Query criteria
+            var pageNumber = 56;  // int? | Page number (optional)  (default to 1)
+            var pageSize = 56;  // int? | Page size (optional)  (default to 25)
+
+            try
+            { 
+                // Query libraries using criteria. Users can set DivisionId parameter as '*' to fetch libraries that aren't associated with any divisions.
+                LibraryEntityListing result = apiInstance.PostResponsemanagementLibrariesQuery(body, pageNumber, pageSize);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.PostResponsemanagementLibrariesQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**QueryCriteriaQuery**](QueryCriteriaQuery)| Query criteria |  |
+| **pageNumber** | **int?**| Page number | [optional] [default to 1] |
+| **pageSize** | **int?**| Page size | [optional] [default to 25] |
+
+### Return type
+
+[**LibraryEntityListing**](LibraryEntityListing)
+
+
+## PostResponsemanagementResponseassetsBulk
+
+> [**ResponseAssetEntityListing**](ResponseAssetEntityListing) PostResponsemanagementResponseassetsBulk (ResponseAssetBulkRequest body)
+
+
+Get response assets.
+
+Requires ANY permissions: 
+
+* responseAssets:asset:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostResponsemanagementResponseassetsBulkExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ResponseManagementApi();
+            var body = new ResponseAssetBulkRequest(); // ResponseAssetBulkRequest | Asset IDs (max allowed 50)
+
+            try
+            { 
+                // Get response assets.
+                ResponseAssetEntityListing result = apiInstance.PostResponsemanagementResponseassetsBulk(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ResponseManagementApi.PostResponsemanagementResponseassetsBulk: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**ResponseAssetBulkRequest**](ResponseAssetBulkRequest)| Asset IDs (max allowed 50) |  |
+
+### Return type
+
+[**ResponseAssetEntityListing**](ResponseAssetEntityListing)
+
+
 ## PostResponsemanagementResponseassetsSearch
 
 > [**ResponseAssetSearchResults**](ResponseAssetSearchResults) PostResponsemanagementResponseassetsSearch (ResponseAssetSearchRequest body, List<string> expand = null)
@@ -1174,4 +1306,4 @@ namespace Example
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

@@ -14,7 +14,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteOutboundCampaignrule**](#DeleteOutboundCampaignrule) | **Delete** /api/v2/outbound/campaignrules/{campaignRuleId} | Delete Campaign Rule |
 | [**DeleteOutboundContactlist**](#DeleteOutboundContactlist) | **Delete** /api/v2/outbound/contactlists/{contactListId} | Delete a contact list. |
 | [**DeleteOutboundContactlistContact**](#DeleteOutboundContactlistContact) | **Delete** /api/v2/outbound/contactlists/{contactListId}/contacts/{contactId} | Delete a contact. |
-| [**DeleteOutboundContactlistContacts**](#DeleteOutboundContactlistContacts) | **Delete** /api/v2/outbound/contactlists/{contactListId}/contacts | Delete contacts from a contact list. |
+| [**DeleteOutboundContactlistContacts**](#DeleteOutboundContactlistContacts) | **Delete** /api/v2/outbound/contactlists/{contactListId}/contacts | Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted |
 | [**DeleteOutboundContactlistfilter**](#DeleteOutboundContactlistfilter) | **Delete** /api/v2/outbound/contactlistfilters/{contactListFilterId} | Delete Contact List Filter |
 | [**DeleteOutboundContactlists**](#DeleteOutboundContactlists) | **Delete** /api/v2/outbound/contactlists | Delete multiple contact lists. |
 | [**DeleteOutboundContactlisttemplate**](#DeleteOutboundContactlisttemplate) | **Delete** /api/v2/outbound/contactlisttemplates/{contactListTemplateId} | Delete Contact List Template |
@@ -73,6 +73,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetOutboundContactlistsDivisionviews**](#GetOutboundContactlistsDivisionviews) | **Get** /api/v2/outbound/contactlists/divisionviews | Query a list of simplified contact list objects. |
 | [**GetOutboundContactlisttemplate**](#GetOutboundContactlisttemplate) | **Get** /api/v2/outbound/contactlisttemplates/{contactListTemplateId} | Get Contact List Template |
 | [**GetOutboundContactlisttemplates**](#GetOutboundContactlisttemplates) | **Get** /api/v2/outbound/contactlisttemplates | Query a list of contact list templates |
+| [**GetOutboundDiagnosticsCampaignSummary**](#GetOutboundDiagnosticsCampaignSummary) | **Get** /api/v2/outbound/diagnostics/campaigns/{campaignId}/summary | Get diagnostic summary for a single campaign |
 | [**GetOutboundDigitalruleset**](#GetOutboundDigitalruleset) | **Get** /api/v2/outbound/digitalrulesets/{digitalRuleSetId} | Get an Outbound Digital Rule Set |
 | [**GetOutboundDigitalrulesets**](#GetOutboundDigitalrulesets) | **Get** /api/v2/outbound/digitalrulesets | Query a list of Outbound Digital Rule Sets |
 | [**GetOutboundDnclist**](#GetOutboundDnclist) | **Get** /api/v2/outbound/dnclists/{dncListId} | Get dialer DNC list |
@@ -681,7 +682,7 @@ void (empty response body)
 > void DeleteOutboundContactlistContacts (string contactListId, List<string> contactIds)
 
 
-Delete contacts from a contact list.
+Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted
 
 Requires ANY permissions: 
 
@@ -714,7 +715,7 @@ namespace Example
 
             try
             { 
-                // Delete contacts from a contact list.
+                // Delete contacts from a contact list. Only contacts that are not in use by any campaign will be deleted
                 apiInstance.DeleteOutboundContactlistContacts(contactListId, contactIds);
             }
             catch (Exception e)
@@ -4558,6 +4559,72 @@ namespace Example
 ### Return type
 
 [**ContactListTemplateEntityListing**](ContactListTemplateEntityListing)
+
+
+## GetOutboundDiagnosticsCampaignSummary
+
+> [**CampaignDiagnosticSummary**](CampaignDiagnosticSummary) GetOutboundDiagnosticsCampaignSummary (string campaignId, string start, string end)
+
+
+Get diagnostic summary for a single campaign
+
+Requires ANY permissions: 
+
+* outbound:campaignDiagnostic:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetOutboundDiagnosticsCampaignSummaryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new OutboundApi();
+            var campaignId = campaignId_example;  // string | Campaign ID
+            var start = start_example;  // string | Start datetime (ISO 8601 or Unix epoch)
+            var end = end_example;  // string | End datetime (ISO 8601 or Unix epoch)
+
+            try
+            { 
+                // Get diagnostic summary for a single campaign
+                CampaignDiagnosticSummary result = apiInstance.GetOutboundDiagnosticsCampaignSummary(campaignId, start, end);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling OutboundApi.GetOutboundDiagnosticsCampaignSummary: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **campaignId** | **string**| Campaign ID |  |
+| **start** | **string**| Start datetime (ISO 8601 or Unix epoch) |  |
+| **end** | **string**| End datetime (ISO 8601 or Unix epoch) |  |
+
+### Return type
+
+[**CampaignDiagnosticSummary**](CampaignDiagnosticSummary)
 
 
 ## GetOutboundDigitalruleset
@@ -11539,4 +11606,4 @@ namespace Example
 [**WrapUpCodeMapping**](WrapUpCodeMapping)
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

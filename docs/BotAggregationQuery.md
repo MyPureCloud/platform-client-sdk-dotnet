@@ -15,7 +15,10 @@
 | **FlattenMultivaluedDimensions** | **bool?** | Flattens any multivalued dimensions used in response groups (e.g. [&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]-&gt;&#39;a,b,c&#39;) | [optional] |
 | **Views** | [**List&lt;BotAggregationView&gt;**](BotAggregationView) | Custom derived metric views | [optional] |
 | **AlternateTimeDimension** | **string** | Dimension to use as the alternative timestamp for data in the aggregate.  Choosing \&quot;eventTime\&quot; uses the actual time of the data event. | [optional] |
+| **QueryType** | **string** | Query type to use. Use groupBy for all matching results, and topN/bottomN for N results ordered by the sortMetric. Default is groupBy. | [optional] |
+| **SortMetric** | [**BotAggregationSort**](BotAggregationSort) | Required when requesting multiple metrics. Only applicable for topN/bottomN query type. | [optional] |
+| **Limit** | **int?** | How many results you want in an ordered list. Only applicable for topN/bottomN query type. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

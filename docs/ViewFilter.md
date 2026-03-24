@@ -239,10 +239,12 @@
 | **SentimentScoreCategories** | **List&lt;string&gt;** | A set of Sentiment Score Categories  for filtering | [optional] |
 | **SentimentTrendCategories** | **List&lt;string&gt;** | A set of Sentiment Trend Categories for filtering | [optional] |
 | **ContentModerationFlags** | **List&lt;string&gt;** | A set of Content Moderation Flags for filtering | [optional] |
+| **SocialSourceTypes** | **List&lt;string&gt;** | A set of Source Types for social filtering | [optional] |
 | **SessionExpired** | **bool?** | Filter to indicate for if session is expired | [optional] |
 | **EngagementSources** | **List&lt;string&gt;** | The engagement sources used to filter the view | [optional] |
 | **IsSnippetRecorded** | **bool?** | Indicates filtering for snippet recorded | [optional] |
+| **Takeover** | **bool?** | Indicates filtering for takeover | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

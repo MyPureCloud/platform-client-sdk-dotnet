@@ -171,6 +171,8 @@ void (empty response body)
 
 Delete a decision table row
 
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
 Requires ALL permissions: 
 
 * businessrules:decisionTableRow:delete
@@ -1004,6 +1006,8 @@ This endpoint does require any parameters.
 
 Update a decision table
 
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
 Requires ALL permissions: 
 
 * businessrules:decisionTable:edit
@@ -1332,6 +1336,8 @@ namespace Example
 
 Create a decision table row
 
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
 Requires ALL permissions: 
 
 * businessrules:decisionTableRow:add
@@ -1595,6 +1601,8 @@ namespace Example
 
 Create a decision table
 
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
 Requires ALL permissions: 
 
 * businessrules:decisionTable:add
@@ -1785,6 +1793,8 @@ namespace Example
 
 Full update a decision table row
 
+Required permissions depend on table content: if the table or row contains queue references, routing:queue:view is required in each queue's division. Future platform objects will require their associated permissions in the relevant divisions when the table or row contains references to them.
+
 Requires ALL permissions: 
 
 * businessrules:decisionTableRow:edit
@@ -1911,4 +1921,4 @@ namespace Example
 [**BusinessRulesDataSchema**](BusinessRulesDataSchema)
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_

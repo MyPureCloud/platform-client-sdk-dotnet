@@ -14,8 +14,7 @@
 | **Pattern** | [**MessagingCampaignScheduleConfigChangeRecurrencePattern**](MessagingCampaignScheduleConfigChangeRecurrencePattern) |  | [optional] |
 | **Alterations** | [**List&lt;MessagingCampaignScheduleConfigChangeAlteration&gt;**](MessagingCampaignScheduleConfigChangeAlteration) | modifications to the original recurrence schedule | [optional] |
 | **AdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
-| **GetAdditionalProperties** | **Dictionary&lt;string, Object&gt;** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 259.0.0_
+_PureCloudPlatform.Client.V2 260.0.0_
