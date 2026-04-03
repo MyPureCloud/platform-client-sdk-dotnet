@@ -1,12 +1,12 @@
-# CredentialTypeListing
+# ExternalEventsConfigurationListing
 
-## ININ.PureCloudApi.Model.CredentialTypeListing
+## ININ.PureCloudApi.Model.ExternalEventsConfigurationListing
 
 ## Properties
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Entities** | [**List&lt;CredentialType&gt;**](CredentialType) |  | [optional] |
+| **Entities** | [**List&lt;ExternalEventsConfiguration&gt;**](ExternalEventsConfiguration) |  | [optional] |
 | **PageSize** | **int?** |  | [optional] |
 | **PageNumber** | **int?** |  | [optional] |
 | **Total** | **long?** |  | [optional] |
@@ -19,4 +19,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 260.0.0_
+_PureCloudPlatform.Client.V2 261.0.0_

@@ -2300,4 +2300,4 @@ namespace Example
 [**IdentityProvider**](IdentityProvider)
 
 
-_PureCloudPlatform.Client.V2 260.0.0_
+_PureCloudPlatform.Client.V2 261.0.0_

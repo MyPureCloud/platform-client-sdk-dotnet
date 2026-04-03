@@ -2384,7 +2384,7 @@ namespace Example
 
 ## GetIntegrationsCredentialsTypes
 
-> [**CredentialTypeListing**](CredentialTypeListing) GetIntegrationsCredentialsTypes ()
+> [**List&lt;CredentialType&gt;**](CredentialType) GetIntegrationsCredentialsTypes ()
 
 
 List all credential types
@@ -2419,7 +2419,7 @@ namespace Example
             try
             { 
                 // List all credential types
-                CredentialTypeListing result = apiInstance.GetIntegrationsCredentialsTypes();
+                List<CredentialType> result = apiInstance.GetIntegrationsCredentialsTypes();
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2436,7 +2436,7 @@ This endpoint does require any parameters.
 
 ### Return type
 
-[**CredentialTypeListing**](CredentialTypeListing)
+[**List<CredentialType>**](CredentialType)
 
 
 ## GetIntegrationsSpeechAudioconnector
@@ -6145,4 +6145,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 260.0.0_
+_PureCloudPlatform.Client.V2 261.0.0_

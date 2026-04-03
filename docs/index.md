@@ -5,7 +5,7 @@ Platform API Client SDK - .NET
 
 Documentation can be found at https://mypurecloud.github.io/platform-client-sdk-dotnet/
 
-Documentation version PureCloudPlatform.Client.V2 260.0.0
+Documentation version PureCloudPlatform.Client.V2 261.0.0
 
 ## Install Using nuget
 
@@ -462,7 +462,7 @@ When the `useDefaultApiClient` optional parameter is not specified or is set to 
 
         var apiInstance = new UsersApi(configuration);
         var userId = "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx";  // string | User ID
-        User resultUser = apiInstance.GetUser(userId, null, null, null);
+        User resultUser = apiInstance.GetUser(userId, null, null, null, null);
 ```
 
 #### Managing 3xx (Redirect) HTTP Responses

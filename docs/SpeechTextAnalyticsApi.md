@@ -903,9 +903,6 @@ Get sentiment data
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:sentimentData:view
-* speechAndTextAnalytics:data:view
-* recording:recording:view
-* recording:recording:viewSensitiveData
 
 ### Example
 ```{"language":"csharp"}
@@ -968,8 +965,6 @@ Get conversation summaries by conversation id.
 Requires ALL permissions: 
 
 * speechAndTextAnalytics:aiSummary:view
-* recording:recording:view
-* recording:recording:viewSensitiveData
 
 ### Example
 ```{"language":"csharp"}
@@ -4117,4 +4112,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 260.0.0_
+_PureCloudPlatform.Client.V2 261.0.0_
