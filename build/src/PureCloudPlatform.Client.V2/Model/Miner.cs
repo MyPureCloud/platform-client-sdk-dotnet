@@ -211,7 +211,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Trtr for "tr-tr"
             /// </summary>
             [EnumMember(Value = "tr-tr")]
-            Trtr
+            Trtr,
+            
+            /// <summary>
+            /// Enum Heil for "he-il"
+            /// </summary>
+            [EnumMember(Value = "he-il")]
+            Heil,
+            
+            /// <summary>
+            /// Enum Zuza for "zu-za"
+            /// </summary>
+            [EnumMember(Value = "zu-za")]
+            Zuza
         }
         /// <summary>
         /// Type of the miner, intent or topic.

@@ -192,7 +192,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -206,7 +205,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -374,7 +372,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -387,7 +384,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -797,10 +793,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>User</returns>
         
-        User GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        User GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Get user.
@@ -812,10 +809,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>ApiResponse of User</returns>
         
-        ApiResponse<User> GetUserWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        ApiResponse<User> GetUserWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Get adjacents
@@ -872,7 +870,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -886,7 +883,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -900,7 +896,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -914,7 +909,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -1443,10 +1437,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
         
-        UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -1462,10 +1457,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
         
-        ApiResponse<UserEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        ApiResponse<UserEntityListing> GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Get chats for a user
@@ -1500,7 +1496,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -1513,7 +1508,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -1526,7 +1520,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -1540,7 +1533,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -1554,7 +1546,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -1567,7 +1558,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -1580,7 +1570,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DataSchemaListing</returns>
@@ -1592,7 +1581,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataSchemaListing</returns>
@@ -1604,7 +1592,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coreTypeName">Name of the core type</param>
@@ -1617,7 +1604,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coreTypeName">Name of the core type</param>
@@ -1630,7 +1616,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CoretypeListing</returns>
@@ -1642,7 +1627,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CoretypeListing</returns>
@@ -1654,7 +1638,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SchemaQuantityLimits</returns>
@@ -1666,7 +1649,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SchemaQuantityLimits</returns>
@@ -1826,9 +1808,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <returns>UserMe</returns>
         
-        UserMe GetUsersMe (List<string> expand = null, string integrationPresenceSource = null);
+        UserMe GetUsersMe (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null);
 
         /// <summary>
         /// Get current user details.
@@ -1839,9 +1822,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <returns>ApiResponse of UserMe</returns>
         
-        ApiResponse<UserMe> GetUsersMeWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null);
+        ApiResponse<UserMe> GetUsersMeWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null);
 
         /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
@@ -1856,10 +1840,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserCursorEntityListing</returns>
         
-        UserCursorEntityListing GetUsersQuery (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        UserCursorEntityListing GetUsersQuery (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
@@ -1874,10 +1859,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserCursorEntityListing</returns>
         
-        ApiResponse<UserCursorEntityListing> GetUsersQueryWithHttpInfo (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        ApiResponse<UserCursorEntityListing> GetUsersQueryWithHttpInfo (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Search users using the q64 value returned from a previous search
@@ -1964,7 +1950,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -1978,7 +1963,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -1992,7 +1976,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -2006,7 +1989,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -2624,7 +2606,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
@@ -2637,7 +2618,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
@@ -2900,7 +2880,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -2914,7 +2893,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -3192,7 +3170,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -3206,7 +3183,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -3396,7 +3372,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -3410,7 +3385,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -3578,7 +3552,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -3591,7 +3564,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -4001,10 +3973,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of User</returns>
         
-        System.Threading.Tasks.Task<User> GetUserAsync (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        System.Threading.Tasks.Task<User> GetUserAsync (string userId, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Get user.
@@ -4016,10 +3989,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (User)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<User>> GetUserAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        System.Threading.Tasks.Task<ApiResponse<User>> GetUserAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Get adjacents
@@ -4076,7 +4050,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -4090,7 +4063,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -4104,7 +4076,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -4118,7 +4089,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -4647,10 +4617,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
         
-        System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Get the list of available users.
@@ -4666,10 +4637,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Get chats for a user
@@ -4704,7 +4676,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -4717,7 +4688,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -4730,7 +4700,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -4744,7 +4713,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -4758,7 +4726,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -4771,7 +4738,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -4784,7 +4750,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DataSchemaListing</returns>
@@ -4796,7 +4761,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
@@ -4808,7 +4772,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coreTypeName">Name of the core type</param>
@@ -4821,7 +4784,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coreTypeName">Name of the core type</param>
@@ -4834,7 +4796,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CoretypeListing</returns>
@@ -4846,7 +4807,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CoretypeListing)</returns>
@@ -4858,7 +4818,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SchemaQuantityLimits</returns>
@@ -4870,7 +4829,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SchemaQuantityLimits)</returns>
@@ -5030,9 +4988,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <returns>Task of UserMe</returns>
         
-        System.Threading.Tasks.Task<UserMe> GetUsersMeAsync (List<string> expand = null, string integrationPresenceSource = null);
+        System.Threading.Tasks.Task<UserMe> GetUsersMeAsync (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null);
 
         /// <summary>
         /// Get current user details.
@@ -5043,9 +5002,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <returns>Task of ApiResponse (UserMe)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null);
+        System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null);
 
         /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
@@ -5060,10 +5020,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserCursorEntityListing</returns>
         
-        System.Threading.Tasks.Task<UserCursorEntityListing> GetUsersQueryAsync (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        System.Threading.Tasks.Task<UserCursorEntityListing> GetUsersQueryAsync (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
@@ -5078,10 +5039,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserCursorEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<UserCursorEntityListing>> GetUsersQueryAsyncWithHttpInfo (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null);
+        System.Threading.Tasks.Task<ApiResponse<UserCursorEntityListing>> GetUsersQueryAsyncWithHttpInfo (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null);
 
         /// <summary>
         /// Search users using the q64 value returned from a previous search
@@ -5168,7 +5130,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -5182,7 +5143,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -5196,7 +5156,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -5210,7 +5169,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -5828,7 +5786,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
@@ -5841,7 +5798,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
@@ -6104,7 +6060,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -6118,7 +6073,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -6396,7 +6350,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -6410,7 +6363,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -7954,7 +7906,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a custom attributes record. 
         /// 
-        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -7969,7 +7920,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a custom attributes record. 
         /// 
-        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -8062,7 +8012,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a custom attributes record. 
         /// 
-        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -8078,7 +8027,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a custom attributes record. 
         /// 
-        /// DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -9457,7 +9405,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a schema 
         /// 
-        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -9471,7 +9418,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a schema 
         /// 
-        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -9559,7 +9505,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a schema 
         /// 
-        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -9574,7 +9519,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Delete a schema 
         /// 
-        /// DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -12815,12 +12759,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>User</returns>
         
-        public User GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public User GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         {
-             ApiResponse<User> localVarResponse = GetUserWithHttpInfo(userId, expand, integrationPresenceSource, state);
+             ApiResponse<User> localVarResponse = GetUserWithHttpInfo(userId, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state);
              return localVarResponse.Data;
         }
 
@@ -12832,10 +12777,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>ApiResponse of User</returns>
         
-        public ApiResponse< User > GetUserWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public ApiResponse< User > GetUserWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -12877,6 +12823,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
+            if (userCustomAttributeSchemaIds != null) userCustomAttributeSchemaIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userCustomAttributeSchemaIds", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
@@ -12925,12 +12872,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of User</returns>
         
-        public async System.Threading.Tasks.Task<User> GetUserAsync (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public async System.Threading.Tasks.Task<User> GetUserAsync (string userId, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         {
-             ApiResponse<User> localVarResponse = await GetUserAsyncWithHttpInfo(userId, expand, integrationPresenceSource, state);
+             ApiResponse<User> localVarResponse = await GetUserAsyncWithHttpInfo(userId, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state);
              return localVarResponse.Data;
 
         }
@@ -12943,10 +12891,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="userId">User ID</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for a user instead of their default. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <param name="state">Search for a user with this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (User)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<User>> GetUserAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public async System.Threading.Tasks.Task<ApiResponse<User>> GetUserAsyncWithHttpInfo (string userId, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         { 
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -12989,6 +12938,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
+            if (userCustomAttributeSchemaIds != null) userCustomAttributeSchemaIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userCustomAttributeSchemaIds", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
@@ -13449,7 +13399,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get custom attributes by schema id 
         /// 
-        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -13465,7 +13414,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get custom attributes by schema id 
         /// 
-        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -13558,7 +13506,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get custom attributes by schema id 
         /// 
-        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -13575,7 +13522,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get custom attributes by schema id 
         /// 
-        /// GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -13671,7 +13617,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get multiple custom attributes records by schema ids 
         /// 
-        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -13687,7 +13632,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get multiple custom attributes records by schema ids 
         /// 
-        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -13780,7 +13724,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get multiple custom attributes records by schema ids 
         /// 
-        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -13797,7 +13740,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get multiple custom attributes records by schema ids 
         /// 
-        /// GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -17961,12 +17903,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserEntityListing</returns>
         
-        public UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public UserEntityListing GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, state);
+             ApiResponse<UserEntityListing> localVarResponse = GetUsersWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state);
              return localVarResponse.Data;
         }
 
@@ -17982,10 +17925,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserEntityListing</returns>
         
-        public ApiResponse< UserEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public ApiResponse< UserEntityListing > GetUsersWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         { 
 
             var localVarPath = "/api/v2/users";
@@ -18028,6 +17972,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
+            if (userCustomAttributeSchemaIds != null) userCustomAttributeSchemaIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userCustomAttributeSchemaIds", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
@@ -18080,12 +18025,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public async System.Threading.Tasks.Task<UserEntityListing> GetUsersAsync (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         {
-             ApiResponse<UserEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, state);
+             ApiResponse<UserEntityListing> localVarResponse = await GetUsersAsyncWithHttpInfo(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state);
              return localVarResponse.Data;
 
         }
@@ -18102,10 +18048,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserEntityListing>> GetUsersAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         { 
 
             var localVarPath = "/api/v2/users";
@@ -18148,6 +18095,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
+            if (userCustomAttributeSchemaIds != null) userCustomAttributeSchemaIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userCustomAttributeSchemaIds", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
@@ -18402,7 +18350,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a schema 
         /// 
-        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18417,7 +18364,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a schema 
         /// 
-        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18505,7 +18451,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a schema 
         /// 
-        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18521,7 +18466,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a schema 
         /// 
-        /// GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18611,7 +18555,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a specific version of a schema 
         /// 
-        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18627,7 +18570,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a specific version of a schema 
         /// 
-        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18720,7 +18662,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a specific version of a schema 
         /// 
-        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18737,7 +18678,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a specific version of a schema 
         /// 
-        /// GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18833,7 +18773,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get all versions of a user schema 
         /// 
-        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18848,7 +18787,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get all versions of a user schema 
         /// 
-        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18936,7 +18874,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get all versions of a user schema 
         /// 
-        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -18952,7 +18889,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get all versions of a user schema 
         /// 
-        /// GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -19042,7 +18978,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of schemas. 
         /// 
-        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>DataSchemaListing</returns>
@@ -19056,7 +18991,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of schemas. 
         /// 
-        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of DataSchemaListing</returns>
@@ -19139,7 +19073,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of schemas. 
         /// 
-        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of DataSchemaListing</returns>
@@ -19154,7 +19087,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get a list of schemas. 
         /// 
-        /// GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (DataSchemaListing)</returns>
@@ -19238,7 +19170,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the core types from which all schemas are built. 
         /// 
-        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coreTypeName">Name of the core type</param>
@@ -19253,7 +19184,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the core types from which all schemas are built. 
         /// 
-        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coreTypeName">Name of the core type</param>
@@ -19341,7 +19271,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the core types from which all schemas are built. 
         /// 
-        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coreTypeName">Name of the core type</param>
@@ -19357,7 +19286,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the core types from which all schemas are built. 
         /// 
-        /// GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="coreTypeName">Name of the core type</param>
@@ -19447,7 +19375,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of core types enabled for a specific namespace. 
         /// 
-        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>CoretypeListing</returns>
@@ -19461,7 +19388,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of core types enabled for a specific namespace. 
         /// 
-        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of CoretypeListing</returns>
@@ -19544,7 +19470,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of core types enabled for a specific namespace. 
         /// 
-        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of CoretypeListing</returns>
@@ -19559,7 +19484,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get the list of core types enabled for a specific namespace. 
         /// 
-        /// GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (CoretypeListing)</returns>
@@ -19643,7 +19567,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get quantitative limits on schemas 
         /// 
-        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>SchemaQuantityLimits</returns>
@@ -19657,7 +19580,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get quantitative limits on schemas 
         /// 
-        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of SchemaQuantityLimits</returns>
@@ -19740,7 +19662,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get quantitative limits on schemas 
         /// 
-        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of SchemaQuantityLimits</returns>
@@ -19755,7 +19676,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get quantitative limits on schemas 
         /// 
-        /// GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (SchemaQuantityLimits)</returns>
@@ -20807,11 +20727,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <returns>UserMe</returns>
         
-        public UserMe GetUsersMe (List<string> expand = null, string integrationPresenceSource = null)
+        public UserMe GetUsersMe (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null)
         {
-             ApiResponse<UserMe> localVarResponse = GetUsersMeWithHttpInfo(expand, integrationPresenceSource);
+             ApiResponse<UserMe> localVarResponse = GetUsersMeWithHttpInfo(expand, integrationPresenceSource, userCustomAttributeSchemaIds);
              return localVarResponse.Data;
         }
 
@@ -20822,9 +20743,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <returns>ApiResponse of UserMe</returns>
         
-        public ApiResponse< UserMe > GetUsersMeWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null)
+        public ApiResponse< UserMe > GetUsersMeWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null)
         { 
 
             var localVarPath = "/api/v2/users/me";
@@ -20862,6 +20784,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
+            if (userCustomAttributeSchemaIds != null) userCustomAttributeSchemaIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userCustomAttributeSchemaIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -20908,11 +20831,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <returns>Task of UserMe</returns>
         
-        public async System.Threading.Tasks.Task<UserMe> GetUsersMeAsync (List<string> expand = null, string integrationPresenceSource = null)
+        public async System.Threading.Tasks.Task<UserMe> GetUsersMeAsync (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null)
         {
-             ApiResponse<UserMe> localVarResponse = await GetUsersMeAsyncWithHttpInfo(expand, integrationPresenceSource);
+             ApiResponse<UserMe> localVarResponse = await GetUsersMeAsyncWithHttpInfo(expand, integrationPresenceSource, userCustomAttributeSchemaIds);
              return localVarResponse.Data;
 
         }
@@ -20924,9 +20848,10 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Which fields, if any, to expand. (optional)</param>
         /// <param name="integrationPresenceSource">Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 (optional)</param>
         /// <returns>Task of ApiResponse (UserMe)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserMe>> GetUsersMeAsyncWithHttpInfo (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null)
         { 
 
             var localVarPath = "/api/v2/users/me";
@@ -20964,6 +20889,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
+            if (userCustomAttributeSchemaIds != null) userCustomAttributeSchemaIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userCustomAttributeSchemaIds", this.Configuration.ApiClient.ParameterToString(obj))); });
 
             // Header params
 
@@ -21015,12 +20941,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>UserCursorEntityListing</returns>
         
-        public UserCursorEntityListing GetUsersQuery (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public UserCursorEntityListing GetUsersQuery (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         {
-             ApiResponse<UserCursorEntityListing> localVarResponse = GetUsersQueryWithHttpInfo(cursor, pageSize, sortOrder, expand, integrationPresenceSource, state);
+             ApiResponse<UserCursorEntityListing> localVarResponse = GetUsersQueryWithHttpInfo(cursor, pageSize, sortOrder, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state);
              return localVarResponse.Data;
         }
 
@@ -21035,10 +20962,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>ApiResponse of UserCursorEntityListing</returns>
         
-        public ApiResponse< UserCursorEntityListing > GetUsersQueryWithHttpInfo (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public ApiResponse< UserCursorEntityListing > GetUsersQueryWithHttpInfo (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         { 
 
             var localVarPath = "/api/v2/users/query";
@@ -21079,6 +21007,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
+            if (userCustomAttributeSchemaIds != null) userCustomAttributeSchemaIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userCustomAttributeSchemaIds", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
@@ -21130,12 +21059,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of UserCursorEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<UserCursorEntityListing> GetUsersQueryAsync (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public async System.Threading.Tasks.Task<UserCursorEntityListing> GetUsersQueryAsync (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         {
-             ApiResponse<UserCursorEntityListing> localVarResponse = await GetUsersQueryAsyncWithHttpInfo(cursor, pageSize, sortOrder, expand, integrationPresenceSource, state);
+             ApiResponse<UserCursorEntityListing> localVarResponse = await GetUsersQueryAsyncWithHttpInfo(cursor, pageSize, sortOrder, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state);
              return localVarResponse.Data;
 
         }
@@ -21151,10 +21081,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="sortOrder">Ascending or descending sort order (optional, default to ASC)</param>
         /// <param name="expand">Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. (optional)</param>
         /// <param name="integrationPresenceSource">Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. (optional)</param>
+        /// <param name="userCustomAttributeSchemaIds">Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 (optional)</param>
         /// <param name="state">Only list users of this state (optional, default to active)</param>
         /// <returns>Task of ApiResponse (UserCursorEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<UserCursorEntityListing>> GetUsersQueryAsyncWithHttpInfo (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+        public async System.Threading.Tasks.Task<ApiResponse<UserCursorEntityListing>> GetUsersQueryAsyncWithHttpInfo (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
         { 
 
             var localVarPath = "/api/v2/users/query";
@@ -21195,6 +21126,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
             if (expand != null) expand.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("expand", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (integrationPresenceSource != null) localVarQueryParams.Add(new Tuple<string, string>("integrationPresenceSource", this.Configuration.ApiClient.ParameterToString(integrationPresenceSource)));
+            if (userCustomAttributeSchemaIds != null) userCustomAttributeSchemaIds.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("userCustomAttributeSchemaIds", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
 
             // Header params
@@ -21912,7 +21844,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a single custom attributes record by amending the data with only the provided fields. 
         /// 
-        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -21928,7 +21859,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a single custom attributes record by amending the data with only the provided fields. 
         /// 
-        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -22026,7 +21956,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a single custom attributes record by amending the data with only the provided fields. 
         /// 
-        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -22043,7 +21972,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a single custom attributes record by amending the data with only the provided fields. 
         /// 
-        /// PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -22144,7 +22072,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update multiple custom attributes records by amending the data with only the provided fields. 
         /// 
-        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -22160,7 +22087,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update multiple custom attributes records by amending the data with only the provided fields. 
         /// 
-        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -22258,7 +22184,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update multiple custom attributes records by amending the data with only the provided fields. 
         /// 
-        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -22275,7 +22200,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update multiple custom attributes records by amending the data with only the provided fields. 
         /// 
-        /// PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -27569,7 +27493,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a schema 
         /// 
-        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
@@ -27584,7 +27507,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a schema 
         /// 
-        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
@@ -27677,7 +27599,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a schema 
         /// 
-        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
@@ -27693,7 +27614,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create a schema 
         /// 
-        /// PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Schema</param>
@@ -29983,7 +29903,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create or update a single custom attributes record. Updating replaces all data with the provided fields. 
         /// 
-        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -29999,7 +29918,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create or update a single custom attributes record. Updating replaces all data with the provided fields. 
         /// 
-        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -30097,7 +30015,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create or update a single custom attributes record. Updating replaces all data with the provided fields. 
         /// 
-        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -30114,7 +30031,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Create or update a single custom attributes record. Updating replaces all data with the provided fields. 
         /// 
-        /// PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">user ID</param>
@@ -32497,7 +32413,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a schema 
         /// 
-        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -32513,7 +32428,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a schema 
         /// 
-        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -32611,7 +32525,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a schema 
         /// 
-        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>
@@ -32628,7 +32541,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Update a schema 
         /// 
-        /// PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="schemaId">Schema ID</param>

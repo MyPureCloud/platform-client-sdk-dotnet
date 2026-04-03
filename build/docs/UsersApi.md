@@ -567,8 +567,6 @@ namespace Example
 
 Delete a custom attributes record.
 
-DeleteUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * directory:user:edit
@@ -1008,8 +1006,6 @@ void (empty response body)
 
 
 Delete a schema
-
-DeleteUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -2036,7 +2032,7 @@ namespace Example
 
 ## GetUser
 
-> [**User**](User) GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+> [**User**](User) GetUser (string userId, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
 
 
 Get user.
@@ -2069,12 +2065,13 @@ namespace Example
             var userId = userId_example;  // string | User ID
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead. (optional) 
             var integrationPresenceSource = integrationPresenceSource_example;  // string | Gets an integration presence for a user instead of their default. (optional) 
+            var userCustomAttributeSchemaIds = new List<string>(); // List<string> | Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 100 (optional) 
             var state = state_example;  // string | Search for a user with this state (optional)  (default to active)
 
             try
             { 
                 // Get user.
-                User result = apiInstance.GetUser(userId, expand, integrationPresenceSource, state);
+                User result = apiInstance.GetUser(userId, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -2094,6 +2091,7 @@ namespace Example
 | **userId** | **string**| User ID |  |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, groups, customAttributes, profileSkills, certifications, locations, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, dateWelcomeSent |
 | **integrationPresenceSource** | **string**| Gets an integration presence for a user instead of their default. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
+| **userCustomAttributeSchemaIds** | [**List<string>**](string)| Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 | [optional]  |
 | **state** | **string**| Search for a user with this state | [optional] [default to active]<br />**Values**: active, deleted |
 
 ### Return type
@@ -2232,8 +2230,6 @@ namespace Example
 
 Get custom attributes by schema id
 
-GetUserCustomattribute is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * directory:user:view
@@ -2297,8 +2293,6 @@ namespace Example
 
 
 Get multiple custom attributes records by schema ids
-
-GetUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3585,7 +3579,7 @@ namespace Example
 
 ## GetUsers
 
-> [**UserEntityListing**](UserEntityListing) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+> [**UserEntityListing**](UserEntityListing) GetUsers (int? pageSize = null, int? pageNumber = null, List<string> id = null, List<string> jabberId = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
 
 
 Get the list of available users.
@@ -3622,12 +3616,13 @@ namespace Example
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead. (optional) 
             var integrationPresenceSource = integrationPresenceSource_example;  // string | Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100. (optional) 
+            var userCustomAttributeSchemaIds = new List<string>(); // List<string> | Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 5 (optional) 
             var state = state_example;  // string | Only list users of this state (optional)  (default to active)
 
             try
             { 
                 // Get the list of available users.
-                UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, state);
+                UserEntityListing result = apiInstance.GetUsers(pageSize, pageNumber, id, jabberId, sortOrder, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3651,6 +3646,7 @@ namespace Example
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ascending, descending |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, groups, customAttributes, profileSkills, certifications, locations, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, dateWelcomeSent |
 | **integrationPresenceSource** | **string**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
+| **userCustomAttributeSchemaIds** | [**List<string>**](string)| Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 | [optional]  |
 | **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted, any |
 
 ### Return type
@@ -3732,8 +3728,6 @@ namespace Example
 
 Get a schema
 
-GetUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * users:customAttributesSchema:view
@@ -3795,8 +3789,6 @@ namespace Example
 
 
 Get a specific version of a schema
-
-GetUsersCustomattributesSchemaVersion is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -3862,8 +3854,6 @@ namespace Example
 
 Get all versions of a user schema
 
-GetUsersCustomattributesSchemaVersions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * users:customAttributesSchema:view
@@ -3926,8 +3916,6 @@ namespace Example
 
 Get a list of schemas.
 
-GetUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * users:customAttributesSchema:view
@@ -3984,8 +3972,6 @@ This endpoint does require any parameters.
 
 
 Get the core types from which all schemas are built.
-
-GetUsersCustomattributesSchemasCoretype is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4049,8 +4035,6 @@ namespace Example
 
 Get the list of core types enabled for a specific namespace.
 
-GetUsersCustomattributesSchemasCoretypes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * users:customAttributesSchema:view
@@ -4107,8 +4091,6 @@ This endpoint does require any parameters.
 
 
 Get quantitative limits on schemas
-
-GetUsersCustomattributesSchemasLimits is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -4466,7 +4448,7 @@ namespace Example
 
 ## GetUsersMe
 
-> [**UserMe**](UserMe) GetUsersMe (List<string> expand = null, string integrationPresenceSource = null)
+> [**UserMe**](UserMe) GetUsersMe (List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null)
 
 
 Get current user details.
@@ -4500,11 +4482,12 @@ namespace Example
             var apiInstance = new UsersApi();
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. (optional) 
             var integrationPresenceSource = integrationPresenceSource_example;  // string | Get your presence for a given integration. This parameter will only be used when presence is provided as an \"expand\". (optional) 
+            var userCustomAttributeSchemaIds = new List<string>(); // List<string> | Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 100 (optional) 
 
             try
             { 
                 // Get current user details.
-                UserMe result = apiInstance.GetUsersMe(expand, integrationPresenceSource);
+                UserMe result = apiInstance.GetUsersMe(expand, integrationPresenceSource, userCustomAttributeSchemaIds);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4523,6 +4506,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, groups, customAttributes, profileSkills, certifications, locations, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, dateWelcomeSent, date, geolocationsettings, organization, presencedefinitions, divisionedpresencedefinitions, locationdefinitions, orgauthorization, orgproducts, favorites, superiors, directreports, adjacents, routingskills, routinglanguages, fieldconfigs, token, trustors, logCapture, autoanswersettings |
 | **integrationPresenceSource** | **string**| Get your presence for a given integration. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
+| **userCustomAttributeSchemaIds** | [**List<string>**](string)| Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 100 | [optional]  |
 
 ### Return type
 
@@ -4531,7 +4515,7 @@ namespace Example
 
 ## GetUsersQuery
 
-> [**UserCursorEntityListing**](UserCursorEntityListing) GetUsersQuery (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, string state = null)
+> [**UserCursorEntityListing**](UserCursorEntityListing) GetUsersQuery (string cursor = null, int? pageSize = null, string sortOrder = null, List<string> expand = null, string integrationPresenceSource = null, List<string> userCustomAttributeSchemaIds = null, string state = null)
 
 
 Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
@@ -4569,12 +4553,13 @@ namespace Example
             var sortOrder = sortOrder_example;  // string | Ascending or descending sort order (optional)  (default to ASC)
             var expand = new List<string>(); // List<string> | Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it's recommended to use specific API requests instead. (optional) 
             var integrationPresenceSource = integrationPresenceSource_example;  // string | Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \"expand\". When using this parameter the maximum number of users that can be returned is 100. (optional) 
+            var userCustomAttributeSchemaIds = new List<string>(); // List<string> | Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \"expand\". The maximum number of schemaIds that can be requested is 5 (optional) 
             var state = state_example;  // string | Only list users of this state (optional)  (default to active)
 
             try
             { 
                 // Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
-                UserCursorEntityListing result = apiInstance.GetUsersQuery(cursor, pageSize, sortOrder, expand, integrationPresenceSource, state);
+                UserCursorEntityListing result = apiInstance.GetUsersQuery(cursor, pageSize, sortOrder, expand, integrationPresenceSource, userCustomAttributeSchemaIds, state);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -4596,6 +4581,7 @@ namespace Example
 | **sortOrder** | **string**| Ascending or descending sort order | [optional] [default to ASC]<br />**Values**: ASC, DESC |
 | **expand** | [**List<string>**](string)| Which fields, if any, to expand. Note, expand parameters are resolved with a best effort approach and not guaranteed to be returned. If requested expand information is absolutely required, it&#39;s recommended to use specific API requests instead. | [optional] <br />**Values**: routingStatus, presence, integrationPresence, conversationSummary, outOfOffice, geolocation, station, authorization, lasttokenissued, authorization.unusedRoles, team, workPlanBidRanks, externalContactsSettings, groups, customAttributes, profileSkills, certifications, locations, skills, languages, languagePreference, employerInfo, biography, dateLastLogin, dateWelcomeSent |
 | **integrationPresenceSource** | **string**| Gets an integration presence for users instead of their defaults. This parameter will only be used when presence is provided as an \&quot;expand\&quot;. When using this parameter the maximum number of users that can be returned is 100. | [optional] <br />**Values**: MicrosoftTeams, ZoomPhone, EightByEight |
+| **userCustomAttributeSchemaIds** | [**List<string>**](string)| Gets custom user attribute values for given schemas set for user. This parameter will only be used when customAttributes is provided as an \&quot;expand\&quot;. The maximum number of schemaIds that can be requested is 5 | [optional]  |
 | **state** | **string**| Only list users of this state | [optional] [default to active]<br />**Values**: active, inactive, deleted, any |
 
 ### Return type
@@ -4806,8 +4792,6 @@ namespace Example
 
 Update a single custom attributes record by amending the data with only the provided fields.
 
-PatchUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * directory:user:edit
@@ -4871,8 +4855,6 @@ namespace Example
 
 
 Update multiple custom attributes records by amending the data with only the provided fields.
-
-PatchUserCustomattributesBulk is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -6428,8 +6410,6 @@ namespace Example
 
 Create a schema
 
-PostUsersCustomattributesSchemas is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * users:customAttributesSchema:add
@@ -7123,8 +7103,6 @@ namespace Example
 
 
 Create or update a single custom attributes record. Updating replaces all data with the provided fields.
-
-PutUserCustomattributes is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
 Requires ANY permissions: 
 
@@ -7830,8 +7808,6 @@ namespace Example
 
 Update a schema
 
-PutUsersCustomattributesSchema is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * users:customAttributesSchema:edit
@@ -7889,4 +7865,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 260.0.0_
+_PureCloudPlatform.Client.V2 261.0.0_

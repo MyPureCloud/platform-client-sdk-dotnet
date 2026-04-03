@@ -54,11 +54,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Utilization">Map of media type to utilization settings..</param>
         /// <param name="LabelUtilizations">Map of label ids to utilization settings..</param>
+        /// <param name="MaxInboundCalls">Max number of inbound voice calls..</param>
         /// <param name="Level">Level.</param>
-        public AgentMaxUtilizationResponse(Dictionary<string, MediaUtilization> Utilization = null, Dictionary<string, LabelUtilizationResponse> LabelUtilizations = null, LevelEnum? Level = null)
+        public AgentMaxUtilizationResponse(Dictionary<string, MediaUtilization> Utilization = null, Dictionary<string, LabelUtilizationResponse> LabelUtilizations = null, int? MaxInboundCalls = null, LevelEnum? Level = null)
         {
             this.Utilization = Utilization;
             this.LabelUtilizations = LabelUtilizations;
+            this.MaxInboundCalls = MaxInboundCalls;
             this.Level = Level;
             
         }
@@ -83,6 +85,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// Max number of inbound voice calls.
+        /// </summary>
+        /// <value>Max number of inbound voice calls.</value>
+        [DataMember(Name="maxInboundCalls", EmitDefaultValue=false)]
+        public int? MaxInboundCalls { get; set; }
+
+
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -95,6 +106,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  Utilization: ").Append(Utilization).Append("\n");
             sb.Append("  LabelUtilizations: ").Append(LabelUtilizations).Append("\n");
+            sb.Append("  MaxInboundCalls: ").Append(MaxInboundCalls).Append("\n");
             sb.Append("  Level: ").Append(Level).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -147,6 +159,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LabelUtilizations.SequenceEqual(other.LabelUtilizations)
                 ) &&
                 (
+                    this.MaxInboundCalls == other.MaxInboundCalls ||
+                    this.MaxInboundCalls != null &&
+                    this.MaxInboundCalls.Equals(other.MaxInboundCalls)
+                ) &&
+                (
                     this.Level == other.Level ||
                     this.Level != null &&
                     this.Level.Equals(other.Level)
@@ -169,6 +186,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LabelUtilizations != null)
                     hash = hash * 59 + this.LabelUtilizations.GetHashCode();
+
+                if (this.MaxInboundCalls != null)
+                    hash = hash * 59 + this.MaxInboundCalls.GetHashCode();
 
                 if (this.Level != null)
                     hash = hash * 59 + this.Level.GetHashCode();

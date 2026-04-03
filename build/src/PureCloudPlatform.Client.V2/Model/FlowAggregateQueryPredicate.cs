@@ -601,6 +601,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sessionid,
             
             /// <summary>
+            /// Enum Skillexpressionid for "skillExpressionId"
+            /// </summary>
+            [EnumMember(Value = "skillExpressionId")]
+            Skillexpressionid,
+            
+            /// <summary>
             /// Enum Startinglanguage for "startingLanguage"
             /// </summary>
             [EnumMember(Value = "startingLanguage")]

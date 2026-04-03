@@ -19,9 +19,9 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class SocialMediaAsyncDetailQuery :  IEquatable<SocialMediaAsyncDetailQuery>
     {
         /// <summary>
-        /// Sorting of results based on time
+        /// Deprecated: use 'sort' field instead. Sorting of results based on time
         /// </summary>
-        /// <value>Sorting of results based on time</value>
+        /// <value>Deprecated: use 'sort' field instead. Sorting of results based on time</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OrderEnum
         {
@@ -46,9 +46,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Desc
         }
         /// <summary>
-        /// Sorting of results based on time
+        /// Deprecated: use 'sort' field instead. Sorting of results based on time
         /// </summary>
-        /// <value>Sorting of results based on time</value>
+        /// <value>Deprecated: use 'sort' field instead. Sorting of results based on time</value>
         [DataMember(Name="order", EmitDefaultValue=false)]
         public OrderEnum? Order { get; set; }
 
@@ -65,7 +65,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Filter">Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters.</param>
         /// <param name="TopicIds">List of topicIds to query in.</param>
         /// <param name="PageSize">The number of results per page.</param>
-        /// <param name="Order">Sorting of results based on time.</param>
+        /// <param name="Order">Deprecated: use &#39;sort&#39; field instead. Sorting of results based on time.</param>
         public SocialMediaAsyncDetailQuery(string Interval = null, string TimeZone = null, SocialMediaQueryFilter Filter = null, List<string> TopicIds = null, int? PageSize = null, OrderEnum? Order = null)
         {
             this.Interval = Interval;

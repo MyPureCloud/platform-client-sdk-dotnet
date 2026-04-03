@@ -66,16 +66,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityPlanRunJobResponse" /> class.
         /// </summary>
-        /// <param name="ActivityPlan">The activity plan associated with this job (required).</param>
         /// <param name="Status">The status of the job (required).</param>
         /// <param name="Exceptions">The list of exceptions that occurred while running this activity plan job. These are exceptions that affect individual occurrences but didn&#39;t prevent the job from completing (required).</param>
         /// <param name="Error">Error details if status &#x3D;&#x3D; &#39;Error&#39;. These are errors that caused the job to fail to complete.</param>
-        public ActivityPlanRunJobResponse(ActivityPlanReference ActivityPlan = null, StatusEnum? Status = null, List<ActivityPlanJobException> Exceptions = null, ErrorBody Error = null)
+        /// <param name="ActivityPlan">The activity plan associated with this job (required).</param>
+        public ActivityPlanRunJobResponse(StatusEnum? Status = null, List<ActivityPlanJobException> Exceptions = null, ErrorBody Error = null, ActivityPlanReference ActivityPlan = null)
         {
-            this.ActivityPlan = ActivityPlan;
             this.Status = Status;
             this.Exceptions = Exceptions;
             this.Error = Error;
+            this.ActivityPlan = ActivityPlan;
             
         }
         
@@ -87,15 +87,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; private set; }
-
-
-
-        /// <summary>
-        /// The activity plan associated with this job
-        /// </summary>
-        /// <value>The activity plan associated with this job</value>
-        [DataMember(Name="activityPlan", EmitDefaultValue=false)]
-        public ActivityPlanReference ActivityPlan { get; set; }
 
 
 
@@ -120,6 +111,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The activity plan associated with this job
+        /// </summary>
+        /// <value>The activity plan associated with this job</value>
+        [DataMember(Name="activityPlan", EmitDefaultValue=false)]
+        public ActivityPlanReference ActivityPlan { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -137,10 +137,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ActivityPlanRunJobResponse {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  ActivityPlan: ").Append(ActivityPlan).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Exceptions: ").Append(Exceptions).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
+            sb.Append("  ActivityPlan: ").Append(ActivityPlan).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -188,11 +188,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.ActivityPlan == other.ActivityPlan ||
-                    this.ActivityPlan != null &&
-                    this.ActivityPlan.Equals(other.ActivityPlan)
-                ) &&
-                (
                     this.Status == other.Status ||
                     this.Status != null &&
                     this.Status.Equals(other.Status)
@@ -206,6 +201,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Error == other.Error ||
                     this.Error != null &&
                     this.Error.Equals(other.Error)
+                ) &&
+                (
+                    this.ActivityPlan == other.ActivityPlan ||
+                    this.ActivityPlan != null &&
+                    this.ActivityPlan.Equals(other.ActivityPlan)
                 ) &&
                 (
                     this.SelfUri == other.SelfUri ||
@@ -228,9 +228,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
 
-                if (this.ActivityPlan != null)
-                    hash = hash * 59 + this.ActivityPlan.GetHashCode();
-
                 if (this.Status != null)
                     hash = hash * 59 + this.Status.GetHashCode();
 
@@ -239,6 +236,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
+
+                if (this.ActivityPlan != null)
+                    hash = hash * 59 + this.ActivityPlan.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

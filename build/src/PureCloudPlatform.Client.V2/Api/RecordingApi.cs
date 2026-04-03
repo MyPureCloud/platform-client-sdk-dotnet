@@ -191,7 +191,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a specific recording.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -212,7 +212,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a specific recording.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -308,7 +308,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<List<RecordingMetadata>> GetConversationRecordingmetadataWithHttpInfo (string conversationId);
 
         /// <summary>
-        /// Get metadata for a specific recording. Does not return playable media.
+        /// Get metadata for a specific recording. Does not return playable media. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -321,7 +321,7 @@ namespace PureCloudPlatform.Client.V2.Api
         RecordingMetadata GetConversationRecordingmetadataRecordingId (string conversationId, string recordingId);
 
         /// <summary>
-        /// Get metadata for a specific recording. Does not return playable media.
+        /// Get metadata for a specific recording. Does not return playable media. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -337,7 +337,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -354,7 +354,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -971,7 +971,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create annotation
         /// </summary>
         /// <remarks>
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -985,7 +985,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create annotation
         /// </summary>
         /// <remarks>
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -996,7 +996,7 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Annotation> PostConversationRecordingAnnotationsWithHttpInfo (string conversationId, string recordingId, Annotation body);
 
         /// <summary>
-        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be excluded from the batch download.
         /// </summary>
         /// <remarks>
         /// 
@@ -1008,7 +1008,7 @@ namespace PureCloudPlatform.Client.V2.Api
         BatchDownloadJobSubmissionResult PostRecordingBatchrequests (BatchDownloadJobSubmission body);
 
         /// <summary>
-        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be excluded from the batch download.
         /// </summary>
         /// <remarks>
         /// 
@@ -1285,7 +1285,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Required permissions depend on the operation: view (recording, screenRecording, or snippetRecording) is always required; editRetention is required when updating retention dates except for restoration; restore is required when restoring an archived recording.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1300,7 +1300,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Required permissions depend on the operation: view (recording, screenRecording, or snippetRecording) is always required; editRetention is required when updating retention dates except for restoration; restore is required when restoring an archived recording.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1315,7 +1315,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update annotation
         /// </summary>
         /// <remarks>
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1330,7 +1330,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update annotation
         /// </summary>
         /// <remarks>
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1725,7 +1725,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a specific recording.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1746,7 +1746,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Gets a specific recording.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1842,7 +1842,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<List<RecordingMetadata>>> GetConversationRecordingmetadataAsyncWithHttpInfo (string conversationId);
 
         /// <summary>
-        /// Get metadata for a specific recording. Does not return playable media.
+        /// Get metadata for a specific recording. Does not return playable media. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -1855,7 +1855,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<RecordingMetadata> GetConversationRecordingmetadataRecordingIdAsync (string conversationId, string recordingId);
 
         /// <summary>
-        /// Get metadata for a specific recording. Does not return playable media.
+        /// Get metadata for a specific recording. Does not return playable media. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing.
         /// </summary>
         /// <remarks>
         /// 
@@ -1871,7 +1871,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -1888,7 +1888,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Get all of a Conversation&#39;s Recordings.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -2505,7 +2505,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create annotation
         /// </summary>
         /// <remarks>
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -2519,7 +2519,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Create annotation
         /// </summary>
         /// <remarks>
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -2530,7 +2530,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Annotation>> PostConversationRecordingAnnotationsAsyncWithHttpInfo (string conversationId, string recordingId, Annotation body);
 
         /// <summary>
-        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be excluded from the batch download.
         /// </summary>
         /// <remarks>
         /// 
@@ -2542,7 +2542,7 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<BatchDownloadJobSubmissionResult> PostRecordingBatchrequestsAsync (BatchDownloadJobSubmission body);
 
         /// <summary>
-        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration.
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be excluded from the batch download.
         /// </summary>
         /// <remarks>
         /// 
@@ -2819,7 +2819,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Required permissions depend on the operation: view (recording, screenRecording, or snippetRecording) is always required; editRetention is required when updating retention dates except for restoration; restore is required when restoring an archived recording.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -2834,7 +2834,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Updates the retention records on a recording.
         /// </summary>
         /// <remarks>
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Required permissions depend on the operation: view (recording, screenRecording, or snippetRecording) is always required; editRetention is required when updating retention dates except for restoration; restore is required when restoring an archived recording.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -2849,7 +2849,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update annotation
         /// </summary>
         /// <remarks>
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -2864,7 +2864,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Update annotation
         /// </summary>
         /// <remarks>
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4622,7 +4622,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a specific recording. 
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4645,7 +4645,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a specific recording. 
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4753,7 +4753,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a specific recording. 
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -4777,7 +4777,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Gets a specific recording. 
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -5541,7 +5541,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get metadata for a specific recording. Does not return playable media. 
+        /// Get metadata for a specific recording. Does not return playable media. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5556,7 +5556,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get metadata for a specific recording. Does not return playable media. 
+        /// Get metadata for a specific recording. Does not return playable media. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5648,7 +5648,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get metadata for a specific recording. Does not return playable media. 
+        /// Get metadata for a specific recording. Does not return playable media. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5664,7 +5664,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get metadata for a specific recording. Does not return playable media. 
+        /// Get metadata for a specific recording. Does not return playable media. Bookmark annotations will be excluded if either recording:recording:view or recording:annotation:view permission is missing. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -5760,7 +5760,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings. 
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -5779,7 +5779,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings. 
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -5876,7 +5876,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings. 
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -5896,7 +5896,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Get all of a Conversation&#39;s Recordings. 
-        /// 
+        /// Bookmark annotations will be excluded if recording:annotation:view permission is missing. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be redacted.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -10559,7 +10559,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create annotation 
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -10575,7 +10575,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create annotation 
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -10677,7 +10677,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create annotation 
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -10694,7 +10694,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Create annotation 
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -10799,7 +10799,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. 
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be excluded from the batch download. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10813,7 +10813,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. 
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be excluded from the batch download. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10905,7 +10905,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. 
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be excluded from the batch download. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -10920,7 +10920,7 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. 
+        /// Submit a batch download request for recordings. Recordings in response will be in their original format/codec - configured in the Trunk configuration. If the recording:recording:viewSensitiveData permission is missing and the organization has sensitive data redaction enabled, recordings with sensitive data will be excluded from the batch download. 
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
@@ -13353,7 +13353,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Updates the retention records on a recording. 
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Required permissions depend on the operation: view (recording, screenRecording, or snippetRecording) is always required; editRetention is required when updating retention dates except for restoration; restore is required when restoring an archived recording.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -13370,7 +13370,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Updates the retention records on a recording. 
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Required permissions depend on the operation: view (recording, screenRecording, or snippetRecording) is always required; editRetention is required when updating retention dates except for restoration; restore is required when restoring an archived recording.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -13474,7 +13474,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Updates the retention records on a recording. 
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Required permissions depend on the operation: view (recording, screenRecording, or snippetRecording) is always required; editRetention is required when updating retention dates except for restoration; restore is required when restoring an archived recording.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -13492,7 +13492,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Updates the retention records on a recording. 
-        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. The recording:recording:view permission is required for the recording, as well as either the recording:recording:editRetention or recording:screenRecording:editRetention permissions depending on the type of recording.
+        /// Currently supports updating and removing both archive and delete dates for eligible recordings. A request to change the archival date of an archived recording will result in a restoration of the recording until the new date set. Required permissions depend on the operation: view (recording, screenRecording, or snippetRecording) is always required; editRetention is required when updating retention dates except for restoration; restore is required when restoring an archived recording.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -13600,7 +13600,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update annotation 
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -13617,7 +13617,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update annotation 
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -13724,7 +13724,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update annotation 
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>
@@ -13742,7 +13742,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Update annotation 
-        /// 
+        /// If the annotation does not exist on the recording, it is created. If it already exists, it is updated. The recording:annotation:add permission is required for creates, and recording:annotation:edit is required for updates.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="conversationId">Conversation ID</param>

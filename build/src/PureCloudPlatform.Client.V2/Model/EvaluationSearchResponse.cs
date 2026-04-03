@@ -51,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>Results associated to the search response</value>
         [DataMember(Name="results", EmitDefaultValue=false)]
-        public List<EvaluationResponse> Results { get; private set; }
+        public List<EvaluationSearchItemResponse> Results { get; private set; }
 
 
 

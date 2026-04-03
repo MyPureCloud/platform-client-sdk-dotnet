@@ -125,15 +125,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public EnrichFieldRules FieldRules { get; set; }
 
 
-
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -149,7 +140,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Action: ").Append(Action).Append("\n");
             sb.Append("  ExternalOrganization: ").Append(ExternalOrganization).Append("\n");
             sb.Append("  FieldRules: ").Append(FieldRules).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -219,11 +209,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FieldRules == other.FieldRules ||
                     this.FieldRules != null &&
                     this.FieldRules.Equals(other.FieldRules)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -255,9 +240,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FieldRules != null)
                     hash = hash * 59 + this.FieldRules.GetHashCode();
-
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

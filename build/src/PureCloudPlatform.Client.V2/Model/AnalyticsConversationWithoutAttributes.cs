@@ -189,7 +189,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AnalyticsConversationWithoutAttributes" /> class.
         /// </summary>
+        /// <param name="AccessAttributes">Set of attributes that limit which users can access the conversation.</param>
+        /// <param name="AssociatedConversationId">ID of the conversation the initiator is signaling this new conversation is associated with.</param>
         /// <param name="ConferenceStart">The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ConsultationConversationIds">Set of conversationIds the initiator has signaled this conversation is associated with.</param>
         /// <param name="ConversationEnd">The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="ConversationId">Unique identifier for the conversation.</param>
         /// <param name="ConversationInitiator">Indicates the participant purpose of the participant initiating a message conversation.</param>
@@ -198,8 +201,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DivisionIds">Identifier(s) of division(s) associated with a conversation.</param>
         /// <param name="ExternalTag">External tag for the conversation.</param>
         /// <param name="InactivityTimeout">The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        /// <param name="AssociatedConversationId">ID of the conversation the initiator is signaling this new conversation is associated with.</param>
-        /// <param name="ConsultationConversationIds">Set of conversationIds the initiator has signaled this conversation is associated with.</param>
         /// <param name="KnowledgeBaseIds">The unique identifier(s) of the knowledge base(s) used.</param>
         /// <param name="MediaStatsMinConversationMos">The lowest estimated average MOS among all the audio streams belonging to this conversation.</param>
         /// <param name="MediaStatsMinConversationRFactor">The lowest R-factor value among all of the audio streams belonging to this conversation.</param>
@@ -210,9 +211,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Surveys">Surveys associated with this conversation.</param>
         /// <param name="Resolutions">Resolutions associated with this conversation.</param>
         /// <param name="Participants">Participants in the conversation.</param>
-        public AnalyticsConversationWithoutAttributes(DateTime? ConferenceStart = null, DateTime? ConversationEnd = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, DateTime? ConversationStart = null, bool? CustomerParticipation = null, List<string> DivisionIds = null, string ExternalTag = null, DateTime? InactivityTimeout = null, string AssociatedConversationId = null, List<string> ConsultationConversationIds = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? OriginatingSocialMediaPublic = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
+        public AnalyticsConversationWithoutAttributes(List<string> AccessAttributes = null, string AssociatedConversationId = null, DateTime? ConferenceStart = null, List<string> ConsultationConversationIds = null, DateTime? ConversationEnd = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, DateTime? ConversationStart = null, bool? CustomerParticipation = null, List<string> DivisionIds = null, string ExternalTag = null, DateTime? InactivityTimeout = null, List<string> KnowledgeBaseIds = null, double? MediaStatsMinConversationMos = null, double? MediaStatsMinConversationRFactor = null, OriginatingDirectionEnum? OriginatingDirection = null, bool? OriginatingSocialMediaPublic = null, bool? SelfServed = null, List<AnalyticsEvaluation> Evaluations = null, List<AnalyticsSurvey> Surveys = null, List<AnalyticsResolution> Resolutions = null, List<AnalyticsParticipantWithoutAttributes> Participants = null)
         {
+            this.AccessAttributes = AccessAttributes;
+            this.AssociatedConversationId = AssociatedConversationId;
             this.ConferenceStart = ConferenceStart;
+            this.ConsultationConversationIds = ConsultationConversationIds;
             this.ConversationEnd = ConversationEnd;
             this.ConversationId = ConversationId;
             this.ConversationInitiator = ConversationInitiator;
@@ -221,8 +225,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DivisionIds = DivisionIds;
             this.ExternalTag = ExternalTag;
             this.InactivityTimeout = InactivityTimeout;
-            this.AssociatedConversationId = AssociatedConversationId;
-            this.ConsultationConversationIds = ConsultationConversationIds;
             this.KnowledgeBaseIds = KnowledgeBaseIds;
             this.MediaStatsMinConversationMos = MediaStatsMinConversationMos;
             this.MediaStatsMinConversationRFactor = MediaStatsMinConversationRFactor;
@@ -239,11 +241,38 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Set of attributes that limit which users can access the conversation
+        /// </summary>
+        /// <value>Set of attributes that limit which users can access the conversation</value>
+        [DataMember(Name="accessAttributes", EmitDefaultValue=false)]
+        public List<string> AccessAttributes { get; set; }
+
+
+
+        /// <summary>
+        /// ID of the conversation the initiator is signaling this new conversation is associated with
+        /// </summary>
+        /// <value>ID of the conversation the initiator is signaling this new conversation is associated with</value>
+        [DataMember(Name="associatedConversationId", EmitDefaultValue=false)]
+        public string AssociatedConversationId { get; set; }
+
+
+
+        /// <summary>
         /// The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="conferenceStart", EmitDefaultValue=false)]
         public DateTime? ConferenceStart { get; set; }
+
+
+
+        /// <summary>
+        /// Set of conversationIds the initiator has signaled this conversation is associated with
+        /// </summary>
+        /// <value>Set of conversationIds the initiator has signaled this conversation is associated with</value>
+        [DataMember(Name="consultationConversationIds", EmitDefaultValue=false)]
+        public List<string> ConsultationConversationIds { get; set; }
 
 
 
@@ -309,24 +338,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
         [DataMember(Name="inactivityTimeout", EmitDefaultValue=false)]
         public DateTime? InactivityTimeout { get; set; }
-
-
-
-        /// <summary>
-        /// ID of the conversation the initiator is signaling this new conversation is associated with
-        /// </summary>
-        /// <value>ID of the conversation the initiator is signaling this new conversation is associated with</value>
-        [DataMember(Name="associatedConversationId", EmitDefaultValue=false)]
-        public string AssociatedConversationId { get; set; }
-
-
-
-        /// <summary>
-        /// Set of conversationIds the initiator has signaled this conversation is associated with
-        /// </summary>
-        /// <value>Set of conversationIds the initiator has signaled this conversation is associated with</value>
-        [DataMember(Name="consultationConversationIds", EmitDefaultValue=false)]
-        public List<string> ConsultationConversationIds { get; set; }
 
 
 
@@ -421,7 +432,10 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class AnalyticsConversationWithoutAttributes {\n");
 
+            sb.Append("  AccessAttributes: ").Append(AccessAttributes).Append("\n");
+            sb.Append("  AssociatedConversationId: ").Append(AssociatedConversationId).Append("\n");
             sb.Append("  ConferenceStart: ").Append(ConferenceStart).Append("\n");
+            sb.Append("  ConsultationConversationIds: ").Append(ConsultationConversationIds).Append("\n");
             sb.Append("  ConversationEnd: ").Append(ConversationEnd).Append("\n");
             sb.Append("  ConversationId: ").Append(ConversationId).Append("\n");
             sb.Append("  ConversationInitiator: ").Append(ConversationInitiator).Append("\n");
@@ -430,8 +444,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  InactivityTimeout: ").Append(InactivityTimeout).Append("\n");
-            sb.Append("  AssociatedConversationId: ").Append(AssociatedConversationId).Append("\n");
-            sb.Append("  ConsultationConversationIds: ").Append(ConsultationConversationIds).Append("\n");
             sb.Append("  KnowledgeBaseIds: ").Append(KnowledgeBaseIds).Append("\n");
             sb.Append("  MediaStatsMinConversationMos: ").Append(MediaStatsMinConversationMos).Append("\n");
             sb.Append("  MediaStatsMinConversationRFactor: ").Append(MediaStatsMinConversationRFactor).Append("\n");
@@ -483,9 +495,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
+                    this.AccessAttributes == other.AccessAttributes ||
+                    this.AccessAttributes != null &&
+                    this.AccessAttributes.SequenceEqual(other.AccessAttributes)
+                ) &&
+                (
+                    this.AssociatedConversationId == other.AssociatedConversationId ||
+                    this.AssociatedConversationId != null &&
+                    this.AssociatedConversationId.Equals(other.AssociatedConversationId)
+                ) &&
+                (
                     this.ConferenceStart == other.ConferenceStart ||
                     this.ConferenceStart != null &&
                     this.ConferenceStart.Equals(other.ConferenceStart)
+                ) &&
+                (
+                    this.ConsultationConversationIds == other.ConsultationConversationIds ||
+                    this.ConsultationConversationIds != null &&
+                    this.ConsultationConversationIds.SequenceEqual(other.ConsultationConversationIds)
                 ) &&
                 (
                     this.ConversationEnd == other.ConversationEnd ||
@@ -526,16 +553,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.InactivityTimeout == other.InactivityTimeout ||
                     this.InactivityTimeout != null &&
                     this.InactivityTimeout.Equals(other.InactivityTimeout)
-                ) &&
-                (
-                    this.AssociatedConversationId == other.AssociatedConversationId ||
-                    this.AssociatedConversationId != null &&
-                    this.AssociatedConversationId.Equals(other.AssociatedConversationId)
-                ) &&
-                (
-                    this.ConsultationConversationIds == other.ConsultationConversationIds ||
-                    this.ConsultationConversationIds != null &&
-                    this.ConsultationConversationIds.SequenceEqual(other.ConsultationConversationIds)
                 ) &&
                 (
                     this.KnowledgeBaseIds == other.KnowledgeBaseIds ||
@@ -600,8 +617,17 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.AccessAttributes != null)
+                    hash = hash * 59 + this.AccessAttributes.GetHashCode();
+
+                if (this.AssociatedConversationId != null)
+                    hash = hash * 59 + this.AssociatedConversationId.GetHashCode();
+
                 if (this.ConferenceStart != null)
                     hash = hash * 59 + this.ConferenceStart.GetHashCode();
+
+                if (this.ConsultationConversationIds != null)
+                    hash = hash * 59 + this.ConsultationConversationIds.GetHashCode();
 
                 if (this.ConversationEnd != null)
                     hash = hash * 59 + this.ConversationEnd.GetHashCode();
@@ -626,12 +652,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.InactivityTimeout != null)
                     hash = hash * 59 + this.InactivityTimeout.GetHashCode();
-
-                if (this.AssociatedConversationId != null)
-                    hash = hash * 59 + this.AssociatedConversationId.GetHashCode();
-
-                if (this.ConsultationConversationIds != null)
-                    hash = hash * 59 + this.ConsultationConversationIds.GetHashCode();
 
                 if (this.KnowledgeBaseIds != null)
                     hash = hash * 59 + this.KnowledgeBaseIds.GetHashCode();

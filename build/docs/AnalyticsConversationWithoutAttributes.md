@@ -6,7 +6,10 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
+| **AccessAttributes** | **List&lt;string&gt;** | Set of attributes that limit which users can access the conversation | [optional] |
+| **AssociatedConversationId** | **string** | ID of the conversation the initiator is signaling this new conversation is associated with | [optional] |
 | **ConferenceStart** | **DateTime?** | The start time of a conference call. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
+| **ConsultationConversationIds** | **List&lt;string&gt;** | Set of conversationIds the initiator has signaled this conversation is associated with | [optional] |
 | **ConversationEnd** | **DateTime?** | The end time of a conversation. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **ConversationId** | **string** | Unique identifier for the conversation | [optional] |
 | **ConversationInitiator** | **string** | Indicates the participant purpose of the participant initiating a message conversation | [optional] |
@@ -15,8 +18,6 @@
 | **DivisionIds** | **List&lt;string&gt;** | Identifier(s) of division(s) associated with a conversation | [optional] |
 | **ExternalTag** | **string** | External tag for the conversation | [optional] |
 | **InactivityTimeout** | **DateTime?** | The time in the future, after which this conversation would be considered inactive. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
-| **AssociatedConversationId** | **string** | ID of the conversation the initiator is signaling this new conversation is associated with | [optional] |
-| **ConsultationConversationIds** | **List&lt;string&gt;** | Set of conversationIds the initiator has signaled this conversation is associated with | [optional] |
 | **KnowledgeBaseIds** | **List&lt;string&gt;** | The unique identifier(s) of the knowledge base(s) used | [optional] |
 | **MediaStatsMinConversationMos** | **double?** | The lowest estimated average MOS among all the audio streams belonging to this conversation | [optional] |
 | **MediaStatsMinConversationRFactor** | **double?** | The lowest R-factor value among all of the audio streams belonging to this conversation | [optional] |
@@ -30,4 +31,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 260.0.0_
+_PureCloudPlatform.Client.V2 261.0.0_

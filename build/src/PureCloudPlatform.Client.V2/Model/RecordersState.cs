@@ -118,6 +118,39 @@ namespace PureCloudPlatform.Client.V2.Model
             None
         }
         /// <summary>
+        /// Indicates the state of the snippet recording.
+        /// </summary>
+        /// <value>Indicates the state of the snippet recording.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum SnippetStateEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Active for "ACTIVE"
+            /// </summary>
+            [EnumMember(Value = "ACTIVE")]
+            Active,
+            
+            /// <summary>
+            /// Enum Paused for "PAUSED"
+            /// </summary>
+            [EnumMember(Value = "PAUSED")]
+            Paused,
+            
+            /// <summary>
+            /// Enum None for "NONE"
+            /// </summary>
+            [EnumMember(Value = "NONE")]
+            None
+        }
+        /// <summary>
         /// Indicates the state of the adhoc recorder.
         /// </summary>
         /// <value>Indicates the state of the adhoc recorder.</value>
@@ -136,19 +169,29 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="agentExperienceState", EmitDefaultValue=false)]
         public AgentExperienceStateEnum? AgentExperienceState { get; set; }
         /// <summary>
+        /// Indicates the state of the snippet recording.
+        /// </summary>
+        /// <value>Indicates the state of the snippet recording.</value>
+        [DataMember(Name="snippetState", EmitDefaultValue=false)]
+        public SnippetStateEnum? SnippetState { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="RecordersState" /> class.
         /// </summary>
         /// <param name="AdhocState">Indicates the state of the adhoc recorder..</param>
         /// <param name="CustomerExperienceState">Indicates the state of the customer experience recorder..</param>
         /// <param name="AgentExperienceState">Indicates the state of the agent experience recorder..</param>
-        public RecordersState(AdhocStateEnum? AdhocState = null, CustomerExperienceStateEnum? CustomerExperienceState = null, AgentExperienceStateEnum? AgentExperienceState = null)
+        /// <param name="SnippetState">Indicates the state of the snippet recording..</param>
+        public RecordersState(AdhocStateEnum? AdhocState = null, CustomerExperienceStateEnum? CustomerExperienceState = null, AgentExperienceStateEnum? AgentExperienceState = null, SnippetStateEnum? SnippetState = null)
         {
             this.AdhocState = AdhocState;
             this.CustomerExperienceState = CustomerExperienceState;
             this.AgentExperienceState = AgentExperienceState;
+            this.SnippetState = SnippetState;
             
         }
         
+
+
 
 
 
@@ -168,6 +211,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AdhocState: ").Append(AdhocState).Append("\n");
             sb.Append("  CustomerExperienceState: ").Append(CustomerExperienceState).Append("\n");
             sb.Append("  AgentExperienceState: ").Append(AgentExperienceState).Append("\n");
+            sb.Append("  SnippetState: ").Append(SnippetState).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -222,6 +266,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AgentExperienceState == other.AgentExperienceState ||
                     this.AgentExperienceState != null &&
                     this.AgentExperienceState.Equals(other.AgentExperienceState)
+                ) &&
+                (
+                    this.SnippetState == other.SnippetState ||
+                    this.SnippetState != null &&
+                    this.SnippetState.Equals(other.SnippetState)
                 );
         }
 
@@ -244,6 +293,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.AgentExperienceState != null)
                     hash = hash * 59 + this.AgentExperienceState.GetHashCode();
+
+                if (this.SnippetState != null)
+                    hash = hash * 59 + this.SnippetState.GetHashCode();
 
                 return hash;
             }

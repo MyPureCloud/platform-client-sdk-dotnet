@@ -1002,9 +1002,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>CredentialTypeListing</returns>
+        /// <returns>List&lt;CredentialType&gt;</returns>
         
-        CredentialTypeListing GetIntegrationsCredentialsTypes ();
+        List<CredentialType> GetIntegrationsCredentialsTypes ();
 
         /// <summary>
         /// List all credential types
@@ -1013,9 +1013,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of CredentialTypeListing</returns>
+        /// <returns>ApiResponse of List&lt;CredentialType&gt;</returns>
         
-        ApiResponse<CredentialTypeListing> GetIntegrationsCredentialsTypesWithHttpInfo ();
+        ApiResponse<List<CredentialType>> GetIntegrationsCredentialsTypesWithHttpInfo ();
 
         /// <summary>
         /// Get a list of Audio Connector integrations
@@ -3552,9 +3552,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of CredentialTypeListing</returns>
+        /// <returns>Task of List&lt;CredentialType&gt;</returns>
         
-        System.Threading.Tasks.Task<CredentialTypeListing> GetIntegrationsCredentialsTypesAsync ();
+        System.Threading.Tasks.Task<List<CredentialType>> GetIntegrationsCredentialsTypesAsync ();
 
         /// <summary>
         /// List all credential types
@@ -3563,9 +3563,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (CredentialTypeListing)</returns>
+        /// <returns>Task of ApiResponse (List&lt;CredentialType&gt;)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<CredentialTypeListing>> GetIntegrationsCredentialsTypesAsyncWithHttpInfo ();
+        System.Threading.Tasks.Task<ApiResponse<List<CredentialType>>> GetIntegrationsCredentialsTypesAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get a list of Audio Connector integrations
@@ -12630,11 +12630,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>CredentialTypeListing</returns>
+        /// <returns>List&lt;CredentialType&gt;</returns>
         
-        public CredentialTypeListing GetIntegrationsCredentialsTypes ()
+        public List<CredentialType> GetIntegrationsCredentialsTypes ()
         {
-             ApiResponse<CredentialTypeListing> localVarResponse = GetIntegrationsCredentialsTypesWithHttpInfo();
+             ApiResponse<List<CredentialType>> localVarResponse = GetIntegrationsCredentialsTypesWithHttpInfo();
              return localVarResponse.Data;
         }
 
@@ -12643,9 +12643,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>ApiResponse of CredentialTypeListing</returns>
+        /// <returns>ApiResponse of List&lt;CredentialType&gt;</returns>
         
-        public ApiResponse< CredentialTypeListing > GetIntegrationsCredentialsTypesWithHttpInfo ()
+        public ApiResponse< List<CredentialType> > GetIntegrationsCredentialsTypesWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/integrations/credentials/types";
@@ -12712,9 +12712,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsCredentialsTypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CredentialTypeListing>(localVarStatusCode,
+            return new ApiResponse<List<CredentialType>>(localVarStatusCode,
                 localVarHeaders,
-                (CredentialTypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CredentialTypeListing)),
+                (List<CredentialType>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CredentialType>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -12725,11 +12725,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of CredentialTypeListing</returns>
+        /// <returns>Task of List&lt;CredentialType&gt;</returns>
         
-        public async System.Threading.Tasks.Task<CredentialTypeListing> GetIntegrationsCredentialsTypesAsync ()
+        public async System.Threading.Tasks.Task<List<CredentialType>> GetIntegrationsCredentialsTypesAsync ()
         {
-             ApiResponse<CredentialTypeListing> localVarResponse = await GetIntegrationsCredentialsTypesAsyncWithHttpInfo();
+             ApiResponse<List<CredentialType>> localVarResponse = await GetIntegrationsCredentialsTypesAsyncWithHttpInfo();
              return localVarResponse.Data;
 
         }
@@ -12739,9 +12739,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// 
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <returns>Task of ApiResponse (CredentialTypeListing)</returns>
+        /// <returns>Task of ApiResponse (List&lt;CredentialType&gt;)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<CredentialTypeListing>> GetIntegrationsCredentialsTypesAsyncWithHttpInfo ()
+        public async System.Threading.Tasks.Task<ApiResponse<List<CredentialType>>> GetIntegrationsCredentialsTypesAsyncWithHttpInfo ()
         { 
 
             var localVarPath = "/api/v2/integrations/credentials/types";
@@ -12808,9 +12808,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetIntegrationsCredentialsTypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<CredentialTypeListing>(localVarStatusCode,
+            return new ApiResponse<List<CredentialType>>(localVarStatusCode,
                 localVarHeaders,
-                (CredentialTypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CredentialTypeListing)),
+                (List<CredentialType>) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(List<CredentialType>)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

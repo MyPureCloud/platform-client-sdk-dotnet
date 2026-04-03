@@ -96,7 +96,19 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Sourcetype for "sourceType"
             /// </summary>
             [EnumMember(Value = "sourceType")]
-            Sourcetype
+            Sourcetype,
+            
+            /// <summary>
+            /// Enum Verifieduser for "verifiedUser"
+            /// </summary>
+            [EnumMember(Value = "verifiedUser")]
+            Verifieduser,
+            
+            /// <summary>
+            /// Enum Followercount for "followerCount"
+            /// </summary>
+            [EnumMember(Value = "followerCount")]
+            Followercount
         }
         /// <summary>
         /// Gets or Sets Metrics

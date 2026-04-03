@@ -12,8 +12,7 @@
 | **Action** | **string** | The action that should be taken based on any External Organization found by &#x60;matchingIdentifiers&#x60;. | [optional] |
 | **ExternalOrganization** | [**ExternalOrganization**](ExternalOrganization) | Data to be added, either as an update to an existing External Organization or the body of a new External Organization. Omitting a field in this contract means that it will be treated as null in the &#x60;fieldRules&#x60; logic. | [optional] |
 | **FieldRules** | [**EnrichFieldRules**](EnrichFieldRules) | Logic describing how to combine data from the submitted request with data found in the database. | [optional] |
-| **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 260.0.0_
+_PureCloudPlatform.Client.V2 261.0.0_

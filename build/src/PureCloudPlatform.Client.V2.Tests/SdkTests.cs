@@ -191,6 +191,8 @@ namespace PureCloudPlatform.Client.V2.Tests
                         {
                             var presence = (NotificationData<PresenceEventUserPresence>)data;
 
+                            Console.WriteLine($"Presence Notification received with PresenceDefinition ID {presence.EventBody.PresenceDefinition.Id}");
+
                             // Check to see what we got
                             if (presence.EventBody.PresenceDefinition.Id == availablePresenceId) availableReceived = true;
                             if (presence.EventBody.PresenceDefinition.Id == busyPresenceId) busyReceived = true;
@@ -215,7 +217,18 @@ namespace PureCloudPlatform.Client.V2.Tests
             handler.AddSubscription($"v2.users.{userId}.presence", typeof(PresenceEventUserPresence));
 
             // Change presences
+            var tForDelay1 = Task.Run(async delegate {
+                await Task.Delay(1000);
+                return true;
+            });
+            tForDelay1.Wait();
             presenceApi.PatchUserPresence(userId, "PURECLOUD", new UserPresence() { PresenceDefinition = new PresenceDefinition(busyPresenceId) });
+
+            var tForDelay2 = Task.Run(async delegate {
+                await Task.Delay(2000);
+                return true;
+            });
+            tForDelay2.Wait();
             presenceApi.PatchUserPresence(userId, "PURECLOUD", new UserPresence() { PresenceDefinition = new PresenceDefinition(availablePresenceId) });
 
             // The getter for Result will block until the task has completed
@@ -236,7 +249,7 @@ namespace PureCloudPlatform.Client.V2.Tests
             PureCloudPlatform.Client.V2.Client.Configuration.Default.ApiClient.HttpClient.SetPostRequestHook(postHook);
 
             Thread.Sleep(6000);
-            var user = usersApi.GetUserWithHttpInfo(userId, new List<string>() { "profileSkills" }, null, null);
+            var user = usersApi.GetUserWithHttpInfo(userId, new List<string>() { "profileSkills" }, null, null, null);
 
             Assert.IsTrue(preHookCalled, "Pre-Hook was not called");
             Assert.IsTrue(postHookCalled, "Post-Hook was not called");
@@ -507,7 +520,7 @@ namespace PureCloudPlatform.Client.V2.Tests
         public void GetUser()
         {
             Thread.Sleep(6000);
-            var user = usersApi.GetUserWithHttpInfo(userId, null, null, null);
+            var user = usersApi.GetUserWithHttpInfo(userId, null, null, null, null);
             Assert.AreEqual(user.Data.Id, userId);
             Assert.AreEqual(user.Data.Name, userName);
             Assert.AreEqual(user.Data.Email, userEmail);

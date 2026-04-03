@@ -237,6 +237,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostConversationsCallParticipantConsultQueue**](#PostConversationsCallParticipantConsultQueue) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/consult/queue | Initiate a consult transfer to a queue |
 | [**PostConversationsCallParticipantMonitor**](#PostConversationsCallParticipantMonitor) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/monitor | Listen in on the conversation from the point of view of a given participant. |
 | [**PostConversationsCallParticipantReplace**](#PostConversationsCallParticipantReplace) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/replace | Replace this participant with the specified user and/or address |
+| [**PostConversationsCallParticipantSnippetRecord**](#PostConversationsCallParticipantSnippetRecord) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/snippet/record | Start/stop the snippet recording for a participant |
 | [**PostConversationsCallParticipantVoiceConsult**](#PostConversationsCallParticipantVoiceConsult) | **Post** /api/v2/conversations/calls/{conversationId}/participants/{participantId}/voice/consult | Initiate voice consult transfer |
 | [**PostConversationsCallParticipants**](#PostConversationsCallParticipants) | **Post** /api/v2/conversations/calls/{conversationId}/participants | Add participants to a conversation |
 | [**PostConversationsCallParticipantsUserUserId**](#PostConversationsCallParticipantsUserUserId) | **Post** /api/v2/conversations/calls/{conversationId}/participants/user/{userId} | Add participants to a conversation on behalf of a user |
@@ -15240,6 +15241,72 @@ namespace Example
 void (empty response body)
 
 
+## PostConversationsCallParticipantSnippetRecord
+
+> **string** PostConversationsCallParticipantSnippetRecord (string conversationId, string participantId, SnippetRecordingRequest body)
+
+
+Start/stop the snippet recording for a participant
+
+Requires ANY permissions: 
+
+* conversation:recording:snippetRecord
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostConversationsCallParticipantSnippetRecordExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+            var body = new SnippetRecordingRequest(); // SnippetRecordingRequest | snippetRecordingRequest
+
+            try
+            { 
+                // Start/stop the snippet recording for a participant
+                string result = apiInstance.PostConversationsCallParticipantSnippetRecord(conversationId, participantId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PostConversationsCallParticipantSnippetRecord: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**SnippetRecordingRequest**](SnippetRecordingRequest)| snippetRecordingRequest |  |
+
+### Return type
+
+**string**
+
+
 ## PostConversationsCallParticipantVoiceConsult
 
 > [**ConsultTransferResponse**](ConsultTransferResponse) PostConversationsCallParticipantVoiceConsult (string conversationId, string participantId, ConsultTransferToAddress body)
@@ -21108,4 +21175,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 260.0.0_
+_PureCloudPlatform.Client.V2 261.0.0_

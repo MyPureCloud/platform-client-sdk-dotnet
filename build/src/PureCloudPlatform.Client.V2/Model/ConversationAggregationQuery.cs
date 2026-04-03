@@ -483,6 +483,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Sessionid,
             
             /// <summary>
+            /// Enum Skillexpressionid for "skillExpressionId"
+            /// </summary>
+            [EnumMember(Value = "skillExpressionId")]
+            Skillexpressionid,
+            
+            /// <summary>
             /// Enum Stationid for "stationId"
             /// </summary>
             [EnumMember(Value = "stationId")]
@@ -549,6 +555,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nBotInteractions")]
             Nbotinteractions,
+            
+            /// <summary>
+            /// Enum Ncallbackattempts for "nCallbackAttempts"
+            /// </summary>
+            [EnumMember(Value = "nCallbackAttempts")]
+            Ncallbackattempts,
+            
+            /// <summary>
+            /// Enum Ncallbackscheduled for "nCallbackScheduled"
+            /// </summary>
+            [EnumMember(Value = "nCallbackScheduled")]
+            Ncallbackscheduled,
             
             /// <summary>
             /// Enum Ncobrowsesessions for "nCobrowseSessions"
@@ -765,6 +783,24 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tBarging")]
             Tbarging,
+            
+            /// <summary>
+            /// Enum Tcallbackabandon for "tCallbackAbandon"
+            /// </summary>
+            [EnumMember(Value = "tCallbackAbandon")]
+            Tcallbackabandon,
+            
+            /// <summary>
+            /// Enum Tcallbackconnect for "tCallbackConnect"
+            /// </summary>
+            [EnumMember(Value = "tCallbackConnect")]
+            Tcallbackconnect,
+            
+            /// <summary>
+            /// Enum Tcallbacknotreached for "tCallbackNotReached"
+            /// </summary>
+            [EnumMember(Value = "tCallbackNotReached")]
+            Tcallbacknotreached,
             
             /// <summary>
             /// Enum Tcoaching for "tCoaching"

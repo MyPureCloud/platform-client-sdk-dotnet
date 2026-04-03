@@ -13,13 +13,13 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// CredentialTypeListing
+    /// ExternalEventsConfigurationListing
     /// </summary>
     [DataContract]
-    public partial class CredentialTypeListing :  IEquatable<CredentialTypeListing>, IPagedResource<CredentialType>
+    public partial class ExternalEventsConfigurationListing :  IEquatable<ExternalEventsConfigurationListing>, IPagedResource<ExternalEventsConfiguration>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CredentialTypeListing" /> class.
+        /// Initializes a new instance of the <see cref="ExternalEventsConfigurationListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
         /// <param name="PageSize">PageSize.</param>
@@ -31,7 +31,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="LastUri">LastUri.</param>
         /// <param name="SelfUri">SelfUri.</param>
         /// <param name="PageCount">PageCount.</param>
-        public CredentialTypeListing(List<CredentialType> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string NextUri = null, string PreviousUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
+        public ExternalEventsConfigurationListing(List<ExternalEventsConfiguration> Entities = null, int? PageSize = null, int? PageNumber = null, long? Total = null, string FirstUri = null, string NextUri = null, string PreviousUri = null, string LastUri = null, string SelfUri = null, int? PageCount = null)
         {
             this.Entities = Entities;
             this.PageSize = PageSize;
@@ -52,7 +52,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Entities
         /// </summary>
         [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<CredentialType> Entities { get; set; }
+        public List<ExternalEventsConfiguration> Entities { get; set; }
 
 
 
@@ -134,7 +134,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CredentialTypeListing {\n");
+            sb.Append("class ExternalEventsConfigurationListing {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("  PageSize: ").Append(PageSize).Append("\n");
@@ -171,15 +171,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as CredentialTypeListing);
+            return this.Equals(obj as ExternalEventsConfigurationListing);
         }
 
         /// <summary>
-        /// Returns true if CredentialTypeListing instances are equal
+        /// Returns true if ExternalEventsConfigurationListing instances are equal
         /// </summary>
-        /// <param name="other">Instance of CredentialTypeListing to be compared</param>
+        /// <param name="other">Instance of ExternalEventsConfigurationListing to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CredentialTypeListing other)
+        public bool Equals(ExternalEventsConfigurationListing other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

@@ -67,6 +67,12 @@ namespace PureCloudPlatform.Client.V2.Model
             OutdatedSdkVersion,
             
             /// <summary>
+            /// Enum Accessattribute for "accessAttribute"
+            /// </summary>
+            [EnumMember(Value = "accessAttribute")]
+            Accessattribute,
+            
+            /// <summary>
             /// Enum Conversationend for "conversationEnd"
             /// </summary>
             [EnumMember(Value = "conversationEnd")]
@@ -152,6 +158,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "nBotInteractions")]
             Nbotinteractions,
+            
+            /// <summary>
+            /// Enum Ncallbackattempts for "nCallbackAttempts"
+            /// </summary>
+            [EnumMember(Value = "nCallbackAttempts")]
+            Ncallbackattempts,
+            
+            /// <summary>
+            /// Enum Ncallbackscheduled for "nCallbackScheduled"
+            /// </summary>
+            [EnumMember(Value = "nCallbackScheduled")]
+            Ncallbackscheduled,
             
             /// <summary>
             /// Enum Ncobrowsesessions for "nCobrowseSessions"

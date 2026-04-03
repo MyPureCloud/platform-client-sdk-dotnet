@@ -37,15 +37,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The globally unique identifier for the object.
-        /// </summary>
-        /// <value>The globally unique identifier for the object.</value>
-        [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
-
-
-
-        /// <summary>
         /// The division to which this entity belongs.
         /// </summary>
         /// <value>The division to which this entity belongs.</value>
@@ -89,15 +80,6 @@ namespace PureCloudPlatform.Client.V2.Model
         public string ExternalOrganizationUri { get; private set; }
 
 
-
-        /// <summary>
-        /// The URI for this object
-        /// </summary>
-        /// <value>The URI for this object</value>
-        [DataMember(Name="selfUri", EmitDefaultValue=false)]
-        public string SelfUri { get; private set; }
-
-
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -107,13 +89,11 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class ExternalOrganizationTrustorLink {\n");
 
-            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  ExternalOrganizationId: ").Append(ExternalOrganizationId).Append("\n");
             sb.Append("  TrustorOrgId: ").Append(TrustorOrgId).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ExternalOrganizationUri: ").Append(ExternalOrganizationUri).Append("\n");
-            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -155,11 +135,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Id == other.Id ||
-                    this.Id != null &&
-                    this.Id.Equals(other.Id)
-                ) &&
-                (
                     this.Division == other.Division ||
                     this.Division != null &&
                     this.Division.Equals(other.Division)
@@ -183,11 +158,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ExternalOrganizationUri == other.ExternalOrganizationUri ||
                     this.ExternalOrganizationUri != null &&
                     this.ExternalOrganizationUri.Equals(other.ExternalOrganizationUri)
-                ) &&
-                (
-                    this.SelfUri == other.SelfUri ||
-                    this.SelfUri != null &&
-                    this.SelfUri.Equals(other.SelfUri)
                 );
         }
 
@@ -202,9 +172,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Id != null)
-                    hash = hash * 59 + this.Id.GetHashCode();
-
                 if (this.Division != null)
                     hash = hash * 59 + this.Division.GetHashCode();
 
@@ -219,9 +186,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ExternalOrganizationUri != null)
                     hash = hash * 59 + this.ExternalOrganizationUri.GetHashCode();
-
-                if (this.SelfUri != null)
-                    hash = hash * 59 + this.SelfUri.GetHashCode();
 
                 return hash;
             }

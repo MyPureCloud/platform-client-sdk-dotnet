@@ -92,6 +92,54 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteJourneyActiontemplateWithHttpInfo (string actionTemplateId, bool? hardDelete = null);
 
         /// <summary>
+        /// Delete an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns></returns>
+        
+        void DeleteJourneyExternaleventsConfiguration (string configId);
+
+        /// <summary>
+        /// Delete an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteJourneyExternaleventsConfigurationWithHttpInfo (string configId);
+
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns></returns>
+        
+        void DeleteJourneyExternaleventsSchema (string schemaId);
+
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteJourneyExternaleventsSchemaWithHttpInfo (string schemaId);
+
+        /// <summary>
         /// Delete an outcome.
         /// </summary>
         /// <remarks>
@@ -578,6 +626,220 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of DeploymentPing</returns>
         
         ApiResponse<DeploymentPing> GetJourneyDeploymentCustomerPingWithHttpInfo (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null);
+
+        /// <summary>
+        /// Get an external events configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>ExternalEventsConfiguration</returns>
+        
+        ExternalEventsConfiguration GetJourneyExternaleventsConfiguration (string configId);
+
+        /// <summary>
+        /// Get an external events configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>ApiResponse of ExternalEventsConfiguration</returns>
+        
+        ApiResponse<ExternalEventsConfiguration> GetJourneyExternaleventsConfigurationWithHttpInfo (string configId);
+
+        /// <summary>
+        /// Get all external event configurations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ExternalEventsConfigurationListing</returns>
+        
+        ExternalEventsConfigurationListing GetJourneyExternaleventsConfigurations (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get all external event configurations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of ExternalEventsConfigurationListing</returns>
+        
+        ApiResponse<ExternalEventsConfigurationListing> GetJourneyExternaleventsConfigurationsWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>JourneyExternalEventsSchema</returns>
+        
+        JourneyExternalEventsSchema GetJourneyExternaleventsSchema (string schemaId);
+
+        /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of JourneyExternalEventsSchema</returns>
+        
+        ApiResponse<JourneyExternalEventsSchema> GetJourneyExternaleventsSchemaWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>JourneyExternalEventsSchema</returns>
+        
+        JourneyExternalEventsSchema GetJourneyExternaleventsSchemaVersion (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>ApiResponse of JourneyExternalEventsSchema</returns>
+        
+        ApiResponse<JourneyExternalEventsSchema> GetJourneyExternaleventsSchemaVersionWithHttpInfo (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get all versions of a External Events schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>JourneyExternalEventsSchemaListing</returns>
+        
+        JourneyExternalEventsSchemaListing GetJourneyExternaleventsSchemaVersions (string schemaId);
+
+        /// <summary>
+        /// Get all versions of a External Events schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of JourneyExternalEventsSchemaListing</returns>
+        
+        ApiResponse<JourneyExternalEventsSchemaListing> GetJourneyExternaleventsSchemaVersionsWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>JourneyExternalEventsSchemaListing</returns>
+        
+        JourneyExternalEventsSchemaListing GetJourneyExternaleventsSchemas ();
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of JourneyExternalEventsSchemaListing</returns>
+        
+        ApiResponse<JourneyExternalEventsSchemaListing> GetJourneyExternaleventsSchemasWithHttpInfo ();
+
+        /// <summary>
+        /// Get a core type from which all schemas are built
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of core type</param>
+        /// <returns>Coretype</returns>
+        
+        Coretype GetJourneyExternaleventsSchemasCoretype (string coreTypeName);
+
+        /// <summary>
+        /// Get a core type from which all schemas are built
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of core type</param>
+        /// <returns>ApiResponse of Coretype</returns>
+        
+        ApiResponse<Coretype> GetJourneyExternaleventsSchemasCoretypeWithHttpInfo (string coreTypeName);
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CoretypeListing</returns>
+        
+        CoretypeListing GetJourneyExternaleventsSchemasCoretypes ();
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CoretypeListing</returns>
+        
+        ApiResponse<CoretypeListing> GetJourneyExternaleventsSchemasCoretypesWithHttpInfo ();
+
+        /// <summary>
+        /// Get quantitative limits on schemas
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SchemaQuantityLimits</returns>
+        
+        SchemaQuantityLimits GetJourneyExternaleventsSchemasLimits ();
+
+        /// <summary>
+        /// Get quantitative limits on schemas
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SchemaQuantityLimits</returns>
+        
+        ApiResponse<SchemaQuantityLimits> GetJourneyExternaleventsSchemasLimitsWithHttpInfo ();
 
         /// <summary>
         /// Retrieve a single outcome.
@@ -1382,6 +1644,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActionTemplate> PatchJourneyActiontemplateWithHttpInfo (string actionTemplateId, PatchActionTemplate body = null);
 
         /// <summary>
+        /// Update an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ExternalEventsConfiguration</returns>
+        
+        ExternalEventsConfiguration PatchJourneyExternaleventsConfiguration (string configId, UpdateExternalEventsConfigurationRequest body = null);
+
+        /// <summary>
+        /// Update an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of ExternalEventsConfiguration</returns>
+        
+        ApiResponse<ExternalEventsConfiguration> PatchJourneyExternaleventsConfigurationWithHttpInfo (string configId, UpdateExternalEventsConfigurationRequest body = null);
+
+        /// <summary>
         /// Update an outcome.
         /// </summary>
         /// <remarks>
@@ -1690,6 +1978,80 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<WebEventResponse> PostJourneyDeploymentWebeventsWithHttpInfo (string deploymentId, WebEventRequest body = null);
 
         /// <summary>
+        /// Create external events
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configurationId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ExternalEventsResponse</returns>
+        
+        ExternalEventsResponse PostJourneyExternaleventsConfigurationEvents (string configurationId, ExternalEventsRequest body = null);
+
+        /// <summary>
+        /// Create external events
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configurationId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of ExternalEventsResponse</returns>
+        
+        ApiResponse<ExternalEventsResponse> PostJourneyExternaleventsConfigurationEventsWithHttpInfo (string configurationId, ExternalEventsRequest body = null);
+
+        /// <summary>
+        /// Create an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ExternalEventsConfiguration</returns>
+        
+        ExternalEventsConfiguration PostJourneyExternaleventsConfigurations (CreateExternalEventsConfigurationRequest body = null);
+
+        /// <summary>
+        /// Create an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of ExternalEventsConfiguration</returns>
+        
+        ApiResponse<ExternalEventsConfiguration> PostJourneyExternaleventsConfigurationsWithHttpInfo (CreateExternalEventsConfigurationRequest body = null);
+
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema create request body</param>
+        /// <returns>JourneyExternalEventsSchema</returns>
+        
+        JourneyExternalEventsSchema PostJourneyExternaleventsSchemas (JourneyJsonSchemaRequest body);
+
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema create request body</param>
+        /// <returns>ApiResponse of JourneyExternalEventsSchema</returns>
+        
+        ApiResponse<JourneyExternalEventsSchema> PostJourneyExternaleventsSchemasWithHttpInfo (JourneyJsonSchemaRequest body);
+
+        /// <summary>
         /// Query for flow paths.
         /// </summary>
         /// <remarks>
@@ -1938,6 +2300,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EntityListing> PostJourneyViewsEncodingsValidateWithHttpInfo (List<Label> body = null);
 
         /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Schema update request body</param>
+        /// <returns>JourneyExternalEventsSchema</returns>
+        
+        JourneyExternalEventsSchema PutJourneyExternaleventsSchema (string schemaId, JourneySchemaUpdateRequest body);
+
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Schema update request body</param>
+        /// <returns>ApiResponse of JourneyExternalEventsSchema</returns>
+        
+        ApiResponse<JourneyExternalEventsSchema> PutJourneyExternaleventsSchemaWithHttpInfo (string schemaId, JourneySchemaUpdateRequest body);
+
+        /// <summary>
         /// Update the Schedule for a JourneyView
         /// </summary>
         /// <remarks>
@@ -2070,6 +2458,54 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyActiontemplateAsyncWithHttpInfo (string actionTemplateId, bool? hardDelete = null);
+
+        /// <summary>
+        /// Delete an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteJourneyExternaleventsConfigurationAsync (string configId);
+
+        /// <summary>
+        /// Delete an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyExternaleventsConfigurationAsyncWithHttpInfo (string configId);
+
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteJourneyExternaleventsSchemaAsync (string schemaId);
+
+        /// <summary>
+        /// Delete a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyExternaleventsSchemaAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
         /// Delete an outcome.
@@ -2558,6 +2994,220 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DeploymentPing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DeploymentPing>> GetJourneyDeploymentCustomerPingAsyncWithHttpInfo (string deploymentId, string customerCookieId, string dl = null, string dt = null, string appNamespace = null, string sessionId = null, long? sinceLastBeaconMilliseconds = null);
+
+        /// <summary>
+        /// Get an external events configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>Task of ExternalEventsConfiguration</returns>
+        
+        System.Threading.Tasks.Task<ExternalEventsConfiguration> GetJourneyExternaleventsConfigurationAsync (string configId);
+
+        /// <summary>
+        /// Get an external events configuration
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>Task of ApiResponse (ExternalEventsConfiguration)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExternalEventsConfiguration>> GetJourneyExternaleventsConfigurationAsyncWithHttpInfo (string configId);
+
+        /// <summary>
+        /// Get all external event configurations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ExternalEventsConfigurationListing</returns>
+        
+        System.Threading.Tasks.Task<ExternalEventsConfigurationListing> GetJourneyExternaleventsConfigurationsAsync (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get all external event configurations.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ExternalEventsConfigurationListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExternalEventsConfigurationListing>> GetJourneyExternaleventsConfigurationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null);
+
+        /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of JourneyExternalEventsSchema</returns>
+        
+        System.Threading.Tasks.Task<JourneyExternalEventsSchema> GetJourneyExternaleventsSchemaAsync (string schemaId);
+
+        /// <summary>
+        /// Get a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchema>> GetJourneyExternaleventsSchemaAsyncWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of JourneyExternalEventsSchema</returns>
+        
+        System.Threading.Tasks.Task<JourneyExternalEventsSchema> GetJourneyExternaleventsSchemaVersionAsync (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get a specific version of a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchema>> GetJourneyExternaleventsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId);
+
+        /// <summary>
+        /// Get all versions of a External Events schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of JourneyExternalEventsSchemaListing</returns>
+        
+        System.Threading.Tasks.Task<JourneyExternalEventsSchemaListing> GetJourneyExternaleventsSchemaVersionsAsync (string schemaId);
+
+        /// <summary>
+        /// Get all versions of a External Events schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchemaListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchemaListing>> GetJourneyExternaleventsSchemaVersionsAsyncWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of JourneyExternalEventsSchemaListing</returns>
+        
+        System.Threading.Tasks.Task<JourneyExternalEventsSchemaListing> GetJourneyExternaleventsSchemasAsync ();
+
+        /// <summary>
+        /// Get a list of schemas.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchemaListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchemaListing>> GetJourneyExternaleventsSchemasAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get a core type from which all schemas are built
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of core type</param>
+        /// <returns>Task of Coretype</returns>
+        
+        System.Threading.Tasks.Task<Coretype> GetJourneyExternaleventsSchemasCoretypeAsync (string coreTypeName);
+
+        /// <summary>
+        /// Get a core type from which all schemas are built
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of core type</param>
+        /// <returns>Task of ApiResponse (Coretype)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Coretype>> GetJourneyExternaleventsSchemasCoretypeAsyncWithHttpInfo (string coreTypeName);
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CoretypeListing</returns>
+        
+        System.Threading.Tasks.Task<CoretypeListing> GetJourneyExternaleventsSchemasCoretypesAsync ();
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CoretypeListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetJourneyExternaleventsSchemasCoretypesAsyncWithHttpInfo ();
+
+        /// <summary>
+        /// Get quantitative limits on schemas
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SchemaQuantityLimits</returns>
+        
+        System.Threading.Tasks.Task<SchemaQuantityLimits> GetJourneyExternaleventsSchemasLimitsAsync ();
+
+        /// <summary>
+        /// Get quantitative limits on schemas
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SchemaQuantityLimits)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<SchemaQuantityLimits>> GetJourneyExternaleventsSchemasLimitsAsyncWithHttpInfo ();
 
         /// <summary>
         /// Retrieve a single outcome.
@@ -3362,6 +4012,32 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ActionTemplate>> PatchJourneyActiontemplateAsyncWithHttpInfo (string actionTemplateId, PatchActionTemplate body = null);
 
         /// <summary>
+        /// Update an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ExternalEventsConfiguration</returns>
+        
+        System.Threading.Tasks.Task<ExternalEventsConfiguration> PatchJourneyExternaleventsConfigurationAsync (string configId, UpdateExternalEventsConfigurationRequest body = null);
+
+        /// <summary>
+        /// Update an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (ExternalEventsConfiguration)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExternalEventsConfiguration>> PatchJourneyExternaleventsConfigurationAsyncWithHttpInfo (string configId, UpdateExternalEventsConfigurationRequest body = null);
+
+        /// <summary>
         /// Update an outcome.
         /// </summary>
         /// <remarks>
@@ -3670,6 +4346,80 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<WebEventResponse>> PostJourneyDeploymentWebeventsAsyncWithHttpInfo (string deploymentId, WebEventRequest body = null);
 
         /// <summary>
+        /// Create external events
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configurationId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ExternalEventsResponse</returns>
+        
+        System.Threading.Tasks.Task<ExternalEventsResponse> PostJourneyExternaleventsConfigurationEventsAsync (string configurationId, ExternalEventsRequest body = null);
+
+        /// <summary>
+        /// Create external events
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configurationId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (ExternalEventsResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExternalEventsResponse>> PostJourneyExternaleventsConfigurationEventsAsyncWithHttpInfo (string configurationId, ExternalEventsRequest body = null);
+
+        /// <summary>
+        /// Create an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ExternalEventsConfiguration</returns>
+        
+        System.Threading.Tasks.Task<ExternalEventsConfiguration> PostJourneyExternaleventsConfigurationsAsync (CreateExternalEventsConfigurationRequest body = null);
+
+        /// <summary>
+        /// Create an external events configuration.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (ExternalEventsConfiguration)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ExternalEventsConfiguration>> PostJourneyExternaleventsConfigurationsAsyncWithHttpInfo (CreateExternalEventsConfigurationRequest body = null);
+
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema create request body</param>
+        /// <returns>Task of JourneyExternalEventsSchema</returns>
+        
+        System.Threading.Tasks.Task<JourneyExternalEventsSchema> PostJourneyExternaleventsSchemasAsync (JourneyJsonSchemaRequest body);
+
+        /// <summary>
+        /// Create a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema create request body</param>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchema>> PostJourneyExternaleventsSchemasAsyncWithHttpInfo (JourneyJsonSchemaRequest body);
+
+        /// <summary>
         /// Query for flow paths.
         /// </summary>
         /// <remarks>
@@ -3916,6 +4666,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (EntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<EntityListing>> PostJourneyViewsEncodingsValidateAsyncWithHttpInfo (List<Label> body = null);
+
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Schema update request body</param>
+        /// <returns>Task of JourneyExternalEventsSchema</returns>
+        
+        System.Threading.Tasks.Task<JourneyExternalEventsSchema> PutJourneyExternaleventsSchemaAsync (string schemaId, JourneySchemaUpdateRequest body);
+
+        /// <summary>
+        /// Update a schema
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Schema update request body</param>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchema)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchema>> PutJourneyExternaleventsSchemaAsyncWithHttpInfo (string schemaId, JourneySchemaUpdateRequest body);
 
         /// <summary>
         /// Update the Schedule for a JourneyView
@@ -4672,6 +5448,412 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteJourneyActiontemplate: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteJourneyActiontemplate: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns></returns>
+        
+        public void DeleteJourneyExternaleventsConfiguration (string configId)
+        {
+             DeleteJourneyExternaleventsConfigurationWithHttpInfo(configId);
+        }
+
+        /// <summary>
+        /// Delete an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteJourneyExternaleventsConfigurationWithHttpInfo (string configId)
+        { 
+            // verify the required parameter 'configId' is set
+            if (configId == null)
+                throw new ApiException(400, "Missing required parameter 'configId' when calling JourneyApi->DeleteJourneyExternaleventsConfiguration");
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations/{configId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (configId != null) localVarPathParams.Add("configId", this.Configuration.ApiClient.ParameterToString(configId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteJourneyExternaleventsConfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteJourneyExternaleventsConfigurationAsync (string configId)
+        {
+             await DeleteJourneyExternaleventsConfigurationAsyncWithHttpInfo(configId);
+
+        }
+
+        /// <summary>
+        /// Delete an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyExternaleventsConfigurationAsyncWithHttpInfo (string configId)
+        { 
+            // verify the required parameter 'configId' is set
+            if (configId == null)
+                throw new ApiException(400, "Missing required parameter 'configId' when calling JourneyApi->DeleteJourneyExternaleventsConfiguration");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations/{configId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (configId != null) localVarPathParams.Add("configId", this.Configuration.ApiClient.ParameterToString(configId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteJourneyExternaleventsConfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Delete a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns></returns>
+        
+        public void DeleteJourneyExternaleventsSchema (string schemaId)
+        {
+             DeleteJourneyExternaleventsSchemaWithHttpInfo(schemaId);
+        }
+
+        /// <summary>
+        /// Delete a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteJourneyExternaleventsSchemaWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling JourneyApi->DeleteJourneyExternaleventsSchema");
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/{schemaId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteJourneyExternaleventsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteJourneyExternaleventsSchemaAsync (string schemaId)
+        {
+             await DeleteJourneyExternaleventsSchemaAsyncWithHttpInfo(schemaId);
+
+        }
+
+        /// <summary>
+        /// Delete a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyExternaleventsSchemaAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling JourneyApi->DeleteJourneyExternaleventsSchema");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/{schemaId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteJourneyExternaleventsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -8494,6 +9676,1824 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DeploymentPing>(localVarStatusCode,
                 localVarHeaders,
                 (DeploymentPing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DeploymentPing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get an external events configuration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>ExternalEventsConfiguration</returns>
+        
+        public ExternalEventsConfiguration GetJourneyExternaleventsConfiguration (string configId)
+        {
+             ApiResponse<ExternalEventsConfiguration> localVarResponse = GetJourneyExternaleventsConfigurationWithHttpInfo(configId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an external events configuration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>ApiResponse of ExternalEventsConfiguration</returns>
+        
+        public ApiResponse< ExternalEventsConfiguration > GetJourneyExternaleventsConfigurationWithHttpInfo (string configId)
+        { 
+            // verify the required parameter 'configId' is set
+            if (configId == null)
+                throw new ApiException(400, "Missing required parameter 'configId' when calling JourneyApi->GetJourneyExternaleventsConfiguration");
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations/{configId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (configId != null) localVarPathParams.Add("configId", this.Configuration.ApiClient.ParameterToString(configId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsConfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventsConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventsConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventsConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get an external events configuration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>Task of ExternalEventsConfiguration</returns>
+        
+        public async System.Threading.Tasks.Task<ExternalEventsConfiguration> GetJourneyExternaleventsConfigurationAsync (string configId)
+        {
+             ApiResponse<ExternalEventsConfiguration> localVarResponse = await GetJourneyExternaleventsConfigurationAsyncWithHttpInfo(configId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an external events configuration 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <returns>Task of ApiResponse (ExternalEventsConfiguration)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalEventsConfiguration>> GetJourneyExternaleventsConfigurationAsyncWithHttpInfo (string configId)
+        { 
+            // verify the required parameter 'configId' is set
+            if (configId == null)
+                throw new ApiException(400, "Missing required parameter 'configId' when calling JourneyApi->GetJourneyExternaleventsConfiguration");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations/{configId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (configId != null) localVarPathParams.Add("configId", this.Configuration.ApiClient.ParameterToString(configId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsConfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventsConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventsConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventsConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get all external event configurations. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ExternalEventsConfigurationListing</returns>
+        
+        public ExternalEventsConfigurationListing GetJourneyExternaleventsConfigurations (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<ExternalEventsConfigurationListing> localVarResponse = GetJourneyExternaleventsConfigurationsWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all external event configurations. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>ApiResponse of ExternalEventsConfigurationListing</returns>
+        
+        public ApiResponse< ExternalEventsConfigurationListing > GetJourneyExternaleventsConfigurationsWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsConfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsConfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsConfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventsConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventsConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventsConfigurationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get all external event configurations. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ExternalEventsConfigurationListing</returns>
+        
+        public async System.Threading.Tasks.Task<ExternalEventsConfigurationListing> GetJourneyExternaleventsConfigurationsAsync (int? pageSize = null, int? pageNumber = null)
+        {
+             ApiResponse<ExternalEventsConfigurationListing> localVarResponse = await GetJourneyExternaleventsConfigurationsAsyncWithHttpInfo(pageSize, pageNumber);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all external event configurations. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="pageSize">Page size (optional, default to 20)</param>
+        /// <param name="pageNumber">Page number (optional, default to 1)</param>
+        /// <returns>Task of ApiResponse (ExternalEventsConfigurationListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalEventsConfigurationListing>> GetJourneyExternaleventsConfigurationsAsyncWithHttpInfo (int? pageSize = null, int? pageNumber = null)
+        { 
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (pageNumber != null) localVarQueryParams.Add(new Tuple<string, string>("pageNumber", this.Configuration.ApiClient.ParameterToString(pageNumber)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsConfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsConfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsConfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventsConfigurationListing>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventsConfigurationListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventsConfigurationListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>JourneyExternalEventsSchema</returns>
+        
+        public JourneyExternalEventsSchema GetJourneyExternaleventsSchema (string schemaId)
+        {
+             ApiResponse<JourneyExternalEventsSchema> localVarResponse = GetJourneyExternaleventsSchemaWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of JourneyExternalEventsSchema</returns>
+        
+        public ApiResponse< JourneyExternalEventsSchema > GetJourneyExternaleventsSchemaWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling JourneyApi->GetJourneyExternaleventsSchema");
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/{schemaId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchema>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of JourneyExternalEventsSchema</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyExternalEventsSchema> GetJourneyExternaleventsSchemaAsync (string schemaId)
+        {
+             ApiResponse<JourneyExternalEventsSchema> localVarResponse = await GetJourneyExternaleventsSchemaAsyncWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchema>> GetJourneyExternaleventsSchemaAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling JourneyApi->GetJourneyExternaleventsSchema");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/{schemaId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchema>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>JourneyExternalEventsSchema</returns>
+        
+        public JourneyExternalEventsSchema GetJourneyExternaleventsSchemaVersion (string schemaId, string versionId)
+        {
+             ApiResponse<JourneyExternalEventsSchema> localVarResponse = GetJourneyExternaleventsSchemaVersionWithHttpInfo(schemaId, versionId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>ApiResponse of JourneyExternalEventsSchema</returns>
+        
+        public ApiResponse< JourneyExternalEventsSchema > GetJourneyExternaleventsSchemaVersionWithHttpInfo (string schemaId, string versionId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling JourneyApi->GetJourneyExternaleventsSchemaVersion");
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling JourneyApi->GetJourneyExternaleventsSchemaVersion");
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/{schemaId}/versions/{versionId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemaVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchema>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of JourneyExternalEventsSchema</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyExternalEventsSchema> GetJourneyExternaleventsSchemaVersionAsync (string schemaId, string versionId)
+        {
+             ApiResponse<JourneyExternalEventsSchema> localVarResponse = await GetJourneyExternaleventsSchemaVersionAsyncWithHttpInfo(schemaId, versionId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a specific version of a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="versionId">Schema version</param>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchema>> GetJourneyExternaleventsSchemaVersionAsyncWithHttpInfo (string schemaId, string versionId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling JourneyApi->GetJourneyExternaleventsSchemaVersion");
+            
+            // verify the required parameter 'versionId' is set
+            if (versionId == null)
+                throw new ApiException(400, "Missing required parameter 'versionId' when calling JourneyApi->GetJourneyExternaleventsSchemaVersion");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/{schemaId}/versions/{versionId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+            if (versionId != null) localVarPathParams.Add("versionId", this.Configuration.ApiClient.ParameterToString(versionId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemaVersion: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemaVersion: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchema>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get all versions of a External Events schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>JourneyExternalEventsSchemaListing</returns>
+        
+        public JourneyExternalEventsSchemaListing GetJourneyExternaleventsSchemaVersions (string schemaId)
+        {
+             ApiResponse<JourneyExternalEventsSchemaListing> localVarResponse = GetJourneyExternaleventsSchemaVersionsWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get all versions of a External Events schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>ApiResponse of JourneyExternalEventsSchemaListing</returns>
+        
+        public ApiResponse< JourneyExternalEventsSchemaListing > GetJourneyExternaleventsSchemaVersionsWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling JourneyApi->GetJourneyExternaleventsSchemaVersions");
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/{schemaId}/versions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get all versions of a External Events schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of JourneyExternalEventsSchemaListing</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyExternalEventsSchemaListing> GetJourneyExternaleventsSchemaVersionsAsync (string schemaId)
+        {
+             ApiResponse<JourneyExternalEventsSchemaListing> localVarResponse = await GetJourneyExternaleventsSchemaVersionsAsyncWithHttpInfo(schemaId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get all versions of a External Events schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchemaListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchemaListing>> GetJourneyExternaleventsSchemaVersionsAsyncWithHttpInfo (string schemaId)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling JourneyApi->GetJourneyExternaleventsSchemaVersions");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/{schemaId}/versions";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemaVersions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemaVersions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>JourneyExternalEventsSchemaListing</returns>
+        
+        public JourneyExternalEventsSchemaListing GetJourneyExternaleventsSchemas ()
+        {
+             ApiResponse<JourneyExternalEventsSchemaListing> localVarResponse = GetJourneyExternaleventsSchemasWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of JourneyExternalEventsSchemaListing</returns>
+        
+        public ApiResponse< JourneyExternalEventsSchemaListing > GetJourneyExternaleventsSchemasWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of JourneyExternalEventsSchemaListing</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyExternalEventsSchemaListing> GetJourneyExternaleventsSchemasAsync ()
+        {
+             ApiResponse<JourneyExternalEventsSchemaListing> localVarResponse = await GetJourneyExternaleventsSchemasAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a list of schemas. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchemaListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchemaListing>> GetJourneyExternaleventsSchemasAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchemaListing>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchemaListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchemaListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get a core type from which all schemas are built 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of core type</param>
+        /// <returns>Coretype</returns>
+        
+        public Coretype GetJourneyExternaleventsSchemasCoretype (string coreTypeName)
+        {
+             ApiResponse<Coretype> localVarResponse = GetJourneyExternaleventsSchemasCoretypeWithHttpInfo(coreTypeName);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a core type from which all schemas are built 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of core type</param>
+        /// <returns>ApiResponse of Coretype</returns>
+        
+        public ApiResponse< Coretype > GetJourneyExternaleventsSchemasCoretypeWithHttpInfo (string coreTypeName)
+        { 
+            // verify the required parameter 'coreTypeName' is set
+            if (coreTypeName == null)
+                throw new ApiException(400, "Missing required parameter 'coreTypeName' when calling JourneyApi->GetJourneyExternaleventsSchemasCoretype");
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/coretypes/{coreTypeName}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (coreTypeName != null) localVarPathParams.Add("coreTypeName", this.Configuration.ApiClient.ParameterToString(coreTypeName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasCoretype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemasCoretype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasCoretype: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Coretype>(localVarStatusCode,
+                localVarHeaders,
+                (Coretype) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Coretype)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get a core type from which all schemas are built 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of core type</param>
+        /// <returns>Task of Coretype</returns>
+        
+        public async System.Threading.Tasks.Task<Coretype> GetJourneyExternaleventsSchemasCoretypeAsync (string coreTypeName)
+        {
+             ApiResponse<Coretype> localVarResponse = await GetJourneyExternaleventsSchemasCoretypeAsyncWithHttpInfo(coreTypeName);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a core type from which all schemas are built 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="coreTypeName">Name of core type</param>
+        /// <returns>Task of ApiResponse (Coretype)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Coretype>> GetJourneyExternaleventsSchemasCoretypeAsyncWithHttpInfo (string coreTypeName)
+        { 
+            // verify the required parameter 'coreTypeName' is set
+            if (coreTypeName == null)
+                throw new ApiException(400, "Missing required parameter 'coreTypeName' when calling JourneyApi->GetJourneyExternaleventsSchemasCoretype");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/coretypes/{coreTypeName}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (coreTypeName != null) localVarPathParams.Add("coreTypeName", this.Configuration.ApiClient.ParameterToString(coreTypeName));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasCoretype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemasCoretype: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasCoretype: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Coretype>(localVarStatusCode,
+                localVarHeaders,
+                (Coretype) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(Coretype)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>CoretypeListing</returns>
+        
+        public CoretypeListing GetJourneyExternaleventsSchemasCoretypes ()
+        {
+             ApiResponse<CoretypeListing> localVarResponse = GetJourneyExternaleventsSchemasCoretypesWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of CoretypeListing</returns>
+        
+        public ApiResponse< CoretypeListing > GetJourneyExternaleventsSchemasCoretypesWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/coretypes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasCoretypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemasCoretypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasCoretypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CoretypeListing>(localVarStatusCode,
+                localVarHeaders,
+                (CoretypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoretypeListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of CoretypeListing</returns>
+        
+        public async System.Threading.Tasks.Task<CoretypeListing> GetJourneyExternaleventsSchemasCoretypesAsync ()
+        {
+             ApiResponse<CoretypeListing> localVarResponse = await GetJourneyExternaleventsSchemasCoretypesAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get the list of core types enabled for a specific namespace. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (CoretypeListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CoretypeListing>> GetJourneyExternaleventsSchemasCoretypesAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/coretypes";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasCoretypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemasCoretypes: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasCoretypes: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CoretypeListing>(localVarStatusCode,
+                localVarHeaders,
+                (CoretypeListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CoretypeListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get quantitative limits on schemas 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>SchemaQuantityLimits</returns>
+        
+        public SchemaQuantityLimits GetJourneyExternaleventsSchemasLimits ()
+        {
+             ApiResponse<SchemaQuantityLimits> localVarResponse = GetJourneyExternaleventsSchemasLimitsWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get quantitative limits on schemas 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of SchemaQuantityLimits</returns>
+        
+        public ApiResponse< SchemaQuantityLimits > GetJourneyExternaleventsSchemasLimitsWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/limits";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasLimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemasLimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasLimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SchemaQuantityLimits>(localVarStatusCode,
+                localVarHeaders,
+                (SchemaQuantityLimits) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchemaQuantityLimits)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get quantitative limits on schemas 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of SchemaQuantityLimits</returns>
+        
+        public async System.Threading.Tasks.Task<SchemaQuantityLimits> GetJourneyExternaleventsSchemasLimitsAsync ()
+        {
+             ApiResponse<SchemaQuantityLimits> localVarResponse = await GetJourneyExternaleventsSchemasLimitsAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get quantitative limits on schemas 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (SchemaQuantityLimits)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<SchemaQuantityLimits>> GetJourneyExternaleventsSchemasLimitsAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/limits";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasLimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetJourneyExternaleventsSchemasLimits: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetJourneyExternaleventsSchemasLimits: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<SchemaQuantityLimits>(localVarStatusCode,
+                localVarHeaders,
+                (SchemaQuantityLimits) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SchemaQuantityLimits)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -14958,6 +17958,227 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Update an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ExternalEventsConfiguration</returns>
+        
+        public ExternalEventsConfiguration PatchJourneyExternaleventsConfiguration (string configId, UpdateExternalEventsConfigurationRequest body = null)
+        {
+             ApiResponse<ExternalEventsConfiguration> localVarResponse = PatchJourneyExternaleventsConfigurationWithHttpInfo(configId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of ExternalEventsConfiguration</returns>
+        
+        public ApiResponse< ExternalEventsConfiguration > PatchJourneyExternaleventsConfigurationWithHttpInfo (string configId, UpdateExternalEventsConfigurationRequest body = null)
+        { 
+            // verify the required parameter 'configId' is set
+            if (configId == null)
+                throw new ApiException(400, "Missing required parameter 'configId' when calling JourneyApi->PatchJourneyExternaleventsConfiguration");
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations/{configId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (configId != null) localVarPathParams.Add("configId", this.Configuration.ApiClient.ParameterToString(configId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchJourneyExternaleventsConfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventsConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventsConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventsConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ExternalEventsConfiguration</returns>
+        
+        public async System.Threading.Tasks.Task<ExternalEventsConfiguration> PatchJourneyExternaleventsConfigurationAsync (string configId, UpdateExternalEventsConfigurationRequest body = null)
+        {
+             ApiResponse<ExternalEventsConfiguration> localVarResponse = await PatchJourneyExternaleventsConfigurationAsyncWithHttpInfo(configId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (ExternalEventsConfiguration)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalEventsConfiguration>> PatchJourneyExternaleventsConfigurationAsyncWithHttpInfo (string configId, UpdateExternalEventsConfigurationRequest body = null)
+        { 
+            // verify the required parameter 'configId' is set
+            if (configId == null)
+                throw new ApiException(400, "Missing required parameter 'configId' when calling JourneyApi->PatchJourneyExternaleventsConfiguration");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations/{configId}";
+            var localVarHttpMethod = "Patch";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (configId != null) localVarPathParams.Add("configId", this.Configuration.ApiClient.ParameterToString(configId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PatchJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PatchJourneyExternaleventsConfiguration: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PatchJourneyExternaleventsConfiguration: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventsConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventsConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventsConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Update an outcome. 
         /// 
         /// </summary>
@@ -17566,6 +20787,650 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
+        /// Create external events 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configurationId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ExternalEventsResponse</returns>
+        
+        public ExternalEventsResponse PostJourneyExternaleventsConfigurationEvents (string configurationId, ExternalEventsRequest body = null)
+        {
+             ApiResponse<ExternalEventsResponse> localVarResponse = PostJourneyExternaleventsConfigurationEventsWithHttpInfo(configurationId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create external events 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configurationId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of ExternalEventsResponse</returns>
+        
+        public ApiResponse< ExternalEventsResponse > PostJourneyExternaleventsConfigurationEventsWithHttpInfo (string configurationId, ExternalEventsRequest body = null)
+        { 
+            // verify the required parameter 'configurationId' is set
+            if (configurationId == null)
+                throw new ApiException(400, "Missing required parameter 'configurationId' when calling JourneyApi->PostJourneyExternaleventsConfigurationEvents");
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations/{configurationId}/events";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (configurationId != null) localVarPathParams.Add("configurationId", this.Configuration.ApiClient.ParameterToString(configurationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsConfigurationEvents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostJourneyExternaleventsConfigurationEvents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsConfigurationEvents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create external events 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configurationId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ExternalEventsResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ExternalEventsResponse> PostJourneyExternaleventsConfigurationEventsAsync (string configurationId, ExternalEventsRequest body = null)
+        {
+             ApiResponse<ExternalEventsResponse> localVarResponse = await PostJourneyExternaleventsConfigurationEventsAsyncWithHttpInfo(configurationId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create external events 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="configurationId">The ID of the external event configuration.</param>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (ExternalEventsResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalEventsResponse>> PostJourneyExternaleventsConfigurationEventsAsyncWithHttpInfo (string configurationId, ExternalEventsRequest body = null)
+        { 
+            // verify the required parameter 'configurationId' is set
+            if (configurationId == null)
+                throw new ApiException(400, "Missing required parameter 'configurationId' when calling JourneyApi->PostJourneyExternaleventsConfigurationEvents");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations/{configurationId}/events";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (configurationId != null) localVarPathParams.Add("configurationId", this.Configuration.ApiClient.ParameterToString(configurationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsConfigurationEvents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostJourneyExternaleventsConfigurationEvents: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsConfigurationEvents: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventsResponse>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventsResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventsResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ExternalEventsConfiguration</returns>
+        
+        public ExternalEventsConfiguration PostJourneyExternaleventsConfigurations (CreateExternalEventsConfigurationRequest body = null)
+        {
+             ApiResponse<ExternalEventsConfiguration> localVarResponse = PostJourneyExternaleventsConfigurationsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>ApiResponse of ExternalEventsConfiguration</returns>
+        
+        public ApiResponse< ExternalEventsConfiguration > PostJourneyExternaleventsConfigurationsWithHttpInfo (CreateExternalEventsConfigurationRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsConfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostJourneyExternaleventsConfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsConfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventsConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventsConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventsConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ExternalEventsConfiguration</returns>
+        
+        public async System.Threading.Tasks.Task<ExternalEventsConfiguration> PostJourneyExternaleventsConfigurationsAsync (CreateExternalEventsConfigurationRequest body = null)
+        {
+             ApiResponse<ExternalEventsConfiguration> localVarResponse = await PostJourneyExternaleventsConfigurationsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create an external events configuration. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body"> (optional)</param>
+        /// <returns>Task of ApiResponse (ExternalEventsConfiguration)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ExternalEventsConfiguration>> PostJourneyExternaleventsConfigurationsAsyncWithHttpInfo (CreateExternalEventsConfigurationRequest body = null)
+        { 
+
+            var localVarPath = "/api/v2/journey/externalevents/configurations";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsConfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostJourneyExternaleventsConfigurations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsConfigurations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ExternalEventsConfiguration>(localVarStatusCode,
+                localVarHeaders,
+                (ExternalEventsConfiguration) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ExternalEventsConfiguration)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema create request body</param>
+        /// <returns>JourneyExternalEventsSchema</returns>
+        
+        public JourneyExternalEventsSchema PostJourneyExternaleventsSchemas (JourneyJsonSchemaRequest body)
+        {
+             ApiResponse<JourneyExternalEventsSchema> localVarResponse = PostJourneyExternaleventsSchemasWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema create request body</param>
+        /// <returns>ApiResponse of JourneyExternalEventsSchema</returns>
+        
+        public ApiResponse< JourneyExternalEventsSchema > PostJourneyExternaleventsSchemasWithHttpInfo (JourneyJsonSchemaRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyExternaleventsSchemas");
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostJourneyExternaleventsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchema>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema create request body</param>
+        /// <returns>Task of JourneyExternalEventsSchema</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyExternalEventsSchema> PostJourneyExternaleventsSchemasAsync (JourneyJsonSchemaRequest body)
+        {
+             ApiResponse<JourneyExternalEventsSchema> localVarResponse = await PostJourneyExternaleventsSchemasAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Schema create request body</param>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchema>> PostJourneyExternaleventsSchemasAsyncWithHttpInfo (JourneyJsonSchemaRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PostJourneyExternaleventsSchemas");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostJourneyExternaleventsSchemas: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostJourneyExternaleventsSchemas: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchema>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
         /// Query for flow paths. 
         /// 
         /// </summary>
@@ -19700,6 +23565,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<EntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (EntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(EntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Schema update request body</param>
+        /// <returns>JourneyExternalEventsSchema</returns>
+        
+        public JourneyExternalEventsSchema PutJourneyExternaleventsSchema (string schemaId, JourneySchemaUpdateRequest body)
+        {
+             ApiResponse<JourneyExternalEventsSchema> localVarResponse = PutJourneyExternaleventsSchemaWithHttpInfo(schemaId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Schema update request body</param>
+        /// <returns>ApiResponse of JourneyExternalEventsSchema</returns>
+        
+        public ApiResponse< JourneyExternalEventsSchema > PutJourneyExternaleventsSchemaWithHttpInfo (string schemaId, JourneySchemaUpdateRequest body)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling JourneyApi->PutJourneyExternaleventsSchema");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PutJourneyExternaleventsSchema");
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/{schemaId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyExternaleventsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchema>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Schema update request body</param>
+        /// <returns>Task of JourneyExternalEventsSchema</returns>
+        
+        public async System.Threading.Tasks.Task<JourneyExternalEventsSchema> PutJourneyExternaleventsSchemaAsync (string schemaId, JourneySchemaUpdateRequest body)
+        {
+             ApiResponse<JourneyExternalEventsSchema> localVarResponse = await PutJourneyExternaleventsSchemaAsyncWithHttpInfo(schemaId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a schema 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="schemaId">Schema ID</param>
+        /// <param name="body">Schema update request body</param>
+        /// <returns>Task of ApiResponse (JourneyExternalEventsSchema)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<JourneyExternalEventsSchema>> PutJourneyExternaleventsSchemaAsyncWithHttpInfo (string schemaId, JourneySchemaUpdateRequest body)
+        { 
+            // verify the required parameter 'schemaId' is set
+            if (schemaId == null)
+                throw new ApiException(400, "Missing required parameter 'schemaId' when calling JourneyApi->PutJourneyExternaleventsSchema");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling JourneyApi->PutJourneyExternaleventsSchema");
+            
+
+            var localVarPath = "/api/v2/journey/externalevents/schemas/{schemaId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (schemaId != null) localVarPathParams.Add("schemaId", this.Configuration.ApiClient.ParameterToString(schemaId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutJourneyExternaleventsSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutJourneyExternaleventsSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<JourneyExternalEventsSchema>(localVarStatusCode,
+                localVarHeaders,
+                (JourneyExternalEventsSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(JourneyExternalEventsSchema)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

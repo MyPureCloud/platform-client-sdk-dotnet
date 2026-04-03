@@ -81,13 +81,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MediaType">The media type of the transcripts, default value is all .</param>
         /// <param name="StartTimeMs">start time to filter by, default value is 7 days into the past.</param>
         /// <param name="EndTimeMs">end time to filter by, default value is current time.</param>
+        /// <param name="Programs">list of programs ids to filter by.</param>
         /// <param name="Queues">list of queues ids to filter by.</param>
         /// <param name="Flows">list of flows ids to filter by.</param>
-        public TranscriptsFilters(MediaTypeEnum? MediaType = null, long? StartTimeMs = null, long? EndTimeMs = null, List<string> Queues = null, List<string> Flows = null)
+        public TranscriptsFilters(MediaTypeEnum? MediaType = null, long? StartTimeMs = null, long? EndTimeMs = null, List<string> Programs = null, List<string> Queues = null, List<string> Flows = null)
         {
             this.MediaType = MediaType;
             this.StartTimeMs = StartTimeMs;
             this.EndTimeMs = EndTimeMs;
+            this.Programs = Programs;
             this.Queues = Queues;
             this.Flows = Flows;
             
@@ -112,6 +114,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>end time to filter by, default value is current time</value>
         [DataMember(Name="endTimeMs", EmitDefaultValue=false)]
         public long? EndTimeMs { get; set; }
+
+
+
+        /// <summary>
+        /// list of programs ids to filter by
+        /// </summary>
+        /// <value>list of programs ids to filter by</value>
+        [DataMember(Name="programs", EmitDefaultValue=false)]
+        public List<string> Programs { get; set; }
 
 
 
@@ -144,6 +155,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MediaType: ").Append(MediaType).Append("\n");
             sb.Append("  StartTimeMs: ").Append(StartTimeMs).Append("\n");
             sb.Append("  EndTimeMs: ").Append(EndTimeMs).Append("\n");
+            sb.Append("  Programs: ").Append(Programs).Append("\n");
             sb.Append("  Queues: ").Append(Queues).Append("\n");
             sb.Append("  Flows: ").Append(Flows).Append("\n");
             sb.Append("}\n");
@@ -202,6 +214,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EndTimeMs.Equals(other.EndTimeMs)
                 ) &&
                 (
+                    this.Programs == other.Programs ||
+                    this.Programs != null &&
+                    this.Programs.SequenceEqual(other.Programs)
+                ) &&
+                (
                     this.Queues == other.Queues ||
                     this.Queues != null &&
                     this.Queues.SequenceEqual(other.Queues)
@@ -232,6 +249,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EndTimeMs != null)
                     hash = hash * 59 + this.EndTimeMs.GetHashCode();
+
+                if (this.Programs != null)
+                    hash = hash * 59 + this.Programs.GetHashCode();
 
                 if (this.Queues != null)
                     hash = hash * 59 + this.Queues.GetHashCode();
