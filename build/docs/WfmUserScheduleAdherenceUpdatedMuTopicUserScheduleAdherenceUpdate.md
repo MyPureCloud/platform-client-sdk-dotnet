@@ -8,6 +8,7 @@
 |------------ | ------------- | ------------- | -------------|
 | **User** | [**WfmUserScheduleAdherenceUpdatedMuTopicUserReference**](WfmUserScheduleAdherenceUpdatedMuTopicUserReference) |  | [optional] |
 | **ManagementUnitId** | **string** |  | [optional] |
+| **BusinessUnitId** | **string** |  | [optional] |
 | **Team** | [**WfmUserScheduleAdherenceUpdatedMuTopicUriReference**](WfmUserScheduleAdherenceUpdatedMuTopicUriReference) |  | [optional] |
 | **ScheduledActivityCategory** | **string** |  | [optional] |
 | **ScheduledActivityCode** | [**WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference**](WfmUserScheduleAdherenceUpdatedMuTopicActivityCodeReference) |  | [optional] |
@@ -29,4 +30,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 261.0.0_
+_PureCloudPlatform.Client.V2 262.0.0_

@@ -1831,16 +1831,16 @@ namespace PureCloudPlatform.Client.V2.Model
             Capacityplan,
             
             /// <summary>
-            /// Enum Schedulebid for "ScheduleBid"
+            /// Enum Schedulesetbid for "ScheduleSetBid"
             /// </summary>
-            [EnumMember(Value = "ScheduleBid")]
-            Schedulebid,
+            [EnumMember(Value = "ScheduleSetBid")]
+            Schedulesetbid,
             
             /// <summary>
-            /// Enum Schedulebidgroup for "ScheduleBidGroup"
+            /// Enum Schedulesetbidgroup for "ScheduleSetBidGroup"
             /// </summary>
-            [EnumMember(Value = "ScheduleBidGroup")]
-            Schedulebidgroup,
+            [EnumMember(Value = "ScheduleSetBidGroup")]
+            Schedulesetbidgroup,
             
             /// <summary>
             /// Enum Opportunity for "Opportunity"
@@ -2483,6 +2483,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "Sender")]
             Sender,
+            
+            /// <summary>
+            /// Enum Gcvbyocblock for "GcvByocBlock"
+            /// </summary>
+            [EnumMember(Value = "GcvByocBlock")]
+            Gcvbyocblock,
             
             /// <summary>
             /// Enum Allowandblocknumber for "AllowAndBlockNumber"

@@ -16,6 +16,30 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Synchronous Operations
 
         /// <summary>
+        /// Delete a Scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns></returns>
+        
+        void DeleteProcessautomationScheduledtrigger (string scheduledTriggerId);
+
+        /// <summary>
+        /// Delete a Scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteProcessautomationScheduledtriggerWithHttpInfo (string scheduledTriggerId);
+
+        /// <summary>
         /// Delete a Trigger
         /// </summary>
         /// <remarks>
@@ -38,6 +62,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of Object(void)</returns>
         
         ApiResponse<Object> DeleteProcessautomationTriggerWithHttpInfo (string triggerId);
+
+        /// <summary>
+        /// Retrieve a single Scheduled Trigger matching id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>ScheduledTrigger</returns>
+        
+        ScheduledTrigger GetProcessautomationScheduledtrigger (string scheduledTriggerId);
+
+        /// <summary>
+        /// Retrieve a single Scheduled Trigger matching id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>ApiResponse of ScheduledTrigger</returns>
+        
+        ApiResponse<ScheduledTrigger> GetProcessautomationScheduledtriggerWithHttpInfo (string scheduledTriggerId);
+
+        /// <summary>
+        /// Retrieves all scheduled triggers, optionally filtered by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="enabled">Boolean indicating desired enabled state of scheduled triggers (optional)</param>
+        /// <returns>ScheduledTriggerEntityListing</returns>
+        
+        ScheduledTriggerEntityListing GetProcessautomationScheduledtriggers (string before = null, string after = null, string pageSize = null, bool? enabled = null);
+
+        /// <summary>
+        /// Retrieves all scheduled triggers, optionally filtered by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="enabled">Boolean indicating desired enabled state of scheduled triggers (optional)</param>
+        /// <returns>ApiResponse of ScheduledTriggerEntityListing</returns>
+        
+        ApiResponse<ScheduledTriggerEntityListing> GetProcessautomationScheduledtriggersWithHttpInfo (string before = null, string after = null, string pageSize = null, bool? enabled = null);
 
         /// <summary>
         /// Retrieve a single Trigger matching id
@@ -126,6 +204,30 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TopicCursorEntityListing> GetProcessautomationTriggersTopicsWithHttpInfo (string before = null, string after = null, string pageSize = null);
 
         /// <summary>
+        /// Create a scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Input used to create a Scheduled Trigger</param>
+        /// <returns>ScheduledTrigger</returns>
+        
+        ScheduledTrigger PostProcessautomationScheduledtriggers (CreateScheduledTriggerRequest body);
+
+        /// <summary>
+        /// Create a scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Input used to create a Scheduled Trigger</param>
+        /// <returns>ApiResponse of ScheduledTrigger</returns>
+        
+        ApiResponse<ScheduledTrigger> PostProcessautomationScheduledtriggersWithHttpInfo (CreateScheduledTriggerRequest body);
+
+        /// <summary>
         /// Test the matching of a Trigger based on provided event body
         /// </summary>
         /// <remarks>
@@ -202,6 +304,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<TestModeEventResults> PostProcessautomationTriggersTopicTestWithHttpInfo (string topicName, string body = null);
 
         /// <summary>
+        /// Update a Scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <param name="body">Input to update Scheduled Trigger.</param>
+        /// <returns>ScheduledTrigger</returns>
+        
+        ScheduledTrigger PutProcessautomationScheduledtrigger (string scheduledTriggerId, UpdateScheduledTriggerRequest body);
+
+        /// <summary>
+        /// Update a Scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <param name="body">Input to update Scheduled Trigger.</param>
+        /// <returns>ApiResponse of ScheduledTrigger</returns>
+        
+        ApiResponse<ScheduledTrigger> PutProcessautomationScheduledtriggerWithHttpInfo (string scheduledTriggerId, UpdateScheduledTriggerRequest body);
+
+        /// <summary>
         /// Update a Trigger
         /// </summary>
         /// <remarks>
@@ -232,6 +360,30 @@ namespace PureCloudPlatform.Client.V2.Api
         #region Asynchronous Operations
 
         /// <summary>
+        /// Delete a Scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteProcessautomationScheduledtriggerAsync (string scheduledTriggerId);
+
+        /// <summary>
+        /// Delete a Scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteProcessautomationScheduledtriggerAsyncWithHttpInfo (string scheduledTriggerId);
+
+        /// <summary>
         /// Delete a Trigger
         /// </summary>
         /// <remarks>
@@ -254,6 +406,60 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteProcessautomationTriggerAsyncWithHttpInfo (string triggerId);
+
+        /// <summary>
+        /// Retrieve a single Scheduled Trigger matching id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>Task of ScheduledTrigger</returns>
+        
+        System.Threading.Tasks.Task<ScheduledTrigger> GetProcessautomationScheduledtriggerAsync (string scheduledTriggerId);
+
+        /// <summary>
+        /// Retrieve a single Scheduled Trigger matching id
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>Task of ApiResponse (ScheduledTrigger)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ScheduledTrigger>> GetProcessautomationScheduledtriggerAsyncWithHttpInfo (string scheduledTriggerId);
+
+        /// <summary>
+        /// Retrieves all scheduled triggers, optionally filtered by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="enabled">Boolean indicating desired enabled state of scheduled triggers (optional)</param>
+        /// <returns>Task of ScheduledTriggerEntityListing</returns>
+        
+        System.Threading.Tasks.Task<ScheduledTriggerEntityListing> GetProcessautomationScheduledtriggersAsync (string before = null, string after = null, string pageSize = null, bool? enabled = null);
+
+        /// <summary>
+        /// Retrieves all scheduled triggers, optionally filtered by query parameters.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="enabled">Boolean indicating desired enabled state of scheduled triggers (optional)</param>
+        /// <returns>Task of ApiResponse (ScheduledTriggerEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ScheduledTriggerEntityListing>> GetProcessautomationScheduledtriggersAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, bool? enabled = null);
 
         /// <summary>
         /// Retrieve a single Trigger matching id
@@ -342,6 +548,30 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<TopicCursorEntityListing>> GetProcessautomationTriggersTopicsAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null);
 
         /// <summary>
+        /// Create a scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Input used to create a Scheduled Trigger</param>
+        /// <returns>Task of ScheduledTrigger</returns>
+        
+        System.Threading.Tasks.Task<ScheduledTrigger> PostProcessautomationScheduledtriggersAsync (CreateScheduledTriggerRequest body);
+
+        /// <summary>
+        /// Create a scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Input used to create a Scheduled Trigger</param>
+        /// <returns>Task of ApiResponse (ScheduledTrigger)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ScheduledTrigger>> PostProcessautomationScheduledtriggersAsyncWithHttpInfo (CreateScheduledTriggerRequest body);
+
+        /// <summary>
         /// Test the matching of a Trigger based on provided event body
         /// </summary>
         /// <remarks>
@@ -416,6 +646,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (TestModeEventResults)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<TestModeEventResults>> PostProcessautomationTriggersTopicTestAsyncWithHttpInfo (string topicName, string body = null);
+
+        /// <summary>
+        /// Update a Scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <param name="body">Input to update Scheduled Trigger.</param>
+        /// <returns>Task of ScheduledTrigger</returns>
+        
+        System.Threading.Tasks.Task<ScheduledTrigger> PutProcessautomationScheduledtriggerAsync (string scheduledTriggerId, UpdateScheduledTriggerRequest body);
+
+        /// <summary>
+        /// Update a Scheduled Trigger
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <param name="body">Input to update Scheduled Trigger.</param>
+        /// <returns>Task of ApiResponse (ScheduledTrigger)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<ScheduledTrigger>> PutProcessautomationScheduledtriggerAsyncWithHttpInfo (string scheduledTriggerId, UpdateScheduledTriggerRequest body);
 
         /// <summary>
         /// Update a Trigger
@@ -533,6 +789,209 @@ namespace PureCloudPlatform.Client.V2.Api
         {
             this.Configuration.AddDefaultHeader(key, value);
         }
+
+
+        /// <summary>
+        /// Delete a Scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns></returns>
+        
+        public void DeleteProcessautomationScheduledtrigger (string scheduledTriggerId)
+        {
+             DeleteProcessautomationScheduledtriggerWithHttpInfo(scheduledTriggerId);
+        }
+
+        /// <summary>
+        /// Delete a Scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteProcessautomationScheduledtriggerWithHttpInfo (string scheduledTriggerId)
+        { 
+            // verify the required parameter 'scheduledTriggerId' is set
+            if (scheduledTriggerId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduledTriggerId' when calling ProcessAutomationApi->DeleteProcessautomationScheduledtrigger");
+
+            var localVarPath = "/api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scheduledTriggerId != null) localVarPathParams.Add("scheduledTriggerId", this.Configuration.ApiClient.ParameterToString(scheduledTriggerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProcessautomationScheduledtrigger: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Delete a Scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteProcessautomationScheduledtriggerAsync (string scheduledTriggerId)
+        {
+             await DeleteProcessautomationScheduledtriggerAsyncWithHttpInfo(scheduledTriggerId);
+
+        }
+
+        /// <summary>
+        /// Delete a Scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteProcessautomationScheduledtriggerAsyncWithHttpInfo (string scheduledTriggerId)
+        { 
+            // verify the required parameter 'scheduledTriggerId' is set
+            if (scheduledTriggerId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduledTriggerId' when calling ProcessAutomationApi->DeleteProcessautomationScheduledtrigger");
+            
+
+            var localVarPath = "/api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scheduledTriggerId != null) localVarPathParams.Add("scheduledTriggerId", this.Configuration.ApiClient.ParameterToString(scheduledTriggerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteProcessautomationScheduledtrigger: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
 
 
         /// <summary>
@@ -732,6 +1191,427 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
                 null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieve a single Scheduled Trigger matching id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>ScheduledTrigger</returns>
+        
+        public ScheduledTrigger GetProcessautomationScheduledtrigger (string scheduledTriggerId)
+        {
+             ApiResponse<ScheduledTrigger> localVarResponse = GetProcessautomationScheduledtriggerWithHttpInfo(scheduledTriggerId);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve a single Scheduled Trigger matching id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>ApiResponse of ScheduledTrigger</returns>
+        
+        public ApiResponse< ScheduledTrigger > GetProcessautomationScheduledtriggerWithHttpInfo (string scheduledTriggerId)
+        { 
+            // verify the required parameter 'scheduledTriggerId' is set
+            if (scheduledTriggerId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduledTriggerId' when calling ProcessAutomationApi->GetProcessautomationScheduledtrigger");
+
+            var localVarPath = "/api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scheduledTriggerId != null) localVarPathParams.Add("scheduledTriggerId", this.Configuration.ApiClient.ParameterToString(scheduledTriggerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProcessautomationScheduledtrigger: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduledTrigger>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduledTrigger) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduledTrigger)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieve a single Scheduled Trigger matching id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>Task of ScheduledTrigger</returns>
+        
+        public async System.Threading.Tasks.Task<ScheduledTrigger> GetProcessautomationScheduledtriggerAsync (string scheduledTriggerId)
+        {
+             ApiResponse<ScheduledTrigger> localVarResponse = await GetProcessautomationScheduledtriggerAsyncWithHttpInfo(scheduledTriggerId);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve a single Scheduled Trigger matching id 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <returns>Task of ApiResponse (ScheduledTrigger)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduledTrigger>> GetProcessautomationScheduledtriggerAsyncWithHttpInfo (string scheduledTriggerId)
+        { 
+            // verify the required parameter 'scheduledTriggerId' is set
+            if (scheduledTriggerId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduledTriggerId' when calling ProcessAutomationApi->GetProcessautomationScheduledtrigger");
+            
+
+            var localVarPath = "/api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scheduledTriggerId != null) localVarPathParams.Add("scheduledTriggerId", this.Configuration.ApiClient.ParameterToString(scheduledTriggerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProcessautomationScheduledtrigger: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduledTrigger>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduledTrigger) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduledTrigger)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Retrieves all scheduled triggers, optionally filtered by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="enabled">Boolean indicating desired enabled state of scheduled triggers (optional)</param>
+        /// <returns>ScheduledTriggerEntityListing</returns>
+        
+        public ScheduledTriggerEntityListing GetProcessautomationScheduledtriggers (string before = null, string after = null, string pageSize = null, bool? enabled = null)
+        {
+             ApiResponse<ScheduledTriggerEntityListing> localVarResponse = GetProcessautomationScheduledtriggersWithHttpInfo(before, after, pageSize, enabled);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieves all scheduled triggers, optionally filtered by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="enabled">Boolean indicating desired enabled state of scheduled triggers (optional)</param>
+        /// <returns>ApiResponse of ScheduledTriggerEntityListing</returns>
+        
+        public ApiResponse< ScheduledTriggerEntityListing > GetProcessautomationScheduledtriggersWithHttpInfo (string before = null, string after = null, string pageSize = null, bool? enabled = null)
+        { 
+
+            var localVarPath = "/api/v2/processautomation/scheduledtriggers";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProcessautomationScheduledtriggers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetProcessautomationScheduledtriggers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProcessautomationScheduledtriggers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduledTriggerEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduledTriggerEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduledTriggerEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Retrieves all scheduled triggers, optionally filtered by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="enabled">Boolean indicating desired enabled state of scheduled triggers (optional)</param>
+        /// <returns>Task of ScheduledTriggerEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<ScheduledTriggerEntityListing> GetProcessautomationScheduledtriggersAsync (string before = null, string after = null, string pageSize = null, bool? enabled = null)
+        {
+             ApiResponse<ScheduledTriggerEntityListing> localVarResponse = await GetProcessautomationScheduledtriggersAsyncWithHttpInfo(before, after, pageSize, enabled);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieves all scheduled triggers, optionally filtered by query parameters. 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="before">The cursor that points to the start of the set of entities that has been returned. (optional)</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of entities to return. Maximum of 200. (optional)</param>
+        /// <param name="enabled">Boolean indicating desired enabled state of scheduled triggers (optional)</param>
+        /// <returns>Task of ApiResponse (ScheduledTriggerEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduledTriggerEntityListing>> GetProcessautomationScheduledtriggersAsyncWithHttpInfo (string before = null, string after = null, string pageSize = null, bool? enabled = null)
+        { 
+
+            var localVarPath = "/api/v2/processautomation/scheduledtriggers";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+            if (before != null) localVarQueryParams.Add(new Tuple<string, string>("before", this.Configuration.ApiClient.ParameterToString(before)));
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
+            if (enabled != null) localVarQueryParams.Add(new Tuple<string, string>("enabled", this.Configuration.ApiClient.ParameterToString(enabled)));
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetProcessautomationScheduledtriggers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetProcessautomationScheduledtriggers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetProcessautomationScheduledtriggers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduledTriggerEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduledTriggerEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduledTriggerEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -1375,6 +2255,221 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TopicCursorEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (TopicCursorEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TopicCursorEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Create a scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Input used to create a Scheduled Trigger</param>
+        /// <returns>ScheduledTrigger</returns>
+        
+        public ScheduledTrigger PostProcessautomationScheduledtriggers (CreateScheduledTriggerRequest body)
+        {
+             ApiResponse<ScheduledTrigger> localVarResponse = PostProcessautomationScheduledtriggersWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Create a scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Input used to create a Scheduled Trigger</param>
+        /// <returns>ApiResponse of ScheduledTrigger</returns>
+        
+        public ApiResponse< ScheduledTrigger > PostProcessautomationScheduledtriggersWithHttpInfo (CreateScheduledTriggerRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ProcessAutomationApi->PostProcessautomationScheduledtriggers");
+
+            var localVarPath = "/api/v2/processautomation/scheduledtriggers";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostProcessautomationScheduledtriggers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostProcessautomationScheduledtriggers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostProcessautomationScheduledtriggers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduledTrigger>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduledTrigger) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduledTrigger)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Create a scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Input used to create a Scheduled Trigger</param>
+        /// <returns>Task of ScheduledTrigger</returns>
+        
+        public async System.Threading.Tasks.Task<ScheduledTrigger> PostProcessautomationScheduledtriggersAsync (CreateScheduledTriggerRequest body)
+        {
+             ApiResponse<ScheduledTrigger> localVarResponse = await PostProcessautomationScheduledtriggersAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Create a scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">Input used to create a Scheduled Trigger</param>
+        /// <returns>Task of ApiResponse (ScheduledTrigger)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduledTrigger>> PostProcessautomationScheduledtriggersAsyncWithHttpInfo (CreateScheduledTriggerRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ProcessAutomationApi->PostProcessautomationScheduledtriggers");
+            
+
+            var localVarPath = "/api/v2/processautomation/scheduledtriggers";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostProcessautomationScheduledtriggers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostProcessautomationScheduledtriggers: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostProcessautomationScheduledtriggers: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduledTrigger>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduledTrigger) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduledTrigger)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -2032,6 +3127,234 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<TestModeEventResults>(localVarStatusCode,
                 localVarHeaders,
                 (TestModeEventResults) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(TestModeEventResults)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update a Scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <param name="body">Input to update Scheduled Trigger.</param>
+        /// <returns>ScheduledTrigger</returns>
+        
+        public ScheduledTrigger PutProcessautomationScheduledtrigger (string scheduledTriggerId, UpdateScheduledTriggerRequest body)
+        {
+             ApiResponse<ScheduledTrigger> localVarResponse = PutProcessautomationScheduledtriggerWithHttpInfo(scheduledTriggerId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update a Scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <param name="body">Input to update Scheduled Trigger.</param>
+        /// <returns>ApiResponse of ScheduledTrigger</returns>
+        
+        public ApiResponse< ScheduledTrigger > PutProcessautomationScheduledtriggerWithHttpInfo (string scheduledTriggerId, UpdateScheduledTriggerRequest body)
+        { 
+            // verify the required parameter 'scheduledTriggerId' is set
+            if (scheduledTriggerId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduledTriggerId' when calling ProcessAutomationApi->PutProcessautomationScheduledtrigger");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ProcessAutomationApi->PutProcessautomationScheduledtrigger");
+
+            var localVarPath = "/api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scheduledTriggerId != null) localVarPathParams.Add("scheduledTriggerId", this.Configuration.ApiClient.ParameterToString(scheduledTriggerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutProcessautomationScheduledtrigger: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduledTrigger>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduledTrigger) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduledTrigger)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update a Scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <param name="body">Input to update Scheduled Trigger.</param>
+        /// <returns>Task of ScheduledTrigger</returns>
+        
+        public async System.Threading.Tasks.Task<ScheduledTrigger> PutProcessautomationScheduledtriggerAsync (string scheduledTriggerId, UpdateScheduledTriggerRequest body)
+        {
+             ApiResponse<ScheduledTrigger> localVarResponse = await PutProcessautomationScheduledtriggerAsyncWithHttpInfo(scheduledTriggerId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update a Scheduled Trigger 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="scheduledTriggerId">scheduledTriggerId</param>
+        /// <param name="body">Input to update Scheduled Trigger.</param>
+        /// <returns>Task of ApiResponse (ScheduledTrigger)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<ScheduledTrigger>> PutProcessautomationScheduledtriggerAsyncWithHttpInfo (string scheduledTriggerId, UpdateScheduledTriggerRequest body)
+        { 
+            // verify the required parameter 'scheduledTriggerId' is set
+            if (scheduledTriggerId == null)
+                throw new ApiException(400, "Missing required parameter 'scheduledTriggerId' when calling ProcessAutomationApi->PutProcessautomationScheduledtrigger");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ProcessAutomationApi->PutProcessautomationScheduledtrigger");
+            
+
+            var localVarPath = "/api/v2/processautomation/scheduledtriggers/{scheduledTriggerId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (scheduledTriggerId != null) localVarPathParams.Add("scheduledTriggerId", this.Configuration.ApiClient.ParameterToString(scheduledTriggerId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutProcessautomationScheduledtrigger: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutProcessautomationScheduledtrigger: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<ScheduledTrigger>(localVarStatusCode,
+                localVarHeaders,
+                (ScheduledTrigger) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ScheduledTrigger)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

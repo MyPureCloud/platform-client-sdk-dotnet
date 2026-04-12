@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="StepplansWorktypeReference" /> class.
         /// </summary>
         /// <param name="Id">The id of the worktype..</param>
-        public StepplansWorktypeReference(string Id = null)
+        /// <param name="Name">Name.</param>
+        public StepplansWorktypeReference(string Id = null, string Name = null)
         {
             this.Id = Id;
+            this.Name = Name;
             
         }
         
@@ -36,6 +38,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The id of the worktype.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets Name
+        /// </summary>
+        [DataMember(Name="name", EmitDefaultValue=false)]
+        public string Name { get; set; }
 
 
 
@@ -57,6 +67,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class StepplansWorktypeReference {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Name: ").Append(Name).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -104,6 +115,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
+                    this.Name == other.Name ||
+                    this.Name != null &&
+                    this.Name.Equals(other.Name)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -123,6 +139,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Name != null)
+                    hash = hash * 59 + this.Name.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

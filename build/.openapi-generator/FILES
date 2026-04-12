@@ -195,6 +195,16 @@ docs/AgentTimeOffRequestPatch.md
 docs/AgentUIApi.json
 docs/AgentUIApi.md
 docs/AgentUpdateAlternativeShiftTradeRequest.md
+docs/AgentUtilizationAggregateDataContainer.md
+docs/AgentUtilizationAggregateQueryClause.md
+docs/AgentUtilizationAggregateQueryFilter.md
+docs/AgentUtilizationAggregateQueryPredicate.md
+docs/AgentUtilizationAggregateQueryResponse.md
+docs/AgentUtilizationAggregationQuery.md
+docs/AgentUtilizationAggregationSort.md
+docs/AgentUtilizationAggregationView.md
+docs/AgentUtilizationAsyncAggregateQueryResponse.md
+docs/AgentUtilizationAsyncAggregationQuery.md
 docs/AgentVideoSettings.md
 docs/AgentWorkPlan.md
 docs/AgentWorkPlanActivity.md
@@ -1670,6 +1680,7 @@ docs/CreateResponseAssetResponse.md
 docs/CreateRoomRequest.md
 docs/CreateRoomResponse.md
 docs/CreateRoutingSkill.md
+docs/CreateScheduledTriggerRequest.md
 docs/CreateSecureSession.md
 docs/CreateServiceGoalTemplate.md
 docs/CreateShareRequest.md
@@ -1842,6 +1853,7 @@ docs/DeleteAlertingAlertsAll-example.txt
 docs/DeleteAlertingRule-example.txt
 docs/DeleteAnalyticsActionsAggregatesJob-example.txt
 docs/DeleteAnalyticsAgentcopilotsAggregatesJob-example.txt
+docs/DeleteAnalyticsAgentutilizationsAggregatesJob-example.txt
 docs/DeleteAnalyticsBotsAggregatesJob-example.txt
 docs/DeleteAnalyticsCasemanagementAggregatesJob-example.txt
 docs/DeleteAnalyticsConversationsAggregatesJob-example.txt
@@ -2065,6 +2077,7 @@ docs/DeleteOutboundSequence-example.txt
 docs/DeletePresenceDefinition0-example.txt
 docs/DeletePresenceSource-example.txt
 docs/DeletePresencedefinition-example.txt
+docs/DeleteProcessautomationScheduledtrigger-example.txt
 docs/DeleteProcessautomationTrigger-example.txt
 docs/DeleteProgramResponse.md
 docs/DeleteQualityCalibration-example.txt
@@ -3032,6 +3045,8 @@ docs/GetAnalyticsActionsAggregatesJobResults-example.txt
 docs/GetAnalyticsAgentStatus-example.txt
 docs/GetAnalyticsAgentcopilotsAggregatesJob-example.txt
 docs/GetAnalyticsAgentcopilotsAggregatesJobResults-example.txt
+docs/GetAnalyticsAgentutilizationsAggregatesJob-example.txt
+docs/GetAnalyticsAgentutilizationsAggregatesJobResults-example.txt
 docs/GetAnalyticsBotflowDivisionsReportingturns-example.txt
 docs/GetAnalyticsBotflowReportingturns-example.txt
 docs/GetAnalyticsBotflowSessions-example.txt
@@ -3965,6 +3980,8 @@ docs/GetPresenceSources-example.txt
 docs/GetPresenceUserPrimarysource-example.txt
 docs/GetPresencedefinition-example.txt
 docs/GetPresencedefinitions-example.txt
+docs/GetProcessautomationScheduledtrigger-example.txt
+docs/GetProcessautomationScheduledtriggers-example.txt
 docs/GetProcessautomationTrigger-example.txt
 docs/GetProcessautomationTriggers-example.txt
 docs/GetProcessautomationTriggersTopics-example.txt
@@ -4770,6 +4787,7 @@ docs/InstagramScopedId.md
 docs/Intake.md
 docs/IntakeSetting.md
 docs/IntakeSettingsListing.md
+docs/IntakeSettingsUpdate.md
 docs/Integration.md
 docs/IntegrationAction.md
 docs/IntegrationActionFields.md
@@ -4890,6 +4908,8 @@ docs/JourneySegmentAssignmentEventsNotificationSession.md
 docs/JourneySegmentRequest.md
 docs/JourneySessionEventsNotificationApp.md
 docs/JourneySessionEventsNotificationBrowser.md
+docs/JourneySessionEventsNotificationCase.md
+docs/JourneySessionEventsNotificationCaseAssociation.md
 docs/JourneySessionEventsNotificationConnectedQueue.md
 docs/JourneySessionEventsNotificationConversation.md
 docs/JourneySessionEventsNotificationConversationChannel.md
@@ -6177,6 +6197,8 @@ docs/PostAnalyticsAgentcopilotsAggregatesJobs-example.txt
 docs/PostAnalyticsAgentcopilotsAggregatesQuery-example.txt
 docs/PostAnalyticsAgentsStatusCounts-example.txt
 docs/PostAnalyticsAgentsStatusQuery-example.txt
+docs/PostAnalyticsAgentutilizationsAggregatesJobs-example.txt
+docs/PostAnalyticsAgentutilizationsAggregatesQuery-example.txt
 docs/PostAnalyticsBotsAggregatesJobs-example.txt
 docs/PostAnalyticsBotsAggregatesQuery-example.txt
 docs/PostAnalyticsCasemanagementAggregatesJobs-example.txt
@@ -6739,6 +6761,7 @@ docs/PostOutputContract.md
 docs/PostPresenceDefinitions0-example.txt
 docs/PostPresenceSources-example.txt
 docs/PostPresencedefinitions-example.txt
+docs/PostProcessautomationScheduledtriggers-example.txt
 docs/PostProcessautomationTriggerTest-example.txt
 docs/PostProcessautomationTriggers-example.txt
 docs/PostProcessautomationTriggersTopicTest-example.txt
@@ -7150,6 +7173,7 @@ docs/PutAuthorizationRolesSettings-example.txt
 docs/PutBusinessrulesDecisiontableVersionPublish-example.txt
 docs/PutBusinessrulesDecisiontableVersionRow-example.txt
 docs/PutBusinessrulesSchema-example.txt
+docs/PutCasemanagementCaseplanIntakesettings-example.txt
 docs/PutChatsMessageReactions-example.txt
 docs/PutChatsSettings-example.txt
 docs/PutContentmanagementWorkspace-example.txt
@@ -7292,6 +7316,7 @@ docs/PutPresenceSettings-example.txt
 docs/PutPresenceSource-example.txt
 docs/PutPresenceUserPrimarysource-example.txt
 docs/PutPresencedefinition-example.txt
+docs/PutProcessautomationScheduledtrigger-example.txt
 docs/PutProcessautomationTrigger-example.txt
 docs/PutQualityCalibration-example.txt
 docs/PutQualityConversationEvaluation-example.txt
@@ -7865,6 +7890,8 @@ docs/ReportingExportMetadataJobResponse.md
 docs/ReportingInterval.md
 docs/ReportingTurn.md
 docs/ReportingTurnAction.md
+docs/ReportingTurnBotFlowInvocationEvent.md
+docs/ReportingTurnFlow.md
 docs/ReportingTurnIntent.md
 docs/ReportingTurnIntentSlot.md
 docs/ReportingTurnKnowledge.md
@@ -8008,6 +8035,8 @@ docs/ScheduleGroupEntityListing.md
 docs/ScheduleInterval.md
 docs/ScheduleReferenceWithBusinessUnit.md
 docs/ScheduleUploadProcessingResponse.md
+docs/ScheduledTrigger.md
+docs/ScheduledTriggerEntityListing.md
 docs/SchedulerMessageArgument.md
 docs/SchedulerMessageSeverityCount.md
 docs/SchedulerMessageTypeSeverity.md
@@ -8646,6 +8675,7 @@ docs/TranslateSupportedLanguageList.md
 docs/TrendData.md
 docs/Trigger.md
 docs/TriggerEntityListing.md
+docs/TriggerSchedule.md
 docs/TriggerTarget.md
 docs/Trunk.md
 docs/TrunkBase.md
@@ -8780,6 +8810,7 @@ docs/UpdatePlanningGroupRequest.md
 docs/UpdateRowIndexRequest.md
 docs/UpdateScheduleUploadResponse.md
 docs/UpdateScheduleUploadSchema.md
+docs/UpdateScheduledTriggerRequest.md
 docs/UpdateSegmentAssignmentRequest.md
 docs/UpdateSegmentAssignmentResponse.md
 docs/UpdateServiceGoalTemplate.md
@@ -9208,6 +9239,10 @@ docs/WeekShiftTradeMatchesSummaryResponse.md
 docs/WeekShiftTradeResponse.md
 docs/Weekly.md
 docs/Weeks.md
+docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobComplete.md
+docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResults.md
+docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlot.md
+docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlotSchedule.md
 docs/WemCoachingUserNotificationTopicCoachingAppointmentReference.md
 docs/WemCoachingUserNotificationTopicCoachingUserNotification.md
 docs/WfmActivityPlanJobCompleteTopicActivityPlanJobException.md
@@ -9238,6 +9273,8 @@ docs/WfmAgentAdherenceExplanationChangedBusinessUnitTopicUserReference.md
 docs/WfmAgentHistoricalAdherenceJobReference.md
 docs/WfmAgentHistoricalAdherenceResponse.md
 docs/WfmAgentHistoricalAdherenceResult.md
+docs/WfmAgentMuScheduleSearchCompleteTopicAgentMuScheduleSearchCompleteNotification.md
+docs/WfmAgentMuScheduleSearchCompleteTopicErrorBody.md
 docs/WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate.md
 docs/WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification.md
 docs/WfmAgentScheduleUpdateTopicUserReference.md
@@ -9366,6 +9403,15 @@ docs/WfmScheduleReference.md
 docs/WfmScheduleTopicWfmScheduleNotification.md
 docs/WfmServiceGoalImpact.md
 docs/WfmServiceGoalImpactSettings.md
+docs/WfmShiftTradingJobCompleteEventErrorBody.md
+docs/WfmShiftTradingJobCompleteEventShiftTradingJobCompleteNotification.md
+docs/WfmShiftTradingJobCompleteEventTradeEntity.md
+docs/WfmShiftTradingJobCompleteEventTradeShift.md
+docs/WfmShiftTradingJobCompleteEventTradeSide.md
+docs/WfmShiftTradingJobCompleteEventWeekSummary.md
+docs/WfmShiftTradingJobCompleteEventWeekSummaryList.md
+docs/WfmShiftTradingJobCompleteEventWfmDateTimeInterval.md
+docs/WfmShiftTradingJobCompleteEventWfmVersionMetadata.md
 docs/WfmTimeOffBalanceJobTopicErrorBody.md
 docs/WfmTimeOffBalanceJobTopicTimeOffBalance.md
 docs/WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification.md
@@ -9912,6 +9958,16 @@ src/PureCloudPlatform.Client.V2/Model/AgentStateSessionQueryPredicate.cs
 src/PureCloudPlatform.Client.V2/Model/AgentStateUserFilter.cs
 src/PureCloudPlatform.Client.V2/Model/AgentTimeOffRequestPatch.cs
 src/PureCloudPlatform.Client.V2/Model/AgentUpdateAlternativeShiftTradeRequest.cs
+src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregateDataContainer.cs
+src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregateQueryClause.cs
+src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregateQueryFilter.cs
+src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregateQueryPredicate.cs
+src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregateQueryResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregationQuery.cs
+src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregationSort.cs
+src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAggregationView.cs
+src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAsyncAggregateQueryResponse.cs
+src/PureCloudPlatform.Client.V2/Model/AgentUtilizationAsyncAggregationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/AgentVideoSettings.cs
 src/PureCloudPlatform.Client.V2/Model/AgentWorkPlan.cs
 src/PureCloudPlatform.Client.V2/Model/AgentWorkPlanActivity.cs
@@ -11357,6 +11413,7 @@ src/PureCloudPlatform.Client.V2/Model/CreateResponseAssetResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CreateRoomRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateRoomResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CreateRoutingSkill.cs
+src/PureCloudPlatform.Client.V2/Model/CreateScheduledTriggerRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CreateSecureSession.cs
 src/PureCloudPlatform.Client.V2/Model/CreateServiceGoalTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/CreateShareRequest.cs
@@ -12535,6 +12592,7 @@ src/PureCloudPlatform.Client.V2/Model/InstagramScopedId.cs
 src/PureCloudPlatform.Client.V2/Model/Intake.cs
 src/PureCloudPlatform.Client.V2/Model/IntakeSetting.cs
 src/PureCloudPlatform.Client.V2/Model/IntakeSettingsListing.cs
+src/PureCloudPlatform.Client.V2/Model/IntakeSettingsUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/Integration.cs
 src/PureCloudPlatform.Client.V2/Model/IntegrationAction.cs
 src/PureCloudPlatform.Client.V2/Model/IntegrationActionFields.cs
@@ -12649,6 +12707,8 @@ src/PureCloudPlatform.Client.V2/Model/JourneySegmentAssignmentEventsNotification
 src/PureCloudPlatform.Client.V2/Model/JourneySegmentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationApp.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationBrowser.cs
+src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationCase.cs
+src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationCaseAssociation.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationConnectedQueue.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationConversation.cs
 src/PureCloudPlatform.Client.V2/Model/JourneySessionEventsNotificationConversationChannel.cs
@@ -14183,6 +14243,8 @@ src/PureCloudPlatform.Client.V2/Model/ReportingExportMetadataJobResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingInterval.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurn.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnAction.cs
+src/PureCloudPlatform.Client.V2/Model/ReportingTurnBotFlowInvocationEvent.cs
+src/PureCloudPlatform.Client.V2/Model/ReportingTurnFlow.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnIntent.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnIntentSlot.cs
 src/PureCloudPlatform.Client.V2/Model/ReportingTurnKnowledge.cs
@@ -14320,6 +14382,8 @@ src/PureCloudPlatform.Client.V2/Model/ScheduleGroupEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/ScheduleInterval.cs
 src/PureCloudPlatform.Client.V2/Model/ScheduleReferenceWithBusinessUnit.cs
 src/PureCloudPlatform.Client.V2/Model/ScheduleUploadProcessingResponse.cs
+src/PureCloudPlatform.Client.V2/Model/ScheduledTrigger.cs
+src/PureCloudPlatform.Client.V2/Model/ScheduledTriggerEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/SchedulerMessageArgument.cs
 src/PureCloudPlatform.Client.V2/Model/SchedulerMessageSeverityCount.cs
 src/PureCloudPlatform.Client.V2/Model/SchedulerMessageTypeSeverity.cs
@@ -14932,6 +14996,7 @@ src/PureCloudPlatform.Client.V2/Model/TranslateSupportedLanguageList.cs
 src/PureCloudPlatform.Client.V2/Model/TrendData.cs
 src/PureCloudPlatform.Client.V2/Model/Trigger.cs
 src/PureCloudPlatform.Client.V2/Model/TriggerEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/TriggerSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/TriggerTarget.cs
 src/PureCloudPlatform.Client.V2/Model/Trunk.cs
 src/PureCloudPlatform.Client.V2/Model/TrunkBase.cs
@@ -15066,6 +15131,7 @@ src/PureCloudPlatform.Client.V2/Model/UpdatePlanningGroupRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateRowIndexRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateScheduleUploadResponse.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateScheduleUploadSchema.cs
+src/PureCloudPlatform.Client.V2/Model/UpdateScheduledTriggerRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateSegmentAssignmentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateSegmentAssignmentResponse.cs
 src/PureCloudPlatform.Client.V2/Model/UpdateServiceGoalTemplate.cs
@@ -15474,6 +15540,10 @@ src/PureCloudPlatform.Client.V2/Model/WeekShiftTradeMatchesSummaryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WeekShiftTradeResponse.cs
 src/PureCloudPlatform.Client.V2/Model/Weekly.cs
 src/PureCloudPlatform.Client.V2/Model/Weeks.cs
+src/PureCloudPlatform.Client.V2/Model/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobComplete.cs
+src/PureCloudPlatform.Client.V2/Model/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResults.cs
+src/PureCloudPlatform.Client.V2/Model/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlot.cs
+src/PureCloudPlatform.Client.V2/Model/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlotSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/WemCoachingUserNotificationTopicCoachingAppointmentReference.cs
 src/PureCloudPlatform.Client.V2/Model/WemCoachingUserNotificationTopicCoachingUserNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanJobCompleteTopicActivityPlanJobException.cs
@@ -15504,6 +15574,8 @@ src/PureCloudPlatform.Client.V2/Model/WfmAgentAdherenceExplanationChangedBusines
 src/PureCloudPlatform.Client.V2/Model/WfmAgentHistoricalAdherenceJobReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmAgentHistoricalAdherenceResponse.cs
 src/PureCloudPlatform.Client.V2/Model/WfmAgentHistoricalAdherenceResult.cs
+src/PureCloudPlatform.Client.V2/Model/WfmAgentMuScheduleSearchCompleteTopicAgentMuScheduleSearchCompleteNotification.cs
+src/PureCloudPlatform.Client.V2/Model/WfmAgentMuScheduleSearchCompleteTopicErrorBody.cs
 src/PureCloudPlatform.Client.V2/Model/WfmAgentScheduleUpdateTopicAgentScheduleShiftUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/WfmAgentScheduleUpdateTopicAgentScheduleUpdateNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmAgentScheduleUpdateTopicUserReference.cs
@@ -15632,6 +15704,15 @@ src/PureCloudPlatform.Client.V2/Model/WfmScheduleReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmScheduleTopicWfmScheduleNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmServiceGoalImpact.cs
 src/PureCloudPlatform.Client.V2/Model/WfmServiceGoalImpactSettings.cs
+src/PureCloudPlatform.Client.V2/Model/WfmShiftTradingJobCompleteEventErrorBody.cs
+src/PureCloudPlatform.Client.V2/Model/WfmShiftTradingJobCompleteEventShiftTradingJobCompleteNotification.cs
+src/PureCloudPlatform.Client.V2/Model/WfmShiftTradingJobCompleteEventTradeEntity.cs
+src/PureCloudPlatform.Client.V2/Model/WfmShiftTradingJobCompleteEventTradeShift.cs
+src/PureCloudPlatform.Client.V2/Model/WfmShiftTradingJobCompleteEventTradeSide.cs
+src/PureCloudPlatform.Client.V2/Model/WfmShiftTradingJobCompleteEventWeekSummary.cs
+src/PureCloudPlatform.Client.V2/Model/WfmShiftTradingJobCompleteEventWeekSummaryList.cs
+src/PureCloudPlatform.Client.V2/Model/WfmShiftTradingJobCompleteEventWfmDateTimeInterval.cs
+src/PureCloudPlatform.Client.V2/Model/WfmShiftTradingJobCompleteEventWfmVersionMetadata.cs
 src/PureCloudPlatform.Client.V2/Model/WfmTimeOffBalanceJobTopicErrorBody.cs
 src/PureCloudPlatform.Client.V2/Model/WfmTimeOffBalanceJobTopicTimeOffBalance.cs
 src/PureCloudPlatform.Client.V2/Model/WfmTimeOffBalanceJobTopicTimeOffBalanceJobNotification.cs

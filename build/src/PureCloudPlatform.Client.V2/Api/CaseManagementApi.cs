@@ -1009,6 +1009,34 @@ namespace PureCloudPlatform.Client.V2.Api
         
         ApiResponse<CaseAssociationQueryEntityListing> PostCasemanagementCasesAssociationsQueryWithHttpInfo (CaseAssociationQuery body = null);
 
+        /// <summary>
+        /// Update the intake settings for a Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="body">Intake Settings</param>
+        /// <returns>IntakeSettingsListing</returns>
+        
+        IntakeSettingsListing PutCasemanagementCaseplanIntakesettings (string caseplanId, IntakeSettingsUpdate body);
+
+        /// <summary>
+        /// Update the intake settings for a Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="body">Intake Settings</param>
+        /// <returns>ApiResponse of IntakeSettingsListing</returns>
+        
+        ApiResponse<IntakeSettingsListing> PutCasemanagementCaseplanIntakesettingsWithHttpInfo (string caseplanId, IntakeSettingsUpdate body);
+
         #endregion Synchronous Operations
 
         #region Asynchronous Operations
@@ -2006,6 +2034,34 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (CaseAssociationQueryEntityListing)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseAssociationQueryEntityListing>> PostCasemanagementCasesAssociationsQueryAsyncWithHttpInfo (CaseAssociationQuery body = null);
+
+        /// <summary>
+        /// Update the intake settings for a Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="body">Intake Settings</param>
+        /// <returns>Task of IntakeSettingsListing</returns>
+        
+        System.Threading.Tasks.Task<IntakeSettingsListing> PutCasemanagementCaseplanIntakesettingsAsync (string caseplanId, IntakeSettingsUpdate body);
+
+        /// <summary>
+        /// Update the intake settings for a Caseplan.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="body">Intake Settings</param>
+        /// <returns>Task of ApiResponse (IntakeSettingsListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<IntakeSettingsListing>> PutCasemanagementCaseplanIntakesettingsAsyncWithHttpInfo (string caseplanId, IntakeSettingsUpdate body);
 
         #endregion Asynchronous Operations
 
@@ -9797,6 +9853,238 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CaseAssociationQueryEntityListing>(localVarStatusCode,
                 localVarHeaders,
                 (CaseAssociationQueryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseAssociationQueryEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Update the intake settings for a Caseplan. 
+        /// 
+        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="body">Intake Settings</param>
+        /// <returns>IntakeSettingsListing</returns>
+        
+        public IntakeSettingsListing PutCasemanagementCaseplanIntakesettings (string caseplanId, IntakeSettingsUpdate body)
+        {
+             ApiResponse<IntakeSettingsListing> localVarResponse = PutCasemanagementCaseplanIntakesettingsWithHttpInfo(caseplanId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Update the intake settings for a Caseplan. 
+        /// 
+        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="body">Intake Settings</param>
+        /// <returns>ApiResponse of IntakeSettingsListing</returns>
+        
+        public ApiResponse< IntakeSettingsListing > PutCasemanagementCaseplanIntakesettingsWithHttpInfo (string caseplanId, IntakeSettingsUpdate body)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->PutCasemanagementCaseplanIntakesettings");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PutCasemanagementCaseplanIntakesettings");
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/intakesettings";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutCasemanagementCaseplanIntakesettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutCasemanagementCaseplanIntakesettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCasemanagementCaseplanIntakesettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IntakeSettingsListing>(localVarStatusCode,
+                localVarHeaders,
+                (IntakeSettingsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntakeSettingsListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Update the intake settings for a Caseplan. 
+        /// 
+        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="body">Intake Settings</param>
+        /// <returns>Task of IntakeSettingsListing</returns>
+        
+        public async System.Threading.Tasks.Task<IntakeSettingsListing> PutCasemanagementCaseplanIntakesettingsAsync (string caseplanId, IntakeSettingsUpdate body)
+        {
+             ApiResponse<IntakeSettingsListing> localVarResponse = await PutCasemanagementCaseplanIntakesettingsAsyncWithHttpInfo(caseplanId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Update the intake settings for a Caseplan. 
+        /// 
+        /// PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="caseplanId">Caseplan ID</param>
+        /// <param name="body">Intake Settings</param>
+        /// <returns>Task of ApiResponse (IntakeSettingsListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<IntakeSettingsListing>> PutCasemanagementCaseplanIntakesettingsAsyncWithHttpInfo (string caseplanId, IntakeSettingsUpdate body)
+        { 
+            // verify the required parameter 'caseplanId' is set
+            if (caseplanId == null)
+                throw new ApiException(400, "Missing required parameter 'caseplanId' when calling CaseManagementApi->PutCasemanagementCaseplanIntakesettings");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PutCasemanagementCaseplanIntakesettings");
+            
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/{caseplanId}/intakesettings";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (caseplanId != null) localVarPathParams.Add("caseplanId", this.Configuration.ApiClient.ParameterToString(caseplanId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutCasemanagementCaseplanIntakesettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutCasemanagementCaseplanIntakesettings: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutCasemanagementCaseplanIntakesettings: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<IntakeSettingsListing>(localVarStatusCode,
+                localVarHeaders,
+                (IntakeSettingsListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(IntakeSettingsListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

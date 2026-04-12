@@ -117,6 +117,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Conversationcustomattributeschema,
             
             /// <summary>
+            /// Enum Conversationsummarysetting for "CONVERSATIONSUMMARYSETTING"
+            /// </summary>
+            [EnumMember(Value = "CONVERSATIONSUMMARYSETTING")]
+            Conversationsummarysetting,
+            
+            /// <summary>
             /// Enum Dataaction for "DATAACTION"
             /// </summary>
             [EnumMember(Value = "DATAACTION")]

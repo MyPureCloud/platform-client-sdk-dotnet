@@ -81,11 +81,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Name">The library name. (required).</param>
         /// <param name="Version">Current version for this resource..</param>
         /// <param name="ResponseType">This value is deprecated. Responses representing message templates may be added to any library..</param>
-        public Library(string Name = null, int? Version = null, ResponseTypeEnum? ResponseType = null)
+        /// <param name="Division">The division to which this entity belongs..</param>
+        public Library(string Name = null, int? Version = null, ResponseTypeEnum? ResponseType = null, WritableDivision Division = null)
         {
             this.Name = Name;
             this.Version = Version;
             this.ResponseType = ResponseType;
+            this.Division = Division;
             
         }
         
@@ -139,6 +141,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The division to which this entity belongs.
+        /// </summary>
+        /// <value>The division to which this entity belongs.</value>
+        [DataMember(Name="division", EmitDefaultValue=false)]
+        public WritableDivision Division { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -161,6 +172,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  CreatedBy: ").Append(CreatedBy).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  ResponseType: ").Append(ResponseType).Append("\n");
+            sb.Append("  Division: ").Append(Division).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -233,6 +245,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ResponseType.Equals(other.ResponseType)
                 ) &&
                 (
+                    this.Division == other.Division ||
+                    this.Division != null &&
+                    this.Division.Equals(other.Division)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -267,6 +284,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ResponseType != null)
                     hash = hash * 59 + this.ResponseType.GetHashCode();
+
+                if (this.Division != null)
+                    hash = hash * 59 + this.Division.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

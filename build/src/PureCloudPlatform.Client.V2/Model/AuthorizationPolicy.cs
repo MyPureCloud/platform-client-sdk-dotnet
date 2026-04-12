@@ -67,7 +67,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">Description.</param>
         /// <param name="PresetAttributes">Map of names and values of preset attributes to use in policy evaluation.</param>
         /// <param name="Active">Flag for active enforcement. If this value is false or null, the policy will be saved but will not be checked or enforced on users..</param>
-        public AuthorizationPolicy(string Name = null, Subject Subject = null, EffectEnum? Effect = null, Object Condition = null, string Description = null, Dictionary<string, TypedAttribute> PresetAttributes = null, bool? Active = null)
+        /// <param name="ApplyToClients">Flag to determine whether policy applies to OAuth Clients.</param>
+        public AuthorizationPolicy(string Name = null, Subject Subject = null, EffectEnum? Effect = null, Object Condition = null, string Description = null, Dictionary<string, TypedAttribute> PresetAttributes = null, bool? Active = null, bool? ApplyToClients = null)
         {
             this.Name = Name;
             this.Subject = Subject;
@@ -76,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Description = Description;
             this.PresetAttributes = PresetAttributes;
             this.Active = Active;
+            this.ApplyToClients = ApplyToClients;
             
         }
         
@@ -163,6 +165,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Flag to determine whether policy applies to OAuth Clients
+        /// </summary>
+        /// <value>Flag to determine whether policy applies to OAuth Clients</value>
+        [DataMember(Name="applyToClients", EmitDefaultValue=false)]
+        public bool? ApplyToClients { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -189,6 +200,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  PresetAttributes: ").Append(PresetAttributes).Append("\n");
             sb.Append("  Active: ").Append(Active).Append("\n");
+            sb.Append("  ApplyToClients: ").Append(ApplyToClients).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -281,6 +293,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Active.Equals(other.Active)
                 ) &&
                 (
+                    this.ApplyToClients == other.ApplyToClients ||
+                    this.ApplyToClients != null &&
+                    this.ApplyToClients.Equals(other.ApplyToClients)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -327,6 +344,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Active != null)
                     hash = hash * 59 + this.Active.GetHashCode();
+
+                if (this.ApplyToClients != null)
+                    hash = hash * 59 + this.ApplyToClients.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

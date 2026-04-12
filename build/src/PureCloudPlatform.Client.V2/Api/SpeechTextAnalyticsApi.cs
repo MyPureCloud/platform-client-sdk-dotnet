@@ -556,11 +556,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="ids">Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ProgramsEntityListing</returns>
         
-        ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null);
+        ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of Speech &amp; Text Analytics programs
@@ -573,11 +574,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="ids">Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ApiResponse of ProgramsEntityListing</returns>
         
-        ApiResponse<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null);
+        ApiResponse<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a Speech &amp; Text Analytics general program job by id
@@ -2180,11 +2182,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="ids">Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ProgramsEntityListing</returns>
         
-        System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get the list of Speech &amp; Text Analytics programs
@@ -2197,11 +2200,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="ids">Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ApiResponse (ProgramsEntityListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null);
+        System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null);
 
         /// <summary>
         /// Get a Speech &amp; Text Analytics general program job by id
@@ -7722,13 +7726,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="ids">Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ProgramsEntityListing</returns>
         
-        public ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null)
+        public ProgramsEntityListing GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<ProgramsEntityListing> localVarResponse = GetSpeechandtextanalyticsProgramsWithHttpInfo(nextPage, pageSize, state, name, sortBy, sortOrder);
+             ApiResponse<ProgramsEntityListing> localVarResponse = GetSpeechandtextanalyticsProgramsWithHttpInfo(nextPage, pageSize, state, name, ids, sortBy, sortOrder);
              return localVarResponse.Data;
         }
 
@@ -7741,11 +7746,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="ids">Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>ApiResponse of ProgramsEntityListing</returns>
         
-        public ApiResponse< ProgramsEntityListing > GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null)
+        public ApiResponse< ProgramsEntityListing > GetSpeechandtextanalyticsProgramsWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/speechandtextanalytics/programs";
@@ -7785,6 +7791,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 
@@ -7835,13 +7842,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="ids">Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ProgramsEntityListing</returns>
         
-        public async System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ProgramsEntityListing> GetSpeechandtextanalyticsProgramsAsync (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
         {
-             ApiResponse<ProgramsEntityListing> localVarResponse = await GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo(nextPage, pageSize, state, name, sortBy, sortOrder);
+             ApiResponse<ProgramsEntityListing> localVarResponse = await GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo(nextPage, pageSize, state, name, ids, sortBy, sortOrder);
              return localVarResponse.Data;
 
         }
@@ -7855,11 +7863,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="pageSize">The page size for the listing (optional, default to 20)</param>
         /// <param name="state">Program state. Defaults to Latest (optional)</param>
         /// <param name="name">Case insensitive partial name to filter by (optional)</param>
+        /// <param name="ids">Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional)</param>
         /// <param name="sortBy">Sort results by. Defaults to name (optional)</param>
         /// <param name="sortOrder">Sort order. Defaults to asc (optional)</param>
         /// <returns>Task of ApiResponse (ProgramsEntityListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ProgramsEntityListing>> GetSpeechandtextanalyticsProgramsAsyncWithHttpInfo (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
         { 
 
             var localVarPath = "/api/v2/speechandtextanalytics/programs";
@@ -7899,6 +7908,7 @@ namespace PureCloudPlatform.Client.V2.Api
             if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (state != null) localVarQueryParams.Add(new Tuple<string, string>("state", this.Configuration.ApiClient.ParameterToString(state)));
             if (name != null) localVarQueryParams.Add(new Tuple<string, string>("name", this.Configuration.ApiClient.ParameterToString(name)));
+            if (ids != null) ids.ForEach(obj => { localVarQueryParams.Add(new Tuple<string, string>("ids", this.Configuration.ApiClient.ParameterToString(obj))); });
             if (sortBy != null) localVarQueryParams.Add(new Tuple<string, string>("sortBy", this.Configuration.ApiClient.ParameterToString(sortBy)));
             if (sortOrder != null) localVarQueryParams.Add(new Tuple<string, string>("sortOrder", this.Configuration.ApiClient.ParameterToString(sortOrder)));
 

@@ -48,7 +48,11 @@
 | **NetworkConnectivity** | [**JourneySessionEventsNotificationNetworkConnectivity**](JourneySessionEventsNotificationNetworkConnectivity) |  | [optional] |
 | **DivisionIds** | **List&lt;string&gt;** |  | [optional] |
 | **LastScreen** | **string** |  | [optional] |
+| **CaseAssociations** | [**List&lt;JourneySessionEventsNotificationCaseAssociation&gt;**](JourneySessionEventsNotificationCaseAssociation) |  | [optional] |
+| **CaseEntity** | [**JourneySessionEventsNotificationCase**](JourneySessionEventsNotificationCase) |  | [optional] |
+| **CaseReference** | **string** |  | [optional] |
+| **CaseStatus** | **string** |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 261.0.0_
+_PureCloudPlatform.Client.V2 262.0.0_

@@ -51,11 +51,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Text color theme for the activity code</value>
         [DataMember(Name="textColorTheme", EmitDefaultValue=false)]
         public TextColorThemeEnum? TextColorTheme { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCodeStyle" /> class.
         /// </summary>
-        /// <param name="BackgroundColor">Background color for the activity code in hex format starting with # followed by 6 hexadecimal characters (0-9, a-f, A-F).</param>
-        /// <param name="TextColorTheme">Text color theme for the activity code.</param>
+        [JsonConstructorAttribute]
+        protected ActivityCodeStyle() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivityCodeStyle" /> class.
+        /// </summary>
+        /// <param name="BackgroundColor">Background color for the activity code in hex format starting with # followed by 6 hexadecimal characters (0-9, a-f, A-F) (required).</param>
+        /// <param name="TextColorTheme">Text color theme for the activity code (required).</param>
         public ActivityCodeStyle(string BackgroundColor = null, TextColorThemeEnum? TextColorTheme = null)
         {
             this.BackgroundColor = BackgroundColor;

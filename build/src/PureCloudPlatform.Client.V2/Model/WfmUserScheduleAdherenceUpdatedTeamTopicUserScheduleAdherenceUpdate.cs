@@ -139,6 +139,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="User">User.</param>
         /// <param name="ManagementUnitId">ManagementUnitId.</param>
+        /// <param name="BusinessUnitId">BusinessUnitId.</param>
         /// <param name="Team">Team.</param>
         /// <param name="ScheduledActivityCategory">ScheduledActivityCategory.</param>
         /// <param name="ScheduledActivityCode">ScheduledActivityCode.</param>
@@ -157,10 +158,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="RemovedFromManagementUnit">RemovedFromManagementUnit.</param>
         /// <param name="SuppressOnTimeReminder">SuppressOnTimeReminder.</param>
         /// <param name="NextActivityReminders">NextActivityReminders.</param>
-        public WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate(WfmUserScheduleAdherenceUpdatedTeamTopicUserReference User = null, string ManagementUnitId = null, WfmUserScheduleAdherenceUpdatedTeamTopicUriReference Team = null, string ScheduledActivityCategory = null, WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference ScheduledActivityCode = null, string SystemPresence = null, string OrganizationSecondaryPresenceId = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation AdherenceExplanation = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null, List<WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference> ActiveQueues = null, DateTime? ActiveQueuesModifiedTime = null, bool? RemovedFromManagementUnit = null, bool? SuppressOnTimeReminder = null, List<WfmUserScheduleAdherenceUpdatedTeamTopicUserNextActivityReminder> NextActivityReminders = null)
+        public WfmUserScheduleAdherenceUpdatedTeamTopicUserScheduleAdherenceUpdate(WfmUserScheduleAdherenceUpdatedTeamTopicUserReference User = null, string ManagementUnitId = null, string BusinessUnitId = null, WfmUserScheduleAdherenceUpdatedTeamTopicUriReference Team = null, string ScheduledActivityCategory = null, WfmUserScheduleAdherenceUpdatedTeamTopicActivityCodeReference ScheduledActivityCode = null, string SystemPresence = null, string OrganizationSecondaryPresenceId = null, RoutingStatusEnum? RoutingStatus = null, string ActualActivityCategory = null, bool? IsOutOfOffice = null, AdherenceStateEnum? AdherenceState = null, string Impact = null, WfmUserScheduleAdherenceUpdatedTeamTopicRealTimeAdherenceExplanation AdherenceExplanation = null, DateTime? AdherenceChangeTime = null, DateTime? PresenceUpdateTime = null, List<WfmUserScheduleAdherenceUpdatedTeamTopicQueueReference> ActiveQueues = null, DateTime? ActiveQueuesModifiedTime = null, bool? RemovedFromManagementUnit = null, bool? SuppressOnTimeReminder = null, List<WfmUserScheduleAdherenceUpdatedTeamTopicUserNextActivityReminder> NextActivityReminders = null)
         {
             this.User = User;
             this.ManagementUnitId = ManagementUnitId;
+            this.BusinessUnitId = BusinessUnitId;
             this.Team = Team;
             this.ScheduledActivityCategory = ScheduledActivityCategory;
             this.ScheduledActivityCode = ScheduledActivityCode;
@@ -197,6 +199,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="managementUnitId", EmitDefaultValue=false)]
         public string ManagementUnitId { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets BusinessUnitId
+        /// </summary>
+        [DataMember(Name="businessUnitId", EmitDefaultValue=false)]
+        public string BusinessUnitId { get; set; }
 
 
 
@@ -342,6 +352,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  User: ").Append(User).Append("\n");
             sb.Append("  ManagementUnitId: ").Append(ManagementUnitId).Append("\n");
+            sb.Append("  BusinessUnitId: ").Append(BusinessUnitId).Append("\n");
             sb.Append("  Team: ").Append(Team).Append("\n");
             sb.Append("  ScheduledActivityCategory: ").Append(ScheduledActivityCategory).Append("\n");
             sb.Append("  ScheduledActivityCode: ").Append(ScheduledActivityCode).Append("\n");
@@ -409,6 +420,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ManagementUnitId == other.ManagementUnitId ||
                     this.ManagementUnitId != null &&
                     this.ManagementUnitId.Equals(other.ManagementUnitId)
+                ) &&
+                (
+                    this.BusinessUnitId == other.BusinessUnitId ||
+                    this.BusinessUnitId != null &&
+                    this.BusinessUnitId.Equals(other.BusinessUnitId)
                 ) &&
                 (
                     this.Team == other.Team ||
@@ -518,6 +534,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ManagementUnitId != null)
                     hash = hash * 59 + this.ManagementUnitId.GetHashCode();
+
+                if (this.BusinessUnitId != null)
+                    hash = hash * 59 + this.BusinessUnitId.GetHashCode();
 
                 if (this.Team != null)
                     hash = hash * 59 + this.Team.GetHashCode();

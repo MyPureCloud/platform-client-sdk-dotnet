@@ -223,6 +223,50 @@ namespace PureCloudPlatform.Client.V2.Model
             Flowout
         }
         /// <summary>
+        /// Gets or Sets CaseStatus
+        /// </summary>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum CaseStatusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Unknown for "Unknown"
+            /// </summary>
+            [EnumMember(Value = "Unknown")]
+            Unknown,
+            
+            /// <summary>
+            /// Enum Open for "Open"
+            /// </summary>
+            [EnumMember(Value = "Open")]
+            Open,
+            
+            /// <summary>
+            /// Enum Inprogress for "InProgress"
+            /// </summary>
+            [EnumMember(Value = "InProgress")]
+            Inprogress,
+            
+            /// <summary>
+            /// Enum Terminated for "Terminated"
+            /// </summary>
+            [EnumMember(Value = "Terminated")]
+            Terminated,
+            
+            /// <summary>
+            /// Enum Closed for "Closed"
+            /// </summary>
+            [EnumMember(Value = "Closed")]
+            Closed
+        }
+        /// <summary>
         /// Gets or Sets OriginatingDirection
         /// </summary>
         [DataMember(Name="originatingDirection", EmitDefaultValue=false)]
@@ -237,6 +281,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         [DataMember(Name="lastAcdOutcome", EmitDefaultValue=false)]
         public LastAcdOutcomeEnum? LastAcdOutcome { get; set; }
+        /// <summary>
+        /// Gets or Sets CaseStatus
+        /// </summary>
+        [DataMember(Name="caseStatus", EmitDefaultValue=false)]
+        public CaseStatusEnum? CaseStatus { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="JourneySessionEventsNotificationSessionEvent" /> class.
         /// </summary>
@@ -282,7 +331,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="NetworkConnectivity">NetworkConnectivity.</param>
         /// <param name="DivisionIds">DivisionIds.</param>
         /// <param name="LastScreen">LastScreen.</param>
-        public JourneySessionEventsNotificationSessionEvent(Guid? Id = null, string SelfUri = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, JourneySessionEventsNotificationExternalContact ExternalContact = null, string CustomerId = null, string CustomerIdType = null, string Type = null, List<JourneySessionEventsNotificationOutcomeAchievement> OutcomeAchievements = null, List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments = null, DateTime? AwayDate = null, JourneySessionEventsNotificationBrowser Browser = null, JourneySessionEventsNotificationDevice Device = null, JourneySessionEventsNotificationGeoLocation Geolocation = null, DateTime? IdleDate = null, string IpAddress = null, string IpOrganization = null, JourneySessionEventsNotificationPage LastPage = null, JourneySessionEventsNotificationMktCampaign MktCampaign = null, JourneySessionEventsNotificationReferrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, long? DurationInSeconds = null, long? EventCount = null, long? PageviewCount = null, long? ScreenviewCount = null, JourneySessionEventsNotificationSessionLastEvent LastEvent = null, JourneySessionEventsNotificationConversation Conversation = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, JourneySessionEventsNotificationConversationUserDisposition LastUserDisposition = null, JourneySessionEventsNotificationUser LastConnectedUser = null, JourneySessionEventsNotificationConnectedQueue LastConnectedQueue = null, List<JourneySessionEventsNotificationConversationChannel> ConversationChannels = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, JourneySessionEventsNotificationApp App = null, JourneySessionEventsNotificationSdkLibrary SdkLibrary = null, JourneySessionEventsNotificationNetworkConnectivity NetworkConnectivity = null, List<string> DivisionIds = null, string LastScreen = null)
+        /// <param name="CaseAssociations">CaseAssociations.</param>
+        /// <param name="CaseEntity">CaseEntity.</param>
+        /// <param name="CaseReference">CaseReference.</param>
+        /// <param name="CaseStatus">CaseStatus.</param>
+        public JourneySessionEventsNotificationSessionEvent(Guid? Id = null, string SelfUri = null, DateTime? CreatedDate = null, DateTime? EndedDate = null, JourneySessionEventsNotificationExternalContact ExternalContact = null, string CustomerId = null, string CustomerIdType = null, string Type = null, List<JourneySessionEventsNotificationOutcomeAchievement> OutcomeAchievements = null, List<JourneySessionEventsNotificationSegmentAssignment> SegmentAssignments = null, DateTime? AwayDate = null, JourneySessionEventsNotificationBrowser Browser = null, JourneySessionEventsNotificationDevice Device = null, JourneySessionEventsNotificationGeoLocation Geolocation = null, DateTime? IdleDate = null, string IpAddress = null, string IpOrganization = null, JourneySessionEventsNotificationPage LastPage = null, JourneySessionEventsNotificationMktCampaign MktCampaign = null, JourneySessionEventsNotificationReferrer Referrer = null, List<string> SearchTerms = null, string UserAgentString = null, long? DurationInSeconds = null, long? EventCount = null, long? PageviewCount = null, long? ScreenviewCount = null, JourneySessionEventsNotificationSessionLastEvent LastEvent = null, JourneySessionEventsNotificationConversation Conversation = null, OriginatingDirectionEnum? OriginatingDirection = null, string ConversationSubject = null, JourneySessionEventsNotificationConversationUserDisposition LastUserDisposition = null, JourneySessionEventsNotificationUser LastConnectedUser = null, JourneySessionEventsNotificationConnectedQueue LastConnectedQueue = null, List<JourneySessionEventsNotificationConversationChannel> ConversationChannels = null, LastUserDisconnectTypeEnum? LastUserDisconnectType = null, LastAcdOutcomeEnum? LastAcdOutcome = null, bool? Authenticated = null, JourneySessionEventsNotificationApp App = null, JourneySessionEventsNotificationSdkLibrary SdkLibrary = null, JourneySessionEventsNotificationNetworkConnectivity NetworkConnectivity = null, List<string> DivisionIds = null, string LastScreen = null, List<JourneySessionEventsNotificationCaseAssociation> CaseAssociations = null, JourneySessionEventsNotificationCase CaseEntity = null, string CaseReference = null, CaseStatusEnum? CaseStatus = null)
         {
             this.Id = Id;
             this.SelfUri = SelfUri;
@@ -326,6 +379,10 @@ namespace PureCloudPlatform.Client.V2.Model
             this.NetworkConnectivity = NetworkConnectivity;
             this.DivisionIds = DivisionIds;
             this.LastScreen = LastScreen;
+            this.CaseAssociations = CaseAssociations;
+            this.CaseEntity = CaseEntity;
+            this.CaseReference = CaseReference;
+            this.CaseStatus = CaseStatus;
             
         }
         
@@ -648,6 +705,32 @@ namespace PureCloudPlatform.Client.V2.Model
         public string LastScreen { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets CaseAssociations
+        /// </summary>
+        [DataMember(Name="caseAssociations", EmitDefaultValue=false)]
+        public List<JourneySessionEventsNotificationCaseAssociation> CaseAssociations { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets CaseEntity
+        /// </summary>
+        [DataMember(Name="caseEntity", EmitDefaultValue=false)]
+        public JourneySessionEventsNotificationCase CaseEntity { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets CaseReference
+        /// </summary>
+        [DataMember(Name="caseReference", EmitDefaultValue=false)]
+        public string CaseReference { get; set; }
+
+
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -699,6 +782,10 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  NetworkConnectivity: ").Append(NetworkConnectivity).Append("\n");
             sb.Append("  DivisionIds: ").Append(DivisionIds).Append("\n");
             sb.Append("  LastScreen: ").Append(LastScreen).Append("\n");
+            sb.Append("  CaseAssociations: ").Append(CaseAssociations).Append("\n");
+            sb.Append("  CaseEntity: ").Append(CaseEntity).Append("\n");
+            sb.Append("  CaseReference: ").Append(CaseReference).Append("\n");
+            sb.Append("  CaseStatus: ").Append(CaseStatus).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -948,6 +1035,26 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LastScreen == other.LastScreen ||
                     this.LastScreen != null &&
                     this.LastScreen.Equals(other.LastScreen)
+                ) &&
+                (
+                    this.CaseAssociations == other.CaseAssociations ||
+                    this.CaseAssociations != null &&
+                    this.CaseAssociations.SequenceEqual(other.CaseAssociations)
+                ) &&
+                (
+                    this.CaseEntity == other.CaseEntity ||
+                    this.CaseEntity != null &&
+                    this.CaseEntity.Equals(other.CaseEntity)
+                ) &&
+                (
+                    this.CaseReference == other.CaseReference ||
+                    this.CaseReference != null &&
+                    this.CaseReference.Equals(other.CaseReference)
+                ) &&
+                (
+                    this.CaseStatus == other.CaseStatus ||
+                    this.CaseStatus != null &&
+                    this.CaseStatus.Equals(other.CaseStatus)
                 );
         }
 
@@ -1087,6 +1194,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LastScreen != null)
                     hash = hash * 59 + this.LastScreen.GetHashCode();
+
+                if (this.CaseAssociations != null)
+                    hash = hash * 59 + this.CaseAssociations.GetHashCode();
+
+                if (this.CaseEntity != null)
+                    hash = hash * 59 + this.CaseEntity.GetHashCode();
+
+                if (this.CaseReference != null)
+                    hash = hash * 59 + this.CaseReference.GetHashCode();
+
+                if (this.CaseStatus != null)
+                    hash = hash * 59 + this.CaseStatus.GetHashCode();
 
                 return hash;
             }

@@ -298,7 +298,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostResponsemanagementLibrariesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query criteria</param>
@@ -313,7 +312,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostResponsemanagementLibrariesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query criteria</param>
@@ -814,7 +812,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostResponsemanagementLibrariesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query criteria</param>
@@ -829,7 +826,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// PostResponsemanagementLibrariesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query criteria</param>
@@ -3442,7 +3438,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query libraries using criteria. Users can set DivisionId parameter as &#39;*&#39; to fetch libraries that aren&#39;t associated with any divisions. 
         /// 
-        /// PostResponsemanagementLibrariesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query criteria</param>
@@ -3459,7 +3454,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query libraries using criteria. Users can set DivisionId parameter as &#39;*&#39; to fetch libraries that aren&#39;t associated with any divisions. 
         /// 
-        /// PostResponsemanagementLibrariesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query criteria</param>
@@ -3556,7 +3550,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query libraries using criteria. Users can set DivisionId parameter as &#39;*&#39; to fetch libraries that aren&#39;t associated with any divisions. 
         /// 
-        /// PostResponsemanagementLibrariesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query criteria</param>
@@ -3574,7 +3567,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Query libraries using criteria. Users can set DivisionId parameter as &#39;*&#39; to fetch libraries that aren&#39;t associated with any divisions. 
         /// 
-        /// PostResponsemanagementLibrariesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">Query criteria</param>

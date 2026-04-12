@@ -6,15 +6,81 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
+| [**DeleteProcessautomationScheduledtrigger**](#DeleteProcessautomationScheduledtrigger) | **Delete** /api/v2/processautomation/scheduledtriggers/{scheduledTriggerId} | Delete a Scheduled Trigger |
 | [**DeleteProcessautomationTrigger**](#DeleteProcessautomationTrigger) | **Delete** /api/v2/processautomation/triggers/{triggerId} | Delete a Trigger |
+| [**GetProcessautomationScheduledtrigger**](#GetProcessautomationScheduledtrigger) | **Get** /api/v2/processautomation/scheduledtriggers/{scheduledTriggerId} | Retrieve a single Scheduled Trigger matching id |
+| [**GetProcessautomationScheduledtriggers**](#GetProcessautomationScheduledtriggers) | **Get** /api/v2/processautomation/scheduledtriggers | Retrieves all scheduled triggers, optionally filtered by query parameters. |
 | [**GetProcessautomationTrigger**](#GetProcessautomationTrigger) | **Get** /api/v2/processautomation/triggers/{triggerId} | Retrieve a single Trigger matching id |
 | [**GetProcessautomationTriggers**](#GetProcessautomationTriggers) | **Get** /api/v2/processautomation/triggers | Retrieves all triggers, optionally filtered by query parameters. |
 | [**GetProcessautomationTriggersTopics**](#GetProcessautomationTriggersTopics) | **Get** /api/v2/processautomation/triggers/topics | Get topics available for organization |
+| [**PostProcessautomationScheduledtriggers**](#PostProcessautomationScheduledtriggers) | **Post** /api/v2/processautomation/scheduledtriggers | Create a scheduled Trigger |
 | [**PostProcessautomationTriggerTest**](#PostProcessautomationTriggerTest) | **Post** /api/v2/processautomation/triggers/{triggerId}/test | Test the matching of a Trigger based on provided event body |
 | [**PostProcessautomationTriggers**](#PostProcessautomationTriggers) | **Post** /api/v2/processautomation/triggers | Create a Trigger |
 | [**PostProcessautomationTriggersTopicTest**](#PostProcessautomationTriggersTopicTest) | **Post** /api/v2/processautomation/triggers/topics/{topicName}/test | Test the matching of all organization Triggers on given topic using provided event body |
+| [**PutProcessautomationScheduledtrigger**](#PutProcessautomationScheduledtrigger) | **Put** /api/v2/processautomation/scheduledtriggers/{scheduledTriggerId} | Update a Scheduled Trigger |
 | [**PutProcessautomationTrigger**](#PutProcessautomationTrigger) | **Put** /api/v2/processautomation/triggers/{triggerId} | Update a Trigger |
 
+
+
+## DeleteProcessautomationScheduledtrigger
+
+> void DeleteProcessautomationScheduledtrigger (string scheduledTriggerId)
+
+
+Delete a Scheduled Trigger
+
+Requires ANY permissions: 
+
+* processautomation:trigger:delete
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteProcessautomationScheduledtriggerExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ProcessAutomationApi();
+            var scheduledTriggerId = scheduledTriggerId_example;  // string | scheduledTriggerId
+
+            try
+            { 
+                // Delete a Scheduled Trigger
+                apiInstance.DeleteProcessautomationScheduledtrigger(scheduledTriggerId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ProcessAutomationApi.DeleteProcessautomationScheduledtrigger: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduledTriggerId** | **string**| scheduledTriggerId |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## DeleteProcessautomationTrigger
@@ -76,6 +142,138 @@ namespace Example
 ### Return type
 
 void (empty response body)
+
+
+## GetProcessautomationScheduledtrigger
+
+> [**ScheduledTrigger**](ScheduledTrigger) GetProcessautomationScheduledtrigger (string scheduledTriggerId)
+
+
+Retrieve a single Scheduled Trigger matching id
+
+Requires ANY permissions: 
+
+* processautomation:trigger:edit
+* processautomation:trigger:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetProcessautomationScheduledtriggerExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ProcessAutomationApi();
+            var scheduledTriggerId = scheduledTriggerId_example;  // string | scheduledTriggerId
+
+            try
+            { 
+                // Retrieve a single Scheduled Trigger matching id
+                ScheduledTrigger result = apiInstance.GetProcessautomationScheduledtrigger(scheduledTriggerId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ProcessAutomationApi.GetProcessautomationScheduledtrigger: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduledTriggerId** | **string**| scheduledTriggerId |  |
+
+### Return type
+
+[**ScheduledTrigger**](ScheduledTrigger)
+
+
+## GetProcessautomationScheduledtriggers
+
+> [**ScheduledTriggerEntityListing**](ScheduledTriggerEntityListing) GetProcessautomationScheduledtriggers (string before = null, string after = null, string pageSize = null, bool? enabled = null)
+
+
+Retrieves all scheduled triggers, optionally filtered by query parameters.
+
+Requires ANY permissions: 
+
+* processautomation:trigger:edit
+* processautomation:trigger:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetProcessautomationScheduledtriggersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ProcessAutomationApi();
+            var before = before_example;  // string | The cursor that points to the start of the set of entities that has been returned. (optional) 
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of entities to return. Maximum of 200. (optional) 
+            var enabled = true;  // bool? | Boolean indicating desired enabled state of scheduled triggers (optional) 
+
+            try
+            { 
+                // Retrieves all scheduled triggers, optionally filtered by query parameters.
+                ScheduledTriggerEntityListing result = apiInstance.GetProcessautomationScheduledtriggers(before, after, pageSize, enabled);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ProcessAutomationApi.GetProcessautomationScheduledtriggers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
+| **enabled** | **bool?**| Boolean indicating desired enabled state of scheduled triggers | [optional]  |
+
+### Return type
+
+[**ScheduledTriggerEntityListing**](ScheduledTriggerEntityListing)
 
 
 ## GetProcessautomationTrigger
@@ -281,6 +479,68 @@ namespace Example
 [**TopicCursorEntityListing**](TopicCursorEntityListing)
 
 
+## PostProcessautomationScheduledtriggers
+
+> [**ScheduledTrigger**](ScheduledTrigger) PostProcessautomationScheduledtriggers (CreateScheduledTriggerRequest body)
+
+
+Create a scheduled Trigger
+
+Requires ANY permissions: 
+
+* processautomation:trigger:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostProcessautomationScheduledtriggersExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ProcessAutomationApi();
+            var body = new CreateScheduledTriggerRequest(); // CreateScheduledTriggerRequest | Input used to create a Scheduled Trigger
+
+            try
+            { 
+                // Create a scheduled Trigger
+                ScheduledTrigger result = apiInstance.PostProcessautomationScheduledtriggers(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ProcessAutomationApi.PostProcessautomationScheduledtriggers: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CreateScheduledTriggerRequest**](CreateScheduledTriggerRequest)| Input used to create a Scheduled Trigger |  |
+
+### Return type
+
+[**ScheduledTrigger**](ScheduledTrigger)
+
+
 ## PostProcessautomationTriggerTest
 
 > [**TestModeResults**](TestModeResults) PostProcessautomationTriggerTest (string triggerId, string body = null)
@@ -471,6 +731,70 @@ namespace Example
 [**TestModeEventResults**](TestModeEventResults)
 
 
+## PutProcessautomationScheduledtrigger
+
+> [**ScheduledTrigger**](ScheduledTrigger) PutProcessautomationScheduledtrigger (string scheduledTriggerId, UpdateScheduledTriggerRequest body)
+
+
+Update a Scheduled Trigger
+
+Requires ANY permissions: 
+
+* processautomation:trigger:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutProcessautomationScheduledtriggerExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ProcessAutomationApi();
+            var scheduledTriggerId = scheduledTriggerId_example;  // string | scheduledTriggerId
+            var body = new UpdateScheduledTriggerRequest(); // UpdateScheduledTriggerRequest | Input to update Scheduled Trigger.
+
+            try
+            { 
+                // Update a Scheduled Trigger
+                ScheduledTrigger result = apiInstance.PutProcessautomationScheduledtrigger(scheduledTriggerId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ProcessAutomationApi.PutProcessautomationScheduledtrigger: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **scheduledTriggerId** | **string**| scheduledTriggerId |  |
+| **body** | [**UpdateScheduledTriggerRequest**](UpdateScheduledTriggerRequest)| Input to update Scheduled Trigger. |  |
+
+### Return type
+
+[**ScheduledTrigger**](ScheduledTrigger)
+
+
 ## PutProcessautomationTrigger
 
 > [**Trigger**](Trigger) PutProcessautomationTrigger (string triggerId, UpdateTriggerRequest body)
@@ -535,4 +859,4 @@ namespace Example
 [**Trigger**](Trigger)
 
 
-_PureCloudPlatform.Client.V2 261.0.0_
+_PureCloudPlatform.Client.V2 262.0.0_

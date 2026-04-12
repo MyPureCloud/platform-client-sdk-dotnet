@@ -112,7 +112,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostUsersSearchTeamsAssign**](#PostUsersSearchTeamsAssign) | **Post** /api/v2/users/search/teams/assign | Search users assigned to teams |
 | [**PutRoutingDirectroutingbackupSettingsMe**](#PutRoutingDirectroutingbackupSettingsMe) | **Put** /api/v2/routing/directroutingbackup/settings/me | Update the user&#39;s Direct Routing Backup settings. |
 | [**PutRoutingUserDirectroutingbackupSettings**](#PutRoutingUserDirectroutingbackupSettings) | **Put** /api/v2/routing/users/{userId}/directroutingbackup/settings | Update the user&#39;s Direct Routing Backup settings. |
-| [**PutRoutingUserUtilization**](#PutRoutingUserUtilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
+| [**PutRoutingUserUtilization**](#PutRoutingUserUtilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization&#39;s default values. |
 | [**PutUserCallforwarding**](#PutUserCallforwarding) | **Put** /api/v2/users/{userId}/callforwarding | Update a user&#39;s CallForwarding |
 | [**PutUserCustomattributes**](#PutUserCustomattributes) | **Put** /api/v2/users/{userId}/customattributes | Create or update a single custom attributes record. Updating replaces all data with the provided fields. |
 | [**PutUserOutofoffice**](#PutUserOutofoffice) | **Put** /api/v2/users/{userId}/outofoffice | Update an OutOfOffice |
@@ -6974,7 +6974,7 @@ namespace Example
 > [**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse) PutRoutingUserUtilization (string userId, UtilizationRequest body)
 
 
-Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+Update the user's max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization's default values.
 
 Requires ANY permissions: 
 
@@ -7007,7 +7007,7 @@ namespace Example
 
             try
             { 
-                // Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+                // Update the user's max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization's default values.
                 AgentMaxUtilizationResponse result = apiInstance.PutRoutingUserUtilization(userId, body);
                 Debug.WriteLine(result);
             }
@@ -7865,4 +7865,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 261.0.0_
+_PureCloudPlatform.Client.V2 262.0.0_
