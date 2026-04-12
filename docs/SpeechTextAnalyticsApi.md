@@ -1398,7 +1398,7 @@ namespace Example
 
 ## GetSpeechandtextanalyticsPrograms
 
-> [**ProgramsEntityListing**](ProgramsEntityListing) GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null, string name = null, string sortBy = null, string sortOrder = null)
+> [**ProgramsEntityListing**](ProgramsEntityListing) GetSpeechandtextanalyticsPrograms (string nextPage = null, int? pageSize = null, string state = null, string name = null, List<string> ids = null, string sortBy = null, string sortOrder = null)
 
 
 Get the list of Speech & Text Analytics programs
@@ -1433,13 +1433,14 @@ namespace Example
             var pageSize = 56;  // int? | The page size for the listing (optional)  (default to 20)
             var state = state_example;  // string | Program state. Defaults to Latest (optional) 
             var name = name_example;  // string | Case insensitive partial name to filter by (optional) 
+            var ids = new List<string>(); // List<string> | Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. (optional) 
             var sortBy = sortBy_example;  // string | Sort results by. Defaults to name (optional) 
             var sortOrder = sortOrder_example;  // string | Sort order. Defaults to asc (optional) 
 
             try
             { 
                 // Get the list of Speech & Text Analytics programs
-                ProgramsEntityListing result = apiInstance.GetSpeechandtextanalyticsPrograms(nextPage, pageSize, state, name, sortBy, sortOrder);
+                ProgramsEntityListing result = apiInstance.GetSpeechandtextanalyticsPrograms(nextPage, pageSize, state, name, ids, sortBy, sortOrder);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1460,6 +1461,7 @@ namespace Example
 | **pageSize** | **int?**| The page size for the listing | [optional] [default to 20] |
 | **state** | **string**| Program state. Defaults to Latest | [optional] <br />**Values**: Latest, Published |
 | **name** | **string**| Case insensitive partial name to filter by | [optional]  |
+| **ids** | [**List<string>**](string)| Comma separated Program IDs to filter by. Cannot be used with pagination params. Maximum of 50 IDs allowed. | [optional]  |
 | **sortBy** | **string**| Sort results by. Defaults to name | [optional] <br />**Values**: name |
 | **sortOrder** | **string**| Sort order. Defaults to asc | [optional] <br />**Values**: asc, desc |
 
@@ -4112,4 +4114,4 @@ namespace Example
 [**Topic**](Topic)
 
 
-_PureCloudPlatform.Client.V2 261.0.0_
+_PureCloudPlatform.Client.V2 262.0.0_

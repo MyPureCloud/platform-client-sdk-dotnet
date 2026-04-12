@@ -733,8 +733,6 @@ namespace Example
 
 Query libraries using criteria. Users can set DivisionId parameter as '*' to fetch libraries that aren't associated with any divisions.
 
-PostResponsemanagementLibrariesQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * responses:library:view
@@ -1306,4 +1304,4 @@ namespace Example
 [**ResponseAsset**](ResponseAsset)
 
 
-_PureCloudPlatform.Client.V2 261.0.0_
+_PureCloudPlatform.Client.V2 262.0.0_

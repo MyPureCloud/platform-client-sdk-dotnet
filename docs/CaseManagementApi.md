@@ -40,6 +40,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostCasemanagementCaseplans**](#PostCasemanagementCaseplans) | **Post** /api/v2/casemanagement/caseplans | Create a Caseplan. |
 | [**PostCasemanagementCases**](#PostCasemanagementCases) | **Post** /api/v2/casemanagement/cases | Create a Case. |
 | [**PostCasemanagementCasesAssociationsQuery**](#PostCasemanagementCasesAssociationsQuery) | **Post** /api/v2/casemanagement/cases/associations/query | Query for case associations |
+| [**PutCasemanagementCaseplanIntakesettings**](#PutCasemanagementCaseplanIntakesettings) | **Put** /api/v2/casemanagement/caseplans/{caseplanId}/intakesettings | Update the intake settings for a Caseplan. |
 
 
 
@@ -1112,7 +1113,7 @@ namespace Example
 | **versionId** | **string**| Version ID |  |
 | **stageplanId** | **string**| Stageplan ID |  |
 | **stepplanId** | **string**| Stepplan ID |  |
-| **expands** | [**List<string>**](string)| Which fields to expand. | [optional] <br />**Values**: stageplan, caseplan |
+| **expands** | [**List<string>**](string)| Which fields to expand. | [optional] <br />**Values**: stageplan, caseplan, worktype |
 
 ### Return type
 
@@ -1188,7 +1189,7 @@ namespace Example
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
-| **expands** | [**List<string>**](string)| Which fields to expand. | [optional] <br />**Values**: caseplan, stageplan |
+| **expands** | [**List<string>**](string)| Which fields to expand. | [optional] <br />**Values**: caseplan, stageplan, worktype |
 
 ### Return type
 
@@ -2329,4 +2330,70 @@ namespace Example
 [**CaseAssociationQueryEntityListing**](CaseAssociationQueryEntityListing)
 
 
-_PureCloudPlatform.Client.V2 261.0.0_
+## PutCasemanagementCaseplanIntakesettings
+
+> [**IntakeSettingsListing**](IntakeSettingsListing) PutCasemanagementCaseplanIntakesettings (string caseplanId, IntakeSettingsUpdate body)
+
+
+Update the intake settings for a Caseplan.
+
+PutCasemanagementCaseplanIntakesettings is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* caseManagement:caseplanIntakeSettings:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutCasemanagementCaseplanIntakesettingsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var caseplanId = caseplanId_example;  // string | Caseplan ID
+            var body = new IntakeSettingsUpdate(); // IntakeSettingsUpdate | Intake Settings
+
+            try
+            { 
+                // Update the intake settings for a Caseplan.
+                IntakeSettingsListing result = apiInstance.PutCasemanagementCaseplanIntakesettings(caseplanId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PutCasemanagementCaseplanIntakesettings: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **caseplanId** | **string**| Caseplan ID |  |
+| **body** | [**IntakeSettingsUpdate**](IntakeSettingsUpdate)| Intake Settings |  |
+
+### Return type
+
+[**IntakeSettingsListing**](IntakeSettingsListing)
+
+
+_PureCloudPlatform.Client.V2 262.0.0_

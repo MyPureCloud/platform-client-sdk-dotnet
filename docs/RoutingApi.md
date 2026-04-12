@@ -169,8 +169,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutRoutingSettingsTranscription**](#PutRoutingSettingsTranscription) | **Put** /api/v2/routing/settings/transcription | Update Transcription Settings |
 | [**PutRoutingSmsIdentityresolutionPhonenumber**](#PutRoutingSmsIdentityresolutionPhonenumber) | **Put** /api/v2/routing/sms/identityresolution/phonenumbers/{addressId} | Update an SMS identity resolution settings. |
 | [**PutRoutingUserDirectroutingbackupSettings**](#PutRoutingUserDirectroutingbackupSettings) | **Put** /api/v2/routing/users/{userId}/directroutingbackup/settings | Update the user&#39;s Direct Routing Backup settings. |
-| [**PutRoutingUserUtilization**](#PutRoutingUserUtilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. |
-| [**PutRoutingUtilization**](#PutRoutingUtilization) | **Put** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. |
+| [**PutRoutingUserUtilization**](#PutRoutingUserUtilization) | **Put** /api/v2/routing/users/{userId}/utilization | Update the user&#39;s max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization&#39;s default values. |
+| [**PutRoutingUtilization**](#PutRoutingUtilization) | **Put** /api/v2/routing/utilization | Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the system default values. |
 | [**PutRoutingUtilizationLabel**](#PutRoutingUtilizationLabel) | **Put** /api/v2/routing/utilization/labels/{labelId} | Update a utilization label |
 | [**PutRoutingWrapupcode**](#PutRoutingWrapupcode) | **Put** /api/v2/routing/wrapupcodes/{codeId} | Update wrap-up code |
 | [**PutUserRoutingskill**](#PutUserRoutingskill) | **Put** /api/v2/users/{userId}/routingskills/{skillId} | Update an assigned routing skill&#39;s proficiency |
@@ -10702,7 +10702,7 @@ namespace Example
 > [**AgentMaxUtilizationResponse**](AgentMaxUtilizationResponse) PutRoutingUserUtilization (string userId, UtilizationRequest body)
 
 
-Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+Update the user's max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization's default values.
 
 Requires ANY permissions: 
 
@@ -10735,7 +10735,7 @@ namespace Example
 
             try
             { 
-                // Update the user's max utilization settings.  Include only those media types requiring custom configuration.
+                // Update the user's max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the organization's default values.
                 AgentMaxUtilizationResponse result = apiInstance.PutRoutingUserUtilization(userId, body);
                 Debug.WriteLine(result);
             }
@@ -10766,7 +10766,7 @@ namespace Example
 > [**UtilizationResponse**](UtilizationResponse) PutRoutingUtilization (UtilizationRequest body)
 
 
-Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
+Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the system default values.
 
 Requires ALL permissions: 
 
@@ -10798,7 +10798,7 @@ namespace Example
 
             try
             { 
-                // Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration.
+                // Update the organization-wide max utilization settings.  Include only those media types requiring custom configuration. Any omitted media types will be set to the system default values.
                 UtilizationResponse result = apiInstance.PutRoutingUtilization(body);
                 Debug.WriteLine(result);
             }
@@ -11081,4 +11081,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 261.0.0_
+_PureCloudPlatform.Client.V2 262.0.0_
