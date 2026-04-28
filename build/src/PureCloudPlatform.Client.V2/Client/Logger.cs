@@ -347,7 +347,14 @@ namespace PureCloudPlatform.Client.V2.Client
             this.level = level;
             this.method = method;
             this.url = url;
-            this.requestHeaders = requestHeaders;
+            if (requestHeaders != null)
+            {
+                this.requestHeaders = new Dictionary<String, String>(requestHeaders);
+                if (this.requestHeaders.ContainsKey("Authorization"))
+                    this.requestHeaders["Authorization"] = "[REDACTED]";
+            }
+            else
+                this.requestHeaders = null;
             this.responseHeaders = responseHeaders;
             this.correlationId = getCorrelationId(responseHeaders);
             this.statusCode = statusCode;
@@ -385,8 +392,6 @@ namespace PureCloudPlatform.Client.V2.Client
         /// <return>String representation of the log statement</return>
         public string AsString(LogFormat? logFormat, bool logRequestBody, bool logResponseBody)
         {
-            requestHeaders["Authorization"] = "[REDACTED]";
-
             if (!logRequestBody)
                 requestBody = null;
             if (!logResponseBody)
