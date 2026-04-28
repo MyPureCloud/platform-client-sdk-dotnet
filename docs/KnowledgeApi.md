@@ -7877,4 +7877,4 @@ namespace Example
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
-_PureCloudPlatform.Client.V2 262.0.0_
+_PureCloudPlatform.Client.V2 262.1.0_
