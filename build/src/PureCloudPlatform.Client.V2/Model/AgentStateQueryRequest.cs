@@ -79,7 +79,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Organizationpresenceid for "organizationPresenceId"
             /// </summary>
             [EnumMember(Value = "organizationPresenceId")]
-            Organizationpresenceid
+            Organizationpresenceid,
+            
+            /// <summary>
+            /// Enum Adherencedate for "adherenceDate"
+            /// </summary>
+            [EnumMember(Value = "adherenceDate")]
+            Adherencedate
         }
         /// <summary>
         /// Search user order direction; default to asc

@@ -1,6 +1,6 @@
-# V3SourceDetailedWithErrorResponse
+# V3SourceExpandableResponse
 
-## ININ.PureCloudApi.Model.V3SourceDetailedWithErrorResponse
+## ININ.PureCloudApi.Model.V3SourceExpandableResponse
 
 ## Properties
 
@@ -20,9 +20,10 @@
 | **ScheduleSettings** | [**V3SourceScheduleSettings**](V3SourceScheduleSettings) | Settings that determine when the source starts a sync. | [optional] |
 | **Filters** | [**V3SourceFilter**](V3SourceFilter) | Filters that determine what documents are synced. | [optional] |
 | **FilterDetails** | [**V3SourceFilterDetails**](V3SourceFilterDetails) | Additional details to the source&#39;s filters. | [optional] |
+| **Connection** | [**ConnectionResponse**](ConnectionResponse) | The connection associated with the source. Needs to be expanded. | [optional] |
 | **Error** | [**ErrorBody**](ErrorBody) | Optional error details of an errored source. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

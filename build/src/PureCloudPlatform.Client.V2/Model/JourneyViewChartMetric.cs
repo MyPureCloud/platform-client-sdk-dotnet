@@ -43,7 +43,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Customercount for "CustomerCount"
             /// </summary>
             [EnumMember(Value = "CustomerCount")]
-            Customercount
+            Customercount,
+            
+            /// <summary>
+            /// Enum Minimum for "Minimum"
+            /// </summary>
+            [EnumMember(Value = "Minimum")]
+            Minimum,
+            
+            /// <summary>
+            /// Enum Maximum for "Maximum"
+            /// </summary>
+            [EnumMember(Value = "Maximum")]
+            Maximum,
+            
+            /// <summary>
+            /// Enum Average for "Average"
+            /// </summary>
+            [EnumMember(Value = "Average")]
+            Average,
+            
+            /// <summary>
+            /// Enum Sum for "Sum"
+            /// </summary>
+            [EnumMember(Value = "Sum")]
+            Sum
         }
         /// <summary>
         /// How to aggregate the given element, defaults to CustomerCount

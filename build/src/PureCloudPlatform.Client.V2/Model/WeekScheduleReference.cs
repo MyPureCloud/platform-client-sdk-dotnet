@@ -18,12 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WeekScheduleReference :  IEquatable<WeekScheduleReference>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WeekScheduleReference" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected WeekScheduleReference() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WeekScheduleReference" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="WeekDate">First day of this week schedule in yyyy-MM-dd format.</param>
-        public WeekScheduleReference(string WeekDate = null)
+        public WeekScheduleReference(string Id = null, string WeekDate = null)
         {
+            this.Id = Id;
             this.WeekDate = WeekDate;
             
         }
@@ -35,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

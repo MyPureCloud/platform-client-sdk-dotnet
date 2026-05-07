@@ -29,12 +29,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Address">Address.</param>
         /// <param name="ExternalTag">ExternalTag.</param>
         /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
+        /// <param name="AccessAttributes">AccessAttributes.</param>
         /// <param name="SecurePause">SecurePause.</param>
         /// <param name="InactivityTimeout">InactivityTimeout.</param>
         /// <param name="AssociatedConversation">AssociatedConversation.</param>
         /// <param name="ConsultationConversations">ConsultationConversations.</param>
         /// <param name="Divisions">Divisions.</param>
-        public QueueConversationSocialExpressionEventTopicConversation(string Id = null, long? MaxParticipants = null, List<QueueConversationSocialExpressionEventTopicParticipant> Participants = null, List<QueueConversationSocialExpressionEventTopicTransferResponse> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, string UtilizationLabelId = null, bool? SecurePause = null, DateTime? InactivityTimeout = null, QueueConversationSocialExpressionEventTopicDomainEntityRef AssociatedConversation = null, List<QueueConversationSocialExpressionEventTopicDomainEntityRef> ConsultationConversations = null, List<QueueConversationSocialExpressionEventTopicConversationDivisionMembership> Divisions = null)
+        public QueueConversationSocialExpressionEventTopicConversation(string Id = null, long? MaxParticipants = null, List<QueueConversationSocialExpressionEventTopicParticipant> Participants = null, List<QueueConversationSocialExpressionEventTopicTransferResponse> RecentTransfers = null, string RecordingState = null, string Address = null, string ExternalTag = null, string UtilizationLabelId = null, List<string> AccessAttributes = null, bool? SecurePause = null, DateTime? InactivityTimeout = null, QueueConversationSocialExpressionEventTopicDomainEntityRef AssociatedConversation = null, List<QueueConversationSocialExpressionEventTopicDomainEntityRef> ConsultationConversations = null, List<QueueConversationSocialExpressionEventTopicConversationDivisionMembership> Divisions = null)
         {
             this.Id = Id;
             this.MaxParticipants = MaxParticipants;
@@ -44,6 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Address = Address;
             this.ExternalTag = ExternalTag;
             this.UtilizationLabelId = UtilizationLabelId;
+            this.AccessAttributes = AccessAttributes;
             this.SecurePause = SecurePause;
             this.InactivityTimeout = InactivityTimeout;
             this.AssociatedConversation = AssociatedConversation;
@@ -119,6 +121,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets AccessAttributes
+        /// </summary>
+        [DataMember(Name="accessAttributes", EmitDefaultValue=false)]
+        public List<string> AccessAttributes { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets SecurePause
         /// </summary>
         [DataMember(Name="securePause", EmitDefaultValue=false)]
@@ -174,6 +184,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  ExternalTag: ").Append(ExternalTag).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
+            sb.Append("  AccessAttributes: ").Append(AccessAttributes).Append("\n");
             sb.Append("  SecurePause: ").Append(SecurePause).Append("\n");
             sb.Append("  InactivityTimeout: ").Append(InactivityTimeout).Append("\n");
             sb.Append("  AssociatedConversation: ").Append(AssociatedConversation).Append("\n");
@@ -260,6 +271,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UtilizationLabelId.Equals(other.UtilizationLabelId)
                 ) &&
                 (
+                    this.AccessAttributes == other.AccessAttributes ||
+                    this.AccessAttributes != null &&
+                    this.AccessAttributes.SequenceEqual(other.AccessAttributes)
+                ) &&
+                (
                     this.SecurePause == other.SecurePause ||
                     this.SecurePause != null &&
                     this.SecurePause.Equals(other.SecurePause)
@@ -320,6 +336,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UtilizationLabelId != null)
                     hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
+
+                if (this.AccessAttributes != null)
+                    hash = hash * 59 + this.AccessAttributes.GetHashCode();
 
                 if (this.SecurePause != null)
                     hash = hash * 59 + this.SecurePause.GetHashCode();

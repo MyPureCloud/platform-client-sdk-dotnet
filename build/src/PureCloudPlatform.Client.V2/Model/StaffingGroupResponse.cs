@@ -27,13 +27,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="StaffingGroupResponse" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">The name of the staffing group (required).</param>
         /// <param name="Users">The list of users that belong to the staffing group.</param>
         /// <param name="ManagementUnit">The ID of the management unit to which the staffing group users belong. If undefined the staffing group can include users from the entire business unit.</param>
         /// <param name="PlanningGroups">The list of planning groups that are associated with the staffing group.</param>
         /// <param name="Metadata">Version metadata for the staffing group (required).</param>
-        public StaffingGroupResponse(string Name = null, List<UserReference> Users = null, ManagementUnitReference ManagementUnit = null, List<PlanningGroupReference> PlanningGroups = null, WfmVersionedEntityMetadata Metadata = null)
+        public StaffingGroupResponse(string Id = null, string Name = null, List<UserReference> Users = null, ManagementUnitReference ManagementUnit = null, List<PlanningGroupReference> PlanningGroups = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.Users = Users;
             this.ManagementUnit = ManagementUnit;
@@ -49,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

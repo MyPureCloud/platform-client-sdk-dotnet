@@ -38,6 +38,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostCasemanagementCaseplanPublish**](#PostCasemanagementCaseplanPublish) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/publish | Publish Caseplan. |
 | [**PostCasemanagementCaseplanVersions**](#PostCasemanagementCaseplanVersions) | **Post** /api/v2/casemanagement/caseplans/{caseplanId}/versions | Create Caseplan version. |
 | [**PostCasemanagementCaseplans**](#PostCasemanagementCaseplans) | **Post** /api/v2/casemanagement/caseplans | Create a Caseplan. |
+| [**PostCasemanagementCaseplansQuery**](#PostCasemanagementCaseplansQuery) | **Post** /api/v2/casemanagement/caseplans/query | Query for caseplans |
 | [**PostCasemanagementCases**](#PostCasemanagementCases) | **Post** /api/v2/casemanagement/cases | Create a Case. |
 | [**PostCasemanagementCasesAssociationsQuery**](#PostCasemanagementCasesAssociationsQuery) | **Post** /api/v2/casemanagement/cases/associations/query | Query for case associations |
 | [**PutCasemanagementCaseplanIntakesettings**](#PutCasemanagementCaseplanIntakesettings) | **Put** /api/v2/casemanagement/caseplans/{caseplanId}/intakesettings | Update the intake settings for a Caseplan. |
@@ -2202,6 +2203,70 @@ namespace Example
 [**CaseplanCreateResponse**](CaseplanCreateResponse)
 
 
+## PostCasemanagementCaseplansQuery
+
+> [**CaseplanQueryEntityListing**](CaseplanQueryEntityListing) PostCasemanagementCaseplansQuery (CaseplanQueryRequest body)
+
+
+Query for caseplans
+
+PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* caseManagement:caseplan:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostCasemanagementCaseplansQueryExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new CaseManagementApi();
+            var body = new CaseplanQueryRequest(); // CaseplanQueryRequest | CaseplanQueryRequest
+
+            try
+            { 
+                // Query for caseplans
+                CaseplanQueryEntityListing result = apiInstance.PostCasemanagementCaseplansQuery(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling CaseManagementApi.PostCasemanagementCaseplansQuery: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**CaseplanQueryRequest**](CaseplanQueryRequest)| CaseplanQueryRequest |  |
+
+### Return type
+
+[**CaseplanQueryEntityListing**](CaseplanQueryEntityListing)
+
+
 ## PostCasemanagementCases
 
 > [**Case**](Case) PostCasemanagementCases (CaseCreate body)
@@ -2396,4 +2461,4 @@ namespace Example
 [**IntakeSettingsListing**](IntakeSettingsListing)
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

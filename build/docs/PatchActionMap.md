@@ -12,9 +12,9 @@
 | **DisplayName** | **string** | Display name of the action map. | |
 | **TriggerWithSegments** | **List&lt;string&gt;** | Trigger action map if any segment in the list is assigned to a given customer. | |
 | **TriggerWithEventConditions** | [**List&lt;EventCondition&gt;**](EventCondition) | List of event conditions that must be satisfied to trigger the action map. | [optional] |
-| **TriggerWithOutcomeProbabilityConditions** | [**List&lt;OutcomeProbabilityCondition&gt;**](OutcomeProbabilityCondition) | (deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
-| **TriggerWithOutcomePercentileConditions** | [**List&lt;OutcomePercentileCondition&gt;**](OutcomePercentileCondition) | (deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
-| **TriggerWithOutcomeQuantileConditions** | [**List&lt;OutcomeQuantileCondition&gt;**](OutcomeQuantileCondition) | Quantile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
+| **TriggerWithOutcomeProbabilityConditions** | [**List&lt;OutcomeProbabilityCondition&gt;**](OutcomeProbabilityCondition) | Deprecated. Probability conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
+| **TriggerWithOutcomePercentileConditions** | [**List&lt;OutcomePercentileCondition&gt;**](OutcomePercentileCondition) | Deprecated. Percentile conditions for outcomes that must be satisfied to trigger the action map. | [optional] |
+| **TriggerWithOutcomeQuantileConditions** | [**List&lt;OutcomeQuantileCondition&gt;**](OutcomeQuantileCondition) | Deprecated. Quantile conditions for outcomes that must be satisfied to trigger the action map. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/ | [optional] |
 | **PageUrlConditions** | [**List&lt;UrlCondition&gt;**](UrlCondition) | URL conditions that a page must match for web actions to be displayable. | |
 | **Activation** | [**Activation**](Activation) | Type of activation. | [optional] |
 | **Weight** | **int?** | Weight of the action map with higher number denoting higher weight. | [optional] |
@@ -29,4 +29,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

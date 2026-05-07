@@ -21,7 +21,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="RequestJourney" /> class.
         /// </summary>
-        /// <param name="Patterns">A list of zero or more patterns to match..</param>
+        /// <param name="Patterns">A list of zero or more patterns to match. Defaults to an empty list if not provided..</param>
         public RequestJourney(List<RequestJourneyPattern> Patterns = null)
         {
             this.Patterns = Patterns;
@@ -31,9 +31,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// A list of zero or more patterns to match.
+        /// A list of zero or more patterns to match. Defaults to an empty list if not provided.
         /// </summary>
-        /// <value>A list of zero or more patterns to match.</value>
+        /// <value>A list of zero or more patterns to match. Defaults to an empty list if not provided.</value>
         [DataMember(Name="patterns", EmitDefaultValue=false)]
         public List<RequestJourneyPattern> Patterns { get; set; }
 

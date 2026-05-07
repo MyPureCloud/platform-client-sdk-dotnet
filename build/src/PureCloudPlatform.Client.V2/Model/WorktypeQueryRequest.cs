@@ -40,11 +40,38 @@ namespace PureCloudPlatform.Client.V2.Model
             Count
         }
         /// <summary>
+        /// List of entity attributes to be expanded in the result.
+        /// </summary>
+        /// <value>List of entity attributes to be expanded in the result.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum ExpandsEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Schema for "schema"
+            /// </summary>
+            [EnumMember(Value = "schema")]
+            Schema
+        }
+        /// <summary>
         /// Specify the value 'Count' for this parameter in order to return only the record count.
         /// </summary>
         /// <value>Specify the value 'Count' for this parameter in order to return only the record count.</value>
         [DataMember(Name="select", EmitDefaultValue=false)]
         public SelectEnum? Select { get; set; }
+        /// <summary>
+        /// List of entity attributes to be expanded in the result.
+        /// </summary>
+        /// <value>List of entity attributes to be expanded in the result.</value>
+        [DataMember(Name="expands", EmitDefaultValue=false)]
+        public ExpandsEnum? Expands { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="WorktypeQueryRequest" /> class.
@@ -59,14 +86,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Filters">List of filter objects to be used in the search. Valid filter names are: &#39;divisionId&#39;, &#39;id&#39;, &#39;name&#39;, &#39;description&#39;, &#39;defaultWorkbinId&#39;, &#39;defaultDurationSeconds&#39;, &#39;defaultExpirationSeconds&#39;, &#39;defaultDueDurationSeconds&#39;, &#39;defaultPriority&#39;, &#39;defaultLanguageId&#39;, &#39;defaultTtlSeconds&#39;, &#39;assignmentEnabled&#39;, &#39;defaultQueueId&#39;, &#39;schemaId&#39;, &#39;schemaVersion&#39;, &#39;dateCreated&#39;, &#39;dateModified&#39;, &#39;modifiedBy&#39; (required).</param>
         /// <param name="Attributes">List of entity attributes to be retrieved in the result..</param>
         /// <param name="After">The cursor that points to the end of the set of entities that has been returned..</param>
+        /// <param name="Expands">List of entity attributes to be expanded in the result..</param>
         /// <param name="Sort">Sort.</param>
-        public WorktypeQueryRequest(int? PageSize = null, SelectEnum? Select = null, List<WorkitemFilter> Filters = null, List<string> Attributes = null, string After = null, WorktypeQuerySort Sort = null)
+        public WorktypeQueryRequest(int? PageSize = null, SelectEnum? Select = null, List<WorkitemFilter> Filters = null, List<string> Attributes = null, string After = null, ExpandsEnum? Expands = null, WorktypeQuerySort Sort = null)
         {
             this.PageSize = PageSize;
             this.Select = Select;
             this.Filters = Filters;
             this.Attributes = Attributes;
             this.After = After;
+            this.Expands = Expands;
             this.Sort = Sort;
             
         }
@@ -111,6 +140,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Sort
         /// </summary>
@@ -133,6 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Filters: ").Append(Filters).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  After: ").Append(After).Append("\n");
+            sb.Append("  Expands: ").Append(Expands).Append("\n");
             sb.Append("  Sort: ").Append(Sort).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -200,6 +232,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.After.Equals(other.After)
                 ) &&
                 (
+                    this.Expands == other.Expands ||
+                    this.Expands != null &&
+                    this.Expands.Equals(other.Expands)
+                ) &&
+                (
                     this.Sort == other.Sort ||
                     this.Sort != null &&
                     this.Sort.Equals(other.Sort)
@@ -231,6 +268,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.After != null)
                     hash = hash * 59 + this.After.GetHashCode();
+
+                if (this.Expands != null)
+                    hash = hash * 59 + this.Expands.GetHashCode();
 
                 if (this.Sort != null)
                     hash = hash * 59 + this.Sort.GetHashCode();

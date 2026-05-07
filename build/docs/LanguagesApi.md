@@ -529,4 +529,4 @@ namespace Example
 [**Language**](Language)
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

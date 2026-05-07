@@ -1711,6 +1711,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Activityplanoccurrence,
             
             /// <summary>
+            /// Enum Activityplanoccurrencesession for "ActivityPlanOccurrenceSession"
+            /// </summary>
+            [EnumMember(Value = "ActivityPlanOccurrenceSession")]
+            Activityplanoccurrencesession,
+            
+            /// <summary>
+            /// Enum Activityplanoccurrencesessionuser for "ActivityPlanOccurrenceSessionUser"
+            /// </summary>
+            [EnumMember(Value = "ActivityPlanOccurrenceSessionUser")]
+            Activityplanoccurrencesessionuser,
+            
+            /// <summary>
             /// Enum Adherenceexplanation for "AdherenceExplanation"
             /// </summary>
             [EnumMember(Value = "AdherenceExplanation")]
@@ -2705,6 +2717,18 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "DecisionTableRow")]
             Decisiontablerow,
+            
+            /// <summary>
+            /// Enum Decisiontableimportjob for "DecisionTableImportJob"
+            /// </summary>
+            [EnumMember(Value = "DecisionTableImportJob")]
+            Decisiontableimportjob,
+            
+            /// <summary>
+            /// Enum Decisiontableexportjob for "DecisionTableExportJob"
+            /// </summary>
+            [EnumMember(Value = "DecisionTableExportJob")]
+            Decisiontableexportjob,
             
             /// <summary>
             /// Enum Escalationrule for "EscalationRule"

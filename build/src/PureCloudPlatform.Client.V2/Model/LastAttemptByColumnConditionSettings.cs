@@ -62,12 +62,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="EmailColumnName">The name of the contact column to evaluate for Email..</param>
         /// <param name="SmsColumnName">The name of the contact column to evaluate for SMS..</param>
+        /// <param name="WhatsAppColumnName">The name of the contact column to evaluate for WhatsApp..</param>
         /// <param name="Operator">The operator to use when comparing values. (required).</param>
         /// <param name="Value">The period value to compare against the contact&#39;s data. (required).</param>
-        public LastAttemptByColumnConditionSettings(string EmailColumnName = null, string SmsColumnName = null, OperatorEnum? Operator = null, string Value = null)
+        public LastAttemptByColumnConditionSettings(string EmailColumnName = null, string SmsColumnName = null, string WhatsAppColumnName = null, OperatorEnum? Operator = null, string Value = null)
         {
             this.EmailColumnName = EmailColumnName;
             this.SmsColumnName = SmsColumnName;
+            this.WhatsAppColumnName = WhatsAppColumnName;
             this.Operator = Operator;
             this.Value = Value;
             
@@ -93,6 +95,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+        /// <summary>
+        /// The name of the contact column to evaluate for WhatsApp.
+        /// </summary>
+        /// <value>The name of the contact column to evaluate for WhatsApp.</value>
+        [DataMember(Name="whatsAppColumnName", EmitDefaultValue=false)]
+        public string WhatsAppColumnName { get; set; }
+
+
+
 
 
         /// <summary>
@@ -114,6 +125,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  EmailColumnName: ").Append(EmailColumnName).Append("\n");
             sb.Append("  SmsColumnName: ").Append(SmsColumnName).Append("\n");
+            sb.Append("  WhatsAppColumnName: ").Append(WhatsAppColumnName).Append("\n");
             sb.Append("  Operator: ").Append(Operator).Append("\n");
             sb.Append("  Value: ").Append(Value).Append("\n");
             sb.Append("}\n");
@@ -167,6 +179,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SmsColumnName.Equals(other.SmsColumnName)
                 ) &&
                 (
+                    this.WhatsAppColumnName == other.WhatsAppColumnName ||
+                    this.WhatsAppColumnName != null &&
+                    this.WhatsAppColumnName.Equals(other.WhatsAppColumnName)
+                ) &&
+                (
                     this.Operator == other.Operator ||
                     this.Operator != null &&
                     this.Operator.Equals(other.Operator)
@@ -194,6 +211,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SmsColumnName != null)
                     hash = hash * 59 + this.SmsColumnName.GetHashCode();
+
+                if (this.WhatsAppColumnName != null)
+                    hash = hash * 59 + this.WhatsAppColumnName.GetHashCode();
 
                 if (this.Operator != null)
                     hash = hash * 59 + this.Operator.GetHashCode();

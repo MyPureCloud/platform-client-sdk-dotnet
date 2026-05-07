@@ -28,11 +28,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="CaseplanDataSchema" /> class.
         /// </summary>
         /// <param name="Id">The id of the schema. (required).</param>
-        /// <param name="Version">The version of the schema..</param>
-        public CaseplanDataSchema(string Id = null, int? Version = null)
+        public CaseplanDataSchema(string Id = null)
         {
             this.Id = Id;
-            this.Version = Version;
             
         }
         
@@ -44,15 +42,6 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The id of the schema.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
-
-
-
-        /// <summary>
-        /// The version of the schema.
-        /// </summary>
-        /// <value>The version of the schema.</value>
-        [DataMember(Name="version", EmitDefaultValue=false)]
-        public int? Version { get; set; }
 
 
 
@@ -74,7 +63,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class CaseplanDataSchema {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
-            sb.Append("  Version: ").Append(Version).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -122,11 +110,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id.Equals(other.Id)
                 ) &&
                 (
-                    this.Version == other.Version ||
-                    this.Version != null &&
-                    this.Version.Equals(other.Version)
-                ) &&
-                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -146,9 +129,6 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
-
-                if (this.Version != null)
-                    hash = hash * 59 + this.Version.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

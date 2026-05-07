@@ -27,10 +27,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShortTermForecastReference" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="WeekDate">The weekDate of the short term forecast in yyyy-MM-dd format (required).</param>
         /// <param name="Description">The description of the short term forecast.</param>
-        public ShortTermForecastReference(string WeekDate = null, string Description = null)
+        public ShortTermForecastReference(string Id = null, string WeekDate = null, string Description = null)
         {
+            this.Id = Id;
             this.WeekDate = WeekDate;
             this.Description = Description;
             
@@ -43,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

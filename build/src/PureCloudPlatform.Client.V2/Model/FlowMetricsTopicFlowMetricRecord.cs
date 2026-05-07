@@ -1329,6 +1329,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SelfServed">Indicates whether the flow session was self serviced.</param>
         /// <param name="SessionDnis">Dialed number for the current session; this can be different from dnis, e.g. if the call was transferred.</param>
         /// <param name="SessionId">The unique identifier of this session.</param>
+        /// <param name="SkillExpressionId">Unique identifier for the skill requested for an interaction.</param>
         /// <param name="StartingLanguage">Flow starting language, e.g. en-us.</param>
         /// <param name="StationId">Unique identifier for a phone.</param>
         /// <param name="TeamId">The team ID the user is a member of.</param>
@@ -1343,7 +1344,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProposedAgents">Proposed agents.</param>
         /// <param name="Outcomes">Flow outcomes.</param>
         /// <param name="ScoredAgents">Scored agents.</param>
-        public FlowMetricsTopicFlowMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, long? Value = null, string RecordId = null, ActiveRoutingEnum? ActiveRouting = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, long? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<long?> EligibleAgentCounts = null, string EndingLanguage = null, string EntryReason = null, EntryTypeEnum? EntryType = null, string ErrorCode = null, string ExitReason = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, long? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowId = null, string FlowInType = null, List<string> FlowMilestoneIds = null, string FlowName = null, string FlowOutType = null, FlowSubTypeEnum? FlowSubType = null, FlowTypeEnum? FlowType = null, string FlowVersion = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, long? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string KnowledgeBaseId = null, long? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string RecognitionFailureReason = null, string Remote = null, List<string> RemovedSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, long? RoutingPriority = null, long? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string SelectedAgentId = null, long? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string StartingLanguage = null, string StationId = null, string TeamId = null, string TransferTargetAddress = null, string TransferTargetName = null, string TransferType = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, bool? VideoPresent = null, List<long?> WaitingInteractionCounts = null, string WrapUpCode = null, List<FlowMetricsTopicFlowProposedAgent> ProposedAgents = null, List<FlowMetricsTopicFlowOutcome> Outcomes = null, List<FlowMetricsTopicFlowScoredAgent> ScoredAgents = null)
+        public FlowMetricsTopicFlowMetricRecord(MetricEnum? Metric = null, DateTime? MetricDate = null, long? Value = null, string RecordId = null, ActiveRoutingEnum? ActiveRouting = null, List<string> ActiveSkillIds = null, string AddressFrom = null, string AddressTo = null, string AgentAssistantId = null, long? AgentBullseyeRing = null, bool? AgentOwned = null, string Ani = null, string AssignerId = null, bool? Authenticated = null, string ConversationId = null, ConversationInitiatorEnum? ConversationInitiator = null, string ConvertedFrom = null, string ConvertedTo = null, bool? CustomerParticipation = null, DeliveryStatusEnum? DeliveryStatus = null, List<string> DestinationAddresses = null, DirectionEnum? Direction = null, DisconnectTypeEnum? DisconnectType = null, List<string> DivisionIds = null, string Dnis = null, string EdgeId = null, List<long?> EligibleAgentCounts = null, string EndingLanguage = null, string EntryReason = null, EntryTypeEnum? EntryType = null, string ErrorCode = null, string ExitReason = null, string ExtendedDeliveryStatus = null, string ExternalContactId = null, long? ExternalMediaCount = null, string ExternalOrganizationId = null, string ExternalTag = null, bool? FirstQueue = null, FlaggedReasonEnum? FlaggedReason = null, string FlowId = null, string FlowInType = null, List<string> FlowMilestoneIds = null, string FlowName = null, string FlowOutType = null, FlowSubTypeEnum? FlowSubType = null, FlowTypeEnum? FlowType = null, string FlowVersion = null, string GroupId = null, string InteractionType = null, string JourneyActionId = null, string JourneyActionMapId = null, long? JourneyActionMapVersion = null, string JourneyCustomerId = null, string JourneyCustomerIdType = null, string JourneyCustomerSessionId = null, string JourneyCustomerSessionIdType = null, string KnowledgeBaseId = null, long? MediaCount = null, MediaTypeEnum? MediaType = null, string MessageType = null, OriginatingDirectionEnum? OriginatingDirection = null, string OutboundCampaignId = null, string OutboundContactId = null, string OutboundContactListId = null, string ParticipantName = null, string PeerId = null, string Provider = null, PurposeEnum? Purpose = null, string QueueId = null, string RecognitionFailureReason = null, string Remote = null, List<string> RemovedSkillIds = null, string RequestedLanguageId = null, List<string> RequestedRoutingSkillIds = null, List<RequestedRoutingsEnum> RequestedRoutings = null, string RoomId = null, long? RoutingPriority = null, long? RoutingRing = null, string RoutingRule = null, RoutingRuleTypeEnum? RoutingRuleType = null, string SelectedAgentId = null, long? SelectedAgentRank = null, bool? SelfServed = null, string SessionDnis = null, string SessionId = null, string SkillExpressionId = null, string StartingLanguage = null, string StationId = null, string TeamId = null, string TransferTargetAddress = null, string TransferTargetName = null, string TransferType = null, UsedRoutingEnum? UsedRouting = null, string UserId = null, bool? VideoPresent = null, List<long?> WaitingInteractionCounts = null, string WrapUpCode = null, List<FlowMetricsTopicFlowProposedAgent> ProposedAgents = null, List<FlowMetricsTopicFlowOutcome> Outcomes = null, List<FlowMetricsTopicFlowScoredAgent> ScoredAgents = null)
         {
             this.Metric = Metric;
             this.MetricDate = MetricDate;
@@ -1430,6 +1431,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SelfServed = SelfServed;
             this.SessionDnis = SessionDnis;
             this.SessionId = SessionId;
+            this.SkillExpressionId = SkillExpressionId;
             this.StartingLanguage = StartingLanguage;
             this.StationId = StationId;
             this.TeamId = TeamId;
@@ -2117,6 +2119,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Unique identifier for the skill requested for an interaction
+        /// </summary>
+        /// <value>Unique identifier for the skill requested for an interaction</value>
+        [DataMember(Name="skillExpressionId", EmitDefaultValue=false)]
+        public string SkillExpressionId { get; set; }
+
+
+
+        /// <summary>
         /// Flow starting language, e.g. en-us
         /// </summary>
         /// <value>Flow starting language, e.g. en-us</value>
@@ -2328,6 +2339,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SelfServed: ").Append(SelfServed).Append("\n");
             sb.Append("  SessionDnis: ").Append(SessionDnis).Append("\n");
             sb.Append("  SessionId: ").Append(SessionId).Append("\n");
+            sb.Append("  SkillExpressionId: ").Append(SkillExpressionId).Append("\n");
             sb.Append("  StartingLanguage: ").Append(StartingLanguage).Append("\n");
             sb.Append("  StationId: ").Append(StationId).Append("\n");
             sb.Append("  TeamId: ").Append(TeamId).Append("\n");
@@ -2808,6 +2820,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SessionId.Equals(other.SessionId)
                 ) &&
                 (
+                    this.SkillExpressionId == other.SkillExpressionId ||
+                    this.SkillExpressionId != null &&
+                    this.SkillExpressionId.Equals(other.SkillExpressionId)
+                ) &&
+                (
                     this.StartingLanguage == other.StartingLanguage ||
                     this.StartingLanguage != null &&
                     this.StartingLanguage.Equals(other.StartingLanguage)
@@ -3144,6 +3161,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SessionId != null)
                     hash = hash * 59 + this.SessionId.GetHashCode();
+
+                if (this.SkillExpressionId != null)
+                    hash = hash * 59 + this.SkillExpressionId.GetHashCode();
 
                 if (this.StartingLanguage != null)
                     hash = hash * 59 + this.StartingLanguage.GetHashCode();

@@ -55,7 +55,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Pushnotificationbody for "PushNotificationBody"
             /// </summary>
             [EnumMember(Value = "PushNotificationBody")]
-            Pushnotificationbody
+            Pushnotificationbody,
+            
+            /// <summary>
+            /// Enum Messengerlauncherbuttontext for "MessengerLauncherButtonText"
+            /// </summary>
+            [EnumMember(Value = "MessengerLauncherButtonText")]
+            Messengerlauncherbuttontext
         }
         /// <summary>
         /// Contains localized label key used in messenger homescreen and push notification. PushNotificationTitle and PushNotificationBody keys are required when notifications are enabled.

@@ -60,6 +60,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuTimeOffLimitValueRange" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="TimeOffLimit">The ID of the time-off limit (required).</param>
         /// <param name="StartDate">Start date of the requested date range, in ISO-8601 format. The end date is determined by the size of interval lists (required).</param>
         /// <param name="Granularity">Granularity choice for time-off limit (required).</param>
@@ -68,8 +69,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="WaitlistedMinutesPerInterval">A list of waitlisted time-off minutes per granularity interval (required).</param>
         /// <param name="WaitlistedRequestsPerInterval">The current number of waitlisted time-off requests for every interval per granularity (required).</param>
         /// <param name="Metadata">Version metadata for the time-off limit (required).</param>
-        public BuTimeOffLimitValueRange(BuTimeOffLimitReference TimeOffLimit = null, String StartDate = null, GranularityEnum? Granularity = null, List<int?> LimitMinutesPerInterval = null, List<int?> AllocatedMinutesPerInterval = null, List<int?> WaitlistedMinutesPerInterval = null, List<int?> WaitlistedRequestsPerInterval = null, WfmVersionedEntityMetadata Metadata = null)
+        public BuTimeOffLimitValueRange(string Id = null, BuTimeOffLimitReference TimeOffLimit = null, String StartDate = null, GranularityEnum? Granularity = null, List<int?> LimitMinutesPerInterval = null, List<int?> AllocatedMinutesPerInterval = null, List<int?> WaitlistedMinutesPerInterval = null, List<int?> WaitlistedRequestsPerInterval = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.TimeOffLimit = TimeOffLimit;
             this.StartDate = StartDate;
             this.Granularity = Granularity;
@@ -88,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

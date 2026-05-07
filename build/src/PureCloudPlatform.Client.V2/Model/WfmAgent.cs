@@ -18,9 +18,16 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WfmAgent :  IEquatable<WfmAgent>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WfmAgent" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected WfmAgent() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WfmAgent" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="User">The user associated with this data.</param>
         /// <param name="WorkPlan">The work plan associated with this agent, if applicable.</param>
         /// <param name="WorkPlanRotation">The work plan rotation associated with this agent, if applicable.</param>
@@ -31,8 +38,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Skills">The list of skills this agent is capable of handling.</param>
         /// <param name="Schedulable">Whether the agent can be included in schedule generation.</param>
         /// <param name="Metadata">Metadata for this agent.</param>
-        public WfmAgent(UserReference User = null, WorkPlanReference WorkPlan = null, WorkPlanRotationReference WorkPlanRotation = null, bool? AcceptDirectShiftTrades = null, List<WorkPlanOverride> WorkPlanOverrides = null, List<QueueReference> Queues = null, List<LanguageReference> Languages = null, List<RoutingSkillReference> Skills = null, bool? Schedulable = null, WfmVersionedEntityMetadata Metadata = null)
+        public WfmAgent(string Id = null, UserReference User = null, WorkPlanReference WorkPlan = null, WorkPlanRotationReference WorkPlanRotation = null, bool? AcceptDirectShiftTrades = null, List<WorkPlanOverride> WorkPlanOverrides = null, List<QueueReference> Queues = null, List<LanguageReference> Languages = null, List<RoutingSkillReference> Skills = null, bool? Schedulable = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.User = User;
             this.WorkPlan = WorkPlan;
             this.WorkPlanRotation = WorkPlanRotation;
@@ -53,7 +61,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

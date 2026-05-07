@@ -317,7 +317,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ExternalId">Unique identifier in the external system where the events for the session originate from..</param>
         /// <param name="ExternalUrl">A URL that identifies an external system-of-record resource that may have more detailed information on the session..</param>
         /// <param name="ShortId">Shortened numeric identifier of 4-6 digits..</param>
-        /// <param name="OutcomeAchievements">List of the outcome achievements by the customer in this session..</param>
+        /// <param name="OutcomeAchievements">Deprecated. List of the outcome achievements by the customer in this session. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/.</param>
         /// <param name="SegmentAssignments">List of the segment assignments to the customer in this session..</param>
         /// <param name="Attributes">Attributes projected from the session&#39;s event stream..</param>
         /// <param name="AttributeLists">List-type attributes projected from the session&#39;s event stream..</param>
@@ -489,9 +489,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// List of the outcome achievements by the customer in this session.
+        /// Deprecated. List of the outcome achievements by the customer in this session. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
-        /// <value>List of the outcome achievements by the customer in this session.</value>
+        /// <value>Deprecated. List of the outcome achievements by the customer in this session. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/</value>
         [DataMember(Name="outcomeAchievements", EmitDefaultValue=false)]
         public List<OutcomeAchievement> OutcomeAchievements { get; set; }
 

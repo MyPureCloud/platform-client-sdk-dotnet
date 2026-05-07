@@ -75,9 +75,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The state of the generation run</value>
         [DataMember(Name="state", EmitDefaultValue=false)]
         public StateEnum? State { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuScheduleRun" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected BuScheduleRun() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuScheduleRun" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="SchedulerRunId">The scheduler run ID.  Reference this value for support.</param>
         /// <param name="IntradayRescheduling">Whether this is an intraday rescheduling run.</param>
         /// <param name="State">The state of the generation run.</param>
@@ -94,8 +101,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MessageSeverityCounts">The list of schedule generation message counts by severity for this schedule generation run.</param>
         /// <param name="ReschedulingOptions">Rescheduling options for this run.  Null unless intradayRescheduling is true.</param>
         /// <param name="ReschedulingResultExpiration">When the reschedule result will expire.  Null unless intradayRescheduling is true. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
-        public BuScheduleRun(string SchedulerRunId = null, bool? IntradayRescheduling = null, StateEnum? State = null, int? WeekCount = null, double? PercentComplete = null, String TargetWeek = null, BuScheduleReference Schedule = null, string ScheduleDescription = null, DateTime? SchedulingStartTime = null, UserReference SchedulingStartedBy = null, UserReference SchedulingCanceledBy = null, DateTime? SchedulingCompletedTime = null, int? MessageCount = null, List<SchedulerMessageSeverityCount> MessageSeverityCounts = null, ReschedulingOptionsRunResponse ReschedulingOptions = null, DateTime? ReschedulingResultExpiration = null)
+        public BuScheduleRun(string Id = null, string SchedulerRunId = null, bool? IntradayRescheduling = null, StateEnum? State = null, int? WeekCount = null, double? PercentComplete = null, String TargetWeek = null, BuScheduleReference Schedule = null, string ScheduleDescription = null, DateTime? SchedulingStartTime = null, UserReference SchedulingStartedBy = null, UserReference SchedulingCanceledBy = null, DateTime? SchedulingCompletedTime = null, int? MessageCount = null, List<SchedulerMessageSeverityCount> MessageSeverityCounts = null, ReschedulingOptionsRunResponse ReschedulingOptions = null, DateTime? ReschedulingResultExpiration = null)
         {
+            this.Id = Id;
             this.SchedulerRunId = SchedulerRunId;
             this.IntradayRescheduling = IntradayRescheduling;
             this.State = State;
@@ -122,7 +130,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

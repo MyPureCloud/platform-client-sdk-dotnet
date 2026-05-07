@@ -140,51 +140,51 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteJourneyExternaleventsSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
-        /// Delete an outcome.
+        /// Deprecated. Delete an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteJourneyOutcome (string outcomeId);
 
         /// <summary>
-        /// Delete an outcome.
+        /// Deprecated. Delete an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteJourneyOutcomeWithHttpInfo (string outcomeId);
 
         /// <summary>
-        /// Delete an outcome predictor.
+        /// Deprecated. Delete an outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns></returns>
-        
+        [Obsolete]
         void DeleteJourneyOutcomesPredictor (string predictorId);
 
         /// <summary>
-        /// Delete an outcome predictor.
+        /// Deprecated. Delete an outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         ApiResponse<Object> DeleteJourneyOutcomesPredictorWithHttpInfo (string predictorId);
 
         /// <summary>
@@ -434,51 +434,51 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActionMapListing> GetJourneyActionmapsWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
-        /// Get status of job.
+        /// Deprecated. Get status of job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>string</returns>
-        
+        [Obsolete]
         string GetJourneyActionmapsEstimatesJob (string jobId);
 
         /// <summary>
-        /// Get status of job.
+        /// Deprecated. Get status of job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of string</returns>
-        
+        [Obsolete]
         ApiResponse<string> GetJourneyActionmapsEstimatesJobWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Get estimates from completed job.
+        /// Deprecated. Get estimates from completed job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ActionMapEstimateResult</returns>
-        
+        [Obsolete]
         ActionMapEstimateResult GetJourneyActionmapsEstimatesJobResults (string jobId);
 
         /// <summary>
-        /// Get estimates from completed job.
+        /// Deprecated. Get estimates from completed job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of ActionMapEstimateResult</returns>
-        
+        [Obsolete]
         ApiResponse<ActionMapEstimateResult> GetJourneyActionmapsEstimatesJobResultsWithHttpInfo (string jobId);
 
         /// <summary>
@@ -842,34 +842,34 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<SchemaQuantityLimits> GetJourneyExternaleventsSchemasLimitsWithHttpInfo ();
 
         /// <summary>
-        /// Retrieve a single outcome.
+        /// Deprecated. Retrieve a single outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Outcome</returns>
-        
+        [Obsolete]
         Outcome GetJourneyOutcome (string outcomeId);
 
         /// <summary>
-        /// Retrieve a single outcome.
+        /// Deprecated. Retrieve a single outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>ApiResponse of Outcome</returns>
-        
+        [Obsolete]
         ApiResponse<Outcome> GetJourneyOutcomeWithHttpInfo (string outcomeId);
 
         /// <summary>
-        /// Retrieve all outcomes.
+        /// Deprecated. Retrieve all outcomes.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -879,14 +879,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>OutcomeListing</returns>
-        
+        [Obsolete]
         OutcomeListing GetJourneyOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
-        /// Retrieve all outcomes.
+        /// Deprecated. Retrieve all outcomes.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -896,105 +896,105 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of OutcomeListing</returns>
-        
+        [Obsolete]
         ApiResponse<OutcomeListing> GetJourneyOutcomesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
-        /// Get job status.
+        /// Deprecated. Get job status.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>OutcomeAttributionJobStateResponse</returns>
-        
+        [Obsolete]
         OutcomeAttributionJobStateResponse GetJourneyOutcomesAttributionsJob (string jobId);
 
         /// <summary>
-        /// Get job status.
+        /// Deprecated. Get job status.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of OutcomeAttributionJobStateResponse</returns>
-        
+        [Obsolete]
         ApiResponse<OutcomeAttributionJobStateResponse> GetJourneyOutcomesAttributionsJobWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Get outcome attribution entities from completed job.
+        /// Deprecated. Get outcome attribution entities from completed job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>OutcomeAttributionResponseListing</returns>
-        
+        [Obsolete]
         OutcomeAttributionResponseListing GetJourneyOutcomesAttributionsJobResults (string jobId);
 
         /// <summary>
-        /// Get outcome attribution entities from completed job.
+        /// Deprecated. Get outcome attribution entities from completed job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of OutcomeAttributionResponseListing</returns>
-        
+        [Obsolete]
         ApiResponse<OutcomeAttributionResponseListing> GetJourneyOutcomesAttributionsJobResultsWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Retrieve a single outcome predictor.
+        /// Deprecated. Retrieve a single outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>OutcomePredictor</returns>
-        
+        [Obsolete]
         OutcomePredictor GetJourneyOutcomesPredictor (string predictorId);
 
         /// <summary>
-        /// Retrieve a single outcome predictor.
+        /// Deprecated. Retrieve a single outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>ApiResponse of OutcomePredictor</returns>
-        
+        [Obsolete]
         ApiResponse<OutcomePredictor> GetJourneyOutcomesPredictorWithHttpInfo (string predictorId);
 
         /// <summary>
-        /// Retrieve all outcome predictors.
+        /// Deprecated. Retrieve all outcome predictors.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OutcomePredictorListing</returns>
-        
+        [Obsolete]
         OutcomePredictorListing GetJourneyOutcomesPredictors ();
 
         /// <summary>
-        /// Retrieve all outcome predictors.
+        /// Deprecated. Retrieve all outcome predictors.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OutcomePredictorListing</returns>
-        
+        [Obsolete]
         ApiResponse<OutcomePredictorListing> GetJourneyOutcomesPredictorsWithHttpInfo ();
 
         /// <summary>
@@ -1112,27 +1112,27 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<EventListing> GetJourneySessionEventsWithHttpInfo (string sessionId, string pageSize = null, string after = null, string eventType = null);
 
         /// <summary>
-        /// Retrieve latest outcome score associated with a session for all outcomes.
+        /// Deprecated. Retrieve latest outcome score associated with a session for all outcomes.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>OutcomeScoresResult</returns>
-        
+        [Obsolete]
         OutcomeScoresResult GetJourneySessionOutcomescores (string sessionId);
 
         /// <summary>
-        /// Retrieve latest outcome score associated with a session for all outcomes.
+        /// Deprecated. Retrieve latest outcome score associated with a session for all outcomes.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>ApiResponse of OutcomeScoresResult</returns>
-        
+        [Obsolete]
         ApiResponse<OutcomeScoresResult> GetJourneySessionOutcomescoresWithHttpInfo (string sessionId);
 
         /// <summary>
@@ -1670,29 +1670,29 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ExternalEventsConfiguration> PatchJourneyExternaleventsConfigurationWithHttpInfo (string configId, UpdateExternalEventsConfigurationRequest body = null);
 
         /// <summary>
-        /// Update an outcome.
+        /// Deprecated. Update an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Outcome</returns>
-        
+        [Obsolete]
         Outcome PatchJourneyOutcome (string outcomeId, PatchOutcome body = null);
 
         /// <summary>
-        /// Update an outcome.
+        /// Deprecated. Update an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Outcome</returns>
-        
+        [Obsolete]
         ApiResponse<Outcome> PatchJourneyOutcomeWithHttpInfo (string outcomeId, PatchOutcome body = null);
 
         /// <summary>
@@ -1852,27 +1852,27 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<ActionMap> PostJourneyActionmapsWithHttpInfo (ActionMap body = null);
 
         /// <summary>
-        /// Query for estimates
+        /// Deprecated. Query for estimates
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>EstimateJobAsyncResponse</returns>
-        
+        [Obsolete]
         EstimateJobAsyncResponse PostJourneyActionmapsEstimatesJobs (ActionMapEstimateRequest body);
 
         /// <summary>
-        /// Query for estimates
+        /// Deprecated. Query for estimates
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>ApiResponse of EstimateJobAsyncResponse</returns>
-        
+        [Obsolete]
         ApiResponse<EstimateJobAsyncResponse> PostJourneyActionmapsEstimatesJobsWithHttpInfo (ActionMapEstimateRequest body);
 
         /// <summary>
@@ -2076,77 +2076,77 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<FlowPaths> PostJourneyFlowsPathsQueryWithHttpInfo (FlowPathsQuery body = null);
 
         /// <summary>
-        /// Create an outcome.
+        /// Deprecated. Create an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Outcome</returns>
-        
+        [Obsolete]
         Outcome PostJourneyOutcomes (OutcomeRequest body = null);
 
         /// <summary>
-        /// Create an outcome.
+        /// Deprecated. Create an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Outcome</returns>
-        
+        [Obsolete]
         ApiResponse<Outcome> PostJourneyOutcomesWithHttpInfo (OutcomeRequest body = null);
 
         /// <summary>
-        /// Create Outcome Attributions
+        /// Deprecated. Create Outcome Attributions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>OutcomeAttributionAsyncResponse</returns>
-        
+        [Obsolete]
         OutcomeAttributionAsyncResponse PostJourneyOutcomesAttributionsJobs (OutcomeAttributionListing body = null);
 
         /// <summary>
-        /// Create Outcome Attributions
+        /// Deprecated. Create Outcome Attributions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>ApiResponse of OutcomeAttributionAsyncResponse</returns>
-        
+        [Obsolete]
         ApiResponse<OutcomeAttributionAsyncResponse> PostJourneyOutcomesAttributionsJobsWithHttpInfo (OutcomeAttributionListing body = null);
 
         /// <summary>
-        /// Create an outcome predictor.
+        /// Deprecated. Create an outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>OutcomePredictor</returns>
-        
+        [Obsolete]
         OutcomePredictor PostJourneyOutcomesPredictors (OutcomePredictorRequest body = null);
 
         /// <summary>
-        /// Create an outcome predictor.
+        /// Deprecated. Create an outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of OutcomePredictor</returns>
-        
+        [Obsolete]
         ApiResponse<OutcomePredictor> PostJourneyOutcomesPredictorsWithHttpInfo (OutcomePredictorRequest body = null);
 
         /// <summary>
@@ -2508,51 +2508,51 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyExternaleventsSchemaAsyncWithHttpInfo (string schemaId);
 
         /// <summary>
-        /// Delete an outcome.
+        /// Deprecated. Delete an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteJourneyOutcomeAsync (string outcomeId);
 
         /// <summary>
-        /// Delete an outcome.
+        /// Deprecated. Delete an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyOutcomeAsyncWithHttpInfo (string outcomeId);
 
         /// <summary>
-        /// Delete an outcome predictor.
+        /// Deprecated. Delete an outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task DeleteJourneyOutcomesPredictorAsync (string predictorId);
 
         /// <summary>
-        /// Delete an outcome predictor.
+        /// Deprecated. Delete an outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyOutcomesPredictorAsyncWithHttpInfo (string predictorId);
 
         /// <summary>
@@ -2802,51 +2802,51 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ActionMapListing>> GetJourneyActionmapsAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, string filterField = null, string filterValue = null, List<string> actionMapIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
-        /// Get status of job.
+        /// Deprecated. Get status of job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of string</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<string> GetJourneyActionmapsEstimatesJobAsync (string jobId);
 
         /// <summary>
-        /// Get status of job.
+        /// Deprecated. Get status of job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<string>> GetJourneyActionmapsEstimatesJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Get estimates from completed job.
+        /// Deprecated. Get estimates from completed job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ActionMapEstimateResult</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ActionMapEstimateResult> GetJourneyActionmapsEstimatesJobResultsAsync (string jobId);
 
         /// <summary>
-        /// Get estimates from completed job.
+        /// Deprecated. Get estimates from completed job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (ActionMapEstimateResult)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<ActionMapEstimateResult>> GetJourneyActionmapsEstimatesJobResultsAsyncWithHttpInfo (string jobId);
 
         /// <summary>
@@ -3210,34 +3210,34 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<SchemaQuantityLimits>> GetJourneyExternaleventsSchemasLimitsAsyncWithHttpInfo ();
 
         /// <summary>
-        /// Retrieve a single outcome.
+        /// Deprecated. Retrieve a single outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of Outcome</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<Outcome> GetJourneyOutcomeAsync (string outcomeId);
 
         /// <summary>
-        /// Retrieve a single outcome.
+        /// Deprecated. Retrieve a single outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Outcome>> GetJourneyOutcomeAsyncWithHttpInfo (string outcomeId);
 
         /// <summary>
-        /// Retrieve all outcomes.
+        /// Deprecated. Retrieve all outcomes.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3247,14 +3247,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of OutcomeListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OutcomeListing> GetJourneyOutcomesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
-        /// Retrieve all outcomes.
+        /// Deprecated. Retrieve all outcomes.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -3264,105 +3264,105 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (OutcomeListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OutcomeListing>> GetJourneyOutcomesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null);
 
         /// <summary>
-        /// Get job status.
+        /// Deprecated. Get job status.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of OutcomeAttributionJobStateResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OutcomeAttributionJobStateResponse> GetJourneyOutcomesAttributionsJobAsync (string jobId);
 
         /// <summary>
-        /// Get job status.
+        /// Deprecated. Get job status.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionJobStateResponse)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionJobStateResponse>> GetJourneyOutcomesAttributionsJobAsyncWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Get outcome attribution entities from completed job.
+        /// Deprecated. Get outcome attribution entities from completed job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of OutcomeAttributionResponseListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OutcomeAttributionResponseListing> GetJourneyOutcomesAttributionsJobResultsAsync (string jobId);
 
         /// <summary>
-        /// Get outcome attribution entities from completed job.
+        /// Deprecated. Get outcome attribution entities from completed job.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionResponseListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionResponseListing>> GetJourneyOutcomesAttributionsJobResultsAsyncWithHttpInfo (string jobId);
 
         /// <summary>
-        /// Retrieve a single outcome predictor.
+        /// Deprecated. Retrieve a single outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of OutcomePredictor</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OutcomePredictor> GetJourneyOutcomesPredictorAsync (string predictorId);
 
         /// <summary>
-        /// Retrieve a single outcome predictor.
+        /// Deprecated. Retrieve a single outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of ApiResponse (OutcomePredictor)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OutcomePredictor>> GetJourneyOutcomesPredictorAsyncWithHttpInfo (string predictorId);
 
         /// <summary>
-        /// Retrieve all outcome predictors.
+        /// Deprecated. Retrieve all outcome predictors.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OutcomePredictorListing</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OutcomePredictorListing> GetJourneyOutcomesPredictorsAsync ();
 
         /// <summary>
-        /// Retrieve all outcome predictors.
+        /// Deprecated. Retrieve all outcome predictors.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OutcomePredictorListing)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OutcomePredictorListing>> GetJourneyOutcomesPredictorsAsyncWithHttpInfo ();
 
         /// <summary>
@@ -3480,27 +3480,27 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<EventListing>> GetJourneySessionEventsAsyncWithHttpInfo (string sessionId, string pageSize = null, string after = null, string eventType = null);
 
         /// <summary>
-        /// Retrieve latest outcome score associated with a session for all outcomes.
+        /// Deprecated. Retrieve latest outcome score associated with a session for all outcomes.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of OutcomeScoresResult</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OutcomeScoresResult> GetJourneySessionOutcomescoresAsync (string sessionId);
 
         /// <summary>
-        /// Retrieve latest outcome score associated with a session for all outcomes.
+        /// Deprecated. Retrieve latest outcome score associated with a session for all outcomes.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of ApiResponse (OutcomeScoresResult)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OutcomeScoresResult>> GetJourneySessionOutcomescoresAsyncWithHttpInfo (string sessionId);
 
         /// <summary>
@@ -4038,29 +4038,29 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ExternalEventsConfiguration>> PatchJourneyExternaleventsConfigurationAsyncWithHttpInfo (string configId, UpdateExternalEventsConfigurationRequest body = null);
 
         /// <summary>
-        /// Update an outcome.
+        /// Deprecated. Update an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Outcome</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<Outcome> PatchJourneyOutcomeAsync (string outcomeId, PatchOutcome body = null);
 
         /// <summary>
-        /// Update an outcome.
+        /// Deprecated. Update an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Outcome>> PatchJourneyOutcomeAsyncWithHttpInfo (string outcomeId, PatchOutcome body = null);
 
         /// <summary>
@@ -4220,27 +4220,27 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<ActionMap>> PostJourneyActionmapsAsyncWithHttpInfo (ActionMap body = null);
 
         /// <summary>
-        /// Query for estimates
+        /// Deprecated. Query for estimates
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>Task of EstimateJobAsyncResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<EstimateJobAsyncResponse> PostJourneyActionmapsEstimatesJobsAsync (ActionMapEstimateRequest body);
 
         /// <summary>
-        /// Query for estimates
+        /// Deprecated. Query for estimates
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>Task of ApiResponse (EstimateJobAsyncResponse)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<EstimateJobAsyncResponse>> PostJourneyActionmapsEstimatesJobsAsyncWithHttpInfo (ActionMapEstimateRequest body);
 
         /// <summary>
@@ -4444,77 +4444,77 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<FlowPaths>> PostJourneyFlowsPathsQueryAsyncWithHttpInfo (FlowPathsQuery body = null);
 
         /// <summary>
-        /// Create an outcome.
+        /// Deprecated. Create an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Outcome</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<Outcome> PostJourneyOutcomesAsync (OutcomeRequest body = null);
 
         /// <summary>
-        /// Create an outcome.
+        /// Deprecated. Create an outcome.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<Outcome>> PostJourneyOutcomesAsyncWithHttpInfo (OutcomeRequest body = null);
 
         /// <summary>
-        /// Create Outcome Attributions
+        /// Deprecated. Create Outcome Attributions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>Task of OutcomeAttributionAsyncResponse</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OutcomeAttributionAsyncResponse> PostJourneyOutcomesAttributionsJobsAsync (OutcomeAttributionListing body = null);
 
         /// <summary>
-        /// Create Outcome Attributions
+        /// Deprecated. Create Outcome Attributions
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionAsyncResponse)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionAsyncResponse>> PostJourneyOutcomesAttributionsJobsAsyncWithHttpInfo (OutcomeAttributionListing body = null);
 
         /// <summary>
-        /// Create an outcome predictor.
+        /// Deprecated. Create an outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of OutcomePredictor</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<OutcomePredictor> PostJourneyOutcomesPredictorsAsync (OutcomePredictorRequest body = null);
 
         /// <summary>
-        /// Create an outcome predictor.
+        /// Deprecated. Create an outcome predictor.
         /// </summary>
         /// <remarks>
-        /// 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (OutcomePredictor)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<OutcomePredictor>> PostJourneyOutcomesPredictorsAsyncWithHttpInfo (OutcomePredictorRequest body = null);
 
         /// <summary>
@@ -5865,26 +5865,26 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an outcome. 
-        /// 
+        /// Deprecated. Delete an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteJourneyOutcome (string outcomeId)
         {
              DeleteJourneyOutcomeWithHttpInfo(outcomeId);
         }
 
         /// <summary>
-        /// Delete an outcome. 
-        /// 
+        /// Deprecated. Delete an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteJourneyOutcomeWithHttpInfo (string outcomeId)
         { 
             // verify the required parameter 'outcomeId' is set
@@ -5965,13 +5965,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an outcome. 
-        /// 
+        /// Deprecated. Delete an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteJourneyOutcomeAsync (string outcomeId)
         {
              await DeleteJourneyOutcomeAsyncWithHttpInfo(outcomeId);
@@ -5979,13 +5979,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an outcome. 
-        /// 
+        /// Deprecated. Delete an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyOutcomeAsyncWithHttpInfo (string outcomeId)
         { 
             // verify the required parameter 'outcomeId' is set
@@ -6068,26 +6068,26 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an outcome predictor. 
-        /// 
+        /// Deprecated. Delete an outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns></returns>
-        
+        [Obsolete]
         public void DeleteJourneyOutcomesPredictor (string predictorId)
         {
              DeleteJourneyOutcomesPredictorWithHttpInfo(predictorId);
         }
 
         /// <summary>
-        /// Delete an outcome predictor. 
-        /// 
+        /// Deprecated. Delete an outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>ApiResponse of Object(void)</returns>
-        
+        [Obsolete]
         public ApiResponse<Object> DeleteJourneyOutcomesPredictorWithHttpInfo (string predictorId)
         { 
             // verify the required parameter 'predictorId' is set
@@ -6168,13 +6168,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Delete an outcome predictor. 
-        /// 
+        /// Deprecated. Delete an outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of void</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task DeleteJourneyOutcomesPredictorAsync (string predictorId)
         {
              await DeleteJourneyOutcomesPredictorAsyncWithHttpInfo(predictorId);
@@ -6182,13 +6182,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Delete an outcome predictor. 
-        /// 
+        /// Deprecated. Delete an outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of ApiResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteJourneyOutcomesPredictorAsyncWithHttpInfo (string predictorId)
         { 
             // verify the required parameter 'predictorId' is set
@@ -8191,13 +8191,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get status of job. 
-        /// 
+        /// Deprecated. Get status of job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>string</returns>
-        
+        [Obsolete]
         public string GetJourneyActionmapsEstimatesJob (string jobId)
         {
              ApiResponse<string> localVarResponse = GetJourneyActionmapsEstimatesJobWithHttpInfo(jobId);
@@ -8205,13 +8205,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get status of job. 
-        /// 
+        /// Deprecated. Get status of job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of string</returns>
-        
+        [Obsolete]
         public ApiResponse< string > GetJourneyActionmapsEstimatesJobWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -8292,13 +8292,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get status of job. 
-        /// 
+        /// Deprecated. Get status of job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of string</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<string> GetJourneyActionmapsEstimatesJobAsync (string jobId)
         {
              ApiResponse<string> localVarResponse = await GetJourneyActionmapsEstimatesJobAsyncWithHttpInfo(jobId);
@@ -8307,13 +8307,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get status of job. 
-        /// 
+        /// Deprecated. Get status of job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (string)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<string>> GetJourneyActionmapsEstimatesJobAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -8396,13 +8396,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get estimates from completed job. 
-        /// 
+        /// Deprecated. Get estimates from completed job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ActionMapEstimateResult</returns>
-        
+        [Obsolete]
         public ActionMapEstimateResult GetJourneyActionmapsEstimatesJobResults (string jobId)
         {
              ApiResponse<ActionMapEstimateResult> localVarResponse = GetJourneyActionmapsEstimatesJobResultsWithHttpInfo(jobId);
@@ -8410,13 +8410,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get estimates from completed job. 
-        /// 
+        /// Deprecated. Get estimates from completed job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of ActionMapEstimateResult</returns>
-        
+        [Obsolete]
         public ApiResponse< ActionMapEstimateResult > GetJourneyActionmapsEstimatesJobResultsWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -8497,13 +8497,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get estimates from completed job. 
-        /// 
+        /// Deprecated. Get estimates from completed job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ActionMapEstimateResult</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ActionMapEstimateResult> GetJourneyActionmapsEstimatesJobResultsAsync (string jobId)
         {
              ApiResponse<ActionMapEstimateResult> localVarResponse = await GetJourneyActionmapsEstimatesJobResultsAsyncWithHttpInfo(jobId);
@@ -8512,13 +8512,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get estimates from completed job. 
-        /// 
+        /// Deprecated. Get estimates from completed job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (ActionMapEstimateResult)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<ActionMapEstimateResult>> GetJourneyActionmapsEstimatesJobResultsAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -11501,13 +11501,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve a single outcome. 
-        /// 
+        /// Deprecated. Retrieve a single outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Outcome</returns>
-        
+        [Obsolete]
         public Outcome GetJourneyOutcome (string outcomeId)
         {
              ApiResponse<Outcome> localVarResponse = GetJourneyOutcomeWithHttpInfo(outcomeId);
@@ -11515,13 +11515,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve a single outcome. 
-        /// 
+        /// Deprecated. Retrieve a single outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>ApiResponse of Outcome</returns>
-        
+        [Obsolete]
         public ApiResponse< Outcome > GetJourneyOutcomeWithHttpInfo (string outcomeId)
         { 
             // verify the required parameter 'outcomeId' is set
@@ -11602,13 +11602,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve a single outcome. 
-        /// 
+        /// Deprecated. Retrieve a single outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of Outcome</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<Outcome> GetJourneyOutcomeAsync (string outcomeId)
         {
              ApiResponse<Outcome> localVarResponse = await GetJourneyOutcomeAsyncWithHttpInfo(outcomeId);
@@ -11617,13 +11617,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve a single outcome. 
-        /// 
+        /// Deprecated. Retrieve a single outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Outcome>> GetJourneyOutcomeAsyncWithHttpInfo (string outcomeId)
         { 
             // verify the required parameter 'outcomeId' is set
@@ -11706,8 +11706,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve all outcomes. 
-        /// 
+        /// Deprecated. Retrieve all outcomes. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -11717,7 +11717,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>OutcomeListing</returns>
-        
+        [Obsolete]
         public OutcomeListing GetJourneyOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
         {
              ApiResponse<OutcomeListing> localVarResponse = GetJourneyOutcomesWithHttpInfo(pageNumber, pageSize, sortBy, outcomeIds, queryFields, queryValue);
@@ -11725,8 +11725,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve all outcomes. 
-        /// 
+        /// Deprecated. Retrieve all outcomes. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -11736,7 +11736,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>ApiResponse of OutcomeListing</returns>
-        
+        [Obsolete]
         public ApiResponse< OutcomeListing > GetJourneyOutcomesWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
         { 
 
@@ -11819,8 +11819,8 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve all outcomes. 
-        /// 
+        /// Deprecated. Retrieve all outcomes. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -11830,7 +11830,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of OutcomeListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OutcomeListing> GetJourneyOutcomesAsync (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
         {
              ApiResponse<OutcomeListing> localVarResponse = await GetJourneyOutcomesAsyncWithHttpInfo(pageNumber, pageSize, sortBy, outcomeIds, queryFields, queryValue);
@@ -11839,8 +11839,8 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve all outcomes. 
-        /// 
+        /// Deprecated. Retrieve all outcomes. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="pageNumber">Page number (optional, default to 1)</param>
@@ -11850,7 +11850,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="queryFields">Outcome field(s) to query on. Requires &#39;queryValue&#39; to also be set. (optional)</param>
         /// <param name="queryValue">Value to query on using fuzzy matching. Requires &#39;queryFields&#39; to also be set. (optional)</param>
         /// <returns>Task of ApiResponse (OutcomeListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeListing>> GetJourneyOutcomesAsyncWithHttpInfo (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
         { 
 
@@ -11934,14 +11934,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get job status. 
-        /// 
+        /// Deprecated. Get job status. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>OutcomeAttributionJobStateResponse</returns>
-        
+        [Obsolete]
         public OutcomeAttributionJobStateResponse GetJourneyOutcomesAttributionsJob (string jobId)
         {
              ApiResponse<OutcomeAttributionJobStateResponse> localVarResponse = GetJourneyOutcomesAttributionsJobWithHttpInfo(jobId);
@@ -11949,14 +11949,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get job status. 
-        /// 
+        /// Deprecated. Get job status. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of OutcomeAttributionJobStateResponse</returns>
-        
+        [Obsolete]
         public ApiResponse< OutcomeAttributionJobStateResponse > GetJourneyOutcomesAttributionsJobWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -12037,14 +12037,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get job status. 
-        /// 
+        /// Deprecated. Get job status. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of OutcomeAttributionJobStateResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OutcomeAttributionJobStateResponse> GetJourneyOutcomesAttributionsJobAsync (string jobId)
         {
              ApiResponse<OutcomeAttributionJobStateResponse> localVarResponse = await GetJourneyOutcomesAttributionsJobAsyncWithHttpInfo(jobId);
@@ -12053,14 +12053,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get job status. 
-        /// 
+        /// Deprecated. Get job status. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionJobStateResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionJobStateResponse>> GetJourneyOutcomesAttributionsJobAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -12143,14 +12143,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get outcome attribution entities from completed job. 
-        /// 
+        /// Deprecated. Get outcome attribution entities from completed job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>OutcomeAttributionResponseListing</returns>
-        
+        [Obsolete]
         public OutcomeAttributionResponseListing GetJourneyOutcomesAttributionsJobResults (string jobId)
         {
              ApiResponse<OutcomeAttributionResponseListing> localVarResponse = GetJourneyOutcomesAttributionsJobResultsWithHttpInfo(jobId);
@@ -12158,14 +12158,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get outcome attribution entities from completed job. 
-        /// 
+        /// Deprecated. Get outcome attribution entities from completed job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>ApiResponse of OutcomeAttributionResponseListing</returns>
-        
+        [Obsolete]
         public ApiResponse< OutcomeAttributionResponseListing > GetJourneyOutcomesAttributionsJobResultsWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -12246,14 +12246,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Get outcome attribution entities from completed job. 
-        /// 
+        /// Deprecated. Get outcome attribution entities from completed job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of OutcomeAttributionResponseListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OutcomeAttributionResponseListing> GetJourneyOutcomesAttributionsJobResultsAsync (string jobId)
         {
              ApiResponse<OutcomeAttributionResponseListing> localVarResponse = await GetJourneyOutcomesAttributionsJobResultsAsyncWithHttpInfo(jobId);
@@ -12262,14 +12262,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Get outcome attribution entities from completed job. 
-        /// 
+        /// Deprecated. Get outcome attribution entities from completed job. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">ID of the job.</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionResponseListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionResponseListing>> GetJourneyOutcomesAttributionsJobResultsAsyncWithHttpInfo (string jobId)
         { 
             // verify the required parameter 'jobId' is set
@@ -12352,13 +12352,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve a single outcome predictor. 
-        /// 
+        /// Deprecated. Retrieve a single outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>OutcomePredictor</returns>
-        
+        [Obsolete]
         public OutcomePredictor GetJourneyOutcomesPredictor (string predictorId)
         {
              ApiResponse<OutcomePredictor> localVarResponse = GetJourneyOutcomesPredictorWithHttpInfo(predictorId);
@@ -12366,13 +12366,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve a single outcome predictor. 
-        /// 
+        /// Deprecated. Retrieve a single outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>ApiResponse of OutcomePredictor</returns>
-        
+        [Obsolete]
         public ApiResponse< OutcomePredictor > GetJourneyOutcomesPredictorWithHttpInfo (string predictorId)
         { 
             // verify the required parameter 'predictorId' is set
@@ -12453,13 +12453,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve a single outcome predictor. 
-        /// 
+        /// Deprecated. Retrieve a single outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of OutcomePredictor</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OutcomePredictor> GetJourneyOutcomesPredictorAsync (string predictorId)
         {
              ApiResponse<OutcomePredictor> localVarResponse = await GetJourneyOutcomesPredictorAsyncWithHttpInfo(predictorId);
@@ -12468,13 +12468,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve a single outcome predictor. 
-        /// 
+        /// Deprecated. Retrieve a single outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="predictorId">ID of predictor</param>
         /// <returns>Task of ApiResponse (OutcomePredictor)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OutcomePredictor>> GetJourneyOutcomesPredictorAsyncWithHttpInfo (string predictorId)
         { 
             // verify the required parameter 'predictorId' is set
@@ -12557,12 +12557,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve all outcome predictors. 
-        /// 
+        /// Deprecated. Retrieve all outcome predictors. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>OutcomePredictorListing</returns>
-        
+        [Obsolete]
         public OutcomePredictorListing GetJourneyOutcomesPredictors ()
         {
              ApiResponse<OutcomePredictorListing> localVarResponse = GetJourneyOutcomesPredictorsWithHttpInfo();
@@ -12570,12 +12570,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve all outcome predictors. 
-        /// 
+        /// Deprecated. Retrieve all outcome predictors. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>ApiResponse of OutcomePredictorListing</returns>
-        
+        [Obsolete]
         public ApiResponse< OutcomePredictorListing > GetJourneyOutcomesPredictorsWithHttpInfo ()
         { 
 
@@ -12652,12 +12652,12 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve all outcome predictors. 
-        /// 
+        /// Deprecated. Retrieve all outcome predictors. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of OutcomePredictorListing</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OutcomePredictorListing> GetJourneyOutcomesPredictorsAsync ()
         {
              ApiResponse<OutcomePredictorListing> localVarResponse = await GetJourneyOutcomesPredictorsAsyncWithHttpInfo();
@@ -12666,12 +12666,12 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve all outcome predictors. 
-        /// 
+        /// Deprecated. Retrieve all outcome predictors. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <returns>Task of ApiResponse (OutcomePredictorListing)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OutcomePredictorListing>> GetJourneyOutcomesPredictorsAsyncWithHttpInfo ()
         { 
 
@@ -13616,13 +13616,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve latest outcome score associated with a session for all outcomes. 
-        /// 
+        /// Deprecated. Retrieve latest outcome score associated with a session for all outcomes. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>OutcomeScoresResult</returns>
-        
+        [Obsolete]
         public OutcomeScoresResult GetJourneySessionOutcomescores (string sessionId)
         {
              ApiResponse<OutcomeScoresResult> localVarResponse = GetJourneySessionOutcomescoresWithHttpInfo(sessionId);
@@ -13630,13 +13630,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve latest outcome score associated with a session for all outcomes. 
-        /// 
+        /// Deprecated. Retrieve latest outcome score associated with a session for all outcomes. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>ApiResponse of OutcomeScoresResult</returns>
-        
+        [Obsolete]
         public ApiResponse< OutcomeScoresResult > GetJourneySessionOutcomescoresWithHttpInfo (string sessionId)
         { 
             // verify the required parameter 'sessionId' is set
@@ -13717,13 +13717,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Retrieve latest outcome score associated with a session for all outcomes. 
-        /// 
+        /// Deprecated. Retrieve latest outcome score associated with a session for all outcomes. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of OutcomeScoresResult</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OutcomeScoresResult> GetJourneySessionOutcomescoresAsync (string sessionId)
         {
              ApiResponse<OutcomeScoresResult> localVarResponse = await GetJourneySessionOutcomescoresAsyncWithHttpInfo(sessionId);
@@ -13732,13 +13732,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Retrieve latest outcome score associated with a session for all outcomes. 
-        /// 
+        /// Deprecated. Retrieve latest outcome score associated with a session for all outcomes. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sessionId">ID of the session.</param>
         /// <returns>Task of ApiResponse (OutcomeScoresResult)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeScoresResult>> GetJourneySessionOutcomescoresAsyncWithHttpInfo (string sessionId)
         { 
             // verify the required parameter 'sessionId' is set
@@ -18179,14 +18179,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an outcome. 
-        /// 
+        /// Deprecated. Update an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Outcome</returns>
-        
+        [Obsolete]
         public Outcome PatchJourneyOutcome (string outcomeId, PatchOutcome body = null)
         {
              ApiResponse<Outcome> localVarResponse = PatchJourneyOutcomeWithHttpInfo(outcomeId, body);
@@ -18194,14 +18194,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an outcome. 
-        /// 
+        /// Deprecated. Update an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Outcome</returns>
-        
+        [Obsolete]
         public ApiResponse< Outcome > PatchJourneyOutcomeWithHttpInfo (string outcomeId, PatchOutcome body = null)
         { 
             // verify the required parameter 'outcomeId' is set
@@ -18288,14 +18288,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Update an outcome. 
-        /// 
+        /// Deprecated. Update an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Outcome</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<Outcome> PatchJourneyOutcomeAsync (string outcomeId, PatchOutcome body = null)
         {
              ApiResponse<Outcome> localVarResponse = await PatchJourneyOutcomeAsyncWithHttpInfo(outcomeId, body);
@@ -18304,14 +18304,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Update an outcome. 
-        /// 
+        /// Deprecated. Update an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="outcomeId">ID of the outcome.</param>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Outcome>> PatchJourneyOutcomeAsyncWithHttpInfo (string outcomeId, PatchOutcome body = null)
         { 
             // verify the required parameter 'outcomeId' is set
@@ -19738,13 +19738,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query for estimates 
-        /// 
+        /// Deprecated. Query for estimates 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>EstimateJobAsyncResponse</returns>
-        
+        [Obsolete]
         public EstimateJobAsyncResponse PostJourneyActionmapsEstimatesJobs (ActionMapEstimateRequest body)
         {
              ApiResponse<EstimateJobAsyncResponse> localVarResponse = PostJourneyActionmapsEstimatesJobsWithHttpInfo(body);
@@ -19752,13 +19752,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query for estimates 
-        /// 
+        /// Deprecated. Query for estimates 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>ApiResponse of EstimateJobAsyncResponse</returns>
-        
+        [Obsolete]
         public ApiResponse< EstimateJobAsyncResponse > PostJourneyActionmapsEstimatesJobsWithHttpInfo (ActionMapEstimateRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -19844,13 +19844,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Query for estimates 
-        /// 
+        /// Deprecated. Query for estimates 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>Task of EstimateJobAsyncResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<EstimateJobAsyncResponse> PostJourneyActionmapsEstimatesJobsAsync (ActionMapEstimateRequest body)
         {
              ApiResponse<EstimateJobAsyncResponse> localVarResponse = await PostJourneyActionmapsEstimatesJobsAsyncWithHttpInfo(body);
@@ -19859,13 +19859,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Query for estimates 
-        /// 
+        /// Deprecated. Query for estimates 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">audience estimator request</param>
         /// <returns>Task of ApiResponse (EstimateJobAsyncResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<EstimateJobAsyncResponse>> PostJourneyActionmapsEstimatesJobsAsyncWithHttpInfo (ActionMapEstimateRequest body)
         { 
             // verify the required parameter 'body' is set
@@ -21639,13 +21639,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create an outcome. 
-        /// 
+        /// Deprecated. Create an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Outcome</returns>
-        
+        [Obsolete]
         public Outcome PostJourneyOutcomes (OutcomeRequest body = null)
         {
              ApiResponse<Outcome> localVarResponse = PostJourneyOutcomesWithHttpInfo(body);
@@ -21653,13 +21653,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create an outcome. 
-        /// 
+        /// Deprecated. Create an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of Outcome</returns>
-        
+        [Obsolete]
         public ApiResponse< Outcome > PostJourneyOutcomesWithHttpInfo (OutcomeRequest body = null)
         { 
 
@@ -21742,13 +21742,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create an outcome. 
-        /// 
+        /// Deprecated. Create an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of Outcome</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<Outcome> PostJourneyOutcomesAsync (OutcomeRequest body = null)
         {
              ApiResponse<Outcome> localVarResponse = await PostJourneyOutcomesAsyncWithHttpInfo(body);
@@ -21757,13 +21757,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create an outcome. 
-        /// 
+        /// Deprecated. Create an outcome. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (Outcome)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<Outcome>> PostJourneyOutcomesAsyncWithHttpInfo (OutcomeRequest body = null)
         { 
 
@@ -21847,14 +21847,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create Outcome Attributions 
-        /// 
+        /// Deprecated. Create Outcome Attributions 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>OutcomeAttributionAsyncResponse</returns>
-        
+        [Obsolete]
         public OutcomeAttributionAsyncResponse PostJourneyOutcomesAttributionsJobs (OutcomeAttributionListing body = null)
         {
              ApiResponse<OutcomeAttributionAsyncResponse> localVarResponse = PostJourneyOutcomesAttributionsJobsWithHttpInfo(body);
@@ -21862,14 +21862,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create Outcome Attributions 
-        /// 
+        /// Deprecated. Create Outcome Attributions 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>ApiResponse of OutcomeAttributionAsyncResponse</returns>
-        
+        [Obsolete]
         public ApiResponse< OutcomeAttributionAsyncResponse > PostJourneyOutcomesAttributionsJobsWithHttpInfo (OutcomeAttributionListing body = null)
         { 
 
@@ -21952,14 +21952,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create Outcome Attributions 
-        /// 
+        /// Deprecated. Create Outcome Attributions 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>Task of OutcomeAttributionAsyncResponse</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OutcomeAttributionAsyncResponse> PostJourneyOutcomesAttributionsJobsAsync (OutcomeAttributionListing body = null)
         {
              ApiResponse<OutcomeAttributionAsyncResponse> localVarResponse = await PostJourneyOutcomesAttributionsJobsAsyncWithHttpInfo(body);
@@ -21968,14 +21968,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create Outcome Attributions 
-        /// 
+        /// Deprecated. Create Outcome Attributions 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">outcome attribution request (optional)</param>
         /// <returns>Task of ApiResponse (OutcomeAttributionAsyncResponse)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OutcomeAttributionAsyncResponse>> PostJourneyOutcomesAttributionsJobsAsyncWithHttpInfo (OutcomeAttributionListing body = null)
         { 
 
@@ -22059,13 +22059,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create an outcome predictor. 
-        /// 
+        /// Deprecated. Create an outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>OutcomePredictor</returns>
-        
+        [Obsolete]
         public OutcomePredictor PostJourneyOutcomesPredictors (OutcomePredictorRequest body = null)
         {
              ApiResponse<OutcomePredictor> localVarResponse = PostJourneyOutcomesPredictorsWithHttpInfo(body);
@@ -22073,13 +22073,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create an outcome predictor. 
-        /// 
+        /// Deprecated. Create an outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>ApiResponse of OutcomePredictor</returns>
-        
+        [Obsolete]
         public ApiResponse< OutcomePredictor > PostJourneyOutcomesPredictorsWithHttpInfo (OutcomePredictorRequest body = null)
         { 
 
@@ -22162,13 +22162,13 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Create an outcome predictor. 
-        /// 
+        /// Deprecated. Create an outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of OutcomePredictor</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<OutcomePredictor> PostJourneyOutcomesPredictorsAsync (OutcomePredictorRequest body = null)
         {
              ApiResponse<OutcomePredictor> localVarResponse = await PostJourneyOutcomesPredictorsAsyncWithHttpInfo(body);
@@ -22177,13 +22177,13 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Create an outcome predictor. 
-        /// 
+        /// Deprecated. Create an outcome predictor. 
+        /// Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body"> (optional)</param>
         /// <returns>Task of ApiResponse (OutcomePredictor)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<OutcomePredictor>> PostJourneyOutcomesPredictorsAsyncWithHttpInfo (OutcomePredictorRequest body = null)
         { 
 

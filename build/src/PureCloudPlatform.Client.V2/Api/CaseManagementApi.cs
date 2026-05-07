@@ -958,6 +958,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<CaseplanCreateResponse> PostCasemanagementCaseplansWithHttpInfo (CaseplanCreate body);
 
         /// <summary>
+        /// Query for caseplans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CaseplanQueryRequest</param>
+        /// <returns>CaseplanQueryEntityListing</returns>
+        
+        CaseplanQueryEntityListing PostCasemanagementCaseplansQuery (CaseplanQueryRequest body);
+
+        /// <summary>
+        /// Query for caseplans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CaseplanQueryRequest</param>
+        /// <returns>ApiResponse of CaseplanQueryEntityListing</returns>
+        
+        ApiResponse<CaseplanQueryEntityListing> PostCasemanagementCaseplansQueryWithHttpInfo (CaseplanQueryRequest body);
+
+        /// <summary>
         /// Create a Case.
         /// </summary>
         /// <remarks>
@@ -1982,6 +2008,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (CaseplanCreateResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<CaseplanCreateResponse>> PostCasemanagementCaseplansAsyncWithHttpInfo (CaseplanCreate body);
+
+        /// <summary>
+        /// Query for caseplans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CaseplanQueryRequest</param>
+        /// <returns>Task of CaseplanQueryEntityListing</returns>
+        
+        System.Threading.Tasks.Task<CaseplanQueryEntityListing> PostCasemanagementCaseplansQueryAsync (CaseplanQueryRequest body);
+
+        /// <summary>
+        /// Query for caseplans
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CaseplanQueryRequest</param>
+        /// <returns>Task of ApiResponse (CaseplanQueryEntityListing)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<CaseplanQueryEntityListing>> PostCasemanagementCaseplansQueryAsyncWithHttpInfo (CaseplanQueryRequest body);
 
         /// <summary>
         /// Create a Case.
@@ -9422,6 +9474,225 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<CaseplanCreateResponse>(localVarStatusCode,
                 localVarHeaders,
                 (CaseplanCreateResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseplanCreateResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Query for caseplans 
+        /// 
+        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CaseplanQueryRequest</param>
+        /// <returns>CaseplanQueryEntityListing</returns>
+        
+        public CaseplanQueryEntityListing PostCasemanagementCaseplansQuery (CaseplanQueryRequest body)
+        {
+             ApiResponse<CaseplanQueryEntityListing> localVarResponse = PostCasemanagementCaseplansQueryWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Query for caseplans 
+        /// 
+        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CaseplanQueryRequest</param>
+        /// <returns>ApiResponse of CaseplanQueryEntityListing</returns>
+        
+        public ApiResponse< CaseplanQueryEntityListing > PostCasemanagementCaseplansQueryWithHttpInfo (CaseplanQueryRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseplansQuery");
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplansQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCaseplansQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplansQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseplanQueryEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (CaseplanQueryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseplanQueryEntityListing)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Query for caseplans 
+        /// 
+        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CaseplanQueryRequest</param>
+        /// <returns>Task of CaseplanQueryEntityListing</returns>
+        
+        public async System.Threading.Tasks.Task<CaseplanQueryEntityListing> PostCasemanagementCaseplansQueryAsync (CaseplanQueryRequest body)
+        {
+             ApiResponse<CaseplanQueryEntityListing> localVarResponse = await PostCasemanagementCaseplansQueryAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Query for caseplans 
+        /// 
+        /// PostCasemanagementCaseplansQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">CaseplanQueryRequest</param>
+        /// <returns>Task of ApiResponse (CaseplanQueryEntityListing)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<CaseplanQueryEntityListing>> PostCasemanagementCaseplansQueryAsyncWithHttpInfo (CaseplanQueryRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling CaseManagementApi->PostCasemanagementCaseplansQuery");
+            
+
+            var localVarPath = "/api/v2/casemanagement/caseplans/query";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplansQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostCasemanagementCaseplansQuery: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostCasemanagementCaseplansQuery: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<CaseplanQueryEntityListing>(localVarStatusCode,
+                localVarHeaders,
+                (CaseplanQueryEntityListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CaseplanQueryEntityListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

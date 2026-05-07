@@ -63,9 +63,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The method by which this forecast was created</value>
         [DataMember(Name="creationMethod", EmitDefaultValue=false)]
         public CreationMethodEnum? CreationMethod { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuShortTermForecast" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected BuShortTermForecast() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuShortTermForecast" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="WeekDate">The start week date of this forecast in yyyy-MM-dd.  Must fall on the start day of week for the associated business unit. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="WeekCount">The number of weeks this forecast covers.</param>
         /// <param name="CreationMethod">The method by which this forecast was created.</param>
@@ -79,8 +86,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="TimeZone">The time zone for this forecast.</param>
         /// <param name="PlanningGroupsVersion">The version of the planning groups that was used for this forecast.</param>
         /// <param name="PlanningGroups">A snapshot of the planning groups used for this forecast as of the version number indicated.</param>
-        public BuShortTermForecast(String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null, DateTime? ReferenceStartDate = null, List<ForecastSourceDayPointer> SourceDays = null, List<BuForecastModificationResponse> Modifications = null, BuForecastGenerationResult GenerationResults = null, string TimeZone = null, int? PlanningGroupsVersion = null, ForecastPlanningGroupsResponse PlanningGroups = null)
+        public BuShortTermForecast(string Id = null, String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null, DateTime? ReferenceStartDate = null, List<ForecastSourceDayPointer> SourceDays = null, List<BuForecastModificationResponse> Modifications = null, BuForecastGenerationResult GenerationResults = null, string TimeZone = null, int? PlanningGroupsVersion = null, ForecastPlanningGroupsResponse PlanningGroups = null)
         {
+            this.Id = Id;
             this.WeekDate = WeekDate;
             this.WeekCount = WeekCount;
             this.CreationMethod = CreationMethod;
@@ -104,7 +112,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

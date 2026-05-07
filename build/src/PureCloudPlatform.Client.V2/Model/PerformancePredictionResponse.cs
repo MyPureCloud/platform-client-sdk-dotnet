@@ -66,13 +66,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PerformancePredictionResponse" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="WeekDate">The weekDate of the short term forecast in yyyy-MM-dd format. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="ScheduleId">The ID of the schedule this performance prediction is associated with (required).</param>
         /// <param name="DownloadUrl">The url to GET the results of the performance prediction. This field is populated only if query state is &#39;Complete&#39;.</param>
         /// <param name="DownloadResult">Result will always come via downloadUrls; however the schema is included for documentation.</param>
         /// <param name="State">The state of the performance prediction (required).</param>
-        public PerformancePredictionResponse(String WeekDate = null, string ScheduleId = null, string DownloadUrl = null, PerformancePredictionOutputs DownloadResult = null, StateEnum? State = null)
+        public PerformancePredictionResponse(string Id = null, String WeekDate = null, string ScheduleId = null, string DownloadUrl = null, PerformancePredictionOutputs DownloadResult = null, StateEnum? State = null)
         {
+            this.Id = Id;
             this.WeekDate = WeekDate;
             this.ScheduleId = ScheduleId;
             this.DownloadUrl = DownloadUrl;
@@ -88,7 +90,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

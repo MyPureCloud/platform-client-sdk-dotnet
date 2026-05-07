@@ -18,13 +18,21 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WorkPlanBidGroupResponse :  IEquatable<WorkPlanBidGroupResponse>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanBidGroupResponse" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected WorkPlanBidGroupResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WorkPlanBidGroupResponse" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="WorkPlanBidGroup">The work plan bid group.</param>
         /// <param name="Metadata">The meta data of the bid group.</param>
-        public WorkPlanBidGroupResponse(WorkPlanBidGroup WorkPlanBidGroup = null, WorkPlanBidMetadata Metadata = null)
+        public WorkPlanBidGroupResponse(string Id = null, WorkPlanBidGroup WorkPlanBidGroup = null, WorkPlanBidMetadata Metadata = null)
         {
+            this.Id = Id;
             this.WorkPlanBidGroup = WorkPlanBidGroup;
             this.Metadata = Metadata;
             
@@ -37,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

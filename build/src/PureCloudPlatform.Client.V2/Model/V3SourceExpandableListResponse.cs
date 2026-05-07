@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// V3SourceWithErrorResponse
+    /// V3SourceExpandableListResponse
     /// </summary>
     [DataContract]
-    public partial class V3SourceWithErrorResponse :  IEquatable<V3SourceWithErrorResponse>
+    public partial class V3SourceExpandableListResponse :  IEquatable<V3SourceExpandableListResponse>
     {
         /// <summary>
         /// The type of the source.
@@ -124,7 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="V3SourceWithErrorResponse" /> class.
+        /// Initializes a new instance of the <see cref="V3SourceExpandableListResponse" /> class.
         /// </summary>
         /// <param name="Name">The name of the source..</param>
         /// <param name="ConnectionId">The connectionId of the source..</param>
@@ -136,8 +136,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateCreated">Source creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="DateModified">Source last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="LastSync">The last synchronization of the source..</param>
+        /// <param name="Connection">The connection associated with the source. Needs to be expanded..</param>
         /// <param name="Error">Optional error details of an errored source..</param>
-        public V3SourceWithErrorResponse(string Name = null, string ConnectionId = null, TypeEnum? Type = null, TriggerTypeEnum? TriggerType = null, StatusEnum? Status = null, UserReference CreatedBy = null, UserReference ModifiedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, V3SourceLastSynchronization LastSync = null, ErrorBody Error = null)
+        public V3SourceExpandableListResponse(string Name = null, string ConnectionId = null, TypeEnum? Type = null, TriggerTypeEnum? TriggerType = null, StatusEnum? Status = null, UserReference CreatedBy = null, UserReference ModifiedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, V3SourceLastSynchronization LastSync = null, ConnectionResponse Connection = null, ErrorBody Error = null)
         {
             this.Name = Name;
             this.ConnectionId = ConnectionId;
@@ -149,6 +150,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateCreated = DateCreated;
             this.DateModified = DateModified;
             this.LastSync = LastSync;
+            this.Connection = Connection;
             this.Error = Error;
             
         }
@@ -234,6 +236,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The connection associated with the source. Needs to be expanded.
+        /// </summary>
+        /// <value>The connection associated with the source. Needs to be expanded.</value>
+        [DataMember(Name="connection", EmitDefaultValue=false)]
+        public ConnectionResponse Connection { get; set; }
+
+
+
+        /// <summary>
         /// Optional error details of an errored source.
         /// </summary>
         /// <value>Optional error details of an errored source.</value>
@@ -257,7 +268,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class V3SourceWithErrorResponse {\n");
+            sb.Append("class V3SourceExpandableListResponse {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -270,6 +281,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  LastSync: ").Append(LastSync).Append("\n");
+            sb.Append("  Connection: ").Append(Connection).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -297,15 +309,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as V3SourceWithErrorResponse);
+            return this.Equals(obj as V3SourceExpandableListResponse);
         }
 
         /// <summary>
-        /// Returns true if V3SourceWithErrorResponse instances are equal
+        /// Returns true if V3SourceExpandableListResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of V3SourceWithErrorResponse to be compared</param>
+        /// <param name="other">Instance of V3SourceExpandableListResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(V3SourceWithErrorResponse other)
+        public bool Equals(V3SourceExpandableListResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -368,6 +380,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.LastSync.Equals(other.LastSync)
                 ) &&
                 (
+                    this.Connection == other.Connection ||
+                    this.Connection != null &&
+                    this.Connection.Equals(other.Connection)
+                ) &&
+                (
                     this.Error == other.Error ||
                     this.Error != null &&
                     this.Error.Equals(other.Error)
@@ -422,6 +439,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.LastSync != null)
                     hash = hash * 59 + this.LastSync.GetHashCode();
+
+                if (this.Connection != null)
+                    hash = hash * 59 + this.Connection.GetHashCode();
 
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();

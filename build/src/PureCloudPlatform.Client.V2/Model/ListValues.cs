@@ -13,29 +13,19 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// V3SourceWithErrorListing
+    /// ListValues
     /// </summary>
     [DataContract]
-    public partial class V3SourceWithErrorListing :  IEquatable<V3SourceWithErrorListing>
+    public partial class ListValues :  IEquatable<ListValues>
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="V3SourceWithErrorListing" /> class.
+        /// Initializes a new instance of the <see cref="ListValues" /> class.
         /// </summary>
-        /// <param name="Entities">Entities.</param>
-        public V3SourceWithErrorListing(List<V3SourceWithErrorResponse> Entities = null)
+        public ListValues()
         {
-            this.Entities = Entities;
             
         }
         
-
-
-        /// <summary>
-        /// Gets or Sets Entities
-        /// </summary>
-        [DataMember(Name="entities", EmitDefaultValue=false)]
-        public List<V3SourceWithErrorResponse> Entities { get; set; }
-
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -44,9 +34,8 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class V3SourceWithErrorListing {\n");
+            sb.Append("class ListValues {\n");
 
-            sb.Append("  Entities: ").Append(Entities).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -72,26 +61,21 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as V3SourceWithErrorListing);
+            return this.Equals(obj as ListValues);
         }
 
         /// <summary>
-        /// Returns true if V3SourceWithErrorListing instances are equal
+        /// Returns true if ListValues instances are equal
         /// </summary>
-        /// <param name="other">Instance of V3SourceWithErrorListing to be compared</param>
+        /// <param name="other">Instance of ListValues to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(V3SourceWithErrorListing other)
+        public bool Equals(ListValues other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
                 return false;
 
-            return true &&
-                (
-                    this.Entities == other.Entities ||
-                    this.Entities != null &&
-                    this.Entities.SequenceEqual(other.Entities)
-                );
+            return true && false;
         }
 
         /// <summary>
@@ -105,9 +89,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Entities != null)
-                    hash = hash * 59 + this.Entities.GetHashCode();
-
                 return hash;
             }
         }

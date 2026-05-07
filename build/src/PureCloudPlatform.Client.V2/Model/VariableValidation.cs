@@ -21,21 +21,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="VariableValidation" /> class.
         /// </summary>
-        /// <param name="AdditionalProperties">AdditionalProperties.</param>
-        public VariableValidation(Dictionary<string, Object> AdditionalProperties = null)
+        public VariableValidation()
         {
-            this.AdditionalProperties = AdditionalProperties;
             
         }
         
-
-
-        /// <summary>
-        /// Gets or Sets AdditionalProperties
-        /// </summary>
-        [DataMember(Name="additionalProperties", EmitDefaultValue=false)]
-        public Dictionary<string, Object> AdditionalProperties { get; set; }
-
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -46,7 +36,6 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class VariableValidation {\n");
 
-            sb.Append("  AdditionalProperties: ").Append(AdditionalProperties).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -86,12 +75,7 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true &&
-                (
-                    this.AdditionalProperties == other.AdditionalProperties ||
-                    this.AdditionalProperties != null &&
-                    this.AdditionalProperties.SequenceEqual(other.AdditionalProperties)
-                );
+            return true && false;
         }
 
         /// <summary>
@@ -105,9 +89,6 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.AdditionalProperties != null)
-                    hash = hash * 59 + this.AdditionalProperties.GetHashCode();
-
                 return hash;
             }
         }

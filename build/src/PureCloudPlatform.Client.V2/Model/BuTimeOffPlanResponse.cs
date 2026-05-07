@@ -78,6 +78,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuTimeOffPlanResponse" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">The name of this time-off plan (required).</param>
         /// <param name="ActivityCodeIds">The IDs of activity codes associated with this time-off plan (required).</param>
         /// <param name="TimeOffLimits">The IDs of time-off limits associated with this time-off plan.</param>
@@ -91,8 +92,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BusinessUnitAssociation">Business unit association, if the time-off plan belongs to a business unit. managementUnitAssociation must not be set if this is populated.</param>
         /// <param name="ManagementUnitAssociation">Management Unit association, if the time-off plan belongs to a management unit. businessUnitAssociation must not be set if this is populated.</param>
         /// <param name="Metadata">Version metadata for the time-off plan (required).</param>
-        public BuTimeOffPlanResponse(string Name = null, List<string> ActivityCodeIds = null, List<BuTimeOffLimitReference> TimeOffLimits = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, bool? AutoPublishApprovedTimeOffRequests = null, ActivityCodesReference RestrictedActivityCodes = null, HrisTimeOffType HrisTimeOffType = null, bool? Enabled = null, bool? CountAgainstTimeOffLimits = null, TimeOffPlanBusinessUnitAssociation BusinessUnitAssociation = null, TimeOffPlanManagementUnitAssociation ManagementUnitAssociation = null, WfmVersionedEntityMetadata Metadata = null)
+        public BuTimeOffPlanResponse(string Id = null, string Name = null, List<string> ActivityCodeIds = null, List<BuTimeOffLimitReference> TimeOffLimits = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, bool? AutoPublishApprovedTimeOffRequests = null, ActivityCodesReference RestrictedActivityCodes = null, HrisTimeOffType HrisTimeOffType = null, bool? Enabled = null, bool? CountAgainstTimeOffLimits = null, TimeOffPlanBusinessUnitAssociation BusinessUnitAssociation = null, TimeOffPlanManagementUnitAssociation ManagementUnitAssociation = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.ActivityCodeIds = ActivityCodeIds;
             this.TimeOffLimits = TimeOffLimits;
@@ -116,7 +118,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

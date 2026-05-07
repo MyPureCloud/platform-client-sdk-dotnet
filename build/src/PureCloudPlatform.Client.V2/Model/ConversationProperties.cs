@@ -30,7 +30,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IsVoicemail">Indicates filtering for Voice mail.</param>
         /// <param name="IsFlagged">Indicates filtering for flagged.</param>
         /// <param name="IsMonitored">Indicates filtering for monitored.</param>
-        /// <param name="IsScreenMonitored">Indicates filtering for screenMonitored.</param>
+        /// <param name="IsScreenMonitored">Deprecated: Use screenMonitored.</param>
         /// <param name="FilterWrapUpNotes">Indicates filtering for WrapUpNotes.</param>
         /// <param name="MatchAll">Indicates comparison operation, TRUE indicates filters will use AND logic, FALSE indicates OR logic.</param>
         public ConversationProperties(bool? IsWaiting = null, bool? IsActive = null, bool? IsAcd = null, bool? IsPreferred = null, bool? IsScreenshare = null, bool? IsCobrowse = null, bool? IsVoicemail = null, bool? IsFlagged = null, bool? IsMonitored = null, bool? IsScreenMonitored = null, bool? FilterWrapUpNotes = null, bool? MatchAll = null)
@@ -134,9 +134,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Indicates filtering for screenMonitored
+        /// Deprecated: Use screenMonitored
         /// </summary>
-        /// <value>Indicates filtering for screenMonitored</value>
+        /// <value>Deprecated: Use screenMonitored</value>
         [DataMember(Name="isScreenMonitored", EmitDefaultValue=false)]
         public bool? IsScreenMonitored { get; set; }
 

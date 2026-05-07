@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Id** | **string** | The globally unique identifier for the object. | |
 | **User** | [**UserReference**](UserReference) | The user associated with this data | [optional] |
 | **WorkPlan** | [**WorkPlanReference**](WorkPlanReference) | The work plan associated with this agent, if applicable | [optional] |
 | **WorkPlanRotation** | [**WorkPlanRotationReference**](WorkPlanRotationReference) | The work plan rotation associated with this agent, if applicable | [optional] |
@@ -21,4 +21,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

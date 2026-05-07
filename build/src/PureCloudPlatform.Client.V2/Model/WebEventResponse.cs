@@ -43,8 +43,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Attributes">User-defined attributes associated with a particular event. These attributes provide additional context about the event. For example, items_in_cart or subscription_level. (required).</param>
         /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events, (e.g. email, givenName, cellPhone). Traits are used to collect information for identity resolution. For example, the same person might be using an application on different devices which might create two sessions with different customerIds. Additional information can be provided as traits to help link those two sessions and customers to a single external contact through common identifiers that were submitted via a form fill, message, or other input in both sessions. (required).</param>
         /// <param name="Authenticated">Indicates whether the event was produced during an authenticated session. (required).</param>
+        /// <param name="ExternalId">An external identifier for the customer..</param>
         /// <param name="CreatedDate">UTC timestamp indicating when the event actually took place, events older than an hour will be rejected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        public WebEventResponse(string CustomerId = null, string EventName = null, string CustomerIdType = null, ResponsePage Page = null, string UserAgentString = null, WebEventBrowser Browser = null, WebEventDevice Device = null, string SearchQuery = null, string IpOrganization = null, JourneyGeolocation Geolocation = null, JourneyCampaign MktCampaign = null, WebEventResponseSession Session = null, Referrer Referrer = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, bool? Authenticated = null, DateTime? CreatedDate = null)
+        public WebEventResponse(string CustomerId = null, string EventName = null, string CustomerIdType = null, ResponsePage Page = null, string UserAgentString = null, WebEventBrowser Browser = null, WebEventDevice Device = null, string SearchQuery = null, string IpOrganization = null, JourneyGeolocation Geolocation = null, JourneyCampaign MktCampaign = null, WebEventResponseSession Session = null, Referrer Referrer = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, bool? Authenticated = null, string ExternalId = null, DateTime? CreatedDate = null)
         {
             this.CustomerId = CustomerId;
             this.EventName = EventName;
@@ -62,6 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Attributes = Attributes;
             this.Traits = Traits;
             this.Authenticated = Authenticated;
+            this.ExternalId = ExternalId;
             this.CreatedDate = CreatedDate;
             
         }
@@ -213,6 +215,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// An external identifier for the customer.
+        /// </summary>
+        /// <value>An external identifier for the customer.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+
+
+
+        /// <summary>
         /// UTC timestamp indicating when the event actually took place, events older than an hour will be rejected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>UTC timestamp indicating when the event actually took place, events older than an hour will be rejected. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -245,6 +256,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Traits: ").Append(Traits).Append("\n");
             sb.Append("  Authenticated: ").Append(Authenticated).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -367,6 +379,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Authenticated.Equals(other.Authenticated)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
@@ -431,6 +448,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Authenticated != null)
                     hash = hash * 59 + this.Authenticated.GetHashCode();
+
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
 
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();

@@ -35,7 +35,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Description">The description of the Caseplan. Maximum length of 512 characters..</param>
         /// <param name="DefaultCaseOwnerId">The ID of the default owner of a Case created from the Caseplan..</param>
         /// <param name="DivisionId">The ID of the division the Caseplan belongs to. Use &#39;*&#39; for divisionless caseplans. (required).</param>
-        /// <param name="DataSchemas">The schemas that define all data for cases from this Caseplan. The schema must be defined in the TaskManagement namespace. (required).</param>
+        /// <param name="DataSchemas">The schemas that define all data for cases from this Caseplan. The schema must be defined in the TaskManagement namespace. Omit or leave null to create a draft Caseplan without a schema; assign a schema before publish..</param>
         /// <param name="IntakeSettings">The intake format when collecting data for a case from this caseplan. There can be a maximum of 10 IntakeSettings defined for a Caseplan..</param>
         public CaseplanCreate(string Name = null, int? DefaultDueDurationInSeconds = null, int? DefaultTtlSeconds = null, string ReferencePrefix = null, string CustomerIntentId = null, string Description = null, string DefaultCaseOwnerId = null, string DivisionId = null, List<CaseplanDataSchema> DataSchemas = null, List<IntakeSetting> IntakeSettings = null)
         {
@@ -127,9 +127,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The schemas that define all data for cases from this Caseplan. The schema must be defined in the TaskManagement namespace.
+        /// The schemas that define all data for cases from this Caseplan. The schema must be defined in the TaskManagement namespace. Omit or leave null to create a draft Caseplan without a schema; assign a schema before publish.
         /// </summary>
-        /// <value>The schemas that define all data for cases from this Caseplan. The schema must be defined in the TaskManagement namespace.</value>
+        /// <value>The schemas that define all data for cases from this Caseplan. The schema must be defined in the TaskManagement namespace. Omit or leave null to create a draft Caseplan without a schema; assign a schema before publish.</value>
         [DataMember(Name="dataSchemas", EmitDefaultValue=false)]
         public List<CaseplanDataSchema> DataSchemas { get; set; }
 

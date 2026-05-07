@@ -27,9 +27,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityPlanStructureWithOccurrenceSessionsUsersReference" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Occurrences">The occurrences to delete from this activity plan (required).</param>
-        public ActivityPlanStructureWithOccurrenceSessionsUsersReference(List<ActivityPlanOccurrenceSessionsUsersStructureReference> Occurrences = null)
+        public ActivityPlanStructureWithOccurrenceSessionsUsersReference(string Id = null, List<ActivityPlanOccurrenceSessionsUsersStructureReference> Occurrences = null)
         {
+            this.Id = Id;
             this.Occurrences = Occurrences;
             
         }
@@ -41,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

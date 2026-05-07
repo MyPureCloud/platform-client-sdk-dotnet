@@ -14,7 +14,7 @@
 | **ExternalId** | **string** | Unique identifier in the external system where the events for the session originate from. | [optional] |
 | **ExternalUrl** | **string** | A URL that identifies an external system-of-record resource that may have more detailed information on the session. | [optional] |
 | **ShortId** | **string** | Shortened numeric identifier of 4-6 digits. | [optional] |
-| **OutcomeAchievements** | [**List&lt;OutcomeAchievement&gt;**](OutcomeAchievement) | List of the outcome achievements by the customer in this session. | [optional] |
+| **OutcomeAchievements** | [**List&lt;OutcomeAchievement&gt;**](OutcomeAchievement) | Deprecated. List of the outcome achievements by the customer in this session. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/ | [optional] |
 | **SegmentAssignments** | [**List&lt;SessionSegmentAssignment&gt;**](SessionSegmentAssignment) | List of the segment assignments to the customer in this session. | [optional] |
 | **Attributes** | [**Dictionary&lt;string, CustomEventAttribute&gt;**](CustomEventAttribute) | Attributes projected from the session&#39;s event stream. | [optional] |
 | **AttributeLists** | [**Dictionary&lt;string, CustomEventAttributeList&gt;**](CustomEventAttributeList) | List-type attributes projected from the session&#39;s event stream. | [optional] |
@@ -60,4 +60,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

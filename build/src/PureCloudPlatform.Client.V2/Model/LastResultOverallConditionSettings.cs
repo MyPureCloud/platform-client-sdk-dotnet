@@ -23,10 +23,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="EmailWrapupCodes">A list of wrapup code identifiers to match for Email..</param>
         /// <param name="SmsWrapupCodes">A list of wrapup code identifiers to match for SMS..</param>
-        public LastResultOverallConditionSettings(List<string> EmailWrapupCodes = null, List<string> SmsWrapupCodes = null)
+        /// <param name="WhatsAppWrapupCodes">A list of wrapup code identifiers to match for WhatsApp..</param>
+        public LastResultOverallConditionSettings(List<string> EmailWrapupCodes = null, List<string> SmsWrapupCodes = null, List<string> WhatsAppWrapupCodes = null)
         {
             this.EmailWrapupCodes = EmailWrapupCodes;
             this.SmsWrapupCodes = SmsWrapupCodes;
+            this.WhatsAppWrapupCodes = WhatsAppWrapupCodes;
             
         }
         
@@ -49,6 +51,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> SmsWrapupCodes { get; set; }
 
 
+
+        /// <summary>
+        /// A list of wrapup code identifiers to match for WhatsApp.
+        /// </summary>
+        /// <value>A list of wrapup code identifiers to match for WhatsApp.</value>
+        [DataMember(Name="whatsAppWrapupCodes", EmitDefaultValue=false)]
+        public List<string> WhatsAppWrapupCodes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -60,6 +71,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  EmailWrapupCodes: ").Append(EmailWrapupCodes).Append("\n");
             sb.Append("  SmsWrapupCodes: ").Append(SmsWrapupCodes).Append("\n");
+            sb.Append("  WhatsAppWrapupCodes: ").Append(WhatsAppWrapupCodes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -109,6 +121,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SmsWrapupCodes == other.SmsWrapupCodes ||
                     this.SmsWrapupCodes != null &&
                     this.SmsWrapupCodes.SequenceEqual(other.SmsWrapupCodes)
+                ) &&
+                (
+                    this.WhatsAppWrapupCodes == other.WhatsAppWrapupCodes ||
+                    this.WhatsAppWrapupCodes != null &&
+                    this.WhatsAppWrapupCodes.SequenceEqual(other.WhatsAppWrapupCodes)
                 );
         }
 
@@ -128,6 +145,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SmsWrapupCodes != null)
                     hash = hash * 59 + this.SmsWrapupCodes.GetHashCode();
+
+                if (this.WhatsAppWrapupCodes != null)
+                    hash = hash * 59 + this.WhatsAppWrapupCodes.GetHashCode();
 
                 return hash;
             }

@@ -29,7 +29,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="Description">Room&#39;s description.</param>
         /// <param name="Subject">Room&#39;s subject (required).</param>
-        /// <param name="UserIds">Users to add to the room.</param>
+        /// <param name="UserIds">Users to add to the room, limit of 25.</param>
         public CreateRoomRequest(string Description = null, string Subject = null, List<string> UserIds = null)
         {
             this.Description = Description;
@@ -59,9 +59,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Users to add to the room
+        /// Users to add to the room, limit of 25
         /// </summary>
-        /// <value>Users to add to the room</value>
+        /// <value>Users to add to the room, limit of 25</value>
         [DataMember(Name="userIds", EmitDefaultValue=false)]
         public List<string> UserIds { get; set; }
 

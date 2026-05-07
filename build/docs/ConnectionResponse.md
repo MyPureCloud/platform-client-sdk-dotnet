@@ -17,8 +17,9 @@
 | **DateModified** | **DateTime?** | Date of the last modification made to the connection. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **Status** | **string** | Current status of the connection. | [optional] |
 | **Error** | [**ErrorBody**](ErrorBody) | Optional error message of the connection. | [optional] |
+| **DateExpiry** | **DateTime?** | Expiry date of the authentication credentials. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

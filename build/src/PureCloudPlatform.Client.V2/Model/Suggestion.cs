@@ -73,7 +73,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Suggestedknowledgeanswer for "SuggestedKnowledgeAnswer"
             /// </summary>
             [EnumMember(Value = "SuggestedKnowledgeAnswer")]
-            Suggestedknowledgeanswer
+            Suggestedknowledgeanswer,
+            
+            /// <summary>
+            /// Enum Thirdpartysuggestion for "ThirdPartySuggestion"
+            /// </summary>
+            [EnumMember(Value = "ThirdPartySuggestion")]
+            Thirdpartysuggestion
         }
         /// <summary>
         /// The trigger type of the suggestion.

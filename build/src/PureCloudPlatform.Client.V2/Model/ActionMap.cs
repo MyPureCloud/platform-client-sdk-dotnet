@@ -30,12 +30,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Version">The version of the action map..</param>
         /// <param name="IsActive">Whether the action map is active..</param>
         /// <param name="DisplayName">Display name of the action map. (required).</param>
-        /// <param name="TriggerWithSegments">Trigger action map if any segment in the list is assigned to a given customer. (required).</param>
+        /// <param name="TriggerWithSegments">Trigger action map if any segment in the list is assigned to a given customer..</param>
         /// <param name="TriggerWithEventConditions">List of event conditions that must be satisfied to trigger the action map..</param>
-        /// <param name="TriggerWithOutcomeProbabilityConditions">(deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map..</param>
-        /// <param name="TriggerWithOutcomePercentileConditions">(deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map..</param>
-        /// <param name="TriggerWithOutcomeQuantileConditions">Quantile conditions for outcomes that must be satisfied to trigger the action map..</param>
-        /// <param name="PageUrlConditions">URL conditions that a page must match for web actions to be displayable. (required).</param>
+        /// <param name="TriggerWithOutcomeProbabilityConditions">Deprecated. Probability conditions for outcomes that must be satisfied to trigger the action map..</param>
+        /// <param name="TriggerWithOutcomePercentileConditions">Deprecated. Percentile conditions for outcomes that must be satisfied to trigger the action map..</param>
+        /// <param name="TriggerWithOutcomeQuantileConditions">Deprecated. Quantile conditions for outcomes that must be satisfied to trigger the action map. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/.</param>
+        /// <param name="PageUrlConditions">URL conditions that a page must match for web actions to be displayable..</param>
         /// <param name="Activation">Type of activation..</param>
         /// <param name="Weight">Weight of the action map with higher number denoting higher weight..</param>
         /// <param name="Action">The action that will be executed if this action map is triggered..</param>
@@ -125,27 +125,27 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// (deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map.
+        /// Deprecated. Probability conditions for outcomes that must be satisfied to trigger the action map.
         /// </summary>
-        /// <value>(deprecated - use triggerWithOutcomeQuantileConditions instead) Probability conditions for outcomes that must be satisfied to trigger the action map.</value>
+        /// <value>Deprecated. Probability conditions for outcomes that must be satisfied to trigger the action map.</value>
         [DataMember(Name="triggerWithOutcomeProbabilityConditions", EmitDefaultValue=false)]
         public List<OutcomeProbabilityCondition> TriggerWithOutcomeProbabilityConditions { get; set; }
 
 
 
         /// <summary>
-        /// (deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map.
+        /// Deprecated. Percentile conditions for outcomes that must be satisfied to trigger the action map.
         /// </summary>
-        /// <value>(deprecated - use triggerWithOutcomeQuantileConditions instead) Percentile conditions for outcomes that must be satisfied to trigger the action map.</value>
+        /// <value>Deprecated. Percentile conditions for outcomes that must be satisfied to trigger the action map.</value>
         [DataMember(Name="triggerWithOutcomePercentileConditions", EmitDefaultValue=false)]
         public List<OutcomePercentileCondition> TriggerWithOutcomePercentileConditions { get; set; }
 
 
 
         /// <summary>
-        /// Quantile conditions for outcomes that must be satisfied to trigger the action map.
+        /// Deprecated. Quantile conditions for outcomes that must be satisfied to trigger the action map. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
-        /// <value>Quantile conditions for outcomes that must be satisfied to trigger the action map.</value>
+        /// <value>Deprecated. Quantile conditions for outcomes that must be satisfied to trigger the action map. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/</value>
         [DataMember(Name="triggerWithOutcomeQuantileConditions", EmitDefaultValue=false)]
         public List<OutcomeQuantileCondition> TriggerWithOutcomeQuantileConditions { get; set; }
 

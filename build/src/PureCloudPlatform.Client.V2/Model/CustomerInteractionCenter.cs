@@ -135,7 +135,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ProviderName">ProviderName.</param>
         /// <param name="DisplayOnLogin">DisplayOnLogin.</param>
         /// <param name="MetadataURL">MetadataURL.</param>
-        public CustomerInteractionCenter(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string SloURI = null, string SloBinding = null, string RelyingPartyIdentifier = null, string Certificate = null, List<string> Certificates = null, string LogoImageData = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, SsoBindingEnum? SsoBinding = null, bool? SignAuthnRequests = null, string ProviderName = null, bool? DisplayOnLogin = null, string MetadataURL = null)
+        /// <param name="ForceAuthn">ForceAuthn.</param>
+        public CustomerInteractionCenter(string Name = null, bool? Disabled = null, string IssuerURI = null, string SsoTargetURI = null, string SloURI = null, string SloBinding = null, string RelyingPartyIdentifier = null, string Certificate = null, List<string> Certificates = null, string LogoImageData = null, NameIdentifierFormatEnum? NameIdentifierFormat = null, SsoBindingEnum? SsoBinding = null, bool? SignAuthnRequests = null, string ProviderName = null, bool? DisplayOnLogin = null, string MetadataURL = null, bool? ForceAuthn = null)
         {
             this.Name = Name;
             this.Disabled = Disabled;
@@ -153,6 +154,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ProviderName = ProviderName;
             this.DisplayOnLogin = DisplayOnLogin;
             this.MetadataURL = MetadataURL;
+            this.ForceAuthn = ForceAuthn;
             
         }
         
@@ -284,6 +286,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets ForceAuthn
+        /// </summary>
+        [DataMember(Name="forceAuthn", EmitDefaultValue=false)]
+        public bool? ForceAuthn { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -317,6 +327,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ProviderName: ").Append(ProviderName).Append("\n");
             sb.Append("  DisplayOnLogin: ").Append(DisplayOnLogin).Append("\n");
             sb.Append("  MetadataURL: ").Append(MetadataURL).Append("\n");
+            sb.Append("  ForceAuthn: ").Append(ForceAuthn).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -444,6 +455,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.MetadataURL.Equals(other.MetadataURL)
                 ) &&
                 (
+                    this.ForceAuthn == other.ForceAuthn ||
+                    this.ForceAuthn != null &&
+                    this.ForceAuthn.Equals(other.ForceAuthn)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -511,6 +527,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.MetadataURL != null)
                     hash = hash * 59 + this.MetadataURL.GetHashCode();
+
+                if (this.ForceAuthn != null)
+                    hash = hash * 59 + this.ForceAuthn.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

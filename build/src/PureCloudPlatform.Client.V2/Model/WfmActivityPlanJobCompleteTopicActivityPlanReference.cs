@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WfmActivityPlanJobCompleteTopicActivityPlanReference" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        public WfmActivityPlanJobCompleteTopicActivityPlanReference(string Id = null)
+        /// <param name="Occurrences">Occurrences.</param>
+        public WfmActivityPlanJobCompleteTopicActivityPlanReference(string Id = null, List<WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference> Occurrences = null)
         {
             this.Id = Id;
+            this.Occurrences = Occurrences;
             
         }
         
@@ -37,6 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Occurrences
+        /// </summary>
+        [DataMember(Name="occurrences", EmitDefaultValue=false)]
+        public List<WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference> Occurrences { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WfmActivityPlanJobCompleteTopicActivityPlanReference {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Occurrences: ").Append(Occurrences).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Occurrences == other.Occurrences ||
+                    this.Occurrences != null &&
+                    this.Occurrences.SequenceEqual(other.Occurrences)
                 );
         }
 
@@ -107,6 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Occurrences != null)
+                    hash = hash * 59 + this.Occurrences.GetHashCode();
 
                 return hash;
             }

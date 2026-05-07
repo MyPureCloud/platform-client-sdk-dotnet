@@ -61,7 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Date for "Date"
             /// </summary>
             [EnumMember(Value = "Date")]
-            Date
+            Date,
+            
+            /// <summary>
+            /// Enum List for "List"
+            /// </summary>
+            [EnumMember(Value = "List")]
+            List
         }
         /// <summary>
         /// The scope that determines the variable's usage context within Guides runtime.
@@ -128,13 +134,17 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Scope">The scope that determines the variable&#39;s usage context within Guides runtime. (required).</param>
         /// <param name="Description">The description of the variable used by Guides runtime for input/output handling..</param>
         /// <param name="Validation">The validation configuration for the variable. Optional - if not present, no validation is applied..</param>
-        public Variable(string Name = null, TypeEnum? Type = null, ScopeEnum? Scope = null, string Description = null, VariableValidation Validation = null)
+        /// <param name="ListValues">The values configuration for List variables. Only applicable when type is &#39;List&#39;..</param>
+        /// <param name="ListVariables">The variables that the list result will be stored in. Only applicable when type is &#39;List&#39;..</param>
+        public Variable(string Name = null, TypeEnum? Type = null, ScopeEnum? Scope = null, string Description = null, Object Validation = null, Object ListValues = null, List<Variable> ListVariables = null)
         {
             this.Name = Name;
             this.Type = Type;
             this.Scope = Scope;
             this.Description = Description;
             this.Validation = Validation;
+            this.ListValues = ListValues;
+            this.ListVariables = ListVariables;
             
         }
         
@@ -167,7 +177,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The validation configuration for the variable. Optional - if not present, no validation is applied.</value>
         [DataMember(Name="validation", EmitDefaultValue=false)]
-        public VariableValidation Validation { get; set; }
+        public Object Validation { get; set; }
+
+
+
+        /// <summary>
+        /// The values configuration for List variables. Only applicable when type is &#39;List&#39;.
+        /// </summary>
+        /// <value>The values configuration for List variables. Only applicable when type is &#39;List&#39;.</value>
+        [DataMember(Name="listValues", EmitDefaultValue=false)]
+        public Object ListValues { get; set; }
+
+
+
+        /// <summary>
+        /// The variables that the list result will be stored in. Only applicable when type is &#39;List&#39;.
+        /// </summary>
+        /// <value>The variables that the list result will be stored in. Only applicable when type is &#39;List&#39;.</value>
+        [DataMember(Name="listVariables", EmitDefaultValue=false)]
+        public List<Variable> ListVariables { get; set; }
 
 
         /// <summary>
@@ -184,6 +212,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Scope: ").Append(Scope).Append("\n");
             sb.Append("  Description: ").Append(Description).Append("\n");
             sb.Append("  Validation: ").Append(Validation).Append("\n");
+            sb.Append("  ListValues: ").Append(ListValues).Append("\n");
+            sb.Append("  ListVariables: ").Append(ListVariables).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -248,6 +278,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Validation == other.Validation ||
                     this.Validation != null &&
                     this.Validation.Equals(other.Validation)
+                ) &&
+                (
+                    this.ListValues == other.ListValues ||
+                    this.ListValues != null &&
+                    this.ListValues.Equals(other.ListValues)
+                ) &&
+                (
+                    this.ListVariables == other.ListVariables ||
+                    this.ListVariables != null &&
+                    this.ListVariables.SequenceEqual(other.ListVariables)
                 );
         }
 
@@ -276,6 +316,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Validation != null)
                     hash = hash * 59 + this.Validation.GetHashCode();
+
+                if (this.ListValues != null)
+                    hash = hash * 59 + this.ListValues.GetHashCode();
+
+                if (this.ListVariables != null)
+                    hash = hash * 59 + this.ListVariables.GetHashCode();
 
                 return hash;
             }

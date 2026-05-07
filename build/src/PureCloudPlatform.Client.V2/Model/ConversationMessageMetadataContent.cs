@@ -160,6 +160,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Richlink,
             
             /// <summary>
+            /// Enum Notificationresponse for "NotificationResponse"
+            /// </summary>
+            [EnumMember(Value = "NotificationResponse")]
+            Notificationresponse,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]

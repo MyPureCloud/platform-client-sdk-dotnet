@@ -1935,7 +1935,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query for worktypes
         /// </summary>
         /// <remarks>
-        /// 
+        /// Optional request field 'expands' may include 'schema' to populate the name on each worktype's schema reference.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
@@ -1947,7 +1947,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query for worktypes
         /// </summary>
         /// <remarks>
-        /// 
+        /// Optional request field 'expands' may include 'schema' to populate the name on each worktype's schema reference.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
@@ -3905,7 +3905,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query for worktypes
         /// </summary>
         /// <remarks>
-        /// 
+        /// Optional request field 'expands' may include 'schema' to populate the name on each worktype's schema reference.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
@@ -3917,7 +3917,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// Query for worktypes
         /// </summary>
         /// <remarks>
-        /// 
+        /// Optional request field 'expands' may include 'schema' to populate the name on each worktype's schema reference.
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
@@ -20079,7 +20079,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for worktypes 
-        /// 
+        /// Optional request field 'expands' may include 'schema' to populate the name on each worktype's schema reference.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
@@ -20093,7 +20093,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for worktypes 
-        /// 
+        /// Optional request field 'expands' may include 'schema' to populate the name on each worktype's schema reference.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
@@ -20185,7 +20185,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for worktypes 
-        /// 
+        /// Optional request field 'expands' may include 'schema' to populate the name on each worktype's schema reference.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>
@@ -20200,7 +20200,7 @@ namespace PureCloudPlatform.Client.V2.Api
 
         /// <summary>
         /// Query for worktypes 
-        /// 
+        /// Optional request field 'expands' may include 'schema' to populate the name on each worktype's schema reference.
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="body">QueryPostRequest</param>

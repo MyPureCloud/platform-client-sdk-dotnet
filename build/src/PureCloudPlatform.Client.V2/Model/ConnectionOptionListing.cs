@@ -22,9 +22,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ConnectionOptionListing" /> class.
         /// </summary>
         /// <param name="Entities">Entities.</param>
-        public ConnectionOptionListing(List<ConnectionOption> Entities = null)
+        /// <param name="NextUri">NextUri.</param>
+        /// <param name="SelfUri">SelfUri.</param>
+        /// <param name="PreviousUri">PreviousUri.</param>
+        public ConnectionOptionListing(List<ConnectionOption> Entities = null, string NextUri = null, string SelfUri = null, string PreviousUri = null)
         {
             this.Entities = Entities;
+            this.NextUri = NextUri;
+            this.SelfUri = SelfUri;
+            this.PreviousUri = PreviousUri;
             
         }
         
@@ -37,6 +43,30 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<ConnectionOption> Entities { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets NextUri
+        /// </summary>
+        [DataMember(Name="nextUri", EmitDefaultValue=false)]
+        public string NextUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets SelfUri
+        /// </summary>
+        [DataMember(Name="selfUri", EmitDefaultValue=false)]
+        public string SelfUri { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets PreviousUri
+        /// </summary>
+        [DataMember(Name="previousUri", EmitDefaultValue=false)]
+        public string PreviousUri { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,6 +77,9 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ConnectionOptionListing {\n");
 
             sb.Append("  Entities: ").Append(Entities).Append("\n");
+            sb.Append("  NextUri: ").Append(NextUri).Append("\n");
+            sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
+            sb.Append("  PreviousUri: ").Append(PreviousUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +124,21 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Entities == other.Entities ||
                     this.Entities != null &&
                     this.Entities.SequenceEqual(other.Entities)
+                ) &&
+                (
+                    this.NextUri == other.NextUri ||
+                    this.NextUri != null &&
+                    this.NextUri.Equals(other.NextUri)
+                ) &&
+                (
+                    this.SelfUri == other.SelfUri ||
+                    this.SelfUri != null &&
+                    this.SelfUri.Equals(other.SelfUri)
+                ) &&
+                (
+                    this.PreviousUri == other.PreviousUri ||
+                    this.PreviousUri != null &&
+                    this.PreviousUri.Equals(other.PreviousUri)
                 );
         }
 
@@ -107,6 +155,15 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Entities != null)
                     hash = hash * 59 + this.Entities.GetHashCode();
+
+                if (this.NextUri != null)
+                    hash = hash * 59 + this.NextUri.GetHashCode();
+
+                if (this.SelfUri != null)
+                    hash = hash * 59 + this.SelfUri.GetHashCode();
+
+                if (this.PreviousUri != null)
+                    hash = hash * 59 + this.PreviousUri.GetHashCode();
 
                 return hash;
             }

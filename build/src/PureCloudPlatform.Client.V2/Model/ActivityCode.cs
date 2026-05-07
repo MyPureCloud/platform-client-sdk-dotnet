@@ -96,6 +96,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityCode" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">The name of the activity code. Default activity codes will be created with an empty name.</param>
         /// <param name="IsActive">Whether this activity code is active or has been deleted.</param>
         /// <param name="IsDefault">Whether this is a default activity code.</param>
@@ -105,8 +106,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CountsAsWorkTime">Indicates whether or not the activity should be counted as contiguous work time for calculating daily constraints.</param>
         /// <param name="AgentTimeOffSelectable">Whether an agent can select this activity code when creating or editing a time off request. Null if the activity&#39;s category is not time off..</param>
         /// <param name="Metadata">Version metadata for the associated management unit&#39;s list of activity codes (required).</param>
-        public ActivityCode(string Name = null, bool? IsActive = null, bool? IsDefault = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, WfmVersionedEntityMetadata Metadata = null)
+        public ActivityCode(string Id = null, string Name = null, bool? IsActive = null, bool? IsDefault = null, CategoryEnum? Category = null, int? LengthInMinutes = null, bool? CountsAsPaidTime = null, bool? CountsAsWorkTime = null, bool? AgentTimeOffSelectable = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.IsActive = IsActive;
             this.IsDefault = IsDefault;
@@ -126,7 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

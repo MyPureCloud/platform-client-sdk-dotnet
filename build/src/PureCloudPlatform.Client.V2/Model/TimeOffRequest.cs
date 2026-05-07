@@ -159,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequest" /> class.
         /// </summary>
-        /// <param name="Id">The id of the time off request (required).</param>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="User">The user that the time off request belongs to (required).</param>
         /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day).</param>
         /// <param name="MarkedAsRead">Whether this request has been marked as read by the agent.</param>
@@ -207,9 +207,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The id of the time off request
+        /// The globally unique identifier for the object.
         /// </summary>
-        /// <value>The id of the time off request</value>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

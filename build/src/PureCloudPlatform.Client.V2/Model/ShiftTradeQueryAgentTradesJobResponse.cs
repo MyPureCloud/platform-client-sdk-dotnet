@@ -153,13 +153,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ShiftTradeQueryAgentTradesJobResponse" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Status">The status of the job (required).</param>
         /// <param name="Type">The type of the job (required).</param>
         /// <param name="DownloadUrl">The URL where completed results might be available for download in case the result body for that job type is too large.</param>
         /// <param name="Error">Any error information, only set if the status &#x3D;&#x3D; &#39;Error&#39;.</param>
         /// <param name="QueryAgentTradesResult">Results for QueryAgentTrades job type.</param>
-        public ShiftTradeQueryAgentTradesJobResponse(StatusEnum? Status = null, TypeEnum? Type = null, string DownloadUrl = null, ErrorBody Error = null, ShiftTradeListJobResponse QueryAgentTradesResult = null)
+        public ShiftTradeQueryAgentTradesJobResponse(string Id = null, StatusEnum? Status = null, TypeEnum? Type = null, string DownloadUrl = null, ErrorBody Error = null, ShiftTradeListJobResponse QueryAgentTradesResult = null)
         {
+            this.Id = Id;
             this.Status = Status;
             this.Type = Type;
             this.DownloadUrl = DownloadUrl;
@@ -175,7 +177,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

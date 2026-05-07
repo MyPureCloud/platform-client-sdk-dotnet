@@ -381,10 +381,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="connectionId">Connection ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of results per page. Minimum: 25, Maximum: 500. (optional, default to "200")</param>
         /// <param name="parentId">The id of the parent option whose children to be listed. (optional)</param>
         /// <returns>ConnectionOptionListing</returns>
         
-        ConnectionOptionListing GetKnowledgeConnectionOptions (string connectionId, string parentId = null);
+        ConnectionOptionListing GetKnowledgeConnectionOptions (string connectionId, string after = null, string pageSize = null, string parentId = null);
 
         /// <summary>
         /// Get connection options
@@ -394,10 +396,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="connectionId">Connection ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of results per page. Minimum: 25, Maximum: 500. (optional, default to "200")</param>
         /// <param name="parentId">The id of the parent option whose children to be listed. (optional)</param>
         /// <returns>ApiResponse of ConnectionOptionListing</returns>
         
-        ApiResponse<ConnectionOptionListing> GetKnowledgeConnectionOptionsWithHttpInfo (string connectionId, string parentId = null);
+        ApiResponse<ConnectionOptionListing> GetKnowledgeConnectionOptionsWithHttpInfo (string connectionId, string after = null, string pageSize = null, string parentId = null);
 
         /// <summary>
         /// Get connections
@@ -1532,9 +1536,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Source ID</param>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>V3SourceDetailedWithErrorResponse</returns>
+        /// <returns>V3SourceExpandableResponse</returns>
         
-        V3SourceDetailedWithErrorResponse GetKnowledgeSource (string sourceId, List<string> expand = null);
+        V3SourceExpandableResponse GetKnowledgeSource (string sourceId, List<string> expand = null);
 
         /// <summary>
         /// Get source
@@ -1545,9 +1549,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Source ID</param>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>ApiResponse of V3SourceDetailedWithErrorResponse</returns>
+        /// <returns>ApiResponse of V3SourceExpandableResponse</returns>
         
-        ApiResponse<V3SourceDetailedWithErrorResponse> GetKnowledgeSourceWithHttpInfo (string sourceId, List<string> expand = null);
+        ApiResponse<V3SourceExpandableResponse> GetKnowledgeSourceWithHttpInfo (string sourceId, List<string> expand = null);
 
         /// <summary>
         /// Get a specific synchronization of a source.
@@ -1613,9 +1617,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>V3SourceWithErrorListing</returns>
+        /// <returns>V3SourceExpandableListing</returns>
         
-        V3SourceWithErrorListing GetKnowledgeSources (List<string> expand = null);
+        V3SourceExpandableListing GetKnowledgeSources (List<string> expand = null);
 
         /// <summary>
         /// List sources
@@ -1625,9 +1629,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>ApiResponse of V3SourceWithErrorListing</returns>
+        /// <returns>ApiResponse of V3SourceExpandableListing</returns>
         
-        ApiResponse<V3SourceWithErrorListing> GetKnowledgeSourcesWithHttpInfo (List<string> expand = null);
+        ApiResponse<V3SourceExpandableListing> GetKnowledgeSourcesWithHttpInfo (List<string> expand = null);
 
         /// <summary>
         /// Get synchronizations of all sources of the organization.
@@ -3715,10 +3719,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="connectionId">Connection ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of results per page. Minimum: 25, Maximum: 500. (optional, default to "200")</param>
         /// <param name="parentId">The id of the parent option whose children to be listed. (optional)</param>
         /// <returns>Task of ConnectionOptionListing</returns>
         
-        System.Threading.Tasks.Task<ConnectionOptionListing> GetKnowledgeConnectionOptionsAsync (string connectionId, string parentId = null);
+        System.Threading.Tasks.Task<ConnectionOptionListing> GetKnowledgeConnectionOptionsAsync (string connectionId, string after = null, string pageSize = null, string parentId = null);
 
         /// <summary>
         /// Get connection options
@@ -3728,10 +3734,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="connectionId">Connection ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of results per page. Minimum: 25, Maximum: 500. (optional, default to "200")</param>
         /// <param name="parentId">The id of the parent option whose children to be listed. (optional)</param>
         /// <returns>Task of ApiResponse (ConnectionOptionListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ConnectionOptionListing>> GetKnowledgeConnectionOptionsAsyncWithHttpInfo (string connectionId, string parentId = null);
+        System.Threading.Tasks.Task<ApiResponse<ConnectionOptionListing>> GetKnowledgeConnectionOptionsAsyncWithHttpInfo (string connectionId, string after = null, string pageSize = null, string parentId = null);
 
         /// <summary>
         /// Get connections
@@ -4866,9 +4874,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Source ID</param>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>Task of V3SourceDetailedWithErrorResponse</returns>
+        /// <returns>Task of V3SourceExpandableResponse</returns>
         
-        System.Threading.Tasks.Task<V3SourceDetailedWithErrorResponse> GetKnowledgeSourceAsync (string sourceId, List<string> expand = null);
+        System.Threading.Tasks.Task<V3SourceExpandableResponse> GetKnowledgeSourceAsync (string sourceId, List<string> expand = null);
 
         /// <summary>
         /// Get source
@@ -4879,9 +4887,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Source ID</param>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>Task of ApiResponse (V3SourceDetailedWithErrorResponse)</returns>
+        /// <returns>Task of ApiResponse (V3SourceExpandableResponse)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<V3SourceDetailedWithErrorResponse>> GetKnowledgeSourceAsyncWithHttpInfo (string sourceId, List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<V3SourceExpandableResponse>> GetKnowledgeSourceAsyncWithHttpInfo (string sourceId, List<string> expand = null);
 
         /// <summary>
         /// Get a specific synchronization of a source.
@@ -4947,9 +4955,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>Task of V3SourceWithErrorListing</returns>
+        /// <returns>Task of V3SourceExpandableListing</returns>
         
-        System.Threading.Tasks.Task<V3SourceWithErrorListing> GetKnowledgeSourcesAsync (List<string> expand = null);
+        System.Threading.Tasks.Task<V3SourceExpandableListing> GetKnowledgeSourcesAsync (List<string> expand = null);
 
         /// <summary>
         /// List sources
@@ -4959,9 +4967,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>Task of ApiResponse (V3SourceWithErrorListing)</returns>
+        /// <returns>Task of ApiResponse (V3SourceExpandableListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<V3SourceWithErrorListing>> GetKnowledgeSourcesAsyncWithHttpInfo (List<string> expand = null);
+        System.Threading.Tasks.Task<ApiResponse<V3SourceExpandableListing>> GetKnowledgeSourcesAsyncWithHttpInfo (List<string> expand = null);
 
         /// <summary>
         /// Get synchronizations of all sources of the organization.
@@ -9765,12 +9773,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="connectionId">Connection ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of results per page. Minimum: 25, Maximum: 500. (optional, default to "200")</param>
         /// <param name="parentId">The id of the parent option whose children to be listed. (optional)</param>
         /// <returns>ConnectionOptionListing</returns>
         
-        public ConnectionOptionListing GetKnowledgeConnectionOptions (string connectionId, string parentId = null)
+        public ConnectionOptionListing GetKnowledgeConnectionOptions (string connectionId, string after = null, string pageSize = null, string parentId = null)
         {
-             ApiResponse<ConnectionOptionListing> localVarResponse = GetKnowledgeConnectionOptionsWithHttpInfo(connectionId, parentId);
+             ApiResponse<ConnectionOptionListing> localVarResponse = GetKnowledgeConnectionOptionsWithHttpInfo(connectionId, after, pageSize, parentId);
              return localVarResponse.Data;
         }
 
@@ -9780,10 +9790,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="connectionId">Connection ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of results per page. Minimum: 25, Maximum: 500. (optional, default to "200")</param>
         /// <param name="parentId">The id of the parent option whose children to be listed. (optional)</param>
         /// <returns>ApiResponse of ConnectionOptionListing</returns>
         
-        public ApiResponse< ConnectionOptionListing > GetKnowledgeConnectionOptionsWithHttpInfo (string connectionId, string parentId = null)
+        public ApiResponse< ConnectionOptionListing > GetKnowledgeConnectionOptionsWithHttpInfo (string connectionId, string after = null, string pageSize = null, string parentId = null)
         { 
             // verify the required parameter 'connectionId' is set
             if (connectionId == null)
@@ -9823,6 +9835,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (connectionId != null) localVarPathParams.Add("connectionId", this.Configuration.ApiClient.ParameterToString(connectionId));
 
             // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (parentId != null) localVarQueryParams.Add(new Tuple<string, string>("parentId", this.Configuration.ApiClient.ParameterToString(parentId)));
 
             // Header params
@@ -9869,12 +9883,14 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="connectionId">Connection ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of results per page. Minimum: 25, Maximum: 500. (optional, default to "200")</param>
         /// <param name="parentId">The id of the parent option whose children to be listed. (optional)</param>
         /// <returns>Task of ConnectionOptionListing</returns>
         
-        public async System.Threading.Tasks.Task<ConnectionOptionListing> GetKnowledgeConnectionOptionsAsync (string connectionId, string parentId = null)
+        public async System.Threading.Tasks.Task<ConnectionOptionListing> GetKnowledgeConnectionOptionsAsync (string connectionId, string after = null, string pageSize = null, string parentId = null)
         {
-             ApiResponse<ConnectionOptionListing> localVarResponse = await GetKnowledgeConnectionOptionsAsyncWithHttpInfo(connectionId, parentId);
+             ApiResponse<ConnectionOptionListing> localVarResponse = await GetKnowledgeConnectionOptionsAsyncWithHttpInfo(connectionId, after, pageSize, parentId);
              return localVarResponse.Data;
 
         }
@@ -9885,10 +9901,12 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="connectionId">Connection ID</param>
+        /// <param name="after">The cursor that points to the end of the set of entities that has been returned. (optional)</param>
+        /// <param name="pageSize">Number of results per page. Minimum: 25, Maximum: 500. (optional, default to "200")</param>
         /// <param name="parentId">The id of the parent option whose children to be listed. (optional)</param>
         /// <returns>Task of ApiResponse (ConnectionOptionListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ConnectionOptionListing>> GetKnowledgeConnectionOptionsAsyncWithHttpInfo (string connectionId, string parentId = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ConnectionOptionListing>> GetKnowledgeConnectionOptionsAsyncWithHttpInfo (string connectionId, string after = null, string pageSize = null, string parentId = null)
         { 
             // verify the required parameter 'connectionId' is set
             if (connectionId == null)
@@ -9929,6 +9947,8 @@ namespace PureCloudPlatform.Client.V2.Api
             if (connectionId != null) localVarPathParams.Add("connectionId", this.Configuration.ApiClient.ParameterToString(connectionId));
 
             // Query params
+            if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
+            if (pageSize != null) localVarQueryParams.Add(new Tuple<string, string>("pageSize", this.Configuration.ApiClient.ParameterToString(pageSize)));
             if (parentId != null) localVarQueryParams.Add(new Tuple<string, string>("parentId", this.Configuration.ApiClient.ParameterToString(parentId)));
 
             // Header params
@@ -18270,11 +18290,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Source ID</param>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>V3SourceDetailedWithErrorResponse</returns>
+        /// <returns>V3SourceExpandableResponse</returns>
         
-        public V3SourceDetailedWithErrorResponse GetKnowledgeSource (string sourceId, List<string> expand = null)
+        public V3SourceExpandableResponse GetKnowledgeSource (string sourceId, List<string> expand = null)
         {
-             ApiResponse<V3SourceDetailedWithErrorResponse> localVarResponse = GetKnowledgeSourceWithHttpInfo(sourceId, expand);
+             ApiResponse<V3SourceExpandableResponse> localVarResponse = GetKnowledgeSourceWithHttpInfo(sourceId, expand);
              return localVarResponse.Data;
         }
 
@@ -18285,9 +18305,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Source ID</param>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>ApiResponse of V3SourceDetailedWithErrorResponse</returns>
+        /// <returns>ApiResponse of V3SourceExpandableResponse</returns>
         
-        public ApiResponse< V3SourceDetailedWithErrorResponse > GetKnowledgeSourceWithHttpInfo (string sourceId, List<string> expand = null)
+        public ApiResponse< V3SourceExpandableResponse > GetKnowledgeSourceWithHttpInfo (string sourceId, List<string> expand = null)
         { 
             // verify the required parameter 'sourceId' is set
             if (sourceId == null)
@@ -18359,9 +18379,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<V3SourceDetailedWithErrorResponse>(localVarStatusCode,
+            return new ApiResponse<V3SourceExpandableResponse>(localVarStatusCode,
                 localVarHeaders,
-                (V3SourceDetailedWithErrorResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceDetailedWithErrorResponse)),
+                (V3SourceExpandableResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceExpandableResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -18374,11 +18394,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Source ID</param>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>Task of V3SourceDetailedWithErrorResponse</returns>
+        /// <returns>Task of V3SourceExpandableResponse</returns>
         
-        public async System.Threading.Tasks.Task<V3SourceDetailedWithErrorResponse> GetKnowledgeSourceAsync (string sourceId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<V3SourceExpandableResponse> GetKnowledgeSourceAsync (string sourceId, List<string> expand = null)
         {
-             ApiResponse<V3SourceDetailedWithErrorResponse> localVarResponse = await GetKnowledgeSourceAsyncWithHttpInfo(sourceId, expand);
+             ApiResponse<V3SourceExpandableResponse> localVarResponse = await GetKnowledgeSourceAsyncWithHttpInfo(sourceId, expand);
              return localVarResponse.Data;
 
         }
@@ -18390,9 +18410,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="sourceId">Source ID</param>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>Task of ApiResponse (V3SourceDetailedWithErrorResponse)</returns>
+        /// <returns>Task of ApiResponse (V3SourceExpandableResponse)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<V3SourceDetailedWithErrorResponse>> GetKnowledgeSourceAsyncWithHttpInfo (string sourceId, List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<V3SourceExpandableResponse>> GetKnowledgeSourceAsyncWithHttpInfo (string sourceId, List<string> expand = null)
         { 
             // verify the required parameter 'sourceId' is set
             if (sourceId == null)
@@ -18465,9 +18485,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSource: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<V3SourceDetailedWithErrorResponse>(localVarStatusCode,
+            return new ApiResponse<V3SourceExpandableResponse>(localVarStatusCode,
                 localVarHeaders,
-                (V3SourceDetailedWithErrorResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceDetailedWithErrorResponse)),
+                (V3SourceExpandableResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceExpandableResponse)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -18921,11 +18941,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>V3SourceWithErrorListing</returns>
+        /// <returns>V3SourceExpandableListing</returns>
         
-        public V3SourceWithErrorListing GetKnowledgeSources (List<string> expand = null)
+        public V3SourceExpandableListing GetKnowledgeSources (List<string> expand = null)
         {
-             ApiResponse<V3SourceWithErrorListing> localVarResponse = GetKnowledgeSourcesWithHttpInfo(expand);
+             ApiResponse<V3SourceExpandableListing> localVarResponse = GetKnowledgeSourcesWithHttpInfo(expand);
              return localVarResponse.Data;
         }
 
@@ -18935,9 +18955,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>ApiResponse of V3SourceWithErrorListing</returns>
+        /// <returns>ApiResponse of V3SourceExpandableListing</returns>
         
-        public ApiResponse< V3SourceWithErrorListing > GetKnowledgeSourcesWithHttpInfo (List<string> expand = null)
+        public ApiResponse< V3SourceExpandableListing > GetKnowledgeSourcesWithHttpInfo (List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/knowledge/sources";
@@ -19005,9 +19025,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSources: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<V3SourceWithErrorListing>(localVarStatusCode,
+            return new ApiResponse<V3SourceExpandableListing>(localVarStatusCode,
                 localVarHeaders,
-                (V3SourceWithErrorListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceWithErrorListing)),
+                (V3SourceExpandableListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceExpandableListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -19019,11 +19039,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>Task of V3SourceWithErrorListing</returns>
+        /// <returns>Task of V3SourceExpandableListing</returns>
         
-        public async System.Threading.Tasks.Task<V3SourceWithErrorListing> GetKnowledgeSourcesAsync (List<string> expand = null)
+        public async System.Threading.Tasks.Task<V3SourceExpandableListing> GetKnowledgeSourcesAsync (List<string> expand = null)
         {
-             ApiResponse<V3SourceWithErrorListing> localVarResponse = await GetKnowledgeSourcesAsyncWithHttpInfo(expand);
+             ApiResponse<V3SourceExpandableListing> localVarResponse = await GetKnowledgeSourcesAsyncWithHttpInfo(expand);
              return localVarResponse.Data;
 
         }
@@ -19034,9 +19054,9 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="expand">Optional fields to expand for the Source. (optional)</param>
-        /// <returns>Task of ApiResponse (V3SourceWithErrorListing)</returns>
+        /// <returns>Task of ApiResponse (V3SourceExpandableListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<V3SourceWithErrorListing>> GetKnowledgeSourcesAsyncWithHttpInfo (List<string> expand = null)
+        public async System.Threading.Tasks.Task<ApiResponse<V3SourceExpandableListing>> GetKnowledgeSourcesAsyncWithHttpInfo (List<string> expand = null)
         { 
 
             var localVarPath = "/api/v2/knowledge/sources";
@@ -19104,9 +19124,9 @@ namespace PureCloudPlatform.Client.V2.Api
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling GetKnowledgeSources: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
-            return new ApiResponse<V3SourceWithErrorListing>(localVarStatusCode,
+            return new ApiResponse<V3SourceExpandableListing>(localVarStatusCode,
                 localVarHeaders,
-                (V3SourceWithErrorListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceWithErrorListing)),
+                (V3SourceExpandableListing) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(V3SourceExpandableListing)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

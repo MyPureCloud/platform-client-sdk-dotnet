@@ -61,7 +61,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Date for "Date"
             /// </summary>
             [EnumMember(Value = "Date")]
-            Date
+            Date,
+            
+            /// <summary>
+            /// Enum List for "List"
+            /// </summary>
+            [EnumMember(Value = "List")]
+            List
         }
         /// <summary>
         /// The type of the parameter.

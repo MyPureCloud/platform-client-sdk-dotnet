@@ -913,7 +913,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum PredictiveRoutingThroughputView for "PREDICTIVE_ROUTING_THROUGHPUT_VIEW"
             /// </summary>
             [EnumMember(Value = "PREDICTIVE_ROUTING_THROUGHPUT_VIEW")]
-            PredictiveRoutingThroughputView
+            PredictiveRoutingThroughputView,
+            
+            /// <summary>
+            /// Enum QueueSkillExpressionPerformanceView for "QUEUE_SKILL_EXPRESSION_PERFORMANCE_VIEW"
+            /// </summary>
+            [EnumMember(Value = "QUEUE_SKILL_EXPRESSION_PERFORMANCE_VIEW")]
+            QueueSkillExpressionPerformanceView
         }
         /// <summary>
         /// The error message in case the export request failed

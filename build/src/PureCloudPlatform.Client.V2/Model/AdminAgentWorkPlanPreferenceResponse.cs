@@ -27,10 +27,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="AdminAgentWorkPlanPreferenceResponse" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="WorkPlans">The list of work plans that belong to this bid group (required).</param>
         /// <param name="AgentWorkPlanBidPreferences">The list of agents work plan bidding preferences (required).</param>
-        public AdminAgentWorkPlanPreferenceResponse(List<WorkPlanReference> WorkPlans = null, List<AdminAgentWorkPlanBiddingPreference> AgentWorkPlanBidPreferences = null)
+        public AdminAgentWorkPlanPreferenceResponse(string Id = null, List<WorkPlanReference> WorkPlans = null, List<AdminAgentWorkPlanBiddingPreference> AgentWorkPlanBidPreferences = null)
         {
+            this.Id = Id;
             this.WorkPlans = WorkPlans;
             this.AgentWorkPlanBidPreferences = AgentWorkPlanBidPreferences;
             
@@ -43,7 +45,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

@@ -563,6 +563,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Ncallbackattempts,
             
             /// <summary>
+            /// Enum Ncallbackoversla for "nCallbackOverSla"
+            /// </summary>
+            [EnumMember(Value = "nCallbackOverSla")]
+            Ncallbackoversla,
+            
+            /// <summary>
             /// Enum Ncallbackscheduled for "nCallbackScheduled"
             /// </summary>
             [EnumMember(Value = "nCallbackScheduled")]
@@ -711,6 +717,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "oServiceTarget")]
             Oservicetarget,
+            
+            /// <summary>
+            /// Enum Oskillexpressionapplications for "oSkillExpressionApplications"
+            /// </summary>
+            [EnumMember(Value = "oSkillExpressionApplications")]
+            Oskillexpressionapplications,
             
             /// <summary>
             /// Enum Tabandon for "tAbandon"
@@ -945,6 +957,12 @@ namespace PureCloudPlatform.Client.V2.Model
             /// </summary>
             [EnumMember(Value = "tTalkComplete")]
             Ttalkcomplete,
+            
+            /// <summary>
+            /// Enum Ttransmitting for "tTransmitting"
+            /// </summary>
+            [EnumMember(Value = "tTransmitting")]
+            Ttransmitting,
             
             /// <summary>
             /// Enum Tuserresponsetime for "tUserResponseTime"

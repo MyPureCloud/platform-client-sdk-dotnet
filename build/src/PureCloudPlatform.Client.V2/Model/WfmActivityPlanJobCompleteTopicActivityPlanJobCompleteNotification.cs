@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification
+    /// WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification
     /// </summary>
     [DataContract]
-    public partial class WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification :  IEquatable<WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification>
+    public partial class WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification :  IEquatable<WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification>
     {
         /// <summary>
         /// Gets or Sets Type
@@ -42,7 +42,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Deleteoccurrence for "DeleteOccurrence"
             /// </summary>
             [EnumMember(Value = "DeleteOccurrence")]
-            Deleteoccurrence
+            Deleteoccurrence,
+            
+            /// <summary>
+            /// Enum Deleteactivityplan for "DeleteActivityPlan"
+            /// </summary>
+            [EnumMember(Value = "DeleteActivityPlan")]
+            Deleteactivityplan,
+            
+            /// <summary>
+            /// Enum Deleteoccurrences for "DeleteOccurrences"
+            /// </summary>
+            [EnumMember(Value = "DeleteOccurrences")]
+            Deleteoccurrences,
+            
+            /// <summary>
+            /// Enum Deletesessions for "DeleteSessions"
+            /// </summary>
+            [EnumMember(Value = "DeleteSessions")]
+            Deletesessions,
+            
+            /// <summary>
+            /// Enum Deletesessionusers for "DeleteSessionUsers"
+            /// </summary>
+            [EnumMember(Value = "DeleteSessionUsers")]
+            Deletesessionusers
         }
         /// <summary>
         /// Gets or Sets Status
@@ -87,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification" /> class.
+        /// Initializes a new instance of the <see cref="WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Type">Type.</param>
@@ -95,7 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status.</param>
         /// <param name="Exceptions">Exceptions.</param>
         /// <param name="Error">Error.</param>
-        public WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification(string Id = null, TypeEnum? Type = null, WfmActivityPlanRunJobCompleteTopicActivityPlanReference ActivityPlan = null, StatusEnum? Status = null, List<WfmActivityPlanRunJobCompleteTopicActivityPlanJobException> Exceptions = null, WfmActivityPlanRunJobCompleteTopicErrorBody Error = null)
+        public WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification(string Id = null, TypeEnum? Type = null, WfmActivityPlanJobCompleteTopicActivityPlanReference ActivityPlan = null, StatusEnum? Status = null, List<WfmActivityPlanJobCompleteTopicActivityPlanJobException> Exceptions = null, WfmActivityPlanJobCompleteTopicErrorBody Error = null)
         {
             this.Id = Id;
             this.Type = Type;
@@ -122,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ActivityPlan
         /// </summary>
         [DataMember(Name="activityPlan", EmitDefaultValue=false)]
-        public WfmActivityPlanRunJobCompleteTopicActivityPlanReference ActivityPlan { get; set; }
+        public WfmActivityPlanJobCompleteTopicActivityPlanReference ActivityPlan { get; set; }
 
 
 
@@ -132,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Exceptions
         /// </summary>
         [DataMember(Name="exceptions", EmitDefaultValue=false)]
-        public List<WfmActivityPlanRunJobCompleteTopicActivityPlanJobException> Exceptions { get; set; }
+        public List<WfmActivityPlanJobCompleteTopicActivityPlanJobException> Exceptions { get; set; }
 
 
 
@@ -140,7 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Error
         /// </summary>
         [DataMember(Name="error", EmitDefaultValue=false)]
-        public WfmActivityPlanRunJobCompleteTopicErrorBody Error { get; set; }
+        public WfmActivityPlanJobCompleteTopicErrorBody Error { get; set; }
 
 
         /// <summary>
@@ -150,7 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification {\n");
+            sb.Append("class WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -183,15 +207,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification);
+            return this.Equals(obj as WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification);
         }
 
         /// <summary>
-        /// Returns true if WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification instances are equal
+        /// Returns true if WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification instances are equal
         /// </summary>
-        /// <param name="other">Instance of WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification to be compared</param>
+        /// <param name="other">Instance of WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification other)
+        public bool Equals(WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)

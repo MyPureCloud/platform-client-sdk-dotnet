@@ -160,6 +160,12 @@ namespace PureCloudPlatform.Client.V2.Model
             Richlink,
             
             /// <summary>
+            /// Enum Notificationresponse for "NotificationResponse"
+            /// </summary>
+            [EnumMember(Value = "NotificationResponse")]
+            Notificationresponse,
+            
+            /// <summary>
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
@@ -199,7 +205,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="PaymentResponse">Payment response content..</param>
         /// <param name="Push">Push content..</param>
         /// <param name="Form">Form content..</param>
-        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentNotificationTemplate Template = null, ConversationContentStory Story = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null, ConversationContentText Text = null, ConversationContentQuickReplyV2 QuickReplyV2 = null, List<ConversationContentReaction> Reactions = null, ConversationContentDatePicker DatePicker = null, ConversationContentInteractiveApplication InteractiveApplication = null, ConversationContentListPicker ListPicker = null, ConversationContentPaymentRequest PaymentRequest = null, ConversationContentPaymentResponse PaymentResponse = null, ConversationContentPush Push = null, ConversationContentForm Form = null)
+        /// <param name="NotificationResponse">Notification response content, e.g. an Apple Invitation acceptance..</param>
+        public ConversationMessageContent(ContentTypeEnum? ContentType = null, ConversationContentLocation Location = null, ConversationContentAttachment Attachment = null, ConversationContentQuickReply QuickReply = null, ConversationContentButtonResponse ButtonResponse = null, ConversationContentNotificationTemplate Template = null, ConversationContentStory Story = null, ConversationContentCard Card = null, ConversationContentCarousel Carousel = null, ConversationContentText Text = null, ConversationContentQuickReplyV2 QuickReplyV2 = null, List<ConversationContentReaction> Reactions = null, ConversationContentDatePicker DatePicker = null, ConversationContentInteractiveApplication InteractiveApplication = null, ConversationContentListPicker ListPicker = null, ConversationContentPaymentRequest PaymentRequest = null, ConversationContentPaymentResponse PaymentResponse = null, ConversationContentPush Push = null, ConversationContentForm Form = null, ConversationContentNotificationResponse NotificationResponse = null)
         {
             this.ContentType = ContentType;
             this.Location = Location;
@@ -220,6 +227,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.PaymentResponse = PaymentResponse;
             this.Push = Push;
             this.Form = Form;
+            this.NotificationResponse = NotificationResponse;
             
         }
         
@@ -388,6 +396,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public ConversationContentForm Form { get; set; }
 
 
+
+        /// <summary>
+        /// Notification response content, e.g. an Apple Invitation acceptance.
+        /// </summary>
+        /// <value>Notification response content, e.g. an Apple Invitation acceptance.</value>
+        [DataMember(Name="notificationResponse", EmitDefaultValue=false)]
+        public ConversationContentNotificationResponse NotificationResponse { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -416,6 +433,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  PaymentResponse: ").Append(PaymentResponse).Append("\n");
             sb.Append("  Push: ").Append(Push).Append("\n");
             sb.Append("  Form: ").Append(Form).Append("\n");
+            sb.Append("  NotificationResponse: ").Append(NotificationResponse).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -550,6 +568,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Form == other.Form ||
                     this.Form != null &&
                     this.Form.Equals(other.Form)
+                ) &&
+                (
+                    this.NotificationResponse == other.NotificationResponse ||
+                    this.NotificationResponse != null &&
+                    this.NotificationResponse.Equals(other.NotificationResponse)
                 );
         }
 
@@ -620,6 +643,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Form != null)
                     hash = hash * 59 + this.Form.GetHashCode();
+
+                if (this.NotificationResponse != null)
+                    hash = hash * 59 + this.NotificationResponse.GetHashCode();
 
                 return hash;
             }

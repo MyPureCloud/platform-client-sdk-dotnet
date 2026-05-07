@@ -66,12 +66,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityPlanRunJobResponse" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Status">The status of the job (required).</param>
         /// <param name="Exceptions">The list of exceptions that occurred while running this activity plan job. These are exceptions that affect individual occurrences but didn&#39;t prevent the job from completing (required).</param>
         /// <param name="Error">Error details if status &#x3D;&#x3D; &#39;Error&#39;. These are errors that caused the job to fail to complete.</param>
         /// <param name="ActivityPlan">The activity plan associated with this job (required).</param>
-        public ActivityPlanRunJobResponse(StatusEnum? Status = null, List<ActivityPlanJobException> Exceptions = null, ErrorBody Error = null, ActivityPlanReference ActivityPlan = null)
+        public ActivityPlanRunJobResponse(string Id = null, StatusEnum? Status = null, List<ActivityPlanJobException> Exceptions = null, ErrorBody Error = null, ActivityPlanReference ActivityPlan = null)
         {
+            this.Id = Id;
             this.Status = Status;
             this.Exceptions = Exceptions;
             this.Error = Error;
@@ -86,7 +88,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

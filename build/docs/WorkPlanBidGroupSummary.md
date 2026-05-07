@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Id** | **string** | The globally unique identifier for the object. | |
 | **Name** | **string** | The name assigned to this bid group | |
 | **ManagementUnit** | [**ManagementUnitReference**](ManagementUnitReference) | The management unit this bid group belongs to | |
 | **AgentCount** | **int?** | The number of agents in this bid group | |
@@ -16,4 +16,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

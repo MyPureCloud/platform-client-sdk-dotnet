@@ -33,7 +33,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="CustomerIdType">Type of primary identifier (e.g. cookie, email, phone)..</param>
         /// <param name="Session">The session that the event belongs to. (required).</param>
         /// <param name="EventType">The name representing the type of event. (required).</param>
-        /// <param name="OutcomeAchievedEvent">Event where a customer has achieved a specific outcome or goal..</param>
+        /// <param name="OutcomeAchievedEvent">Deprecated. Event where a customer has achieved a specific outcome or goal. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/.</param>
         /// <param name="SegmentAssignmentEvent">Event that represents a segment being assigned..</param>
         /// <param name="WebActionEvent">Event triggered by web actions..</param>
         /// <param name="WebEvent">Event that tracks user interactions with content in a browser such as pageviews, downloads, mobile ad clicks, etc..</param>
@@ -113,9 +113,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Event where a customer has achieved a specific outcome or goal.
+        /// Deprecated. Event where a customer has achieved a specific outcome or goal. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
         /// </summary>
-        /// <value>Event where a customer has achieved a specific outcome or goal.</value>
+        /// <value>Deprecated. Event where a customer has achieved a specific outcome or goal. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/</value>
         [DataMember(Name="outcomeAchievedEvent", EmitDefaultValue=false)]
         public OutcomeAchievedEvent OutcomeAchievedEvent { get; set; }
 

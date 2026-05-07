@@ -28,7 +28,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="MarkContactAddressUncontactableActionSettings">The settings for an &#39;mark contact address uncontactable&#39; action..</param>
         /// <param name="SetContentTemplateActionSettings">The settings for a &#39;Set content template&#39; action..</param>
         /// <param name="SetSmsPhoneNumberActionSettings">The settings for a &#39;set sms phone number&#39; action..</param>
-        public DigitalAction(UpdateContactColumnActionSettings UpdateContactColumnActionSettings = null, Object DoNotSendActionSettings = null, AppendToDncActionSettings AppendToDncActionSettings = null, MarkContactUncontactableActionSettings MarkContactUncontactableActionSettings = null, Object MarkContactAddressUncontactableActionSettings = null, SetContentTemplateActionSettings SetContentTemplateActionSettings = null, SetSmsPhoneNumberActionSettings SetSmsPhoneNumberActionSettings = null)
+        /// <param name="SetWhatsAppIntegrationActionSettings">The settings for a &#39;set WhatsApp integration&#39; action..</param>
+        public DigitalAction(UpdateContactColumnActionSettings UpdateContactColumnActionSettings = null, Object DoNotSendActionSettings = null, AppendToDncActionSettings AppendToDncActionSettings = null, MarkContactUncontactableActionSettings MarkContactUncontactableActionSettings = null, Object MarkContactAddressUncontactableActionSettings = null, SetContentTemplateActionSettings SetContentTemplateActionSettings = null, SetSmsPhoneNumberActionSettings SetSmsPhoneNumberActionSettings = null, SetWhatsAppIntegrationActionSettings SetWhatsAppIntegrationActionSettings = null)
         {
             this.UpdateContactColumnActionSettings = UpdateContactColumnActionSettings;
             this.DoNotSendActionSettings = DoNotSendActionSettings;
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.MarkContactAddressUncontactableActionSettings = MarkContactAddressUncontactableActionSettings;
             this.SetContentTemplateActionSettings = SetContentTemplateActionSettings;
             this.SetSmsPhoneNumberActionSettings = SetSmsPhoneNumberActionSettings;
+            this.SetWhatsAppIntegrationActionSettings = SetWhatsAppIntegrationActionSettings;
             
         }
         
@@ -104,6 +106,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public SetSmsPhoneNumberActionSettings SetSmsPhoneNumberActionSettings { get; set; }
 
 
+
+        /// <summary>
+        /// The settings for a &#39;set WhatsApp integration&#39; action.
+        /// </summary>
+        /// <value>The settings for a &#39;set WhatsApp integration&#39; action.</value>
+        [DataMember(Name="setWhatsAppIntegrationActionSettings", EmitDefaultValue=false)]
+        public SetWhatsAppIntegrationActionSettings SetWhatsAppIntegrationActionSettings { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -120,6 +131,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  MarkContactAddressUncontactableActionSettings: ").Append(MarkContactAddressUncontactableActionSettings).Append("\n");
             sb.Append("  SetContentTemplateActionSettings: ").Append(SetContentTemplateActionSettings).Append("\n");
             sb.Append("  SetSmsPhoneNumberActionSettings: ").Append(SetSmsPhoneNumberActionSettings).Append("\n");
+            sb.Append("  SetWhatsAppIntegrationActionSettings: ").Append(SetWhatsAppIntegrationActionSettings).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -194,6 +206,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SetSmsPhoneNumberActionSettings == other.SetSmsPhoneNumberActionSettings ||
                     this.SetSmsPhoneNumberActionSettings != null &&
                     this.SetSmsPhoneNumberActionSettings.Equals(other.SetSmsPhoneNumberActionSettings)
+                ) &&
+                (
+                    this.SetWhatsAppIntegrationActionSettings == other.SetWhatsAppIntegrationActionSettings ||
+                    this.SetWhatsAppIntegrationActionSettings != null &&
+                    this.SetWhatsAppIntegrationActionSettings.Equals(other.SetWhatsAppIntegrationActionSettings)
                 );
         }
 
@@ -228,6 +245,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SetSmsPhoneNumberActionSettings != null)
                     hash = hash * 59 + this.SetSmsPhoneNumberActionSettings.GetHashCode();
+
+                if (this.SetWhatsAppIntegrationActionSettings != null)
+                    hash = hash * 59 + this.SetWhatsAppIntegrationActionSettings.GetHashCode();
 
                 return hash;
             }

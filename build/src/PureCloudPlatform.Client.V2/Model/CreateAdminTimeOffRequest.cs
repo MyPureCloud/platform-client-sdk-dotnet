@@ -66,10 +66,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Notes">Notes about the time off request.</param>
         /// <param name="FullDayManagementUnitDates">A set of dates in yyyy-MM-dd format.  Should be interpreted in the management unit&#39;s configured time zone.</param>
         /// <param name="PartialDayStartDateTimes">A set of start date-times in ISO-8601 format for partial day requests.</param>
-        /// <param name="DailyDurationMinutes">The daily duration of this time off request in minutes (required).</param>
-        /// <param name="DurationMinutes">Daily durations for each day of this time off request in minutes.</param>
-        /// <param name="PayableMinutes">Payable minutes for each day of this time off request.</param>
-        /// <param name="Paid">Whether this is a paid time off request.</param>
+        /// <param name="DailyDurationMinutes">Daily duration in minutes applied to all days of this time off request. Ignored if durationMinutes is specified. At least one of dailyDurationMinutes or durationMinutes is required.</param>
+        /// <param name="DurationMinutes">Duration in minutes for each day of this time off request. Must match the size of fullDayManagementUnitDates or partialDayStartDateTimes. At least one of dailyDurationMinutes or durationMinutes is required.</param>
+        /// <param name="PayableMinutes">Payable minutes for each day of this time off request, representing scheduled paid time displaced by this request. Defaults to dailyDurationMinutes if not specified.</param>
+        /// <param name="Paid">Whether this is a paid time off request. Defaults to the activity code&#39;s paid value if not specified.</param>
         public CreateAdminTimeOffRequest(StatusEnum? Status = null, List<UserReference> Users = null, string ActivityCodeId = null, string Notes = null, List<string> FullDayManagementUnitDates = null, List<DateTime?> PartialDayStartDateTimes = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, bool? Paid = null)
         {
             this.Status = Status;
@@ -135,36 +135,36 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The daily duration of this time off request in minutes
+        /// Daily duration in minutes applied to all days of this time off request. Ignored if durationMinutes is specified. At least one of dailyDurationMinutes or durationMinutes is required
         /// </summary>
-        /// <value>The daily duration of this time off request in minutes</value>
+        /// <value>Daily duration in minutes applied to all days of this time off request. Ignored if durationMinutes is specified. At least one of dailyDurationMinutes or durationMinutes is required</value>
         [DataMember(Name="dailyDurationMinutes", EmitDefaultValue=false)]
         public int? DailyDurationMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Daily durations for each day of this time off request in minutes
+        /// Duration in minutes for each day of this time off request. Must match the size of fullDayManagementUnitDates or partialDayStartDateTimes. At least one of dailyDurationMinutes or durationMinutes is required
         /// </summary>
-        /// <value>Daily durations for each day of this time off request in minutes</value>
+        /// <value>Duration in minutes for each day of this time off request. Must match the size of fullDayManagementUnitDates or partialDayStartDateTimes. At least one of dailyDurationMinutes or durationMinutes is required</value>
         [DataMember(Name="durationMinutes", EmitDefaultValue=false)]
         public List<int?> DurationMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Payable minutes for each day of this time off request
+        /// Payable minutes for each day of this time off request, representing scheduled paid time displaced by this request. Defaults to dailyDurationMinutes if not specified
         /// </summary>
-        /// <value>Payable minutes for each day of this time off request</value>
+        /// <value>Payable minutes for each day of this time off request, representing scheduled paid time displaced by this request. Defaults to dailyDurationMinutes if not specified</value>
         [DataMember(Name="payableMinutes", EmitDefaultValue=false)]
         public List<int?> PayableMinutes { get; set; }
 
 
 
         /// <summary>
-        /// Whether this is a paid time off request
+        /// Whether this is a paid time off request. Defaults to the activity code&#39;s paid value if not specified
         /// </summary>
-        /// <value>Whether this is a paid time off request</value>
+        /// <value>Whether this is a paid time off request. Defaults to the activity code&#39;s paid value if not specified</value>
         [DataMember(Name="paid", EmitDefaultValue=false)]
         public bool? Paid { get; set; }
 

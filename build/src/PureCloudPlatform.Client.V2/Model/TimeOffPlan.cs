@@ -69,9 +69,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Auto approval rule for this time off plan</value>
         [DataMember(Name="autoApprovalRule", EmitDefaultValue=false)]
         public AutoApprovalRuleEnum? AutoApprovalRule { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffPlan" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected TimeOffPlan() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TimeOffPlan" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">The name of this time off plan..</param>
         /// <param name="ActivityCodeIds">The set of activity code IDs associated with this time off plan..</param>
         /// <param name="TimeOffLimits">The set of time off limit IDs associated with this time off plan..</param>
@@ -80,8 +87,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="HrisTimeOffType">Time off type, if this time off plan is associated with the integration..</param>
         /// <param name="Active">Whether this time off plan is currently being used by agents..</param>
         /// <param name="Metadata">Version metadata for the time off plan..</param>
-        public TimeOffPlan(string Name = null, List<string> ActivityCodeIds = null, List<TimeOffLimitReference> TimeOffLimits = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, HrisTimeOffType HrisTimeOffType = null, bool? Active = null, WfmVersionedEntityMetadata Metadata = null)
+        public TimeOffPlan(string Id = null, string Name = null, List<string> ActivityCodeIds = null, List<TimeOffLimitReference> TimeOffLimits = null, AutoApprovalRuleEnum? AutoApprovalRule = null, int? DaysBeforeStartToExpireFromWaitlist = null, HrisTimeOffType HrisTimeOffType = null, bool? Active = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.ActivityCodeIds = ActivityCodeIds;
             this.TimeOffLimits = TimeOffLimits;
@@ -100,7 +108,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

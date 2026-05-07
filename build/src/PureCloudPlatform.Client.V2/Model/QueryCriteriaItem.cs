@@ -58,9 +58,9 @@ namespace PureCloudPlatform.Client.V2.Model
             Createdby
         }
         /// <summary>
-        /// The operator for comparison
+        /// The operator for comparison. For DivisionId, only EQUALS and NOTEQUALS operators are supported.
         /// </summary>
-        /// <value>The operator for comparison</value>
+        /// <value>The operator for comparison. For DivisionId, only EQUALS and NOTEQUALS operators are supported.</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
         public enum OperatorEnum
         {
@@ -115,9 +115,9 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="key", EmitDefaultValue=false)]
         public KeyEnum? Key { get; set; }
         /// <summary>
-        /// The operator for comparison
+        /// The operator for comparison. For DivisionId, only EQUALS and NOTEQUALS operators are supported.
         /// </summary>
-        /// <value>The operator for comparison</value>
+        /// <value>The operator for comparison. For DivisionId, only EQUALS and NOTEQUALS operators are supported.</value>
         [DataMember(Name="operator", EmitDefaultValue=false)]
         public OperatorEnum? Operator { get; set; }
 
@@ -130,7 +130,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="QueryCriteriaItem" /> class.
         /// </summary>
         /// <param name="Key">The key to filter on (required).</param>
-        /// <param name="Operator">The operator for comparison (required).</param>
+        /// <param name="Operator">The operator for comparison. For DivisionId, only EQUALS and NOTEQUALS operators are supported. (required).</param>
         /// <param name="Value">The target value to match.</param>
         public QueryCriteriaItem(KeyEnum? Key = null, OperatorEnum? Operator = null, string Value = null)
         {

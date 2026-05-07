@@ -19,8 +19,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 
 Unassigns the user assigned to this station
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* telephony:station:disassociate
 
 ### Example
 ```{"language":"csharp"}
@@ -208,4 +209,4 @@ namespace Example
 [**StationEntityListing**](StationEntityListing)
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

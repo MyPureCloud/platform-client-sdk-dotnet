@@ -51,14 +51,22 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Granularity choice for the time off limit</value>
         [DataMember(Name="granularity", EmitDefaultValue=false)]
         public GranularityEnum? Granularity { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffLimit" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected TimeOffLimit() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TimeOffLimit" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Granularity">Granularity choice for the time off limit.</param>
         /// <param name="DefaultLimitMinutes">The default time off limit value in minutes per granularity interval.</param>
         /// <param name="Metadata">Version metadata for the time off limit.</param>
-        public TimeOffLimit(GranularityEnum? Granularity = null, int? DefaultLimitMinutes = null, WfmVersionedEntityMetadata Metadata = null)
+        public TimeOffLimit(string Id = null, GranularityEnum? Granularity = null, int? DefaultLimitMinutes = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.Granularity = Granularity;
             this.DefaultLimitMinutes = DefaultLimitMinutes;
             this.Metadata = Metadata;
@@ -72,7 +80,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

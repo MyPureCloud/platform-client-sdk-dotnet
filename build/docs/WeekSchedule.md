@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Id** | **string** | The globally unique identifier for the object. | |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 | **WeekDate** | **string** | First day of this week schedule in yyyy-MM-dd format | [optional] |
 | **Description** | **string** | Description of the week schedule | [optional] |
@@ -20,4 +20,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

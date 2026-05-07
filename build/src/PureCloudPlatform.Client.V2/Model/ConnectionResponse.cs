@@ -103,7 +103,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DateModified">Date of the last modification made to the connection. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="Status">Current status of the connection..</param>
         /// <param name="Error">Optional error message of the connection..</param>
-        public ConnectionResponse(string Name = null, TypeEnum? Type = null, KnowledgeIntegrationReference Integration = null, AuthenticationProperties AuthenticationProperties = null, UserReference CreatedBy = null, UserReference ModifiedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, ErrorBody Error = null)
+        /// <param name="DateExpiry">Expiry date of the authentication credentials. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public ConnectionResponse(string Name = null, TypeEnum? Type = null, KnowledgeIntegrationReference Integration = null, AuthenticationProperties AuthenticationProperties = null, UserReference CreatedBy = null, UserReference ModifiedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, StatusEnum? Status = null, ErrorBody Error = null, DateTime? DateExpiry = null)
         {
             this.Name = Name;
             this.Type = Type;
@@ -115,6 +116,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.DateModified = DateModified;
             this.Status = Status;
             this.Error = Error;
+            this.DateExpiry = DateExpiry;
             
         }
         
@@ -206,6 +208,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Expiry date of the authentication credentials. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Expiry date of the authentication credentials. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="dateExpiry", EmitDefaultValue=false)]
+        public DateTime? DateExpiry { get; set; }
+
+
+
+        /// <summary>
         /// The URI for this object
         /// </summary>
         /// <value>The URI for this object</value>
@@ -233,6 +244,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
+            sb.Append("  DateExpiry: ").Append(DateExpiry).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -330,6 +342,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Error.Equals(other.Error)
                 ) &&
                 (
+                    this.DateExpiry == other.DateExpiry ||
+                    this.DateExpiry != null &&
+                    this.DateExpiry.Equals(other.DateExpiry)
+                ) &&
+                (
                     this.SelfUri == other.SelfUri ||
                     this.SelfUri != null &&
                     this.SelfUri.Equals(other.SelfUri)
@@ -379,6 +396,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
+
+                if (this.DateExpiry != null)
+                    hash = hash * 59 + this.DateExpiry.GetHashCode();
 
                 if (this.SelfUri != null)
                     hash = hash * 59 + this.SelfUri.GetHashCode();

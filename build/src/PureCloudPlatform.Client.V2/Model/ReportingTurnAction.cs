@@ -489,10 +489,10 @@ namespace PureCloudPlatform.Client.V2.Model
             Sendrichlinkaction,
             
             /// <summary>
-            /// Enum Senddigitalcarouselaction for "SendDigitalCarouselAction"
+            /// Enum Senddigitalcontentaction for "SendDigitalContentAction"
             /// </summary>
-            [EnumMember(Value = "SendDigitalCarouselAction")]
-            Senddigitalcarouselaction,
+            [EnumMember(Value = "SendDigitalContentAction")]
+            Senddigitalcontentaction,
             
             /// <summary>
             /// Enum Unknown for "Unknown"

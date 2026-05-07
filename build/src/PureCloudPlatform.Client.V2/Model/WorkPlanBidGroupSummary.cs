@@ -27,13 +27,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WorkPlanBidGroupSummary" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Name">The name assigned to this bid group (required).</param>
         /// <param name="ManagementUnit">The management unit this bid group belongs to (required).</param>
         /// <param name="AgentCount">The number of agents in this bid group (required).</param>
         /// <param name="WorkPlanCount">The number of work plans in this bid group (required).</param>
         /// <param name="PlanningGroupCount">The number of planning groups in this bid group (required).</param>
-        public WorkPlanBidGroupSummary(string Name = null, ManagementUnitReference ManagementUnit = null, int? AgentCount = null, int? WorkPlanCount = null, int? PlanningGroupCount = null)
+        public WorkPlanBidGroupSummary(string Id = null, string Name = null, ManagementUnitReference ManagementUnit = null, int? AgentCount = null, int? WorkPlanCount = null, int? PlanningGroupCount = null)
         {
+            this.Id = Id;
             this.Name = Name;
             this.ManagementUnit = ManagementUnit;
             this.AgentCount = AgentCount;
@@ -49,7 +51,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

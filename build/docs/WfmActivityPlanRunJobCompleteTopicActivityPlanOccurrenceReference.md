@@ -7,7 +7,8 @@
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
 | **Id** | **string** |  | [optional] |
+| **Sessions** | [**List&lt;WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference&gt;**](WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

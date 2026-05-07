@@ -19,11 +19,10 @@ namespace PureCloudPlatform.Client.V2.Model
     public partial class UsersRulesLockedCriteriaSettingsGroup :  IEquatable<UsersRulesLockedCriteriaSettingsGroup>
     {
         /// <summary>
-        /// The operator for this criteria
+        /// Gets or Sets Operators
         /// </summary>
-        /// <value>The operator for this criteria</value>
         [JsonConverter(typeof(UpgradeSdkEnumConverter))]
-        public enum OperatorEnum
+        public enum OperatorsEnum
         {
             /// <summary>
             /// Your SDK version is out of date and an unknown enum value was encountered. 
@@ -127,12 +126,6 @@ namespace PureCloudPlatform.Client.V2.Model
             User
         }
         /// <summary>
-        /// The operator for this criteria
-        /// </summary>
-        /// <value>The operator for this criteria</value>
-        [DataMember(Name="operator", EmitDefaultValue=false)]
-        public OperatorEnum? Operator { get; set; }
-        /// <summary>
         /// The container that the ids belong to
         /// </summary>
         /// <value>The container that the ids belong to</value>
@@ -147,18 +140,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="UsersRulesLockedCriteriaSettingsGroup" /> class.
         /// </summary>
-        /// <param name="Operator">The operator for this criteria (required).</param>
+        /// <param name="Operators">The allowed operators for this criteria (required).</param>
         /// <param name="Container">The container that the ids belong to (required).</param>
         /// <param name="MaxIdCount">Maximum number of ids that can be specified in this container.</param>
-        public UsersRulesLockedCriteriaSettingsGroup(OperatorEnum? Operator = null, ContainerEnum? Container = null, long? MaxIdCount = null)
+        public UsersRulesLockedCriteriaSettingsGroup(List<OperatorsEnum> Operators = null, ContainerEnum? Container = null, long? MaxIdCount = null)
         {
-            this.Operator = Operator;
+            this.Operators = Operators;
             this.Container = Container;
             this.MaxIdCount = MaxIdCount;
             
         }
         
 
+
+        /// <summary>
+        /// The allowed operators for this criteria
+        /// </summary>
+        /// <value>The allowed operators for this criteria</value>
+        [DataMember(Name="operators", EmitDefaultValue=false)]
+        public List<OperatorsEnum> Operators { get; set; }
 
 
 
@@ -181,7 +181,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class UsersRulesLockedCriteriaSettingsGroup {\n");
 
-            sb.Append("  Operator: ").Append(Operator).Append("\n");
+            sb.Append("  Operators: ").Append(Operators).Append("\n");
             sb.Append("  Container: ").Append(Container).Append("\n");
             sb.Append("  MaxIdCount: ").Append(MaxIdCount).Append("\n");
             sb.Append("}\n");
@@ -225,9 +225,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
             return true &&
                 (
-                    this.Operator == other.Operator ||
-                    this.Operator != null &&
-                    this.Operator.Equals(other.Operator)
+                    this.Operators == other.Operators ||
+                    this.Operators != null &&
+                    this.Operators.SequenceEqual(other.Operators)
                 ) &&
                 (
                     this.Container == other.Container ||
@@ -252,8 +252,8 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
-                if (this.Operator != null)
-                    hash = hash * 59 + this.Operator.GetHashCode();
+                if (this.Operators != null)
+                    hash = hash * 59 + this.Operators.GetHashCode();
 
                 if (this.Container != null)
                     hash = hash * 59 + this.Container.GetHashCode();

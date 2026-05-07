@@ -117,6 +117,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuAlternativeShiftJobResponse" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Status">The status of the alternative shift job (required).</param>
         /// <param name="Type">The type of job (required).</param>
         /// <param name="DownloadUrl">The URL where completed results are available, only set if status &#x3D;&#x3D; &#39;Complete&#39;.</param>
@@ -124,8 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ViewOffersResults">Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;ListOffers&#39; or &#39;SearchOffers&#39;.</param>
         /// <param name="ViewTradesResults">Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;ListUserTrades&#39; or &#39;SearchTrades&#39;.</param>
         /// <param name="BulkUpdateTradesResults">Schema template for deserializing data returned from the downloadUrl. Use if type &#x3D;&#x3D; &#39;BulkUpdateTrades&#39;.</param>
-        public BuAlternativeShiftJobResponse(StatusEnum? Status = null, TypeEnum? Type = null, string DownloadUrl = null, ErrorBody Error = null, AlternativeShiftOffersViewResponseTemplate ViewOffersResults = null, AlternativeShiftTradesViewResponseTemplate ViewTradesResults = null, AlternativeShiftBulkUpdateTradesResponseTemplate BulkUpdateTradesResults = null)
+        public BuAlternativeShiftJobResponse(string Id = null, StatusEnum? Status = null, TypeEnum? Type = null, string DownloadUrl = null, ErrorBody Error = null, AlternativeShiftOffersViewResponseTemplate ViewOffersResults = null, AlternativeShiftTradesViewResponseTemplate ViewTradesResults = null, AlternativeShiftBulkUpdateTradesResponseTemplate BulkUpdateTradesResults = null)
         {
+            this.Id = Id;
             this.Status = Status;
             this.Type = Type;
             this.DownloadUrl = DownloadUrl;
@@ -143,7 +145,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

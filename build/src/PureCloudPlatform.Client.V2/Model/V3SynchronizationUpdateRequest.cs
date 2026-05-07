@@ -37,7 +37,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Completed for "Completed"
             /// </summary>
             [EnumMember(Value = "Completed")]
-            Completed
+            Completed,
+            
+            /// <summary>
+            /// Enum Cancelled for "Cancelled"
+            /// </summary>
+            [EnumMember(Value = "Cancelled")]
+            Cancelled
         }
         /// <summary>
         /// The status of the synchronization.

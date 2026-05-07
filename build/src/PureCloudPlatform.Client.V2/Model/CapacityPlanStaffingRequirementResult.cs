@@ -159,7 +159,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="BusinessUnit">The business unit to which the capacity plan belongs (required).</param>
         /// <param name="CapacityPlan">The capacity plan for which requirements are generated (required).</param>
         /// <param name="Status">The status of the requirement generation of the capacity plan (required).</param>
-        /// <param name="ReferenceBusinessUnitDate">The reference date for interval-based data for the requirements. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
+        /// <param name="ReferenceBusinessUnitDate">The reference date for interval-based data relative to the business unit time zone for the requirements. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="Granularity">Granularity of the intervals (required).</param>
         /// <param name="ErrorCode">The error code when status is &#39;Failed&#39;.</param>
         /// <param name="DownloadUrl">The URL to get the requirements results for the capacity plan. It will be populated if the status is &#39;Complete&#39;.</param>
@@ -200,9 +200,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The reference date for interval-based data for the requirements. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
+        /// The reference date for interval-based data relative to the business unit time zone for the requirements. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd
         /// </summary>
-        /// <value>The reference date for interval-based data for the requirements. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
+        /// <value>The reference date for interval-based data relative to the business unit time zone for the requirements. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd</value>
         [DataMember(Name="referenceBusinessUnitDate", EmitDefaultValue=false)]
         public String ReferenceBusinessUnitDate { get; set; }
 

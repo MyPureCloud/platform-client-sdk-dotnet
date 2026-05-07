@@ -18,11 +18,19 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActivityPlanReference :  IEquatable<ActivityPlanReference>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityPlanReference" /> class.
         /// </summary>
-        public ActivityPlanReference()
+        [JsonConstructorAttribute]
+        protected ActivityPlanReference() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivityPlanReference" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
+        public ActivityPlanReference(string Id = null)
         {
+            this.Id = Id;
             
         }
         
@@ -33,7 +41,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

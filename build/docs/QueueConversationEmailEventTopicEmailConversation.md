@@ -12,9 +12,10 @@
 | **OtherMediaUris** | **List&lt;string&gt;** |  | [optional] |
 | **Address** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
+| **AccessAttributes** | **List&lt;string&gt;** |  | [optional] |
 | **InactivityTimeout** | **DateTime?** |  | [optional] |
 | **Divisions** | [**List&lt;QueueConversationEmailEventTopicConversationDivisionMembership&gt;**](QueueConversationEmailEventTopicConversationDivisionMembership) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

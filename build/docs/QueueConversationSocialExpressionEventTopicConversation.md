@@ -14,6 +14,7 @@
 | **Address** | **string** |  | [optional] |
 | **ExternalTag** | **string** |  | [optional] |
 | **UtilizationLabelId** | **string** |  | [optional] |
+| **AccessAttributes** | **List&lt;string&gt;** |  | [optional] |
 | **SecurePause** | **bool?** |  | [optional] |
 | **InactivityTimeout** | **DateTime?** |  | [optional] |
 | **AssociatedConversation** | [**QueueConversationSocialExpressionEventTopicDomainEntityRef**](QueueConversationSocialExpressionEventTopicDomainEntityRef) |  | [optional] |
@@ -22,4 +23,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

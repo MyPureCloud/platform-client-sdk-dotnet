@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
-        public WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference(string Id = null)
+        /// <param name="Sessions">Sessions.</param>
+        public WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference(string Id = null, List<WfmActivityPlanJobCompleteTopicActivityPlanSessionReference> Sessions = null)
         {
             this.Id = Id;
+            this.Sessions = Sessions;
             
         }
         
@@ -37,6 +39,14 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Id { get; set; }
 
 
+
+        /// <summary>
+        /// Gets or Sets Sessions
+        /// </summary>
+        [DataMember(Name="sessions", EmitDefaultValue=false)]
+        public List<WfmActivityPlanJobCompleteTopicActivityPlanSessionReference> Sessions { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -47,6 +57,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
+            sb.Append("  Sessions: ").Append(Sessions).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -91,6 +102,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Id == other.Id ||
                     this.Id != null &&
                     this.Id.Equals(other.Id)
+                ) &&
+                (
+                    this.Sessions == other.Sessions ||
+                    this.Sessions != null &&
+                    this.Sessions.SequenceEqual(other.Sessions)
                 );
         }
 
@@ -107,6 +123,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Id != null)
                     hash = hash * 59 + this.Id.GetHashCode();
+
+                if (this.Sessions != null)
+                    hash = hash * 59 + this.Sessions.GetHashCode();
 
                 return hash;
             }

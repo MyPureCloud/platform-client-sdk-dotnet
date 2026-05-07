@@ -40,6 +40,32 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<BatchEventResponse> PostEventsConversationsWithHttpInfo (BatchConversationEventRequest body);
 
         /// <summary>
+        /// Publish Predictive Routing Custom Kpi Attribution Batch Events
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostEventsRoutingCustomkpiattributions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">batchRequest</param>
+        /// <returns>BatchEventResponse</returns>
+        
+        BatchEventResponse PostEventsRoutingCustomkpiattributions (BatchPredictiveRoutingCustomKpiAttributionEventRequest body);
+
+        /// <summary>
+        /// Publish Predictive Routing Custom Kpi Attribution Batch Events
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostEventsRoutingCustomkpiattributions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">batchRequest</param>
+        /// <returns>ApiResponse of BatchEventResponse</returns>
+        
+        ApiResponse<BatchEventResponse> PostEventsRoutingCustomkpiattributionsWithHttpInfo (BatchPredictiveRoutingCustomKpiAttributionEventRequest body);
+
+        /// <summary>
         /// Publish User Presence Status Batch Events
         /// </summary>
         /// <remarks>
@@ -114,6 +140,32 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (BatchEventResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<BatchEventResponse>> PostEventsConversationsAsyncWithHttpInfo (BatchConversationEventRequest body);
+
+        /// <summary>
+        /// Publish Predictive Routing Custom Kpi Attribution Batch Events
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostEventsRoutingCustomkpiattributions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">batchRequest</param>
+        /// <returns>Task of BatchEventResponse</returns>
+        
+        System.Threading.Tasks.Task<BatchEventResponse> PostEventsRoutingCustomkpiattributionsAsync (BatchPredictiveRoutingCustomKpiAttributionEventRequest body);
+
+        /// <summary>
+        /// Publish Predictive Routing Custom Kpi Attribution Batch Events
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// PostEventsRoutingCustomkpiattributions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">batchRequest</param>
+        /// <returns>Task of ApiResponse (BatchEventResponse)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<BatchEventResponse>> PostEventsRoutingCustomkpiattributionsAsyncWithHttpInfo (BatchPredictiveRoutingCustomKpiAttributionEventRequest body);
 
         /// <summary>
         /// Publish User Presence Status Batch Events
@@ -460,6 +512,225 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostEventsConversations: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling PostEventsConversations: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BatchEventResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BatchEventResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BatchEventResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Publish Predictive Routing Custom Kpi Attribution Batch Events 
+        /// 
+        /// PostEventsRoutingCustomkpiattributions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">batchRequest</param>
+        /// <returns>BatchEventResponse</returns>
+        
+        public BatchEventResponse PostEventsRoutingCustomkpiattributions (BatchPredictiveRoutingCustomKpiAttributionEventRequest body)
+        {
+             ApiResponse<BatchEventResponse> localVarResponse = PostEventsRoutingCustomkpiattributionsWithHttpInfo(body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Publish Predictive Routing Custom Kpi Attribution Batch Events 
+        /// 
+        /// PostEventsRoutingCustomkpiattributions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">batchRequest</param>
+        /// <returns>ApiResponse of BatchEventResponse</returns>
+        
+        public ApiResponse< BatchEventResponse > PostEventsRoutingCustomkpiattributionsWithHttpInfo (BatchPredictiveRoutingCustomKpiAttributionEventRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling EventsApi->PostEventsRoutingCustomkpiattributions");
+
+            var localVarPath = "/api/v2/events/routing/customkpiattributions";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostEventsRoutingCustomkpiattributions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostEventsRoutingCustomkpiattributions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostEventsRoutingCustomkpiattributions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<BatchEventResponse>(localVarStatusCode,
+                localVarHeaders,
+                (BatchEventResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(BatchEventResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Publish Predictive Routing Custom Kpi Attribution Batch Events 
+        /// 
+        /// PostEventsRoutingCustomkpiattributions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">batchRequest</param>
+        /// <returns>Task of BatchEventResponse</returns>
+        
+        public async System.Threading.Tasks.Task<BatchEventResponse> PostEventsRoutingCustomkpiattributionsAsync (BatchPredictiveRoutingCustomKpiAttributionEventRequest body)
+        {
+             ApiResponse<BatchEventResponse> localVarResponse = await PostEventsRoutingCustomkpiattributionsAsyncWithHttpInfo(body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Publish Predictive Routing Custom Kpi Attribution Batch Events 
+        /// 
+        /// PostEventsRoutingCustomkpiattributions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="body">batchRequest</param>
+        /// <returns>Task of ApiResponse (BatchEventResponse)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<BatchEventResponse>> PostEventsRoutingCustomkpiattributionsAsyncWithHttpInfo (BatchPredictiveRoutingCustomKpiAttributionEventRequest body)
+        { 
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling EventsApi->PostEventsRoutingCustomkpiattributions");
+            
+
+            var localVarPath = "/api/v2/events/routing/customkpiattributions";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostEventsRoutingCustomkpiattributions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostEventsRoutingCustomkpiattributions: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostEventsRoutingCustomkpiattributions: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<BatchEventResponse>(localVarStatusCode,
                 localVarHeaders,

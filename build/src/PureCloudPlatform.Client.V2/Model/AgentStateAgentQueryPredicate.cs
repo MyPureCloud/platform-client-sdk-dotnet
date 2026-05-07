@@ -40,6 +40,18 @@ namespace PureCloudPlatform.Client.V2.Model
             Activequeueid,
             
             /// <summary>
+            /// Enum Inactivequeueid for "inactiveQueueId"
+            /// </summary>
+            [EnumMember(Value = "inactiveQueueId")]
+            Inactivequeueid,
+            
+            /// <summary>
+            /// Enum Queueid for "queueId"
+            /// </summary>
+            [EnumMember(Value = "queueId")]
+            Queueid,
+            
+            /// <summary>
             /// Enum Assignedskillid for "assignedSkillId"
             /// </summary>
             [EnumMember(Value = "assignedSkillId")]
@@ -97,7 +109,55 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Online for "online"
             /// </summary>
             [EnumMember(Value = "online")]
-            Online
+            Online,
+            
+            /// <summary>
+            /// Enum Teamid for "teamId"
+            /// </summary>
+            [EnumMember(Value = "teamId")]
+            Teamid,
+            
+            /// <summary>
+            /// Enum Managementunitid for "managementUnitId"
+            /// </summary>
+            [EnumMember(Value = "managementUnitId")]
+            Managementunitid,
+            
+            /// <summary>
+            /// Enum Businessunitid for "businessUnitId"
+            /// </summary>
+            [EnumMember(Value = "businessUnitId")]
+            Businessunitid,
+            
+            /// <summary>
+            /// Enum Adherencestate for "adherenceState"
+            /// </summary>
+            [EnumMember(Value = "adherenceState")]
+            Adherencestate,
+            
+            /// <summary>
+            /// Enum Adherenceimpact for "adherenceImpact"
+            /// </summary>
+            [EnumMember(Value = "adherenceImpact")]
+            Adherenceimpact,
+            
+            /// <summary>
+            /// Enum Scheduledactivitycodeid for "scheduledActivityCodeId"
+            /// </summary>
+            [EnumMember(Value = "scheduledActivityCodeId")]
+            Scheduledactivitycodeid,
+            
+            /// <summary>
+            /// Enum Scheduledactivitycategory for "scheduledActivityCategory"
+            /// </summary>
+            [EnumMember(Value = "scheduledActivityCategory")]
+            Scheduledactivitycategory,
+            
+            /// <summary>
+            /// Enum Actualactivitycategory for "actualActivityCategory"
+            /// </summary>
+            [EnumMember(Value = "actualActivityCategory")]
+            Actualactivitycategory
         }
         /// <summary>
         /// Left hand side for dimension predicates

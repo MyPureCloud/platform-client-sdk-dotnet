@@ -31,10 +31,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="DisplayName">The display name of the segment. (required).</param>
         /// <param name="Version">The version of the segment..</param>
         /// <param name="Description">A description of the segment..</param>
-        /// <param name="Color">The hexadecimal color value of the segment. (required).</param>
+        /// <param name="Color">The hexadecimal color value of the segment. Defaults if not provided..</param>
         /// <param name="ShouldDisplayToAgent">Whether or not the segment should be displayed to agent/supervisor users..</param>
-        /// <param name="Context">The context of the segment. (required).</param>
-        /// <param name="Journey">The pattern of rules defining the segment. (required).</param>
+        /// <param name="Context">The context of the segment. Defaults if not provided..</param>
+        /// <param name="Journey">The pattern of rules defining the segment. Defaults if not provided..</param>
         /// <param name="ExternalSegment">Details of an entity corresponding to this segment in an external system..</param>
         /// <param name="AssignmentExpirationDays">Time, in days, from when the segment is assigned until it is automatically unassigned..</param>
         public JourneySegmentRequest(bool? IsActive = null, string DisplayName = null, int? Version = null, string Description = null, string Color = null, bool? ShouldDisplayToAgent = null, RequestContext Context = null, RequestJourney Journey = null, RequestExternalSegment ExternalSegment = null, int? AssignmentExpirationDays = null)
@@ -91,9 +91,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The hexadecimal color value of the segment.
+        /// The hexadecimal color value of the segment. Defaults if not provided.
         /// </summary>
-        /// <value>The hexadecimal color value of the segment.</value>
+        /// <value>The hexadecimal color value of the segment. Defaults if not provided.</value>
         [DataMember(Name="color", EmitDefaultValue=false)]
         public string Color { get; set; }
 
@@ -109,18 +109,18 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The context of the segment.
+        /// The context of the segment. Defaults if not provided.
         /// </summary>
-        /// <value>The context of the segment.</value>
+        /// <value>The context of the segment. Defaults if not provided.</value>
         [DataMember(Name="context", EmitDefaultValue=false)]
         public RequestContext Context { get; set; }
 
 
 
         /// <summary>
-        /// The pattern of rules defining the segment.
+        /// The pattern of rules defining the segment. Defaults if not provided.
         /// </summary>
-        /// <value>The pattern of rules defining the segment.</value>
+        /// <value>The pattern of rules defining the segment. Defaults if not provided.</value>
         [DataMember(Name="journey", EmitDefaultValue=false)]
         public RequestJourney Journey { get; set; }
 

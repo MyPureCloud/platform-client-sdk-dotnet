@@ -626,7 +626,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ByoSmsIntegrationId">The internal id representing the customer supplied sms integration message..</param>
         /// <param name="QueueMediaSettings">Represents the queue settings for this media type..</param>
         /// <param name="EngagementSource">EngagementSource.</param>
-        public Message(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, bool? Authenticated = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, string ByoSmsIntegrationId = null, ConversationQueueMediaSettings QueueMediaSettings = null, EngagementSourceEnum? EngagementSource = null)
+        /// <param name="ResumeTime">Represents the time when a parked message will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        /// <param name="ParkTime">Represents the time when an message was put into parked state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
+        public Message(StateEnum? State = null, InitialStateEnum? InitialState = null, string Id = null, bool? Held = null, List<Segment> Segments = null, DirectionEnum? Direction = null, string RecordingId = null, ErrorBody ErrorInfo = null, DisconnectTypeEnum? DisconnectType = null, DateTime? StartHoldTime = null, DateTime? StartAlertingTime = null, DateTime? ConnectedTime = null, DateTime? DisconnectedTime = null, string Provider = null, bool? Authenticated = null, TypeEnum? Type = null, string RecipientCountry = null, string RecipientType = null, string ScriptId = null, string PeerId = null, Address ToAddress = null, Address FromAddress = null, List<MessageDetails> Messages = null, JourneyContext JourneyContext = null, Wrapup Wrapup = null, AfterCallWork AfterCallWork = null, bool? AfterCallWorkRequired = null, string AgentAssistantId = null, string ByoSmsIntegrationId = null, ConversationQueueMediaSettings QueueMediaSettings = null, EngagementSourceEnum? EngagementSource = null, DateTime? ResumeTime = null, DateTime? ParkTime = null)
         {
             this.State = State;
             this.InitialState = InitialState;
@@ -659,6 +661,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ByoSmsIntegrationId = ByoSmsIntegrationId;
             this.QueueMediaSettings = QueueMediaSettings;
             this.EngagementSource = EngagementSource;
+            this.ResumeTime = ResumeTime;
+            this.ParkTime = ParkTime;
             
         }
         
@@ -899,6 +903,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+        /// <summary>
+        /// Represents the time when a parked message will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Represents the time when a parked message will resume. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="resumeTime", EmitDefaultValue=false)]
+        public DateTime? ResumeTime { get; set; }
+
+
+
+        /// <summary>
+        /// Represents the time when an message was put into parked state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
+        /// </summary>
+        /// <value>Represents the time when an message was put into parked state. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
+        [DataMember(Name="parkTime", EmitDefaultValue=false)]
+        public DateTime? ParkTime { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -939,6 +961,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ByoSmsIntegrationId: ").Append(ByoSmsIntegrationId).Append("\n");
             sb.Append("  QueueMediaSettings: ").Append(QueueMediaSettings).Append("\n");
             sb.Append("  EngagementSource: ").Append(EngagementSource).Append("\n");
+            sb.Append("  ResumeTime: ").Append(ResumeTime).Append("\n");
+            sb.Append("  ParkTime: ").Append(ParkTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -1133,6 +1157,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EngagementSource == other.EngagementSource ||
                     this.EngagementSource != null &&
                     this.EngagementSource.Equals(other.EngagementSource)
+                ) &&
+                (
+                    this.ResumeTime == other.ResumeTime ||
+                    this.ResumeTime != null &&
+                    this.ResumeTime.Equals(other.ResumeTime)
+                ) &&
+                (
+                    this.ParkTime == other.ParkTime ||
+                    this.ParkTime != null &&
+                    this.ParkTime.Equals(other.ParkTime)
                 );
         }
 
@@ -1239,6 +1273,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EngagementSource != null)
                     hash = hash * 59 + this.EngagementSource.GetHashCode();
+
+                if (this.ResumeTime != null)
+                    hash = hash * 59 + this.ResumeTime.GetHashCode();
+
+                if (this.ParkTime != null)
+                    hash = hash * 59 + this.ParkTime.GetHashCode();
 
                 return hash;
             }

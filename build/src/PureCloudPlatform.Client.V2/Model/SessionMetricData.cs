@@ -24,13 +24,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Model">Model to be used for internal evaluation purposes.</param>
         /// <param name="Computed">Forecasted data for the requested session.</param>
         /// <param name="Historical">Historical data for the requested session.</param>
-        /// <param name="ModelMetaData">Contains forecast meta data.</param>
-        public SessionMetricData(ModelData Model = null, ComputedData Computed = null, HistoricalData Historical = null, ModelMetaData ModelMetaData = null)
+        /// <param name="ModelMetaData">Contains forecast metadata.</param>
+        /// <param name="Outliers">Contains forecast outlier data.</param>
+        public SessionMetricData(ModelData Model = null, ComputedData Computed = null, HistoricalData Historical = null, ModelMetaData ModelMetaData = null, OutlierData Outliers = null)
         {
             this.Model = Model;
             this.Computed = Computed;
             this.Historical = Historical;
             this.ModelMetaData = ModelMetaData;
+            this.Outliers = Outliers;
             
         }
         
@@ -64,11 +66,20 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// Contains forecast meta data
+        /// Contains forecast metadata
         /// </summary>
-        /// <value>Contains forecast meta data</value>
+        /// <value>Contains forecast metadata</value>
         [DataMember(Name="modelMetaData", EmitDefaultValue=false)]
         public ModelMetaData ModelMetaData { get; set; }
+
+
+
+        /// <summary>
+        /// Contains forecast outlier data
+        /// </summary>
+        /// <value>Contains forecast outlier data</value>
+        [DataMember(Name="outliers", EmitDefaultValue=false)]
+        public OutlierData Outliers { get; set; }
 
 
         /// <summary>
@@ -84,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Computed: ").Append(Computed).Append("\n");
             sb.Append("  Historical: ").Append(Historical).Append("\n");
             sb.Append("  ModelMetaData: ").Append(ModelMetaData).Append("\n");
+            sb.Append("  Outliers: ").Append(Outliers).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +155,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.ModelMetaData == other.ModelMetaData ||
                     this.ModelMetaData != null &&
                     this.ModelMetaData.Equals(other.ModelMetaData)
+                ) &&
+                (
+                    this.Outliers == other.Outliers ||
+                    this.Outliers != null &&
+                    this.Outliers.Equals(other.Outliers)
                 );
         }
 
@@ -168,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.ModelMetaData != null)
                     hash = hash * 59 + this.ModelMetaData.GetHashCode();
+
+                if (this.Outliers != null)
+                    hash = hash * 59 + this.Outliers.GetHashCode();
 
                 return hash;
             }

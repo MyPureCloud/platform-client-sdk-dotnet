@@ -63,17 +63,25 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The method by which this forecast was created</value>
         [DataMember(Name="creationMethod", EmitDefaultValue=false)]
         public CreationMethodEnum? CreationMethod { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="BuShortTermForecastListItem" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected BuShortTermForecastListItem() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="BuShortTermForecastListItem" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="WeekDate">The start week date of this forecast in yyyy-MM-dd.  Must fall on the start day of week for the associated business unit. Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd.</param>
         /// <param name="WeekCount">The number of weeks this forecast covers.</param>
         /// <param name="CreationMethod">The method by which this forecast was created.</param>
         /// <param name="Description">The description of this forecast.</param>
         /// <param name="Metadata">Metadata for this forecast.</param>
         /// <param name="CanUseForScheduling">Whether this forecast can be used for scheduling.</param>
-        public BuShortTermForecastListItem(String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null)
+        public BuShortTermForecastListItem(string Id = null, String WeekDate = null, int? WeekCount = null, CreationMethodEnum? CreationMethod = null, string Description = null, WfmVersionedEntityMetadata Metadata = null, bool? CanUseForScheduling = null)
         {
+            this.Id = Id;
             this.WeekDate = WeekDate;
             this.WeekCount = WeekCount;
             this.CreationMethod = CreationMethod;
@@ -90,7 +98,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

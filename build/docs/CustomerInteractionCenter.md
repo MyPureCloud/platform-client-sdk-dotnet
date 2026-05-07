@@ -23,8 +23,9 @@
 | **ProviderName** | **string** |  | [optional] |
 | **DisplayOnLogin** | **bool?** |  | [optional] |
 | **MetadataURL** | **string** |  | [optional] |
+| **ForceAuthn** | **bool?** |  | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

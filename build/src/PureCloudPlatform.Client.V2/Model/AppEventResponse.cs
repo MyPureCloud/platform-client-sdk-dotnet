@@ -43,8 +43,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="SearchQuery">Represents the keywords in a customer search query..</param>
         /// <param name="Attributes">User-defined attributes associated with a particular event. (required).</param>
         /// <param name="Traits">Traits are attributes intrinsic to the customer that may be sent in selected events (e.g. email, givenName, cellPhone). (required).</param>
+        /// <param name="ExternalId">An external identifier for the customer..</param>
         /// <param name="CreatedDate">UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z (required).</param>
-        public AppEventResponse(string Id = null, string CustomerId = null, string CustomerIdType = null, string EventName = null, string ScreenName = null, JourneyApp App = null, Device Device = null, string IpOrganization = null, JourneyGeolocation Geolocation = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, JourneyCampaign MktCampaign = null, AppEventResponseSession Session = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, DateTime? CreatedDate = null)
+        public AppEventResponse(string Id = null, string CustomerId = null, string CustomerIdType = null, string EventName = null, string ScreenName = null, JourneyApp App = null, Device Device = null, string IpOrganization = null, JourneyGeolocation Geolocation = null, SdkLibrary SdkLibrary = null, NetworkConnectivity NetworkConnectivity = null, JourneyCampaign MktCampaign = null, AppEventResponseSession Session = null, string SearchQuery = null, Dictionary<string, CustomEventAttribute> Attributes = null, Dictionary<string, CustomEventAttribute> Traits = null, string ExternalId = null, DateTime? CreatedDate = null)
         {
             this.Id = Id;
             this.CustomerId = CustomerId;
@@ -62,6 +63,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.SearchQuery = SearchQuery;
             this.Attributes = Attributes;
             this.Traits = Traits;
+            this.ExternalId = ExternalId;
             this.CreatedDate = CreatedDate;
             
         }
@@ -213,6 +215,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// An external identifier for the customer.
+        /// </summary>
+        /// <value>An external identifier for the customer.</value>
+        [DataMember(Name="externalId", EmitDefaultValue=false)]
+        public string ExternalId { get; set; }
+
+
+
+        /// <summary>
         /// UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
         /// <value>UTC timestamp indicating when the event actually took place. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z</value>
@@ -245,6 +256,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  SearchQuery: ").Append(SearchQuery).Append("\n");
             sb.Append("  Attributes: ").Append(Attributes).Append("\n");
             sb.Append("  Traits: ").Append(Traits).Append("\n");
+            sb.Append("  ExternalId: ").Append(ExternalId).Append("\n");
             sb.Append("  CreatedDate: ").Append(CreatedDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -367,6 +379,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Traits.SequenceEqual(other.Traits)
                 ) &&
                 (
+                    this.ExternalId == other.ExternalId ||
+                    this.ExternalId != null &&
+                    this.ExternalId.Equals(other.ExternalId)
+                ) &&
+                (
                     this.CreatedDate == other.CreatedDate ||
                     this.CreatedDate != null &&
                     this.CreatedDate.Equals(other.CreatedDate)
@@ -431,6 +448,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Traits != null)
                     hash = hash * 59 + this.Traits.GetHashCode();
+
+                if (this.ExternalId != null)
+                    hash = hash * 59 + this.ExternalId.GetHashCode();
 
                 if (this.CreatedDate != null)
                     hash = hash * 59 + this.CreatedDate.GetHashCode();

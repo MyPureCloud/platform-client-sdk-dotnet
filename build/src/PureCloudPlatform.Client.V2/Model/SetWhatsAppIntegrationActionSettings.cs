@@ -18,14 +18,31 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class SetWhatsAppIntegrationActionSettings :  IEquatable<SetWhatsAppIntegrationActionSettings>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="SetWhatsAppIntegrationActionSettings" /> class.
         /// </summary>
-        public SetWhatsAppIntegrationActionSettings()
+        [JsonConstructorAttribute]
+        protected SetWhatsAppIntegrationActionSettings() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="SetWhatsAppIntegrationActionSettings" /> class.
+        /// </summary>
+        /// <param name="WhatsAppIntegrationId">The ID of the WhatsApp integration. (required).</param>
+        public SetWhatsAppIntegrationActionSettings(string WhatsAppIntegrationId = null)
         {
+            this.WhatsAppIntegrationId = WhatsAppIntegrationId;
             
         }
         
+
+
+        /// <summary>
+        /// The ID of the WhatsApp integration.
+        /// </summary>
+        /// <value>The ID of the WhatsApp integration.</value>
+        [DataMember(Name="whatsAppIntegrationId", EmitDefaultValue=false)]
+        public string WhatsAppIntegrationId { get; set; }
+
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -36,6 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
             var sb = new StringBuilder();
             sb.Append("class SetWhatsAppIntegrationActionSettings {\n");
 
+            sb.Append("  WhatsAppIntegrationId: ").Append(WhatsAppIntegrationId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -75,7 +93,12 @@ namespace PureCloudPlatform.Client.V2.Model
             if (other == null)
                 return false;
 
-            return true && false;
+            return true &&
+                (
+                    this.WhatsAppIntegrationId == other.WhatsAppIntegrationId ||
+                    this.WhatsAppIntegrationId != null &&
+                    this.WhatsAppIntegrationId.Equals(other.WhatsAppIntegrationId)
+                );
         }
 
         /// <summary>
@@ -89,6 +112,9 @@ namespace PureCloudPlatform.Client.V2.Model
             {
                 int hash = 41;
                 // Suitable nullity checks etc, of course :)
+                if (this.WhatsAppIntegrationId != null)
+                    hash = hash * 59 + this.WhatsAppIntegrationId.GetHashCode();
+
                 return hash;
             }
         }

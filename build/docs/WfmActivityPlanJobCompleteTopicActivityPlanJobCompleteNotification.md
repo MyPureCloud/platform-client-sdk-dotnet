@@ -1,6 +1,6 @@
-# WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification
+# WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification
 
-## ININ.PureCloudApi.Model.WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification
+## ININ.PureCloudApi.Model.WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification
 
 ## Properties
 
@@ -12,8 +12,7 @@
 | **Status** | **string** |  | [optional] |
 | **Exceptions** | [**List&lt;WfmActivityPlanJobCompleteTopicActivityPlanJobException&gt;**](WfmActivityPlanJobCompleteTopicActivityPlanJobException) |  | [optional] |
 | **Error** | [**WfmActivityPlanJobCompleteTopicErrorBody**](WfmActivityPlanJobCompleteTopicErrorBody) |  | [optional] |
-| **Occurrence** | [**WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference**](WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference) |  | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

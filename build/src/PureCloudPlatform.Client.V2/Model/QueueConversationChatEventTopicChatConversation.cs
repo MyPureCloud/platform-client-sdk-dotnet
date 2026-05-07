@@ -27,9 +27,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="OtherMediaUris">OtherMediaUris.</param>
         /// <param name="Address">Address.</param>
         /// <param name="UtilizationLabelId">UtilizationLabelId.</param>
+        /// <param name="AccessAttributes">AccessAttributes.</param>
         /// <param name="InactivityTimeout">InactivityTimeout.</param>
         /// <param name="Divisions">Divisions.</param>
-        public QueueConversationChatEventTopicChatConversation(string Id = null, string Name = null, List<QueueConversationChatEventTopicChatMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, string UtilizationLabelId = null, DateTime? InactivityTimeout = null, List<QueueConversationChatEventTopicConversationDivisionMembership> Divisions = null)
+        public QueueConversationChatEventTopicChatConversation(string Id = null, string Name = null, List<QueueConversationChatEventTopicChatMediaParticipant> Participants = null, List<string> OtherMediaUris = null, string Address = null, string UtilizationLabelId = null, List<string> AccessAttributes = null, DateTime? InactivityTimeout = null, List<QueueConversationChatEventTopicConversationDivisionMembership> Divisions = null)
         {
             this.Id = Id;
             this.Name = Name;
@@ -37,6 +38,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.OtherMediaUris = OtherMediaUris;
             this.Address = Address;
             this.UtilizationLabelId = UtilizationLabelId;
+            this.AccessAttributes = AccessAttributes;
             this.InactivityTimeout = InactivityTimeout;
             this.Divisions = Divisions;
             
@@ -93,6 +95,14 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Gets or Sets AccessAttributes
+        /// </summary>
+        [DataMember(Name="accessAttributes", EmitDefaultValue=false)]
+        public List<string> AccessAttributes { get; set; }
+
+
+
+        /// <summary>
         /// Gets or Sets InactivityTimeout
         /// </summary>
         [DataMember(Name="inactivityTimeout", EmitDefaultValue=false)]
@@ -122,6 +132,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  OtherMediaUris: ").Append(OtherMediaUris).Append("\n");
             sb.Append("  Address: ").Append(Address).Append("\n");
             sb.Append("  UtilizationLabelId: ").Append(UtilizationLabelId).Append("\n");
+            sb.Append("  AccessAttributes: ").Append(AccessAttributes).Append("\n");
             sb.Append("  InactivityTimeout: ").Append(InactivityTimeout).Append("\n");
             sb.Append("  Divisions: ").Append(Divisions).Append("\n");
             sb.Append("}\n");
@@ -195,6 +206,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.UtilizationLabelId.Equals(other.UtilizationLabelId)
                 ) &&
                 (
+                    this.AccessAttributes == other.AccessAttributes ||
+                    this.AccessAttributes != null &&
+                    this.AccessAttributes.SequenceEqual(other.AccessAttributes)
+                ) &&
+                (
                     this.InactivityTimeout == other.InactivityTimeout ||
                     this.InactivityTimeout != null &&
                     this.InactivityTimeout.Equals(other.InactivityTimeout)
@@ -234,6 +250,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.UtilizationLabelId != null)
                     hash = hash * 59 + this.UtilizationLabelId.GetHashCode();
+
+                if (this.AccessAttributes != null)
+                    hash = hash * 59 + this.AccessAttributes.GetHashCode();
 
                 if (this.InactivityTimeout != null)
                     hash = hash * 59 + this.InactivityTimeout.GetHashCode();

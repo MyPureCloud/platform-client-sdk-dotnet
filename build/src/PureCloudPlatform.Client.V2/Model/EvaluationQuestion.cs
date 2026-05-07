@@ -63,10 +63,43 @@ namespace PureCloudPlatform.Client.V2.Model
             Readonlytextblockquestion
         }
         /// <summary>
+        /// Focus setting for automated scoring
+        /// </summary>
+        /// <value>Focus setting for automated scoring</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AutomatedScoringFocusEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum Fullinteraction for "FullInteraction"
+            /// </summary>
+            [EnumMember(Value = "FullInteraction")]
+            Fullinteraction,
+            
+            /// <summary>
+            /// Enum Evaluatedagent for "EvaluatedAgent"
+            /// </summary>
+            [EnumMember(Value = "EvaluatedAgent")]
+            Evaluatedagent
+        }
+        /// <summary>
         /// Gets or Sets Type
         /// </summary>
         [DataMember(Name="type", EmitDefaultValue=false)]
         public TypeEnum? Type { get; set; }
+        /// <summary>
+        /// Focus setting for automated scoring
+        /// </summary>
+        /// <value>Focus setting for automated scoring</value>
+        [DataMember(Name="automatedScoringFocus", EmitDefaultValue=false)]
+        public AutomatedScoringFocusEnum? AutomatedScoringFocus { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="EvaluationQuestion" /> class.
         /// </summary>
@@ -80,9 +113,10 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="AnswerOptions">Options from which to choose an answer for this question. Only used by Multiple Choice type questions..</param>
         /// <param name="MultipleSelectOptionQuestions">Only used by Multiple Select type questions. A list of multiple choice questions representing selectable options..</param>
         /// <param name="DefaultAnswer">The default selected answer for the question.</param>
+        /// <param name="AutomatedScoringFocus">Focus setting for automated scoring.</param>
         /// <param name="IsKill">IsKill.</param>
         /// <param name="IsCritical">IsCritical.</param>
-        public EvaluationQuestion(string Id = null, string Text = null, string HelpText = null, TypeEnum? Type = null, bool? NaEnabled = null, bool? CommentsRequired = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null, List<EvaluationQuestion> MultipleSelectOptionQuestions = null, DefaultAnswer DefaultAnswer = null, bool? IsKill = null, bool? IsCritical = null)
+        public EvaluationQuestion(string Id = null, string Text = null, string HelpText = null, TypeEnum? Type = null, bool? NaEnabled = null, bool? CommentsRequired = null, VisibilityCondition VisibilityCondition = null, List<AnswerOption> AnswerOptions = null, List<EvaluationQuestion> MultipleSelectOptionQuestions = null, DefaultAnswer DefaultAnswer = null, AutomatedScoringFocusEnum? AutomatedScoringFocus = null, bool? IsKill = null, bool? IsCritical = null)
         {
             this.Id = Id;
             this.Text = Text;
@@ -94,6 +128,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.AnswerOptions = AnswerOptions;
             this.MultipleSelectOptionQuestions = MultipleSelectOptionQuestions;
             this.DefaultAnswer = DefaultAnswer;
+            this.AutomatedScoringFocus = AutomatedScoringFocus;
             this.IsKill = IsKill;
             this.IsCritical = IsCritical;
             
@@ -187,6 +222,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Gets or Sets IsKill
         /// </summary>
@@ -222,6 +259,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  AnswerOptions: ").Append(AnswerOptions).Append("\n");
             sb.Append("  MultipleSelectOptionQuestions: ").Append(MultipleSelectOptionQuestions).Append("\n");
             sb.Append("  DefaultAnswer: ").Append(DefaultAnswer).Append("\n");
+            sb.Append("  AutomatedScoringFocus: ").Append(AutomatedScoringFocus).Append("\n");
             sb.Append("  IsKill: ").Append(IsKill).Append("\n");
             sb.Append("  IsCritical: ").Append(IsCritical).Append("\n");
             sb.Append("}\n");
@@ -320,6 +358,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.DefaultAnswer.Equals(other.DefaultAnswer)
                 ) &&
                 (
+                    this.AutomatedScoringFocus == other.AutomatedScoringFocus ||
+                    this.AutomatedScoringFocus != null &&
+                    this.AutomatedScoringFocus.Equals(other.AutomatedScoringFocus)
+                ) &&
+                (
                     this.IsKill == other.IsKill ||
                     this.IsKill != null &&
                     this.IsKill.Equals(other.IsKill)
@@ -374,6 +417,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.DefaultAnswer != null)
                     hash = hash * 59 + this.DefaultAnswer.GetHashCode();
+
+                if (this.AutomatedScoringFocus != null)
+                    hash = hash * 59 + this.AutomatedScoringFocus.GetHashCode();
 
                 if (this.IsKill != null)
                     hash = hash * 59 + this.IsKill.GetHashCode();

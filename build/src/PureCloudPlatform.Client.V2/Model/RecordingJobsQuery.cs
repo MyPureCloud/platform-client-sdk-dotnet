@@ -74,10 +74,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="IntegrationId">IntegrationId to Access AWS S3 bucket for bulk recording exports. This field is required and used only for EXPORT action..</param>
         /// <param name="IncludeRecordingsWithSensitiveData">Whether to include recordings with PCI DSS and/or PII data, default value &#x3D; false .</param>
         /// <param name="IncludeScreenRecordings">Whether to include Screen recordings for the action, default value &#x3D; true .</param>
+        /// <param name="IncludePolicyBasedRecordings">Whether to include policy-based recordings for the action, default value &#x3D; true.</param>
+        /// <param name="IncludeSnippetRecordings">Whether to include snippet recordings for the action, default value &#x3D; true.</param>
         /// <param name="ClearExport">For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value &#x3D; false.</param>
         /// <param name="ConversationQuery">Conversation Query. Note: After the recording is created, it might take up to 48 hours for the recording to be included in the submitted job query.  This result depends on the analytics data lake job completion. See also: https://developer.genesys.cloud/analyticsdatamanagement/analytics/jobs/conversation-details-job#data-availability..</param>
         /// <param name="AgedConversationInterval">As an alternative to conversationQuery, specify the date and time range of conversations that are older than 5 years to query.Results will include all conversations that had activity during the interval. This is supported only when querying for conversations older than 5 years;conversationQuery must not be provided when this is provided. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.Interval duration must not exceed 6 months. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss.</param>
-        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, int? ActionAge = null, DateTime? ScreenRecordingActionDate = null, int? ScreenRecordingActionAge = null, string IntegrationId = null, bool? IncludeRecordingsWithSensitiveData = null, bool? IncludeScreenRecordings = null, bool? ClearExport = null, AsyncConversationQuery ConversationQuery = null, string AgedConversationInterval = null)
+        public RecordingJobsQuery(ActionEnum? Action = null, DateTime? ActionDate = null, int? ActionAge = null, DateTime? ScreenRecordingActionDate = null, int? ScreenRecordingActionAge = null, string IntegrationId = null, bool? IncludeRecordingsWithSensitiveData = null, bool? IncludeScreenRecordings = null, bool? IncludePolicyBasedRecordings = null, bool? IncludeSnippetRecordings = null, bool? ClearExport = null, AsyncConversationQuery ConversationQuery = null, string AgedConversationInterval = null)
         {
             this.Action = Action;
             this.ActionDate = ActionDate;
@@ -87,6 +89,8 @@ namespace PureCloudPlatform.Client.V2.Model
             this.IntegrationId = IntegrationId;
             this.IncludeRecordingsWithSensitiveData = IncludeRecordingsWithSensitiveData;
             this.IncludeScreenRecordings = IncludeScreenRecordings;
+            this.IncludePolicyBasedRecordings = IncludePolicyBasedRecordings;
+            this.IncludeSnippetRecordings = IncludeSnippetRecordings;
             this.ClearExport = ClearExport;
             this.ConversationQuery = ConversationQuery;
             this.AgedConversationInterval = AgedConversationInterval;
@@ -161,6 +165,24 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// Whether to include policy-based recordings for the action, default value &#x3D; true
+        /// </summary>
+        /// <value>Whether to include policy-based recordings for the action, default value &#x3D; true</value>
+        [DataMember(Name="includePolicyBasedRecordings", EmitDefaultValue=false)]
+        public bool? IncludePolicyBasedRecordings { get; set; }
+
+
+
+        /// <summary>
+        /// Whether to include snippet recordings for the action, default value &#x3D; true
+        /// </summary>
+        /// <value>Whether to include snippet recordings for the action, default value &#x3D; true</value>
+        [DataMember(Name="includeSnippetRecordings", EmitDefaultValue=false)]
+        public bool? IncludeSnippetRecordings { get; set; }
+
+
+
+        /// <summary>
         /// For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value &#x3D; false
         /// </summary>
         /// <value>For DELETE action, setting this to true will clear any pending exports for recordings. This field is only used for DELETE action. Default value &#x3D; false</value>
@@ -203,6 +225,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  IntegrationId: ").Append(IntegrationId).Append("\n");
             sb.Append("  IncludeRecordingsWithSensitiveData: ").Append(IncludeRecordingsWithSensitiveData).Append("\n");
             sb.Append("  IncludeScreenRecordings: ").Append(IncludeScreenRecordings).Append("\n");
+            sb.Append("  IncludePolicyBasedRecordings: ").Append(IncludePolicyBasedRecordings).Append("\n");
+            sb.Append("  IncludeSnippetRecordings: ").Append(IncludeSnippetRecordings).Append("\n");
             sb.Append("  ClearExport: ").Append(ClearExport).Append("\n");
             sb.Append("  ConversationQuery: ").Append(ConversationQuery).Append("\n");
             sb.Append("  AgedConversationInterval: ").Append(AgedConversationInterval).Append("\n");
@@ -287,6 +311,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.IncludeScreenRecordings.Equals(other.IncludeScreenRecordings)
                 ) &&
                 (
+                    this.IncludePolicyBasedRecordings == other.IncludePolicyBasedRecordings ||
+                    this.IncludePolicyBasedRecordings != null &&
+                    this.IncludePolicyBasedRecordings.Equals(other.IncludePolicyBasedRecordings)
+                ) &&
+                (
+                    this.IncludeSnippetRecordings == other.IncludeSnippetRecordings ||
+                    this.IncludeSnippetRecordings != null &&
+                    this.IncludeSnippetRecordings.Equals(other.IncludeSnippetRecordings)
+                ) &&
+                (
                     this.ClearExport == other.ClearExport ||
                     this.ClearExport != null &&
                     this.ClearExport.Equals(other.ClearExport)
@@ -337,6 +371,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.IncludeScreenRecordings != null)
                     hash = hash * 59 + this.IncludeScreenRecordings.GetHashCode();
+
+                if (this.IncludePolicyBasedRecordings != null)
+                    hash = hash * 59 + this.IncludePolicyBasedRecordings.GetHashCode();
+
+                if (this.IncludeSnippetRecordings != null)
+                    hash = hash * 59 + this.IncludeSnippetRecordings.GetHashCode();
 
                 if (this.ClearExport != null)
                     hash = hash * 59 + this.ClearExport.GetHashCode();

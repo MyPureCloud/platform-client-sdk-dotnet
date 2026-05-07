@@ -3488,7 +3488,33 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<DataTableExportJob> PostFlowsDatatableExportJobsWithHttpInfo (string datatableId);
 
         /// <summary>
-        /// Begin an import process for importing rows into a datatable
+        /// Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field.
+        /// </summary>
+        /// <remarks>
+        /// Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>DataTableImportJob</returns>
+        
+        DataTableImportJob PostFlowsDatatableImportCsvJobs (string datatableId, DataTableImportJob body);
+
+        /// <summary>
+        /// Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field.
+        /// </summary>
+        /// <remarks>
+        /// Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>ApiResponse of DataTableImportJob</returns>
+        
+        ApiResponse<DataTableImportJob> PostFlowsDatatableImportCsvJobsWithHttpInfo (string datatableId, DataTableImportJob body);
+
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead
         /// </summary>
         /// <remarks>
         /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
@@ -3497,11 +3523,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>DataTableImportJob</returns>
-        
+        [Obsolete]
         DataTableImportJob PostFlowsDatatableImportJobs (string datatableId, DataTableImportJob body);
 
         /// <summary>
-        /// Begin an import process for importing rows into a datatable
+        /// Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead
         /// </summary>
         /// <remarks>
         /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
@@ -3510,7 +3536,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>ApiResponse of DataTableImportJob</returns>
-        
+        [Obsolete]
         ApiResponse<DataTableImportJob> PostFlowsDatatableImportJobsWithHttpInfo (string datatableId, DataTableImportJob body);
 
         /// <summary>
@@ -7612,7 +7638,33 @@ namespace PureCloudPlatform.Client.V2.Api
         System.Threading.Tasks.Task<ApiResponse<DataTableExportJob>> PostFlowsDatatableExportJobsAsyncWithHttpInfo (string datatableId);
 
         /// <summary>
-        /// Begin an import process for importing rows into a datatable
+        /// Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field.
+        /// </summary>
+        /// <remarks>
+        /// Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>Task of DataTableImportJob</returns>
+        
+        System.Threading.Tasks.Task<DataTableImportJob> PostFlowsDatatableImportCsvJobsAsync (string datatableId, DataTableImportJob body);
+
+        /// <summary>
+        /// Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field.
+        /// </summary>
+        /// <remarks>
+        /// Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> PostFlowsDatatableImportCsvJobsAsyncWithHttpInfo (string datatableId, DataTableImportJob body);
+
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead
         /// </summary>
         /// <remarks>
         /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
@@ -7621,11 +7673,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>Task of DataTableImportJob</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<DataTableImportJob> PostFlowsDatatableImportJobsAsync (string datatableId, DataTableImportJob body);
 
         /// <summary>
-        /// Begin an import process for importing rows into a datatable
+        /// Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead
         /// </summary>
         /// <remarks>
         /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
@@ -7634,7 +7686,7 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
-        
+        [Obsolete]
         System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> PostFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, DataTableImportJob body);
 
         /// <summary>
@@ -35203,14 +35255,242 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Begin an import process for importing rows into a datatable 
-        /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+        /// Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field. 
+        /// Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>DataTableImportJob</returns>
         
+        public DataTableImportJob PostFlowsDatatableImportCsvJobs (string datatableId, DataTableImportJob body)
+        {
+             ApiResponse<DataTableImportJob> localVarResponse = PostFlowsDatatableImportCsvJobsWithHttpInfo(datatableId, body);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field. 
+        /// Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>ApiResponse of DataTableImportJob</returns>
+        
+        public ApiResponse< DataTableImportJob > PostFlowsDatatableImportCsvJobsWithHttpInfo (string datatableId, DataTableImportJob body)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PostFlowsDatatableImportCsvJobs");
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsDatatableImportCsvJobs");
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/csv/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableImportCsvJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostFlowsDatatableImportCsvJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableImportCsvJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DataTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableImportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field. 
+        /// Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>Task of DataTableImportJob</returns>
+        
+        public async System.Threading.Tasks.Task<DataTableImportJob> PostFlowsDatatableImportCsvJobsAsync (string datatableId, DataTableImportJob body)
+        {
+             ApiResponse<DataTableImportJob> localVarResponse = await PostFlowsDatatableImportCsvJobsAsyncWithHttpInfo(datatableId, body);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field. 
+        /// Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> PostFlowsDatatableImportCsvJobsAsyncWithHttpInfo (string datatableId, DataTableImportJob body)
+        { 
+            // verify the required parameter 'datatableId' is set
+            if (datatableId == null)
+                throw new ApiException(400, "Missing required parameter 'datatableId' when calling ArchitectApi->PostFlowsDatatableImportCsvJobs");
+            
+            // verify the required parameter 'body' is set
+            if (body == null)
+                throw new ApiException(400, "Missing required parameter 'body' when calling ArchitectApi->PostFlowsDatatableImportCsvJobs");
+            
+
+            var localVarPath = "/api/v2/flows/datatables/{datatableId}/import/csv/jobs";
+            var localVarHttpMethod = "Post";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+                
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (datatableId != null) localVarPathParams.Add("datatableId", this.Configuration.ApiClient.ParameterToString(datatableId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+            if (body != null && body.GetType() != typeof(byte[]))
+                localVarPostBody = this.Configuration.ApiClient.Serialize(body); // http body (model) parameter
+            else
+                localVarPostBody = body; // byte array
+
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableImportCsvJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PostFlowsDatatableImportCsvJobs: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PostFlowsDatatableImportCsvJobs: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<DataTableImportJob>(localVarStatusCode,
+                localVarHeaders,
+                (DataTableImportJob) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataTableImportJob)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead 
+        /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="datatableId">id of datatable</param>
+        /// <param name="body">import job information</param>
+        /// <returns>DataTableImportJob</returns>
+        [Obsolete]
         public DataTableImportJob PostFlowsDatatableImportJobs (string datatableId, DataTableImportJob body)
         {
              ApiResponse<DataTableImportJob> localVarResponse = PostFlowsDatatableImportJobsWithHttpInfo(datatableId, body);
@@ -35218,14 +35498,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Begin an import process for importing rows into a datatable 
+        /// Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead 
         /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>ApiResponse of DataTableImportJob</returns>
-        
+        [Obsolete]
         public ApiResponse< DataTableImportJob > PostFlowsDatatableImportJobsWithHttpInfo (string datatableId, DataTableImportJob body)
         { 
             // verify the required parameter 'datatableId' is set
@@ -35315,14 +35595,14 @@ namespace PureCloudPlatform.Client.V2.Api
 
 
         /// <summary>
-        /// Begin an import process for importing rows into a datatable 
+        /// Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead 
         /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>Task of DataTableImportJob</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<DataTableImportJob> PostFlowsDatatableImportJobsAsync (string datatableId, DataTableImportJob body)
         {
              ApiResponse<DataTableImportJob> localVarResponse = await PostFlowsDatatableImportJobsAsyncWithHttpInfo(datatableId, body);
@@ -35331,14 +35611,14 @@ namespace PureCloudPlatform.Client.V2.Api
         }
 
         /// <summary>
-        /// Begin an import process for importing rows into a datatable 
+        /// Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead 
         /// Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="datatableId">id of datatable</param>
         /// <param name="body">import job information</param>
         /// <returns>Task of ApiResponse (DataTableImportJob)</returns>
-        
+        [Obsolete]
         public async System.Threading.Tasks.Task<ApiResponse<DataTableImportJob>> PostFlowsDatatableImportJobsAsyncWithHttpInfo (string datatableId, DataTableImportJob body)
         { 
             // verify the required parameter 'datatableId' is set

@@ -73,6 +73,39 @@ namespace PureCloudPlatform.Client.V2.Model
             Manual
         }
         /// <summary>
+        /// Which agent(s) to score. Valid values: First, Last, Each.
+        /// </summary>
+        /// <value>Which agent(s) to score. Valid values: First, Last, Each.</value>
+        [JsonConverter(typeof(UpgradeSdkEnumConverter))]
+        public enum AgentToScoreEnum
+        {
+            /// <summary>
+            /// Your SDK version is out of date and an unknown enum value was encountered. 
+            /// Please upgrade the SDK using the command "Upgrade-Package PureCloudApiSdk" 
+            /// in the Package Manager Console
+            /// </summary>
+            [EnumMember(Value = "OUTDATED_SDK_VERSION")]
+            OutdatedSdkVersion,
+            
+            /// <summary>
+            /// Enum First for "First"
+            /// </summary>
+            [EnumMember(Value = "First")]
+            First,
+            
+            /// <summary>
+            /// Enum Last for "Last"
+            /// </summary>
+            [EnumMember(Value = "Last")]
+            Last,
+            
+            /// <summary>
+            /// Enum Each for "Each"
+            /// </summary>
+            [EnumMember(Value = "Each")]
+            Each
+        }
+        /// <summary>
         /// Sampling type setting. Valid values: All, Percentage
         /// </summary>
         /// <value>Sampling type setting. Valid values: All, Percentage</value>
@@ -84,6 +117,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>Submission type for evaluations. Valid values: Automated, Manual</value>
         [DataMember(Name="submissionType", EmitDefaultValue=false)]
         public SubmissionTypeEnum? SubmissionType { get; set; }
+        /// <summary>
+        /// Which agent(s) to score. Valid values: First, Last, Each.
+        /// </summary>
+        /// <value>Which agent(s) to score. Valid values: First, Last, Each.</value>
+        [DataMember(Name="agentToScore", EmitDefaultValue=false)]
+        public AgentToScoreEnum? AgentToScore { get; set; }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="AgentScoringRule" /> class.
@@ -99,7 +138,8 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EvaluationFormContextId">The evaluation form contextID to use for scoring. (required).</param>
         /// <param name="Enabled">Whether the rule is enabled. (required).</param>
         /// <param name="Evaluator">The evaluator for evaluations created by this rule..</param>
-        public AgentScoringRule(SamplingTypeEnum? SamplingType = null, double? SamplingPercentage = null, SubmissionTypeEnum? SubmissionType = null, string EvaluationFormContextId = null, bool? Enabled = null, AddressableEntityRef Evaluator = null)
+        /// <param name="AgentToScore">Which agent(s) to score. Valid values: First, Last, Each..</param>
+        public AgentScoringRule(SamplingTypeEnum? SamplingType = null, double? SamplingPercentage = null, SubmissionTypeEnum? SubmissionType = null, string EvaluationFormContextId = null, bool? Enabled = null, AddressableEntityRef Evaluator = null, AgentToScoreEnum? AgentToScore = null)
         {
             this.SamplingType = SamplingType;
             this.SamplingPercentage = SamplingPercentage;
@@ -107,6 +147,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.EvaluationFormContextId = EvaluationFormContextId;
             this.Enabled = Enabled;
             this.Evaluator = Evaluator;
+            this.AgentToScore = AgentToScore;
             
         }
         
@@ -179,6 +220,8 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
 
+
+
         /// <summary>
         /// Date when the rule was created. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z
         /// </summary>
@@ -223,6 +266,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Enabled: ").Append(Enabled).Append("\n");
             sb.Append("  Published: ").Append(Published).Append("\n");
             sb.Append("  Evaluator: ").Append(Evaluator).Append("\n");
+            sb.Append("  AgentToScore: ").Append(AgentToScore).Append("\n");
             sb.Append("  DateCreated: ").Append(DateCreated).Append("\n");
             sb.Append("  DateModified: ").Append(DateModified).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
@@ -312,6 +356,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Evaluator.Equals(other.Evaluator)
                 ) &&
                 (
+                    this.AgentToScore == other.AgentToScore ||
+                    this.AgentToScore != null &&
+                    this.AgentToScore.Equals(other.AgentToScore)
+                ) &&
+                (
                     this.DateCreated == other.DateCreated ||
                     this.DateCreated != null &&
                     this.DateCreated.Equals(other.DateCreated)
@@ -365,6 +414,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Evaluator != null)
                     hash = hash * 59 + this.Evaluator.GetHashCode();
+
+                if (this.AgentToScore != null)
+                    hash = hash * 59 + this.AgentToScore.GetHashCode();
 
                 if (this.DateCreated != null)
                     hash = hash * 59 + this.DateCreated.GetHashCode();

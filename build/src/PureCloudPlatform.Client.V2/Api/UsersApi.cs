@@ -392,6 +392,28 @@ namespace PureCloudPlatform.Client.V2.Api
         ApiResponse<Object> DeleteUsersCustomattributesSchemaWithHttpInfo (string schemaId);
 
         /// <summary>
+        /// Clear self associated station
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        
+        void DeleteUsersStationsMeAssociatedstation ();
+
+        /// <summary>
+        /// Clear self associated station
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> DeleteUsersStationsMeAssociatedstationWithHttpInfo ();
+
+        /// <summary>
         /// Get status for async query for user aggregates
         /// </summary>
         /// <remarks>
@@ -1472,10 +1494,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
         /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="includeRoomOwners">Whether or not to include room owners (optional)</param>
         /// <param name="after">The key to start after (optional)</param>
         /// <returns>ChatItemCursorListing</returns>
         
-        ChatItemCursorListing GetUsersChatsMe (bool? excludeClosed = null, bool? includePresence = null, string after = null);
+        ChatItemCursorListing GetUsersChatsMe (bool? excludeClosed = null, bool? includePresence = null, bool? includeRoomOwners = null, string after = null);
 
         /// <summary>
         /// Get chats for a user
@@ -1486,10 +1509,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
         /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="includeRoomOwners">Whether or not to include room owners (optional)</param>
         /// <param name="after">The key to start after (optional)</param>
         /// <returns>ApiResponse of ChatItemCursorListing</returns>
         
-        ApiResponse<ChatItemCursorListing> GetUsersChatsMeWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, string after = null);
+        ApiResponse<ChatItemCursorListing> GetUsersChatsMeWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, bool? includeRoomOwners = null, string after = null);
 
         /// <summary>
         /// Get a schema
@@ -1832,7 +1856,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
@@ -1851,7 +1874,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
@@ -1892,6 +1914,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>ApiResponse of UsersSearchResponse</returns>
         
         ApiResponse<UsersSearchResponse> GetUsersSearchWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null);
+
+        /// <summary>
+        /// Get station information for self
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>UserStations</returns>
+        
+        UserStations GetUsersStationsMe ();
+
+        /// <summary>
+        /// Get station information for self
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of UserStations</returns>
+        
+        ApiResponse<UserStations> GetUsersStationsMeWithHttpInfo ();
 
         /// <summary>
         /// Update user
@@ -3191,6 +3235,30 @@ namespace PureCloudPlatform.Client.V2.Api
         
         ApiResponse<DataSchema> PutUsersCustomattributesSchemaWithHttpInfo (string schemaId, DataSchema body);
 
+        /// <summary>
+        /// Set self associated station
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stationId">stationId</param>
+        /// <returns></returns>
+        
+        void PutUsersStationsMeAssociatedstationStationId (string stationId);
+
+        /// <summary>
+        /// Set self associated station
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stationId">stationId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        ApiResponse<Object> PutUsersStationsMeAssociatedstationStationIdWithHttpInfo (string stationId);
+
         #endregion Synchronous Operations
 
         #region Asynchronous Operations
@@ -3570,6 +3638,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse</returns>
         
         System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersCustomattributesSchemaAsyncWithHttpInfo (string schemaId);
+
+        /// <summary>
+        /// Clear self associated station
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task DeleteUsersStationsMeAssociatedstationAsync ();
+
+        /// <summary>
+        /// Clear self associated station
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersStationsMeAssociatedstationAsyncWithHttpInfo ();
 
         /// <summary>
         /// Get status for async query for user aggregates
@@ -4652,10 +4742,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
         /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="includeRoomOwners">Whether or not to include room owners (optional)</param>
         /// <param name="after">The key to start after (optional)</param>
         /// <returns>Task of ChatItemCursorListing</returns>
         
-        System.Threading.Tasks.Task<ChatItemCursorListing> GetUsersChatsMeAsync (bool? excludeClosed = null, bool? includePresence = null, string after = null);
+        System.Threading.Tasks.Task<ChatItemCursorListing> GetUsersChatsMeAsync (bool? excludeClosed = null, bool? includePresence = null, bool? includeRoomOwners = null, string after = null);
 
         /// <summary>
         /// Get chats for a user
@@ -4666,10 +4757,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
         /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="includeRoomOwners">Whether or not to include room owners (optional)</param>
         /// <param name="after">The key to start after (optional)</param>
         /// <returns>Task of ApiResponse (ChatItemCursorListing)</returns>
         
-        System.Threading.Tasks.Task<ApiResponse<ChatItemCursorListing>> GetUsersChatsMeAsyncWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, string after = null);
+        System.Threading.Tasks.Task<ApiResponse<ChatItemCursorListing>> GetUsersChatsMeAsyncWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, bool? includeRoomOwners = null, string after = null);
 
         /// <summary>
         /// Get a schema
@@ -5012,7 +5104,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
@@ -5031,7 +5122,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// </summary>
         /// <remarks>
         /// 
-        /// GetUsersQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </remarks>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
@@ -5072,6 +5162,28 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (UsersSearchResponse)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<UsersSearchResponse>> GetUsersSearchAsyncWithHttpInfo (string q64, List<string> expand = null, string integrationPresenceSource = null);
+
+        /// <summary>
+        /// Get station information for self
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of UserStations</returns>
+        
+        System.Threading.Tasks.Task<UserStations> GetUsersStationsMeAsync ();
+
+        /// <summary>
+        /// Get station information for self
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (UserStations)</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<UserStations>> GetUsersStationsMeAsyncWithHttpInfo ();
 
         /// <summary>
         /// Update user
@@ -6370,6 +6482,30 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <returns>Task of ApiResponse (DataSchema)</returns>
         
         System.Threading.Tasks.Task<ApiResponse<DataSchema>> PutUsersCustomattributesSchemaAsyncWithHttpInfo (string schemaId, DataSchema body);
+
+        /// <summary>
+        /// Set self associated station
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stationId">stationId</param>
+        /// <returns>Task of void</returns>
+        
+        System.Threading.Tasks.Task PutUsersStationsMeAssociatedstationStationIdAsync (string stationId);
+
+        /// <summary>
+        /// Set self associated station
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stationId">stationId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        System.Threading.Tasks.Task<ApiResponse<Object>> PutUsersStationsMeAssociatedstationStationIdAsyncWithHttpInfo (string stationId);
 
         #endregion Asynchronous Operations
 
@@ -9595,6 +9731,196 @@ namespace PureCloudPlatform.Client.V2.Api
                 throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteUsersCustomattributesSchema: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
             else if (localVarStatusCode == 0)
                 throw new ApiException (localVarStatusCode, "Error calling DeleteUsersCustomattributesSchema: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Clear self associated station 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns></returns>
+        
+        public void DeleteUsersStationsMeAssociatedstation ()
+        {
+             DeleteUsersStationsMeAssociatedstationWithHttpInfo();
+        }
+
+        /// <summary>
+        /// Clear self associated station 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> DeleteUsersStationsMeAssociatedstationWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/stations/me/associatedstation";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersStationsMeAssociatedstation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteUsersStationsMeAssociatedstation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersStationsMeAssociatedstation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Clear self associated station 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task DeleteUsersStationsMeAssociatedstationAsync ()
+        {
+             await DeleteUsersStationsMeAssociatedstationAsyncWithHttpInfo();
+
+        }
+
+        /// <summary>
+        /// Clear self associated station 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> DeleteUsersStationsMeAssociatedstationAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/stations/me/associatedstation";
+            var localVarHttpMethod = "Delete";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersStationsMeAssociatedstation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling DeleteUsersStationsMeAssociatedstation: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling DeleteUsersStationsMeAssociatedstation: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
 
             return new ApiResponse<Object>(localVarStatusCode,
                 localVarHeaders,
@@ -18144,12 +18470,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
         /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="includeRoomOwners">Whether or not to include room owners (optional)</param>
         /// <param name="after">The key to start after (optional)</param>
         /// <returns>ChatItemCursorListing</returns>
         
-        public ChatItemCursorListing GetUsersChatsMe (bool? excludeClosed = null, bool? includePresence = null, string after = null)
+        public ChatItemCursorListing GetUsersChatsMe (bool? excludeClosed = null, bool? includePresence = null, bool? includeRoomOwners = null, string after = null)
         {
-             ApiResponse<ChatItemCursorListing> localVarResponse = GetUsersChatsMeWithHttpInfo(excludeClosed, includePresence, after);
+             ApiResponse<ChatItemCursorListing> localVarResponse = GetUsersChatsMeWithHttpInfo(excludeClosed, includePresence, includeRoomOwners, after);
              return localVarResponse.Data;
         }
 
@@ -18160,10 +18487,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
         /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="includeRoomOwners">Whether or not to include room owners (optional)</param>
         /// <param name="after">The key to start after (optional)</param>
         /// <returns>ApiResponse of ChatItemCursorListing</returns>
         
-        public ApiResponse< ChatItemCursorListing > GetUsersChatsMeWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, string after = null)
+        public ApiResponse< ChatItemCursorListing > GetUsersChatsMeWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, bool? includeRoomOwners = null, string after = null)
         { 
 
             var localVarPath = "/api/v2/users/chats/me";
@@ -18201,6 +18529,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (excludeClosed != null) localVarQueryParams.Add(new Tuple<string, string>("excludeClosed", this.Configuration.ApiClient.ParameterToString(excludeClosed)));
             if (includePresence != null) localVarQueryParams.Add(new Tuple<string, string>("includePresence", this.Configuration.ApiClient.ParameterToString(includePresence)));
+            if (includeRoomOwners != null) localVarQueryParams.Add(new Tuple<string, string>("includeRoomOwners", this.Configuration.ApiClient.ParameterToString(includeRoomOwners)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
 
             // Header params
@@ -18248,12 +18577,13 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
         /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="includeRoomOwners">Whether or not to include room owners (optional)</param>
         /// <param name="after">The key to start after (optional)</param>
         /// <returns>Task of ChatItemCursorListing</returns>
         
-        public async System.Threading.Tasks.Task<ChatItemCursorListing> GetUsersChatsMeAsync (bool? excludeClosed = null, bool? includePresence = null, string after = null)
+        public async System.Threading.Tasks.Task<ChatItemCursorListing> GetUsersChatsMeAsync (bool? excludeClosed = null, bool? includePresence = null, bool? includeRoomOwners = null, string after = null)
         {
-             ApiResponse<ChatItemCursorListing> localVarResponse = await GetUsersChatsMeAsyncWithHttpInfo(excludeClosed, includePresence, after);
+             ApiResponse<ChatItemCursorListing> localVarResponse = await GetUsersChatsMeAsyncWithHttpInfo(excludeClosed, includePresence, includeRoomOwners, after);
              return localVarResponse.Data;
 
         }
@@ -18265,10 +18595,11 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="excludeClosed">Whether or not to exclude closed chats (optional)</param>
         /// <param name="includePresence">Whether or not to include user presence (optional)</param>
+        /// <param name="includeRoomOwners">Whether or not to include room owners (optional)</param>
         /// <param name="after">The key to start after (optional)</param>
         /// <returns>Task of ApiResponse (ChatItemCursorListing)</returns>
         
-        public async System.Threading.Tasks.Task<ApiResponse<ChatItemCursorListing>> GetUsersChatsMeAsyncWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, string after = null)
+        public async System.Threading.Tasks.Task<ApiResponse<ChatItemCursorListing>> GetUsersChatsMeAsyncWithHttpInfo (bool? excludeClosed = null, bool? includePresence = null, bool? includeRoomOwners = null, string after = null)
         { 
 
             var localVarPath = "/api/v2/users/chats/me";
@@ -18306,6 +18637,7 @@ namespace PureCloudPlatform.Client.V2.Api
             // Query params
             if (excludeClosed != null) localVarQueryParams.Add(new Tuple<string, string>("excludeClosed", this.Configuration.ApiClient.ParameterToString(excludeClosed)));
             if (includePresence != null) localVarQueryParams.Add(new Tuple<string, string>("includePresence", this.Configuration.ApiClient.ParameterToString(includePresence)));
+            if (includeRoomOwners != null) localVarQueryParams.Add(new Tuple<string, string>("includeRoomOwners", this.Configuration.ApiClient.ParameterToString(includeRoomOwners)));
             if (after != null) localVarQueryParams.Add(new Tuple<string, string>("after", this.Configuration.ApiClient.ParameterToString(after)));
 
             // Header params
@@ -20933,7 +21265,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required 
         /// 
-        /// GetUsersQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
@@ -20954,7 +21285,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required 
         /// 
-        /// GetUsersQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
@@ -21051,7 +21381,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required 
         /// 
-        /// GetUsersQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
@@ -21073,7 +21402,6 @@ namespace PureCloudPlatform.Client.V2.Api
         /// <summary>
         /// Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required 
         /// 
-        /// GetUsersQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
         /// </summary>
         /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="cursor">Cursor token to retrieve next page (optional)</param>
@@ -21379,6 +21707,198 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<UsersSearchResponse>(localVarStatusCode,
                 localVarHeaders,
                 (UsersSearchResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UsersSearchResponse)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Get station information for self 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>UserStations</returns>
+        
+        public UserStations GetUsersStationsMe ()
+        {
+             ApiResponse<UserStations> localVarResponse = GetUsersStationsMeWithHttpInfo();
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get station information for self 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>ApiResponse of UserStations</returns>
+        
+        public ApiResponse< UserStations > GetUsersStationsMeWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/stations/me";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersStationsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetUsersStationsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersStationsMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserStations>(localVarStatusCode,
+                localVarHeaders,
+                (UserStations) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserStations)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Get station information for self 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of UserStations</returns>
+        
+        public async System.Threading.Tasks.Task<UserStations> GetUsersStationsMeAsync ()
+        {
+             ApiResponse<UserStations> localVarResponse = await GetUsersStationsMeAsyncWithHttpInfo();
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get station information for self 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <returns>Task of ApiResponse (UserStations)</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<UserStations>> GetUsersStationsMeAsyncWithHttpInfo ()
+        { 
+
+            var localVarPath = "/api/v2/users/stations/me";
+            var localVarHttpMethod = "Get";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersStationsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling GetUsersStationsMe: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling GetUsersStationsMe: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<UserStations>(localVarStatusCode,
+                localVarHeaders,
+                (UserStations) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(UserStations)),
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }
@@ -32632,6 +33152,209 @@ namespace PureCloudPlatform.Client.V2.Api
             return new ApiResponse<DataSchema>(localVarStatusCode,
                 localVarHeaders,
                 (DataSchema) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(DataSchema)),
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+
+        /// <summary>
+        /// Set self associated station 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stationId">stationId</param>
+        /// <returns></returns>
+        
+        public void PutUsersStationsMeAssociatedstationStationId (string stationId)
+        {
+             PutUsersStationsMeAssociatedstationStationIdWithHttpInfo(stationId);
+        }
+
+        /// <summary>
+        /// Set self associated station 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stationId">stationId</param>
+        /// <returns>ApiResponse of Object(void)</returns>
+        
+        public ApiResponse<Object> PutUsersStationsMeAssociatedstationStationIdWithHttpInfo (string stationId)
+        { 
+            // verify the required parameter 'stationId' is set
+            if (stationId == null)
+                throw new ApiException(400, "Missing required parameter 'stationId' when calling UsersApi->PutUsersStationsMeAssociatedstationStationId");
+
+            var localVarPath = "/api/v2/users/stations/me/associatedstation/{stationId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+                
+
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (stationId != null) localVarPathParams.Add("stationId", this.Configuration.ApiClient.ParameterToString(stationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = this.Configuration.ApiClient.CallApi(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersStationsMeAssociatedstationStationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutUsersStationsMeAssociatedstationStationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersStationsMeAssociatedstationStationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
+                localVarResponse.Content,
+                localVarResponse.StatusDescription);
+        }
+
+
+        /// <summary>
+        /// Set self associated station 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stationId">stationId</param>
+        /// <returns>Task of void</returns>
+        
+        public async System.Threading.Tasks.Task PutUsersStationsMeAssociatedstationStationIdAsync (string stationId)
+        {
+             await PutUsersStationsMeAssociatedstationStationIdAsyncWithHttpInfo(stationId);
+
+        }
+
+        /// <summary>
+        /// Set self associated station 
+        /// 
+        /// </summary>
+        /// <exception cref="PureCloudPlatform.Client.V2.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="stationId">stationId</param>
+        /// <returns>Task of ApiResponse</returns>
+        
+        public async System.Threading.Tasks.Task<ApiResponse<Object>> PutUsersStationsMeAssociatedstationStationIdAsyncWithHttpInfo (string stationId)
+        { 
+            // verify the required parameter 'stationId' is set
+            if (stationId == null)
+                throw new ApiException(400, "Missing required parameter 'stationId' when calling UsersApi->PutUsersStationsMeAssociatedstationStationId");
+            
+
+            var localVarPath = "/api/v2/users/stations/me/associatedstation/{stationId}";
+            var localVarHttpMethod = "Put";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<Tuple<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, IFileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+
+                "application/json"
+
+                
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            // set "format" to json by default
+            // e.g. /pet/{petId}.{format} becomes /pet/{petId}.json
+            localVarPathParams.Add("format", "json");
+
+            // Path params
+            if (stationId != null) localVarPathParams.Add("stationId", this.Configuration.ApiClient.ParameterToString(stationId));
+
+            // Query params
+
+            // Header params
+
+            // Form params
+            
+            // Body param
+
+
+            // authentication (PureCloud OAuth) required
+            // oauth required
+            if (!String.IsNullOrEmpty(Configuration.AccessToken))
+            {
+                localVarHeaderParams["Authorization"] = "Bearer " + this.Configuration.AccessToken;
+            }
+
+            // make the HTTP request
+            IHttpResponse localVarResponse = await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                localVarHttpMethod, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType) as IHttpResponse;
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            Dictionary<string, string> localVarHeaders = localVarResponse.Headers ?? new Dictionary<string, string>();
+
+            if (localVarStatusCode >= 400)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersStationsMeAssociatedstationStationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode >= 300 && localVarStatusCode < 400)
+                throw new ApiException.RedirectException (localVarStatusCode, "HTTP Redirect received calling PutUsersStationsMeAssociatedstationStationId: " + localVarResponse.Content, localVarResponse.Content, localVarHeaders);
+            else if (localVarStatusCode == 0)
+                throw new ApiException (localVarStatusCode, "Error calling PutUsersStationsMeAssociatedstationStationId: " + localVarResponse.ErrorMessage, localVarResponse.ErrorMessage);
+
+            return new ApiResponse<Object>(localVarStatusCode,
+                localVarHeaders,
+                null,
                 localVarResponse.Content,
                 localVarResponse.StatusDescription);
         }

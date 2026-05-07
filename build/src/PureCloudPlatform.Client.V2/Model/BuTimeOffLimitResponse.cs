@@ -27,11 +27,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="BuTimeOffLimitResponse" /> class.
         /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="StaffingGroup">The staffing group to which this time-off limit is associated. If managementUnit is set, then the staffing group belongs to that management unit.Otherwise, if managementUnit is not set, it is a business unit level staffing group.At least one of managementUnit and staffingGroup must be set.</param>
         /// <param name="ManagementUnit">The management unit to which this time-off limit is associated. If staffingGroup is set, then the limit is associated with that staffing group, which belongs to this management unit.At least one of managementUnit and staffingGroup must be set.</param>
         /// <param name="Metadata">Version metadata for the time-off limit (required).</param>
-        public BuTimeOffLimitResponse(StaffingGroupReference StaffingGroup = null, ManagementUnitReference ManagementUnit = null, WfmVersionedEntityMetadata Metadata = null)
+        public BuTimeOffLimitResponse(string Id = null, StaffingGroupReference StaffingGroup = null, ManagementUnitReference ManagementUnit = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.StaffingGroup = StaffingGroup;
             this.ManagementUnit = ManagementUnit;
             this.Metadata = Metadata;
@@ -45,7 +47,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

@@ -22,9 +22,11 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="IdentityResolutionAutomergeConfig" /> class.
         /// </summary>
         /// <param name="AuthenticatedWebMessaging">Whether automerging is enabled for Authenticated Webmessaging conversations in this channel..</param>
-        public IdentityResolutionAutomergeConfig(bool? AuthenticatedWebMessaging = null)
+        /// <param name="WebTracking">Whether automerging is enabled for Web Tracking sessions in this channel..</param>
+        public IdentityResolutionAutomergeConfig(bool? AuthenticatedWebMessaging = null, bool? WebTracking = null)
         {
             this.AuthenticatedWebMessaging = AuthenticatedWebMessaging;
+            this.WebTracking = WebTracking;
             
         }
         
@@ -38,6 +40,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public bool? AuthenticatedWebMessaging { get; set; }
 
 
+
+        /// <summary>
+        /// Whether automerging is enabled for Web Tracking sessions in this channel.
+        /// </summary>
+        /// <value>Whether automerging is enabled for Web Tracking sessions in this channel.</value>
+        [DataMember(Name="webTracking", EmitDefaultValue=false)]
+        public bool? WebTracking { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -48,6 +59,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class IdentityResolutionAutomergeConfig {\n");
 
             sb.Append("  AuthenticatedWebMessaging: ").Append(AuthenticatedWebMessaging).Append("\n");
+            sb.Append("  WebTracking: ").Append(WebTracking).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -92,6 +104,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.AuthenticatedWebMessaging == other.AuthenticatedWebMessaging ||
                     this.AuthenticatedWebMessaging != null &&
                     this.AuthenticatedWebMessaging.Equals(other.AuthenticatedWebMessaging)
+                ) &&
+                (
+                    this.WebTracking == other.WebTracking ||
+                    this.WebTracking != null &&
+                    this.WebTracking.Equals(other.WebTracking)
                 );
         }
 
@@ -108,6 +125,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.AuthenticatedWebMessaging != null)
                     hash = hash * 59 + this.AuthenticatedWebMessaging.GetHashCode();
+
+                if (this.WebTracking != null)
+                    hash = hash * 59 + this.WebTracking.GetHashCode();
 
                 return hash;
             }

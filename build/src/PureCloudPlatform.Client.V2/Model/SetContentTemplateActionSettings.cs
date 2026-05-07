@@ -29,10 +29,12 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <param name="SmsContentTemplateId">A String containing the SMS contentTemplateId. (required).</param>
         /// <param name="EmailContentTemplateId">A String containing the Email contentTemplateId. (required).</param>
-        public SetContentTemplateActionSettings(string SmsContentTemplateId = null, string EmailContentTemplateId = null)
+        /// <param name="WhatsAppContentTemplateId">A string containing the WhatsApp contentTemplateId. (required).</param>
+        public SetContentTemplateActionSettings(string SmsContentTemplateId = null, string EmailContentTemplateId = null, string WhatsAppContentTemplateId = null)
         {
             this.SmsContentTemplateId = SmsContentTemplateId;
             this.EmailContentTemplateId = EmailContentTemplateId;
+            this.WhatsAppContentTemplateId = WhatsAppContentTemplateId;
             
         }
         
@@ -55,6 +57,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string EmailContentTemplateId { get; set; }
 
 
+
+        /// <summary>
+        /// A string containing the WhatsApp contentTemplateId.
+        /// </summary>
+        /// <value>A string containing the WhatsApp contentTemplateId.</value>
+        [DataMember(Name="whatsAppContentTemplateId", EmitDefaultValue=false)]
+        public string WhatsAppContentTemplateId { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -66,6 +77,7 @@ namespace PureCloudPlatform.Client.V2.Model
 
             sb.Append("  SmsContentTemplateId: ").Append(SmsContentTemplateId).Append("\n");
             sb.Append("  EmailContentTemplateId: ").Append(EmailContentTemplateId).Append("\n");
+            sb.Append("  WhatsAppContentTemplateId: ").Append(WhatsAppContentTemplateId).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -115,6 +127,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.EmailContentTemplateId == other.EmailContentTemplateId ||
                     this.EmailContentTemplateId != null &&
                     this.EmailContentTemplateId.Equals(other.EmailContentTemplateId)
+                ) &&
+                (
+                    this.WhatsAppContentTemplateId == other.WhatsAppContentTemplateId ||
+                    this.WhatsAppContentTemplateId != null &&
+                    this.WhatsAppContentTemplateId.Equals(other.WhatsAppContentTemplateId)
                 );
         }
 
@@ -134,6 +151,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.EmailContentTemplateId != null)
                     hash = hash * 59 + this.EmailContentTemplateId.GetHashCode();
+
+                if (this.WhatsAppContentTemplateId != null)
+                    hash = hash * 59 + this.WhatsAppContentTemplateId.GetHashCode();
 
                 return hash;
             }

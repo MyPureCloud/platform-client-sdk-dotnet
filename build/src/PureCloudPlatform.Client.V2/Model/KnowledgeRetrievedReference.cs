@@ -25,12 +25,14 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Text">The matching text for search query..</param>
         /// <param name="FileName">The file name from which reference is retrieved.</param>
         /// <param name="Url">The url of the file..</param>
-        public KnowledgeRetrievedReference(double? Confidence = null, string Text = null, string FileName = null, string Url = null)
+        /// <param name="UsedForGeneration">Indicates whether a retrieved reference is used for answer generation.</param>
+        public KnowledgeRetrievedReference(double? Confidence = null, string Text = null, string FileName = null, string Url = null, bool? UsedForGeneration = null)
         {
             this.Confidence = Confidence;
             this.Text = Text;
             this.FileName = FileName;
             this.Url = Url;
+            this.UsedForGeneration = UsedForGeneration;
             
         }
         
@@ -71,6 +73,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public string Url { get; set; }
 
 
+
+        /// <summary>
+        /// Indicates whether a retrieved reference is used for answer generation
+        /// </summary>
+        /// <value>Indicates whether a retrieved reference is used for answer generation</value>
+        [DataMember(Name="usedForGeneration", EmitDefaultValue=false)]
+        public bool? UsedForGeneration { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +95,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Text: ").Append(Text).Append("\n");
             sb.Append("  FileName: ").Append(FileName).Append("\n");
             sb.Append("  Url: ").Append(Url).Append("\n");
+            sb.Append("  UsedForGeneration: ").Append(UsedForGeneration).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +155,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Url == other.Url ||
                     this.Url != null &&
                     this.Url.Equals(other.Url)
+                ) &&
+                (
+                    this.UsedForGeneration == other.UsedForGeneration ||
+                    this.UsedForGeneration != null &&
+                    this.UsedForGeneration.Equals(other.UsedForGeneration)
                 );
         }
 
@@ -168,6 +185,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Url != null)
                     hash = hash * 59 + this.Url.GetHashCode();
+
+                if (this.UsedForGeneration != null)
+                    hash = hash * 59 + this.UsedForGeneration.GetHashCode();
 
                 return hash;
             }

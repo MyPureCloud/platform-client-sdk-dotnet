@@ -127,7 +127,13 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Unknown for "Unknown"
             /// </summary>
             [EnumMember(Value = "Unknown")]
-            Unknown
+            Unknown,
+            
+            /// <summary>
+            /// Enum Cancelled for "Cancelled"
+            /// </summary>
+            [EnumMember(Value = "Cancelled")]
+            Cancelled
         }
         /// <summary>
         /// The status of the ingestion.

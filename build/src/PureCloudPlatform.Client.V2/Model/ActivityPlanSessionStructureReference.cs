@@ -18,12 +18,20 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class ActivityPlanSessionStructureReference :  IEquatable<ActivityPlanSessionStructureReference>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="ActivityPlanSessionStructureReference" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected ActivityPlanSessionStructureReference() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ActivityPlanSessionStructureReference" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="Users">The list of users to delete from this session.</param>
-        public ActivityPlanSessionStructureReference(List<UserReference> Users = null)
+        public ActivityPlanSessionStructureReference(string Id = null, List<UserReference> Users = null)
         {
+            this.Id = Id;
             this.Users = Users;
             
         }
@@ -35,7 +43,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

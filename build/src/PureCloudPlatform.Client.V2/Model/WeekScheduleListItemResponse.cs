@@ -18,17 +18,25 @@ namespace PureCloudPlatform.Client.V2.Model
     [DataContract]
     public partial class WeekScheduleListItemResponse :  IEquatable<WeekScheduleListItemResponse>
     {
+
         /// <summary>
         /// Initializes a new instance of the <see cref="WeekScheduleListItemResponse" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected WeekScheduleListItemResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="WeekScheduleListItemResponse" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="WeekDate">First day of this week schedule in yyyy-MM-dd format.</param>
         /// <param name="Description">Description of the week schedule.</param>
         /// <param name="Published">Whether the week schedule is published.</param>
         /// <param name="GenerationResults">Summary of the results from the schedule run.</param>
         /// <param name="ShortTermForecast">Short term forecast associated with this schedule.</param>
         /// <param name="Metadata">Version metadata for this work plan.</param>
-        public WeekScheduleListItemResponse(string WeekDate = null, string Description = null, bool? Published = null, WeekScheduleGenerationResult GenerationResults = null, ShortTermForecastReference ShortTermForecast = null, WfmVersionedEntityMetadata Metadata = null)
+        public WeekScheduleListItemResponse(string Id = null, string WeekDate = null, string Description = null, bool? Published = null, WeekScheduleGenerationResult GenerationResults = null, ShortTermForecastReference ShortTermForecast = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.WeekDate = WeekDate;
             this.Description = Description;
             this.Published = Published;
@@ -45,7 +53,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

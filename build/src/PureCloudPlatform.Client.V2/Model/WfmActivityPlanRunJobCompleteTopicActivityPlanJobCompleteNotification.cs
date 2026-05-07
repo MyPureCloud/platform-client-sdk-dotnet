@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification
+    /// WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification
     /// </summary>
     [DataContract]
-    public partial class WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification :  IEquatable<WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification>
+    public partial class WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification :  IEquatable<WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification>
     {
         /// <summary>
         /// Gets or Sets Type
@@ -42,7 +42,31 @@ namespace PureCloudPlatform.Client.V2.Model
             /// Enum Deleteoccurrence for "DeleteOccurrence"
             /// </summary>
             [EnumMember(Value = "DeleteOccurrence")]
-            Deleteoccurrence
+            Deleteoccurrence,
+            
+            /// <summary>
+            /// Enum Deleteactivityplan for "DeleteActivityPlan"
+            /// </summary>
+            [EnumMember(Value = "DeleteActivityPlan")]
+            Deleteactivityplan,
+            
+            /// <summary>
+            /// Enum Deleteoccurrences for "DeleteOccurrences"
+            /// </summary>
+            [EnumMember(Value = "DeleteOccurrences")]
+            Deleteoccurrences,
+            
+            /// <summary>
+            /// Enum Deletesessions for "DeleteSessions"
+            /// </summary>
+            [EnumMember(Value = "DeleteSessions")]
+            Deletesessions,
+            
+            /// <summary>
+            /// Enum Deletesessionusers for "DeleteSessionUsers"
+            /// </summary>
+            [EnumMember(Value = "DeleteSessionUsers")]
+            Deletesessionusers
         }
         /// <summary>
         /// Gets or Sets Status
@@ -87,7 +111,7 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification" /> class.
+        /// Initializes a new instance of the <see cref="WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
         /// <param name="Type">Type.</param>
@@ -95,8 +119,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Status">Status.</param>
         /// <param name="Exceptions">Exceptions.</param>
         /// <param name="Error">Error.</param>
-        /// <param name="Occurrence">Occurrence.</param>
-        public WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification(string Id = null, TypeEnum? Type = null, WfmActivityPlanJobCompleteTopicActivityPlanReference ActivityPlan = null, StatusEnum? Status = null, List<WfmActivityPlanJobCompleteTopicActivityPlanJobException> Exceptions = null, WfmActivityPlanJobCompleteTopicErrorBody Error = null, WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference Occurrence = null)
+        public WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification(string Id = null, TypeEnum? Type = null, WfmActivityPlanRunJobCompleteTopicActivityPlanReference ActivityPlan = null, StatusEnum? Status = null, List<WfmActivityPlanRunJobCompleteTopicActivityPlanJobException> Exceptions = null, WfmActivityPlanRunJobCompleteTopicErrorBody Error = null)
         {
             this.Id = Id;
             this.Type = Type;
@@ -104,7 +127,6 @@ namespace PureCloudPlatform.Client.V2.Model
             this.Status = Status;
             this.Exceptions = Exceptions;
             this.Error = Error;
-            this.Occurrence = Occurrence;
             
         }
         
@@ -124,7 +146,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets ActivityPlan
         /// </summary>
         [DataMember(Name="activityPlan", EmitDefaultValue=false)]
-        public WfmActivityPlanJobCompleteTopicActivityPlanReference ActivityPlan { get; set; }
+        public WfmActivityPlanRunJobCompleteTopicActivityPlanReference ActivityPlan { get; set; }
 
 
 
@@ -134,7 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Exceptions
         /// </summary>
         [DataMember(Name="exceptions", EmitDefaultValue=false)]
-        public List<WfmActivityPlanJobCompleteTopicActivityPlanJobException> Exceptions { get; set; }
+        public List<WfmActivityPlanRunJobCompleteTopicActivityPlanJobException> Exceptions { get; set; }
 
 
 
@@ -142,15 +164,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Gets or Sets Error
         /// </summary>
         [DataMember(Name="error", EmitDefaultValue=false)]
-        public WfmActivityPlanJobCompleteTopicErrorBody Error { get; set; }
-
-
-
-        /// <summary>
-        /// Gets or Sets Occurrence
-        /// </summary>
-        [DataMember(Name="occurrence", EmitDefaultValue=false)]
-        public WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference Occurrence { get; set; }
+        public WfmActivityPlanRunJobCompleteTopicErrorBody Error { get; set; }
 
 
         /// <summary>
@@ -160,7 +174,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification {\n");
+            sb.Append("class WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Type: ").Append(Type).Append("\n");
@@ -168,7 +182,6 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Exceptions: ").Append(Exceptions).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
-            sb.Append("  Occurrence: ").Append(Occurrence).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -194,15 +207,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification);
+            return this.Equals(obj as WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification);
         }
 
         /// <summary>
-        /// Returns true if WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification instances are equal
+        /// Returns true if WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification instances are equal
         /// </summary>
-        /// <param name="other">Instance of WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification to be compared</param>
+        /// <param name="other">Instance of WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification other)
+        public bool Equals(WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -238,11 +251,6 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Error == other.Error ||
                     this.Error != null &&
                     this.Error.Equals(other.Error)
-                ) &&
-                (
-                    this.Occurrence == other.Occurrence ||
-                    this.Occurrence != null &&
-                    this.Occurrence.Equals(other.Occurrence)
                 );
         }
 
@@ -274,9 +282,6 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();
-
-                if (this.Occurrence != null)
-                    hash = hash * 59 + this.Occurrence.GetHashCode();
 
                 return hash;
             }

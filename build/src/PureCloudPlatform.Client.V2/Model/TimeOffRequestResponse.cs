@@ -150,9 +150,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The substatus of this time off request</value>
         [DataMember(Name="substatus", EmitDefaultValue=false)]
         public SubstatusEnum? Substatus { get; set; }
+
         /// <summary>
         /// Initializes a new instance of the <see cref="TimeOffRequestResponse" /> class.
         /// </summary>
+        [JsonConstructorAttribute]
+        protected TimeOffRequestResponse() { }
+        /// <summary>
+        /// Initializes a new instance of the <see cref="TimeOffRequestResponse" /> class.
+        /// </summary>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="User">The user associated with this time off request.</param>
         /// <param name="IsFullDayRequest">Whether this is a full day request (false means partial day).</param>
         /// <param name="MarkedAsRead">Whether this request has been marked as read by the agent.</param>
@@ -174,8 +181,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ModifiedDate">The timestamp when this request was last modified. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z.</param>
         /// <param name="SyncVersion">The sync version of this time off request for which the scheduled activity is associated.</param>
         /// <param name="Metadata">The version metadata of the time off request.</param>
-        public TimeOffRequestResponse(UserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, string Notes = null, UserReference SubmittedBy = null, DateTime? SubmittedDate = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null, int? SyncVersion = null, WfmVersionedEntityMetadata Metadata = null)
+        public TimeOffRequestResponse(string Id = null, UserReference User = null, bool? IsFullDayRequest = null, bool? MarkedAsRead = null, string ActivityCodeId = null, bool? Paid = null, StatusEnum? Status = null, SubstatusEnum? Substatus = null, List<DateTime?> PartialDayStartDateTimes = null, List<string> FullDayManagementUnitDates = null, int? DailyDurationMinutes = null, List<int?> DurationMinutes = null, List<int?> PayableMinutes = null, string Notes = null, UserReference SubmittedBy = null, DateTime? SubmittedDate = null, UserReference ReviewedBy = null, DateTime? ReviewedDate = null, UserReference ModifiedBy = null, DateTime? ModifiedDate = null, int? SyncVersion = null, WfmVersionedEntityMetadata Metadata = null)
         {
+            this.Id = Id;
             this.User = User;
             this.IsFullDayRequest = IsFullDayRequest;
             this.MarkedAsRead = MarkedAsRead;
@@ -207,7 +215,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
-        public string Id { get; private set; }
+        public string Id { get; set; }
 
 
 

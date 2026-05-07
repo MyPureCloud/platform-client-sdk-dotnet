@@ -482,6 +482,7 @@ docs/BatchDownloadJobSubmission.md
 docs/BatchDownloadJobSubmissionResult.md
 docs/BatchDownloadRequest.md
 docs/BatchEventResponse.md
+docs/BatchPredictiveRoutingCustomKpiAttributionEventRequest.md
 docs/BatchUserPresenceEventRequest.md
 docs/BatchUserRoutingStatusEventRequest.md
 docs/BenefitAssessment.md
@@ -874,6 +875,8 @@ docs/CaseplanCreateResponse.md
 docs/CaseplanDataSchema.md
 docs/CaseplanDataSchemaListing.md
 docs/CaseplanListing.md
+docs/CaseplanQueryEntityListing.md
+docs/CaseplanQueryRequest.md
 docs/CaseplanReference.md
 docs/CaseplanUpdate.md
 docs/CategoriesEntityListing.md
@@ -1296,6 +1299,7 @@ docs/ConversationContentListPicker.md
 docs/ConversationContentListPickerItem.md
 docs/ConversationContentListPickerSection.md
 docs/ConversationContentLocation.md
+docs/ConversationContentNotificationResponse.md
 docs/ConversationContentNotificationTemplate.md
 docs/ConversationContentPaymentRequest.md
 docs/ConversationContentPaymentResponse.md
@@ -1616,8 +1620,11 @@ docs/CopilotAsyncAggregateQueryResponse.md
 docs/CopilotAsyncAggregationQuery.md
 docs/CopilotCondition.md
 docs/CopilotContext.md
+docs/CopilotContextEntity.md
 docs/CopilotContextFilter.md
 docs/CopilotContextValue.md
+docs/CopilotContextValueItem.md
+docs/CopilotContextValues.md
 docs/CopilotFallbackAction.md
 docs/CopilotNluDomain.md
 docs/CopilotNluDomainVersion.md
@@ -2181,6 +2188,7 @@ docs/DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/DeleteUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/DeleteUsersCustomattributesSchema-example.txt
 docs/DeleteUsersRule-example.txt
+docs/DeleteUsersStationsMeAssociatedstation-example.txt
 docs/DeleteVoicemailMessage-example.txt
 docs/DeleteVoicemailMessages-example.txt
 docs/DeleteWebchatDeployment-example.txt
@@ -2271,6 +2279,9 @@ docs/DialerCampaignScheduleConfigChangeRecurrenceRange.md
 docs/DialerCampaignScheduleConfigChangeScheduleInterval.md
 docs/DialerCampaignScheduleConfigChangeScheduleRecurrence.md
 docs/DialerCampaignScheduleConfigChangeUriReference.md
+docs/DialerCampaignSkillCombinationStatsEventCampaignSkillCombinationStats.md
+docs/DialerCampaignSkillCombinationStatsEventSkillCombinationDetailNotification.md
+docs/DialerCampaignSkillCombinationStatsEventUriReference.md
 docs/DialerContact.md
 docs/DialerContactId.md
 docs/DialerContactlistConfigChangeContactList.md
@@ -3293,6 +3304,7 @@ docs/GetContentmanagementWorkspaceTagvalues-example.txt
 docs/GetContentmanagementWorkspaces-example.txt
 docs/GetContestsEssentialsListing.md
 docs/GetConversation-example.txt
+docs/GetConversationAssistantCopilotcontext-example.txt
 docs/GetConversationCommunicationAgentchecklist-example.txt
 docs/GetConversationCommunicationAgentchecklistJob-example.txt
 docs/GetConversationCommunicationAgentchecklists-example.txt
@@ -4413,6 +4425,7 @@ docs/GetUsersRules-example.txt
 docs/GetUsersRulesSetting-example.txt
 docs/GetUsersSearch-example.txt
 docs/GetUsersSearch-example.txt
+docs/GetUsersStationsMe-example.txt
 docs/GetVoicemailGroupMailbox-example.txt
 docs/GetVoicemailGroupMessages-example.txt
 docs/GetVoicemailGroupPolicy-example.txt
@@ -4696,6 +4709,7 @@ docs/IVRDivisionView.md
 docs/IVRDivisionViewEntityListing.md
 docs/IVREntityListing.md
 docs/IVRIdentityResolutionConfig.md
+docs/Icon.md
 docs/IdentifierClaimRequest.md
 docs/IdentityNow.md
 docs/IdentityProvider.md
@@ -5293,6 +5307,7 @@ docs/ListAlternativeShiftTradesResponse.md
 docs/ListPicker.md
 docs/ListPickerItem.md
 docs/ListPickerSection.md
+docs/ListValues.md
 docs/ListWrapperAgentWorkPlanField.md
 docs/ListWrapperAlternativeShiftBuSettingsActivityCategory.md
 docs/ListWrapperAlternativeShiftBuSettingsGranularity.md
@@ -5803,7 +5818,11 @@ docs/OutcomeScore.md
 docs/OutcomeScoresResult.md
 docs/OutgoingMessageRequest.md
 docs/OutgoingMessageResponse.md
+docs/Outlier.md
+docs/OutlierData.md
 docs/OutlierInfo.md
+docs/OutlierResultBody.md
+docs/OutlierResultTemplate.md
 docs/OutputValue.md
 docs/OverallBestPoints.md
 docs/OverallBestPointsItem.md
@@ -5915,6 +5934,7 @@ docs/PatchConversationsMessage-example.txt
 docs/PatchConversationsMessageParticipant-example.txt
 docs/PatchConversationsMessageParticipantAttributes-example.txt
 docs/PatchConversationsMessageParticipantCommunication-example.txt
+docs/PatchConversationsMessageParticipantParkingstate-example.txt
 docs/PatchConversationsMessagingIntegrationsAppleIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsFacebookIntegrationId-example.txt
 docs/PatchConversationsMessagingIntegrationsInstagramIntegrationId-example.txt
@@ -6337,6 +6357,7 @@ docs/PostCasemanagementCaseTerminateJobs-example.txt
 docs/PostCasemanagementCaseplanPublish-example.txt
 docs/PostCasemanagementCaseplanVersions-example.txt
 docs/PostCasemanagementCaseplans-example.txt
+docs/PostCasemanagementCaseplansQuery-example.txt
 docs/PostCasemanagementCases-example.txt
 docs/PostCasemanagementCasesAssociationsQuery-example.txt
 docs/PostCertificateDetails-example.txt
@@ -6475,6 +6496,7 @@ docs/PostEmployeeengagementRecognitions-example.txt
 docs/PostEmployeeperformanceExternalmetricsData-example.txt
 docs/PostEmployeeperformanceExternalmetricsDefinitions-example.txt
 docs/PostEventsConversations-example.txt
+docs/PostEventsRoutingCustomkpiattributions-example.txt
 docs/PostEventsUsersPresence-example.txt
 docs/PostEventsUsersRoutingstatus-example.txt
 docs/PostExternalcontactsBulkContacts-example.txt
@@ -6533,6 +6555,7 @@ docs/PostFlowsActionsPublish-example.txt
 docs/PostFlowsActionsRevert-example.txt
 docs/PostFlowsActionsUnlock-example.txt
 docs/PostFlowsDatatableExportJobs-example.txt
+docs/PostFlowsDatatableImportCsvJobs-example.txt
 docs/PostFlowsDatatableImportJobs-example.txt
 docs/PostFlowsDatatableRows-example.txt
 docs/PostFlowsDatatables-example.txt
@@ -7075,6 +7098,7 @@ docs/PostWorkforcemanagementUnavailabletimesQuery-example.txt
 docs/PostWorkforcemanagementUnavailabletimesValidationJobs-example.txt
 docs/PredictionResults.md
 docs/PredictiveRouting.md
+docs/PredictiveRoutingCustomKpiAttributionEvent.md
 docs/Predictor.md
 docs/PredictorListing.md
 docs/PredictorModel.md
@@ -7413,6 +7437,7 @@ docs/PutUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/PutUsersAgentuiAgentsAutoanswerAgentIdSettings-example.txt
 docs/PutUsersCustomattributesSchema-example.txt
 docs/PutUsersPresencesBulk-example.txt
+docs/PutUsersStationsMeAssociatedstationStationId-example.txt
 docs/PutVoicemailMessage-example.txt
 docs/PutVoicemailPolicy-example.txt
 docs/PutVoicemailUserpolicy-example.txt
@@ -8287,6 +8312,7 @@ docs/SocialMediaAsyncDetailQuery.md
 docs/SocialMediaAsyncDetailQueryResponse.md
 docs/SocialMediaDetailDataContainer.md
 docs/SocialMediaDetailMessageContainer.md
+docs/SocialMediaEngagement.md
 docs/SocialMediaMessageData.md
 docs/SocialMediaMessageEscalationInfo.md
 docs/SocialMediaQueryClause.md
@@ -8578,6 +8604,7 @@ docs/TextMessageListing.md
 docs/TextStyleProperties.md
 docs/TextbotsApi.json
 docs/TextbotsApi.md
+docs/ThirdPartySuggestion.md
 docs/Ticker.md
 docs/TimeAllowed.md
 docs/TimeAndDateSubCondition.md
@@ -9088,7 +9115,9 @@ docs/V2WfmMainForecastExportSnapshotEventMainForecastExportNotification.md
 docs/V3KnowledgeSearchClientApplication.md
 docs/V3SourceCreateRequest.md
 docs/V3SourceDetailedResponse.md
-docs/V3SourceDetailedWithErrorResponse.md
+docs/V3SourceExpandableListResponse.md
+docs/V3SourceExpandableListing.md
+docs/V3SourceExpandableResponse.md
 docs/V3SourceFilter.md
 docs/V3SourceFilterDetails.md
 docs/V3SourceFolderDetails.md
@@ -9097,8 +9126,6 @@ docs/V3SourceRef.md
 docs/V3SourceScheduleSettings.md
 docs/V3SourceSiteDetails.md
 docs/V3SourceUpdateRequest.md
-docs/V3SourceWithErrorListing.md
-docs/V3SourceWithErrorResponse.md
 docs/V3StartManualSyncRequest.md
 docs/V3Synchronization.md
 docs/V3SynchronizationListing.md
@@ -9245,15 +9272,17 @@ docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlot.m
 docs/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlotSchedule.md
 docs/WemCoachingUserNotificationTopicCoachingAppointmentReference.md
 docs/WemCoachingUserNotificationTopicCoachingUserNotification.md
+docs/WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification.md
 docs/WfmActivityPlanJobCompleteTopicActivityPlanJobException.md
-docs/WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification.md
 docs/WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference.md
 docs/WfmActivityPlanJobCompleteTopicActivityPlanReference.md
+docs/WfmActivityPlanJobCompleteTopicActivityPlanSessionReference.md
 docs/WfmActivityPlanJobCompleteTopicErrorBody.md
+docs/WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanJobException.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference.md
 docs/WfmActivityPlanRunJobCompleteTopicActivityPlanReference.md
-docs/WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification.md
+docs/WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference.md
 docs/WfmActivityPlanRunJobCompleteTopicErrorBody.md
 docs/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification.md
 docs/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification.md
@@ -10231,6 +10260,7 @@ src/PureCloudPlatform.Client.V2/Model/BatchDownloadJobSubmission.cs
 src/PureCloudPlatform.Client.V2/Model/BatchDownloadJobSubmissionResult.cs
 src/PureCloudPlatform.Client.V2/Model/BatchDownloadRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BatchEventResponse.cs
+src/PureCloudPlatform.Client.V2/Model/BatchPredictiveRoutingCustomKpiAttributionEventRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BatchUserPresenceEventRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BatchUserRoutingStatusEventRequest.cs
 src/PureCloudPlatform.Client.V2/Model/BenefitAssessment.cs
@@ -10615,6 +10645,8 @@ src/PureCloudPlatform.Client.V2/Model/CaseplanCreateResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanDataSchema.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanDataSchemaListing.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanListing.cs
+src/PureCloudPlatform.Client.V2/Model/CaseplanQueryEntityListing.cs
+src/PureCloudPlatform.Client.V2/Model/CaseplanQueryRequest.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanReference.cs
 src/PureCloudPlatform.Client.V2/Model/CaseplanUpdate.cs
 src/PureCloudPlatform.Client.V2/Model/CategoriesEntityListing.cs
@@ -11031,6 +11063,7 @@ src/PureCloudPlatform.Client.V2/Model/ConversationContentListPicker.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentListPickerItem.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentListPickerSection.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentLocation.cs
+src/PureCloudPlatform.Client.V2/Model/ConversationContentNotificationResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentNotificationTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentPaymentRequest.cs
 src/PureCloudPlatform.Client.V2/Model/ConversationContentPaymentResponse.cs
@@ -11349,8 +11382,11 @@ src/PureCloudPlatform.Client.V2/Model/CopilotAsyncAggregateQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotAsyncAggregationQuery.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotCondition.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotContext.cs
+src/PureCloudPlatform.Client.V2/Model/CopilotContextEntity.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotContextFilter.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotContextValue.cs
+src/PureCloudPlatform.Client.V2/Model/CopilotContextValueItem.cs
+src/PureCloudPlatform.Client.V2/Model/CopilotContextValues.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotFallbackAction.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotNluDomain.cs
 src/PureCloudPlatform.Client.V2/Model/CopilotNluDomainVersion.cs
@@ -11639,6 +11675,9 @@ src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeRecurren
 src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeScheduleInterval.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeScheduleRecurrence.cs
 src/PureCloudPlatform.Client.V2/Model/DialerCampaignScheduleConfigChangeUriReference.cs
+src/PureCloudPlatform.Client.V2/Model/DialerCampaignSkillCombinationStatsEventCampaignSkillCombinationStats.cs
+src/PureCloudPlatform.Client.V2/Model/DialerCampaignSkillCombinationStatsEventSkillCombinationDetailNotification.cs
+src/PureCloudPlatform.Client.V2/Model/DialerCampaignSkillCombinationStatsEventUriReference.cs
 src/PureCloudPlatform.Client.V2/Model/DialerContact.cs
 src/PureCloudPlatform.Client.V2/Model/DialerContactId.cs
 src/PureCloudPlatform.Client.V2/Model/DialerContactlistConfigChangeContactList.cs
@@ -12505,6 +12544,7 @@ src/PureCloudPlatform.Client.V2/Model/IVRDivisionView.cs
 src/PureCloudPlatform.Client.V2/Model/IVRDivisionViewEntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/IVREntityListing.cs
 src/PureCloudPlatform.Client.V2/Model/IVRIdentityResolutionConfig.cs
+src/PureCloudPlatform.Client.V2/Model/Icon.cs
 src/PureCloudPlatform.Client.V2/Model/IdentifierClaimRequest.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityNow.cs
 src/PureCloudPlatform.Client.V2/Model/IdentityProvider.cs
@@ -13082,6 +13122,7 @@ src/PureCloudPlatform.Client.V2/Model/ListAlternativeShiftTradesResponse.cs
 src/PureCloudPlatform.Client.V2/Model/ListPicker.cs
 src/PureCloudPlatform.Client.V2/Model/ListPickerItem.cs
 src/PureCloudPlatform.Client.V2/Model/ListPickerSection.cs
+src/PureCloudPlatform.Client.V2/Model/ListValues.cs
 src/PureCloudPlatform.Client.V2/Model/ListWrapperAgentWorkPlanField.cs
 src/PureCloudPlatform.Client.V2/Model/ListWrapperAlternativeShiftBuSettingsActivityCategory.cs
 src/PureCloudPlatform.Client.V2/Model/ListWrapperAlternativeShiftBuSettingsGranularity.cs
@@ -13570,7 +13611,11 @@ src/PureCloudPlatform.Client.V2/Model/OutcomeScore.cs
 src/PureCloudPlatform.Client.V2/Model/OutcomeScoresResult.cs
 src/PureCloudPlatform.Client.V2/Model/OutgoingMessageRequest.cs
 src/PureCloudPlatform.Client.V2/Model/OutgoingMessageResponse.cs
+src/PureCloudPlatform.Client.V2/Model/Outlier.cs
+src/PureCloudPlatform.Client.V2/Model/OutlierData.cs
 src/PureCloudPlatform.Client.V2/Model/OutlierInfo.cs
+src/PureCloudPlatform.Client.V2/Model/OutlierResultBody.cs
+src/PureCloudPlatform.Client.V2/Model/OutlierResultTemplate.cs
 src/PureCloudPlatform.Client.V2/Model/OutputValue.cs
 src/PureCloudPlatform.Client.V2/Model/OverallBestPoints.cs
 src/PureCloudPlatform.Client.V2/Model/OverallBestPointsItem.cs
@@ -13714,6 +13759,7 @@ src/PureCloudPlatform.Client.V2/Model/PostTextRequest.cs
 src/PureCloudPlatform.Client.V2/Model/PostTextResponse.cs
 src/PureCloudPlatform.Client.V2/Model/PredictionResults.cs
 src/PureCloudPlatform.Client.V2/Model/PredictiveRouting.cs
+src/PureCloudPlatform.Client.V2/Model/PredictiveRoutingCustomKpiAttributionEvent.cs
 src/PureCloudPlatform.Client.V2/Model/Predictor.cs
 src/PureCloudPlatform.Client.V2/Model/PredictorListing.cs
 src/PureCloudPlatform.Client.V2/Model/PredictorModel.cs
@@ -14626,6 +14672,7 @@ src/PureCloudPlatform.Client.V2/Model/SocialMediaAsyncDetailQuery.cs
 src/PureCloudPlatform.Client.V2/Model/SocialMediaAsyncDetailQueryResponse.cs
 src/PureCloudPlatform.Client.V2/Model/SocialMediaDetailDataContainer.cs
 src/PureCloudPlatform.Client.V2/Model/SocialMediaDetailMessageContainer.cs
+src/PureCloudPlatform.Client.V2/Model/SocialMediaEngagement.cs
 src/PureCloudPlatform.Client.V2/Model/SocialMediaMessageData.cs
 src/PureCloudPlatform.Client.V2/Model/SocialMediaMessageEscalationInfo.cs
 src/PureCloudPlatform.Client.V2/Model/SocialMediaQueryClause.cs
@@ -14901,6 +14948,7 @@ src/PureCloudPlatform.Client.V2/Model/TextBotWaitForInputAction.cs
 src/PureCloudPlatform.Client.V2/Model/TextBotsRichMediaInputEvent.cs
 src/PureCloudPlatform.Client.V2/Model/TextMessageListing.cs
 src/PureCloudPlatform.Client.V2/Model/TextStyleProperties.cs
+src/PureCloudPlatform.Client.V2/Model/ThirdPartySuggestion.cs
 src/PureCloudPlatform.Client.V2/Model/Ticker.cs
 src/PureCloudPlatform.Client.V2/Model/TimeAllowed.cs
 src/PureCloudPlatform.Client.V2/Model/TimeAndDateSubCondition.cs
@@ -15397,7 +15445,9 @@ src/PureCloudPlatform.Client.V2/Model/V2WfmMainForecastExportSnapshotEventMainFo
 src/PureCloudPlatform.Client.V2/Model/V3KnowledgeSearchClientApplication.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceCreateRequest.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceDetailedResponse.cs
-src/PureCloudPlatform.Client.V2/Model/V3SourceDetailedWithErrorResponse.cs
+src/PureCloudPlatform.Client.V2/Model/V3SourceExpandableListResponse.cs
+src/PureCloudPlatform.Client.V2/Model/V3SourceExpandableListing.cs
+src/PureCloudPlatform.Client.V2/Model/V3SourceExpandableResponse.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceFilter.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceFilterDetails.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceFolderDetails.cs
@@ -15406,8 +15456,6 @@ src/PureCloudPlatform.Client.V2/Model/V3SourceRef.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceScheduleSettings.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceSiteDetails.cs
 src/PureCloudPlatform.Client.V2/Model/V3SourceUpdateRequest.cs
-src/PureCloudPlatform.Client.V2/Model/V3SourceWithErrorListing.cs
-src/PureCloudPlatform.Client.V2/Model/V3SourceWithErrorResponse.cs
 src/PureCloudPlatform.Client.V2/Model/V3StartManualSyncRequest.cs
 src/PureCloudPlatform.Client.V2/Model/V3Synchronization.cs
 src/PureCloudPlatform.Client.V2/Model/V3SynchronizationListing.cs
@@ -15546,15 +15594,17 @@ src/PureCloudPlatform.Client.V2/Model/WemCoachingScheduleSlotJobCompleteTopicCoa
 src/PureCloudPlatform.Client.V2/Model/WemCoachingScheduleSlotJobCompleteTopicCoachingScheduleSlotJobResultsSlotSchedule.cs
 src/PureCloudPlatform.Client.V2/Model/WemCoachingUserNotificationTopicCoachingAppointmentReference.cs
 src/PureCloudPlatform.Client.V2/Model/WemCoachingUserNotificationTopicCoachingUserNotification.cs
+src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanJobCompleteTopicActivityPlanJobCompleteNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanJobCompleteTopicActivityPlanJobException.cs
-src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceDeletionJobCompleteNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanJobCompleteTopicActivityPlanOccurrenceReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanJobCompleteTopicActivityPlanReference.cs
+src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanJobCompleteTopicActivityPlanSessionReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanJobCompleteTopicErrorBody.cs
+src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanRunJobCompleteTopicActivityPlanJobCompleteNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanRunJobCompleteTopicActivityPlanJobException.cs
 src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanRunJobCompleteTopicActivityPlanOccurrenceReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanRunJobCompleteTopicActivityPlanReference.cs
-src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanRunJobCompleteTopicActivityPlanRunJobCompleteNotification.cs
+src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanRunJobCompleteTopicActivityPlanSessionReference.cs
 src/PureCloudPlatform.Client.V2/Model/WfmActivityPlanRunJobCompleteTopicErrorBody.cs
 src/PureCloudPlatform.Client.V2/Model/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationChangedNotification.cs
 src/PureCloudPlatform.Client.V2/Model/WfmAdherenceExplanationJobCompleteTopicAdherenceExplanationJobNotification.cs

@@ -128,7 +128,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostFlowsActionsRevert**](#PostFlowsActionsRevert) | **Post** /api/v2/flows/actions/revert | Revert flow |
 | [**PostFlowsActionsUnlock**](#PostFlowsActionsUnlock) | **Post** /api/v2/flows/actions/unlock | Unlock flow |
 | [**PostFlowsDatatableExportJobs**](#PostFlowsDatatableExportJobs) | **Post** /api/v2/flows/datatables/{datatableId}/export/jobs | Begin an export process for exporting all rows from a datatable |
-| [**PostFlowsDatatableImportJobs**](#PostFlowsDatatableImportJobs) | **Post** /api/v2/flows/datatables/{datatableId}/import/jobs | Begin an import process for importing rows into a datatable |
+| [**PostFlowsDatatableImportCsvJobs**](#PostFlowsDatatableImportCsvJobs) | **Post** /api/v2/flows/datatables/{datatableId}/import/csv/jobs | Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned &#39;uploadURI&#39; field. Headers for the PUT request must contain all headers contained in the returned &#39;uploadHeaders&#39; field. |
+| [**PostFlowsDatatableImportJobs**](#PostFlowsDatatableImportJobs) | **Post** /api/v2/flows/datatables/{datatableId}/import/jobs | Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead |
 | [**PostFlowsDatatableRows**](#PostFlowsDatatableRows) | **Post** /api/v2/flows/datatables/{datatableId}/rows | Create a new row entry for the datatable. |
 | [**PostFlowsDatatables**](#PostFlowsDatatables) | **Post** /api/v2/flows/datatables | Create a new datatable with the specified json-schema definition |
 | [**PostFlowsExecutions**](#PostFlowsExecutions) | **Post** /api/v2/flows/executions | Launch an instance of a flow definition, for flow types that support it such as the &#39;workflow&#39; type. |
@@ -8334,12 +8335,82 @@ namespace Example
 [**DataTableExportJob**](DataTableExportJob)
 
 
+## PostFlowsDatatableImportCsvJobs
+
+> [**DataTableImportJob**](DataTableImportJob) PostFlowsDatatableImportCsvJobs (string datatableId, DataTableImportJob body)
+
+
+Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned 'uploadURI' field. Headers for the PUT request must contain all headers contained in the returned 'uploadHeaders' field.
+
+Create an import job for importing rows from a CSV file. The caller can then poll for status of the import using the token returned in the response
+
+Requires ANY permissions: 
+
+* architect:datatable:edit
+* architect:datatableRow:add
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostFlowsDatatableImportCsvJobsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ArchitectApi();
+            var datatableId = datatableId_example;  // string | id of datatable
+            var body = new DataTableImportJob(); // DataTableImportJob | import job information
+
+            try
+            { 
+                // Begin an import process for importing rows from a CSV file into a datatable. CSV file is uploaded by performing a PUT request against the URL in the returned 'uploadURI' field. Headers for the PUT request must contain all headers contained in the returned 'uploadHeaders' field.
+                DataTableImportJob result = apiInstance.PostFlowsDatatableImportCsvJobs(datatableId, body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ArchitectApi.PostFlowsDatatableImportCsvJobs: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **datatableId** | **string**| id of datatable |  |
+| **body** | [**DataTableImportJob**](DataTableImportJob)| import job information |  |
+
+### Return type
+
+[**DataTableImportJob**](DataTableImportJob)
+
+
 ## PostFlowsDatatableImportJobs
 
 > [**DataTableImportJob**](DataTableImportJob) PostFlowsDatatableImportJobs (string datatableId, DataTableImportJob body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Begin an import process for importing rows into a datatable
+Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead
 
 Create an import job for importing rows. The caller can then poll for status of the import using the token returned in the response
 
@@ -8375,7 +8446,7 @@ namespace Example
 
             try
             { 
-                // Begin an import process for importing rows into a datatable
+                // Begin an import process for importing rows into a datatable. Apps should migrate to use POST /api/v2/flows/datatables/{datatableId}/import/csv/jobs instead
                 DataTableImportJob result = apiInstance.PostFlowsDatatableImportJobs(datatableId, body);
                 Debug.WriteLine(result);
             }
@@ -9957,4 +10028,4 @@ namespace Example
 [**Operation**](Operation)
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

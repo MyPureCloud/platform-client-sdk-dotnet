@@ -63,15 +63,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="Interval">Behaves like one clause in a SQL WHERE. Specifies the date and time range of data being queried. Intervals are represented as an ISO-8601 string. For example: YYYY-MM-DDThh:mm:ss/YYYY-MM-DDThh:mm:ss (required).</param>
         /// <param name="TimeZone">Time zone context used to calculate response intervals (this allows resolving DST changes). The interval offset is used even when timeZone is specified. Default is UTC. Time zones are represented as a string of the zone name as found in the IANA time zone database. For example: UTC, Etc/UTC, or Europe/London.</param>
         /// <param name="Filter">Behaves like a SQL WHERE clause. This is ANDed with the interval parameter. Expresses boolean logical predicates as well as dimensional filters.</param>
-        /// <param name="TopicIds">List of topicIds to query in.</param>
         /// <param name="PageSize">The number of results per page.</param>
         /// <param name="Order">Deprecated: use &#39;sort&#39; field instead. Sorting of results based on time.</param>
-        public SocialMediaAsyncDetailQuery(string Interval = null, string TimeZone = null, SocialMediaQueryFilter Filter = null, List<string> TopicIds = null, int? PageSize = null, OrderEnum? Order = null)
+        public SocialMediaAsyncDetailQuery(string Interval = null, string TimeZone = null, SocialMediaQueryFilter Filter = null, int? PageSize = null, OrderEnum? Order = null)
         {
             this.Interval = Interval;
             this.TimeZone = TimeZone;
             this.Filter = Filter;
-            this.TopicIds = TopicIds;
             this.PageSize = PageSize;
             this.Order = Order;
             
@@ -111,7 +109,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// </summary>
         /// <value>List of topicIds to query in</value>
         [DataMember(Name="topicIds", EmitDefaultValue=false)]
-        public List<string> TopicIds { get; set; }
+        public List<string> TopicIds { get; private set; }
 
 
 

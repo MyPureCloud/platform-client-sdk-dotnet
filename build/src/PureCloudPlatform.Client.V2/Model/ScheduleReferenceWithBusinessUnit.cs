@@ -27,7 +27,7 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="ScheduleReferenceWithBusinessUnit" /> class.
         /// </summary>
-        /// <param name="Id">The unique identifier of the schedule (required).</param>
+        /// <param name="Id">The globally unique identifier for the object. (required).</param>
         /// <param name="WeekDate">The start date for this schedule in the business unit time zone (yyyy-MM-dd format). Dates are represented as an ISO-8601 string. For example: yyyy-MM-dd (required).</param>
         /// <param name="BusinessUnit">The reference of the associated business unit (required).</param>
         public ScheduleReferenceWithBusinessUnit(string Id = null, String WeekDate = null, BusinessUnitReference BusinessUnit = null)
@@ -41,9 +41,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
-        /// The unique identifier of the schedule
+        /// The globally unique identifier for the object.
         /// </summary>
-        /// <value>The unique identifier of the schedule</value>
+        /// <value>The globally unique identifier for the object.</value>
         [DataMember(Name="id", EmitDefaultValue=false)]
         public string Id { get; set; }
 

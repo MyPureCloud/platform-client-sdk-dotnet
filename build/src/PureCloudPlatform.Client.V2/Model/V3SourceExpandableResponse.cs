@@ -13,10 +13,10 @@ using PureCloudPlatform.Client.V2.Client;
 namespace PureCloudPlatform.Client.V2.Model
 {
     /// <summary>
-    /// V3SourceDetailedWithErrorResponse
+    /// V3SourceExpandableResponse
     /// </summary>
     [DataContract]
-    public partial class V3SourceDetailedWithErrorResponse :  IEquatable<V3SourceDetailedWithErrorResponse>
+    public partial class V3SourceExpandableResponse :  IEquatable<V3SourceExpandableResponse>
     {
         /// <summary>
         /// The type of the source.
@@ -124,7 +124,7 @@ namespace PureCloudPlatform.Client.V2.Model
         [DataMember(Name="status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="V3SourceDetailedWithErrorResponse" /> class.
+        /// Initializes a new instance of the <see cref="V3SourceExpandableResponse" /> class.
         /// </summary>
         /// <param name="Name">The name of the source..</param>
         /// <param name="ConnectionId">The connectionId of the source..</param>
@@ -139,8 +139,9 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="ScheduleSettings">Settings that determine when the source starts a sync..</param>
         /// <param name="Filters">Filters that determine what documents are synced..</param>
         /// <param name="FilterDetails">Additional details to the source&#39;s filters..</param>
+        /// <param name="Connection">The connection associated with the source. Needs to be expanded..</param>
         /// <param name="Error">Optional error details of an errored source..</param>
-        public V3SourceDetailedWithErrorResponse(string Name = null, string ConnectionId = null, TypeEnum? Type = null, TriggerTypeEnum? TriggerType = null, StatusEnum? Status = null, UserReference CreatedBy = null, UserReference ModifiedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, V3SourceLastSynchronization LastSync = null, V3SourceScheduleSettings ScheduleSettings = null, V3SourceFilter Filters = null, V3SourceFilterDetails FilterDetails = null, ErrorBody Error = null)
+        public V3SourceExpandableResponse(string Name = null, string ConnectionId = null, TypeEnum? Type = null, TriggerTypeEnum? TriggerType = null, StatusEnum? Status = null, UserReference CreatedBy = null, UserReference ModifiedBy = null, DateTime? DateCreated = null, DateTime? DateModified = null, V3SourceLastSynchronization LastSync = null, V3SourceScheduleSettings ScheduleSettings = null, V3SourceFilter Filters = null, V3SourceFilterDetails FilterDetails = null, ConnectionResponse Connection = null, ErrorBody Error = null)
         {
             this.Name = Name;
             this.ConnectionId = ConnectionId;
@@ -155,6 +156,7 @@ namespace PureCloudPlatform.Client.V2.Model
             this.ScheduleSettings = ScheduleSettings;
             this.Filters = Filters;
             this.FilterDetails = FilterDetails;
+            this.Connection = Connection;
             this.Error = Error;
             
         }
@@ -267,6 +269,15 @@ namespace PureCloudPlatform.Client.V2.Model
 
 
         /// <summary>
+        /// The connection associated with the source. Needs to be expanded.
+        /// </summary>
+        /// <value>The connection associated with the source. Needs to be expanded.</value>
+        [DataMember(Name="connection", EmitDefaultValue=false)]
+        public ConnectionResponse Connection { get; set; }
+
+
+
+        /// <summary>
         /// Optional error details of an errored source.
         /// </summary>
         /// <value>Optional error details of an errored source.</value>
@@ -290,7 +301,7 @@ namespace PureCloudPlatform.Client.V2.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class V3SourceDetailedWithErrorResponse {\n");
+            sb.Append("class V3SourceExpandableResponse {\n");
 
             sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Name: ").Append(Name).Append("\n");
@@ -306,6 +317,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  ScheduleSettings: ").Append(ScheduleSettings).Append("\n");
             sb.Append("  Filters: ").Append(Filters).Append("\n");
             sb.Append("  FilterDetails: ").Append(FilterDetails).Append("\n");
+            sb.Append("  Connection: ").Append(Connection).Append("\n");
             sb.Append("  Error: ").Append(Error).Append("\n");
             sb.Append("  SelfUri: ").Append(SelfUri).Append("\n");
             sb.Append("}\n");
@@ -333,15 +345,15 @@ namespace PureCloudPlatform.Client.V2.Model
         public override bool Equals(object obj)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
-            return this.Equals(obj as V3SourceDetailedWithErrorResponse);
+            return this.Equals(obj as V3SourceExpandableResponse);
         }
 
         /// <summary>
-        /// Returns true if V3SourceDetailedWithErrorResponse instances are equal
+        /// Returns true if V3SourceExpandableResponse instances are equal
         /// </summary>
-        /// <param name="other">Instance of V3SourceDetailedWithErrorResponse to be compared</param>
+        /// <param name="other">Instance of V3SourceExpandableResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(V3SourceDetailedWithErrorResponse other)
+        public bool Equals(V3SourceExpandableResponse other)
         {
             // credit: http://stackoverflow.com/a/10454552/677735
             if (other == null)
@@ -419,6 +431,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.FilterDetails.Equals(other.FilterDetails)
                 ) &&
                 (
+                    this.Connection == other.Connection ||
+                    this.Connection != null &&
+                    this.Connection.Equals(other.Connection)
+                ) &&
+                (
                     this.Error == other.Error ||
                     this.Error != null &&
                     this.Error.Equals(other.Error)
@@ -482,6 +499,9 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.FilterDetails != null)
                     hash = hash * 59 + this.FilterDetails.GetHashCode();
+
+                if (this.Connection != null)
+                    hash = hash * 59 + this.Connection.GetHashCode();
 
                 if (this.Error != null)
                     hash = hash * 59 + this.Error.GetHashCode();

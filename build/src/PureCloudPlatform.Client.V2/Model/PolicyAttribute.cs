@@ -69,6 +69,12 @@ namespace PureCloudPlatform.Client.V2.Model
             RelativeTime,
             
             /// <summary>
+            /// Enum Date for "DATE"
+            /// </summary>
+            [EnumMember(Value = "DATE")]
+            Date,
+            
+            /// <summary>
             /// Enum TimeRange for "TIME_RANGE"
             /// </summary>
             [EnumMember(Value = "TIME_RANGE")]

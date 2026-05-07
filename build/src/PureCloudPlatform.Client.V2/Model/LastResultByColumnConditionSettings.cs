@@ -25,12 +25,16 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <param name="EmailWrapupCodes">A list of wrapup code identifiers to match for Email..</param>
         /// <param name="SmsColumnName">The name of the contact column to evaluate for SMS..</param>
         /// <param name="SmsWrapupCodes">A list of wrapup code identifiers to match for SMS..</param>
-        public LastResultByColumnConditionSettings(string EmailColumnName = null, List<string> EmailWrapupCodes = null, string SmsColumnName = null, List<string> SmsWrapupCodes = null)
+        /// <param name="WhatsAppColumnName">The name of the contact column to evaluate for WhatsApp..</param>
+        /// <param name="WhatsAppWrapupCodes">A list of wrapup code identifiers to match for WhatsApp..</param>
+        public LastResultByColumnConditionSettings(string EmailColumnName = null, List<string> EmailWrapupCodes = null, string SmsColumnName = null, List<string> SmsWrapupCodes = null, string WhatsAppColumnName = null, List<string> WhatsAppWrapupCodes = null)
         {
             this.EmailColumnName = EmailColumnName;
             this.EmailWrapupCodes = EmailWrapupCodes;
             this.SmsColumnName = SmsColumnName;
             this.SmsWrapupCodes = SmsWrapupCodes;
+            this.WhatsAppColumnName = WhatsAppColumnName;
+            this.WhatsAppWrapupCodes = WhatsAppWrapupCodes;
             
         }
         
@@ -71,6 +75,24 @@ namespace PureCloudPlatform.Client.V2.Model
         public List<string> SmsWrapupCodes { get; set; }
 
 
+
+        /// <summary>
+        /// The name of the contact column to evaluate for WhatsApp.
+        /// </summary>
+        /// <value>The name of the contact column to evaluate for WhatsApp.</value>
+        [DataMember(Name="whatsAppColumnName", EmitDefaultValue=false)]
+        public string WhatsAppColumnName { get; set; }
+
+
+
+        /// <summary>
+        /// A list of wrapup code identifiers to match for WhatsApp.
+        /// </summary>
+        /// <value>A list of wrapup code identifiers to match for WhatsApp.</value>
+        [DataMember(Name="whatsAppWrapupCodes", EmitDefaultValue=false)]
+        public List<string> WhatsAppWrapupCodes { get; set; }
+
+
         /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
@@ -84,6 +106,8 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("  EmailWrapupCodes: ").Append(EmailWrapupCodes).Append("\n");
             sb.Append("  SmsColumnName: ").Append(SmsColumnName).Append("\n");
             sb.Append("  SmsWrapupCodes: ").Append(SmsWrapupCodes).Append("\n");
+            sb.Append("  WhatsAppColumnName: ").Append(WhatsAppColumnName).Append("\n");
+            sb.Append("  WhatsAppWrapupCodes: ").Append(WhatsAppWrapupCodes).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -143,6 +167,16 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.SmsWrapupCodes == other.SmsWrapupCodes ||
                     this.SmsWrapupCodes != null &&
                     this.SmsWrapupCodes.SequenceEqual(other.SmsWrapupCodes)
+                ) &&
+                (
+                    this.WhatsAppColumnName == other.WhatsAppColumnName ||
+                    this.WhatsAppColumnName != null &&
+                    this.WhatsAppColumnName.Equals(other.WhatsAppColumnName)
+                ) &&
+                (
+                    this.WhatsAppWrapupCodes == other.WhatsAppWrapupCodes ||
+                    this.WhatsAppWrapupCodes != null &&
+                    this.WhatsAppWrapupCodes.SequenceEqual(other.WhatsAppWrapupCodes)
                 );
         }
 
@@ -168,6 +202,12 @@ namespace PureCloudPlatform.Client.V2.Model
 
                 if (this.SmsWrapupCodes != null)
                     hash = hash * 59 + this.SmsWrapupCodes.GetHashCode();
+
+                if (this.WhatsAppColumnName != null)
+                    hash = hash * 59 + this.WhatsAppColumnName.GetHashCode();
+
+                if (this.WhatsAppWrapupCodes != null)
+                    hash = hash * 59 + this.WhatsAppWrapupCodes.GetHashCode();
 
                 return hash;
             }

@@ -34,6 +34,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetAnalyticsConversationsDetailsJobResults**](#GetAnalyticsConversationsDetailsJobResults) | **Get** /api/v2/analytics/conversations/details/jobs/{jobId}/results | Fetch a page of results for an async details job |
 | [**GetAnalyticsConversationsDetailsJobsAvailability**](#GetAnalyticsConversationsDetailsJobsAvailability) | **Get** /api/v2/analytics/conversations/details/jobs/availability | Lookup the datalake availability date and time |
 | [**GetConversation**](#GetConversation) | **Get** /api/v2/conversations/{conversationId} | Get conversation |
+| [**GetConversationAssistantCopilotcontext**](#GetConversationAssistantCopilotcontext) | **Get** /api/v2/conversations/{conversationId}/assistant/copilotcontext | Get copilot context values for a conversation. |
 | [**GetConversationCommunicationAgentchecklist**](#GetConversationCommunicationAgentchecklist) | **Get** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists/{agentChecklistId} | Get checklist info for a single checklist. |
 | [**GetConversationCommunicationAgentchecklistJob**](#GetConversationCommunicationAgentchecklistJob) | **Get** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists/{agentChecklistId}/jobs/{jobId} | Get inference job status |
 | [**GetConversationCommunicationAgentchecklists**](#GetConversationCommunicationAgentchecklists) | **Get** /api/v2/conversations/{conversationId}/communications/{communicationId}/agentchecklists | Get information of all checklists associated with a conversation. |
@@ -187,6 +188,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchConversationsMessageParticipant**](#PatchConversationsMessageParticipant) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId} | Update conversation participant |
 | [**PatchConversationsMessageParticipantAttributes**](#PatchConversationsMessageParticipantAttributes) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/attributes | Update the attributes on a conversation participant. |
 | [**PatchConversationsMessageParticipantCommunication**](#PatchConversationsMessageParticipantCommunication) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/communications/{communicationId} | Update conversation participant&#39;s communication by disconnecting it. This endpoint does not update wrapup. |
+| [**PatchConversationsMessageParticipantParkingstate**](#PatchConversationsMessageParticipantParkingstate) | **Patch** /api/v2/conversations/messages/{conversationId}/participants/{participantId}/parkingstate | Update conversation by setting its parking state |
 | [**PatchConversationsMessagingIntegrationsAppleIntegrationId**](#PatchConversationsMessagingIntegrationsAppleIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/apple/{integrationId} | Update an Apple messaging integration |
 | [**PatchConversationsMessagingIntegrationsFacebookIntegrationId**](#PatchConversationsMessagingIntegrationsFacebookIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/facebook/{integrationId} | Update Facebook messaging integration |
 | [**PatchConversationsMessagingIntegrationsInstagramIntegrationId**](#PatchConversationsMessagingIntegrationsInstagramIntegrationId) | **Patch** /api/v2/conversations/messaging/integrations/instagram/{integrationId} | Update Instagram messaging integration |
@@ -2075,6 +2077,70 @@ namespace Example
 [**Conversation**](Conversation)
 
 
+## GetConversationAssistantCopilotcontext
+
+> [**CopilotContextValues**](CopilotContextValues) GetConversationAssistantCopilotcontext (string conversationId)
+
+
+Get copilot context values for a conversation.
+
+GetConversationAssistantCopilotcontext is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ALL permissions: 
+
+* conversation:assistantCopilotContext:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetConversationAssistantCopilotcontextExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | Conversation ID.
+
+            try
+            { 
+                // Get copilot context values for a conversation.
+                CopilotContextValues result = apiInstance.GetConversationAssistantCopilotcontext(conversationId);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.GetConversationAssistantCopilotcontext: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| Conversation ID. |  |
+
+### Return type
+
+[**CopilotContextValues**](CopilotContextValues)
+
+
 ## GetConversationCommunicationAgentchecklist
 
 > [**AgentChecklistResponse**](AgentChecklistResponse) GetConversationCommunicationAgentchecklist (string conversationId, string communicationId, string agentChecklistId)
@@ -2979,7 +3045,7 @@ namespace Example
 | **before** | **string**| The cursor that points to the start of the set of entities that has been returned. | [optional]  |
 | **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
 | **pageSize** | **string**| Number of entities to return. Maximum of 200. | [optional]  |
-| **type** | **string**| Suggestion type to filter by. | [optional] <br />**Values**: Faq, Article, KnowledgeArticle, KnowledgeSearch, CannedResponse, Script, SuggestedKnowledgeAnswer |
+| **type** | **string**| Suggestion type to filter by. | [optional] <br />**Values**: Faq, Article, KnowledgeArticle, KnowledgeSearch, CannedResponse, Script, SuggestedKnowledgeAnswer, ThirdPartySuggestion |
 | **state** | **string**| Suggestion state to filter Copilot suggestions. | [optional] <br />**Values**: Suggested, Accepted, Dismissed, Failed, Rated |
 
 ### Return type
@@ -11958,6 +12024,71 @@ namespace Example
 ### Return type
 
 **Object**
+
+
+## PatchConversationsMessageParticipantParkingstate
+
+> void PatchConversationsMessageParticipantParkingstate (string conversationId, string participantId, ParkingStateRequest body)
+
+
+Update conversation by setting its parking state
+
+Requires ANY permissions: 
+
+* conversation:message:park
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PatchConversationsMessageParticipantParkingstateExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new ConversationsApi();
+            var conversationId = conversationId_example;  // string | conversationId
+            var participantId = participantId_example;  // string | participantId
+            var body = new ParkingStateRequest(); // ParkingStateRequest | Parking update request
+
+            try
+            { 
+                // Update conversation by setting its parking state
+                apiInstance.PatchConversationsMessageParticipantParkingstate(conversationId, participantId, body);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling ConversationsApi.PatchConversationsMessageParticipantParkingstate: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **conversationId** | **string**| conversationId |  |
+| **participantId** | **string**| participantId |  |
+| **body** | [**ParkingStateRequest**](ParkingStateRequest)| Parking update request |  |
+
+### Return type
+
+void (empty response body)
 
 
 ## PatchConversationsMessagingIntegrationsAppleIntegrationId
@@ -21175,4 +21306,4 @@ namespace Example
 **string**
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

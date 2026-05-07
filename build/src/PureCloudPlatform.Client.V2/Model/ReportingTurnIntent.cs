@@ -22,11 +22,13 @@ namespace PureCloudPlatform.Client.V2.Model
         /// Initializes a new instance of the <see cref="ReportingTurnIntent" /> class.
         /// </summary>
         /// <param name="Name">The name of the intent detected during this reporting turn..</param>
+        /// <param name="Id">The ID of the intent detected during this reporting turn..</param>
         /// <param name="Confidence">The confidence score of the intent detected during this reporting turn..</param>
         /// <param name="Slots">The slots detected during this reporting turn..</param>
-        public ReportingTurnIntent(string Name = null, double? Confidence = null, List<ReportingTurnIntentSlot> Slots = null)
+        public ReportingTurnIntent(string Name = null, string Id = null, double? Confidence = null, List<ReportingTurnIntentSlot> Slots = null)
         {
             this.Name = Name;
+            this.Id = Id;
             this.Confidence = Confidence;
             this.Slots = Slots;
             
@@ -40,6 +42,15 @@ namespace PureCloudPlatform.Client.V2.Model
         /// <value>The name of the intent detected during this reporting turn.</value>
         [DataMember(Name="name", EmitDefaultValue=false)]
         public string Name { get; set; }
+
+
+
+        /// <summary>
+        /// The ID of the intent detected during this reporting turn.
+        /// </summary>
+        /// <value>The ID of the intent detected during this reporting turn.</value>
+        [DataMember(Name="id", EmitDefaultValue=false)]
+        public string Id { get; set; }
 
 
 
@@ -70,6 +81,7 @@ namespace PureCloudPlatform.Client.V2.Model
             sb.Append("class ReportingTurnIntent {\n");
 
             sb.Append("  Name: ").Append(Name).Append("\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  Confidence: ").Append(Confidence).Append("\n");
             sb.Append("  Slots: ").Append(Slots).Append("\n");
             sb.Append("}\n");
@@ -118,6 +130,11 @@ namespace PureCloudPlatform.Client.V2.Model
                     this.Name.Equals(other.Name)
                 ) &&
                 (
+                    this.Id == other.Id ||
+                    this.Id != null &&
+                    this.Id.Equals(other.Id)
+                ) &&
+                (
                     this.Confidence == other.Confidence ||
                     this.Confidence != null &&
                     this.Confidence.Equals(other.Confidence)
@@ -142,6 +159,9 @@ namespace PureCloudPlatform.Client.V2.Model
                 // Suitable nullity checks etc, of course :)
                 if (this.Name != null)
                     hash = hash * 59 + this.Name.GetHashCode();
+
+                if (this.Id != null)
+                    hash = hash * 59 + this.Id.GetHashCode();
 
                 if (this.Confidence != null)
                     hash = hash * 59 + this.Confidence.GetHashCode();

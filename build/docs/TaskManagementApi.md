@@ -4802,6 +4802,8 @@ namespace Example
 
 Query for worktypes
 
+Optional request field 'expands' may include 'schema' to populate the name on each worktype's schema reference.
+
 Requires ALL permissions: 
 
 * workitems:worktype:view
@@ -4921,4 +4923,4 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_
