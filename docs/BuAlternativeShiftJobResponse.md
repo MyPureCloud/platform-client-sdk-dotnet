@@ -6,7 +6,7 @@
 
 |Name | Type | Description | Notes|
 |------------ | ------------- | ------------- | -------------|
-| **Id** | **string** | The globally unique identifier for the object. | [optional] |
+| **Id** | **string** | The globally unique identifier for the object. | |
 | **Status** | **string** | The status of the alternative shift job | |
 | **Type** | **string** | The type of job | |
 | **DownloadUrl** | **string** | The URL where completed results are available, only set if status &#x3D;&#x3D; &#39;Complete&#39; | [optional] |
@@ -18,4 +18,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

@@ -8,9 +8,10 @@
 |------------ | ------------- | ------------- | -------------|
 | **EmailColumnName** | **string** | The name of the contact column to evaluate for Email. | [optional] |
 | **SmsColumnName** | **string** | The name of the contact column to evaluate for SMS. | [optional] |
+| **WhatsAppColumnName** | **string** | The name of the contact column to evaluate for WhatsApp. | [optional] |
 | **Operator** | **string** | The operator to use when comparing values. | |
 | **Value** | **string** | The period value to compare against the contact&#39;s data. | |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

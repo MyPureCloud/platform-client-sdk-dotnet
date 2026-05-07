@@ -15,10 +15,10 @@
 | **IsVoicemail** | **bool?** | Indicates filtering for Voice mail | [optional] |
 | **IsFlagged** | **bool?** | Indicates filtering for flagged | [optional] |
 | **IsMonitored** | **bool?** | Indicates filtering for monitored | [optional] |
-| **IsScreenMonitored** | **bool?** | Indicates filtering for screenMonitored | [optional] |
+| **IsScreenMonitored** | **bool?** | Deprecated: Use screenMonitored | [optional] |
 | **FilterWrapUpNotes** | **bool?** | Indicates filtering for WrapUpNotes | [optional] |
 | **MatchAll** | **bool?** | Indicates comparison operation, TRUE indicates filters will use AND logic, FALSE indicates OR logic | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

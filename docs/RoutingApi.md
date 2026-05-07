@@ -4737,8 +4737,9 @@ This endpoint does require any parameters.
 
 Get Routing Skill
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:skill:view
 
 ### Example
 ```{"language":"csharp"}
@@ -5062,8 +5063,9 @@ namespace Example
 
 Get the list of routing skills.
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* routing:skill:view
 
 ### Example
 ```{"language":"csharp"}
@@ -11081,4 +11083,4 @@ namespace Example
 [**UserSkillEntityListing**](UserSkillEntityListing)
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

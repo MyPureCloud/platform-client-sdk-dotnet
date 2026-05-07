@@ -12,7 +12,7 @@
 | **CustomerIdType** | **string** | Type of primary identifier (e.g. cookie, email, phone). | [optional] |
 | **Session** | [**EventSession**](EventSession) | The session that the event belongs to. | |
 | **EventType** | **string** | The name representing the type of event. | |
-| **OutcomeAchievedEvent** | [**OutcomeAchievedEvent**](OutcomeAchievedEvent) | Event where a customer has achieved a specific outcome or goal. | [optional] |
+| **OutcomeAchievedEvent** | [**OutcomeAchievedEvent**](OutcomeAchievedEvent) | Deprecated. Event where a customer has achieved a specific outcome or goal. Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/ | [optional] |
 | **SegmentAssignmentEvent** | [**SegmentAssignmentEvent**](SegmentAssignmentEvent) | Event that represents a segment being assigned. | [optional] |
 | **WebActionEvent** | [**WebActionEvent**](WebActionEvent) | Event triggered by web actions. | [optional] |
 | **WebEvent** | [**WebEvent**](WebEvent) | Event that tracks user interactions with content in a browser such as pageviews, downloads, mobile ad clicks, etc. | [optional] |
@@ -21,4 +21,4 @@
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

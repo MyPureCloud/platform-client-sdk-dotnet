@@ -21,6 +21,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteUserStationDefaultstation**](#DeleteUserStationDefaultstation) | **Delete** /api/v2/users/{userId}/station/defaultstation | Clear default station |
 | [**DeleteUserVerifier**](#DeleteUserVerifier) | **Delete** /api/v2/users/{userId}/verifiers/{verifierId} | Delete a verifier |
 | [**DeleteUsersCustomattributesSchema**](#DeleteUsersCustomattributesSchema) | **Delete** /api/v2/users/customattributes/schemas/{schemaId} | Delete a schema |
+| [**DeleteUsersStationsMeAssociatedstation**](#DeleteUsersStationsMeAssociatedstation) | **Delete** /api/v2/users/stations/me/associatedstation | Clear self associated station |
 | [**GetAnalyticsUsersAggregatesJob**](#GetAnalyticsUsersAggregatesJob) | **Get** /api/v2/analytics/users/aggregates/jobs/{jobId} | Get status for async query for user aggregates |
 | [**GetAnalyticsUsersAggregatesJobResults**](#GetAnalyticsUsersAggregatesJobResults) | **Get** /api/v2/analytics/users/aggregates/jobs/{jobId}/results | Fetch a page of results for an async aggregates query |
 | [**GetAnalyticsUsersDetailsJob**](#GetAnalyticsUsersDetailsJob) | **Get** /api/v2/analytics/users/details/jobs/{jobId} | Get status for async query for user details |
@@ -76,6 +77,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetUsersMe**](#GetUsersMe) | **Get** /api/v2/users/me | Get current user details. |
 | [**GetUsersQuery**](#GetUsersQuery) | **Get** /api/v2/users/query | Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required |
 | [**GetUsersSearch**](#GetUsersSearch) | **Get** /api/v2/users/search | Search users using the q64 value returned from a previous search |
+| [**GetUsersStationsMe**](#GetUsersStationsMe) | **Get** /api/v2/users/stations/me | Get station information for self |
 | [**PatchUser**](#PatchUser) | **Patch** /api/v2/users/{userId} | Update user |
 | [**PatchUserCallforwarding**](#PatchUserCallforwarding) | **Patch** /api/v2/users/{userId}/callforwarding | Patch a user&#39;s CallForwarding |
 | [**PatchUserCustomattributes**](#PatchUserCustomattributes) | **Patch** /api/v2/users/{userId}/customattributes | Update a single custom attributes record by amending the data with only the provided fields. |
@@ -126,6 +128,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PutUserStationDefaultstationStationId**](#PutUserStationDefaultstationStationId) | **Put** /api/v2/users/{userId}/station/defaultstation/{stationId} | Set default station |
 | [**PutUserVerifier**](#PutUserVerifier) | **Put** /api/v2/users/{userId}/verifiers/{verifierId} | Update a verifier |
 | [**PutUsersCustomattributesSchema**](#PutUsersCustomattributesSchema) | **Put** /api/v2/users/customattributes/schemas/{schemaId} | Update a schema |
+| [**PutUsersStationsMeAssociatedstationStationId**](#PutUsersStationsMeAssociatedstationStationId) | **Put** /api/v2/users/stations/me/associatedstation/{stationId} | Set self associated station |
 
 
 
@@ -822,8 +825,9 @@ void (empty response body)
 
 Clear associated station
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* telephony:station:disassociate
 
 ### Example
 ```{"language":"csharp"}
@@ -1055,6 +1059,62 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **schemaId** | **string**| Schema ID |  |
+
+### Return type
+
+void (empty response body)
+
+
+## DeleteUsersStationsMeAssociatedstation
+
+> void DeleteUsersStationsMeAssociatedstation ()
+
+
+Clear self associated station
+
+Requires ANY permissions: 
+
+* telephony:station:disassociateSelf
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class DeleteUsersStationsMeAssociatedstationExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+
+            try
+            { 
+                // Clear self associated station
+                apiInstance.DeleteUsersStationsMeAssociatedstation();
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.DeleteUsersStationsMeAssociatedstation: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
 
 ### Return type
 
@@ -2169,8 +2229,9 @@ namespace Example
 
 Get a user's CallForwarding
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* conversation:callForwarding:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3332,8 +3393,9 @@ namespace Example
 
 Get station information for user
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* telephony:otherStationAssociation:view
 
 ### Example
 ```{"language":"csharp"}
@@ -3656,7 +3718,7 @@ namespace Example
 
 ## GetUsersChatsMe
 
-> [**ChatItemCursorListing**](ChatItemCursorListing) GetUsersChatsMe (bool? excludeClosed = null, bool? includePresence = null, string after = null)
+> [**ChatItemCursorListing**](ChatItemCursorListing) GetUsersChatsMe (bool? excludeClosed = null, bool? includePresence = null, bool? includeRoomOwners = null, string after = null)
 
 
 Get chats for a user
@@ -3690,12 +3752,13 @@ namespace Example
             var apiInstance = new UsersApi();
             var excludeClosed = true;  // bool? | Whether or not to exclude closed chats (optional) 
             var includePresence = true;  // bool? | Whether or not to include user presence (optional) 
+            var includeRoomOwners = true;  // bool? | Whether or not to include room owners (optional) 
             var after = after_example;  // string | The key to start after (optional) 
 
             try
             { 
                 // Get chats for a user
-                ChatItemCursorListing result = apiInstance.GetUsersChatsMe(excludeClosed, includePresence, after);
+                ChatItemCursorListing result = apiInstance.GetUsersChatsMe(excludeClosed, includePresence, includeRoomOwners, after);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3714,6 +3777,7 @@ namespace Example
 |------------- | ------------- | ------------- | -------------|
 | **excludeClosed** | **bool?**| Whether or not to exclude closed chats | [optional]  |
 | **includePresence** | **bool?**| Whether or not to include user presence | [optional]  |
+| **includeRoomOwners** | **bool?**| Whether or not to include room owners | [optional]  |
 | **after** | **string**| The key to start after | [optional]  |
 
 ### Return type
@@ -4520,8 +4584,6 @@ namespace Example
 
 Get list of available users, paged by cursor token, No division filtering available so directory:user:view permission for all divisions is required
 
-GetUsersQuery is a preview method and is subject to both breaking and non-breaking changes at any time without notice
-
 Requires ANY permissions: 
 
 * directory:user:view
@@ -4653,6 +4715,63 @@ namespace Example
 ### Return type
 
 [**UsersSearchResponse**](UsersSearchResponse)
+
+
+## GetUsersStationsMe
+
+> [**UserStations**](UserStations) GetUsersStationsMe ()
+
+
+Get station information for self
+
+Requires ANY permissions: 
+
+* telephony:selfStationAssociation:view
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class GetUsersStationsMeExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+
+            try
+            { 
+                // Get station information for self
+                UserStations result = apiInstance.GetUsersStationsMe();
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.GetUsersStationsMe: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+This endpoint does require any parameters.
+
+### Return type
+
+[**UserStations**](UserStations)
 
 
 ## PatchUser
@@ -7616,8 +7735,9 @@ namespace Example
 
 Set associated station
 
-Requires NO permissions: 
+Requires ANY permissions: 
 
+* telephony:otherStationAssociation:edit
 
 ### Example
 ```{"language":"csharp"}
@@ -7865,4 +7985,65 @@ namespace Example
 [**DataSchema**](DataSchema)
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+## PutUsersStationsMeAssociatedstationStationId
+
+> void PutUsersStationsMeAssociatedstationStationId (string stationId)
+
+
+Set self associated station
+
+Requires ANY permissions: 
+
+* telephony:selfStationAssociation:edit
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PutUsersStationsMeAssociatedstationStationIdExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new UsersApi();
+            var stationId = stationId_example;  // string | stationId
+
+            try
+            { 
+                // Set self associated station
+                apiInstance.PutUsersStationsMeAssociatedstationStationId(stationId);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UsersApi.PutUsersStationsMeAssociatedstationStationId: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **stationId** | **string**| stationId |  |
+
+### Return type
+
+void (empty response body)
+
+
+_PureCloudPlatform.Client.V2 263.0.0_

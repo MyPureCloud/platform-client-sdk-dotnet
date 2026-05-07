@@ -1,6 +1,6 @@
-# V3SourceWithErrorResponse
+# V3SourceExpandableListResponse
 
-## ININ.PureCloudApi.Model.V3SourceWithErrorResponse
+## ININ.PureCloudApi.Model.V3SourceExpandableListResponse
 
 ## Properties
 
@@ -17,9 +17,10 @@
 | **DateCreated** | **DateTime?** | Source creation date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **DateModified** | **DateTime?** | Source last modification date-time. Date time is represented as an ISO-8601 string. For example: yyyy-MM-ddTHH:mm:ss[.mmm]Z | [optional] |
 | **LastSync** | [**V3SourceLastSynchronization**](V3SourceLastSynchronization) | The last synchronization of the source. | [optional] |
+| **Connection** | [**ConnectionResponse**](ConnectionResponse) | The connection associated with the source. Needs to be expanded. | [optional] |
 | **Error** | [**ErrorBody**](ErrorBody) | Optional error details of an errored source. | [optional] |
 | **SelfUri** | **string** | The URI for this object | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

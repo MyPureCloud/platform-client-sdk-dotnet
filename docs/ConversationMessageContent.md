@@ -25,7 +25,8 @@
 | **PaymentResponse** | [**ConversationContentPaymentResponse**](ConversationContentPaymentResponse) | Payment response content. | [optional] |
 | **Push** | [**ConversationContentPush**](ConversationContentPush) | Push content. | [optional] |
 | **Form** | [**ConversationContentForm**](ConversationContentForm) | Form content. | [optional] |
+| **NotificationResponse** | [**ConversationContentNotificationResponse**](ConversationContentNotificationResponse) | Notification response content, e.g. an Apple Invitation acceptance. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

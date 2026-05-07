@@ -10,7 +10,9 @@
 | **EmailWrapupCodes** | **List&lt;string&gt;** | A list of wrapup code identifiers to match for Email. | [optional] |
 | **SmsColumnName** | **string** | The name of the contact column to evaluate for SMS. | [optional] |
 | **SmsWrapupCodes** | **List&lt;string&gt;** | A list of wrapup code identifiers to match for SMS. | [optional] |
+| **WhatsAppColumnName** | **string** | The name of the contact column to evaluate for WhatsApp. | [optional] |
+| **WhatsAppWrapupCodes** | **List&lt;string&gt;** | A list of wrapup code identifiers to match for WhatsApp. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

@@ -8,7 +8,8 @@
 |------------ | ------------- | ------------- | -------------|
 | **EmailWrapupCodes** | **List&lt;string&gt;** | A list of wrapup code identifiers to match for Email. | [optional] |
 | **SmsWrapupCodes** | **List&lt;string&gt;** | A list of wrapup code identifiers to match for SMS. | [optional] |
+| **WhatsAppWrapupCodes** | **List&lt;string&gt;** | A list of wrapup code identifiers to match for WhatsApp. | [optional] |
 
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

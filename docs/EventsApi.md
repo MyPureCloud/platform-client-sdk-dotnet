@@ -7,6 +7,7 @@ All URIs are relative to *https://api.mypurecloud.com*
 | Method | HTTP request | Description |
 | ------------- | ------------- | ------------- |
 | [**PostEventsConversations**](#PostEventsConversations) | **Post** /api/v2/events/conversations | Publish Conversation Batch Events |
+| [**PostEventsRoutingCustomkpiattributions**](#PostEventsRoutingCustomkpiattributions) | **Post** /api/v2/events/routing/customkpiattributions | Publish Predictive Routing Custom Kpi Attribution Batch Events |
 | [**PostEventsUsersPresence**](#PostEventsUsersPresence) | **Post** /api/v2/events/users/presence | Publish User Presence Status Batch Events |
 | [**PostEventsUsersRoutingstatus**](#PostEventsUsersRoutingstatus) | **Post** /api/v2/events/users/routingstatus | Publish Agent Routing Status Batch Events |
 
@@ -68,6 +69,70 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **body** | [**BatchConversationEventRequest**](BatchConversationEventRequest)| batchRequest |  |
+
+### Return type
+
+[**BatchEventResponse**](BatchEventResponse)
+
+
+## PostEventsRoutingCustomkpiattributions
+
+> [**BatchEventResponse**](BatchEventResponse) PostEventsRoutingCustomkpiattributions (BatchPredictiveRoutingCustomKpiAttributionEventRequest body)
+
+
+Publish Predictive Routing Custom Kpi Attribution Batch Events
+
+PostEventsRoutingCustomkpiattributions is a preview method and is subject to both breaking and non-breaking changes at any time without notice
+
+Requires ANY permissions: 
+
+* routing:customKpiAttribution:inject
+
+### Example
+```{"language":"csharp"}
+using System;
+using System.Diagnostics;
+using PureCloudPlatform.Client.V2.Api;
+using PureCloudPlatform.Client.V2.Client;
+using PureCloudPlatform.Client.V2.Model;
+
+namespace Example
+{
+    public class PostEventsRoutingCustomkpiattributionsExample
+    {
+        public void main()
+        { 
+            // Configure OAuth2 access token for authorization: PureCloud OAuth
+            // The following example is using the Authorization Code Grant
+            var accessTokenInfo = Configuration.Default.ApiClient.PostToken("18a4c365-7ea3-4f0g-9fb7-884fb4d2e9c6",
+                "M7FfdYQyL5TA6BdbEZ8M9-Wx4uZai1rNQ7jcuFdcJJo",
+                "http://redirecturi.com/",
+                "6Zxcb0oASMBI55wQJ6bVmOmO57k8CxXBKgzDKtYXbtk");
+
+            var apiInstance = new EventsApi();
+            var body = new BatchPredictiveRoutingCustomKpiAttributionEventRequest(); // BatchPredictiveRoutingCustomKpiAttributionEventRequest | batchRequest
+
+            try
+            { 
+                // Publish Predictive Routing Custom Kpi Attribution Batch Events
+                BatchEventResponse result = apiInstance.PostEventsRoutingCustomkpiattributions(body);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling EventsApi.PostEventsRoutingCustomkpiattributions: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+|Name | Type | Description  | Notes |
+|------------- | ------------- | ------------- | -------------|
+| **body** | [**BatchPredictiveRoutingCustomKpiAttributionEventRequest**](BatchPredictiveRoutingCustomKpiAttributionEventRequest)| batchRequest |  |
 
 ### Return type
 
@@ -198,4 +263,4 @@ namespace Example
 [**BatchEventResponse**](BatchEventResponse)
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

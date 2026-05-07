@@ -11,8 +11,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**DeleteJourneyActiontemplate**](#DeleteJourneyActiontemplate) | **Delete** /api/v2/journey/actiontemplates/{actionTemplateId} | Delete a single action template. |
 | [**DeleteJourneyExternaleventsConfiguration**](#DeleteJourneyExternaleventsConfiguration) | **Delete** /api/v2/journey/externalevents/configurations/{configId} | Delete an external events configuration. |
 | [**DeleteJourneyExternaleventsSchema**](#DeleteJourneyExternaleventsSchema) | **Delete** /api/v2/journey/externalevents/schemas/{schemaId} | Delete a schema |
-| [**DeleteJourneyOutcome**](#DeleteJourneyOutcome) | **Delete** /api/v2/journey/outcomes/{outcomeId} | Delete an outcome. |
-| [**DeleteJourneyOutcomesPredictor**](#DeleteJourneyOutcomesPredictor) | **Delete** /api/v2/journey/outcomes/predictors/{predictorId} | Delete an outcome predictor. |
+| [**DeleteJourneyOutcome**](#DeleteJourneyOutcome) | **Delete** /api/v2/journey/outcomes/{outcomeId} | Deprecated. Delete an outcome. |
+| [**DeleteJourneyOutcomesPredictor**](#DeleteJourneyOutcomesPredictor) | **Delete** /api/v2/journey/outcomes/predictors/{predictorId} | Deprecated. Delete an outcome predictor. |
 | [**DeleteJourneySegment**](#DeleteJourneySegment) | **Delete** /api/v2/journey/segments/{segmentId} | Delete a segment. |
 | [**DeleteJourneyView**](#DeleteJourneyView) | **Delete** /api/v2/journey/views/{viewId} | Delete a Journey View by ID |
 | [**DeleteJourneyViewSchedules**](#DeleteJourneyViewSchedules) | **Delete** /api/v2/journey/views/{viewId}/schedules | Delete the Schedule of a JourneyView |
@@ -22,8 +22,8 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetExternalcontactsContactJourneySessions**](#GetExternalcontactsContactJourneySessions) | **Get** /api/v2/externalcontacts/contacts/{contactId}/journey/sessions | Retrieve all sessions for a given external contact. |
 | [**GetJourneyActionmap**](#GetJourneyActionmap) | **Get** /api/v2/journey/actionmaps/{actionMapId} | Retrieve a single action map. |
 | [**GetJourneyActionmaps**](#GetJourneyActionmaps) | **Get** /api/v2/journey/actionmaps | Retrieve all action maps. |
-| [**GetJourneyActionmapsEstimatesJob**](#GetJourneyActionmapsEstimatesJob) | **Get** /api/v2/journey/actionmaps/estimates/jobs/{jobId} | Get status of job. |
-| [**GetJourneyActionmapsEstimatesJobResults**](#GetJourneyActionmapsEstimatesJobResults) | **Get** /api/v2/journey/actionmaps/estimates/jobs/{jobId}/results | Get estimates from completed job. |
+| [**GetJourneyActionmapsEstimatesJob**](#GetJourneyActionmapsEstimatesJob) | **Get** /api/v2/journey/actionmaps/estimates/jobs/{jobId} | Deprecated. Get status of job. |
+| [**GetJourneyActionmapsEstimatesJobResults**](#GetJourneyActionmapsEstimatesJobResults) | **Get** /api/v2/journey/actionmaps/estimates/jobs/{jobId}/results | Deprecated. Get estimates from completed job. |
 | [**GetJourneyActiontarget**](#GetJourneyActiontarget) | **Get** /api/v2/journey/actiontargets/{actionTargetId} | Retrieve a single action target. |
 | [**GetJourneyActiontargets**](#GetJourneyActiontargets) | **Get** /api/v2/journey/actiontargets | Retrieve all action targets. |
 | [**GetJourneyActiontemplate**](#GetJourneyActiontemplate) | **Get** /api/v2/journey/actiontemplates/{actionTemplateId} | Retrieve a single action template. |
@@ -38,17 +38,17 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**GetJourneyExternaleventsSchemasCoretype**](#GetJourneyExternaleventsSchemasCoretype) | **Get** /api/v2/journey/externalevents/schemas/coretypes/{coreTypeName} | Get a core type from which all schemas are built |
 | [**GetJourneyExternaleventsSchemasCoretypes**](#GetJourneyExternaleventsSchemasCoretypes) | **Get** /api/v2/journey/externalevents/schemas/coretypes | Get the list of core types enabled for a specific namespace. |
 | [**GetJourneyExternaleventsSchemasLimits**](#GetJourneyExternaleventsSchemasLimits) | **Get** /api/v2/journey/externalevents/schemas/limits | Get quantitative limits on schemas |
-| [**GetJourneyOutcome**](#GetJourneyOutcome) | **Get** /api/v2/journey/outcomes/{outcomeId} | Retrieve a single outcome. |
-| [**GetJourneyOutcomes**](#GetJourneyOutcomes) | **Get** /api/v2/journey/outcomes | Retrieve all outcomes. |
-| [**GetJourneyOutcomesAttributionsJob**](#GetJourneyOutcomesAttributionsJob) | **Get** /api/v2/journey/outcomes/attributions/jobs/{jobId} | Get job status. |
-| [**GetJourneyOutcomesAttributionsJobResults**](#GetJourneyOutcomesAttributionsJobResults) | **Get** /api/v2/journey/outcomes/attributions/jobs/{jobId}/results | Get outcome attribution entities from completed job. |
-| [**GetJourneyOutcomesPredictor**](#GetJourneyOutcomesPredictor) | **Get** /api/v2/journey/outcomes/predictors/{predictorId} | Retrieve a single outcome predictor. |
-| [**GetJourneyOutcomesPredictors**](#GetJourneyOutcomesPredictors) | **Get** /api/v2/journey/outcomes/predictors | Retrieve all outcome predictors. |
+| [**GetJourneyOutcome**](#GetJourneyOutcome) | **Get** /api/v2/journey/outcomes/{outcomeId} | Deprecated. Retrieve a single outcome. |
+| [**GetJourneyOutcomes**](#GetJourneyOutcomes) | **Get** /api/v2/journey/outcomes | Deprecated. Retrieve all outcomes. |
+| [**GetJourneyOutcomesAttributionsJob**](#GetJourneyOutcomesAttributionsJob) | **Get** /api/v2/journey/outcomes/attributions/jobs/{jobId} | Deprecated. Get job status. |
+| [**GetJourneyOutcomesAttributionsJobResults**](#GetJourneyOutcomesAttributionsJobResults) | **Get** /api/v2/journey/outcomes/attributions/jobs/{jobId}/results | Deprecated. Get outcome attribution entities from completed job. |
+| [**GetJourneyOutcomesPredictor**](#GetJourneyOutcomesPredictor) | **Get** /api/v2/journey/outcomes/predictors/{predictorId} | Deprecated. Retrieve a single outcome predictor. |
+| [**GetJourneyOutcomesPredictors**](#GetJourneyOutcomesPredictors) | **Get** /api/v2/journey/outcomes/predictors | Deprecated. Retrieve all outcome predictors. |
 | [**GetJourneySegment**](#GetJourneySegment) | **Get** /api/v2/journey/segments/{segmentId} | Retrieve a single segment. |
 | [**GetJourneySegments**](#GetJourneySegments) | **Get** /api/v2/journey/segments | Retrieve all segments. |
 | [**GetJourneySession**](#GetJourneySession) | **Get** /api/v2/journey/sessions/{sessionId} | Retrieve a single session. |
 | [**GetJourneySessionEvents**](#GetJourneySessionEvents) | **Get** /api/v2/journey/sessions/{sessionId}/events | Retrieve all events for a given session. |
-| [**GetJourneySessionOutcomescores**](#GetJourneySessionOutcomescores) | **Get** /api/v2/journey/sessions/{sessionId}/outcomescores | Retrieve latest outcome score associated with a session for all outcomes. |
+| [**GetJourneySessionOutcomescores**](#GetJourneySessionOutcomescores) | **Get** /api/v2/journey/sessions/{sessionId}/outcomescores | Deprecated. Retrieve latest outcome score associated with a session for all outcomes. |
 | [**GetJourneyView**](#GetJourneyView) | **Get** /api/v2/journey/views/{viewId} | Get a Journey View by ID |
 | [**GetJourneyViewSchedules**](#GetJourneyViewSchedules) | **Get** /api/v2/journey/views/{viewId}/schedules | Get the Schedule for a JourneyView |
 | [**GetJourneyViewVersion**](#GetJourneyViewVersion) | **Get** /api/v2/journey/views/{viewId}/versions/{versionId} | Get a Journey View by ID and version |
@@ -69,14 +69,14 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PatchJourneyActiontarget**](#PatchJourneyActiontarget) | **Patch** /api/v2/journey/actiontargets/{actionTargetId} | Update a single action target. |
 | [**PatchJourneyActiontemplate**](#PatchJourneyActiontemplate) | **Patch** /api/v2/journey/actiontemplates/{actionTemplateId} | Update a single action template. |
 | [**PatchJourneyExternaleventsConfiguration**](#PatchJourneyExternaleventsConfiguration) | **Patch** /api/v2/journey/externalevents/configurations/{configId} | Update an external events configuration. |
-| [**PatchJourneyOutcome**](#PatchJourneyOutcome) | **Patch** /api/v2/journey/outcomes/{outcomeId} | Update an outcome. |
+| [**PatchJourneyOutcome**](#PatchJourneyOutcome) | **Patch** /api/v2/journey/outcomes/{outcomeId} | Deprecated. Update an outcome. |
 | [**PatchJourneySegment**](#PatchJourneySegment) | **Patch** /api/v2/journey/segments/{segmentId} | Update a segment. |
 | [**PatchJourneyViewVersionJob**](#PatchJourneyViewVersionJob) | **Patch** /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs/{jobId} | Update the job for a journey view version. Only the status can be changed and only to Cancelled |
 | [**PostAnalyticsJourneysAggregatesJobs**](#PostAnalyticsJourneysAggregatesJobs) | **Post** /api/v2/analytics/journeys/aggregates/jobs | Query for journey aggregates asynchronously |
 | [**PostAnalyticsJourneysAggregatesQuery**](#PostAnalyticsJourneysAggregatesQuery) | **Post** /api/v2/analytics/journeys/aggregates/query | Query for journey aggregates |
 | [**PostExternalcontactsContactJourneySegments**](#PostExternalcontactsContactJourneySegments) | **Post** /api/v2/externalcontacts/contacts/{contactId}/journey/segments | Assign/Unassign up to 10 segments to/from an external contact or, if a segment is already assigned, update the expiry date of the segment assignment. Any unprocessed segment assignments are returned in the body for the client to retry, in the event of a partial success. |
 | [**PostJourneyActionmaps**](#PostJourneyActionmaps) | **Post** /api/v2/journey/actionmaps | Create an action map. |
-| [**PostJourneyActionmapsEstimatesJobs**](#PostJourneyActionmapsEstimatesJobs) | **Post** /api/v2/journey/actionmaps/estimates/jobs | Query for estimates |
+| [**PostJourneyActionmapsEstimatesJobs**](#PostJourneyActionmapsEstimatesJobs) | **Post** /api/v2/journey/actionmaps/estimates/jobs | Deprecated. Query for estimates |
 | [**PostJourneyActiontemplates**](#PostJourneyActiontemplates) | **Post** /api/v2/journey/actiontemplates | Create a single action template. |
 | [**PostJourneyDeploymentActionevent**](#PostJourneyDeploymentActionevent) | **Post** /api/v2/journey/deployments/{deploymentId}/actionevent | Sends an action event, which is used for changing the state of actions that have been offered to the user. |
 | [**PostJourneyDeploymentAppevents**](#PostJourneyDeploymentAppevents) | **Post** /api/v2/journey/deployments/{deploymentId}/appevents | Send a journey app event, used for tracking customer activity on an application. |
@@ -85,9 +85,9 @@ All URIs are relative to *https://api.mypurecloud.com*
 | [**PostJourneyExternaleventsConfigurations**](#PostJourneyExternaleventsConfigurations) | **Post** /api/v2/journey/externalevents/configurations | Create an external events configuration. |
 | [**PostJourneyExternaleventsSchemas**](#PostJourneyExternaleventsSchemas) | **Post** /api/v2/journey/externalevents/schemas | Create a schema |
 | [**PostJourneyFlowsPathsQuery**](#PostJourneyFlowsPathsQuery) | **Post** /api/v2/journey/flows/paths/query | Query for flow paths. |
-| [**PostJourneyOutcomes**](#PostJourneyOutcomes) | **Post** /api/v2/journey/outcomes | Create an outcome. |
-| [**PostJourneyOutcomesAttributionsJobs**](#PostJourneyOutcomesAttributionsJobs) | **Post** /api/v2/journey/outcomes/attributions/jobs | Create Outcome Attributions |
-| [**PostJourneyOutcomesPredictors**](#PostJourneyOutcomesPredictors) | **Post** /api/v2/journey/outcomes/predictors | Create an outcome predictor. |
+| [**PostJourneyOutcomes**](#PostJourneyOutcomes) | **Post** /api/v2/journey/outcomes | Deprecated. Create an outcome. |
+| [**PostJourneyOutcomesAttributionsJobs**](#PostJourneyOutcomesAttributionsJobs) | **Post** /api/v2/journey/outcomes/attributions/jobs | Deprecated. Create Outcome Attributions |
+| [**PostJourneyOutcomesPredictors**](#PostJourneyOutcomesPredictors) | **Post** /api/v2/journey/outcomes/predictors | Deprecated. Create an outcome predictor. |
 | [**PostJourneySegments**](#PostJourneySegments) | **Post** /api/v2/journey/segments | Create a segment. |
 | [**PostJourneyViewSchedules**](#PostJourneyViewSchedules) | **Post** /api/v2/journey/views/{viewId}/schedules | Add a new Schedule to a JourneyView |
 | [**PostJourneyViewVersionJobs**](#PostJourneyViewVersionJobs) | **Post** /api/v2/journey/views/{viewId}/versions/{journeyVersionId}/jobs | Submit a job request for a journey view version. |
@@ -413,8 +413,13 @@ void (empty response body)
 
 > void DeleteJourneyOutcome (string outcomeId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Delete an outcome.
+Deprecated. Delete an outcome.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -446,7 +451,7 @@ namespace Example
 
             try
             { 
-                // Delete an outcome.
+                // Deprecated. Delete an outcome.
                 apiInstance.DeleteJourneyOutcome(outcomeId);
             }
             catch (Exception e)
@@ -474,8 +479,13 @@ void (empty response body)
 
 > void DeleteJourneyOutcomesPredictor (string predictorId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Delete an outcome predictor.
+Deprecated. Delete an outcome predictor.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -507,7 +517,7 @@ namespace Example
 
             try
             { 
-                // Delete an outcome predictor.
+                // Deprecated. Delete an outcome predictor.
                 apiInstance.DeleteJourneyOutcomesPredictor(predictorId);
             }
             catch (Exception e)
@@ -1123,8 +1133,13 @@ namespace Example
 
 > **string** GetJourneyActionmapsEstimatesJob (string jobId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Get status of job.
+Deprecated. Get status of job.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ALL permissions: 
 
@@ -1156,7 +1171,7 @@ namespace Example
 
             try
             { 
-                // Get status of job.
+                // Deprecated. Get status of job.
                 string result = apiInstance.GetJourneyActionmapsEstimatesJob(jobId);
                 Debug.WriteLine(result);
             }
@@ -1185,8 +1200,13 @@ namespace Example
 
 > [**ActionMapEstimateResult**](ActionMapEstimateResult) GetJourneyActionmapsEstimatesJobResults (string jobId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Get estimates from completed job.
+Deprecated. Get estimates from completed job.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ALL permissions: 
 
@@ -1218,7 +1238,7 @@ namespace Example
 
             try
             { 
-                // Get estimates from completed job.
+                // Deprecated. Get estimates from completed job.
                 ActionMapEstimateResult result = apiInstance.GetJourneyActionmapsEstimatesJobResults(jobId);
                 Debug.WriteLine(result);
             }
@@ -2123,8 +2143,13 @@ This endpoint does require any parameters.
 
 > [**Outcome**](Outcome) GetJourneyOutcome (string outcomeId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Retrieve a single outcome.
+Deprecated. Retrieve a single outcome.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -2156,7 +2181,7 @@ namespace Example
 
             try
             { 
-                // Retrieve a single outcome.
+                // Deprecated. Retrieve a single outcome.
                 Outcome result = apiInstance.GetJourneyOutcome(outcomeId);
                 Debug.WriteLine(result);
             }
@@ -2185,8 +2210,13 @@ namespace Example
 
 > [**OutcomeListing**](OutcomeListing) GetJourneyOutcomes (int? pageNumber = null, int? pageSize = null, string sortBy = null, List<string> outcomeIds = null, List<string> queryFields = null, string queryValue = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Retrieve all outcomes.
+Deprecated. Retrieve all outcomes.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -2223,7 +2253,7 @@ namespace Example
 
             try
             { 
-                // Retrieve all outcomes.
+                // Deprecated. Retrieve all outcomes.
                 OutcomeListing result = apiInstance.GetJourneyOutcomes(pageNumber, pageSize, sortBy, outcomeIds, queryFields, queryValue);
                 Debug.WriteLine(result);
             }
@@ -2257,8 +2287,13 @@ namespace Example
 
 > [**OutcomeAttributionJobStateResponse**](OutcomeAttributionJobStateResponse) GetJourneyOutcomesAttributionsJob (string jobId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Get job status.
+Deprecated. Get job status.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 GetJourneyOutcomesAttributionsJob is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
@@ -2292,7 +2327,7 @@ namespace Example
 
             try
             { 
-                // Get job status.
+                // Deprecated. Get job status.
                 OutcomeAttributionJobStateResponse result = apiInstance.GetJourneyOutcomesAttributionsJob(jobId);
                 Debug.WriteLine(result);
             }
@@ -2321,8 +2356,13 @@ namespace Example
 
 > [**OutcomeAttributionResponseListing**](OutcomeAttributionResponseListing) GetJourneyOutcomesAttributionsJobResults (string jobId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Get outcome attribution entities from completed job.
+Deprecated. Get outcome attribution entities from completed job.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 GetJourneyOutcomesAttributionsJobResults is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
@@ -2356,7 +2396,7 @@ namespace Example
 
             try
             { 
-                // Get outcome attribution entities from completed job.
+                // Deprecated. Get outcome attribution entities from completed job.
                 OutcomeAttributionResponseListing result = apiInstance.GetJourneyOutcomesAttributionsJobResults(jobId);
                 Debug.WriteLine(result);
             }
@@ -2385,8 +2425,13 @@ namespace Example
 
 > [**OutcomePredictor**](OutcomePredictor) GetJourneyOutcomesPredictor (string predictorId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Retrieve a single outcome predictor.
+Deprecated. Retrieve a single outcome predictor.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -2418,7 +2463,7 @@ namespace Example
 
             try
             { 
-                // Retrieve a single outcome predictor.
+                // Deprecated. Retrieve a single outcome predictor.
                 OutcomePredictor result = apiInstance.GetJourneyOutcomesPredictor(predictorId);
                 Debug.WriteLine(result);
             }
@@ -2447,8 +2492,13 @@ namespace Example
 
 > [**OutcomePredictorListing**](OutcomePredictorListing) GetJourneyOutcomesPredictors ()
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Retrieve all outcome predictors.
+Deprecated. Retrieve all outcome predictors.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -2479,7 +2529,7 @@ namespace Example
 
             try
             { 
-                // Retrieve all outcome predictors.
+                // Deprecated. Retrieve all outcome predictors.
                 OutcomePredictorListing result = apiInstance.GetJourneyOutcomesPredictors();
                 Debug.WriteLine(result);
             }
@@ -2771,8 +2821,13 @@ namespace Example
 
 > [**OutcomeScoresResult**](OutcomeScoresResult) GetJourneySessionOutcomescores (string sessionId)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Retrieve latest outcome score associated with a session for all outcomes.
+Deprecated. Retrieve latest outcome score associated with a session for all outcomes.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -2804,7 +2859,7 @@ namespace Example
 
             try
             { 
-                // Retrieve latest outcome score associated with a session for all outcomes.
+                // Deprecated. Retrieve latest outcome score associated with a session for all outcomes.
                 OutcomeScoresResult result = apiInstance.GetJourneySessionOutcomescores(sessionId);
                 Debug.WriteLine(result);
             }
@@ -4125,8 +4180,13 @@ namespace Example
 
 > [**Outcome**](Outcome) PatchJourneyOutcome (string outcomeId, PatchOutcome body = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Update an outcome.
+Deprecated. Update an outcome.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -4159,7 +4219,7 @@ namespace Example
 
             try
             { 
-                // Update an outcome.
+                // Deprecated. Update an outcome.
                 Outcome result = apiInstance.PatchJourneyOutcome(outcomeId, body);
                 Debug.WriteLine(result);
             }
@@ -4574,8 +4634,13 @@ namespace Example
 
 > [**EstimateJobAsyncResponse**](EstimateJobAsyncResponse) PostJourneyActionmapsEstimatesJobs (ActionMapEstimateRequest body)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Query for estimates
+Deprecated. Query for estimates
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -4607,7 +4672,7 @@ namespace Example
 
             try
             { 
-                // Query for estimates
+                // Deprecated. Query for estimates
                 EstimateJobAsyncResponse result = apiInstance.PostJourneyActionmapsEstimatesJobs(body);
                 Debug.WriteLine(result);
             }
@@ -5118,8 +5183,13 @@ namespace Example
 
 > [**Outcome**](Outcome) PostJourneyOutcomes (OutcomeRequest body = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Create an outcome.
+Deprecated. Create an outcome.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -5151,7 +5221,7 @@ namespace Example
 
             try
             { 
-                // Create an outcome.
+                // Deprecated. Create an outcome.
                 Outcome result = apiInstance.PostJourneyOutcomes(body);
                 Debug.WriteLine(result);
             }
@@ -5180,8 +5250,13 @@ namespace Example
 
 > [**OutcomeAttributionAsyncResponse**](OutcomeAttributionAsyncResponse) PostJourneyOutcomesAttributionsJobs (OutcomeAttributionListing body = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Create Outcome Attributions
+Deprecated. Create Outcome Attributions
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 PostJourneyOutcomesAttributionsJobs is a preview method and is subject to both breaking and non-breaking changes at any time without notice
 
@@ -5215,7 +5290,7 @@ namespace Example
 
             try
             { 
-                // Create Outcome Attributions
+                // Deprecated. Create Outcome Attributions
                 OutcomeAttributionAsyncResponse result = apiInstance.PostJourneyOutcomesAttributionsJobs(body);
                 Debug.WriteLine(result);
             }
@@ -5244,8 +5319,13 @@ namespace Example
 
 > [**OutcomePredictor**](OutcomePredictor) PostJourneyOutcomesPredictors (OutcomePredictorRequest body = null)
 
+:::{"alert":"warning","title":"Deprecated","collapsible":false,"autoCollapse":false}
+This resource has been deprecated
+:::
 
-Create an outcome predictor.
+Deprecated. Create an outcome predictor.
+
+Journey Outcomes is being removed. See https://help.genesys.cloud/announcements/genesys-cloud/deprecation-journey-outcomes/
 
 Requires ANY permissions: 
 
@@ -5277,7 +5357,7 @@ namespace Example
 
             try
             { 
-                // Create an outcome predictor.
+                // Deprecated. Create an outcome predictor.
                 OutcomePredictor result = apiInstance.PostJourneyOutcomesPredictors(body);
                 Debug.WriteLine(result);
             }
@@ -5880,4 +5960,4 @@ namespace Example
 [**JourneyView**](JourneyView)
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_

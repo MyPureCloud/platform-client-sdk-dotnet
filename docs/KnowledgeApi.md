@@ -1012,7 +1012,7 @@ namespace Example
 
 ## GetKnowledgeConnectionOptions
 
-> [**ConnectionOptionListing**](ConnectionOptionListing) GetKnowledgeConnectionOptions (string connectionId, string parentId = null)
+> [**ConnectionOptionListing**](ConnectionOptionListing) GetKnowledgeConnectionOptions (string connectionId, string after = null, string pageSize = null, string parentId = null)
 
 
 Get connection options
@@ -1044,12 +1044,14 @@ namespace Example
 
             var apiInstance = new KnowledgeApi();
             var connectionId = connectionId_example;  // string | Connection ID
+            var after = after_example;  // string | The cursor that points to the end of the set of entities that has been returned. (optional) 
+            var pageSize = pageSize_example;  // string | Number of results per page. Minimum: 25, Maximum: 500. (optional)  (default to "200")
             var parentId = parentId_example;  // string | The id of the parent option whose children to be listed. (optional) 
 
             try
             { 
                 // Get connection options
-                ConnectionOptionListing result = apiInstance.GetKnowledgeConnectionOptions(connectionId, parentId);
+                ConnectionOptionListing result = apiInstance.GetKnowledgeConnectionOptions(connectionId, after, pageSize, parentId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -1067,6 +1069,8 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **connectionId** | **string**| Connection ID |  |
+| **after** | **string**| The cursor that points to the end of the set of entities that has been returned. | [optional]  |
+| **pageSize** | **string**| Number of results per page. Minimum: 25, Maximum: 500. | [optional] [default to "200"] |
 | **parentId** | **string**| The id of the parent option whose children to be listed. | [optional]  |
 
 ### Return type
@@ -3544,7 +3548,7 @@ namespace Example
 
 ## GetKnowledgeSource
 
-> [**V3SourceDetailedWithErrorResponse**](V3SourceDetailedWithErrorResponse) GetKnowledgeSource (string sourceId, List<string> expand = null)
+> [**V3SourceExpandableResponse**](V3SourceExpandableResponse) GetKnowledgeSource (string sourceId, List<string> expand = null)
 
 
 Get source
@@ -3581,7 +3585,7 @@ namespace Example
             try
             { 
                 // Get source
-                V3SourceDetailedWithErrorResponse result = apiInstance.GetKnowledgeSource(sourceId, expand);
+                V3SourceExpandableResponse result = apiInstance.GetKnowledgeSource(sourceId, expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3599,11 +3603,11 @@ namespace Example
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
 | **sourceId** | **string**| Source ID |  |
-| **expand** | [**List<string>**](string)| Optional fields to expand for the Source. | [optional] <br />**Values**: lastSync, filterDetails |
+| **expand** | [**List<string>**](string)| Optional fields to expand for the Source. | [optional] <br />**Values**: lastSync, filterDetails, connection |
 
 ### Return type
 
-[**V3SourceDetailedWithErrorResponse**](V3SourceDetailedWithErrorResponse)
+[**V3SourceExpandableResponse**](V3SourceExpandableResponse)
 
 
 ## GetKnowledgeSourceSynchronization
@@ -3740,7 +3744,7 @@ namespace Example
 
 ## GetKnowledgeSources
 
-> [**V3SourceWithErrorListing**](V3SourceWithErrorListing) GetKnowledgeSources (List<string> expand = null)
+> [**V3SourceExpandableListing**](V3SourceExpandableListing) GetKnowledgeSources (List<string> expand = null)
 
 
 List sources
@@ -3776,7 +3780,7 @@ namespace Example
             try
             { 
                 // List sources
-                V3SourceWithErrorListing result = apiInstance.GetKnowledgeSources(expand);
+                V3SourceExpandableListing result = apiInstance.GetKnowledgeSources(expand);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -3793,11 +3797,11 @@ namespace Example
 
 |Name | Type | Description  | Notes |
 |------------- | ------------- | ------------- | -------------|
-| **expand** | [**List<string>**](string)| Optional fields to expand for the Source. | [optional] <br />**Values**: lastSync |
+| **expand** | [**List<string>**](string)| Optional fields to expand for the Source. | [optional] <br />**Values**: lastSync, connection |
 
 ### Return type
 
-[**V3SourceWithErrorListing**](V3SourceWithErrorListing)
+[**V3SourceExpandableListing**](V3SourceExpandableListing)
 
 
 ## GetKnowledgeSourcesSynchronizations
@@ -7877,4 +7881,4 @@ namespace Example
 [**V3SourceDetailedResponse**](V3SourceDetailedResponse)
 
 
-_PureCloudPlatform.Client.V2 262.1.0_
+_PureCloudPlatform.Client.V2 263.0.0_
