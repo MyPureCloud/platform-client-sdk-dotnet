@@ -9,6 +9,7 @@
 | **DateStart** | **string** |  | [optional] |
 | **DateScheduleStart** | **string** |  | [optional] |
 | **ActivityCode** | **string** |  | [optional] |
+| **ActivityCodeId** | **string** |  | [optional] |
 | **ActivityColor** | **string** |  | [optional] |
 | **ActivityName** | **string** |  | [optional] |
 | **Points** | **long?** |  | [optional] |
